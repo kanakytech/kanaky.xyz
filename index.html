@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kanaky Tech — Advanced Digital Solutions</title>
   <meta name="description" content="Advanced digital solutions for institutions, governments and enterprises in the Pacific. AI Systems, Web3 Governance, Digital Sovereignty." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -24,7 +27,7 @@
     body {
       background: var(--black);
       color: var(--white);
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
       font-size: 16px;
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
@@ -51,18 +54,10 @@
       text-decoration: none;
     }
 
-    .logo-circle {
-      width: 36px;
+    .logo-img {
       height: 36px;
-      border-radius: 50%;
-      background: var(--accent);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 900;
-      font-size: 13px;
-      color: #080808;
-      letter-spacing: -0.5px;
+      width: auto;
+      display: block;
       flex-shrink: 0;
     }
 
@@ -134,10 +129,11 @@
     }
 
     .hero h1 {
-      font-size: clamp(64px, 10vw, 140px);
-      font-weight: 900;
-      line-height: 0.9;
-      letter-spacing: -0.04em;
+      font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: clamp(72px, 11vw, 160px);
+      font-weight: 800;
+      line-height: 0.92;
+      letter-spacing: -0.03em;
       margin-bottom: 40px;
     }
 
@@ -209,7 +205,7 @@
       border-bottom: 1px solid var(--border);
       padding: 32px 48px;
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 0;
     }
 
@@ -364,8 +360,9 @@
     }
 
     .about-heading {
+      font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
       font-size: clamp(36px, 4vw, 56px);
-      font-weight: 900;
+      font-weight: 800;
       letter-spacing: -0.03em;
       line-height: 1.05;
     }
@@ -473,10 +470,9 @@
       nav { padding: 16px 24px; }
       nav .nav-links { display: none; }
       .hero { padding: 0 24px 60px; }
-      .stats-bar { grid-template-columns: repeat(2, 1fr); padding: 24px; gap: 24px; }
-      .stat-item { border-right: none; border-bottom: 1px solid var(--border); padding: 0 0 24px; }
-      .stat-item:nth-child(2n) { border-right: none; }
-      .stat-item:last-child, .stat-item:nth-last-child(2) { border-bottom: none; }
+      .stats-bar { grid-template-columns: 1fr; padding: 24px; gap: 0; }
+      .stat-item { border-right: none; border-bottom: 1px solid var(--border); padding: 0 0 24px; margin-bottom: 24px; }
+      .stat-item:last-child { border-bottom: none; margin-bottom: 0; }
       .section { padding: 80px 24px; }
       .expertise-grid { grid-template-columns: 1fr; }
       .about-inner { grid-template-columns: 1fr; gap: 40px; }
@@ -491,7 +487,7 @@
   <!-- NAV -->
   <nav>
     <a href="/" class="logo-mark">
-      <div class="logo-circle">KT</div>
+      <img class="logo-img" src="kanaky_tech_logo.jpeg" alt="Kanaky Tech" />
       <span class="logo-text">Kanaky Tech</span>
     </a>
     <ul class="nav-links">
@@ -508,7 +504,7 @@
       <span class="hero-badge-dot"></span>
       Since 2024 · Pacific Region
     </div>
-    <h1>KANAKY<br/>TECH</h1>
+    <h1>Kanaky<br/>Tech</h1>
     <p class="hero-sub">Advanced digital solutions for institutions, governments and enterprises navigating the new technological landscape.</p>
     <div class="hero-actions">
       <a href="mailto:k.wahuzuepro@gmail.com" class="btn-primary">
@@ -527,16 +523,12 @@
       <div class="stat-label">Core Disciplines</div>
     </div>
     <div class="stat-item">
-      <div class="stat-number">3+</div>
-      <div class="stat-label">Years Operating</div>
+      <div class="stat-number">2024</div>
+      <div class="stat-label">Launched</div>
     </div>
     <div class="stat-item">
-      <div class="stat-number">NC</div>
-      <div class="stat-label">New Caledonia Based</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">NZ</div>
-      <div class="stat-label">Expanding to Auckland</div>
+      <div class="stat-number">🌏</div>
+      <div class="stat-label">Pacific Region</div>
     </div>
   </div>
 
@@ -570,7 +562,7 @@
         <p class="card-desc">Design and deployment of production-grade AI automation systems. From image generation to data pipelines — built for volume and reliability.</p>
         <div class="capabilities-label">Capabilities</div>
         <ul class="capabilities-list">
-          <li>Automated visual production (Keou AI)</li>
+          <li>Automated visual production pipelines</li>
           <li>N8N & API workflow engineering</li>
           <li>MCP server development</li>
           <li>Telegram / multi-platform bot systems</li>
@@ -630,7 +622,7 @@
       <div class="about-body">
         <p>Kanaky Tech is a digital technology firm founded in New Caledonia in 2024. We specialise in the intersection of artificial intelligence, decentralised systems and institutional digital transformation.</p>
         <p>Our approach is pragmatic and sovereignty-first: we build tools that serve local needs, run on infrastructure that organisations control, and generate value that stays in the region.</p>
-        <p>We work with governments, agencies and enterprises across the Pacific — from Nouméa to Auckland — and are expanding internationally with proven frameworks built on the ground.</p>
+        <p>We work with governments, agencies and enterprises across the Pacific — with proven frameworks built on the ground.</p>
         <div class="tags">
           <span class="tag">Artificial Intelligence</span>
           <span class="tag">Automation</span>
