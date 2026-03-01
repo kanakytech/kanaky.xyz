@@ -465,6 +465,34 @@
 
     footer .footer-nav a:hover { color: var(--white); }
 
+    /* ─── SCROLL ANIMATIONS ─── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal-left.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.3s; }
+    .delay-4 { transition-delay: 0.4s; }
+
     /* ─── MOBILE ─── */
     @media (max-width: 768px) {
       nav { padding: 16px 24px; }
@@ -487,14 +515,14 @@
   <!-- NAV -->
   <nav>
     <a href="/" class="logo-mark">
-      <img class="logo-img" src="kanaky_tech_logo.jpeg" alt="Kanaky Tech" />
+      <img class="logo-img" src="https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg" alt="Kanaky Tech" />
       <span class="logo-text">Kanaky Tech</span>
     </a>
     <ul class="nav-links">
       <li><a href="#expertise">Expertise</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="/mcp-datagouvnc">MCP Open Data</a></li>
-      <li><a href="mailto:kanaky.tech@proton.me" class="nav-cta">Contact</a></li>
+      <li><a href="https://www.linkedin.com/company/kanaky-tech" class="nav-cta" target="_blank" rel="noopener">Contact</a></li>
     </ul>
   </nav>
 
@@ -507,7 +535,7 @@
     <h1>Kanaky<br/>Tech</h1>
     <p class="hero-sub">Advanced digital solutions for institutions, governments and enterprises navigating the new technological landscape.</p>
     <div class="hero-actions">
-      <a href="mailto:kanaky.tech@proton.me" class="btn-primary">
+      <a href="https://www.linkedin.com/company/kanaky-tech" class="btn-primary" target="_blank" rel="noopener">
         Contact Us
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
@@ -518,27 +546,33 @@
 
   <!-- STATS BAR -->
   <div class="stats-bar">
-    <div class="stat-item">
+    <div class="stat-item reveal delay-1">
       <div class="stat-number">4</div>
       <div class="stat-label">Core Disciplines</div>
     </div>
-    <div class="stat-item">
+    <div class="stat-item reveal delay-2">
       <div class="stat-number">2024</div>
       <div class="stat-label">Launched</div>
     </div>
-    <div class="stat-item">
-      <div class="stat-number">🌏</div>
+    <div class="stat-item reveal delay-3">
+      <div class="stat-number">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;">
+          <path d="M2 12c0 0 2-3 5-3s4 3 7 3 5-3 5-3"/>
+          <path d="M2 17c0 0 2-3 5-3s4 3 7 3 5-3 5-3"/>
+          <path d="M2 7c0 0 2-3 5-3s4 3 7 3 5-3 5-3"/>
+        </svg>
+      </div>
       <div class="stat-label">Pacific Region</div>
     </div>
   </div>
 
   <!-- EXPERTISE -->
   <section class="section" id="expertise">
-    <div class="section-label">Expertise</div>
+    <div class="section-label reveal-left">Expertise</div>
     <div class="expertise-grid">
 
       <!-- 01 -->
-      <div class="expertise-card">
+      <div class="expertise-card reveal delay-1">
         <div class="card-number">01</div>
         <div class="card-title">Consulting &amp; Training</div>
         <p class="card-desc">Strategic guidance for organisations adopting emerging technologies. We translate complex digital transformation into clear, actionable roadmaps.</p>
@@ -556,7 +590,7 @@
       </div>
 
       <!-- 02 -->
-      <div class="expertise-card">
+      <div class="expertise-card reveal delay-2">
         <div class="card-number">02</div>
         <div class="card-title">AI Systems Architecture</div>
         <p class="card-desc">Design and deployment of production-grade AI automation systems. From image generation to data pipelines — built for volume and reliability.</p>
@@ -574,7 +608,7 @@
       </div>
 
       <!-- 03 -->
-      <div class="expertise-card">
+      <div class="expertise-card reveal delay-1">
         <div class="card-number">03</div>
         <div class="card-title">Web3 Governance</div>
         <p class="card-desc">Institutional-grade blockchain solutions for transparent governance, asset traceability and decentralised decision frameworks.</p>
@@ -592,7 +626,7 @@
       </div>
 
       <!-- 04 -->
-      <div class="expertise-card">
+      <div class="expertise-card reveal delay-2">
         <div class="card-number">04</div>
         <div class="card-title">Digital Sovereignty</div>
         <p class="card-desc">Helping Pacific territories own their data, infrastructure and digital future — independent from extractive platforms and foreign dependencies.</p>
@@ -614,12 +648,12 @@
 
   <!-- ABOUT -->
   <section class="section" id="about">
-    <div class="section-label">About</div>
+    <div class="section-label reveal-left">About</div>
     <div class="about-inner">
       <div>
-        <h2 class="about-heading">Building the digital infrastructure of the Pacific.</h2>
+        <h2 class="about-heading reveal">Building the digital infrastructure of the Pacific.</h2>
       </div>
-      <div class="about-body">
+      <div class="about-body reveal delay-2">
         <p>Kanaky Tech is a digital technology firm founded in New Caledonia in 2024. We specialise in the intersection of artificial intelligence, decentralised systems and institutional digital transformation.</p>
         <p>Our approach is pragmatic and sovereignty-first: we build tools that serve local needs, run on infrastructure that organisations control, and generate value that stays in the region.</p>
         <p>We work with governments, agencies and enterprises across the Pacific — with proven frameworks built on the ground.</p>
@@ -637,9 +671,9 @@
 
   <!-- CTA -->
   <section class="cta-section">
-    <h2>Ready to build<br/>the future?</h2>
-    <p>Let's discuss what we can build together.</p>
-    <a href="mailto:kanaky.tech@proton.me" class="btn-primary" style="display:inline-flex;">
+    <h2 class="reveal">Ready to build<br/>the future?</h2>
+    <p class="reveal delay-1">Let's discuss what we can build together.</p>
+    <a href="https://www.linkedin.com/company/kanaky-tech" class="btn-primary" target="_blank" rel="noopener" style="display:inline-flex;">
       Contact Us
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
@@ -668,6 +702,19 @@
       </a>
     </div>
   </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal, .reveal-left').forEach(el => observer.observe(el));
+  </script>
 
 </body>
 </html>
