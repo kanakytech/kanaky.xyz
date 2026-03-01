@@ -1,9 +1,681 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="refresh" content="0; url=/mcp-datagouvnc" />
-  <title>kanaky.xyz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kanaky Tech — Advanced Digital Solutions</title>
+  <meta name="description" content="Advanced digital solutions for institutions, governments and enterprises in the Pacific. AI Systems, Web3 Governance, Digital Sovereignty." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #080808;
+      --white: #f4f4f0;
+      --grey-1: #1a1a1a;
+      --grey-2: #2a2a2a;
+      --grey-3: #555;
+      --accent: #c8f060;
+      --accent-dim: rgba(200, 240, 96, 0.12);
+      --border: rgba(255,255,255,0.08);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 20px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+      background: rgba(8,8,8,0.85);
+      backdrop-filter: blur(12px);
+    }
+
+    .logo-mark {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo-circle {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 13px;
+      color: #080808;
+      letter-spacing: -0.5px;
+      flex-shrink: 0;
+    }
+
+    .logo-text {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: 0.02em;
+    }
+
+    nav .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    nav .nav-links a {
+      color: var(--grey-3);
+      text-decoration: none;
+      font-size: 13px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    nav .nav-links a:hover { color: var(--white); }
+
+    .nav-cta {
+      background: var(--white);
+      color: var(--black) !important;
+      padding: 8px 20px;
+      border-radius: 2px;
+      font-weight: 600 !important;
+      transition: background 0.2s !important;
+    }
+
+    .nav-cta:hover { background: var(--accent) !important; color: var(--black) !important; }
+
+    /* ─── HERO ─── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 0 48px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--grey-3);
+      margin-bottom: 32px;
+    }
+
+    .hero-badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .hero h1 {
+      font-size: clamp(64px, 10vw, 140px);
+      font-weight: 900;
+      line-height: 0.9;
+      letter-spacing: -0.04em;
+      margin-bottom: 40px;
+    }
+
+    .hero-sub {
+      max-width: 520px;
+      font-size: 18px;
+      color: var(--grey-3);
+      line-height: 1.7;
+      margin-bottom: 48px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--white);
+      color: var(--black);
+      text-decoration: none;
+      padding: 14px 32px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      transition: background 0.2s;
+    }
+
+    .btn-primary:hover { background: var(--accent); }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid var(--border);
+      color: var(--grey-3);
+      text-decoration: none;
+      padding: 14px 32px;
+      font-size: 14px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .btn-ghost:hover { border-color: var(--white); color: var(--white); }
+
+    .hero-bg-text {
+      position: absolute;
+      bottom: -60px;
+      right: -20px;
+      font-size: clamp(120px, 20vw, 280px);
+      font-weight: 900;
+      color: rgba(255,255,255,0.02);
+      letter-spacing: -0.06em;
+      pointer-events: none;
+      user-select: none;
+      line-height: 1;
+    }
+
+    /* ─── STATS BAR ─── */
+    .stats-bar {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 32px 48px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+
+    .stat-item {
+      padding: 0 32px;
+      border-right: 1px solid var(--border);
+    }
+
+    .stat-item:first-child { padding-left: 0; }
+    .stat-item:last-child { border-right: none; }
+
+    .stat-number {
+      font-size: 40px;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--grey-3);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* ─── SECTION HEADER ─── */
+    .section {
+      padding: 120px 48px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--grey-3);
+      margin-bottom: 64px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ─── EXPERTISE ─── */
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--border);
+      margin-top: 0;
+    }
+
+    .expertise-card {
+      background: var(--black);
+      padding: 56px 48px;
+      transition: background 0.3s;
+      cursor: default;
+    }
+
+    .expertise-card:hover {
+      background: var(--grey-1);
+    }
+
+    .card-number {
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      color: var(--grey-3);
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .card-title {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+      line-height: 1.1;
+    }
+
+    .card-desc {
+      font-size: 15px;
+      color: var(--grey-3);
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+
+    .capabilities-label {
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--grey-3);
+      margin-bottom: 16px;
+    }
+
+    .capabilities-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 36px;
+    }
+
+    .capabilities-list li {
+      font-size: 14px;
+      color: rgba(244,244,240,0.75);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .capabilities-list li::before {
+      content: '→';
+      color: var(--accent);
+      font-size: 12px;
+      flex-shrink: 0;
+    }
+
+    .case-study-box {
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 20px 24px;
+      background: var(--grey-1);
+    }
+
+    .case-study-box .cs-label {
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .case-study-box p {
+      font-size: 13px;
+      color: rgba(244,244,240,0.6);
+      line-height: 1.6;
+    }
+
+    /* ─── ABOUT ─── */
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .about-heading {
+      font-size: clamp(36px, 4vw, 56px);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+    }
+
+    .about-body {
+      font-size: 16px;
+      color: var(--grey-3);
+      line-height: 1.8;
+    }
+
+    .about-body p + p { margin-top: 20px; }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 32px;
+    }
+
+    .tag {
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 12px;
+      color: var(--grey-3);
+      letter-spacing: 0.04em;
+    }
+
+    /* ─── CTA ─── */
+    .cta-section {
+      padding: 120px 48px;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-size: clamp(40px, 6vw, 80px);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      margin-bottom: 24px;
+    }
+
+    .cta-section p {
+      font-size: 18px;
+      color: var(--grey-3);
+      margin-bottom: 48px;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    footer .footer-copy {
+      font-size: 13px;
+      color: var(--grey-3);
+    }
+
+    footer .footer-links {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    footer .footer-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      color: var(--grey-3);
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    footer .footer-links a:hover {
+      border-color: var(--white);
+      color: var(--white);
+    }
+
+    footer .footer-nav {
+      display: flex;
+      gap: 24px;
+    }
+
+    footer .footer-nav a {
+      font-size: 12px;
+      color: var(--grey-3);
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    footer .footer-nav a:hover { color: var(--white); }
+
+    /* ─── MOBILE ─── */
+    @media (max-width: 768px) {
+      nav { padding: 16px 24px; }
+      nav .nav-links { display: none; }
+      .hero { padding: 0 24px 60px; }
+      .stats-bar { grid-template-columns: repeat(2, 1fr); padding: 24px; gap: 24px; }
+      .stat-item { border-right: none; border-bottom: 1px solid var(--border); padding: 0 0 24px; }
+      .stat-item:nth-child(2n) { border-right: none; }
+      .stat-item:last-child, .stat-item:nth-last-child(2) { border-bottom: none; }
+      .section { padding: 80px 24px; }
+      .expertise-grid { grid-template-columns: 1fr; }
+      .about-inner { grid-template-columns: 1fr; gap: 40px; }
+      .cta-section { padding: 80px 24px; }
+      footer { flex-direction: column; gap: 24px; padding: 32px 24px; text-align: center; }
+      footer .footer-nav { flex-wrap: wrap; justify-content: center; }
+    }
+  </style>
 </head>
-<body></body>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="/" class="logo-mark">
+      <div class="logo-circle">KT</div>
+      <span class="logo-text">Kanaky Tech</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#expertise">Expertise</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="/mcp-datagouvnc">MCP Open Data</a></li>
+      <li><a href="mailto:k.wahuzuepro@gmail.com" class="nav-cta">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-badge">
+      <span class="hero-badge-dot"></span>
+      Since 2024 · Pacific Region
+    </div>
+    <h1>KANAKY<br/>TECH</h1>
+    <p class="hero-sub">Advanced digital solutions for institutions, governments and enterprises navigating the new technological landscape.</p>
+    <div class="hero-actions">
+      <a href="mailto:k.wahuzuepro@gmail.com" class="btn-primary">
+        Contact Us
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#expertise" class="btn-ghost">Our Expertise</a>
+    </div>
+    <div class="hero-bg-text" aria-hidden="true">KT</div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stat-item">
+      <div class="stat-number">4</div>
+      <div class="stat-label">Core Disciplines</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">3+</div>
+      <div class="stat-label">Years Operating</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">NC</div>
+      <div class="stat-label">New Caledonia Based</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">NZ</div>
+      <div class="stat-label">Expanding to Auckland</div>
+    </div>
+  </div>
+
+  <!-- EXPERTISE -->
+  <section class="section" id="expertise">
+    <div class="section-label">Expertise</div>
+    <div class="expertise-grid">
+
+      <!-- 01 -->
+      <div class="expertise-card">
+        <div class="card-number">01</div>
+        <div class="card-title">Consulting &amp; Training</div>
+        <p class="card-desc">Strategic guidance for organisations adopting emerging technologies. We translate complex digital transformation into clear, actionable roadmaps.</p>
+        <div class="capabilities-label">Capabilities</div>
+        <ul class="capabilities-list">
+          <li>Digital strategy & roadmapping</li>
+          <li>AI adoption workshops</li>
+          <li>Team upskilling programs</li>
+          <li>Change management support</li>
+        </ul>
+        <div class="case-study-box">
+          <div class="cs-label">Case Study</div>
+          <p>Led AI workflow deployment for a regional agency — reduced production time from 25h to 20 minutes for a 50-product campaign.</p>
+        </div>
+      </div>
+
+      <!-- 02 -->
+      <div class="expertise-card">
+        <div class="card-number">02</div>
+        <div class="card-title">AI Systems Architecture</div>
+        <p class="card-desc">Design and deployment of production-grade AI automation systems. From image generation to data pipelines — built for volume and reliability.</p>
+        <div class="capabilities-label">Capabilities</div>
+        <ul class="capabilities-list">
+          <li>Automated visual production (Keou AI)</li>
+          <li>N8N & API workflow engineering</li>
+          <li>MCP server development</li>
+          <li>Telegram / multi-platform bot systems</li>
+        </ul>
+        <div class="case-study-box">
+          <div class="cs-label">Case Study</div>
+          <p>Built <a href="/mcp-datagouvnc" style="color:var(--accent);text-decoration:none;">mcp-datagouv-nc</a> — the first MCP server exposing New Caledonia's government open data API to AI agents.</p>
+        </div>
+      </div>
+
+      <!-- 03 -->
+      <div class="expertise-card">
+        <div class="card-number">03</div>
+        <div class="card-title">Web3 Governance</div>
+        <p class="card-desc">Institutional-grade blockchain solutions for transparent governance, asset traceability and decentralised decision frameworks.</p>
+        <div class="capabilities-label">Capabilities</div>
+        <ul class="capabilities-list">
+          <li>DAO architecture & tokenomics</li>
+          <li>On-chain governance design</li>
+          <li>Smart contract consulting</li>
+          <li>Public sector blockchain pilots</li>
+        </ul>
+        <div class="case-study-box">
+          <div class="cs-label">Case Study</div>
+          <p>Structured governance frameworks for Pacific institutions exploring blockchain-based transparency and accountability mechanisms.</p>
+        </div>
+      </div>
+
+      <!-- 04 -->
+      <div class="expertise-card">
+        <div class="card-number">04</div>
+        <div class="card-title">Digital Sovereignty</div>
+        <p class="card-desc">Helping Pacific territories own their data, infrastructure and digital future — independent from extractive platforms and foreign dependencies.</p>
+        <div class="capabilities-label">Capabilities</div>
+        <ul class="capabilities-list">
+          <li>Open data infrastructure</li>
+          <li>Local AI model deployment</li>
+          <li>Data policy & ethics consulting</li>
+          <li>Sovereign tech stack design</li>
+        </ul>
+        <div class="case-study-box">
+          <div class="cs-label">Case Study</div>
+          <p>Interfaced New Caledonian government datasets with modern AI tooling — enabling local institutions to query public data natively via Claude, GPT and other agents.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="section-label">About</div>
+    <div class="about-inner">
+      <div>
+        <h2 class="about-heading">Building the digital infrastructure of the Pacific.</h2>
+      </div>
+      <div class="about-body">
+        <p>Kanaky Tech is a digital technology firm founded in New Caledonia in 2024. We specialise in the intersection of artificial intelligence, decentralised systems and institutional digital transformation.</p>
+        <p>Our approach is pragmatic and sovereignty-first: we build tools that serve local needs, run on infrastructure that organisations control, and generate value that stays in the region.</p>
+        <p>We work with governments, agencies and enterprises across the Pacific — from Nouméa to Auckland — and are expanding internationally with proven frameworks built on the ground.</p>
+        <div class="tags">
+          <span class="tag">Artificial Intelligence</span>
+          <span class="tag">Automation</span>
+          <span class="tag">Web3</span>
+          <span class="tag">Open Data</span>
+          <span class="tag">Pacific Region</span>
+          <span class="tag">MCP Protocol</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2>Ready to build<br/>the future?</h2>
+    <p>Let's discuss what we can build together.</p>
+    <a href="mailto:k.wahuzuepro@gmail.com" class="btn-primary" style="display:inline-flex;">
+      Contact Us
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-copy">© 2026 Kanaky Tech · Consulting · AI Systems · Web3 Governance</span>
+    <nav class="footer-nav">
+      <a href="#expertise">Expertise</a>
+      <a href="#about">About</a>
+      <a href="/mcp-datagouvnc">MCP Open Data</a>
+    </nav>
+    <div class="footer-links">
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/kevyn-wahuzue/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+      <!-- GitHub -->
+      <a href="https://github.com/kanakytech" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+      </a>
+      <!-- TikTok -->
+      <a href="https://www.tiktok.com/@kevynwahuzue" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.66a8.18 8.18 0 004.79 1.52V6.71a4.85 4.85 0 01-1.02-.02z"/></svg>
+      </a>
+    </div>
+  </footer>
+
+</body>
 </html>
