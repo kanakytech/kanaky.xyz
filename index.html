@@ -911,8 +911,8 @@
     function initNeurons() {
       neurons = [];
       signals = [];
-      const count = isMobile ? 0 : 100;
-      const connectionDist = 160;
+      const count = isMobile ? 50 : 100;
+      const connectionDist = isMobile ? 130 : 160;
 
       for (let i = 0; i < count; i++) {
         const type = Math.random() < 0.2 ? 'soma' : 'node';
@@ -990,12 +990,11 @@
       requestAnimationFrame(animate);
     }
 
-    if (!isMobile) {
-      resize();
-      initNeurons();
-      requestAnimationFrame(animate);
-      window.addEventListener('resize', () => { resize(); initNeurons(); });
-    }
+    // Always init canvas (lighter on mobile)
+    resize();
+    initNeurons();
+    requestAnimationFrame(animate);
+    window.addEventListener('resize', () => { resize(); initNeurons(); });
 
     // ─── MOUSE TRACKING ───
     document.addEventListener('mousemove', (e) => {
@@ -1008,6 +1007,22 @@
         ring.style.left = e.clientX + 'px';
         ring.style.top = e.clientY + 'px';
       }
+    });
+
+    // ─── TOUCH TRACKING (mobile) ───
+    document.addEventListener('touchmove', (e) => {
+      const touch = e.touches[0];
+      mouseX = touch.clientX;
+      mouseY = touch.clientY;
+    }, { passive: true });
+    document.addEventListener('touchstart', (e) => {
+      const touch = e.touches[0];
+      mouseX = touch.clientX;
+      mouseY = touch.clientY;
+    }, { passive: true });
+    document.addEventListener('touchend', () => {
+      // Fade out mouse influence gradually
+      setTimeout(() => { mouseX = -1000; mouseY = -1000; }, 2000);
     });
 
     // Cursor hover states
