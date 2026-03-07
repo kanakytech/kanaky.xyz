@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Model Context Protocol: How AI Agents Are Connecting to the Real World — Kanaky Tech</title>
+  <link rel="icon" type="image/jpeg" href="https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg" />
+  <meta name="description" content="Anthropic's MCP is becoming the universal standard for connecting AI models to live data. Here's what it means for enterprises, governments and developers." />
+  <link rel="canonical" href="https://kanaky.xyz/blog/claude-mcp-protocol-explained/" />
+  <meta property="og:title" content="The Model Context Protocol: How AI Agents Are Connecting to the Real World" />
+  <meta property="og:description" content="Anthropic's MCP is becoming the universal standard for connecting AI models to live data." />
+  <meta property="og:url" content="https://kanaky.xyz/blog/claude-mcp-protocol-explained/" />
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2026-03-08" />
+  <meta property="article:author" content="Kanaky Tech" />
+  <meta property="article:section" content="MCP" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The Model Context Protocol: How AI Agents Are Connecting to the Real World",
+    "author": { "@type": "Organization", "name": "Kanaky Tech", "url": "https://kanaky.xyz" },
+    "publisher": { "@type": "Organization", "name": "Kanaky Tech", "url": "https://kanaky.xyz" },
+    "datePublished": "2026-03-08",
+    "description": "Anthropic's MCP is becoming the universal standard for connecting AI models to live data.",
+    "mainEntityOfPage": "https://kanaky.xyz/blog/claude-mcp-protocol-explained/"
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #050505;
+      --white: #f0f0ec;
+      --grey-1: #111;
+      --grey-2: #1a1a1a;
+      --grey-3: #666;
+      --grey-4: #999;
+      --accent: #c8f060;
+      --border: rgba(255,255,255,0.06);
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; width: 100%;
+      padding: 20px 48px;
+      display: flex; align-items: center; justify-content: space-between;
+      z-index: 100;
+      background: rgba(5,5,5,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .logo-mark { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--white); }
+    .logo-img { width: 36px; height: 36px; border-radius: 50%; mix-blend-mode: lighten; }
+    .logo-text { font-size: 14px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+    .nav-links { list-style: none; display: flex; align-items: center; gap: 32px; }
+    .nav-links a { color: var(--grey-3); text-decoration: none; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.3s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta { border: 1px solid rgba(255,255,255,0.15); padding: 8px 24px !important; transition: all 0.3s ease !important; }
+    .nav-cta:hover { background: var(--white) !important; color: var(--black) !important; }
+
+    /* ARTICLE */
+    .article-header {
+      padding: 160px 48px 64px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .article-back {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--grey-3); text-decoration: none; margin-bottom: 48px;
+      transition: color 0.3s;
+    }
+    .article-back:hover { color: var(--white); }
+    .article-header .article-meta {
+      display: flex; align-items: center; gap: 16px; margin-bottom: 24px;
+    }
+    .article-tag {
+      font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase;
+      padding: 4px 10px; border: 1px solid rgba(180,96,240,0.3); color: #b460f0;
+    }
+    .article-header .date { font-size: 13px; color: var(--grey-4); }
+    .article-header h1 {
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 800; letter-spacing: -0.03em; line-height: 1.1;
+      margin-bottom: 24px;
+    }
+    .article-header .lead {
+      font-size: 18px; color: var(--grey-3); line-height: 1.7;
+    }
+
+    .article-body {
+      max-width: 700px; margin: 0 auto;
+      padding: 0 48px 120px;
+      font-size: 16px; line-height: 1.9; color: rgba(240,240,236,0.75);
+    }
+    .article-body h2 {
+      font-size: 26px; font-weight: 700; color: var(--white);
+      margin: 56px 0 20px; letter-spacing: -0.02em;
+    }
+    .article-body h3 {
+      font-size: 20px; font-weight: 600; color: var(--white);
+      margin: 40px 0 16px;
+    }
+    .article-body p { margin-bottom: 24px; }
+    .article-body ul, .article-body ol {
+      margin: 0 0 24px 24px;
+    }
+    .article-body li { margin-bottom: 8px; }
+    .article-body strong { color: var(--white); font-weight: 600; }
+    .article-body a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(200,240,96,0.3); }
+    .article-body a:hover { border-color: var(--accent); }
+    .article-body blockquote {
+      border-left: 2px solid var(--accent);
+      padding: 16px 24px; margin: 32px 0;
+      background: rgba(255,255,255,0.02);
+      font-style: italic; color: var(--grey-4);
+    }
+    .article-body code {
+      font-family: 'SF Mono', Monaco, monospace;
+      font-size: 14px; background: var(--grey-2);
+      padding: 2px 8px; border-radius: 3px;
+    }
+
+    .article-divider {
+      width: 40px; height: 1px;
+      background: var(--border);
+      margin: 64px auto;
+    }
+
+    .author-box {
+      max-width: 700px; margin: 0 auto;
+      padding: 0 48px 80px;
+      display: flex; gap: 16px; align-items: center;
+    }
+    .author-box img { width: 40px; height: 40px; border-radius: 50%; mix-blend-mode: lighten; }
+    .author-box .author-info { font-size: 13px; color: var(--grey-3); }
+    .author-box .author-name { color: var(--white); font-weight: 600; }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 48px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    footer .footer-copy { font-size: 12px; color: rgba(255,255,255,0.25); }
+    footer .footer-links { display: flex; gap: 12px; }
+    footer .footer-links a {
+      display: flex; align-items: center; justify-content: center;
+      width: 32px; height: 32px; border: 1px solid var(--border);
+      color: var(--grey-3); text-decoration: none; transition: all 0.3s;
+    }
+    footer .footer-links a:hover { border-color: rgba(255,255,255,0.25); color: var(--white); }
+
+    @media (max-width: 768px) {
+      nav { padding: 16px 24px; }
+      nav .nav-links { display: none; }
+      .article-header { padding: 120px 24px 48px; }
+      .article-body { padding: 0 24px 80px; }
+      .author-box { padding: 0 24px 64px; }
+      footer { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="logo-mark">
+      <img class="logo-img" src="https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg" alt="Kanaky Tech" />
+      <span class="logo-text">Kanaky Tech</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/#expertise">Expertise</a></li>
+      <li><a href="/#projects">Projects</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="https://www.linkedin.com/company/kanaky-tech" class="nav-cta" target="_blank" rel="noopener">Contact</a></li>
+    </ul>
+  </nav>
+
+  <article>
+    <header class="article-header">
+      <a href="/blog/" class="article-back">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back to Blog
+      </a>
+      <div class="article-meta">
+        <span class="article-tag">MCP</span>
+        <span class="date">March 8, 2026 · 6 min read</span>
+      </div>
+      <h1>The Model Context Protocol: How AI Agents Are Finally Connecting to the Real World</h1>
+      <p class="lead">Anthropic's MCP is quietly becoming the USB-C of AI — a universal standard for connecting language models to live data sources, APIs and tools. Here's why it matters.</p>
+    </header>
+
+    <div class="article-body">
+      <h2>The Problem: AI in a Vacuum</h2>
+      <p>For years, large language models have operated in isolation. They can reason, write, and code — but they can't check your calendar, query a database, or pull live data from an API without custom integrations built from scratch.</p>
+      <p>Every new connection required bespoke engineering. Companies spent months building and maintaining brittle integrations between their AI tools and internal systems. The result: <strong>most enterprise AI deployments remained limited to simple chat interfaces</strong> disconnected from real business operations.</p>
+
+      <h2>Enter MCP: A Universal Protocol</h2>
+      <p>The Model Context Protocol (MCP), introduced by Anthropic, changes this paradigm fundamentally. Instead of building point-to-point integrations, MCP defines a <strong>standardised way for AI models to discover and interact with external tools and data sources</strong>.</p>
+      <p>Think of it like USB-C for AI systems. Before USB-C, every device had its own proprietary connector. MCP does the same thing for AI-to-system connectivity: one protocol, universal compatibility.</p>
+
+      <h3>How It Works</h3>
+      <p>MCP operates on a client-server architecture:</p>
+      <ul>
+        <li><strong>MCP Servers</strong> expose specific capabilities — databases, APIs, file systems, or any structured data source</li>
+        <li><strong>MCP Clients</strong> (like Claude, or any compatible AI agent) discover and call these servers at runtime</li>
+        <li>The protocol handles authentication, schema negotiation, and structured data exchange automatically</li>
+      </ul>
+
+      <h2>Why This Matters for Organisations</h2>
+      <p>The implications for enterprises and governments are significant:</p>
+      <ul>
+        <li><strong>Reduced integration cost</strong> — build one MCP server, connect to any compatible AI system</li>
+        <li><strong>Data sovereignty</strong> — MCP servers can run locally, meaning sensitive data never leaves your infrastructure</li>
+        <li><strong>Composability</strong> — organisations can combine multiple MCP servers to create complex AI workflows without code</li>
+        <li><strong>Future-proof</strong> — as new AI models emerge, they can connect to existing MCP servers immediately</li>
+      </ul>
+
+      <h2>Real-World Example: Open Data in New Caledonia</h2>
+      <p>At Kanaky Tech, we built one of the first government-focused MCP servers: <strong>mcp-datagouv-nc</strong>. It connects AI agents directly to New Caledonia's official open data portal, allowing language models to query demographic data, economic statistics, and geographic datasets in real-time.</p>
+      <p>Before MCP, accessing this data required manual downloads, format parsing, and custom scripting. Now, an AI agent can simply ask: "What was the population of Noumea in the last census?" — and get a structured, accurate answer directly from the source.</p>
+
+      <blockquote>The future of AI isn't just smarter models — it's smarter connections between models and the systems that run the world.</blockquote>
+
+      <h2>What's Next</h2>
+      <p>MCP adoption is accelerating across the industry. As more organisations publish MCP servers for their data and services, we're moving toward an ecosystem where AI agents can navigate institutional knowledge as fluently as they navigate the open web.</p>
+      <p>For Pacific Island nations, this presents a unique opportunity: <strong>build sovereign MCP infrastructure now</strong>, and ensure that AI systems serve local needs rather than extracting value outward.</p>
+      <p>The protocol is open-source, the tools are maturing, and the time to act is now.</p>
+    </div>
+
+    <div class="article-divider"></div>
+
+    <div class="author-box">
+      <img src="https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg" alt="Kanaky Tech" />
+      <div class="author-info">
+        <div class="author-name">Kanaky Tech</div>
+        Advanced digital solutions for public and private organisations worldwide.
+      </div>
+    </div>
+  </article>
+
+  <footer>
+    <span class="footer-copy">© 2026 Kanaky Tech</span>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/kevyn-wahuzue/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+      <a href="https://github.com/kanakytech" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+      </a>
+    </div>
+  </footer>
+
+</body>
+</html>

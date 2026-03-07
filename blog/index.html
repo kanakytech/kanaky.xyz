@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Kanaky Tech</title>
+  <link rel="icon" type="image/jpeg" href="https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg" />
+  <meta name="description" content="Insights on AI, emerging technologies, Web3 governance and digital sovereignty. Expert analysis from Kanaky Tech." />
+  <link rel="canonical" href="https://kanaky.xyz/blog/" />
+  <meta property="og:title" content="Blog — Kanaky Tech" />
+  <meta property="og:description" content="Insights on AI, emerging technologies, Web3 governance and digital sovereignty." />
+  <meta property="og:url" content="https://kanaky.xyz/blog/" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #050505;
+      --white: #f0f0ec;
+      --grey-1: #111;
+      --grey-2: #1a1a1a;
+      --grey-3: #666;
+      --grey-4: #999;
+      --accent: #c8f060;
+      --border: rgba(255,255,255,0.06);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 20px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 100;
+      background: rgba(5,5,5,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo-mark {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--white);
+    }
+
+    .logo-img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      mix-blend-mode: lighten;
+    }
+
+    .logo-text {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-links a {
+      color: var(--grey-3);
+      text-decoration: none;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover { color: var(--white); }
+
+    .nav-cta {
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 8px 24px !important;
+      transition: all 0.3s ease !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--white) !important;
+      color: var(--black) !important;
+    }
+
+    /* ─── BLOG HEADER ─── */
+    .blog-header {
+      padding: 160px 48px 80px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .blog-header h1 {
+      font-size: clamp(48px, 6vw, 80px);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    .blog-header p {
+      font-size: 16px;
+      color: var(--grey-3);
+      max-width: 500px;
+    }
+
+    /* ─── FILTER TABS ─── */
+    .filter-bar {
+      padding: 24px 48px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .filter-tab {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--grey-3);
+      padding: 6px 18px;
+      font-family: inherit;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .filter-tab:hover, .filter-tab.active {
+      border-color: rgba(255,255,255,0.3);
+      color: var(--white);
+      background: rgba(255,255,255,0.03);
+    }
+
+    /* ─── ARTICLES GRID ─── */
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      min-height: 60vh;
+    }
+
+    .article-card {
+      background: var(--black);
+      padding: 48px 40px;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.4s ease;
+      position: relative;
+    }
+
+    .article-card:hover {
+      background: var(--grey-1);
+    }
+
+    .article-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--white), transparent);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .article-card:hover::before { opacity: 0.3; }
+
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .article-category {
+      font-size: 9px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border: 1px solid var(--border);
+      color: var(--grey-3);
+    }
+
+    .article-category.ai { border-color: rgba(200, 240, 96, 0.3); color: var(--accent); }
+    .article-category.web3 { border-color: rgba(96, 180, 240, 0.3); color: #60b4f0; }
+    .article-category.sovereignty { border-color: rgba(240, 160, 96, 0.3); color: #f0a060; }
+    .article-category.mcp { border-color: rgba(180, 96, 240, 0.3); color: #b460f0; }
+
+    .article-date {
+      font-size: 11px;
+      color: var(--grey-4);
+    }
+
+    .article-card h2 {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+      margin-bottom: 12px;
+      transition: color 0.3s ease;
+    }
+
+    .article-card:hover h2 { color: var(--white); }
+
+    .article-excerpt {
+      font-size: 14px;
+      color: var(--grey-3);
+      line-height: 1.7;
+      flex: 1;
+      margin-bottom: 24px;
+    }
+
+    .article-read {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--grey-4);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.3s ease;
+    }
+
+    .article-card:hover .article-read { color: var(--white); }
+
+    /* ─── FEATURED ─── */
+    .featured-article {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 0;
+    }
+
+    .featured-article .featured-content {
+      padding: 64px 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .featured-article .featured-visual {
+      background: var(--grey-2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .featured-article .featured-visual canvas {
+      width: 100%;
+      height: 100%;
+    }
+
+    .featured-label {
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .featured-article h2 {
+      font-size: clamp(28px, 3vw, 40px);
+      margin-bottom: 16px;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    footer .footer-copy {
+      font-size: 12px;
+      color: rgba(255,255,255,0.25);
+      letter-spacing: 0.04em;
+    }
+
+    footer .footer-links {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    footer .footer-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border: 1px solid var(--border);
+      color: var(--grey-3);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    footer .footer-links a:hover {
+      border-color: rgba(255,255,255,0.25);
+      color: var(--white);
+    }
+
+    /* ─── SCROLL ANIMATIONS ─── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.3s; }
+
+    /* ─── MOBILE ─── */
+    @media (max-width: 768px) {
+      nav { padding: 16px 24px; }
+      nav .nav-links { display: none; }
+      .blog-header { padding: 120px 24px 48px; }
+      .filter-bar { padding: 16px 24px; }
+      .articles-grid { grid-template-columns: 1fr; }
+      .featured-article { grid-template-columns: 1fr; }
+      .featured-article .featured-visual { min-height: 200px; }
+      footer { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="/" class="logo-mark">
+      <img class="logo-img" src="https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg" alt="Kanaky Tech" />
+      <span class="logo-text">Kanaky Tech</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/#expertise">Expertise</a></li>
+      <li><a href="/#projects">Projects</a></li>
+      <li><a href="/blog/" style="color:var(--white);">Blog</a></li>
+      <li><a href="https://www.linkedin.com/company/kanaky-tech" class="nav-cta" target="_blank" rel="noopener">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- BLOG HEADER -->
+  <header class="blog-header">
+    <h1 class="reveal">Blog</h1>
+    <p class="reveal delay-1">Insights on AI, emerging technologies, and the future of digital sovereignty.</p>
+  </header>
+
+  <!-- FILTER -->
+  <div class="filter-bar">
+    <button class="filter-tab active" data-filter="all">All</button>
+    <button class="filter-tab" data-filter="ai">AI</button>
+    <button class="filter-tab" data-filter="web3">Web3</button>
+    <button class="filter-tab" data-filter="mcp">MCP</button>
+    <button class="filter-tab" data-filter="sovereignty">Sovereignty</button>
+  </div>
+
+  <!-- ARTICLES -->
+  <div class="articles-grid" id="articles-grid">
+
+    <!-- FEATURED -->
+    <a href="/blog/claude-mcp-protocol-explained/" class="article-card featured-article reveal" data-category="mcp">
+      <div class="featured-content">
+        <div class="featured-label">Featured</div>
+        <div class="article-meta">
+          <span class="article-category mcp">MCP</span>
+          <span class="article-date">March 8, 2026</span>
+        </div>
+        <h2>The Model Context Protocol: How AI Agents Are Finally Connecting to the Real World</h2>
+        <p class="article-excerpt">Anthropic's MCP is quietly becoming the USB-C of AI — a universal standard for connecting language models to live data sources, APIs and tools. Here's why it matters for enterprises and governments.</p>
+        <span class="article-read">
+          Read article
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </span>
+      </div>
+      <div class="featured-visual">
+        <canvas id="featured-canvas"></canvas>
+      </div>
+    </a>
+
+    <!-- ARTICLE 2 -->
+    <a href="/blog/ai-agents-2026-landscape/" class="article-card reveal delay-1" data-category="ai">
+      <div class="article-meta">
+        <span class="article-category ai">AI</span>
+        <span class="article-date">March 7, 2026</span>
+      </div>
+      <h2>AI Agents in 2026: From Chatbots to Autonomous Systems</h2>
+      <p class="article-excerpt">The shift from conversational AI to agentic systems is accelerating. We break down what's changed, who's leading, and what organisations need to prepare for.</p>
+      <span class="article-read">
+        Read article
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </span>
+    </a>
+
+    <!-- ARTICLE 3 -->
+    <a href="/blog/digital-sovereignty-pacific-2026/" class="article-card reveal delay-2" data-category="sovereignty">
+      <div class="article-meta">
+        <span class="article-category sovereignty">Sovereignty</span>
+        <span class="article-date">March 6, 2026</span>
+      </div>
+      <h2>Digital Sovereignty in the Pacific: Why Small Nations Can't Afford to Wait</h2>
+      <p class="article-excerpt">As cloud monopolies tighten their grip, Pacific Island nations face a choice: depend on foreign infrastructure or build their own. The window is closing.</p>
+      <span class="article-read">
+        Read article
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </span>
+    </a>
+
+    <!-- ARTICLE 4 -->
+    <a href="/blog/open-data-ai-government/" class="article-card reveal delay-3" data-category="ai">
+      <div class="article-meta">
+        <span class="article-category ai">AI</span>
+        <span class="article-date">March 5, 2026</span>
+      </div>
+      <h2>Open Data + AI: The Untapped Potential for Government Efficiency</h2>
+      <p class="article-excerpt">Most government open data portals are ghost towns. But when connected to AI agents through protocols like MCP, they become powerful decision-making tools.</p>
+      <span class="article-read">
+        Read article
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </span>
+    </a>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-copy">© 2026 Kanaky Tech</span>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/kevyn-wahuzue/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+      <a href="https://github.com/kanakytech" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+      </a>
+      <a href="https://www.tiktok.com/@kanaky.tech" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.66a8.18 8.18 0 004.79 1.52V6.71a4.85 4.85 0 01-1.02-.02z"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    // ─── SCROLL REVEAL ───
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // ─── FILTER TABS ───
+    const tabs = document.querySelectorAll('.filter-tab');
+    const cards = document.querySelectorAll('.article-card');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const filter = tab.dataset.filter;
+
+        cards.forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // ─── FEATURED MINI CANVAS ───
+    const fc = document.getElementById('featured-canvas');
+    if (fc) {
+      const fctx = fc.getContext('2d');
+      function resizeFc() {
+        fc.width = fc.parentElement.offsetWidth;
+        fc.height = fc.parentElement.offsetHeight;
+      }
+      resizeFc();
+      window.addEventListener('resize', resizeFc);
+
+      const nodes = [];
+      for (let i = 0; i < 40; i++) {
+        nodes.push({
+          x: Math.random() * fc.width,
+          y: Math.random() * fc.height,
+          vx: (Math.random() - 0.5) * 0.3,
+          vy: (Math.random() - 0.5) * 0.3,
+          r: 1 + Math.random() * 2
+        });
+      }
+
+      function drawFc() {
+        fctx.clearRect(0, 0, fc.width, fc.height);
+        for (const n of nodes) {
+          n.x += n.vx; n.y += n.vy;
+          if (n.x < 0 || n.x > fc.width) n.vx *= -1;
+          if (n.y < 0 || n.y > fc.height) n.vy *= -1;
+        }
+        for (let i = 0; i < nodes.length; i++) {
+          for (let j = i + 1; j < nodes.length; j++) {
+            const dx = nodes[i].x - nodes[j].x;
+            const dy = nodes[i].y - nodes[j].y;
+            const dist = Math.sqrt(dx*dx + dy*dy);
+            if (dist < 120) {
+              fctx.beginPath();
+              fctx.moveTo(nodes[i].x, nodes[i].y);
+              fctx.lineTo(nodes[j].x, nodes[j].y);
+              fctx.strokeStyle = `rgba(200,240,96,${(1 - dist/120) * 0.15})`;
+              fctx.lineWidth = 0.5;
+              fctx.stroke();
+            }
+          }
+        }
+        for (const n of nodes) {
+          fctx.beginPath();
+          fctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+          fctx.fillStyle = 'rgba(200,240,96,0.3)';
+          fctx.fill();
+        }
+        requestAnimationFrame(drawFc);
+      }
+      requestAnimationFrame(drawFc);
+    }
+  </script>
+
+</body>
+</html>

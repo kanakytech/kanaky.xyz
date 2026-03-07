@@ -7,9 +7,27 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://kanaky.xyz/mcp-datagouvnc/</loc>
+    <loc>https://kanaky.xyz/blog/</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://kanaky.xyz/blog/claude-mcp-protocol-explained/</loc>
     <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kanaky.xyz/blog/ai-agents-2026-landscape/</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kanaky.xyz/mcp-datagouvnc/</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
