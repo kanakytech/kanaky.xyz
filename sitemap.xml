@@ -25,6 +25,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://kanaky.xyz/blog/digital-sovereignty-pacific-2026/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kanaky.xyz/blog/open-data-ai-government/</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://kanaky.xyz/mcp-datagouvnc/</loc>
     <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
