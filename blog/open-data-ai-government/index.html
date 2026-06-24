@@ -4,29 +4,53 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Open Data + AI: The Untapped Potential for Government Efficiency — Kanaky Tech</title>
-  <link rel="icon" type="image/jpeg" href="https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg" />
   <meta name="description" content="Most government open data portals are ghost towns. But when connected to AI agents through protocols like MCP, they become powerful decision-making tools." />
   <link rel="canonical" href="https://kanaky.xyz/blog/open-data-ai-government/" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta property="og:type" content="article" />
   <meta property="og:title" content="Open Data + AI: The Untapped Potential for Government Efficiency" />
   <meta property="og:description" content="When connected to AI agents through protocols like MCP, open data portals become powerful decision-making tools." />
   <meta property="og:url" content="https://kanaky.xyz/blog/open-data-ai-government/" />
-  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Kanaky Tech" />
   <meta property="article:published_time" content="2026-03-05" />
-  <meta property="article:author" content="Kanaky Tech" />
+  <meta property="article:author" content="Kevyn Wahuzue" />
   <meta property="article:section" content="AI" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Open Data + AI: The Untapped Potential for Government Efficiency" />
+  <meta name="twitter:description" content="When connected to AI agents through protocols like MCP, open data portals become powerful decision-making tools." />
+  <link rel="icon" type="image/jpeg" href="https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/kanaky.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Open Data + AI: The Untapped Potential for Government Efficiency",
-    "author": { "@type": "Organization", "name": "Kanaky Tech", "url": "https://kanaky.xyz" },
-    "publisher": { "@type": "Organization", "name": "Kanaky Tech", "url": "https://kanaky.xyz" },
-    "datePublished": "2026-03-05",
-    "description": "Most government open data portals are ghost towns. But when connected to AI agents through protocols like MCP, they become powerful decision-making tools.",
-    "mainEntityOfPage": "https://kanaky.xyz/blog/open-data-ai-government/"
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://kanaky.xyz/"},
+          {"@type":"ListItem","position":2,"name":"Blog","item":"https://kanaky.xyz/blog/"},
+          {"@type":"ListItem","position":3,"name":"Open Data + AI: The Untapped Potential for Government Efficiency","item":"https://kanaky.xyz/blog/open-data-ai-government/"}
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Open Data + AI: The Untapped Potential for Government Efficiency",
+        "description": "Most government open data portals are ghost towns. But when connected to AI agents through protocols like MCP, they become powerful decision-making tools.",
+        "datePublished": "2026-03-05",
+        "author": {"@type":"Person","name":"Kevyn Wahuzue"},
+        "publisher": {
+          "@type":"Organization",
+          "name":"Kanaky Tech",
+          "url":"https://kanaky.xyz/",
+          "logo":{"@type":"ImageObject","url":"https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg"}
+        },
+        "image": "https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg",
+        "mainEntityOfPage": "https://kanaky.xyz/blog/open-data-ai-government/"
+      }
+    ]
   }
   </script>
   <style>
@@ -50,26 +74,6 @@
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
-
-    /* NAV */
-    nav {
-      position: fixed; top: 0; width: 100%;
-      padding: 20px 48px;
-      display: flex; align-items: center; justify-content: space-between;
-      z-index: 100;
-      background: rgba(5,5,5,0.85);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border);
-    }
-    .logo-mark { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--white); }
-    .logo-img { width: 36px; height: 36px; border-radius: 50%; mix-blend-mode: lighten; }
-    .logo-text { font-size: 14px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
-    .nav-links { list-style: none; display: flex; align-items: center; gap: 32px; }
-    .nav-links a { color: var(--grey-3); text-decoration: none; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.3s; }
-    .nav-links a:hover { color: var(--white); }
-    .nav-cta { border: 1px solid rgba(255,255,255,0.15); padding: 8px 24px !important; transition: all 0.3s ease !important; }
-    .nav-cta:hover { background: var(--white) !important; color: var(--black) !important; }
 
     /* ARTICLE */
     .article-header {
@@ -142,45 +146,37 @@
     .author-box .author-info { font-size: 13px; color: var(--grey-3); }
     .author-box .author-name { color: var(--white); font-weight: 600; }
 
-    /* FOOTER */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 32px 48px;
-      display: flex; align-items: center; justify-content: space-between;
-    }
-    footer .footer-copy { font-size: 12px; color: rgba(255,255,255,0.25); }
-    footer .footer-links { display: flex; gap: 12px; }
-    footer .footer-links a {
-      display: flex; align-items: center; justify-content: center;
-      width: 32px; height: 32px; border: 1px solid var(--border);
-      color: var(--grey-3); text-decoration: none; transition: all 0.3s;
-    }
-    footer .footer-links a:hover { border-color: rgba(255,255,255,0.25); color: var(--white); }
-
     @media (max-width: 768px) {
-      nav { padding: 16px 24px; }
-      nav .nav-links { display: none; }
       .article-header { padding: 120px 24px 48px; }
       .article-body { padding: 0 24px 80px; }
       .author-box { padding: 0 24px 64px; }
-      footer { padding: 24px; }
     }
   </style>
 </head>
 <body>
+  <div class="cursor-ring" id="cursor-ring"></div>
 
   <nav>
     <a href="/" class="logo-mark">
-      <img class="logo-img" src="https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg" alt="Kanaky Tech" />
+      <img class="logo-img" src="https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg" alt="Kanaky Tech logo" />
       <span class="logo-text">Kanaky Tech</span>
     </a>
     <ul class="nav-links">
-      <li><a href="/#expertise">Expertise</a></li>
-      <li><a href="/#projects">Projects</a></li>
-      <li><a href="/blog/">Blog</a></li>
-      <li><a href="https://www.linkedin.com/company/kanaky-tech" class="nav-cta" target="_blank" rel="noopener">Contact</a></li>
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/ai-audit/">AI Audit</a></li>
+      <li><a href="/case-studies/">Case Studies</a></li>
+      <li><a href="/blog/" class="active">Blog</a></li>
+      <li><a href="/contact/" class="nav-cta">Contact</a></li>
     </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="/#services">Services</a>
+    <a href="/ai-audit/">AI Audit</a>
+    <a href="/case-studies/">Case Studies</a>
+    <a href="/blog/">Blog</a>
+    <a href="/contact/">Contact</a>
+  </div>
 
   <article>
     <header class="article-header">
@@ -222,7 +218,7 @@
         <li>Understanding statistical methodologies</li>
         <li>Building visualisations from scratch</li>
       </ul>
-      <p>With the MCP server built by Kanaky Tech, an AI agent can now answer questions like:</p>
+      <p>With the <a href="/mcp-datagouvnc/">MCP server built by Kanaky Tech</a>, an AI agent can now answer questions like:</p>
       <ul>
         <li>"What is the population breakdown of Noumea by age group?"</li>
         <li>"How has employment in the mining sector changed over the last decade?"</li>
@@ -250,7 +246,7 @@
         <li><strong>MCP server</strong> — a lightweight wrapper that translates AI queries into API calls</li>
         <li><strong>AI client</strong> — any MCP-compatible model (Claude, or future compatible systems)</li>
       </ul>
-      <p>The entire integration can be built and deployed in weeks, not months. The MCP server for New Caledonia's portal is open-source and can be adapted for any Opendatasoft-based portal worldwide.</p>
+      <p>The entire integration can be built and deployed in weeks, not months. The MCP server for New Caledonia's portal is open-source and can be adapted for any Opendatasoft-based portal worldwide. The same connective layer is what we use to build <a href="/ai-agents-new-caledonia/">AI agents for organisations in New Caledonia</a>.</p>
 
       <h2>Barriers to Adoption</h2>
       <p>If the technology is ready, why aren't more governments doing this? Three main barriers:</p>
@@ -272,7 +268,7 @@
         <li><strong>Pilot internally</strong> — give policy teams AI-powered access to their own data and measure the productivity impact</li>
         <li><strong>Publish open-source</strong> — share MCP server implementations so other governments can adapt them</li>
       </ul>
-      <p>The governments that connect their data to AI systems now won't just be more efficient — they'll become models for the rest of the world to follow.</p>
+      <p>The governments that connect their data to AI systems now won't just be more efficient — they'll become models for the rest of the world to follow. For institutions handling sensitive records, the same approach works inside controlled, <a href="/private-ai-systems/">private AI systems</a> that keep data in your own environment.</p>
     </div>
 
     <div class="article-divider"></div>
@@ -286,17 +282,46 @@
     </div>
   </article>
 
+  <section class="cta-section"><h2>Put this into practice.</h2><p>Kanaky Tech connects AI agents to real data and automates processes for businesses and institutions across New Caledonia, New Zealand and the Pacific. Start with a free AI opportunity audit.</p><div class="cta-actions"><a href="/ai-audit/" class="btn-primary">Book a free AI audit</a><a href="/contact/" class="btn-ghost">Contact us</a></div></section>
+
   <footer>
-    <span class="footer-copy">&copy; 2026 Kanaky Tech</span>
-    <div class="footer-links">
-      <a href="https://www.linkedin.com/in/kevyn-wahuzue/" target="_blank" rel="noopener" aria-label="LinkedIn">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-      </a>
-      <a href="https://github.com/kanakytech" target="_blank" rel="noopener" aria-label="GitHub">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-      </a>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="logo-mark"><img class="logo-img" src="https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg" alt="Kanaky Tech logo" /><span class="logo-text">Kanaky Tech</span></a>
+        <p>The Pacific's AI automation &amp; agent development studio. We build AI agents and automate business processes for SMEs, agencies and institutions across New Caledonia, New Zealand and the Pacific.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="/business-process-automation/">Business Process Automation</a>
+        <a href="/ai-agents-new-caledonia/">AI Agent Development</a>
+        <a href="/private-ai-systems/">Private AI Systems</a>
+        <a href="/ai-audit/">AI Opportunity Audit</a>
+      </div>
+      <div class="footer-col">
+        <h4>Locations</h4>
+        <a href="/ai-automation-new-caledonia/">AI Automation · New Caledonia</a>
+        <a href="/ai-automation-new-zealand/">AI Automation · New Zealand</a>
+        <a href="/ai-agents-auckland/">AI Agents · Auckland</a>
+        <a href="/ai-agents-new-caledonia/">AI Agents · Nouméa</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="/#about">About</a>
+        <a href="/case-studies/">Case Studies</a>
+        <a href="/who-to-contact-for-ai-automation/">Who to contact</a>
+        <a href="/blog/">Blog</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Kanaky Tech · Nouméa · Auckland · kanaky.xyz</span>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/company/kanaky-tech" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="https://github.com/kanakytech" target="_blank" rel="noopener" aria-label="GitHub"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg></a>
+        <a href="mailto:k.wahuzuepro@gmail.com" aria-label="Email"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></a>
+      </div>
     </div>
   </footer>
 
+  <script src="/assets/site.js"></script>
 </body>
 </html>
