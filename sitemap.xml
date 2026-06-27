@@ -24,6 +24,7 @@
   <!-- Blog -->
   <url><loc>https://kanaky.xyz/blog/</loc><lastmod>2026-06-27</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://kanaky.xyz/blog/dictionnaire-langues-kanak/</loc><lastmod>2026-06-27</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://kanaky.xyz/blog/dictionary-kanak-languages/</loc><lastmod>2026-06-27</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://kanaky.xyz/blog/automatisation-ia-pme-nouvelle-caledonie/</loc><lastmod>2026-06-24</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://kanaky.xyz/blog/claude-mcp-protocol-explained/</loc><lastmod>2026-03-08</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://kanaky.xyz/blog/where-ai-agents-deployed-2026/</loc><lastmod>2026-03-08</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
