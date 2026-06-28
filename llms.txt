@@ -22,12 +22,16 @@ Kanaky Tech is based in Nouméa (New Caledonia) and Auckland (New Zealand). The 
 - [AI Agents · Auckland](https://kanaky.xyz/ai-agents-auckland/)
 - [AI Agents · Nouméa](https://kanaky.xyz/ai-agents-new-caledonia/)
 
+## Flagship product
+- [Keou](https://keou.systems/): private, white-label AI creative-production platform for agencies. An agency uploads a product photo and generates commercial visuals, videos, voiceovers and format variants in minutes, at AI-API cost (~$0.09/image) instead of the traditional ~$18 and ~25 minutes per visual. Includes a Studio, an agentic AI creative-director chat, export packs, a tokenized client-approval portal under the agency's brand, and a built-in ROI report. Read the [full overview](https://kanaky.xyz/blog/keou-ai-creative-production/).
+
 ## Proof & projects
 - [Case studies](https://kanaky.xyz/case-studies/)
 - [MCP for data.gouv.nc](https://kanaky.xyz/mcp-datagouvnc/): connecting New Caledonia's open-data portal to AI agents via the Model Context Protocol.
 - [Dictionary of the Kanak languages](https://dictionnaire.kanaky.xyz/): a free online dictionary uniting 9 Kanak languages and 19,672 words, with native-speaker audio, an offline mode, and a retrieval-grounded AI assistant — built by Kanaky Tech.
 
 ## Blog & insights
+- [Keou: White-Label AI Visual Production for Agencies](https://kanaky.xyz/blog/keou-ai-creative-production/)
 - [AI Voice-to-Quote for Tradespeople](https://kanaky.xyz/blog/ai-voice-to-quote-tradies/)
 - [White-Label AI for Agencies](https://kanaky.xyz/blog/white-label-ai-for-agencies/)
 - [A Dictionary of the Kanak Languages](https://kanaky.xyz/blog/dictionary-kanak-languages/) · [version française](https://kanaky.xyz/blog/dictionnaire-langues-kanak/)
