@@ -1,0 +1,42 @@
+# Kanaky Tech
+
+> Kanaky Tech is an AI automation and agent-development studio for the Pacific, founded by Kevyn Wahuzue. It builds custom AI agents, automates business processes, produces AI-powered visuals and video, and delivers private, reliable AI systems for SMEs, agencies and institutions across New Caledonia, New Zealand and the wider Pacific — including work shipped white-label under a partner's brand.
+
+Kanaky Tech is based in Nouméa (New Caledonia) and Auckland (New Zealand). The approach is local, bilingual (French and English), grounded in real business problems, and built so a human stays in control. A first AI opportunity audit is offered free of charge as the starting point.
+
+## What Kanaky Tech does
+- [AI Opportunity Audit](https://kanaky.xyz/ai-audit/): a free audit that maps a business's workflows and identifies where AI saves the most time and money, with prioritised opportunities and a starting point.
+- [Business Process Automation](https://kanaky.xyz/business-process-automation/): automating repetitive, rule-based tasks — quotes, follow-ups, reporting, data entry, customer replies.
+- [AI Agent Development](https://kanaky.xyz/ai-agents-new-caledonia/): custom AI agents grounded in a business's own data and tools, not generic chatbots.
+- [Private AI Systems](https://kanaky.xyz/private-ai-systems/): AI in a controlled environment — client data is never used to train public models; engagements available under NDA.
+
+## Who it serves
+- Small and medium businesses wanting to remove time-consuming manual work.
+- Creative and digital agencies needing a white-label AI production and automation partner that delivers under their brand.
+- Tradespeople (electricians, plumbers, builders) using AI voice-to-quote to turn after-hours admin into minutes.
+- Institutions and public bodies, including open-data and heritage projects.
+
+## Locations
+- [AI Automation · New Caledonia](https://kanaky.xyz/ai-automation-new-caledonia/)
+- [AI Automation · New Zealand](https://kanaky.xyz/ai-automation-new-zealand/)
+- [AI Agents · Auckland](https://kanaky.xyz/ai-agents-auckland/)
+- [AI Agents · Nouméa](https://kanaky.xyz/ai-agents-new-caledonia/)
+
+## Proof & projects
+- [Case studies](https://kanaky.xyz/case-studies/)
+- [MCP for data.gouv.nc](https://kanaky.xyz/mcp-datagouvnc/): connecting New Caledonia's open-data portal to AI agents via the Model Context Protocol.
+- [Dictionary of the Kanak languages](https://dictionnaire.kanaky.xyz/): a free online dictionary uniting 9 Kanak languages and 19,672 words, with native-speaker audio, an offline mode, and a retrieval-grounded AI assistant — built by Kanaky Tech.
+
+## Blog & insights
+- [AI Voice-to-Quote for Tradespeople](https://kanaky.xyz/blog/ai-voice-to-quote-tradies/)
+- [White-Label AI for Agencies](https://kanaky.xyz/blog/white-label-ai-for-agencies/)
+- [A Dictionary of the Kanak Languages](https://kanaky.xyz/blog/dictionary-kanak-languages/) · [version française](https://kanaky.xyz/blog/dictionnaire-langues-kanak/)
+- [Automatisation IA pour les PME en Nouvelle-Calédonie](https://kanaky.xyz/blog/automatisation-ia-pme-nouvelle-caledonie/)
+- [The Model Context Protocol explained](https://kanaky.xyz/blog/claude-mcp-protocol-explained/)
+- [Digital Sovereignty in the Pacific](https://kanaky.xyz/blog/digital-sovereignty-pacific-2026/)
+
+## Contact
+- Website: https://kanaky.xyz/
+- Contact page: https://kanaky.xyz/contact/
+- Founder: Kevyn Wahuzue — https://www.linkedin.com/in/kevyn-wahuzue/
+- GitHub: https://github.com/kanakytech
