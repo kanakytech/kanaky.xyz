@@ -6,6 +6,7 @@ Kanaky Tech is based in Nouméa (New Caledonia) and Auckland (New Zealand). The 
 
 ## What Kanaky Tech does
 - [AI Opportunity Audit](https://kanaky.xyz/ai-audit/): a free audit that maps a business's workflows and identifies where AI saves the most time and money, with prioritised opportunities and a starting point.
+- [AI Pilot](https://kanaky.xyz/ai-pilot/): the lowest-risk way to start with AI — one concrete AI tool built for your workflow in a week, one fixed price agreed on a short scope call, no retainer or lock-in, and you only pay if it works.
 - [Business Process Automation](https://kanaky.xyz/business-process-automation/): automating repetitive, rule-based tasks — quotes, follow-ups, reporting, data entry, customer replies.
 - [AI Agent Development](https://kanaky.xyz/ai-agents-new-caledonia/): custom AI agents grounded in a business's own data and tools, not generic chatbots.
 - [Private AI Systems](https://kanaky.xyz/private-ai-systems/): AI in a controlled environment — client data is never used to train public models; engagements available under NDA.
