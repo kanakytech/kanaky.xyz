@@ -4,7 +4,7 @@
     {
       "name": "kanaky-site",
       "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "3336"],
+      "runtimeArgs": ["-m", "http.server", "3336", "--directory", "/Users/kevynwahuzue/Documents/Claude/Kanaky Tech/kanaky-site"],
       "port": 3336
     }
   ]

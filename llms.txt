@@ -1,6 +1,6 @@
 # Kanaky Tech
 
-> Kanaky Tech is an AI automation and agent-development studio for the Pacific, founded by Kevyn Wahuzue. It builds custom AI agents, automates business processes, produces AI-powered visuals and video, and delivers private, reliable AI systems for SMEs, agencies and institutions across New Caledonia, New Zealand and the wider Pacific — including work shipped white-label under a partner's brand.
+> Kanaky Tech is an AI automation and agent-development studio for the Pacific, founded by Kevyn Wahuzue. It builds custom AI agents, automates business processes, produces AI-powered visuals and video, and delivers private, reliable AI systems for SMEs, agencies and institutions across New Caledonia, New Zealand, French Polynesia (Tahiti), Wallis and Futuna, Réunion and the wider French-speaking Pacific — including work shipped white-label under a partner's brand.
 
 Kanaky Tech is based in Nouméa (New Caledonia) and Auckland (New Zealand). The approach is local, bilingual (French and English), grounded in real business problems, and built so a human stays in control. A first AI opportunity audit is offered free of charge as the starting point.
 
@@ -22,6 +22,10 @@ Kanaky Tech is based in Nouméa (New Caledonia) and Auckland (New Zealand). The 
 - [AI Automation · New Zealand](https://kanaky.xyz/ai-automation-new-zealand/)
 - [AI Agents · Auckland](https://kanaky.xyz/ai-agents-auckland/)
 - [AI Agents · Nouméa](https://kanaky.xyz/ai-agents-new-caledonia/)
+- [Automatisation IA · Nouvelle-Calédonie](https://kanaky.xyz/automatisation-ia-nouvelle-caledonie/) — page en français (French-language page for New Caledonia)
+- [Automatisation IA · Tahiti & Polynésie française](https://kanaky.xyz/automatisation-ia-tahiti/) — French Polynesia, quotes in XPF, remote delivery
+- [Automatisation IA · Wallis-et-Futuna](https://kanaky.xyz/automatisation-ia-wallis-et-futuna/) — same timezone as Auckland (UTC+12), quotes in XPF
+- [Automatisation IA · La Réunion](https://kanaky.xyz/automatisation-ia-la-reunion/) — quotes in EUR, GDPR-minded delivery
 
 ## Flagship product
 - [Keou](https://keou.systems/): private, white-label AI creative-production platform for agencies. An agency uploads a product photo and generates commercial visuals, videos, voiceovers and format variants in minutes, at AI-API cost (~$0.09/image) instead of the traditional ~$18 and ~25 minutes per visual. Includes a Studio, an agentic AI creative-director chat, export packs, a tokenized client-approval portal under the agency's brand, and a built-in ROI report. Read the [full overview](https://kanaky.xyz/blog/keou-ai-creative-production/).
