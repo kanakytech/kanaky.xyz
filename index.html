@@ -142,6 +142,24 @@
     .stat-number { font-size: 46px; font-weight: 800; letter-spacing: -0.04em; line-height: 1; margin-bottom: 8px; color: var(--white); }
     .stat-label { font-size: 11px; color: var(--grey-3); letter-spacing: 0.1em; text-transform: uppercase; }
 
+    /* Growth model */
+    .growth-split { display:grid; grid-template-columns:1fr auto 1fr; gap:20px; align-items:stretch; max-width:1200px; margin:44px auto 0; }
+    .growth-col { background:var(--black); border:1px solid var(--border); border-radius:14px; padding:28px 26px; }
+    .growth-col-win { border-color:rgba(200,240,96,.28); }
+    .growth-tag { font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--grey-3); margin-bottom:18px; font-weight:600; }
+    .growth-tag-win { color:var(--accent); }
+    .growth-list { list-style:none; display:flex; flex-direction:column; gap:11px; margin-bottom:18px; }
+    .growth-list li { font-size:15px; color:var(--white); display:flex; align-items:center; gap:11px; }
+    .growth-list li::before { content:''; width:15px; height:1px; background:rgba(255,255,255,.25); flex-shrink:0; }
+    .growth-col-win .growth-list li::before { background:var(--accent); }
+    .growth-note { font-size:12.5px; color:var(--grey-3); border-top:1px solid var(--border); padding-top:14px; line-height:1.6; }
+    .growth-arrow { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; color:var(--accent); }
+    .growth-arrow span { font-size:10.5px; text-transform:uppercase; letter-spacing:.1em; color:var(--grey-3); }
+    .growth-loop { max-width:1200px; margin:34px auto 0; display:flex; flex-wrap:wrap; align-items:center; gap:10px 12px; font-size:13.5px; color:var(--grey-3); line-height:1.5; }
+    .growth-loop b { color:var(--white); font-weight:600; }
+    .growth-loop i { color:var(--accent); font-style:normal; }
+    @media (max-width:720px){ .growth-split { grid-template-columns:1fr; } .growth-arrow { transform:rotate(90deg); padding:6px 0; } }
+
     .expertise-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); max-width: 1200px; margin: 0 auto; }
     .expertise-card { background: var(--black); padding: 48px 44px; transition: background 0.5s ease; position: relative; text-decoration: none; color: inherit; display: block; }
     .expertise-card::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: linear-gradient(90deg, transparent, var(--accent), transparent); opacity: 0; transition: opacity 0.5s ease; }
@@ -225,16 +243,16 @@
     <div class="hero-content">
       <div class="hero-badge reveal">
         <span class="hero-badge-dot"></span>
-        Building useful tech for the Pacific · Nouméa + Auckland
+        Growth capacity for Pacific businesses · Nouméa + Auckland
       </div>
-      <h1 class="reveal delay-1">AI agents and automation that give your business <span class="thin">its time back.</span></h1>
-      <p class="hero-sub reveal delay-2">Kanaky Tech is the Pacific's AI automation studio. We build custom AI agents and automate the manual work inside SMEs, agencies and institutions — across New Caledonia, New Zealand and the wider Pacific. <strong style="color:var(--white);font-weight:600;">Private by default:</strong> your data stays on infrastructure you control, and is never fed into public models or used for training.</p>
+      <h1 class="reveal delay-1">More time to grow the business. <span class="thin">Less spent running it.</span></h1>
+      <p class="hero-sub reveal delay-2">As a business grows, so does the admin behind it — quoting, scheduling, follow-ups, invoicing, updates. It quietly eats the hours your team needs to win clients and grow. We automate the repetitive operations so those hours go back into sales, clients and growth. <strong style="color:var(--white);font-weight:600;">AI is simply how we get there</strong> — private by default, on infrastructure you control.</p>
       <div class="hero-actions reveal delay-3">
         <a href="/ai-audit/" class="btn-primary">
-          Book a free AI audit
+          Book a free audit
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-        <a href="#services" class="btn-ghost">What we automate</a>
+        <a href="#growth" class="btn-ghost">See how it works</a>
       </div>
     </div>
   </section>
@@ -258,6 +276,53 @@
       <div class="stat-label">Private by default</div>
     </div>
   </div>
+
+  <!-- GROWTH MODEL -->
+  <section class="section" id="growth">
+    <div class="section-label reveal-left">The idea</div>
+    <div class="about-inner" style="margin-bottom:8px;">
+      <div>
+        <h2 class="about-heading reveal">Most businesses don't lack opportunities. <span style="color:var(--grey-4);font-weight:300;">They lack the time to act on them.</span></h2>
+      </div>
+      <div class="about-body reveal delay-2">
+        <p>Your team spends its hours in two places. One keeps the business running. The other makes it bigger. The problem: as you grow, the first one quietly swallows the second.</p>
+        <p>We don't just automate tasks. We shift your team's time from maintaining the business back to growing it.</p>
+      </div>
+    </div>
+
+    <div class="growth-split reveal delay-2">
+      <div class="growth-col">
+        <div class="growth-tag">Operations — keeps it running</div>
+        <ul class="growth-list">
+          <li>Answering emails</li>
+          <li>Writing quotes</li>
+          <li>Scheduling teams</li>
+          <li>Invoicing &amp; follow-ups</li>
+          <li>Updates &amp; admin</li>
+        </ul>
+        <div class="growth-note">Necessary — but rarely creates new revenue.</div>
+      </div>
+      <div class="growth-arrow" aria-hidden="true">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        <span>time moved</span>
+      </div>
+      <div class="growth-col growth-col-win">
+        <div class="growth-tag growth-tag-win">Growth — makes it bigger</div>
+        <ul class="growth-list">
+          <li>Winning new clients</li>
+          <li>Selling more</li>
+          <li>Building partnerships</li>
+          <li>Keeping clients longer</li>
+          <li>Opening new markets</li>
+        </ul>
+        <div class="growth-note">Where growth is actually created.</div>
+      </div>
+    </div>
+
+    <div class="growth-loop reveal delay-3">
+      <span>Business grows</span><i>→</i><span>admin grows with it</span><i>→</i><span>teams spend more time maintaining</span><i>→</i><b>we automate the operations</b><i>→</i><span>hours come back</span><i>→</i><b style="color:var(--accent)">reinvested in growth</b>
+    </div>
+  </section>
 
   <!-- PRIVATE BY DEFAULT -->
   <section class="section" id="private">
