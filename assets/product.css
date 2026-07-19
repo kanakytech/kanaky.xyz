@@ -1,0 +1,123 @@
+/* ============================================================
+   KANAKY TECH — PRODUCT PAGE KIT
+   Apple-style product pages for the marketplace.
+   Loaded after kanaky.css — inherits vars, nav, footer.
+   ============================================================ */
+
+/* ─── HERO ─── */
+.p-hero { padding: 170px 48px 0; text-align: center; position: relative; z-index: 2; }
+.p-hero .wrap { max-width: 980px; margin: 0 auto; }
+.p-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--accent); border: 1px solid rgba(200,240,96,0.3);
+  padding: 7px 14px; border-radius: 999px; margin-bottom: 28px;
+}
+.p-badge::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+.p-hero h1 {
+  font-size: clamp(44px, 7.5vw, 92px); font-weight: 700;
+  letter-spacing: -0.035em; line-height: 1.02; margin-bottom: 26px;
+}
+.p-hero h1 .thin { font-weight: 300; color: var(--grey-4); display: block; }
+.p-hero .p-sub { max-width: 640px; margin: 0 auto 38px; font-size: 19px; color: var(--grey-4); line-height: 1.7; }
+.p-hero .hero-actions { justify-content: center; display: flex; gap: 16px; flex-wrap: wrap; }
+.p-price-hint { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--grey-3); margin-top: 22px; }
+
+/* ─── HERO VISUAL — floats up + scales on scroll (JS-driven) ─── */
+.p-stage { padding: 70px 48px 40px; position: relative; z-index: 2; overflow: visible; }
+.p-stage .p-shot { max-width: 1080px; margin: 0 auto; will-change: transform; }
+.p-shot { position: relative; }
+.p-shot img {
+  width: 100%; height: auto; display: block; border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.09);
+  box-shadow: 0 40px 120px rgba(0,0,0,0.65), 0 0 90px rgba(200,240,96,0.05);
+}
+.p-shot.glow::before {
+  content: ''; position: absolute; inset: -8%;
+  background: radial-gradient(ellipse at 50% 20%, rgba(200,240,96,0.10), transparent 65%);
+  filter: blur(30px); z-index: -1; pointer-events: none;
+}
+.p-caption { text-align: center; font-size: 11.5px; color: var(--grey-3); margin-top: 18px; letter-spacing: 0.04em; }
+
+/* ─── QUICK STATS STRIP ─── */
+.p-strip { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-top: 60px; position: relative; z-index: 2; }
+.p-strip .wrap {
+  max-width: var(--maxw); margin: 0 auto; display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.p-stat { padding: 42px 30px; border-left: 1px solid var(--border); }
+.p-stat:first-child { border-left: none; }
+.p-stat b { display: block; font-size: 26px; font-weight: 700; letter-spacing: -0.02em; color: var(--white); margin-bottom: 6px; }
+.p-stat span { font-size: 13px; color: var(--grey-3); line-height: 1.55; display: block; }
+
+/* ─── FEATURE ROWS (alternating) ─── */
+.p-features { position: relative; z-index: 2; }
+.p-feature {
+  max-width: var(--maxw); margin: 0 auto; padding: 110px 48px;
+  display: grid; grid-template-columns: 1fr 1.15fr; gap: 80px; align-items: center;
+}
+.p-feature.flip { grid-template-columns: 1.15fr 1fr; }
+.p-feature.flip .p-ftext { order: 2; }
+.p-feature.flip .p-shot { order: 1; }
+.p-ftext .p-kicker { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 18px; display: block; }
+.p-ftext h2 { font-size: clamp(28px, 3.6vw, 44px); font-weight: 700; letter-spacing: -0.03em; line-height: 1.12; margin-bottom: 20px; }
+.p-ftext p { color: var(--grey-4); font-size: 16px; line-height: 1.75; margin-bottom: 16px; }
+.p-ftext ul { list-style: none; margin-top: 8px; }
+.p-ftext li { display: flex; gap: 12px; align-items: flex-start; color: var(--grey-4); font-size: 14.5px; line-height: 1.65; margin-bottom: 12px; }
+.p-ftext li svg { flex: none; width: 16px; height: 16px; color: var(--accent); margin-top: 3px; }
+
+/* ─── SEQUENCE TIMELINE (pure CSS graphic) ─── */
+.p-timeline { display: flex; flex-direction: column; gap: 0; padding: 10px 0; }
+.p-tl-item { display: flex; gap: 18px; align-items: flex-start; position: relative; padding-bottom: 30px; }
+.p-tl-item::before { content: ''; position: absolute; left: 7px; top: 20px; bottom: 0; width: 1px; background: var(--border); }
+.p-tl-item:last-child::before { display: none; }
+.p-tl-dot { flex: none; width: 15px; height: 15px; border-radius: 50%; border: 1.5px solid var(--accent); background: var(--black); margin-top: 3px; }
+.p-tl-item.done .p-tl-dot { background: var(--accent); }
+.p-tl-body b { display: block; font-size: 15px; color: var(--white); font-weight: 600; }
+.p-tl-body span { font-size: 13px; color: var(--grey-3); }
+
+/* ─── STEPS ─── */
+.p-steps-wrap { border-top: 1px solid var(--border); position: relative; z-index: 2; }
+.p-steps-inner { max-width: var(--maxw); margin: 0 auto; padding: 110px 48px; }
+.p-steps-inner > h2 { font-size: clamp(30px, 4vw, 52px); font-weight: 700; letter-spacing: -0.03em; margin-bottom: 64px; }
+.p-steps-inner > h2 .thin { font-weight: 300; color: var(--grey-4); }
+.p-steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); }
+.p-step { background: var(--black); padding: 44px 36px; }
+.p-step span { font-size: 12px; color: var(--accent); letter-spacing: 0.15em; display: block; margin-bottom: 18px; }
+.p-step h4 { font-size: 19px; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 10px; }
+.p-step p { font-size: 14px; color: var(--grey-3); line-height: 1.7; }
+
+/* ─── SPECS ─── */
+.p-specs { border-top: 1px solid var(--border); position: relative; z-index: 2; }
+.p-specs .wrap { max-width: var(--maxw); margin: 0 auto; padding: 100px 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
+.p-specs h3 { font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--grey-3); margin-bottom: 26px; }
+.p-chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.p-chips span { font-size: 13px; color: var(--grey-4); border: 1px solid rgba(255,255,255,0.1); padding: 9px 16px; border-radius: 999px; }
+.p-included { list-style: none; }
+.p-included li { display: flex; gap: 14px; align-items: flex-start; padding: 14px 0; border-bottom: 1px solid var(--border); color: var(--grey-4); font-size: 15px; }
+.p-included li:last-child { border-bottom: none; }
+.p-included li svg { flex: none; width: 17px; height: 17px; color: var(--accent); margin-top: 3px; }
+.p-included li b { color: var(--white); font-weight: 600; }
+
+/* ─── REVEAL + PARALLAX ─── */
+.pr { opacity: 0; transform: translateY(36px); transition: opacity 0.9s cubic-bezier(0.16,1,0.3,1), transform 0.9s cubic-bezier(0.16,1,0.3,1); }
+.pr.in { opacity: 1; transform: translateY(0); }
+.pr.d1 { transition-delay: 0.1s; } .pr.d2 { transition-delay: 0.2s; } .pr.d3 { transition-delay: 0.3s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .pr { opacity: 1; transform: none; transition: none; }
+  .p-stage .p-shot { transform: none !important; }
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 900px) {
+  .p-hero { padding: 140px 24px 0; }
+  .p-stage { padding: 50px 20px 30px; }
+  .p-feature, .p-feature.flip { grid-template-columns: 1fr; gap: 40px; padding: 70px 24px; }
+  .p-feature.flip .p-ftext { order: 1; }
+  .p-feature.flip .p-shot { order: 2; }
+  .p-steps-grid { grid-template-columns: 1fr; }
+  .p-specs .wrap { grid-template-columns: 1fr; gap: 56px; padding: 70px 24px; }
+  .p-steps-inner { padding: 70px 24px; }
+  .p-stat { border-left: none; border-top: 1px solid var(--border); }
+}
