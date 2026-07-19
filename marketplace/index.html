@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marketplace — Buy the Systems We Actually Run | Kanaky Tech</title>
+  <meta name="description" content="Buy the source code of real, production-tested systems built by Kanaky Tech: cold outreach machine, voice-to-quote for tradies, programmatic SEO engine, one-page business site kit. Full code, setup guide and handover — every system shown with a live demo." />
+  <link rel="canonical" href="https://kanaky.xyz/marketplace/" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Marketplace — Buy the Systems We Actually Run | Kanaky Tech" />
+  <meta property="og:description" content="Real, production-tested systems for sale as source code: cold outreach machine, voice-to-quote, programmatic SEO engine, one-page site kit. Built and run by Kanaky Tech in the Pacific." />
+  <meta property="og:url" content="https://kanaky.xyz/marketplace/" />
+  <meta property="og:site_name" content="Kanaky Tech" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/jpeg" href="https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/kanaky.css">
+  <style>
+    .mk-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); max-width: 1200px; margin: 0 auto; }
+    .mk-card { background: var(--black); padding: 44px 40px; display: flex; flex-direction: column; position: relative; transition: background 0.5s ease; }
+    .mk-card:hover { background: var(--grey-1); }
+    .mk-status { font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; padding: 4px 10px; border: 1px solid var(--border); color: var(--grey-3); display: inline-block; margin-bottom: 20px; width: fit-content; }
+    .mk-status.sale { border-color: rgba(200, 240, 96, 0.35); color: var(--accent); }
+    .mk-card h3 { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 12px; }
+    .mk-desc { font-size: 14px; color: var(--grey-3); line-height: 1.75; margin-bottom: 20px; }
+    .mk-video { border: 1px dashed rgba(255,255,255,0.12); border-radius: 6px; padding: 26px 20px; text-align: center; margin-bottom: 22px; }
+    .mk-video span { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--grey-4); }
+    .mk-video.live-demo a { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); text-decoration: none; }
+    .mk-tech { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 22px; }
+    .mk-tech span { font-size: 10px; letter-spacing: 0.06em; color: var(--grey-4); padding: 3px 10px; border: 1px solid rgba(255,255,255,0.05); }
+    .mk-includes { font-size: 12px; color: var(--grey-3); margin-bottom: 24px; line-height: 1.9; }
+    .mk-includes b { color: var(--white); font-weight: 600; }
+    .mk-actions { margin-top: auto; display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+    .mk-price { font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--grey-3); }
+    @media (max-width: 800px) { .mk-grid { grid-template-columns: 1fr; } }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://kanaky.xyz/"},
+          {"@type":"ListItem","position":2,"name":"Marketplace","item":"https://kanaky.xyz/marketplace/"}
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "@id": "https://kanaky.xyz/marketplace/#catalog",
+        "name": "Kanaky Tech Marketplace — production-tested systems, sold as source code",
+        "url": "https://kanaky.xyz/marketplace/",
+        "provider": { "@id": "https://kanaky.xyz/#organization" },
+        "itemListElement": [
+          { "@type": "Offer", "availability": "https://schema.org/InStock", "itemOffered": { "@type": "Product", "name": "Cold Outreach Machine", "description": "Lead scraping, enrichment and AI-personalised cold email drafting pipeline. Draft-first by design — a human approves every send." } },
+          { "@type": "Offer", "availability": "https://schema.org/InStock", "itemOffered": { "@type": "Product", "name": "Voice-to-Quote for Trades", "description": "Turns a tradie's voice note into a formatted, priced quote document in about a minute." } },
+          { "@type": "Offer", "availability": "https://schema.org/InStock", "itemOffered": { "@type": "Product", "name": "Programmatic SEO Engine", "description": "Topic-to-published-site machine: structured articles, internal linking, sitemap, analytics and ad-ready layout." } },
+          { "@type": "Offer", "availability": "https://schema.org/InStock", "itemOffered": { "@type": "Product", "name": "One-Page Business Site Kit", "description": "Conversion-focused one-page website kit for local service businesses, ready to rebrand and deploy." } }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type":"Question","name":"What exactly do I get when I buy a system?","acceptedAnswer":{"@type":"Answer","text":"The full source code of the system, a setup guide, and a handover call to get it running in your environment. These are the same systems Kanaky Tech built and runs — not starter templates written for a marketplace."}},
+          {"@type":"Question","name":"Can Kanaky Tech customise a system for my business?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every system can be adapted, extended or fully operated for you. Customisation is scoped and quoted separately — start by telling us what you need at kevyn@kanaky.xyz."}},
+          {"@type":"Question","name":"Why are prices on request?","acceptedAnswer":{"@type":"Answer","text":"Pricing depends on the licence you need (single business use vs. agency use) and how much setup or customisation you want. Email kevyn@kanaky.xyz with the system name and your use case, and you will get a clear quote."}},
+          {"@type":"Question","name":"Are these systems really used in production?","acceptedAnswer":{"@type":"Answer","text":"Yes. Each listing links to a live demo or production deployment where one exists. The Kanak Languages Dictionary and Keou Studio are public and verifiable; the outreach, quoting and SEO systems are the internal machines Kanaky Tech runs for its own operations."}}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="cursor-ring" id="cursor-ring"></div>
+  <nav>
+    <a href="/" class="logo-mark">
+      <img class="logo-img" src="https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg" alt="Kanaky Tech logo" />
+      <span class="logo-text">Kanaky Tech</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/ai-audit/">AI Audit</a></li>
+      <li><a href="/case-studies/">Case Studies</a></li>
+      <li><a href="/marketplace/">Marketplace</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/contact/" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="/#services">Services</a>
+    <a href="/ai-audit/">AI Audit</a>
+    <a href="/case-studies/">Case Studies</a>
+    <a href="/marketplace/">Marketplace</a>
+    <a href="/blog/">Blog</a>
+    <a href="/contact/">Contact</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="breadcrumb reveal">
+        <a href="/">Home</a>
+        <span>/</span>
+        <span>Marketplace</span>
+      </div>
+      <span class="eyebrow reveal">Marketplace</span>
+      <h1 class="reveal">Buy the systems <span class="thin">we actually run.</span></h1>
+      <p class="lead reveal delay-1">Every system below was built by Kanaky Tech for real operations — then packaged so you can own it. Full source code, setup guide, handover call. No starter templates, no vapourware: each listing links to a live demo or production deployment.</p>
+      <div class="hero-actions reveal delay-2">
+        <a href="mailto:kevyn@kanaky.xyz?subject=Marketplace%20enquiry" class="btn-primary">Ask about a system</a>
+        <a href="/case-studies/" class="btn-ghost">See case studies</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GEO ANSWER BLOCK -->
+  <section class="section">
+    <div class="answer-block reveal">
+      <div class="ab-q">In short</div>
+      <p>The Kanaky Tech Marketplace sells the source code of production-tested systems — a cold outreach machine, a voice-to-quote tool for trades, a programmatic SEO engine and a one-page site kit — with setup guide and handover included. Two flagship platforms (the Kanak Languages Dictionary and Keou Studio) are shown as proof of work: live, public and verifiable.</p>
+    </div>
+  </section>
+
+  <!-- FOR SALE -->
+  <section class="section">
+    <div class="section-label wrap">For sale — source code</div>
+    <div class="mk-grid">
+
+      <div class="mk-card reveal">
+        <span class="mk-status sale">For sale · Code licence</span>
+        <h3>Cold Outreach Machine</h3>
+        <p class="mk-desc">The prospecting pipeline Kanaky Tech runs on: scrape and qualify leads, enrich them with verifiable facts, and generate personalised cold email drafts — draft-first by design, a human approves every send. Ships scrubbed: no lead data included.</p>
+        <div class="mk-video"><span>Demo video — coming soon</span></div>
+        <div class="mk-tech"><span>Playwright</span><span>n8n</span><span>Claude API</span><span>Node.js</span></div>
+        <p class="mk-includes"><b>Includes:</b> full source code · setup guide · 1 handover call</p>
+        <div class="mk-actions">
+          <a href="mailto:kevyn@kanaky.xyz?subject=Marketplace%20—%20Cold%20Outreach%20Machine" class="btn-primary">Get pricing</a>
+          <span class="mk-price">Price on request</span>
+        </div>
+      </div>
+
+      <div class="mk-card reveal delay-1">
+        <span class="mk-status sale">For sale · Code licence</span>
+        <h3>Voice-to-Quote for Trades</h3>
+        <p class="mk-desc">A tradie records a voice note on the drive back — the system turns it into a formatted, priced quote document in about a minute. Built for electricians, plumbers, HVAC and refrigeration techs who quote at night instead of living.</p>
+        <div class="mk-video"><span>Demo video — coming soon</span></div>
+        <div class="mk-tech"><span>Speech-to-text</span><span>Claude API</span><span>PDF generation</span><span>Telegram bot</span></div>
+        <p class="mk-includes"><b>Includes:</b> full source code · setup guide · 1 handover call</p>
+        <div class="mk-actions">
+          <a href="mailto:kevyn@kanaky.xyz?subject=Marketplace%20—%20Voice-to-Quote" class="btn-primary">Get pricing</a>
+          <span class="mk-price">Price on request</span>
+        </div>
+      </div>
+
+      <div class="mk-card reveal">
+        <span class="mk-status sale">For sale · Code licence</span>
+        <h3>Programmatic SEO Engine</h3>
+        <p class="mk-desc">Pick a niche, feed it structure — get a publishable content site: structured articles, internal linking, sitemap, analytics and an ad-ready layout. The engine behind a live 19-article French travel site built and deployed in days.</p>
+        <div class="mk-video live-demo"><a href="https://partir-serein.vercel.app" target="_blank" rel="noopener">View live example ↗</a></div>
+        <div class="mk-tech"><span>Next.js</span><span>Static generation</span><span>SEO schema</span><span>AdSense-ready</span></div>
+        <p class="mk-includes"><b>Includes:</b> full source code · setup guide · 1 handover call</p>
+        <div class="mk-actions">
+          <a href="mailto:kevyn@kanaky.xyz?subject=Marketplace%20—%20Programmatic%20SEO%20Engine" class="btn-primary">Get pricing</a>
+          <span class="mk-price">Price on request</span>
+        </div>
+      </div>
+
+      <div class="mk-card reveal delay-1">
+        <span class="mk-status sale">For sale · Code licence</span>
+        <h3>One-Page Business Site Kit</h3>
+        <p class="mk-desc">A conversion-focused one-page website kit for local service businesses — hero, services, reviews, booking CTA, mobile-first. Rebrand it, swap the photos, deploy in an afternoon. Built and proven on a real lawn-care business site.</p>
+        <div class="mk-video"><span>Demo video — coming soon</span></div>
+        <div class="mk-tech"><span>Next.js</span><span>One-page</span><span>Mobile-first</span><span>Vercel</span></div>
+        <p class="mk-includes"><b>Includes:</b> full source code · setup guide · 1 handover call</p>
+        <div class="mk-actions">
+          <a href="mailto:kevyn@kanaky.xyz?subject=Marketplace%20—%20One-Page%20Site%20Kit" class="btn-primary">Get pricing</a>
+          <span class="mk-price">Price on request</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROOF OF WORK -->
+  <section class="section">
+    <div class="section-label wrap">Proof of work — live platforms</div>
+    <div class="mk-grid">
+
+      <div class="mk-card reveal">
+        <span class="mk-status">Live platform · Not for sale</span>
+        <h3>Kanak Languages Dictionary</h3>
+        <p class="mk-desc">19,672 words across 9 Kanak languages — bidirectional search, native audio, offline PWA, learning games. A public-interest platform built to help preserve the languages of New Caledonia. The engine can be licensed as a code template for other language projects — it ships without the linguistic data.</p>
+        <div class="mk-video live-demo"><a href="https://dictionnaire.kanaky.xyz" target="_blank" rel="noopener">Open the live platform ↗</a></div>
+        <div class="mk-tech"><span>React</span><span>PWA offline</span><span>19,672 entries</span><span>9 languages</span></div>
+        <p class="mk-includes"><b>Available:</b> dictionary engine as a code template (no data) — for language preservation projects</p>
+        <div class="mk-actions">
+          <a href="mailto:kevyn@kanaky.xyz?subject=Marketplace%20—%20Dictionary%20engine" class="btn-ghost">Ask about the engine</a>
+        </div>
+      </div>
+
+      <div class="mk-card reveal delay-1">
+        <span class="mk-status">Live platform · Licensed separately</span>
+        <h3>Keou Studio</h3>
+        <p class="mk-desc">AI visual production platform: 50 product visuals in ~20 minutes instead of ~25 hours. Deployed as a white-label platform for agencies. The community edition is free (bring your own keys); business licences are quoted privately — this one is a product, not a code sale.</p>
+        <div class="mk-video live-demo"><a href="https://studio.keou.systems" target="_blank" rel="noopener">Try the free studio ↗</a></div>
+        <div class="mk-tech"><span>Express.js</span><span>PostgreSQL</span><span>KIE.AI</span><span>White-label</span></div>
+        <p class="mk-includes"><b>Available:</b> white-label licences for agencies — see <a href="https://keou.systems" target="_blank" rel="noopener" style="color:var(--accent)">keou.systems</a></p>
+        <div class="mk-actions">
+          <a href="mailto:kevyn@kanaky.xyz?subject=Keou%20Studio%20licence" class="btn-ghost">Ask about licences</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section">
+    <div class="section-label wrap">How buying works</div>
+    <div class="steps wrap">
+      <div class="step reveal"><span>01</span><h4>Tell us what you need</h4><p>Email the system name and your use case. You get a clear quote: licence type, setup included, timeline.</p></div>
+      <div class="step reveal delay-1"><span>02</span><h4>We hand it over properly</h4><p>Full source code, a written setup guide, and a handover call to get it running in your environment.</p></div>
+      <div class="step reveal delay-2"><span>03</span><h4>Extend it if you want</h4><p>Every system can be customised, extended or fully operated for you — scoped and quoted separately.</p></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="section-label wrap">FAQ</div>
+    <div class="faq wrap">
+      <div class="faq-item">
+        <button class="faq-q">What exactly do I get when I buy a system?</button>
+        <div class="faq-a"><div class="faq-a-inner">
+          <p>The full source code of the system, a setup guide, and a handover call to get it running in your environment. These are the same systems Kanaky Tech built and runs — not starter templates written for a marketplace.</p>
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Can Kanaky Tech customise a system for my business?</button>
+        <div class="faq-a"><div class="faq-a-inner">
+          <p>Yes. Every system can be adapted, extended or fully operated for you. Customisation is scoped and quoted separately — start by telling us what you need at <a href="mailto:kevyn@kanaky.xyz">kevyn@kanaky.xyz</a>.</p>
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Why are prices on request?</button>
+        <div class="faq-a"><div class="faq-a-inner">
+          <p>Pricing depends on the licence you need (single business use vs. agency use) and how much setup or customisation you want. Email the system name and your use case and you will get a clear quote.</p>
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Are these systems really used in production?</button>
+        <div class="faq-a"><div class="faq-a-inner">
+          <p>Yes. Each listing links to a live demo or production deployment where one exists. The Kanak Languages Dictionary and Keou Studio are public and verifiable; the outreach, quoting and SEO systems are the internal machines Kanaky Tech runs for its own operations.</p>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2 class="reveal">Want one of these running for you?</h2>
+    <p class="reveal delay-1">Email the system name and your use case — you'll get a clear quote and a straight answer on whether it fits.</p>
+    <div class="cta-actions reveal delay-2">
+      <a href="mailto:kevyn@kanaky.xyz?subject=Marketplace%20enquiry" class="btn-primary">kevyn@kanaky.xyz</a>
+      <a href="/contact/" class="btn-ghost">Contact</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="logo-mark"><img class="logo-img" src="https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg" alt="Kanaky Tech logo" /><span class="logo-text">Kanaky Tech</span></a>
+        <p>The Pacific's AI automation &amp; agent development studio. We build AI agents and automate business processes for SMEs, agencies and institutions across New Caledonia, New Zealand and the Pacific.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="/business-process-automation/">Business Process Automation</a>
+        <a href="/ai-agents-new-caledonia/">AI Agent Development</a>
+        <a href="/private-ai-systems/">Private AI Systems</a>
+        <a href="/ai-audit/">AI Opportunity Audit</a>
+      </div>
+      <div class="footer-col">
+        <h4>Locations</h4>
+        <a href="/ai-automation-new-caledonia/">AI Automation · New Caledonia</a>
+        <a href="/ai-automation-new-zealand/">AI Automation · New Zealand</a>
+        <a href="/ai-agents-auckland/">AI Agents · Auckland</a>
+        <a href="/ai-agents-new-caledonia/">AI Agents · Nouméa</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="/#about">About</a>
+        <a href="/case-studies/">Case Studies</a>
+        <a href="/marketplace/">Marketplace</a>
+        <a href="/who-to-contact-for-ai-automation/">Who to contact</a>
+        <a href="/blog/">Blog</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Kanaky Tech · Nouméa · Auckland · kanaky.xyz</span>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/company/kanaky-tech" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="https://github.com/kanakytech" target="_blank" rel="noopener" aria-label="GitHub"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg></a>
+        <a href="mailto:kevyn@kanaky.xyz" aria-label="Email"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></a>
+      </div>
+    </div>
+  </footer>
+  <script src="/assets/site.js"></script>
+</body>
+</html>
