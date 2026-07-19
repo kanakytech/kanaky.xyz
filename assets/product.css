@@ -4,6 +4,23 @@
    Loaded after kanaky.css — inherits vars, nav, footer.
    ============================================================ */
 
+/* ─── SCROLL PROGRESS ─── */
+.p-progress {
+  position: fixed; top: 0; left: 0; height: 2px; width: 100%;
+  transform: scaleX(0); transform-origin: 0 50%;
+  background: linear-gradient(90deg, var(--accent), rgba(200,240,96,0.35));
+  z-index: 999; pointer-events: none;
+}
+
+/* ─── AMBIENT GLOW (follows scroll, very subtle) ─── */
+.p-aura {
+  position: fixed; top: -30vh; left: 50%; width: 120vw; height: 90vh;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse at 50% 40%, rgba(200,240,96,0.055), transparent 62%);
+  filter: blur(20px); pointer-events: none; z-index: 0; opacity: 0.9;
+  transition: opacity 0.6s ease;
+}
+
 /* ─── HERO ─── */
 .p-hero { padding: 170px 48px 0; text-align: center; position: relative; z-index: 2; }
 .p-hero .wrap { max-width: 980px; margin: 0 auto; }
@@ -12,8 +29,16 @@
   font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
   color: var(--accent); border: 1px solid rgba(200,240,96,0.3);
   padding: 7px 14px; border-radius: 999px; margin-bottom: 28px;
+  position: relative; overflow: hidden;
 }
-.p-badge::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+.p-badge::before {
+  content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--accent);
+  animation: p-pulse 2.4s ease-in-out infinite;
+}
+@keyframes p-pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(200,240,96,0.5); }
+  50% { opacity: 0.65; box-shadow: 0 0 0 6px rgba(200,240,96,0); }
+}
 .p-hero h1 {
   font-size: clamp(44px, 7.5vw, 92px); font-weight: 700;
   letter-spacing: -0.035em; line-height: 1.02; margin-bottom: 26px;
@@ -23,9 +48,25 @@
 .p-hero .hero-actions { justify-content: center; display: flex; gap: 16px; flex-wrap: wrap; }
 .p-price-hint { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--grey-3); margin-top: 22px; }
 
+/* Hero entrance: staggered rise on load (no scroll needed) */
+.p-in { opacity: 0; transform: translateY(28px); animation: p-rise 1.05s cubic-bezier(0.16,1,0.3,1) forwards; }
+.p-in.s1 { animation-delay: 0.05s; } .p-in.s2 { animation-delay: 0.16s; }
+.p-in.s3 { animation-delay: 0.28s; } .p-in.s4 { animation-delay: 0.40s; } .p-in.s5 { animation-delay: 0.52s; }
+@keyframes p-rise { to { opacity: 1; transform: translateY(0); } }
+
+/* Line-by-line headline reveal */
+.p-line { display: block; overflow: hidden; }
+.p-line > span {
+  display: block; transform: translateY(105%);
+  animation: p-lineUp 1.15s cubic-bezier(0.16,1,0.3,1) forwards;
+}
+.p-line:nth-child(1) > span { animation-delay: 0.12s; }
+.p-line:nth-child(2) > span { animation-delay: 0.24s; }
+@keyframes p-lineUp { to { transform: translateY(0); } }
+
 /* ─── HERO VISUAL — floats up + scales on scroll (JS-driven) ─── */
 .p-stage { padding: 70px 48px 40px; position: relative; z-index: 2; overflow: visible; }
-.p-stage .p-shot { max-width: 1080px; margin: 0 auto; will-change: transform; }
+.p-stage .p-shot { margin: 0 auto; will-change: transform; }
 .p-shot { position: relative; }
 .p-shot img {
   width: 100%; height: auto; display: block; border-radius: 14px;
@@ -37,6 +78,15 @@
   background: radial-gradient(ellipse at 50% 20%, rgba(200,240,96,0.10), transparent 65%);
   filter: blur(30px); z-index: -1; pointer-events: none;
 }
+/* Sheen sweep across the hero visual */
+.p-stage .p-shot::after {
+  content: ''; position: absolute; inset: 0; border-radius: 14px; pointer-events: none;
+  background: linear-gradient(105deg, transparent 32%, rgba(255,255,255,0.055) 46%, transparent 60%);
+  background-size: 260% 100%; background-position: 130% 0;
+  animation: p-sheen 7s ease-in-out 1.4s infinite;
+}
+@keyframes p-sheen { 0% { background-position: 130% 0; } 45%, 100% { background-position: -60% 0; } }
+
 .p-caption { text-align: center; font-size: 11.5px; color: var(--grey-3); margin-top: 18px; letter-spacing: 0.04em; }
 
 /* ─── QUICK STATS STRIP ─── */
@@ -45,8 +95,15 @@
   max-width: var(--maxw); margin: 0 auto; display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
-.p-stat { padding: 42px 30px; border-left: 1px solid var(--border); }
+.p-stat { padding: 42px 30px; border-left: 1px solid var(--border); position: relative; overflow: hidden; }
 .p-stat:first-child { border-left: none; }
+.p-stat::after {
+  content: ''; position: absolute; left: 0; bottom: 0; height: 1px; width: 100%;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  transform: scaleX(0); transform-origin: 0 50%;
+  transition: transform 1.1s cubic-bezier(0.16,1,0.3,1) 0.2s;
+}
+.p-stat.in::after { transform: scaleX(1); }
 .p-stat b { display: block; font-size: 26px; font-weight: 700; letter-spacing: -0.02em; color: var(--white); margin-bottom: 6px; }
 .p-stat span { font-size: 13px; color: var(--grey-3); line-height: 1.55; display: block; }
 
@@ -58,21 +115,34 @@
 }
 .p-feature.flip { grid-template-columns: 1.15fr 1fr; }
 .p-feature.flip .p-ftext { order: 2; }
-.p-feature.flip .p-shot { order: 1; }
+.p-feature.flip .p-shot, .p-feature.flip .p-visual { order: 1; }
 .p-ftext .p-kicker { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 18px; display: block; }
 .p-ftext h2 { font-size: clamp(28px, 3.6vw, 44px); font-weight: 700; letter-spacing: -0.03em; line-height: 1.12; margin-bottom: 20px; }
 .p-ftext p { color: var(--grey-4); font-size: 16px; line-height: 1.75; margin-bottom: 16px; }
 .p-ftext ul { list-style: none; margin-top: 8px; }
-.p-ftext li { display: flex; gap: 12px; align-items: flex-start; color: var(--grey-4); font-size: 14.5px; line-height: 1.65; margin-bottom: 12px; }
+.p-ftext li {
+  display: flex; gap: 12px; align-items: flex-start; color: var(--grey-4);
+  font-size: 14.5px; line-height: 1.65; margin-bottom: 12px;
+  opacity: 0; transform: translateX(-10px);
+  transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1);
+}
+.p-ftext.in li { opacity: 1; transform: translateX(0); }
+.p-ftext.in li:nth-child(1) { transition-delay: 0.25s; }
+.p-ftext.in li:nth-child(2) { transition-delay: 0.36s; }
+.p-ftext.in li:nth-child(3) { transition-delay: 0.47s; }
 .p-ftext li svg { flex: none; width: 16px; height: 16px; color: var(--accent); margin-top: 3px; }
+
+/* Feature visuals get a soft parallax drift (JS sets --py) */
+.p-features .p-shot { will-change: transform; transform: translateY(var(--py, 0px)); }
 
 /* ─── SEQUENCE TIMELINE (pure CSS graphic) ─── */
 .p-timeline { display: flex; flex-direction: column; gap: 0; padding: 10px 0; }
 .p-tl-item { display: flex; gap: 18px; align-items: flex-start; position: relative; padding-bottom: 30px; }
 .p-tl-item::before { content: ''; position: absolute; left: 7px; top: 20px; bottom: 0; width: 1px; background: var(--border); }
 .p-tl-item:last-child::before { display: none; }
-.p-tl-dot { flex: none; width: 15px; height: 15px; border-radius: 50%; border: 1.5px solid var(--accent); background: var(--black); margin-top: 3px; }
+.p-tl-dot { flex: none; width: 15px; height: 15px; border-radius: 50%; border: 1.5px solid var(--accent); background: var(--black); margin-top: 3px; transition: background 0.5s ease, box-shadow 0.5s ease; }
 .p-tl-item.done .p-tl-dot { background: var(--accent); }
+.pr.in .p-tl-item.done .p-tl-dot { box-shadow: 0 0 0 5px rgba(200,240,96,0.12); }
 .p-tl-body b { display: block; font-size: 15px; color: var(--white); font-weight: 600; }
 .p-tl-body span { font-size: 13px; color: var(--grey-3); }
 
@@ -82,7 +152,8 @@
 .p-steps-inner > h2 { font-size: clamp(30px, 4vw, 52px); font-weight: 700; letter-spacing: -0.03em; margin-bottom: 64px; }
 .p-steps-inner > h2 .thin { font-weight: 300; color: var(--grey-4); }
 .p-steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); }
-.p-step { background: var(--black); padding: 44px 36px; }
+.p-step { background: var(--black); padding: 44px 36px; transition: background 0.45s ease, transform 0.45s ease; }
+.p-step:hover { background: var(--grey-1); transform: translateY(-3px); }
 .p-step span { font-size: 12px; color: var(--accent); letter-spacing: 0.15em; display: block; margin-bottom: 18px; }
 .p-step h4 { font-size: 19px; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 10px; }
 .p-step p { font-size: 14px; color: var(--grey-3); line-height: 1.7; }
@@ -92,21 +163,46 @@
 .p-specs .wrap { max-width: var(--maxw); margin: 0 auto; padding: 100px 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
 .p-specs h3 { font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--grey-3); margin-bottom: 26px; }
 .p-chips { display: flex; flex-wrap: wrap; gap: 10px; }
-.p-chips span { font-size: 13px; color: var(--grey-4); border: 1px solid rgba(255,255,255,0.1); padding: 9px 16px; border-radius: 999px; }
+.p-chips span {
+  font-size: 13px; color: var(--grey-4); border: 1px solid rgba(255,255,255,0.1);
+  padding: 9px 16px; border-radius: 999px;
+  opacity: 0; transform: translateY(10px) scale(0.96);
+  transition: opacity 0.55s cubic-bezier(0.16,1,0.3,1), transform 0.55s cubic-bezier(0.16,1,0.3,1), border-color 0.3s, color 0.3s;
+}
+.pr.in .p-chips span { opacity: 1; transform: translateY(0) scale(1); }
+.pr.in .p-chips span:nth-child(1){transition-delay:.05s}.pr.in .p-chips span:nth-child(2){transition-delay:.11s}
+.pr.in .p-chips span:nth-child(3){transition-delay:.17s}.pr.in .p-chips span:nth-child(4){transition-delay:.23s}
+.pr.in .p-chips span:nth-child(5){transition-delay:.29s}.pr.in .p-chips span:nth-child(6){transition-delay:.35s}
+.p-chips span:hover { border-color: rgba(200,240,96,0.4); color: var(--white); }
 .p-included { list-style: none; }
 .p-included li { display: flex; gap: 14px; align-items: flex-start; padding: 14px 0; border-bottom: 1px solid var(--border); color: var(--grey-4); font-size: 15px; }
 .p-included li:last-child { border-bottom: none; }
 .p-included li svg { flex: none; width: 17px; height: 17px; color: var(--accent); margin-top: 3px; }
 .p-included li b { color: var(--white); font-weight: 600; }
 
-/* ─── REVEAL + PARALLAX ─── */
+/* ─── BUTTONS: subtle glow pull ─── */
+.p-hero .btn-primary, .cta-section .btn-primary { position: relative; overflow: hidden; }
+.p-hero .btn-primary::after, .cta-section .btn-primary::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(110deg, transparent 35%, rgba(255,255,255,0.5) 50%, transparent 65%);
+  background-size: 250% 100%; background-position: 140% 0; transition: background-position 0.85s ease;
+}
+.p-hero .btn-primary:hover::after, .cta-section .btn-primary:hover::after { background-position: -50% 0; }
+
+/* ─── REVEAL ─── */
 .pr { opacity: 0; transform: translateY(36px); transition: opacity 0.9s cubic-bezier(0.16,1,0.3,1), transform 0.9s cubic-bezier(0.16,1,0.3,1); }
 .pr.in { opacity: 1; transform: translateY(0); }
 .pr.d1 { transition-delay: 0.1s; } .pr.d2 { transition-delay: 0.2s; } .pr.d3 { transition-delay: 0.3s; }
+/* Visuals scale in slightly for depth */
+.p-features .p-shot.pr { transform: translateY(46px) scale(0.965); }
+.p-features .p-shot.pr.in { transform: translateY(var(--py, 0px)) scale(1); }
 
 @media (prefers-reduced-motion: reduce) {
-  .pr { opacity: 1; transform: none; transition: none; }
+  .pr, .p-in, .p-line > span { opacity: 1 !important; transform: none !important; animation: none !important; transition: none !important; }
   .p-stage .p-shot { transform: none !important; }
+  .p-stage .p-shot::after, .p-badge::before { animation: none; }
+  .p-progress, .p-aura { display: none; }
+  .p-ftext li, .p-chips span { opacity: 1; transform: none; }
 }
 
 /* ─── RESPONSIVE ─── */
@@ -115,7 +211,7 @@
   .p-stage { padding: 50px 20px 30px; }
   .p-feature, .p-feature.flip { grid-template-columns: 1fr; gap: 40px; padding: 70px 24px; }
   .p-feature.flip .p-ftext { order: 1; }
-  .p-feature.flip .p-shot { order: 2; }
+  .p-feature.flip .p-shot, .p-feature.flip .p-visual { order: 2; }
   .p-steps-grid { grid-template-columns: 1fr; }
   .p-specs .wrap { grid-template-columns: 1fr; gap: 56px; padding: 70px 24px; }
   .p-steps-inner { padding: 70px 24px; }
