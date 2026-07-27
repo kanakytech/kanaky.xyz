@@ -23,36 +23,165 @@
   <link rel="stylesheet" href="/assets/kanaky.css">
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Home","item":"https://kanaky.xyz/"},
-          {"@type":"ListItem","position":2,"name":"AI Automation · New Caledonia","item":"https://kanaky.xyz/ai-automation-new-caledonia/"}
-        ]
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://kanaky.xyz/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "AI Automation · New Caledonia",
+          "item": "https://kanaky.xyz/ai-automation-new-caledonia/"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "AI Automation in New Caledonia",
+      "serviceType": "AI automation",
+      "provider": {
+        "@type": "Organization",
+        "name": "Kanaky Tech",
+        "url": "https://kanaky.xyz/"
       },
-      {
-        "@type": "Service",
-        "name": "AI Automation in New Caledonia",
-        "serviceType": "AI automation",
-        "provider": {"@type":"Organization","name":"Kanaky Tech","url":"https://kanaky.xyz/"},
-        "areaServed": ["New Caledonia","New Zealand","Pacific"],
-        "description": "AI automation studio serving businesses, agencies and institutions in New Caledonia. We automate admin, operations and repetitive workflows and build custom AI agents for SMEs in Nouméa."
+      "areaServed": [
+        "New Caledonia",
+        "New Zealand",
+        "Pacific"
+      ],
+      "description": "AI automation studio serving businesses, agencies and institutions in New Caledonia. We automate admin, operations and repetitive workflows and build custom AI agents for SMEs in Nouméa."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Who should contact Kanaky Tech in New Caledonia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Any business, agency or institution in New Caledonia drowning in repetitive manual work should contact Kanaky Tech. We are a good fit for SMEs in Nouméa handling quotes, admin, customer messages, reporting or document processing by hand, and for institutions that want AI agents working on data they control. We start with a free AI audit, so the first conversation costs nothing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien coûte une automatisation IA en Nouvelle-Calédonie ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tout commence par un audit IA gratuit pour identifier les tâches automatisables et leur impact réel. Le tarif dépend ensuite du périmètre : une automatisation simple n'a pas le même coût qu'un agent IA sur mesure connecté à vos outils. Nous chiffrons chaque projet après l'audit, sur devis, sans abonnement imposé. Nous ne communiquons pas de prix fixe car il dépend entièrement de ce que vous voulez automatiser."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What business processes can be automated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Common targets are quote and devis generation, first-line customer responses, recurring reports, lead qualification, and document processing such as reading, sorting and extracting data from PDFs and forms. The rule of thumb: if a task is repetitive, rule-based and eats hours every week, it is usually a candidate. The free AI audit maps which of your processes give the best return first."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Est-ce que mes données restent confidentielles ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. Par défaut, vos données d'entreprise tournent dans des environnements contrôlés et ne sont jamais utilisées pour entraîner des modèles d'IA publics ou grand public. Les missions sont disponibles sous NDA (accord de confidentialité). La confidentialité est un principe de conception, pas une option."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How fast can you deliver?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on scope. A focused single-workflow automation moves much faster than a custom AI agent wired into several of your tools. After the free AI audit we give you a clear scope and timeline before any build starts, so you know what to expect. Our process is Audit, Design, Build, then Embed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work remotely or on-site in Nouméa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Both. Kanaky Tech was founded in New Caledonia and operates from Nouméa and Auckland, so we can meet on the ground in Nouméa and also deliver remotely. Most automation work is built and deployed remotely, with audit and embedding sessions in person when that helps the team adopt the system."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://kanaky.xyz/#noumea",
+      "name": "Kanaky Tech — Nouméa",
+      "url": "https://kanaky.xyz/automatisation-ia-nouvelle-caledonie/",
+      "image": "https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg",
+      "parentOrganization": {
+        "@id": "https://kanaky.xyz/#organization"
       },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {"@type":"Question","name":"Who should contact Kanaky Tech in New Caledonia?","acceptedAnswer":{"@type":"Answer","text":"Any business, agency or institution in New Caledonia drowning in repetitive manual work should contact Kanaky Tech. We are a good fit for SMEs in Nouméa handling quotes, admin, customer messages, reporting or document processing by hand, and for institutions that want AI agents working on data they control. We start with a free AI audit, so the first conversation costs nothing."}},
-          {"@type":"Question","name":"Combien coûte une automatisation IA en Nouvelle-Calédonie ?","acceptedAnswer":{"@type":"Answer","text":"Tout commence par un audit IA gratuit pour identifier les tâches automatisables et leur impact réel. Le tarif dépend ensuite du périmètre : une automatisation simple n'a pas le même coût qu'un agent IA sur mesure connecté à vos outils. Nous chiffrons chaque projet après l'audit, sur devis, sans abonnement imposé. Nous ne communiquons pas de prix fixe car il dépend entièrement de ce que vous voulez automatiser."}},
-          {"@type":"Question","name":"What business processes can be automated?","acceptedAnswer":{"@type":"Answer","text":"Common targets are quote and devis generation, first-line customer responses, recurring reports, lead qualification, and document processing such as reading, sorting and extracting data from PDFs and forms. The rule of thumb: if a task is repetitive, rule-based and eats hours every week, it is usually a candidate. The free AI audit maps which of your processes give the best return first."}},
-          {"@type":"Question","name":"Est-ce que mes données restent confidentielles ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Par défaut, vos données d'entreprise tournent dans des environnements contrôlés et ne sont jamais utilisées pour entraîner des modèles d'IA publics ou grand public. Les missions sont disponibles sous NDA (accord de confidentialité). La confidentialité est un principe de conception, pas une option."}},
-          {"@type":"Question","name":"How fast can you deliver?","acceptedAnswer":{"@type":"Answer","text":"It depends on scope. A focused single-workflow automation moves much faster than a custom AI agent wired into several of your tools. After the free AI audit we give you a clear scope and timeline before any build starts, so you know what to expect. Our process is Audit, Design, Build, then Embed."}},
-          {"@type":"Question","name":"Do you work remotely or on-site in Nouméa?","acceptedAnswer":{"@type":"Answer","text":"Both. Kanaky Tech was founded in New Caledonia and operates from Nouméa and Auckland, so we can meet on the ground in Nouméa and also deliver remotely. Most automation work is built and deployed remotely, with audit and embedding sessions in person when that helps the team adopt the system."}}
-        ]
-      }
-    ]
-  }
+      "address": {
+        "@type": "PostalAddress",
+        "postOfficeBoxNumber": "BP 11657",
+        "addressLocality": "Nouméa",
+        "postalCode": "98802",
+        "addressCountry": "NC"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-22.2758",
+        "longitude": "166.4580"
+      },
+      "telephone": "+687830554",
+      "email": "kevyn@kanaky.xyz",
+      "priceRange": "$$",
+      "currenciesAccepted": "XPF, EUR, NZD",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "RIDET",
+        "value": "1445709.002"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Nouméa"
+        },
+        {
+          "@type": "Country",
+          "name": "Nouvelle-Calédonie"
+        },
+        {
+          "@type": "Country",
+          "name": "Polynésie française"
+        },
+        {
+          "@type": "Country",
+          "name": "Wallis-et-Futuna"
+        }
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "08:00",
+        "closes": "17:00"
+      },
+      "knowsLanguage": [
+        "fr",
+        "en"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/kanaky-tech",
+        "https://github.com/kanakytech"
+      ]
+    }
+  ]
+}
   </script>
 </head>
 <body>

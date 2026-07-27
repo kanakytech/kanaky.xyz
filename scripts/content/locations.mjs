@@ -16,6 +16,22 @@ export default [
 
 {
   slug: 'ai-automation-agency-auckland',
+  extraGraph: [{
+    '@type': 'LocalBusiness', '@id': 'https://kanaky.xyz/#auckland',
+    name: 'Kanaky Tech — Auckland',
+    url: 'https://kanaky.xyz/ai-automation-agency-auckland/',
+    image: 'https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg',
+    parentOrganization: { '@id': 'https://kanaky.xyz/#organization' },
+    address: { '@type': 'PostalAddress', addressLocality: 'Auckland', addressCountry: 'NZ' },
+    geo: { '@type': 'GeoCoordinates', latitude: '-36.8485', longitude: '174.7633' },
+    email: 'kevyn@kanaky.xyz', priceRange: '$$', currenciesAccepted: 'NZD, AUD, USD',
+    identifier: { '@type': 'PropertyValue', propertyID: 'NZBN', value: '9429053554017' },
+    areaServed: [{ '@type': 'City', name: 'Auckland' }, { '@type': 'Country', name: 'New Zealand' }, { '@type': 'Country', name: 'Australia' }],
+    openingHoursSpecification: { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '09:00', closes: '17:00' },
+    knowsLanguage: ['en','fr'],
+    sameAs: ['https://www.linkedin.com/company/kanaky-tech','https://github.com/kanakytech'],
+  }],
+
   title: 'AI Automation Agency in Auckland — Kanaky Tech',
   description: 'An AI automation agency working with Auckland businesses: what we automate, how engagements actually run, what it costs, and the questions worth asking any agency before you sign.',
   keywords: 'AI automation agency Auckland, automation agency Auckland, AI agency Auckland, AI consultant Auckland, business automation Auckland, AI services Auckland',
@@ -103,6 +119,22 @@ export default [
 
 {
   slug: 'ai-automation-australia',
+  extraGraph: [{
+    '@type': 'LocalBusiness', '@id': 'https://kanaky.xyz/#auckland',
+    name: 'Kanaky Tech — Auckland',
+    url: 'https://kanaky.xyz/ai-automation-agency-auckland/',
+    image: 'https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg',
+    parentOrganization: { '@id': 'https://kanaky.xyz/#organization' },
+    address: { '@type': 'PostalAddress', addressLocality: 'Auckland', addressCountry: 'NZ' },
+    geo: { '@type': 'GeoCoordinates', latitude: '-36.8485', longitude: '174.7633' },
+    email: 'kevyn@kanaky.xyz', priceRange: '$$', currenciesAccepted: 'NZD, AUD, USD',
+    identifier: { '@type': 'PropertyValue', propertyID: 'NZBN', value: '9429053554017' },
+    areaServed: [{ '@type': 'City', name: 'Auckland' }, { '@type': 'Country', name: 'New Zealand' }, { '@type': 'Country', name: 'Australia' }],
+    openingHoursSpecification: { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '09:00', closes: '17:00' },
+    knowsLanguage: ['en','fr'],
+    sameAs: ['https://www.linkedin.com/company/kanaky-tech','https://github.com/kanakytech'],
+  }],
+
   title: 'AI Automation for Australian Small Businesses — Kanaky Tech',
   description: 'AI automation for Australian small businesses, delivered remotely from the same timezone: what we automate, honest pricing against the AU market, Spam Act compliance built in, and when not to hire anyone.',
   keywords: 'AI automation Australia, AI automation agency Australia, business automation Australia, AI for small business Australia, AI automation Sydney, AI automation Brisbane',

@@ -22,122 +22,411 @@
 
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://kanaky.xyz/#organization",
-        "name": "Kanaky Tech",
-        "alternateName": "Kanaky Technology",
-        "url": "https://kanaky.xyz/",
-        "logo": "https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg",
-        "image": "https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg",
-        "description": "Pacific AI automation and agent development studio. Builds custom AI agents and automates business processes for SMEs, agencies and institutions across New Caledonia, New Zealand and the Pacific.",
-        "foundingDate": "2024",
-        "founder": { "@id": "https://kanaky.xyz/#kevyn" },
-        "identifier": { "@type": "PropertyValue", "propertyID": "NZBN", "value": "9429053554017" },
-        "areaServed": ["New Caledonia", "New Zealand", "French Polynesia", "Wallis and Futuna", "Réunion", "Pacific"],
-        "knowsAbout": ["AI Automation", "AI Agents", "Workflow Automation", "Business Process Automation", "Private AI", "Local AI Infrastructure", "Model Context Protocol", "Pacific Technology"],
-        "contactPoint": [{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://kanaky.xyz/#organization",
+      "name": "Kanaky Tech",
+      "alternateName": "Kanaky Technology",
+      "url": "https://kanaky.xyz/",
+      "logo": "https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg",
+      "image": "https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg",
+      "description": "Pacific AI automation and agent development studio. Builds custom AI agents and automates business processes for SMEs, agencies and institutions across New Caledonia, New Zealand and the Pacific.",
+      "foundingDate": "2024",
+      "founder": {
+        "@id": "https://kanaky.xyz/#kevyn"
+      },
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "NZBN",
+        "value": "9429053554017"
+      },
+      "areaServed": [
+        "New Caledonia",
+        "New Zealand",
+        "French Polynesia",
+        "Wallis and Futuna",
+        "Réunion",
+        "Pacific"
+      ],
+      "knowsAbout": [
+        "AI Automation",
+        "AI Agents",
+        "Workflow Automation",
+        "Business Process Automation",
+        "Private AI",
+        "Local AI Infrastructure",
+        "Model Context Protocol",
+        "Pacific Technology"
+      ],
+      "contactPoint": [
+        {
           "@type": "ContactPoint",
           "email": "kevyn@kanaky.xyz",
           "telephone": "+64290450 9571",
           "contactType": "sales",
-          "areaServed": ["NC", "NZ"],
-          "availableLanguage": ["English", "French"]
-        }],
-        "sameAs": [
-          "https://www.linkedin.com/company/kanaky-tech",
-          "https://github.com/kanakytech",
-          "https://www.tiktok.com/@kanaky.tech"
-        ]
-      },
-      {
-        "@type": "ProfessionalService",
-        "@id": "https://kanaky.xyz/#service",
-        "name": "Kanaky Tech — AI Automation Studio",
-        "url": "https://kanaky.xyz/",
-        "image": "https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg",
-        "priceRange": "$$",
-        "parentOrganization": { "@id": "https://kanaky.xyz/#organization" },
-        "description": "AI automation and AI agent development for businesses in New Caledonia, New Zealand and the Pacific. Free AI opportunity audit as a first step.",
-        "areaServed": [
-          { "@type": "Country", "name": "New Caledonia" },
-          { "@type": "Country", "name": "New Zealand" },
-          { "@type": "Place", "name": "French Polynesia" },
-          { "@type": "Place", "name": "Wallis and Futuna" },
-          { "@type": "Place", "name": "Réunion" },
-          { "@type": "Place", "name": "Pacific" }
-        ],
-        "address": [
-          { "@type": "PostalAddress", "addressLocality": "Nouméa", "addressCountry": "NC" },
-          { "@type": "PostalAddress", "addressLocality": "Auckland", "addressCountry": "NZ" }
-        ],
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "AI Automation Services",
-          "itemListElement": [
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Business Process Automation", "url": "https://kanaky.xyz/business-process-automation/" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Agent Development", "url": "https://kanaky.xyz/ai-agents-new-caledonia/" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Private AI Systems", "url": "https://kanaky.xyz/private-ai-systems/" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Opportunity Audit", "url": "https://kanaky.xyz/ai-audit/" } }
+          "areaServed": [
+            "NC",
+            "NZ"
+          ],
+          "availableLanguage": [
+            "English",
+            "French"
           ]
         }
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/kanaky-tech",
+        "https://github.com/kanakytech",
+        "https://www.tiktok.com/@kanaky.tech"
+      ]
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://kanaky.xyz/#service",
+      "name": "Kanaky Tech — AI Automation Studio",
+      "url": "https://kanaky.xyz/",
+      "image": "https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg",
+      "priceRange": "$$",
+      "parentOrganization": {
+        "@id": "https://kanaky.xyz/#organization"
       },
-      {
-        "@type": "Person",
-        "@id": "https://kanaky.xyz/#kevyn",
-        "name": "Kevyn Wahuzue",
-        "jobTitle": "Founder & AI Systems Architect",
-        "worksFor": { "@id": "https://kanaky.xyz/#organization" },
-        "knowsAbout": ["AI Automation", "AI Agents", "Business Process Automation", "Private AI", "Model Context Protocol"],
-        "sameAs": ["https://www.linkedin.com/in/kevyn-wahuzue/"]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://kanaky.xyz/#website",
-        "url": "https://kanaky.xyz/",
-        "name": "Kanaky Tech",
-        "publisher": { "@id": "https://kanaky.xyz/#organization" }
-      },
-      {
-        "@type": "Product",
-        "@id": "https://kanaky.xyz/marketplace/cold-outreach-machine/#product",
-        "name": "Cold Outreach Machine",
-        "image": ["https://kanaky.xyz/assets/og/cold-outreach-machine.png"],
-        "url": "https://kanaky.xyz/marketplace/cold-outreach-machine/",
-        "category": "Sales outreach software",
-        "description": "Outbound sales software sold as a one-time purchase rather than a subscription. It finds companies matching the customer profile you describe, reads what each one publishes, writes a different email for every company, and sends them on a paced schedule inside working hours. Runs on your own machine or server; the AI writing can run through a cloud provider or entirely locally. Includes complete source code, a guided installer, a named commercial licence, a live setup call and 30 days of support.",
-        "brand": { "@id": "https://kanaky.xyz/#organization" },
-        "offers": {
-          "@type": "Offer",
-          "price": "299.99",
-          "priceCurrency": "USD",
-          "availability": "https://schema.org/InStock",
-          "url": "https://kanaky.xyz/marketplace/cold-outreach-machine/",
-          "seller": { "@id": "https://kanaky.xyz/#organization" }
+      "description": "AI automation and AI agent development for businesses in New Caledonia, New Zealand and the Pacific. Free AI opportunity audit as a first step.",
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "New Caledonia"
+        },
+        {
+          "@type": "Country",
+          "name": "New Zealand"
+        },
+        {
+          "@type": "Place",
+          "name": "French Polynesia"
+        },
+        {
+          "@type": "Place",
+          "name": "Wallis and Futuna"
+        },
+        {
+          "@type": "Place",
+          "name": "Réunion"
+        },
+        {
+          "@type": "Place",
+          "name": "Pacific"
         }
-      },
-      {
-        "@type": "BreadcrumbList",
+      ],
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "addressLocality": "Nouméa",
+          "addressCountry": "NC"
+        },
+        {
+          "@type": "PostalAddress",
+          "addressLocality": "Auckland",
+          "addressCountry": "NZ"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "AI Automation Services",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kanaky.xyz/" }
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          { "@type": "Question", "name": "What does Kanaky Tech do?", "acceptedAnswer": { "@type": "Answer", "text": "Kanaky Tech is a Pacific AI automation studio. We build custom AI agents and automate manual business processes — admin, operations, reporting, lead handling and document workflows — for SMEs, agencies and institutions across New Caledonia, New Zealand and the wider Pacific." } },
-          { "@type": "Question", "name": "Who should contact Kanaky Tech?", "acceptedAnswer": { "@type": "Answer", "text": "Any business or institution losing hours to repetitive manual work, slow lead follow-up, manual reporting or document processing — and anyone who wants to use AI but does not know where to start. We work with SMEs, agencies and public institutions in New Caledonia, New Zealand and the Pacific." } },
-          { "@type": "Question", "name": "Where is Kanaky Tech based?", "acceptedAnswer": { "@type": "Answer", "text": "Kanaky Tech operates from Nouméa (New Caledonia) and Auckland (New Zealand), serving the wider Pacific. It was founded in 2024 by Kevyn Wahuzue." } },
-          { "@type": "Question", "name": "How do I start working with Kanaky Tech?", "acceptedAnswer": { "@type": "Answer", "text": "The first step is a free AI opportunity audit: we review how your business runs and show you your highest-impact AI opportunities and where to start — free, no commitment. The full prioritised roadmap (detailed analysis, ROI per opportunity and a sequenced plan) and the build are paid, scoped next steps. Contact us at kevyn@kanaky.xyz." } },
-          { "@type": "Question", "name": "Is my business data kept private?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Kanaky Tech is private-by-default: your data runs in controlled environments, is never used to train public or consumer AI models, and engagements are available under NDA." } },
-          { "@type": "Question", "name": "Does Kanaky Tech build AI agents or just automations?", "acceptedAnswer": { "@type": "Answer", "text": "Both. We build automations for repetitive workflows and custom AI agents that take actions, use tools and integrate with your existing systems — from lead qualification and customer response to operations and internal knowledge agents." } },
-          { "@type": "Question", "name": "Does Kanaky Tech sell software I can buy directly?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The Cold Outreach Machine is sold as a one-time purchase of US$299.99 rather than a monthly subscription. It finds companies matching the customer profile you describe, reads what each one publishes, writes a different email for every company, and sends them on a paced schedule inside working hours. It runs on your own machine or server, and the AI writing can run through a cloud provider or entirely locally so prospect data never leaves your hardware. The purchase includes the complete source code, a guided installer, a named commercial licence, one live setup call and 30 days of support. Comparable subscription platforms run roughly US$39–97 per month." } }
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Business Process Automation",
+              "url": "https://kanaky.xyz/business-process-automation/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AI Agent Development",
+              "url": "https://kanaky.xyz/ai-agents-new-caledonia/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Private AI Systems",
+              "url": "https://kanaky.xyz/private-ai-systems/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AI Opportunity Audit",
+              "url": "https://kanaky.xyz/ai-audit/"
+            }
+          }
         ]
       }
-    ]
-  }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://kanaky.xyz/#kevyn",
+      "name": "Kevyn Wahuzue",
+      "jobTitle": "Founder & AI Systems Architect",
+      "worksFor": {
+        "@id": "https://kanaky.xyz/#organization"
+      },
+      "knowsAbout": [
+        "AI Automation",
+        "AI Agents",
+        "Business Process Automation",
+        "Private AI",
+        "Model Context Protocol"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/kevyn-wahuzue/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://kanaky.xyz/#website",
+      "url": "https://kanaky.xyz/",
+      "name": "Kanaky Tech",
+      "publisher": {
+        "@id": "https://kanaky.xyz/#organization"
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://kanaky.xyz/marketplace/cold-outreach-machine/#product",
+      "name": "Cold Outreach Machine",
+      "image": [
+        "https://kanaky.xyz/assets/og/cold-outreach-machine.png"
+      ],
+      "url": "https://kanaky.xyz/marketplace/cold-outreach-machine/",
+      "category": "Sales outreach software",
+      "description": "Outbound sales software sold as a one-time purchase rather than a subscription. It finds companies matching the customer profile you describe, reads what each one publishes, writes a different email for every company, and sends them on a paced schedule inside working hours. Runs on your own machine or server; the AI writing can run through a cloud provider or entirely locally. Includes complete source code, a guided installer, a named commercial licence, a live setup call and 30 days of support.",
+      "brand": {
+        "@id": "https://kanaky.xyz/#organization"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "299.99",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://kanaky.xyz/marketplace/cold-outreach-machine/",
+        "seller": {
+          "@id": "https://kanaky.xyz/#organization"
+        }
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://kanaky.xyz/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does Kanaky Tech do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kanaky Tech is a Pacific AI automation studio. We build custom AI agents and automate manual business processes — admin, operations, reporting, lead handling and document workflows — for SMEs, agencies and institutions across New Caledonia, New Zealand and the wider Pacific."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who should contact Kanaky Tech?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Any business or institution losing hours to repetitive manual work, slow lead follow-up, manual reporting or document processing — and anyone who wants to use AI but does not know where to start. We work with SMEs, agencies and public institutions in New Caledonia, New Zealand and the Pacific."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is Kanaky Tech based?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kanaky Tech operates from Nouméa (New Caledonia) and Auckland (New Zealand), serving the wider Pacific. It was founded in 2024 by Kevyn Wahuzue."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I start working with Kanaky Tech?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The first step is a free AI opportunity audit: we review how your business runs and show you your highest-impact AI opportunities and where to start — free, no commitment. The full prioritised roadmap (detailed analysis, ROI per opportunity and a sequenced plan) and the build are paid, scoped next steps. Contact us at kevyn@kanaky.xyz."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my business data kept private?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Kanaky Tech is private-by-default: your data runs in controlled environments, is never used to train public or consumer AI models, and engagements are available under NDA."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Kanaky Tech build AI agents or just automations?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Both. We build automations for repetitive workflows and custom AI agents that take actions, use tools and integrate with your existing systems — from lead qualification and customer response to operations and internal knowledge agents."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Kanaky Tech sell software I can buy directly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The Cold Outreach Machine is sold as a one-time purchase of US$299.99 rather than a monthly subscription. It finds companies matching the customer profile you describe, reads what each one publishes, writes a different email for every company, and sends them on a paced schedule inside working hours. It runs on your own machine or server, and the AI writing can run through a cloud provider or entirely locally so prospect data never leaves your hardware. The purchase includes the complete source code, a guided installer, a named commercial licence, one live setup call and 30 days of support. Comparable subscription platforms run roughly US$39–97 per month."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://kanaky.xyz/#noumea",
+      "name": "Kanaky Tech — Nouméa",
+      "url": "https://kanaky.xyz/automatisation-ia-nouvelle-caledonie/",
+      "image": "https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg",
+      "parentOrganization": {
+        "@id": "https://kanaky.xyz/#organization"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "postOfficeBoxNumber": "BP 11657",
+        "addressLocality": "Nouméa",
+        "postalCode": "98802",
+        "addressCountry": "NC"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-22.2758",
+        "longitude": "166.4580"
+      },
+      "telephone": "+687830554",
+      "email": "kevyn@kanaky.xyz",
+      "priceRange": "$$",
+      "currenciesAccepted": "XPF, EUR, NZD",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "RIDET",
+        "value": "1445709.002"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Nouméa"
+        },
+        {
+          "@type": "Country",
+          "name": "Nouvelle-Calédonie"
+        },
+        {
+          "@type": "Country",
+          "name": "Polynésie française"
+        },
+        {
+          "@type": "Country",
+          "name": "Wallis-et-Futuna"
+        }
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "08:00",
+        "closes": "17:00"
+      },
+      "knowsLanguage": [
+        "fr",
+        "en"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/kanaky-tech",
+        "https://github.com/kanakytech"
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://kanaky.xyz/#auckland",
+      "name": "Kanaky Tech — Auckland",
+      "url": "https://kanaky.xyz/ai-automation-agency-auckland/",
+      "image": "https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg",
+      "parentOrganization": {
+        "@id": "https://kanaky.xyz/#organization"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Auckland",
+        "addressCountry": "NZ"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-36.8485",
+        "longitude": "174.7633"
+      },
+      "email": "kevyn@kanaky.xyz",
+      "priceRange": "$$",
+      "currenciesAccepted": "NZD, AUD, USD",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "NZBN",
+        "value": "9429053554017"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Auckland"
+        },
+        {
+          "@type": "Country",
+          "name": "New Zealand"
+        },
+        {
+          "@type": "Country",
+          "name": "Australia"
+        }
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "17:00"
+      },
+      "knowsLanguage": [
+        "en",
+        "fr"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/kanaky-tech",
+        "https://github.com/kanakytech"
+      ]
+    }
+  ]
+}
   </script>
 
   <style>

@@ -20,36 +20,165 @@
   <link rel="stylesheet" href="/assets/kanaky.css">
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Home","item":"https://kanaky.xyz/"},
-          {"@type":"ListItem","position":2,"name":"AI Agent Development · New Caledonia","item":"https://kanaky.xyz/ai-agents-new-caledonia/"}
-        ]
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://kanaky.xyz/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "AI Agent Development · New Caledonia",
+          "item": "https://kanaky.xyz/ai-agents-new-caledonia/"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "AI Agent Development in New Caledonia",
+      "serviceType": "AI automation",
+      "provider": {
+        "@type": "Organization",
+        "name": "Kanaky Tech",
+        "url": "https://kanaky.xyz/"
       },
-      {
-        "@type": "Service",
-        "name": "AI Agent Development in New Caledonia",
-        "serviceType": "AI automation",
-        "provider": {"@type":"Organization","name":"Kanaky Tech","url":"https://kanaky.xyz/"},
-        "areaServed": ["New Caledonia","New Zealand","Pacific"],
-        "description": "Custom AI agent development for SMEs and institutions in New Caledonia (Nouméa) — lead-qualification, customer-response, operations, document, internal-knowledge and voice agents that integrate with existing tools. Private-by-default, available under NDA."
+      "areaServed": [
+        "New Caledonia",
+        "New Zealand",
+        "Pacific"
+      ],
+      "description": "Custom AI agent development for SMEs and institutions in New Caledonia (Nouméa) — lead-qualification, customer-response, operations, document, internal-knowledge and voice agents that integrate with existing tools. Private-by-default, available under NDA."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Qui peut développer un agent IA en Nouvelle-Calédonie ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kanaky Tech est un studio d'automatisation et de développement d'agents IA fondé en 2024 en Nouvelle-Calédonie, opérant depuis Nouméa et Auckland. Nous concevons des agents IA sur mesure (chat, opérations, qualification de leads, documents, voix) pour les PME et institutions du Pacifique, intégrés à leurs outils existants. Fondateur : Kevyn Wahuzue, architecte de systèmes IA. Confidentialité par défaut, missions disponibles sous NDA."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between an AI agent and a chatbot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A chatbot answers questions from a script or a knowledge base. An AI agent takes actions: it can use tools, call APIs, read and write records in your systems, make decisions and complete multi-step tasks on its own. A chatbot talks; an agent does the work — qualifying a lead, drafting a quote, updating your CRM, then handing off to a human only when it needs to."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien de temps faut-il pour créer un agent IA ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cela dépend du périmètre, et nous commençons toujours par un audit pour le définir honnêtement. Un agent simple connecté à un seul outil peut être livré en quelques semaines ; un agent multi-outils avec intégrations et garde-fous prend plus de temps. Nous découpons le travail en phases pour vous montrer de la valeur tôt plutôt que de promettre un délai irréaliste."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can the agent connect to my existing tools?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Our agents integrate with the tools you already use through APIs, the Model Context Protocol (MCP), and automation layers like N8N. We have built and run an MCP server (mcp-datagouv-nc) that connects AI agents to New Caledonia's open-data portal, and we deploy agent interfaces over channels such as Telegram. If a tool exposes an API or a standard connector, we can wire an agent to it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are AI agents secure and private?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We work private-by-default: your business data runs in controlled environments and is never used to train public or consumer AI models. Engagements are available under NDA, and we scope each build so the agent only has access to the systems and data it genuinely needs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who should build an AI agent for their business?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Any business with a repetitive, rules-and-judgement task that eats staff time is a candidate — qualifying inbound leads, answering routine customer messages, generating quotes, processing documents, or surfacing internal knowledge. If your team spends hours each week on work an agent could take actions on, it is worth a free AI audit to see what is feasible."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://kanaky.xyz/#noumea",
+      "name": "Kanaky Tech — Nouméa",
+      "url": "https://kanaky.xyz/automatisation-ia-nouvelle-caledonie/",
+      "image": "https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg",
+      "parentOrganization": {
+        "@id": "https://kanaky.xyz/#organization"
       },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {"@type":"Question","name":"Qui peut développer un agent IA en Nouvelle-Calédonie ?","acceptedAnswer":{"@type":"Answer","text":"Kanaky Tech est un studio d'automatisation et de développement d'agents IA fondé en 2024 en Nouvelle-Calédonie, opérant depuis Nouméa et Auckland. Nous concevons des agents IA sur mesure (chat, opérations, qualification de leads, documents, voix) pour les PME et institutions du Pacifique, intégrés à leurs outils existants. Fondateur : Kevyn Wahuzue, architecte de systèmes IA. Confidentialité par défaut, missions disponibles sous NDA."}},
-          {"@type":"Question","name":"What is the difference between an AI agent and a chatbot?","acceptedAnswer":{"@type":"Answer","text":"A chatbot answers questions from a script or a knowledge base. An AI agent takes actions: it can use tools, call APIs, read and write records in your systems, make decisions and complete multi-step tasks on its own. A chatbot talks; an agent does the work — qualifying a lead, drafting a quote, updating your CRM, then handing off to a human only when it needs to."}},
-          {"@type":"Question","name":"Combien de temps faut-il pour créer un agent IA ?","acceptedAnswer":{"@type":"Answer","text":"Cela dépend du périmètre, et nous commençons toujours par un audit pour le définir honnêtement. Un agent simple connecté à un seul outil peut être livré en quelques semaines ; un agent multi-outils avec intégrations et garde-fous prend plus de temps. Nous découpons le travail en phases pour vous montrer de la valeur tôt plutôt que de promettre un délai irréaliste."}},
-          {"@type":"Question","name":"Can the agent connect to my existing tools?","acceptedAnswer":{"@type":"Answer","text":"Yes. Our agents integrate with the tools you already use through APIs, the Model Context Protocol (MCP), and automation layers like N8N. We have built and run an MCP server (mcp-datagouv-nc) that connects AI agents to New Caledonia's open-data portal, and we deploy agent interfaces over channels such as Telegram. If a tool exposes an API or a standard connector, we can wire an agent to it."}},
-          {"@type":"Question","name":"Are AI agents secure and private?","acceptedAnswer":{"@type":"Answer","text":"Yes. We work private-by-default: your business data runs in controlled environments and is never used to train public or consumer AI models. Engagements are available under NDA, and we scope each build so the agent only has access to the systems and data it genuinely needs."}},
-          {"@type":"Question","name":"Who should build an AI agent for their business?","acceptedAnswer":{"@type":"Answer","text":"Any business with a repetitive, rules-and-judgement task that eats staff time is a candidate — qualifying inbound leads, answering routine customer messages, generating quotes, processing documents, or surfacing internal knowledge. If your team spends hours each week on work an agent could take actions on, it is worth a free AI audit to see what is feasible."}}
-        ]
-      }
-    ]
-  }
+      "address": {
+        "@type": "PostalAddress",
+        "postOfficeBoxNumber": "BP 11657",
+        "addressLocality": "Nouméa",
+        "postalCode": "98802",
+        "addressCountry": "NC"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-22.2758",
+        "longitude": "166.4580"
+      },
+      "telephone": "+687830554",
+      "email": "kevyn@kanaky.xyz",
+      "priceRange": "$$",
+      "currenciesAccepted": "XPF, EUR, NZD",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "RIDET",
+        "value": "1445709.002"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Nouméa"
+        },
+        {
+          "@type": "Country",
+          "name": "Nouvelle-Calédonie"
+        },
+        {
+          "@type": "Country",
+          "name": "Polynésie française"
+        },
+        {
+          "@type": "Country",
+          "name": "Wallis-et-Futuna"
+        }
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "08:00",
+        "closes": "17:00"
+      },
+      "knowsLanguage": [
+        "fr",
+        "en"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/kanaky-tech",
+        "https://github.com/kanakytech"
+      ]
+    }
+  ]
+}
   </script>
 </head>
 <body>

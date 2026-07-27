@@ -23,37 +23,170 @@
   <link rel="stylesheet" href="/assets/kanaky.css">
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Accueil","item":"https://kanaky.xyz/"},
-          {"@type":"ListItem","position":2,"name":"Automatisation IA · Tahiti","item":"https://kanaky.xyz/automatisation-ia-tahiti/"}
-        ]
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://kanaky.xyz/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Automatisation IA · Tahiti",
+          "item": "https://kanaky.xyz/automatisation-ia-tahiti/"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "Automatisation IA à Tahiti et en Polynésie française",
+      "serviceType": "Automatisation IA",
+      "provider": {
+        "@type": "Organization",
+        "name": "Kanaky Tech",
+        "url": "https://kanaky.xyz/"
       },
-      {
-        "@type": "Service",
-        "name": "Automatisation IA à Tahiti et en Polynésie française",
-        "serviceType": "Automatisation IA",
-        "provider": {"@type":"Organization","name":"Kanaky Tech","url":"https://kanaky.xyz/"},
-        "areaServed": ["Polynésie française","Tahiti","Papeete","Pacifique"],
-        "availableLanguage": ["fr","en"],
-        "description": "Studio d'automatisation IA au service des entreprises, pensions, prestataires touristiques et institutions de Polynésie française. Automatisation de l'administratif, des devis, du reporting et de la relation client pour les entreprises de Papeete et des îles — en français, en XPF, à distance."
+      "areaServed": [
+        "Polynésie française",
+        "Tahiti",
+        "Papeete",
+        "Pacifique"
+      ],
+      "availableLanguage": [
+        "fr",
+        "en"
+      ],
+      "description": "Studio d'automatisation IA au service des entreprises, pensions, prestataires touristiques et institutions de Polynésie française. Automatisation de l'administratif, des devis, du reporting et de la relation client pour les entreprises de Papeete et des îles — en français, en XPF, à distance."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Qui contacter pour automatiser son entreprise à Tahiti ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kanaky Tech, studio d'automatisation IA du Pacifique francophone fondé en 2024 par Kevyn Wahuzue. Nous accompagnons les entreprises de Papeete et des îles — pensions de famille, prestataires touristiques, commerces, professions libérales, institutions — qui veulent automatiser leurs tâches répétitives : devis, administratif, réponses clients, réservations, reporting. Tout démarre par un audit IA gratuit, en français, en visio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien coûte une automatisation IA en Polynésie française ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tout commence par un audit IA gratuit pour identifier les tâches automatisables et leur impact réel. Le tarif dépend ensuite du périmètre — une automatisation simple n'a pas le même coût qu'un agent IA sur mesure connecté à vos outils. Nous chiffrons chaque projet après l'audit, sur devis, sans abonnement imposé. Nous travaillons dans la même zone franc pacifique que la Nouvelle-Calédonie : les devis peuvent être établis en XPF."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Travaillez-vous à distance avec la Polynésie française ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, c'est notre mode de travail normal avec Tahiti. Kanaky Tech opère depuis Nouméa et Auckland ; l'audit, la conception et le développement se font en visio et par écrit, et les systèmes sont déployés à distance dans vos outils. L'automatisation, une fois en place, travaille pour vous 24h/24 — le décalage horaire ne joue aucun rôle dans son fonctionnement quotidien."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quels processus automatiser dans une entreprise polynésienne ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Les cibles les plus fréquentes : réponses aux demandes de réservation et de disponibilité, génération de devis et de factures, confirmations et relances clients, rapports récurrents, tri et extraction de données depuis les emails et PDF. Pour le tourisme comme pour le commerce, la règle est la même : si une tâche est répétitive et vous prend des heures chaque semaine, elle est généralement automatisable. L'audit IA gratuit identifie celles qui rapportent le plus."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Est-ce que mes données restent confidentielles ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. Par défaut, vos données d'entreprise tournent dans des environnements contrôlés et ne sont jamais utilisées pour entraîner des modèles d'IA publics ou grand public. Les missions sont disponibles sous NDA (accord de confidentialité). La confidentialité est un principe de conception, pas une option."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pourquoi un studio du Pacifique plutôt qu'une agence de métropole ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Parce que nous vivons les mêmes réalités : l'insularité, la zone franc pacifique, les coûts d'importation des solutions métropolitaines, les équipes réduites qui portent plusieurs casquettes. Kanaky Tech est né en Nouvelle-Calédonie et travaille déjà avec des données de l'écosystème numérique polynésien (plateforme E-Reo) pour son dictionnaire des langues kanak. Nous construisons des automatisations qui collent au terrain océanien, pas des templates parisiens."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://kanaky.xyz/#noumea",
+      "name": "Kanaky Tech — Nouméa",
+      "url": "https://kanaky.xyz/automatisation-ia-nouvelle-caledonie/",
+      "image": "https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg",
+      "parentOrganization": {
+        "@id": "https://kanaky.xyz/#organization"
       },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {"@type":"Question","name":"Qui contacter pour automatiser son entreprise à Tahiti ?","acceptedAnswer":{"@type":"Answer","text":"Kanaky Tech, studio d'automatisation IA du Pacifique francophone fondé en 2024 par Kevyn Wahuzue. Nous accompagnons les entreprises de Papeete et des îles — pensions de famille, prestataires touristiques, commerces, professions libérales, institutions — qui veulent automatiser leurs tâches répétitives : devis, administratif, réponses clients, réservations, reporting. Tout démarre par un audit IA gratuit, en français, en visio."}},
-          {"@type":"Question","name":"Combien coûte une automatisation IA en Polynésie française ?","acceptedAnswer":{"@type":"Answer","text":"Tout commence par un audit IA gratuit pour identifier les tâches automatisables et leur impact réel. Le tarif dépend ensuite du périmètre — une automatisation simple n'a pas le même coût qu'un agent IA sur mesure connecté à vos outils. Nous chiffrons chaque projet après l'audit, sur devis, sans abonnement imposé. Nous travaillons dans la même zone franc pacifique que la Nouvelle-Calédonie : les devis peuvent être établis en XPF."}},
-          {"@type":"Question","name":"Travaillez-vous à distance avec la Polynésie française ?","acceptedAnswer":{"@type":"Answer","text":"Oui, c'est notre mode de travail normal avec Tahiti. Kanaky Tech opère depuis Nouméa et Auckland ; l'audit, la conception et le développement se font en visio et par écrit, et les systèmes sont déployés à distance dans vos outils. L'automatisation, une fois en place, travaille pour vous 24h/24 — le décalage horaire ne joue aucun rôle dans son fonctionnement quotidien."}},
-          {"@type":"Question","name":"Quels processus automatiser dans une entreprise polynésienne ?","acceptedAnswer":{"@type":"Answer","text":"Les cibles les plus fréquentes : réponses aux demandes de réservation et de disponibilité, génération de devis et de factures, confirmations et relances clients, rapports récurrents, tri et extraction de données depuis les emails et PDF. Pour le tourisme comme pour le commerce, la règle est la même : si une tâche est répétitive et vous prend des heures chaque semaine, elle est généralement automatisable. L'audit IA gratuit identifie celles qui rapportent le plus."}},
-          {"@type":"Question","name":"Est-ce que mes données restent confidentielles ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Par défaut, vos données d'entreprise tournent dans des environnements contrôlés et ne sont jamais utilisées pour entraîner des modèles d'IA publics ou grand public. Les missions sont disponibles sous NDA (accord de confidentialité). La confidentialité est un principe de conception, pas une option."}},
-          {"@type":"Question","name":"Pourquoi un studio du Pacifique plutôt qu'une agence de métropole ?","acceptedAnswer":{"@type":"Answer","text":"Parce que nous vivons les mêmes réalités : l'insularité, la zone franc pacifique, les coûts d'importation des solutions métropolitaines, les équipes réduites qui portent plusieurs casquettes. Kanaky Tech est né en Nouvelle-Calédonie et travaille déjà avec des données de l'écosystème numérique polynésien (plateforme E-Reo) pour son dictionnaire des langues kanak. Nous construisons des automatisations qui collent au terrain océanien, pas des templates parisiens."}}
-        ]
-      }
-    ]
-  }
+      "address": {
+        "@type": "PostalAddress",
+        "postOfficeBoxNumber": "BP 11657",
+        "addressLocality": "Nouméa",
+        "postalCode": "98802",
+        "addressCountry": "NC"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-22.2758",
+        "longitude": "166.4580"
+      },
+      "telephone": "+687830554",
+      "email": "kevyn@kanaky.xyz",
+      "priceRange": "$$",
+      "currenciesAccepted": "XPF, EUR, NZD",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "RIDET",
+        "value": "1445709.002"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Nouméa"
+        },
+        {
+          "@type": "Country",
+          "name": "Nouvelle-Calédonie"
+        },
+        {
+          "@type": "Country",
+          "name": "Polynésie française"
+        },
+        {
+          "@type": "Country",
+          "name": "Wallis-et-Futuna"
+        }
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "08:00",
+        "closes": "17:00"
+      },
+      "knowsLanguage": [
+        "fr",
+        "en"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/kanaky-tech",
+        "https://github.com/kanakytech"
+      ]
+    }
+  ]
+}
   </script>
 </head>
 <body>

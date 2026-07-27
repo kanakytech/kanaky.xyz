@@ -20,36 +20,158 @@
   <link rel="stylesheet" href="/assets/kanaky.css">
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Home","item":"https://kanaky.xyz/"},
-          {"@type":"ListItem","position":2,"name":"AI Automation · New Zealand","item":"https://kanaky.xyz/ai-automation-new-zealand/"}
-        ]
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://kanaky.xyz/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "AI Automation · New Zealand",
+          "item": "https://kanaky.xyz/ai-automation-new-zealand/"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "AI Automation in New Zealand",
+      "serviceType": "AI automation",
+      "provider": {
+        "@type": "Organization",
+        "name": "Kanaky Tech",
+        "url": "https://kanaky.xyz/"
       },
-      {
-        "@type": "Service",
-        "name": "AI Automation in New Zealand",
-        "serviceType": "AI automation",
-        "provider": {"@type":"Organization","name":"Kanaky Tech","url":"https://kanaky.xyz/"},
-        "areaServed": ["New Caledonia","New Zealand","Pacific"],
-        "description": "AI automation agency operating from Auckland, helping New Zealand SMEs and agencies automate manual business processes and deploy custom AI agents. Private-by-default, available under NDA, registered in New Zealand (NZBN 9429053554017)."
+      "areaServed": [
+        "New Caledonia",
+        "New Zealand",
+        "Pacific"
+      ],
+      "description": "AI automation agency operating from Auckland, helping New Zealand SMEs and agencies automate manual business processes and deploy custom AI agents. Private-by-default, available under NDA, registered in New Zealand (NZBN 9429053554017)."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Who should hire an AI automation agency in New Zealand?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Any New Zealand SME or agency that spends staff hours on repetitive, rules-based work — quoting, onboarding, reporting, data entry, lead qualification or chasing information across tools. If your team is doing the same manual task again and again, that task is a candidate for automation. Kanaky Tech works best with owner-led businesses and agencies in Auckland and across NZ that want a fast, scoped first result rather than a long enterprise programme."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does AI automation cost in NZ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on scope, so we start with a free AI audit to map where automation pays back fastest. From there, pricing is quoted per project against a specific workflow rather than a fixed package — we do not publish a single price because a one-screen quote tool and a multi-system reporting pipeline are very different jobs. The first engagement is usually a small, scoped quick-win so you can see the value before committing further."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What can be automated in my business?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Typically: operations and back-office admin, client onboarding, recurring reporting, lead qualification and routing, proposal and quote generation, and turning scattered internal documents into a searchable AI knowledge base. A good rule of thumb — if a task is repetitive, rules-based and eats time every week, it can usually be automated or assisted by an AI agent. The audit identifies which of these will pay back fastest for your specific business."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my business data kept private?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Kanaky Tech is private-by-default: your business data runs in controlled environments and is never used to train public or consumer AI models. Engagements are available under NDA, and sensitive workflows can be designed so your data stays inside infrastructure you control."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work with agencies as a white-label partner?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Agencies partner with Kanaky Tech to deliver AI automation and visual production to their own clients under their own brand — including through Keou AI, our white-label visual-production platform (keou.systems). You keep the client relationship; we build and run the systems behind it under NDA."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How quickly can we see results?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The first engagement is deliberately scoped as a quick-win: one clearly defined workflow, built and embedded fast, so you see a working result early rather than waiting on a long project. Larger or multi-system automations follow once the first win is proven. Exact timing depends on the workflow and your tools, which the free audit clarifies upfront."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://kanaky.xyz/#auckland",
+      "name": "Kanaky Tech — Auckland",
+      "url": "https://kanaky.xyz/ai-automation-agency-auckland/",
+      "image": "https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg",
+      "parentOrganization": {
+        "@id": "https://kanaky.xyz/#organization"
       },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {"@type":"Question","name":"Who should hire an AI automation agency in New Zealand?","acceptedAnswer":{"@type":"Answer","text":"Any New Zealand SME or agency that spends staff hours on repetitive, rules-based work — quoting, onboarding, reporting, data entry, lead qualification or chasing information across tools. If your team is doing the same manual task again and again, that task is a candidate for automation. Kanaky Tech works best with owner-led businesses and agencies in Auckland and across NZ that want a fast, scoped first result rather than a long enterprise programme."}},
-          {"@type":"Question","name":"How much does AI automation cost in NZ?","acceptedAnswer":{"@type":"Answer","text":"It depends on scope, so we start with a free AI audit to map where automation pays back fastest. From there, pricing is quoted per project against a specific workflow rather than a fixed package — we do not publish a single price because a one-screen quote tool and a multi-system reporting pipeline are very different jobs. The first engagement is usually a small, scoped quick-win so you can see the value before committing further."}},
-          {"@type":"Question","name":"What can be automated in my business?","acceptedAnswer":{"@type":"Answer","text":"Typically: operations and back-office admin, client onboarding, recurring reporting, lead qualification and routing, proposal and quote generation, and turning scattered internal documents into a searchable AI knowledge base. A good rule of thumb — if a task is repetitive, rules-based and eats time every week, it can usually be automated or assisted by an AI agent. The audit identifies which of these will pay back fastest for your specific business."}},
-          {"@type":"Question","name":"Is my business data kept private?","acceptedAnswer":{"@type":"Answer","text":"Yes. Kanaky Tech is private-by-default: your business data runs in controlled environments and is never used to train public or consumer AI models. Engagements are available under NDA, and sensitive workflows can be designed so your data stays inside infrastructure you control."}},
-          {"@type":"Question","name":"Do you work with agencies as a white-label partner?","acceptedAnswer":{"@type":"Answer","text":"Yes. Agencies partner with Kanaky Tech to deliver AI automation and visual production to their own clients under their own brand — including through Keou AI, our white-label visual-production platform (keou.systems). You keep the client relationship; we build and run the systems behind it under NDA."}},
-          {"@type":"Question","name":"How quickly can we see results?","acceptedAnswer":{"@type":"Answer","text":"The first engagement is deliberately scoped as a quick-win: one clearly defined workflow, built and embedded fast, so you see a working result early rather than waiting on a long project. Larger or multi-system automations follow once the first win is proven. Exact timing depends on the workflow and your tools, which the free audit clarifies upfront."}}
-        ]
-      }
-    ]
-  }
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Auckland",
+        "addressCountry": "NZ"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-36.8485",
+        "longitude": "174.7633"
+      },
+      "email": "kevyn@kanaky.xyz",
+      "priceRange": "$$",
+      "currenciesAccepted": "NZD, AUD, USD",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "NZBN",
+        "value": "9429053554017"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Auckland"
+        },
+        {
+          "@type": "Country",
+          "name": "New Zealand"
+        },
+        {
+          "@type": "Country",
+          "name": "Australia"
+        }
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "17:00"
+      },
+      "knowsLanguage": [
+        "en",
+        "fr"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/kanaky-tech",
+        "https://github.com/kanakytech"
+      ]
+    }
+  ]
+}
   </script>
 </head>
 <body>

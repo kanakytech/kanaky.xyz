@@ -23,37 +23,170 @@
   <link rel="stylesheet" href="/assets/kanaky.css">
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Accueil","item":"https://kanaky.xyz/"},
-          {"@type":"ListItem","position":2,"name":"Automatisation IA · La Réunion","item":"https://kanaky.xyz/automatisation-ia-la-reunion/"}
-        ]
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://kanaky.xyz/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Automatisation IA · La Réunion",
+          "item": "https://kanaky.xyz/automatisation-ia-la-reunion/"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "Automatisation IA à La Réunion",
+      "serviceType": "Automatisation IA",
+      "provider": {
+        "@type": "Organization",
+        "name": "Kanaky Tech",
+        "url": "https://kanaky.xyz/"
       },
-      {
-        "@type": "Service",
-        "name": "Automatisation IA à La Réunion",
-        "serviceType": "Automatisation IA",
-        "provider": {"@type":"Organization","name":"Kanaky Tech","url":"https://kanaky.xyz/"},
-        "areaServed": ["La Réunion","Saint-Denis","Saint-Pierre","Océan Indien"],
-        "availableLanguage": ["fr","en"],
-        "description": "Studio d'automatisation IA au service des PME, agences et institutions de La Réunion. Automatisation de l'administratif, des devis, du reporting et de la relation client — en français, en euros, à distance, avec la confidentialité des données comme principe de conception."
+      "areaServed": [
+        "La Réunion",
+        "Saint-Denis",
+        "Saint-Pierre",
+        "Océan Indien"
+      ],
+      "availableLanguage": [
+        "fr",
+        "en"
+      ],
+      "description": "Studio d'automatisation IA au service des PME, agences et institutions de La Réunion. Automatisation de l'administratif, des devis, du reporting et de la relation client — en français, en euros, à distance, avec la confidentialité des données comme principe de conception."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Qui contacter pour automatiser son entreprise à La Réunion ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kanaky Tech, studio d'automatisation IA de l'outre-mer francophone fondé en 2024 par Kevyn Wahuzue. Nous accompagnons les PME, agences et institutions réunionnaises — de Saint-Denis à Saint-Pierre — qui veulent automatiser leurs tâches répétitives : devis, administratif, réponses clients, reporting, traitement de documents. Tout démarre par un audit IA gratuit, en français, en visio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien coûte une automatisation IA à La Réunion ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tout commence par un audit IA gratuit pour identifier les tâches automatisables et leur impact réel. Le tarif dépend ensuite du périmètre — une automatisation simple n'a pas le même coût qu'un agent IA sur mesure connecté à vos outils. Nous chiffrons chaque projet après l'audit, sur devis en euros, sans abonnement imposé. Nous ne communiquons pas de prix fixe car il dépend entièrement de ce que vous voulez automatiser."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Travaillez-vous à distance avec La Réunion ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, entièrement. Kanaky Tech opère depuis Nouméa et Auckland ; le décalage avec La Réunion fait que vos matinées correspondent à nos fins de journée — un créneau de visio naturel, tous les jours ouvrés. L'audit, la conception et le développement se font à distance, et les systèmes sont déployés directement dans vos outils. Une fois en place, l'automatisation travaille pour vous 24h/24."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mes données sont-elles traitées conformément au RGPD ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La Réunion est un département français : le RGPD s'y applique pleinement, et nos systèmes sont pensés pour cette exigence. Par défaut, vos données tournent dans des environnements contrôlés, ne sont jamais utilisées pour entraîner des modèles d'IA publics, et les traitements sont documentés pour votre registre. Les missions sont disponibles sous NDA. Les choix d'hébergement se font avec vous, en fonction de vos contraintes de conformité."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quels processus automatiser dans une PME réunionnaise ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Les cibles les plus fréquentes : génération de devis et de factures, réponses de premier niveau aux clients, rapports récurrents, qualification des demandes entrantes, et traitement documentaire (lecture, tri et extraction de données depuis des PDF et formulaires). La règle : si une tâche est répétitive, basée sur des règles et vous prend des heures chaque semaine, elle est généralement automatisable. L'audit IA gratuit identifie celles qui rapportent le plus."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pourquoi un studio de l'outre-mer plutôt qu'une agence parisienne ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Parce que nous connaissons la réalité ultramarine de l'intérieur : l'éloignement de la métropole, les solutions pensées pour Paris qui arrivent mal adaptées et plus chères, les PME qui font beaucoup avec des équipes réduites. Kanaky Tech est né en Nouvelle-Calédonie et sert l'outre-mer francophone du Pacifique à l'océan Indien. Nous construisons des automatisations qui collent à votre terrain — pas des templates métropolitains vendus au forfait."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://kanaky.xyz/#noumea",
+      "name": "Kanaky Tech — Nouméa",
+      "url": "https://kanaky.xyz/automatisation-ia-nouvelle-caledonie/",
+      "image": "https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg",
+      "parentOrganization": {
+        "@id": "https://kanaky.xyz/#organization"
       },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {"@type":"Question","name":"Qui contacter pour automatiser son entreprise à La Réunion ?","acceptedAnswer":{"@type":"Answer","text":"Kanaky Tech, studio d'automatisation IA de l'outre-mer francophone fondé en 2024 par Kevyn Wahuzue. Nous accompagnons les PME, agences et institutions réunionnaises — de Saint-Denis à Saint-Pierre — qui veulent automatiser leurs tâches répétitives : devis, administratif, réponses clients, reporting, traitement de documents. Tout démarre par un audit IA gratuit, en français, en visio."}},
-          {"@type":"Question","name":"Combien coûte une automatisation IA à La Réunion ?","acceptedAnswer":{"@type":"Answer","text":"Tout commence par un audit IA gratuit pour identifier les tâches automatisables et leur impact réel. Le tarif dépend ensuite du périmètre — une automatisation simple n'a pas le même coût qu'un agent IA sur mesure connecté à vos outils. Nous chiffrons chaque projet après l'audit, sur devis en euros, sans abonnement imposé. Nous ne communiquons pas de prix fixe car il dépend entièrement de ce que vous voulez automatiser."}},
-          {"@type":"Question","name":"Travaillez-vous à distance avec La Réunion ?","acceptedAnswer":{"@type":"Answer","text":"Oui, entièrement. Kanaky Tech opère depuis Nouméa et Auckland ; le décalage avec La Réunion fait que vos matinées correspondent à nos fins de journée — un créneau de visio naturel, tous les jours ouvrés. L'audit, la conception et le développement se font à distance, et les systèmes sont déployés directement dans vos outils. Une fois en place, l'automatisation travaille pour vous 24h/24."}},
-          {"@type":"Question","name":"Mes données sont-elles traitées conformément au RGPD ?","acceptedAnswer":{"@type":"Answer","text":"La Réunion est un département français : le RGPD s'y applique pleinement, et nos systèmes sont pensés pour cette exigence. Par défaut, vos données tournent dans des environnements contrôlés, ne sont jamais utilisées pour entraîner des modèles d'IA publics, et les traitements sont documentés pour votre registre. Les missions sont disponibles sous NDA. Les choix d'hébergement se font avec vous, en fonction de vos contraintes de conformité."}},
-          {"@type":"Question","name":"Quels processus automatiser dans une PME réunionnaise ?","acceptedAnswer":{"@type":"Answer","text":"Les cibles les plus fréquentes : génération de devis et de factures, réponses de premier niveau aux clients, rapports récurrents, qualification des demandes entrantes, et traitement documentaire (lecture, tri et extraction de données depuis des PDF et formulaires). La règle : si une tâche est répétitive, basée sur des règles et vous prend des heures chaque semaine, elle est généralement automatisable. L'audit IA gratuit identifie celles qui rapportent le plus."}},
-          {"@type":"Question","name":"Pourquoi un studio de l'outre-mer plutôt qu'une agence parisienne ?","acceptedAnswer":{"@type":"Answer","text":"Parce que nous connaissons la réalité ultramarine de l'intérieur : l'éloignement de la métropole, les solutions pensées pour Paris qui arrivent mal adaptées et plus chères, les PME qui font beaucoup avec des équipes réduites. Kanaky Tech est né en Nouvelle-Calédonie et sert l'outre-mer francophone du Pacifique à l'océan Indien. Nous construisons des automatisations qui collent à votre terrain — pas des templates métropolitains vendus au forfait."}}
-        ]
-      }
-    ]
-  }
+      "address": {
+        "@type": "PostalAddress",
+        "postOfficeBoxNumber": "BP 11657",
+        "addressLocality": "Nouméa",
+        "postalCode": "98802",
+        "addressCountry": "NC"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-22.2758",
+        "longitude": "166.4580"
+      },
+      "telephone": "+687830554",
+      "email": "kevyn@kanaky.xyz",
+      "priceRange": "$$",
+      "currenciesAccepted": "XPF, EUR, NZD",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "RIDET",
+        "value": "1445709.002"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Nouméa"
+        },
+        {
+          "@type": "Country",
+          "name": "Nouvelle-Calédonie"
+        },
+        {
+          "@type": "Country",
+          "name": "Polynésie française"
+        },
+        {
+          "@type": "Country",
+          "name": "Wallis-et-Futuna"
+        }
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "08:00",
+        "closes": "17:00"
+      },
+      "knowsLanguage": [
+        "fr",
+        "en"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/kanaky-tech",
+        "https://github.com/kanakytech"
+      ]
+    }
+  ]
+}
   </script>
 </head>
 <body>

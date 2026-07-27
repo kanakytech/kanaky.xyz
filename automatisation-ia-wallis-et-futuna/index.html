@@ -23,37 +23,169 @@
   <link rel="stylesheet" href="/assets/kanaky.css">
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Accueil","item":"https://kanaky.xyz/"},
-          {"@type":"ListItem","position":2,"name":"Automatisation IA · Wallis-et-Futuna","item":"https://kanaky.xyz/automatisation-ia-wallis-et-futuna/"}
-        ]
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://kanaky.xyz/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Automatisation IA · Wallis-et-Futuna",
+          "item": "https://kanaky.xyz/automatisation-ia-wallis-et-futuna/"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "Automatisation IA à Wallis-et-Futuna",
+      "serviceType": "Automatisation IA",
+      "provider": {
+        "@type": "Organization",
+        "name": "Kanaky Tech",
+        "url": "https://kanaky.xyz/"
       },
-      {
-        "@type": "Service",
-        "name": "Automatisation IA à Wallis-et-Futuna",
-        "serviceType": "Automatisation IA",
-        "provider": {"@type":"Organization","name":"Kanaky Tech","url":"https://kanaky.xyz/"},
-        "areaServed": ["Wallis-et-Futuna","Mata-Utu","Pacifique"],
-        "availableLanguage": ["fr","en"],
-        "description": "Studio d'automatisation IA au service des entreprises, commerces, associations et services de Wallis-et-Futuna. Automatisation de l'administratif, des devis, du reporting et de la relation client — en français, en XPF, dans le même fuseau horaire qu'Auckland."
+      "areaServed": [
+        "Wallis-et-Futuna",
+        "Mata-Utu",
+        "Pacifique"
+      ],
+      "availableLanguage": [
+        "fr",
+        "en"
+      ],
+      "description": "Studio d'automatisation IA au service des entreprises, commerces, associations et services de Wallis-et-Futuna. Automatisation de l'administratif, des devis, du reporting et de la relation client — en français, en XPF, dans le même fuseau horaire qu'Auckland."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Qui contacter pour automatiser son entreprise à Wallis-et-Futuna ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kanaky Tech, studio d'automatisation IA du Pacifique francophone fondé en 2024 par Kevyn Wahuzue. Nous accompagnons les entreprises, commerces, associations et services du territoire qui veulent automatiser leurs tâches répétitives : devis, administratif, réponses clients, reporting, traitement de documents. Tout démarre par un audit IA gratuit, en français, en visio — et nous sommes dans le même fuseau horaire."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien coûte une automatisation IA à Wallis-et-Futuna ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tout commence par un audit IA gratuit pour identifier les tâches automatisables et leur impact réel. Le tarif dépend ensuite du périmètre — une automatisation simple n'a pas le même coût qu'un agent IA sur mesure connecté à vos outils. Nous chiffrons chaque projet après l'audit, sur devis en XPF, sans abonnement imposé. L'automatisation est justement pensée pour les petites structures : elle rend accessible ce qui demandait avant un employé de plus."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Travaillez-vous à distance avec Wallis-et-Futuna ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, et c'est plus simple qu'on ne le pense : Wallis-et-Futuna et Auckland partagent le même fuseau horaire (UTC+12). Vos heures de bureau sont nos heures de bureau — les visios se calent naturellement. L'audit, la conception et le développement se font à distance, et les systèmes sont déployés directement dans vos outils."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "L'automatisation IA a-t-elle du sens pour une petite structure ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "C'est précisément là qu'elle rapporte le plus. Dans une petite entreprise ou une association, la même personne fait les devis, répond aux clients, tient les comptes et rédige les rapports. Automatiser ne serait-ce qu'une de ces tâches libère des heures chaque semaine — sans embaucher. La règle : si une tâche est répétitive et basée sur des règles, elle est généralement automatisable."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Est-ce que mes données restent confidentielles ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. Par défaut, vos données tournent dans des environnements contrôlés et ne sont jamais utilisées pour entraîner des modèles d'IA publics ou grand public. Les missions sont disponibles sous NDA (accord de confidentialité). La confidentialité est un principe de conception, pas une option."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pourquoi un studio du Pacifique plutôt qu'une agence de métropole ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Parce que nous vivons les mêmes réalités : l'insularité, la zone franc pacifique, les liaisons longues avec la métropole, les équipes réduites. Kanaky Tech est né en Nouvelle-Calédonie — où la communauté wallisienne et futunienne est une composante majeure du territoire — et opère depuis Nouméa et Auckland, dans votre fuseau horaire. Nous construisons des automatisations qui collent au terrain océanien, pas des templates parisiens."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://kanaky.xyz/#noumea",
+      "name": "Kanaky Tech — Nouméa",
+      "url": "https://kanaky.xyz/automatisation-ia-nouvelle-caledonie/",
+      "image": "https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg",
+      "parentOrganization": {
+        "@id": "https://kanaky.xyz/#organization"
       },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {"@type":"Question","name":"Qui contacter pour automatiser son entreprise à Wallis-et-Futuna ?","acceptedAnswer":{"@type":"Answer","text":"Kanaky Tech, studio d'automatisation IA du Pacifique francophone fondé en 2024 par Kevyn Wahuzue. Nous accompagnons les entreprises, commerces, associations et services du territoire qui veulent automatiser leurs tâches répétitives : devis, administratif, réponses clients, reporting, traitement de documents. Tout démarre par un audit IA gratuit, en français, en visio — et nous sommes dans le même fuseau horaire."}},
-          {"@type":"Question","name":"Combien coûte une automatisation IA à Wallis-et-Futuna ?","acceptedAnswer":{"@type":"Answer","text":"Tout commence par un audit IA gratuit pour identifier les tâches automatisables et leur impact réel. Le tarif dépend ensuite du périmètre — une automatisation simple n'a pas le même coût qu'un agent IA sur mesure connecté à vos outils. Nous chiffrons chaque projet après l'audit, sur devis en XPF, sans abonnement imposé. L'automatisation est justement pensée pour les petites structures : elle rend accessible ce qui demandait avant un employé de plus."}},
-          {"@type":"Question","name":"Travaillez-vous à distance avec Wallis-et-Futuna ?","acceptedAnswer":{"@type":"Answer","text":"Oui, et c'est plus simple qu'on ne le pense : Wallis-et-Futuna et Auckland partagent le même fuseau horaire (UTC+12). Vos heures de bureau sont nos heures de bureau — les visios se calent naturellement. L'audit, la conception et le développement se font à distance, et les systèmes sont déployés directement dans vos outils."}},
-          {"@type":"Question","name":"L'automatisation IA a-t-elle du sens pour une petite structure ?","acceptedAnswer":{"@type":"Answer","text":"C'est précisément là qu'elle rapporte le plus. Dans une petite entreprise ou une association, la même personne fait les devis, répond aux clients, tient les comptes et rédige les rapports. Automatiser ne serait-ce qu'une de ces tâches libère des heures chaque semaine — sans embaucher. La règle : si une tâche est répétitive et basée sur des règles, elle est généralement automatisable."}},
-          {"@type":"Question","name":"Est-ce que mes données restent confidentielles ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Par défaut, vos données tournent dans des environnements contrôlés et ne sont jamais utilisées pour entraîner des modèles d'IA publics ou grand public. Les missions sont disponibles sous NDA (accord de confidentialité). La confidentialité est un principe de conception, pas une option."}},
-          {"@type":"Question","name":"Pourquoi un studio du Pacifique plutôt qu'une agence de métropole ?","acceptedAnswer":{"@type":"Answer","text":"Parce que nous vivons les mêmes réalités : l'insularité, la zone franc pacifique, les liaisons longues avec la métropole, les équipes réduites. Kanaky Tech est né en Nouvelle-Calédonie — où la communauté wallisienne et futunienne est une composante majeure du territoire — et opère depuis Nouméa et Auckland, dans votre fuseau horaire. Nous construisons des automatisations qui collent au terrain océanien, pas des templates parisiens."}}
-        ]
-      }
-    ]
-  }
+      "address": {
+        "@type": "PostalAddress",
+        "postOfficeBoxNumber": "BP 11657",
+        "addressLocality": "Nouméa",
+        "postalCode": "98802",
+        "addressCountry": "NC"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-22.2758",
+        "longitude": "166.4580"
+      },
+      "telephone": "+687830554",
+      "email": "kevyn@kanaky.xyz",
+      "priceRange": "$$",
+      "currenciesAccepted": "XPF, EUR, NZD",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "RIDET",
+        "value": "1445709.002"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Nouméa"
+        },
+        {
+          "@type": "Country",
+          "name": "Nouvelle-Calédonie"
+        },
+        {
+          "@type": "Country",
+          "name": "Polynésie française"
+        },
+        {
+          "@type": "Country",
+          "name": "Wallis-et-Futuna"
+        }
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "08:00",
+        "closes": "17:00"
+      },
+      "knowsLanguage": [
+        "fr",
+        "en"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/kanaky-tech",
+        "https://github.com/kanakytech"
+      ]
+    }
+  ]
+}
   </script>
 </head>
 <body>
@@ -82,6 +214,7 @@
     <a href="/marketplace/">Marketplace</a>
     <a href="/blog/">Blog</a>
     <a href="/contact/">Contact</a>
+        <a href="/automatiser-son-entreprise-wallis-et-futuna/">Guide : automatiser à Wallis</a>
   </div>
 
   <!-- HERO -->
