@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Set Up a Cold Email Sending Domain (And Why Never Use Your Main One)</title>
+  <meta name="description" content="Choosing, buying and configuring a separate sending domain for cold outreach: naming that does not look like spam, the DNS records to add, and why this one decision protects your entire business email." />
+  <meta name="keywords" content="cold email sending domain, separate domain for cold email, secondary domain email, sending domain setup" />
+  <link rel="canonical" href="https://kanaky.xyz/sending-domain-setup/" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="How to Set Up a Cold Email Sending Domain (And Why Never Use Your Main One)" />
+  <meta property="og:description" content="Choosing, buying and configuring a separate sending domain for cold outreach: naming that does not look like spam, the DNS records to add, and why this one decision protects your entire business email." />
+  <meta property="og:url" content="https://kanaky.xyz/sending-domain-setup/" />
+  <meta property="og:site_name" content="Kanaky Tech" />
+  <meta property="og:image" content="https://kanaky.xyz/assets/og/cold-outreach-machine.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://kanaky.xyz/assets/og/cold-outreach-machine.png" />
+  <link rel="icon" type="image/jpeg" href="https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/kanaky.css">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://kanaky.xyz/sending-domain-setup/#article",
+      "headline": "Setting up a sending domain. The cheapest insurance you will buy.",
+      "description": "Choosing, buying and configuring a separate sending domain for cold outreach: naming that does not look like spam, the DNS records to add, and why this one decision protects your entire business email.",
+      "datePublished": "2026-07-27",
+      "dateModified": "2026-07-27",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Person",
+        "name": "Kevyn Wahuzue",
+        "url": "https://www.linkedin.com/in/kevyn-wahuzue/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Kanaky Tech",
+        "url": "https://kanaky.xyz/"
+      },
+      "mainEntityOfPage": "https://kanaky.xyz/sending-domain-setup/",
+      "image": [
+        "https://kanaky.xyz/assets/og/cold-outreach-machine.png"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://kanaky.xyz/sending-domain-setup/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many sending domains do I need?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "One is enough for most small businesses at moderate volume. You add domains when you need more volume than a single domain can safely carry, or when you are running genuinely separate campaigns to different markets. Adding domains is the safe way to scale; pushing one domain harder is not."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use a subdomain instead of a separate domain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can, and it is better than using your main domain directly, but subdomains share some reputation with the parent. For twelve dollars a year, full separation removes the question entirely."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should the sending domain have its own website?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, even a redirect to your main site. It costs nothing, removes a small negative signal, and satisfies the prospect who checks whether you exist before replying."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I reply from the sending domain or my main one?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Reply from the sending domain, so the conversation stays consistent and the thread history stays intact. Set up forwarding so you see replies without living in a second inbox. Once a conversation becomes a real client relationship, moving it to your main domain is natural."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Kanaky Tech",
+          "item": "https://kanaky.xyz/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://kanaky.xyz/guides/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Sending domain",
+          "item": "https://kanaky.xyz/sending-domain-setup/"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <div class="cursor-ring" id="cursor-ring"></div>
+  <nav>
+    <a href="/" class="logo-mark">
+      <img class="logo-img" src="https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg" alt="Kanaky Tech logo" />
+      <span class="logo-text">Kanaky Tech</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/ai-audit/">AI Audit</a></li>
+      <li><a href="/guides/">Guides</a></li>
+      <li><a href="/marketplace/">Marketplace</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/contact/" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="/#services">Services</a>
+    <a href="/ai-audit/">AI Audit</a>
+    <a href="/guides/">Guides</a>
+    <a href="/marketplace/">Marketplace</a>
+    <a href="/blog/">Blog</a>
+    <a href="/contact/">Contact</a>
+  </div>
+
+  <section class="section" style="padding-top:140px;max-width:820px;margin:0 auto;">
+    <div class="section-label reveal-left">Setup</div>
+    <h1 class="reveal" style="font-size:clamp(1.9rem,4.4vw,3rem);font-weight:700;letter-spacing:-0.035em;line-height:1.14;margin:0 0 26px;">Setting up a sending domain. <span style="color:var(--grey-4);font-weight:300;">The cheapest insurance you will buy.</span></h1>
+
+    <div class="reveal delay-1" style="color:var(--grey-4);font-size:1.06rem;line-height:1.85;">
+      <p style="font-size:1.16rem;color:var(--white);font-weight:300;line-height:1.72;margin-bottom:34px;">Twelve dollars a year buys you a domain whose only job is cold outreach. If deliverability ever degrades — and over a long enough run, something eventually goes wrong — the damage stays there. Your invoices, your client threads, your password resets and your reputation with existing customers are untouched. There is no cheaper insurance in this business.</p>
+      <h2 style="color:var(--white);font-size:1.55rem;font-weight:600;letter-spacing:-0.025em;margin:52px 0 18px;">Why not just use your main domain</h2>
+      <p>Because your main domain carries everything that matters. Quotes, contracts, invoices, booking confirmations, password resets. A deliverability problem there does not just mean prospects miss your pitch — it means a client does not receive an invoice, and you find out three weeks later when the payment is late.</p>
+      <p>Cold outreach is inherently the riskiest mail you will ever send: to people who did not ask for it, at volume, from templates you are still refining. Keeping that traffic away from the domain your business depends on is basic separation of concerns.</p>
+      <h2 style="color:var(--white);font-size:1.55rem;font-weight:600;letter-spacing:-0.025em;margin:52px 0 18px;">Choosing the name</h2>
+      <ul style="color:var(--grey-4);line-height:1.85;padding-left:22px;margin:20px 0;"><li style="margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Stay recognisably related to your brand.</strong> <code style="background:var(--grey-1);padding:2px 6px;border-radius:4px;font-size:0.9em;">yourcompany-outreach.com</code>, <code style="background:var(--grey-1);padding:2px 6px;border-radius:4px;font-size:0.9em;">yourcompanyhq.com</code>, <code style="background:var(--grey-1);padding:2px 6px;border-radius:4px;font-size:0.9em;">getyourcompany.com</code>, or the same name on a different extension. The recipient should be able to tell it is you.</li><li style="margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Avoid anything that reads as disposable.</strong> Random strings, heavy hyphenation, or novelty extensions cost you credibility with both humans and filters.</li><li style="margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Prefer common extensions.</strong> <code style="background:var(--grey-1);padding:2px 6px;border-radius:4px;font-size:0.9em;">.com</code>, <code style="background:var(--grey-1);padding:2px 6px;border-radius:4px;font-size:0.9em;">.co</code>, or your national extension. Some newer extensions carry a worse average reputation purely because of who else uses them.</li><li style="margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Do not buy an expired domain to save time.</strong> You inherit whatever history it has, and you cannot see that history before buying. A fresh domain with no reputation is safer than a cheap one with a bad one.</li></ul>
+      <h2 style="color:var(--white);font-size:1.55rem;font-weight:600;letter-spacing:-0.025em;margin:52px 0 18px;">Configuring it</h2>
+      <div style="margin:26px 0;">
+      <div style="display:flex;gap:18px;padding:18px 0;border-top:1px solid var(--border);">
+        <div style="color:var(--accent);font-weight:600;min-width:26px;font-variant-numeric:tabular-nums;">1</div>
+        <div style="color:var(--grey-4);line-height:1.75;flex:1;"><strong style="color:var(--white);font-weight:500;">Buy the domain</strong> at any registrar. This is a commodity — price is the only real difference.</div>
+      </div>
+      <div style="display:flex;gap:18px;padding:18px 0;border-top:1px solid var(--border);">
+        <div style="color:var(--accent);font-weight:600;min-width:26px;font-variant-numeric:tabular-nums;">2</div>
+        <div style="color:var(--grey-4);line-height:1.75;flex:1;"><strong style="color:var(--white);font-weight:500;">Connect it to an email provider.</strong> Google Workspace, Microsoft 365, Zoho and others all work. You need real mailboxes, not just a forwarding rule, so that replies arrive somewhere a human reads.</div>
+      </div>
+      <div style="display:flex;gap:18px;padding:18px 0;border-top:1px solid var(--border);">
+        <div style="color:var(--accent);font-weight:600;min-width:26px;font-variant-numeric:tabular-nums;">3</div>
+        <div style="color:var(--grey-4);line-height:1.75;flex:1;"><strong style="color:var(--white);font-weight:500;">Add SPF, DKIM and DMARC.</strong> Your provider gives you the exact values. This step is not optional — see <a href="/spf-dkim-dmarc-explained/" style="color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(200,240,96,0.3);">SPF, DKIM and DMARC explained</a>.</div>
+      </div>
+      <div style="display:flex;gap:18px;padding:18px 0;border-top:1px solid var(--border);">
+        <div style="color:var(--accent);font-weight:600;min-width:26px;font-variant-numeric:tabular-nums;">4</div>
+        <div style="color:var(--grey-4);line-height:1.75;flex:1;"><strong style="color:var(--white);font-weight:500;">Set up forwarding to your real inbox,</strong> so replies reach you without needing to check a second mailbox all day. Reply from the sending address, though, not your main one.</div>
+      </div>
+      <div style="display:flex;gap:18px;padding:18px 0;border-top:1px solid var(--border);">
+        <div style="color:var(--accent);font-weight:600;min-width:26px;font-variant-numeric:tabular-nums;">5</div>
+        <div style="color:var(--grey-4);line-height:1.75;flex:1;"><strong style="color:var(--white);font-weight:500;">Warm it up before real volume.</strong> A new domain needs two to four weeks of gradual sending — see <a href="/email-warm-up-explained/" style="color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(200,240,96,0.3);">email warm-up explained</a>.</div>
+      </div></div>
+      <h2 style="color:var(--white);font-size:1.55rem;font-weight:600;letter-spacing:-0.025em;margin:52px 0 18px;">One detail people miss</h2>
+      <p>Put a real website on the sending domain, even a single page. It can simply redirect to your main site. A domain sending business email with nothing at all behind it is a small negative signal, and it looks odd to any recipient who types the address into a browser to check whether you are real — which is exactly what a careful prospect does.</p>
+
+      <h2 style="color:var(--white);font-size:1.55rem;font-weight:600;letter-spacing:-0.025em;margin:56px 0 8px;">Common questions</h2>
+      <div style="border-top:1px solid var(--border);padding:24px 0;">
+        <h3 style="font-size:1.03rem;font-weight:600;margin:0 0 10px;color:var(--white);">How many sending domains do I need?</h3>
+        <p style="margin:0;line-height:1.78;">One is enough for most small businesses at moderate volume. You add domains when you need more volume than a single domain can safely carry, or when you are running genuinely separate campaigns to different markets. Adding domains is the safe way to scale; pushing one domain harder is not.</p>
+      </div>
+      <div style="border-top:1px solid var(--border);padding:24px 0;">
+        <h3 style="font-size:1.03rem;font-weight:600;margin:0 0 10px;color:var(--white);">Can I use a subdomain instead of a separate domain?</h3>
+        <p style="margin:0;line-height:1.78;">You can, and it is better than using your main domain directly, but subdomains share some reputation with the parent. For twelve dollars a year, full separation removes the question entirely.</p>
+      </div>
+      <div style="border-top:1px solid var(--border);padding:24px 0;">
+        <h3 style="font-size:1.03rem;font-weight:600;margin:0 0 10px;color:var(--white);">Should the sending domain have its own website?</h3>
+        <p style="margin:0;line-height:1.78;">Yes, even a redirect to your main site. It costs nothing, removes a small negative signal, and satisfies the prospect who checks whether you exist before replying.</p>
+      </div>
+      <div style="border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:24px 0;">
+        <h3 style="font-size:1.03rem;font-weight:600;margin:0 0 10px;color:var(--white);">Do I reply from the sending domain or my main one?</h3>
+        <p style="margin:0;line-height:1.78;">Reply from the sending domain, so the conversation stays consistent and the thread history stays intact. Set up forwarding so you see replies without living in a second inbox. Once a conversation becomes a real client relationship, moving it to your main domain is natural.</p>
+      </div>
+
+      <div style="border-top:1px solid var(--border);margin-top:52px;padding-top:30px;">
+        <div style="color:var(--grey-3);font-size:0.8rem;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:18px;">Keep reading</div>
+        <a href="/spf-dkim-dmarc-explained/" class="project-link" style="display:block;margin-bottom:14px;">SPF, DKIM and DMARC explained <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="/email-warm-up-explained/" class="project-link" style="display:block;margin-bottom:14px;">Email warm-up, explained <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="/cold-email-deliverability-checklist/" class="project-link" style="display:block;margin-bottom:14px;">The full deliverability checklist <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2 class="reveal">Hire a salesperson once.<br/>Keep them forever.</h2>
+    <p class="reveal delay-1">The Cold Outreach Machine finds the companies you sell to, writes a different email for each one, and sends them on its own — paced, inside working hours. US$299.99, paid once, live setup call included.</p>
+    <div class="cta-actions reveal delay-2">
+      <a href="/marketplace/cold-outreach-machine/" class="btn-primary">See the machine
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="/cold-email-software-one-time-payment/" class="btn-ghost">Buy once vs subscribe</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="logo-mark"><img class="logo-img" src="https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg" alt="Kanaky Tech logo" /><span class="logo-text">Kanaky Tech</span></a>
+        <p>The Pacific's AI automation &amp; agent development studio. We build AI agents and automate business processes for SMEs, agencies and institutions across New Caledonia, New Zealand and the Pacific.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="/marketplace/cold-outreach-machine/">Cold Outreach Machine</a>
+        <a href="/cold-email-software-one-time-payment/">Buy once vs subscribe</a>
+        <a href="/self-hosted-cold-email/">Self-hosted cold email</a>
+        <a href="/guides/">All guides</a>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="/business-process-automation/">Business Process Automation</a>
+        <a href="/ai-agents-new-caledonia/">AI Agent Development</a>
+        <a href="/private-ai-systems/">Private AI Systems</a>
+        <a href="/ai-audit/">AI Opportunity Audit</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="/#about">About</a>
+        <a href="/case-studies/">Case Studies</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact/">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Kanaky Tech · Nouméa · Auckland · kanaky.xyz</span>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/company/kanaky-tech" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="https://github.com/kanakytech" target="_blank" rel="noopener" aria-label="GitHub"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg></a>
+        <a href="mailto:kevyn@kanaky.xyz" aria-label="Email"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></a>
+      </div>
+    </div>
+  </footer>
+  <script src="/assets/site.js"></script>
+</body>
+</html>

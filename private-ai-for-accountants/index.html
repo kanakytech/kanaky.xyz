@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Private AI for Accountants — Automating Without Exposing Client Financials</title>
+  <meta name="description" content="How accounting practices can use AI on client financial data while keeping it in-house: the tasks that pay back fastest, the confidentiality constraints, and a practical setup." />
+  <meta name="keywords" content="AI for accountants, accounting AI privacy, private AI accounting firm, financial data AI" />
+  <link rel="canonical" href="https://kanaky.xyz/private-ai-for-accountants/" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Private AI for Accountants — Automating Without Exposing Client Financials" />
+  <meta property="og:description" content="How accounting practices can use AI on client financial data while keeping it in-house: the tasks that pay back fastest, the confidentiality constraints, and a practical setup." />
+  <meta property="og:url" content="https://kanaky.xyz/private-ai-for-accountants/" />
+  <meta property="og:site_name" content="Kanaky Tech" />
+  <meta property="og:image" content="https://kanaky.xyz/assets/og/cold-outreach-machine.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://kanaky.xyz/assets/og/cold-outreach-machine.png" />
+  <link rel="icon" type="image/jpeg" href="https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/kanaky.css">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://kanaky.xyz/private-ai-for-accountants/#article",
+      "headline": "AI in an accounting practice without exposing client financials.",
+      "description": "How accounting practices can use AI on client financial data while keeping it in-house: the tasks that pay back fastest, the confidentiality constraints, and a practical setup.",
+      "datePublished": "2026-07-27",
+      "dateModified": "2026-07-27",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Person",
+        "name": "Kevyn Wahuzue",
+        "url": "https://www.linkedin.com/in/kevyn-wahuzue/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Kanaky Tech",
+        "url": "https://kanaky.xyz/"
+      },
+      "mainEntityOfPage": "https://kanaky.xyz/private-ai-for-accountants/",
+      "image": [
+        "https://kanaky.xyz/assets/og/cold-outreach-machine.png"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://kanaky.xyz/private-ai-for-accountants/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can accountants use AI with client data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Subject to your professional body's confidentiality requirements and your engagement terms, generally yes — but the tier and terms matter. Many practices are comfortable with business-tier tools under appropriate contracts; others conclude that concentrated client financial data should not leave the practice. Running the model in-house makes that a settled question rather than a judgement call."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which tasks pay back fastest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Document extraction and transaction classification, by a wide margin. They are high-volume, repetitive, and currently consume junior hours that could go to work clients value more. Start there rather than with anything requiring judgement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a local model accurate enough for financial documents?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For extracting figures and classifying transactions, yes — with verification. Treat it as a fast first pass that a person checks, not as an authority. The efficiency comes from reviewing extracted data rather than keying it, which is still a large saving."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What about during peak season?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Peak is when the volume argument is strongest — and when hardware capacity, rather than a per-request bill, becomes the constraint. Size the machine for your busiest month rather than your average one; the cost difference is smaller than the cost of a system that queues when you need it most."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Kanaky Tech",
+          "item": "https://kanaky.xyz/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://kanaky.xyz/guides/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Private AI · accountants",
+          "item": "https://kanaky.xyz/private-ai-for-accountants/"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <div class="cursor-ring" id="cursor-ring"></div>
+  <nav>
+    <a href="/" class="logo-mark">
+      <img class="logo-img" src="https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg" alt="Kanaky Tech logo" />
+      <span class="logo-text">Kanaky Tech</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/ai-audit/">AI Audit</a></li>
+      <li><a href="/guides/">Guides</a></li>
+      <li><a href="/marketplace/">Marketplace</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/contact/" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="/#services">Services</a>
+    <a href="/ai-audit/">AI Audit</a>
+    <a href="/guides/">Guides</a>
+    <a href="/marketplace/">Marketplace</a>
+    <a href="/blog/">Blog</a>
+    <a href="/contact/">Contact</a>
+  </div>
+
+  <section class="section" style="padding-top:140px;max-width:820px;margin:0 auto;">
+    <div class="section-label reveal-left">Regulated sectors</div>
+    <h1 class="reveal" style="font-size:clamp(1.9rem,4.4vw,3rem);font-weight:700;letter-spacing:-0.035em;line-height:1.14;margin:0 0 26px;">AI in an accounting practice <span style="color:var(--grey-4);font-weight:300;">without exposing client financials.</span></h1>
+
+    <div class="reveal delay-1" style="color:var(--grey-4);font-size:1.06rem;line-height:1.85;">
+      <p style="font-size:1.16rem;color:var(--white);font-weight:300;line-height:1.72;margin-bottom:34px;">Accounting practices hold concentrated financial information about a great many businesses. That makes AI unusually valuable — the work is repetitive, document-heavy and rule-based — and unusually sensitive. Running the model in-house resolves the tension directly.</p>
+      <div style="border-left:2px solid var(--accent);padding:4px 0 4px 22px;margin:30px 0;color:var(--grey-4);line-height:1.78;"><strong style="color:var(--white);font-weight:500;">Professional obligations come first.</strong> Confidentiality requirements from your professional body, and the terms of your engagement letters, govern what you may do with client data. This page describes what is technically possible, not what your standards permit.</div>
+      <h2 style="color:var(--white);font-size:1.55rem;font-weight:600;letter-spacing:-0.025em;margin:52px 0 18px;">Where the payback is fastest</h2>
+      <ul style="color:var(--grey-4);line-height:1.85;padding-left:22px;margin:20px 0;"><li style="margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Document extraction.</strong> Pulling figures, dates and parties out of invoices, receipts, statements and contracts into structured form. Repetitive, high volume, and exactly what these models do well.</li><li style="margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Transaction classification.</strong> Sorting entries into accounts, learning from how you have categorised similar items before.</li><li style="margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Reconciliation support.</strong> Surfacing likely matches and flagging what does not fit, for a human to resolve.</li><li style="margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Drafting client correspondence</strong> from a file — explanatory letters, queries, follow-ups.</li><li style="margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Searching your own history.</strong> &quot;How did we treat this for a similar client&quot; answered from your own files rather than memory.</li><li style="margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Deadline and obligation tracking</strong> extracted from documents rather than re-keyed.</li></ul>
+      <h2 style="color:var(--white);font-size:1.55rem;font-weight:600;letter-spacing:-0.025em;margin:52px 0 18px;">Why in-house makes sense here</h2>
+      <p>The concentration is the point. A single practice may hold detailed financial records for hundreds of businesses — turnover, margins, debts, disputes, salaries. That is a more attractive target and a more consequential exposure than any single business faces on its own.</p>
+      <p>Sending that material to an external service may be permissible under the right terms; keeping it inside means the question of a provider breach, a terms change, or a sub-processor you did not evaluate simply does not arise.</p>
+      <h2 style="color:var(--white);font-size:1.55rem;font-weight:600;letter-spacing:-0.025em;margin:52px 0 18px;">A realistic setup</h2>
+      <div style="margin:26px 0;">
+      <div style="display:flex;gap:18px;padding:18px 0;border-top:1px solid var(--border);">
+        <div style="color:var(--accent);font-weight:600;min-width:26px;font-variant-numeric:tabular-nums;">1</div>
+        <div style="color:var(--grey-4);line-height:1.75;flex:1;"><strong style="color:var(--white);font-weight:500;">One capable machine</strong> in the practice — <a href="/local-llm-hardware-requirements/" style="color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(200,240,96,0.3);">sizing guidance here</a>.</div>
+      </div>
+      <div style="display:flex;gap:18px;padding:18px 0;border-top:1px solid var(--border);">
+        <div style="color:var(--accent);font-weight:600;min-width:26px;font-variant-numeric:tabular-nums;">2</div>
+        <div style="color:var(--grey-4);line-height:1.75;flex:1;"><strong style="color:var(--white);font-weight:500;">Integration with your practice software</strong>, so extracted data lands where it is used rather than in a separate silo.</div>
+      </div>
+      <div style="display:flex;gap:18px;padding:18px 0;border-top:1px solid var(--border);">
+        <div style="color:var(--accent);font-weight:600;min-width:26px;font-variant-numeric:tabular-nums;">3</div>
+        <div style="color:var(--grey-4);line-height:1.75;flex:1;"><strong style="color:var(--white);font-weight:500;">Client-level access control.</strong> Staff should only be able to query clients they work on, exactly as with your document system.</div>
+      </div>
+      <div style="display:flex;gap:18px;padding:18px 0;border-top:1px solid var(--border);">
+        <div style="color:var(--accent);font-weight:600;min-width:26px;font-variant-numeric:tabular-nums;">4</div>
+        <div style="color:var(--grey-4);line-height:1.75;flex:1;"><strong style="color:var(--white);font-weight:500;">Human review on anything that affects a return or a set of accounts.</strong> These models are fluent and occasionally confidently wrong — the review step is not optional.</div>
+      </div>
+      <div style="display:flex;gap:18px;padding:18px 0;border-top:1px solid var(--border);">
+        <div style="color:var(--accent);font-weight:600;min-width:26px;font-variant-numeric:tabular-nums;">5</div>
+        <div style="color:var(--grey-4);line-height:1.75;flex:1;"><strong style="color:var(--white);font-weight:500;">An audit trail</strong> of what was generated and by whom.</div>
+      </div></div>
+      <h2 style="color:var(--white);font-size:1.55rem;font-weight:600;letter-spacing:-0.025em;margin:52px 0 18px;">What it does not do</h2>
+      <p>It does not exercise professional judgement, and it should not be trusted to apply tax law unverified. Its value is in the mechanical layer — reading, extracting, sorting, drafting — which happens to be where a large share of billable hours currently disappears. That is a substantial prize without needing to overstate it.</p>
+
+      <h2 style="color:var(--white);font-size:1.55rem;font-weight:600;letter-spacing:-0.025em;margin:56px 0 8px;">Common questions</h2>
+      <div style="border-top:1px solid var(--border);padding:24px 0;">
+        <h3 style="font-size:1.03rem;font-weight:600;margin:0 0 10px;color:var(--white);">Can accountants use AI with client data?</h3>
+        <p style="margin:0;line-height:1.78;">Subject to your professional body's confidentiality requirements and your engagement terms, generally yes — but the tier and terms matter. Many practices are comfortable with business-tier tools under appropriate contracts; others conclude that concentrated client financial data should not leave the practice. Running the model in-house makes that a settled question rather than a judgement call.</p>
+      </div>
+      <div style="border-top:1px solid var(--border);padding:24px 0;">
+        <h3 style="font-size:1.03rem;font-weight:600;margin:0 0 10px;color:var(--white);">Which tasks pay back fastest?</h3>
+        <p style="margin:0;line-height:1.78;">Document extraction and transaction classification, by a wide margin. They are high-volume, repetitive, and currently consume junior hours that could go to work clients value more. Start there rather than with anything requiring judgement.</p>
+      </div>
+      <div style="border-top:1px solid var(--border);padding:24px 0;">
+        <h3 style="font-size:1.03rem;font-weight:600;margin:0 0 10px;color:var(--white);">Is a local model accurate enough for financial documents?</h3>
+        <p style="margin:0;line-height:1.78;">For extracting figures and classifying transactions, yes — with verification. Treat it as a fast first pass that a person checks, not as an authority. The efficiency comes from reviewing extracted data rather than keying it, which is still a large saving.</p>
+      </div>
+      <div style="border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:24px 0;">
+        <h3 style="font-size:1.03rem;font-weight:600;margin:0 0 10px;color:var(--white);">What about during peak season?</h3>
+        <p style="margin:0;line-height:1.78;">Peak is when the volume argument is strongest — and when hardware capacity, rather than a per-request bill, becomes the constraint. Size the machine for your busiest month rather than your average one; the cost difference is smaller than the cost of a system that queues when you need it most.</p>
+      </div>
+
+      <div style="border-top:1px solid var(--border);margin-top:52px;padding-top:30px;">
+        <div style="color:var(--grey-3);font-size:0.8rem;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:18px;">Keep reading</div>
+        <a href="/ai-data-privacy-business/" class="project-link" style="display:block;margin-bottom:14px;">AI and your business data <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="/private-ai-for-law-firms/" class="project-link" style="display:block;margin-bottom:14px;">Private AI for law firms <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="/ai-for-accountants/" class="project-link" style="display:block;margin-bottom:14px;">AI for accounting practices <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2 class="reveal">AI that runs<br/>on your terms.</h2>
+    <p class="reveal delay-1">Private AI systems in environments you control — your data never trains public models, and engagements are available under NDA.</p>
+    <div class="cta-actions reveal delay-2">
+      <a href="/private-ai-systems/" class="btn-primary">Private AI systems
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="/ai-audit/" class="btn-ghost">Book a free audit</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="logo-mark"><img class="logo-img" src="https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg" alt="Kanaky Tech logo" /><span class="logo-text">Kanaky Tech</span></a>
+        <p>The Pacific's AI automation &amp; agent development studio. We build AI agents and automate business processes for SMEs, agencies and institutions across New Caledonia, New Zealand and the Pacific.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="/marketplace/cold-outreach-machine/">Cold Outreach Machine</a>
+        <a href="/cold-email-software-one-time-payment/">Buy once vs subscribe</a>
+        <a href="/self-hosted-cold-email/">Self-hosted cold email</a>
+        <a href="/guides/">All guides</a>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="/business-process-automation/">Business Process Automation</a>
+        <a href="/ai-agents-new-caledonia/">AI Agent Development</a>
+        <a href="/private-ai-systems/">Private AI Systems</a>
+        <a href="/ai-audit/">AI Opportunity Audit</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="/#about">About</a>
+        <a href="/case-studies/">Case Studies</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact/">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Kanaky Tech · Nouméa · Auckland · kanaky.xyz</span>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/company/kanaky-tech" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="https://github.com/kanakytech" target="_blank" rel="noopener" aria-label="GitHub"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg></a>
+        <a href="mailto:kevyn@kanaky.xyz" aria-label="Email"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></a>
+      </div>
+    </div>
+  </footer>
+  <script src="/assets/site.js"></script>
+</body>
+</html>
