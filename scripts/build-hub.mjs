@@ -19,6 +19,7 @@ const CLUSTERS = [
   { key: 'local-ai',     title: 'Local &amp; private AI',   blurb: 'Running AI on hardware you control: what it takes, what it costs, where it falls short, and the sectors where it is close to mandatory.' },
   { key: 'industries',   title: 'AI by trade',          blurb: 'Where AI saves real hours in specific trades and sectors — starting from the working day rather than from the technology.' },
   { key: 'automation',   title: 'Automation basics',    blurb: 'Agents, workflows and the decision of what to automate first. Concepts explained without the vendor gloss.' },
+  { key: 'locations',    title: 'Where we work',        blurb: 'What an engagement looks like in a given market — what it costs, how it runs, and the questions worth asking any agency before you sign.' },
 ];
 
 let all = [];

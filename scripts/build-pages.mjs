@@ -121,6 +121,13 @@ const footer = `  <footer>
         <a href="/ai-audit/">AI Opportunity Audit</a>
       </div>
       <div class="footer-col">
+        <h4>Where we work</h4>
+        <a href="/ai-automation-new-zealand/">AI Automation Agency · New Zealand</a>
+        <a href="/ai-automation-agency-auckland/">AI Automation Agency · Auckland</a>
+        <a href="/ai-agents-auckland/">AI Agents · Auckland</a>
+        <a href="/ai-automation-new-caledonia/">AI Automation · New Caledonia</a>
+      </div>
+      <div class="footer-col">
         <h4>Company</h4>
         <a href="/#about">About</a>
         <a href="/case-studies/">Case Studies</a>
@@ -149,9 +156,9 @@ const CTA = {
   },
   service: {
     h: 'Find out what AI<br/>can do for you.',
-    p: 'Start with a free AI opportunity audit. We map how your business actually runs, rank what is worth automating, and give you a clear scope before anything is built — no obligation.',
+    p: 'Kanaky Tech is an AI automation agency working across New Zealand and the Pacific. Start with a free AI opportunity audit: we map how your business actually runs, rank what is worth automating, and give you a clear scope before anything is built — no obligation.',
     a: ['/ai-audit/', 'Book a free AI audit'],
-    b: ['/contact/', 'Contact'],
+    b: ['/ai-automation-new-zealand/', 'AI automation in New Zealand'],
   },
   private: {
     h: 'AI that runs<br/>on your terms.',
@@ -275,7 +282,7 @@ ${footer}
 }
 
 /* ── build ── */
-const modules = ['outreach', 'legal', 'alternatives', 'local-ai', 'industries', 'automation'];
+const modules = ['outreach', 'legal', 'alternatives', 'local-ai', 'industries', 'automation', 'locations'];
 let pages = [];
 for (const m of modules) {
   const f = path.join(HERE, 'content', `${m}.mjs`);
