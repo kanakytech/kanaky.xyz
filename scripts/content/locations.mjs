@@ -101,4 +101,64 @@ export default [
   ],
 },
 
+{
+  slug: 'ai-automation-australia',
+  title: 'AI Automation for Australian Small Businesses — Kanaky Tech',
+  description: 'AI automation for Australian small businesses, delivered remotely from the same timezone: what we automate, honest pricing against the AU market, Spam Act compliance built in, and when not to hire anyone.',
+  keywords: 'AI automation Australia, AI automation agency Australia, business automation Australia, AI for small business Australia, AI automation Sydney, AI automation Brisbane',
+  eyebrow: 'Australia',
+  short: 'AI automation · Australia',
+  ogTitle: 'AI Automation for Australian Small Businesses — Kanaky Tech',
+  h1: 'AI automation for Australian small businesses. <span style="color:var(--grey-4);font-weight:300;">Without the mid-market invoice.</span>',
+  cta: 'service',
+  body: [
+    { lead: 'Most Australian AI agencies quote mid-market engagements — commonly in the tens of thousands of dollars, built for companies with an operations team to receive them. If you are a tradie, a small firm or a sole operator, that market was not built for you. Ours was.' },
+
+    { h: 'The honest difference' },
+    'We work remotely from Auckland and Nouméa — same working day as the east coast, two hours ahead. We will not sit in your Sydney office, and an agency that does has a genuine advantage for a large, complex rollout. What remote delivery changes is the cost base: no city office is priced into your invoice, which is why a single automated workflow lands in the low four figures rather than the tens of thousands typical of the Australian mid-market.',
+    'For a small business automating quoting, enquiries or invoice chasing, that difference is the difference between viable and not.',
+
+    { h: 'What Australian small businesses actually automate' },
+    { list: [
+      '**Trades** — quoting from a voice note after a day on the tools, invoice chasing, compliance records. See [AI for electricians](/ai-for-electricians/), [plumbers](/ai-for-plumbers/) and [builders](/ai-for-builders/).',
+      '**The 88-day economy** — farms and regional businesses handling seasonal worker enquiries at volume.',
+      '**Professional services** — document extraction and client communication, with [data that stays in Australia](/ai-data-privacy-business/) where that is a requirement.',
+      '**E-commerce** — catalogue content, support deflection done honestly, returns patterns. See [AI for e-commerce](/ai-for-ecommerce/).',
+      '**Outbound prospecting** — the [Cold Outreach Machine](/marketplace/cold-outreach-machine/) runs on your own hardware, is bought once at US$299.99, and enforces the mechanics the [Spam Act 2003](/cold-email-law-australia/) requires: identification, functional unsubscribe, permanent opt-outs.',
+    ]},
+
+    { h: 'Compliance is not an afterthought here' },
+    'Australia enforces its electronic messaging and privacy rules more actively than most jurisdictions — the regulator has fined household names, and the Privacy Act\'s purpose-limitation rules constrain how prospect data may be collected and used. Everything we build for Australian clients treats the [Spam Act 2003 and the Australian Privacy Principles](/cold-email-law-australia/) as design constraints, not fine print. That is also written into the licence of anything we sell: the buyer\'s legal obligations are stated plainly rather than hidden.',
+
+    { h: 'How an engagement runs' },
+    { steps: [
+      '**A free audit**, remotely. We map where your hours go and rank what is worth automating — you keep the findings either way. See [the AI audit](/ai-audit/).',
+      '**One workflow first.** The single process with the most hours attached, at a fixed price agreed before anything is built.',
+      '**You own the code**, documented well enough for any Australian developer to take over. No lock-in.',
+      '**Expand or stop.** If the first project does not produce a measurable difference, that is worth knowing before spending more.',
+    ]},
+
+    { h: 'When you should hire locally instead' },
+    { list: [
+      '**Large or regulated rollouts** — where on-site presence, Australian data residency guarantees and local accountability genuinely matter.',
+      '**Anything needing hardware on premises** — we are not going to install a server in Parramatta.',
+      '**If off-the-shelf software already solves it** — a bespoke version of something you can subscribe to is a poor trade, whoever builds it.',
+      '**If you have not tracked where your hours go** — [do that first](/how-to-start-with-ai/); it is free and it decides everything else.',
+    ]},
+    { note: 'We publish [51 guides](/guides/) on outreach, local AI and automation — including the Australian legal pages — because we would rather you arrive knowing what good looks like. An informed client is a better client.' },
+  ],
+  faq: [
+    { q: 'Do you work with Australian businesses remotely?', a: 'Yes — from Auckland and Nouméa, which share the Australian east coast working day (two hours ahead of AEST). Audits, builds and support all run remotely. For large rollouts needing on-site presence, a local agency is genuinely the better choice and we say so.' },
+    { q: 'How much does AI automation cost in Australia?', a: 'Australian mid-market engagements commonly run from the low tens of thousands of dollars upward. Our model targets small businesses: a single automated workflow in the low four figures, a free audit first, and software you can buy outright from US$299.99 if what you need is outbound prospecting you run yourself.' },
+    { q: 'Is your outreach software compliant with the Spam Act?', a: 'The machine enforces the technical requirements — sender identification, a functional unsubscribe, permanent opt-outs, no harvested lists — and its licence states plainly that legal responsibility for a campaign rests with the sender, as the Act provides. Our guide to the Spam Act 2003 and the Privacy Act covers what that means in practice.' },
+    { q: 'Can you guarantee data stays in Australia?', a: 'For systems we build to run on your own hardware or your own Australian-region cloud, yes by construction — nothing leaves infrastructure you control. For workflows using overseas AI providers, no, and we will tell you exactly which data crosses where before anything is built, so the decision is yours and informed.' },
+  ],
+  related: [
+    ['/cold-email-law-australia/', 'Cold email law in Australia'],
+    ['/ai-automation-new-zealand/', 'AI automation in New Zealand'],
+    ['/marketplace/cold-outreach-machine/', 'The Cold Outreach Machine'],
+    ['/ai-audit/', 'Book a free AI audit'],
+  ],
+},
+
 ];
