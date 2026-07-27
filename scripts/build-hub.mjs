@@ -19,18 +19,21 @@ const CLUSTERS = [
   { key: 'local-ai',     title: 'Local &amp; private AI',   blurb: 'Running AI on hardware you control: what it takes, what it costs, where it falls short, and the sectors where it is close to mandatory.' },
   { key: 'industries',   title: 'AI by trade',          blurb: 'Where AI saves real hours in specific trades and sectors — starting from the working day rather than from the technology.' },
   { key: 'automation',   title: 'Automation basics',    blurb: 'Agents, workflows and the decision of what to automate first. Concepts explained without the vendor gloss.' },
-  { key: 'locations',    title: 'Where we work',        blurb: 'What an engagement looks like in a given market — what it costs, how it runs, and the questions worth asking any agency before you sign.' },
+  { key: 'locations',    title: 'Nos marchés · Where we work', blurb: 'Marché par marché : ce que coûte un projet, comment il se déroule, les contraintes locales (connectivité, monnaie, réglementation) et les questions à poser à tout prestataire — y compris nous. En français et en anglais selon le territoire.', merge: ['pacifique','gang-pacifique'] },
   { key: 'fr',           title: 'En français',          blurb: 'Guides écrits en français pour la Nouvelle-Calédonie, la Polynésie française et La Réunion : prix réels, exemples concrets, IA locale, premiers pas.' },
-  { key: 'pacifique',    title: 'Marchés du Pacifique', blurb: 'Prix en XPF, aides locales, contraintes de connectivité et concurrence réelle — marché par marché : Nouvelle-Calédonie, Polynésie française, Wallis-et-Futuna.' },
-  { key: 'gang-pacifique', title: 'Vanuatu &amp; Fidji',   blurb: 'Les marchés voisins que personne ne dessert sérieusement — Port-Vila en français et en anglais, Suva et Nadi. Connectivité, prix, et où un prestataire local vous servirait mieux.' },
 ];
 
 let all = [];
 for (const c of CLUSTERS) {
-  const f = path.join(HERE, 'content', `${c.key}.mjs`);
-  if (!fs.existsSync(f)) continue;
-  const mod = await import(`file://${f}`);
-  all.push({ ...c, pages: mod.default });
+  const keys = [c.key, ...(c.merge || [])];
+  let pages = [];
+  for (const k of keys) {
+    const f = path.join(HERE, 'content', `${k}.mjs`);
+    if (!fs.existsSync(f)) continue;
+    const mod = await import(`file://${f}`);
+    pages = pages.concat(mod.default);
+  }
+  if (pages.length) all.push({ ...c, pages });
 }
 const total = all.reduce((n, c) => n + c.pages.length, 0);
 

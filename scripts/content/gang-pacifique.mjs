@@ -17,6 +17,19 @@ export default [
 /* ══════════════ VANUATU ══════════════ */
 {
   slug: 'automatisation-ia-vanuatu',
+  extraGraph: [{
+    '@type': 'Service',
+    '@id': 'https://kanaky.xyz/automatisation-ia-vanuatu/#service',
+    name: 'Automatisation IA au Vanuatu',
+    serviceType: 'AI automation and business process automation',
+    provider: { '@id': 'https://kanaky.xyz/#organization' },
+    areaServed: { '@type': 'Country', name: 'Vanuatu' },
+    availableChannel: {
+      '@type': 'ServiceChannel',
+      serviceUrl: 'https://kanaky.xyz/automatisation-ia-vanuatu/',
+      availableLanguage: ['fr', 'en'],
+    },
+  }],
   lang: 'fr',
   alt: { lang: 'en', url: 'https://kanaky.xyz/ai-automation-vanuatu/' },
   title: 'Automatisation IA au Vanuatu — guide pour les entreprises de Port-Vila',
@@ -77,6 +90,19 @@ export default [
 
 {
   slug: 'ai-automation-vanuatu',
+  extraGraph: [{
+    '@type': 'Service',
+    '@id': 'https://kanaky.xyz/ai-automation-vanuatu/#service',
+    name: 'AI Automation in Vanuatu',
+    serviceType: 'AI automation and business process automation',
+    provider: { '@id': 'https://kanaky.xyz/#organization' },
+    areaServed: { '@type': 'Country', name: 'Vanuatu' },
+    availableChannel: {
+      '@type': 'ServiceChannel',
+      serviceUrl: 'https://kanaky.xyz/ai-automation-vanuatu/',
+      availableLanguage: ['fr', 'en'],
+    },
+  }],
   alt: { lang: 'fr', url: 'https://kanaky.xyz/automatisation-ia-vanuatu/' },
   title: 'AI Automation in Vanuatu — A Practical Guide for Port Vila Businesses',
   description: 'Automating a business in Vanuatu: what works for tourism, retail and services in Port Vila and Luganville, why connectivity decides the setup, realistic pricing, and why a New Caledonian provider is the logical neighbour.',
@@ -137,6 +163,19 @@ export default [
 /* ══════════════ FIDJI ══════════════ */
 {
   slug: 'ai-automation-fiji',
+  extraGraph: [{
+    '@type': 'Service',
+    '@id': 'https://kanaky.xyz/ai-automation-fiji/#service',
+    name: 'AI Automation in Fiji',
+    serviceType: 'AI automation and business process automation',
+    provider: { '@id': 'https://kanaky.xyz/#organization' },
+    areaServed: { '@type': 'Country', name: 'Fiji' },
+    availableChannel: {
+      '@type': 'ServiceChannel',
+      serviceUrl: 'https://kanaky.xyz/ai-automation-fiji/',
+      availableLanguage: ['fr', 'en'],
+    },
+  }],
   title: 'AI Automation in Fiji — A Practical Guide for Suva and Nadi Businesses',
   description: 'Automating a business in Fiji: what works for tourism operators, MSMEs and services across Suva, Nadi and Lautoka, how it fits a growing digital economy, realistic pricing, and the questions to ask any provider.',
   keywords: 'AI automation Fiji, business automation Suva, AI Nadi, digital transformation Fiji, automation MSME Fiji, AI agency Fiji',
