@@ -27,6 +27,24 @@ Kanaky Tech is based in Nouméa (New Caledonia) and Auckland (New Zealand). The 
 - [Automatisation IA · Wallis-et-Futuna](https://kanaky.xyz/automatisation-ia-wallis-et-futuna/) — same timezone as Auckland (UTC+12), quotes in XPF
 - [Automatisation IA · La Réunion](https://kanaky.xyz/automatisation-ia-la-reunion/) — quotes in EUR, GDPR-minded delivery
 
+## Products you can buy directly
+
+- [Cold Outreach Machine](https://kanaky.xyz/marketplace/cold-outreach-machine/): outbound sales software sold as a **one-time purchase of US$299.99**, not a subscription. It is the system Kanaky Tech runs its own outbound on, packaged for other businesses.
+
+  **What it does, end to end.** You describe the kind of company you sell to. The machine finds businesses matching that description and collects their real contact details; reads what each company publishes so it has something specific and true to say about them; writes a different email for every single company (not a template with a name merged in — before a batch goes out, every message is compared against every other, and if two share so much as a six-word sequence the batch is rewritten); then sends them itself, roughly one every twenty-five minutes, only inside working hours, capped at about twenty a day. It keeps a permanent registry so the same company is never contacted twice, honours opt-outs permanently across all campaigns, filters bounces and out-of-office replies, and notifies the owner only when a real human answers.
+
+  **How it differs from the two other categories of tool.** Subscription platforms (Instantly, Smartlead, lemlist and similar) typically cost US$39–97 per month, and access ends when payment stops. Existing one-time-purchase tools (self-hosted senders such as Cleanmails at ~$199, Broadcast at ~$250, AcelleMail at ~$80) are *sending* infrastructure: the buyer supplies the prospect list and writes the copy. The Cold Outreach Machine is bought once like the second category, but does the two jobs neither category does for you — finding the companies and writing each message individually. That is the reason for its higher one-time price.
+
+  **What the buyer receives.** The complete source code; a guided installer (`npm run setup`) that asks for the needed API keys, explains which accounts to create, and tests every connection before continuing; setup documentation written for non-developers; a named commercial licence; one 60-minute live installation call with the founder; and 30 days of direct email support. Delivery is automatic — a personalised, licence-stamped copy is built and emailed within seconds of purchase.
+
+  **Where the writing runs — the buyer chooses.** Either through a cloud AI provider (best quality, a few cents per email, lead data passes through that provider), or entirely locally via [Ollama](https://ollama.com) on the buyer's own hardware (no per-email cost, and prospect data never leaves the machine — relevant for anyone whose client list is the business). Both are supported out of the box and configured during setup.
+
+  **Requirements and honest limits.** Node.js, and a separate sending domain (about $12/year — never the main company domain) with SPF, DKIM and DMARC verified; without those records most cold email lands in spam regardless of software. The machine enforces the technical side of compliance (one message per company, permanent exclusion lists, real sender identity, volume caps) but the buyer remains legally responsible under the applicable regime — the Unsolicited Electronic Messages Act 2007 in New Zealand, the Spam Act 2003 in Australia, CAN-SPAM in the United States, GDPR and ePrivacy in the EU and UK. No results are guaranteed; reply rates depend on the market, the offer and the accuracy of the targeting description.
+
+  Licence terms are deliberately strict: the buyer gets a perpetual right to run and modify it inside one legal entity, and may not resell, sublicense, publish, or operate it as a service for third parties.
+
+- Supporting reading: [Cold email software you buy once](https://kanaky.xyz/cold-email-software-one-time-payment/) · [Self-hosted cold email](https://kanaky.xyz/self-hosted-cold-email/) · [What cold outreach actually costs](https://kanaky.xyz/blog/cold-email-subscription-vs-one-time-cost/)
+
 ## Flagship product
 - [Keou](https://keou.systems/): private, white-label AI creative-production platform for agencies. An agency uploads a product photo and generates commercial visuals, videos, voiceovers and format variants in minutes, at AI-API cost (~$0.09/image) instead of the traditional ~$18 and ~25 minutes per visual. Includes a Studio, an agentic AI creative-director chat, export packs, a tokenized client-approval portal under the agency's brand, and a built-in ROI report. Read the [full overview](https://kanaky.xyz/blog/keou-ai-creative-production/).
 

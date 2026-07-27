@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Self-Hosted Cold Email — Run Outreach on Your Own Machine, Keep Your Prospect Data</title>
+  <meta name="description" content="How to run cold outreach on infrastructure you control: what self-hosted actually means, where your prospect data goes with each option, running the AI writing locally so leads never leave your machine, and the trade-offs nobody mentions." />
+  <meta name="keywords" content="self-hosted cold email, cold email own server, cold outreach data privacy, run cold email locally, cold email local AI model, ollama cold email, cold email without third party" />
+  <link rel="canonical" href="https://kanaky.xyz/self-hosted-cold-email/" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Self-Hosted Cold Email — Run Outreach on Your Own Machine" />
+  <meta property="og:description" content="What self-hosted outreach actually means, where your prospect data goes, and how to run the AI writing locally so your leads never leave your machine." />
+  <meta property="og:url" content="https://kanaky.xyz/self-hosted-cold-email/" />
+  <meta property="og:site_name" content="Kanaky Tech" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/jpeg" href="https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/kanaky.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://kanaky.xyz/self-hosted-cold-email/#article",
+        "headline": "Self-hosted cold email: running outreach on infrastructure you control",
+        "description": "What self-hosted outreach means in practice, where prospect data travels under each option, running the AI writing locally, and the honest trade-offs.",
+        "datePublished": "2026-07-28",
+        "dateModified": "2026-07-28",
+        "inLanguage": "en",
+        "author": { "@type": "Person", "name": "Kevyn Wahuzue", "url": "https://www.linkedin.com/in/kevyn-wahuzue/" },
+        "publisher": { "@type": "Organization", "name": "Kanaky Tech", "url": "https://kanaky.xyz/" },
+        "mainEntityOfPage": "https://kanaky.xyz/self-hosted-cold-email/"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://kanaky.xyz/self-hosted-cold-email/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What does self-hosted cold email actually mean?",
+            "acceptedAnswer": { "@type": "Answer", "text": "It means the software runs on hardware you control — your own computer or a server you rent — rather than on a vendor's platform. Your prospect list, your message history and your reply data live in files and a database you own. The practical consequences: no vendor can read your pipeline, no price change affects you, and nothing disappears if the vendor shuts down. You do take on the setup and maintenance yourself." }
+          },
+          {
+            "@type": "Question",
+            "name": "Where does my prospect data go with a hosted cold email platform?",
+            "acceptedAnswer": { "@type": "Answer", "text": "With a hosted platform, your prospect list is uploaded to and stored on the vendor's servers, along with every message sent and every reply received. This is normal and usually covered by their terms, but it means a third party holds a copy of who your customers and prospects are. For a recruiter, consultant, or agency whose client list is a core commercial asset, that is a genuine consideration rather than a theoretical one." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I run the AI that writes the emails on my own machine?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Tools such as Ollama run open-weight models like Llama locally. Nothing about your prospects is sent to any AI provider, and there is no per-email cost. The trade-offs are real: you need roughly 16GB of memory or more, generation is slower than a cloud API, and the writing quality is somewhat below the largest cloud models. The Cold Outreach Machine supports both modes and configures whichever you choose during setup." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is self-hosted cold email harder to keep out of spam?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Deliverability depends far more on your domain setup and sending behaviour than on where the software runs. What matters: a separate sending domain, verified SPF, DKIM and DMARC records, a slow and steady pace, and genuine sender identity. Hosted platforms often bundle managed warm-up across many mailboxes, which is a real convenience at high volume. At moderate volume, a correctly configured self-hosted setup and a hosted platform land in the same place." }
+          },
+          {
+            "@type": "Question",
+            "name": "What do I need to run self-hosted outreach?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Node.js on a computer or small server; a separate sending domain costing about US$12 a year; an SMTP or email sending service; and SPF, DKIM and DMARC records configured on that domain. If you want the machine to keep running when your laptop is closed, deploy it to any Node host rather than running it locally. No coding is required, but you need to be comfortable running a command in a terminal and editing DNS records." }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Kanaky Tech", "item": "https://kanaky.xyz/" },
+          { "@type": "ListItem", "position": 2, "name": "Self-hosted cold email", "item": "https://kanaky.xyz/self-hosted-cold-email/" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="cursor-ring" id="cursor-ring"></div>
+  <nav>
+    <a href="/" class="logo-mark">
+      <img class="logo-img" src="https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg" alt="Kanaky Tech logo" />
+      <span class="logo-text">Kanaky Tech</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/ai-audit/">AI Audit</a></li>
+      <li><a href="/case-studies/">Case Studies</a></li>
+      <li><a href="/marketplace/">Marketplace</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/contact/" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="/#services">Services</a>
+    <a href="/ai-audit/">AI Audit</a>
+    <a href="/case-studies/">Case Studies</a>
+    <a href="/marketplace/">Marketplace</a>
+    <a href="/blog/">Blog</a>
+    <a href="/contact/">Contact</a>
+  </div>
+
+  <section class="section" style="padding-top:140px;">
+    <div class="section-label reveal-left">Infrastructure you control</div>
+    <div class="about-inner" style="margin-bottom:8px;">
+      <div>
+        <h1 class="about-heading reveal" style="font-size:clamp(2rem,5vw,3.4rem);">Self-hosted cold email — <span style="color:var(--grey-4);font-weight:300;">your prospects stay yours.</span></h1>
+      </div>
+      <div class="about-body reveal delay-2">
+        <p><strong>Self-hosted means the software runs on hardware you control</strong> — your own computer, or a server you rent — instead of on a vendor's platform. Your prospect list, your message history and your replies sit in files and a database you own.</p>
+        <p>For most businesses this is a preference. For some it's the whole point: if your client list is the commercial asset, uploading it to a third party is a decision worth making deliberately rather than by default.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-label reveal-left">Follow the data</div>
+    <div class="about-inner" style="margin-bottom:28px;">
+      <div><h2 class="about-heading reveal">Where your list actually travels, <span style="color:var(--grey-4);font-weight:300;">under each setup.</span></h2></div>
+      <div class="about-body reveal delay-2">
+        <p>This is the question that separates the options, and it's rarely laid out plainly. There are three arrangements, not two.</p>
+      </div>
+    </div>
+
+    <div class="reveal delay-2" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:24px;">
+
+      <div style="border:1px solid var(--border);border-radius:16px;padding:30px;">
+        <h3 style="font-size:1.15rem;font-weight:600;margin:0 0 14px;">Hosted platform</h3>
+        <p style="color:var(--grey-4);font-size:0.94rem;line-height:1.7;margin:0 0 16px;">Your list is uploaded to the vendor. They store your prospects, your messages and your replies.</p>
+        <div style="color:var(--grey-3);font-size:0.87rem;line-height:1.7;">Fastest to start. A third party holds a copy of your pipeline, and your access ends with your subscription.</div>
+      </div>
+
+      <div style="border:1px solid var(--border);border-radius:16px;padding:30px;">
+        <h3 style="font-size:1.15rem;font-weight:600;margin:0 0 14px;">Self-hosted + cloud AI</h3>
+        <p style="color:var(--grey-4);font-size:0.94rem;line-height:1.7;margin:0 0 16px;">The software and your database are yours. Only the text being written passes through an AI provider.</p>
+        <div style="color:var(--grey-3);font-size:0.87rem;line-height:1.7;">Best writing quality, a few cents per email. The middle ground most people land on.</div>
+      </div>
+
+      <div style="border:1px solid rgba(200,240,96,0.25);border-radius:16px;padding:30px;background:linear-gradient(180deg,rgba(200,240,96,0.05),transparent 65%);">
+        <h3 style="font-size:1.15rem;font-weight:600;margin:0 0 14px;">Self-hosted + local model</h3>
+        <p style="color:var(--grey-4);font-size:0.94rem;line-height:1.7;margin:0 0 16px;">Everything runs on your hardware. <strong style="color:var(--white);font-weight:500;">Nothing about your prospects reaches any external service.</strong></p>
+        <div style="color:var(--grey-3);font-size:0.87rem;line-height:1.7;">No per-email cost, ever. Needs ~16GB of memory, runs slower, writes slightly less sharply.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-label reveal-left">Running it locally</div>
+    <div class="about-inner" style="margin-bottom:8px;">
+      <div><h2 class="about-heading reveal">The AI can write on your own machine. <span style="color:var(--grey-4);font-weight:300;">Here's what that costs you.</span></h2></div>
+      <div class="about-body reveal delay-2">
+        <p>Open-weight models run locally through <a href="https://ollama.com" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(200,240,96,0.3);">Ollama</a> — install it, pull a model such as Llama, and point your outreach software at it. From that moment, no prospect name, no company detail and no message draft leaves your computer, and the per-email cost is zero regardless of volume.</p>
+        <p>The trade-offs are worth stating plainly, because vendors selling "private AI" tend to skip them. You need roughly 16GB of memory or more. Generation is noticeably slower than a cloud API — which matters little when the machine deliberately waits twenty-five minutes between sends anyway. And the writing is somewhat less sharp than the largest cloud models; good enough for outreach that reads as human, not equal to the best.</p>
+        <p>Most people start on cloud and move local once volume makes the per-email cost visible, or once a client asks where their data goes. Switching is one line of configuration, not a migration.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-label reveal-left">What you actually need</div>
+    <div class="reveal delay-1" style="max-width:78ch;">
+      <div style="border-top:1px solid var(--border);padding:24px 0;display:flex;gap:20px;flex-wrap:wrap;">
+        <div style="min-width:190px;font-weight:600;">Node.js</div>
+        <div style="color:var(--grey-4);flex:1;min-width:260px;line-height:1.7;">On your computer, or on any small server if you want it running while your laptop is closed.</div>
+      </div>
+      <div style="border-top:1px solid var(--border);padding:24px 0;display:flex;gap:20px;flex-wrap:wrap;">
+        <div style="min-width:190px;font-weight:600;">A sending domain</div>
+        <div style="color:var(--grey-4);flex:1;min-width:260px;line-height:1.7;">About $12 a year, and <strong style="color:var(--white);font-weight:500;">separate from your main company domain</strong> — so a deliverability problem never touches your invoices or client email.</div>
+      </div>
+      <div style="border-top:1px solid var(--border);padding:24px 0;display:flex;gap:20px;flex-wrap:wrap;">
+        <div style="min-width:190px;font-weight:600;">SPF, DKIM, DMARC</div>
+        <div style="color:var(--grey-4);flex:1;min-width:260px;line-height:1.7;">Three DNS records your sending provider gives you. Without them most cold email goes to spam — this matters more than any other choice on this page.</div>
+      </div>
+      <div style="border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:24px 0;display:flex;gap:20px;flex-wrap:wrap;">
+        <div style="min-width:190px;font-weight:600;">An hour, once</div>
+        <div style="color:var(--grey-4);flex:1;min-width:260px;line-height:1.7;">No coding, but you'll run a command in a terminal and paste DNS records. That's the honest floor of self-hosting anything.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="about-inner" style="margin-bottom:8px;">
+      <div><h2 class="about-heading reveal">Where self-hosting <span style="color:var(--grey-4);font-weight:300;">is the wrong answer.</span></h2></div>
+      <div class="about-body reveal delay-2">
+        <p>If you're sending from dozens of mailboxes and need managed warm-up across all of them, a hosted platform does that better and it isn't close. If a team needs shared dashboards, permissions and reporting, you'll rebuild a worse version of what they already sell. And if you want support answering within minutes at 2am, that's what a subscription buys.</p>
+        <p>Self-hosting wins on a narrower profile: a founder, consultant or small business at moderate volume, who wants the cost to stop repeating and the prospect data to stay put. If that's not you, rent — it'll be the cheaper decision even at a higher price.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2 class="reveal">Outreach that runs<br/>on your own machine.</h2>
+    <p class="reveal delay-1">The Cold Outreach Machine finds the companies you sell to, writes a different email for each, and sends them on its own — with the writing running through a cloud provider or entirely locally, your choice. US$299.99, paid once, live setup call included.</p>
+    <div class="cta-actions reveal delay-2">
+      <a href="/marketplace/cold-outreach-machine/" class="btn-primary">See the machine
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="/cold-email-software-one-time-payment/" class="btn-ghost">Buy once vs subscribe</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="logo-mark"><img class="logo-img" src="https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg" alt="Kanaky Tech logo" /><span class="logo-text">Kanaky Tech</span></a>
+        <p>The Pacific's AI automation &amp; agent development studio. We build AI agents and automate business processes for SMEs, agencies and institutions across New Caledonia, New Zealand and the Pacific.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="/marketplace/cold-outreach-machine/">Cold Outreach Machine</a>
+        <a href="/cold-email-software-one-time-payment/">Buy once vs subscribe</a>
+        <a href="/self-hosted-cold-email/">Self-hosted cold email</a>
+        <a href="/marketplace/">Marketplace</a>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="/business-process-automation/">Business Process Automation</a>
+        <a href="/ai-agents-new-caledonia/">AI Agent Development</a>
+        <a href="/private-ai-systems/">Private AI Systems</a>
+        <a href="/ai-audit/">AI Opportunity Audit</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="/#about">About</a>
+        <a href="/case-studies/">Case Studies</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact/">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Kanaky Tech · Nouméa · Auckland · kanaky.xyz</span>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/company/kanaky-tech" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="https://github.com/kanakytech" target="_blank" rel="noopener" aria-label="GitHub"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg></a>
+        <a href="mailto:kevyn@kanaky.xyz" aria-label="Email"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></a>
+      </div>
+    </div>
+  </footer>
+  <script src="/assets/site.js"></script>
+</body>
+</html>
