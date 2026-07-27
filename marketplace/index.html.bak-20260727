@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cold Outreach Machine — the prospecting system we run on | Kanaky Tech</title>
-  <meta name="description" content="The Cold Outreach Machine: it finds your leads, writes a different email for every one, and sends them safely. Full source code, live setup call and 30 days of support — US$299.99, paid once." />
+  <title>Marketplace — Buy the Systems We Actually Run | Kanaky Tech</title>
+  <meta name="description" content="Buy the source code of real, production-tested systems built by Kanaky Tech: cold outreach machine, voice-to-quote for tradies, programmatic SEO engine, one-page business site kit. Full code, setup guide and handover — every system shown with a live demo." />
   <link rel="canonical" href="https://kanaky.xyz/marketplace/" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta property="og:type" content="website" />
@@ -19,7 +19,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/kanaky.css">
   <style>
-    .mk-grid { display: grid; grid-template-columns: 1fr; max-width: 720px; gap: 1px; background: var(--border); max-width: 1200px; margin: 0 auto; }
+    .mk-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); max-width: 1200px; margin: 0 auto; }
     .mk-card {
       background: var(--black); padding: 0 0 40px; display: flex; flex-direction: column;
       position: relative; overflow: hidden;
@@ -184,36 +184,79 @@
   <section class="section">
     <div class="answer-block reveal">
       <div class="ab-q">In short</div>
-      <p>Kanaky Tech sells one system: the Cold Outreach Machine. It finds companies matching your ideal customer profile, writes an individually researched email for each one, and sends them on a deliverability-safe schedule. Delivered as complete source code with a live setup call and 30 days of support, for US$299.99 paid once.</p>
+      <p>The Kanaky Tech Marketplace sells the source code of production-tested systems — a cold outreach machine, a voice-to-quote tool for trades, a programmatic SEO engine, a one-page site kit and a local directory platform — with setup guide and handover included. Two flagship platforms (the Kanak Languages Dictionary and Keou Studio) are shown as proof of work: live, public and verifiable.</p>
     </div>
   </section>
 
   <!-- FOR SALE -->
   <section class="section">
-    <div class="section-label wrap">For sale</div>
+    <div class="section-label wrap">For sale — source code</div>
     <div class="mk-grid">
 
       <div class="mk-card reveal">
         <a class="mk-preview fit" href="/marketplace/cold-outreach-machine/"><img src="/assets/products/cold-terminal.png" alt="Cold outreach pipeline running in a terminal" loading="lazy" /><span class="mk-preview-cta">See the product</span></a>
-        <span class="mk-status sale">For sale · Own the code</span>
+        <span class="mk-status sale">For sale · Code licence</span>
         <h3>Cold Outreach Machine</h3>
-        <p class="mk-desc">Hire a salesperson once, keep them forever. It finds companies that match your ideal customer, writes a different email for every single one, and sends them on a schedule that keeps you out of spam folders. This is the machine Kanaky Tech runs on: 130+ emails sent, zero repeated sentences, a CEO meeting booked within three days.</p>
+        <p class="mk-desc">The prospecting pipeline Kanaky Tech runs on: scrape and qualify leads, enrich them with verifiable facts, and generate personalised cold email drafts — draft-first by design, a human approves every send. Ships scrubbed: no lead data included.</p>
         <div class="mk-tech"><span>Playwright</span><span>n8n</span><span>Claude API</span><span>Node.js</span></div>
-        <p class="mk-includes"><b>Includes:</b> full source code · setup documentation · live setup call · 30 days of support</p>
+        <p class="mk-includes"><b>Includes:</b> full source code · setup guide · 1 handover call</p>
         <div class="mk-actions">
-          <a href="/marketplace/cold-outreach-machine/" class="btn-primary">See the product</a>
-          <a href="https://buy.stripe.com/8x2dR165vemv8FPfup6wE01" class="btn-primary" style="background:#C8F060;color:#0a0a0a;border-color:#C8F060">Buy — US$299.99</a>
-          <span class="mk-price">US$299.99 — paid once</span>
+          <a href="mailto:kevyn@kanaky.xyz?subject=Marketplace%20—%20Cold%20Outreach%20Machine" class="btn-primary">Get pricing</a>
+          <span class="mk-price">Price on request</span>
         </div>
       </div>
 
-      
+      <div class="mk-card reveal delay-1">
+        <a class="mk-preview fit" href="/marketplace/voice-to-quote/"><img src="/assets/products/voice-chat.png" alt="Voice note turned into a priced quote" loading="lazy" /><span class="mk-preview-cta">See the product</span></a>
+        <span class="mk-status sale">For sale · Code licence</span>
+        <h3>Voice-to-Quote for Trades</h3>
+        <p class="mk-desc">A tradie records a voice note on the drive back — the system turns it into a formatted, priced quote document in about a minute. Built for electricians, plumbers, HVAC and refrigeration techs who quote at night instead of living.</p>
+        <div class="mk-tech"><span>Speech-to-text</span><span>Claude API</span><span>PDF generation</span><span>Telegram bot</span></div>
+        <p class="mk-includes"><b>Includes:</b> full source code · setup guide · 1 handover call</p>
+        <div class="mk-actions">
+          <a href="mailto:kevyn@kanaky.xyz?subject=Marketplace%20—%20Voice-to-Quote" class="btn-primary">Get pricing</a>
+          <span class="mk-price">Price on request</span>
+        </div>
+      </div>
 
-      
+      <div class="mk-card reveal">
+        <a class="mk-preview" href="https://partir-serein.vercel.app" target="_blank" rel="noopener"><img src="/assets/products/seo-engine.png" alt="Content site built by the SEO engine" loading="lazy" /><span class="mk-preview-cta">View live example</span></a>
+        <span class="mk-status sale">For sale · Code licence</span>
+        <h3>Programmatic SEO Engine</h3>
+        <p class="mk-desc">Pick a niche, feed it structure — get a publishable content site: structured articles, internal linking, sitemap, analytics and an ad-ready layout. The engine behind a live 19-article French travel site built and deployed in days.</p>
+        <div class="mk-tech"><span>Next.js</span><span>Static generation</span><span>SEO schema</span><span>AdSense-ready</span></div>
+        <p class="mk-includes"><b>Includes:</b> full source code · setup guide · 1 handover call</p>
+        <div class="mk-actions">
+          <a href="mailto:kevyn@kanaky.xyz?subject=Marketplace%20—%20Programmatic%20SEO%20Engine" class="btn-primary">Get pricing</a>
+          <span class="mk-price">Price on request</span>
+        </div>
+      </div>
 
-      
+      <div class="mk-card reveal">
+        <a class="mk-preview" href="/marketplace/directory-platform/"><img src="/assets/products/directory-map.png" alt="Directory platform with search and interactive map" loading="lazy" /><span class="mk-preview-cta">See the product</span></a>
+        <span class="mk-status sale">For sale · Code licence</span>
+        <h3>Local Business Directory Platform</h3>
+        <p class="mk-desc">A complete directory website: data pipeline, search API, interactive map and detail pages for hundreds of local businesses. Ships with a fictional sample dataset and an adaptable scraper example — plug in your own data source and launch a niche directory.</p>
+        <div class="mk-tech"><span>Python pipeline</span><span>Node API</span><span>Leaflet map</span><span>Static front</span></div>
+        <p class="mk-includes"><b>Includes:</b> full source code · setup guide · 1 handover call</p>
+        <div class="mk-actions">
+          <a href="mailto:kevyn@kanaky.xyz?subject=Marketplace%20—%20Directory%20Platform" class="btn-primary">Get pricing</a>
+          <span class="mk-price">Price on request</span>
+        </div>
+      </div>
 
-      
+      <div class="mk-card reveal delay-1">
+        <a class="mk-preview" href="/marketplace/one-page-site-kit/"><img src="/assets/products/onepage-hero.png" alt="One-page business site hero section" loading="lazy" /><span class="mk-preview-cta">See the product</span></a>
+        <span class="mk-status sale">For sale · Code licence</span>
+        <h3>One-Page Business Site Kit</h3>
+        <p class="mk-desc">A conversion-focused one-page website kit for local service businesses — hero, services, reviews, booking CTA, mobile-first. Rebrand it, swap the photos, deploy in an afternoon. Built and proven on a real lawn-care business site.</p>
+        <div class="mk-tech"><span>Next.js</span><span>One-page</span><span>Mobile-first</span><span>Vercel</span></div>
+        <p class="mk-includes"><b>Includes:</b> full source code · setup guide · 1 handover call</p>
+        <div class="mk-actions">
+          <a href="mailto:kevyn@kanaky.xyz?subject=Marketplace%20—%20One-Page%20Site%20Kit" class="btn-primary">Get pricing</a>
+          <span class="mk-price">Price on request</span>
+        </div>
+      </div>
 
     </div>
   </section>
@@ -223,9 +266,29 @@
     <div class="section-label wrap">Proof of work — live platforms</div>
     <div class="mk-grid">
 
-      
+      <div class="mk-card reveal">
+        <a class="mk-preview" href="https://dictionnaire.kanaky.xyz" target="_blank" rel="noopener"><img src="/assets/products/dictionary.png" alt="Kanak languages dictionary platform" loading="lazy" /><span class="mk-preview-cta">Open the platform</span></a>
+        <span class="mk-status">Live platform · Not for sale</span>
+        <h3>Kanak Languages Dictionary</h3>
+        <p class="mk-desc">19,672 words across 9 Kanak languages — bidirectional search, native audio, offline PWA, learning games. A public-interest platform built to help preserve the languages of New Caledonia. The engine can be licensed as a code template for other language projects — it ships without the linguistic data.</p>
+        <div class="mk-tech"><span>React</span><span>PWA offline</span><span>19,672 entries</span><span>9 languages</span></div>
+        <p class="mk-includes"><b>Available:</b> dictionary engine as a code template (no data) — for language preservation projects</p>
+        <div class="mk-actions">
+          <a href="mailto:kevyn@kanaky.xyz?subject=Marketplace%20—%20Dictionary%20engine" class="btn-ghost">Ask about the engine</a>
+        </div>
+      </div>
 
-      
+      <div class="mk-card reveal delay-1">
+        <a class="mk-preview" href="https://studio.keou.systems" target="_blank" rel="noopener"><img src="/assets/products/keou-studio.png" alt="Keou Studio AI visual production platform" loading="lazy" /><span class="mk-preview-cta">Try the studio</span></a>
+        <span class="mk-status">Live platform · Licensed separately</span>
+        <h3>Keou Studio</h3>
+        <p class="mk-desc">AI visual production platform: 50 product visuals in ~20 minutes instead of ~25 hours. Deployed as a white-label platform for agencies. The community edition is free (bring your own keys); business licences are quoted privately — this one is a product, not a code sale.</p>
+        <div class="mk-tech"><span>Express.js</span><span>PostgreSQL</span><span>KIE.AI</span><span>White-label</span></div>
+        <p class="mk-includes"><b>Available:</b> white-label licences for agencies — see <a href="https://keou.systems" target="_blank" rel="noopener" style="color:var(--accent)">keou.systems</a></p>
+        <div class="mk-actions">
+          <a href="mailto:kevyn@kanaky.xyz?subject=Keou%20Studio%20licence" class="btn-ghost">Ask about licences</a>
+        </div>
+      </div>
 
     </div>
   </section>
