@@ -114,26 +114,43 @@
         ]
       },
       {
-        "@type": "OfferCatalog",
+        "@type": "ItemList",
         "@id": "https://kanaky.xyz/marketplace/#catalog",
-        "name": "Kanaky Tech Marketplace — production-tested systems, sold as source code",
+        "name": "Kanaky Tech Marketplace",
         "url": "https://kanaky.xyz/marketplace/",
-        "provider": { "@id": "https://kanaky.xyz/#organization" },
+        "numberOfItems": 1,
         "itemListElement": [
-          { "@type": "Offer", "availability": "https://schema.org/InStock", "itemOffered": { "@type": "Product", "name": "Cold Outreach Machine", "description": "Lead scraping, enrichment and AI-personalised cold email drafting pipeline. Draft-first by design — a human approves every send." } },
-          { "@type": "Offer", "availability": "https://schema.org/InStock", "itemOffered": { "@type": "Product", "name": "Voice-to-Quote for Trades", "description": "Turns a tradie's voice note into a formatted, priced quote document in about a minute." } },
-          { "@type": "Offer", "availability": "https://schema.org/InStock", "itemOffered": { "@type": "Product", "name": "Programmatic SEO Engine", "description": "Topic-to-published-site machine: structured articles, internal linking, sitemap, analytics and ad-ready layout." } },
-          { "@type": "Offer", "availability": "https://schema.org/InStock", "itemOffered": { "@type": "Product", "name": "One-Page Business Site Kit", "description": "Conversion-focused one-page website kit for local service businesses, ready to rebrand and deploy." } },
-          { "@type": "Offer", "availability": "https://schema.org/InStock", "itemOffered": { "@type": "Product", "name": "Local Business Directory Platform", "description": "Directory website with data pipeline, search API, interactive map and an adaptable scraper example." } }
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "Product",
+              "@id": "https://kanaky.xyz/marketplace/cold-outreach-machine/#product",
+              "name": "Cold Outreach Machine",
+              "image": ["https://kanaky.xyz/assets/og/cold-outreach-machine.png"],
+              "url": "https://kanaky.xyz/marketplace/cold-outreach-machine/",
+              "category": "Sales outreach software",
+              "description": "Finds companies matching the customer profile you describe, reads what each one publishes, writes a different email for every company, and sends them on its own — paced, inside working hours, capped daily to protect your sending domain. Delivered as complete source code with a guided installer, a named commercial licence, a live setup call and 30 days of support.",
+              "brand": { "@id": "https://kanaky.xyz/#organization" },
+              "offers": {
+                "@type": "Offer",
+                "price": "299.99",
+                "priceCurrency": "USD",
+                "availability": "https://schema.org/InStock",
+                "url": "https://kanaky.xyz/marketplace/cold-outreach-machine/",
+                "seller": { "@id": "https://kanaky.xyz/#organization" }
+              }
+            }
+          }
         ]
       },
       {
         "@type": "FAQPage",
         "mainEntity": [
-          {"@type":"Question","name":"What exactly do I get when I buy a system?","acceptedAnswer":{"@type":"Answer","text":"The full source code of the system, a setup guide, and a handover call to get it running in your environment. These are the same systems Kanaky Tech built and runs — not starter templates written for a marketplace."}},
-          {"@type":"Question","name":"Can Kanaky Tech customise a system for my business?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every system can be adapted, extended or fully operated for you. Customisation is scoped and quoted separately — start by telling us what you need at kevyn@kanaky.xyz."}},
-          {"@type":"Question","name":"Why are prices on request?","acceptedAnswer":{"@type":"Answer","text":"Pricing depends on the licence you need (single business use vs. agency use) and how much setup or customisation you want. Email kevyn@kanaky.xyz with the system name and your use case, and you will get a clear quote."}},
-          {"@type":"Question","name":"Are these systems really used in production?","acceptedAnswer":{"@type":"Answer","text":"Yes. Each listing links to a live demo or production deployment where one exists. The Kanak Languages Dictionary and Keou Studio are public and verifiable; the outreach, quoting and SEO systems are the internal machines Kanaky Tech runs for its own operations."}}
+          {"@type":"Question","name":"What exactly do I get when I buy?","acceptedAnswer":{"@type":"Answer","text":"The complete source code, a guided installer that asks for the keys it needs and tests each connection before continuing, setup documentation written for non-developers, a commercial licence registered to your name, one 60-minute live installation call, and 30 days of direct email support. Delivery is automatic: a personalised copy is built and emailed within seconds of purchase."}},
+          {"@type":"Question","name":"How much does it cost?","acceptedAnswer":{"@type":"Answer","text":"US$299.99, paid once. There is no subscription and no per-email fee from us. You do still pay for your own infrastructure: a sending domain of about US$12 a year, an email sending service, and — if you use a cloud AI provider for the writing — a few cents per email. Running the writing on a local model instead costs nothing per email."}},
+          {"@type":"Question","name":"Why is only one system listed?","acceptedAnswer":{"@type":"Answer","text":"Because supporting software properly takes real time, and a list of five systems one person cannot stand behind serves nobody. The marketplace was narrowed to the one system that is documented, installable by someone who is not a developer, and backed by a setup call and support."}},
+          {"@type":"Question","name":"Is it really used in production?","acceptedAnswer":{"@type":"Answer","text":"Yes — it is the machine Kanaky Tech runs its own outbound on, packaged for other businesses rather than written for a marketplace. Other public work is verifiable independently: the Kanak Languages Dictionary and Keou Studio are both live."}}
         ]
       }
     ]
@@ -261,15 +278,24 @@
         </div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">Why are prices on request?</button>
+        <button class="faq-q">How much does it cost?</button>
         <div class="faq-a"><div class="faq-a-inner">
-          <p>Pricing depends on the licence you need (single business use vs. agency use) and how much setup or customisation you want. Email the system name and your use case and you will get a clear quote.</p>
+          <p>US$299.99, paid once. No subscription, and no per-email fee from us.</p>
+          <p>You do still pay for your own infrastructure, and it's worth knowing before you buy: a sending domain at about $12 a year, an email sending service, and — if you use a cloud AI provider for the writing — a few cents per email. Running the writing on a local model instead costs nothing per email and keeps your prospect data on your own machine.</p>
         </div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">Are these systems really used in production?</button>
+        <button class="faq-q">Why is only one system listed?</button>
         <div class="faq-a"><div class="faq-a-inner">
-          <p>Yes. Each listing links to a live demo or production deployment where one exists. The Kanak Languages Dictionary and Keou Studio are public and verifiable; the outreach, quoting and SEO systems are the internal machines Kanaky Tech runs for its own operations.</p>
+          <p>Because supporting software properly takes real time, and a list of five systems one person can't stand behind serves nobody.</p>
+          <p>This is the one that is documented, installable by someone who isn't a developer, and backed by a setup call and thirty days of support. The others were pulled rather than left up as listings nobody was maintaining.</p>
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Is it really used in production?</button>
+        <div class="faq-a"><div class="faq-a-inner">
+          <p>Yes — it's the machine Kanaky Tech runs its own outbound on, packaged for other businesses rather than written for a marketplace.</p>
+          <p>Other public work is verifiable independently: the <a href="https://dictionnaire.kanaky.xyz" target="_blank" rel="noopener">Kanak Languages Dictionary</a> and <a href="https://keou.systems" target="_blank" rel="noopener">Keou Studio</a> are both live.</p>
         </div></div>
       </div>
     </div>
