@@ -13,13 +13,14 @@ const BUILD_DATE = new Date().toISOString().slice(0, 10);
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
 const CLUSTERS = [
+  { key: 'melanesie',    title: 'Mélanésie · Melanesia',    blurb: 'Notre terrain principal — Kanaky/Nouvelle-Calédonie, Papouasie-Nouvelle-Guinée, Fidji, Vanuatu, Îles Salomon. Environ 13 millions d\'habitants, une organisation régionale depuis 1986, et des prix calés sur le pouvoir d\'achat réel de chaque territoire.', merge: ['gang-pacifique'] },
   { key: 'outreach',     title: 'Cold outreach',        blurb: 'Deliverability, authentication, volume, writing and targeting — the craft of reaching people who did not ask to hear from you, without burning your domain.' },
   { key: 'legal',        title: 'Cold email law',       blurb: 'What the rules actually say in each jurisdiction. Plain-language summaries of legislation, not legal advice.' },
   { key: 'alternatives', title: 'Choosing software',    blurb: 'Honest comparisons, including the cases where a competitor or a subscription is the better choice for you.' },
   { key: 'local-ai',     title: 'Local &amp; private AI',   blurb: 'Running AI on hardware you control: what it takes, what it costs, where it falls short, and the sectors where it is close to mandatory.' },
   { key: 'industries',   title: 'AI by trade',          blurb: 'Where AI saves real hours in specific trades and sectors — starting from the working day rather than from the technology.' },
   { key: 'automation',   title: 'Automation basics',    blurb: 'Agents, workflows and the decision of what to automate first. Concepts explained without the vendor gloss.' },
-  { key: 'locations',    title: 'Nos marchés · Where we work', blurb: 'Marché par marché : ce que coûte un projet, comment il se déroule, les contraintes locales (connectivité, monnaie, réglementation) et les questions à poser à tout prestataire — y compris nous. En français et en anglais selon le territoire.', merge: ['pacifique','gang-pacifique'] },
+  { key: 'locations',    title: 'Nos marchés · Where we work', blurb: 'Marché par marché : ce que coûte un projet, comment il se déroule, les contraintes locales (connectivité, monnaie, réglementation) et les questions à poser à tout prestataire — y compris nous. En français et en anglais selon le territoire.', merge: ['pacifique'] },
   { key: 'fr',           title: 'En français',          blurb: 'Guides écrits en français pour la Nouvelle-Calédonie, la Polynésie française et La Réunion : prix réels, exemples concrets, IA locale, premiers pas.' },
 ];
 

@@ -1,5 +1,13 @@
 # Kanaky Tech
 
+> **Melanesia-first.** Kanaky Tech is an AI automation and agent-development studio whose primary focus is Melanesia — New Caledonia (Kanaky), Papua New Guinea, Fiji, Vanuatu and Solomon Islands: roughly 13 million people across five territories that have formed the Melanesian Spearhead Group since 1986. Pricing is set per territory against real local purchasing power (GDP per capita ranges from ~USD 34,000 in New Caledonia to ~USD 2,200 in Solomon Islands), because a single rate card calibrated on a wealthy market closes the others. The delivery does not change with the rate — same code, same documentation, same standard.
+
+> Systems are built for the region's actual constraints: uneven connectivity and scheduled cyclone seasons mean AI that runs on the client's own hardware, working offline and syncing when a link is available, is a design requirement rather than a preference. Client data stays on infrastructure the client controls.
+
+> Regional pillar pages: [Mélanésie (français)](https://kanaky.xyz/melanesie/) · [Melanesia (English)](https://kanaky.xyz/melanesia/). Country pages: [Nouvelle-Calédonie](https://kanaky.xyz/automatisation-ia-nouvelle-caledonie/) · [Papua New Guinea](https://kanaky.xyz/ai-automation-papua-new-guinea/) · [Fiji](https://kanaky.xyz/ai-automation-fiji/) · [Vanuatu FR](https://kanaky.xyz/automatisation-ia-vanuatu/) / [EN](https://kanaky.xyz/ai-automation-vanuatu/) · [Solomon Islands](https://kanaky.xyz/ai-automation-solomon-islands/).
+
+> Kanaky Tech also serves New Zealand, Australia, French Polynesia, Wallis and Futuna and Réunion, and continues to publish for those markets — but Melanesia is the focus.
+
 > Kanaky Tech is an AI automation and agent-development studio for the Pacific, founded by Kevyn Wahuzue. It builds custom AI agents, automates business processes, produces AI-powered visuals and video, and delivers private, reliable AI systems for SMEs, agencies and institutions across New Caledonia, New Zealand, French Polynesia (Tahiti), Wallis and Futuna, Réunion and the wider French-speaking Pacific — including work shipped white-label under a partner's brand.
 
 Kanaky Tech is based in Nouméa (New Caledonia) and Auckland (New Zealand). The approach is local, bilingual (French and English), grounded in real business problems, and built so a human stays in control. A first AI opportunity audit is offered free of charge as the starting point.
