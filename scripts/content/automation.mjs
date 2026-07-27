@@ -8,6 +8,7 @@ export default [
 
 {
   slug: 'what-is-an-ai-agent',
+  alt: { lang: 'fr', url: 'https://kanaky.xyz/qu-est-ce-qu-un-agent-ia/' },
   title: 'What Is an AI Agent? A Plain Explanation With Real Examples',
   description: 'What distinguishes an AI agent from a chatbot or an automation: tools, decisions and loops. Real examples, where agents genuinely help, and where they fail in ways worth knowing about first.',
   keywords: 'what is an AI agent, AI agent explained, AI agents vs chatbots, autonomous AI business',
@@ -127,6 +128,7 @@ export default [
 
 {
   slug: 'workflow-automation-examples',
+  alt: { lang: 'fr', url: 'https://kanaky.xyz/exemples-automatisation-pme/' },
   title: 'Workflow Automation Examples — Real Processes, Not Demos',
   description: 'Concrete workflow automations small businesses actually run: quote generation, enquiry triage, invoice chasing, reporting and document processing, with what each realistically saves.',
   keywords: 'workflow automation examples, business process automation examples, automate business tasks, automation use cases',
@@ -174,6 +176,7 @@ export default [
 
 {
   slug: 'ai-vs-hiring',
+  alt: { lang: 'fr', url: 'https://kanaky.xyz/automatiser-ou-embaucher/' },
   title: 'AI or Hire Someone? An Honest Comparison for Small Businesses',
   description: 'When automation is the right answer and when a person is: cost, ramp-up, judgement, flexibility and the failure modes of each — plus the sequence that usually works best.',
   keywords: 'AI vs hiring, automate or hire, small business hiring decision, AI instead of employee',
@@ -239,6 +242,7 @@ export default [
 
 {
   slug: 'how-to-start-with-ai',
+  alt: { lang: 'fr', url: 'https://kanaky.xyz/commencer-avec-ia-entreprise/' },
   title: 'How to Start With AI in Your Business — A Sequence That Works',
   description: 'A realistic order for adopting AI: what to do in the first week, the first month and the first quarter, what to ignore, and how to avoid the pilot that never becomes anything.',
   keywords: 'how to start with AI, AI adoption small business, first AI project, AI implementation steps',

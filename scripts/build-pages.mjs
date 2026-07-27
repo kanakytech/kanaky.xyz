@@ -168,12 +168,30 @@ const CTA = {
     a: ['/private-ai-systems/', 'Private AI systems'],
     b: ['/ai-audit/', 'Book a free audit'],
   },
+  'service-fr': {
+    h: 'Découvrez ce que l’IA<br/>peut faire pour vous.',
+    p: 'Kanaky Tech est une agence d’automatisation IA du Pacifique — Nouméa et Auckland. Premier pas : un audit gratuit de vos opportunités IA. On regarde comment votre entreprise tourne réellement, on classe ce qui vaut la peine d’être automatisé, et vous repartez avec les conclusions — sans engagement.',
+    a: ['/contact/', 'Écrivez-nous'],
+    b: ['/automatisation-ia-nouvelle-caledonie/', 'Notre agence'],
+  },
+};
+
+const UI = {
+  en: { faq: 'Common questions', keep: 'Keep reading' },
+  fr: { faq: 'Questions fréquentes', keep: 'À lire ensuite' },
 };
 
 function render(p) {
   const url = `https://kanaky.xyz/${p.slug}/`;
   const cta = CTA[p.cta || 'service'];
   const faq = p.faq || [];
+  const ui = UI[p.lang === 'fr' ? 'fr' : 'en'];
+  // p.alt = { lang, url } — version de cette page dans l'autre langue.
+  // x-default = la version anglaise, par convention du site.
+  const hreflang = p.alt ? `
+  <link rel="alternate" hreflang="${p.lang === 'fr' ? 'fr' : 'en'}" href="${url}" />
+  <link rel="alternate" hreflang="${p.alt.lang}" href="${p.alt.url}" />
+  <link rel="alternate" hreflang="x-default" href="${p.alt.lang === 'en' ? p.alt.url : url}" />` : '';
 
   const graph = [
     {
@@ -206,6 +224,7 @@ function render(p) {
         { '@type': 'ListItem', position: 3, name: p.short || p.title, item: url },
       ],
     },
+    ...(p.extraGraph || []),
   ];
 
   const related = (p.related || []).map((r) =>
@@ -220,7 +239,7 @@ function render(p) {
   <title>${esc(p.title)}</title>
   <meta name="description" content="${esc(p.description)}" />
   ${p.keywords ? `<meta name="keywords" content="${esc(p.keywords)}" />` : ''}
-  <link rel="canonical" href="${url}" />
+  <link rel="canonical" href="${url}" />${hreflang}
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="${esc(p.ogTitle || p.title)}" />
@@ -253,14 +272,14 @@ ${nav}
     <div class="reveal delay-1" style="color:var(--grey-4);font-size:1.06rem;line-height:1.85;">
 ${p.body.map(block).map((s) => '      ' + s).join('\n')}
 ${faq.length ? `
-      <h2 style="color:var(--white);font-size:1.55rem;font-weight:600;letter-spacing:-0.025em;margin:56px 0 8px;">Common questions</h2>
+      <h2 style="color:var(--white);font-size:1.55rem;font-weight:600;letter-spacing:-0.025em;margin:56px 0 8px;">${ui.faq}</h2>
 ${faq.map((f, i) => `      <div style="border-top:1px solid var(--border);${i === faq.length - 1 ? 'border-bottom:1px solid var(--border);' : ''}padding:24px 0;">
         <h3 style="font-size:1.03rem;font-weight:600;margin:0 0 10px;color:var(--white);">${esc(f.q)}</h3>
         <p style="margin:0;line-height:1.78;">${inline(f.a)}</p>
       </div>`).join('\n')}` : ''}
 ${related ? `
       <div style="border-top:1px solid var(--border);margin-top:52px;padding-top:30px;">
-        <div style="color:var(--grey-3);font-size:0.8rem;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:18px;">Keep reading</div>
+        <div style="color:var(--grey-3);font-size:0.8rem;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:18px;">${ui.keep}</div>
         ${related}
       </div>` : ''}
     </div>
@@ -284,7 +303,7 @@ ${footer}
 }
 
 /* ── build ── */
-const modules = ['outreach', 'legal', 'alternatives', 'local-ai', 'industries', 'automation', 'locations'];
+const modules = ['outreach', 'legal', 'alternatives', 'local-ai', 'industries', 'automation', 'locations', 'fr'];
 let pages = [];
 for (const m of modules) {
   const f = path.join(HERE, 'content', `${m}.mjs`);

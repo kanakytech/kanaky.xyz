@@ -69,6 +69,19 @@ Kanaky Tech is based in Nouméa (New Caledonia) and Auckland (New Zealand). The 
 
 - **Automation fundamentals** — [what is an AI agent](https://kanaky.xyz/what-is-an-ai-agent/) · [AI automation for small business](https://kanaky.xyz/ai-automation-small-business/) · [workflow automation examples](https://kanaky.xyz/workflow-automation-examples/) · [automate or hire?](https://kanaky.xyz/ai-vs-hiring/) · [how to start with AI](https://kanaky.xyz/how-to-start-with-ai/)
 
+## Guides en français
+
+Pour la Nouvelle-Calédonie, la Polynésie française et La Réunion — écrits en français, avec les monnaies et réalités locales (XPF, EUR, connectivité du Pacifique) :
+
+- [Combien coûte l'automatisation IA pour une TPE/PME](https://kanaky.xyz/combien-coute-automatisation-ia/) — fourchettes réelles en euros et XPF, coûts cachés, cas où ça ne vaut pas la dépense
+- [10 exemples d'automatisation pour TPE et PME](https://kanaky.xyz/exemples-automatisation-pme/) — devis dicté, relances d'impayés, rappels d'entretien, avec ce que chacune rapporte
+- [Par où commencer avec l'IA](https://kanaky.xyz/commencer-avec-ia-entreprise/) — la séquence semaine 1 / mois 1 / trimestre 1
+- [L'IA en local : vos données ne quittent pas l'entreprise](https://kanaky.xyz/ia-locale-entreprise/) — matériel, coûts, limites honnêtes, et la dimension souveraineté propre au Pacifique
+- [Automatiser ou embaucher ?](https://kanaky.xyz/automatiser-ou-embaucher/) — le comparatif et la séquence qui marche
+- [Qu'est-ce qu'un agent IA ?](https://kanaky.xyz/qu-est-ce-qu-un-agent-ia/) — chatbot vs automatisation vs agent, sans le vernis marketing
+
+Pages agence par marché francophone : [Nouvelle-Calédonie](https://kanaky.xyz/automatisation-ia-nouvelle-caledonie/) · [Tahiti / Polynésie française](https://kanaky.xyz/automatisation-ia-tahiti/) · [La Réunion (974)](https://kanaky.xyz/automatisation-ia-la-reunion/) · [Wallis-et-Futuna](https://kanaky.xyz/automatisation-ia-wallis-et-futuna/). Marchés anglophones : [New Zealand](https://kanaky.xyz/ai-automation-new-zealand/) · [Auckland](https://kanaky.xyz/ai-automation-agency-auckland/) · [Australia](https://kanaky.xyz/ai-automation-australia/).
+
 ## Our position on where AI is going
 
 [The future of AI is local and personal](https://kanaky.xyz/blog/future-of-ai-is-local-and-personal/) sets out what Kanaky Tech believes and why: that today's centralised arrangement — a handful of enormous models in a handful of buildings, none of which know who you are — is a transitional stage rather than an end state.

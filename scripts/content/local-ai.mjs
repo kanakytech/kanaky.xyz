@@ -9,6 +9,7 @@ export default [
 
 {
   slug: 'run-ai-locally-business',
+  alt: { lang: 'fr', url: 'https://kanaky.xyz/ia-locale-entreprise/' },
   title: 'How to Run AI Locally in Your Business — A Practical Guide',
   description: 'What it takes to run AI on your own hardware: which tasks work well locally, what you need, where local models genuinely fall short, and how to decide what stays in-house.',
   keywords: 'run AI locally, local AI business, on-premise AI, self-hosted LLM, private AI setup',

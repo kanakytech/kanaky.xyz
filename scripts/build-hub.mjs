@@ -20,6 +20,7 @@ const CLUSTERS = [
   { key: 'industries',   title: 'AI by trade',          blurb: 'Where AI saves real hours in specific trades and sectors — starting from the working day rather than from the technology.' },
   { key: 'automation',   title: 'Automation basics',    blurb: 'Agents, workflows and the decision of what to automate first. Concepts explained without the vendor gloss.' },
   { key: 'locations',    title: 'Where we work',        blurb: 'What an engagement looks like in a given market — what it costs, how it runs, and the questions worth asking any agency before you sign.' },
+  { key: 'fr',           title: 'En français',          blurb: 'Guides écrits en français pour la Nouvelle-Calédonie, la Polynésie française et La Réunion : prix réels, exemples concrets, IA locale, premiers pas.' },
 ];
 
 let all = [];
