@@ -128,6 +128,8 @@ const footer = `  <footer>
         <a href="/automatisation-ia-nouvelle-caledonie/">Agence IA · Nouvelle-Calédonie</a>
         <a href="/automatisation-ia-tahiti/">Agence IA · Tahiti</a>
         <a href="/automatisation-ia-la-reunion/">Agence IA · La Réunion</a>
+        <a href="/automatisation-ia-vanuatu/">Vanuatu · Port-Vila</a>
+        <a href="/ai-automation-fiji/">Fiji · Suva &amp; Nadi</a>
       </div>
       <div class="footer-col">
         <h4>Company</h4>
@@ -303,7 +305,7 @@ ${footer}
 }
 
 /* ── build ── */
-const modules = ['outreach', 'legal', 'alternatives', 'local-ai', 'industries', 'automation', 'locations', 'fr', 'pacifique'];
+const modules = ['outreach', 'legal', 'alternatives', 'local-ai', 'industries', 'automation', 'locations', 'fr', 'pacifique', 'gang-pacifique'];
 let pages = [];
 for (const m of modules) {
   const f = path.join(HERE, 'content', `${m}.mjs`);

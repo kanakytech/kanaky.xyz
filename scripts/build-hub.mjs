@@ -22,6 +22,7 @@ const CLUSTERS = [
   { key: 'locations',    title: 'Where we work',        blurb: 'What an engagement looks like in a given market — what it costs, how it runs, and the questions worth asking any agency before you sign.' },
   { key: 'fr',           title: 'En français',          blurb: 'Guides écrits en français pour la Nouvelle-Calédonie, la Polynésie française et La Réunion : prix réels, exemples concrets, IA locale, premiers pas.' },
   { key: 'pacifique',    title: 'Marchés du Pacifique', blurb: 'Prix en XPF, aides locales, contraintes de connectivité et concurrence réelle — marché par marché : Nouvelle-Calédonie, Polynésie française, Wallis-et-Futuna.' },
+  { key: 'gang-pacifique', title: 'Vanuatu &amp; Fidji',   blurb: 'Les marchés voisins que personne ne dessert sérieusement — Port-Vila en français et en anglais, Suva et Nadi. Connectivité, prix, et où un prestataire local vous servirait mieux.' },
 ];
 
 let all = [];
