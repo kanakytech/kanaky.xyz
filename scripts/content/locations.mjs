@@ -100,14 +100,14 @@ export default [
     { h: 'Why local matters here, and where it does not' },
     'Being in Auckland means same timezone, ability to sit in your office, and understanding the market — that a Kiwi tradie quotes differently from an American contractor, and that "she\'ll be right" is not a documentation strategy when a compliance auditor arrives.',
     'Where it matters less: the technical work itself is location-independent, and any agency claiming that local presence is essential for building software is overselling proximity. What local genuinely buys you is faster feedback, easier trust, and someone accountable in the same jurisdiction if something goes wrong.',
-    { note: 'We work from Auckland and Nouméa, across New Zealand and the wider Pacific — including [New Caledonia](/ai-automation-new-caledonia/), Tahiti, Wallis and Futuna and Réunion, in French where that is the working language.' },
+    { note: 'We work from Auckland and Nouméa, across New Zealand and the wider Pacific — including [Kanaky (New Caledonia)](/ai-automation-new-caledonia/), Tahiti, Wallis and Futuna and Réunion, in French where that is the working language.' },
   ],
   faq: [
     { q: 'What does an AI automation agency in Auckland actually do?', a: 'It identifies the repetitive, rule-based work consuming your team\'s hours and builds systems that handle it — quoting, enquiry response, document processing, reporting, scheduling, follow-up. The work is part consulting (finding where the hours go) and part building (making the system and connecting it to what you already use).' },
     { q: 'How much does AI automation cost in New Zealand?', a: 'A single automated workflow typically lands in the low four figures; a custom AI agent connected to your systems, mid four figures. The audit is free. If your need is outbound prospecting specifically, software you buy once from US$299.99 and run yourself is usually the better value than an agency engagement.' },
     { q: 'How long does a first project take?', a: 'A well-scoped single workflow is usually days to a few weeks. The timeline is driven by how many existing systems it has to connect to, not by the AI part — integration is consistently the underestimated half.' },
     { q: 'Do you work with small businesses or only larger companies?', a: 'Mostly small businesses and sole operators, which is where the admin burden falls hardest because there is no support staff absorbing it. The economics often work better at small scale: one workflow returning ten hours a month is material to a two-person business in a way it is not to a large one.' },
-    { q: 'Do you only work in Auckland?', a: 'Auckland and across New Zealand, plus New Caledonia and the wider Pacific. Most work happens remotely regardless of location; being in Auckland means we can sit in your office when that is genuinely more useful than a call.' },
+    { q: 'Do you only work in Auckland?', a: 'Auckland and across New Zealand, plus Kanaky (New Caledonia) and the wider Pacific. Most work happens remotely regardless of location; being in Auckland means we can sit in your office when that is genuinely more useful than a call.' },
   ],
   related: [
     ['/ai-automation-new-zealand/', 'AI automation across New Zealand'],

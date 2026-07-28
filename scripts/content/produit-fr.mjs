@@ -2,7 +2,7 @@
  *
  * Constat du 28/07 au soir : le seul produit vendable de Kanaky Tech
  * n'existait qu'en anglais, alors que trois des cinq marchés
- * mélanésiens sont francophones et que la Nouvelle-Calédonie est le
+ * mélanésiens sont francophones et que la Kanaky (Nouvelle-Calédonie) est le
  * marché le plus solvable de la région.
  *
  * Un patron calédonien qui lisait /prix-automatisation-ia-nouvelle-
@@ -135,13 +135,13 @@ export default [
     { q: 'Combien ça coûte vraiment, tout compris ?', a: 'Environ 36 000 F CFP une fois pour le logiciel, plus 1 400 F par an de domaine d’envoi, un service d’envoi d’e-mails, et quelques francs par message si vous utilisez un fournisseur IA — ou rien par message si l’IA tourne sur votre machine. Comptez quelques milliers de francs par mois d’infrastructure selon votre volume.' },
     { q: 'Est-ce légal de prospecter par e-mail ?', a: 'Oui en business-to-business, sous conditions qui varient selon le pays du destinataire. Deux obligations sont quasi universelles : vous identifier réellement, et cesser immédiatement si on vous le demande. La machine applique les règles techniques, mais la responsabilité juridique reste la vôtre — nos guides détaillent les règles en Nouvelle-Zélande, Australie, États-Unis, Europe et Royaume-Uni.' },
     { q: 'Puis-je le revendre ou le proposer à mes clients ?', a: 'Non. La licence vous donne le droit perpétuel de l’utiliser et de le modifier au sein d’une seule entité, et interdit la revente, la sous-licence, la publication du code et son exploitation comme service pour des tiers.' },
-    { q: 'Ça marche pour un marché local comme la Nouvelle-Calédonie ?', a: 'C’est même là que ça fonctionne le mieux. Les grandes bases de données de prospection couvrent mal les marchés locaux et insulaires : la machine, elle, va chercher les entreprises sur leurs propres sites, au moment où vous lancez la recherche. Les données sont fraîches et le tissu local est correctement couvert.' },
+    { q: 'Ça marche pour un marché local comme la Kanaky (Nouvelle-Calédonie) ?', a: 'C’est même là que ça fonctionne le mieux. Les grandes bases de données de prospection couvrent mal les marchés locaux et insulaires : la machine, elle, va chercher les entreprises sur leurs propres sites, au moment où vous lancez la recherche. Les données sont fraîches et le tissu local est correctement couvert.' },
   ],
   related: [
     ['/marketplace/cold-outreach-machine/', 'This page in English'],
     ['/combien-coute-automatisation-ia/', 'Combien coûte l’automatisation IA'],
     ['/ia-locale-entreprise/', 'Faire tourner l’IA en local'],
-    ['/prix-automatisation-ia-nouvelle-caledonie/', 'Nos tarifs en Nouvelle-Calédonie'],
+    ['/prix-automatisation-ia-nouvelle-caledonie/', 'Nos tarifs en Kanaky (Nouvelle-Calédonie)'],
   ],
 },
 

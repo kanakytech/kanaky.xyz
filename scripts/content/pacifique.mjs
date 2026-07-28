@@ -22,13 +22,13 @@ export default [
   title: 'Prix de l’automatisation IA en Nouvelle-Calédonie — fourchettes réelles en XPF',
   description: 'Ce que coûte réellement l’automatisation IA pour une entreprise calédonienne : fourchettes en XPF, ce qui fait varier le devis, les coûts qui restent, et les cas où il ne faut pas dépenser.',
   keywords: 'prix automatisation IA Nouvelle-Calédonie, coût IA entreprise Nouméa, tarif agence IA NC, automatisation XPF, devis IA Nouvelle-Calédonie',
-  eyebrow: 'Nouvelle-Calédonie',
-  short: 'Prix en Nouvelle-Calédonie',
-  h1: 'Combien coûte l’automatisation IA <span style="color:var(--grey-4);font-weight:300;">en Nouvelle-Calédonie ?</span>',
+  eyebrow: 'Kanaky (Nouvelle-Calédonie)',
+  short: 'Prix en Kanaky (Nouvelle-Calédonie)',
+  h1: 'Combien coûte l’automatisation IA <span style="color:var(--grey-4);font-weight:300;">en Kanaky (Nouvelle-Calédonie) ?</span>',
   cta: 'service-fr',
   body: [
     { lead: 'La plupart des prestataires calédoniens répondent « ça dépend, dites-nous votre budget ». Voici l’inverse : des fourchettes en francs Pacifique, ce qui les fait bouger, et les situations où la réponse honnête est de ne rien dépenser.' },
-    { h: 'Nos tarifs reprise — Nouvelle-Calédonie' },
+    { h: 'Nos tarifs reprise — Kanaky (Nouvelle-Calédonie)' },
     'Deux ans après mai 2024, l’économie calédonienne redresse la tête sans être sortie d’affaire : l’IEOM note un climat des affaires revenu près de sa moyenne et des embauches qui repartent, mais **l’investissement reste en recul** et beaucoup d’entreprises encaissent encore. Le nickel remonte, le tourisme aussi, et la trésorerie de la plupart des TPE, non.',
     '**Nous appliquons donc une grille réduite au pays, pas nos tarifs pleins.** Kanaky Tech est une entreprise calédonienne : facturer ici comme à Auckland pendant que le tissu local se relève n’aurait aucun sens.',
     { table: {
@@ -69,13 +69,13 @@ export default [
     { note: 'Le calcul qui compte n’est pas le prix, c’est **le prix par heure récupérée**. Un workflow à 250 000 F qui rend dix heures par mois est remboursé en quelques mois puis rapporte. Exigez de tout prestataire — nous compris — une estimation d’heures récupérées **avant** de signer. Qui ne peut pas la donner n’a pas regardé votre entreprise.' },
   ],
   faq: [
-    { q: 'Quel budget pour démarrer en Nouvelle-Calédonie ?', a: 'Au tarif reprise : 80 000 à 250 000 F CFP pour un premier workflow bien choisi, précédé d’un audit gratuit. C’est une grille réduite que nous appliquons au pays depuis la crise, parce que nous sommes une entreprise calédonienne et que l’investissement des TPE n’est pas revenu. Commencer par un seul processus limite le risque : si le résultat ne se mesure pas au bout d’un mois, vous le savez avant d’avoir engagé davantage.' },
+    { q: 'Quel budget pour démarrer en Kanaky (Nouvelle-Calédonie) ?', a: 'Au tarif reprise : 80 000 à 250 000 F CFP pour un premier workflow bien choisi, précédé d’un audit gratuit. C’est une grille réduite que nous appliquons au pays depuis la crise, parce que nous sommes une entreprise calédonienne et que l’investissement des TPE n’est pas revenu. Commencer par un seul processus limite le risque : si le résultat ne se mesure pas au bout d’un mois, vous le savez avant d’avoir engagé davantage.' },
     { q: 'Existe-t-il des aides pour financer un projet IA en NC ?', a: 'Des dispositifs d’accompagnement à la transformation numérique existent, portés notamment par la Province Sud et les organismes consulaires, mais leurs conditions et enveloppes évoluent. Le réflexe utile : contacter la CCI-NC avec votre devis en main avant d’engager la dépense, plutôt qu’après.' },
     { q: 'Pourquoi de tels écarts entre prestataires calédoniens ?', a: 'Parce que le mot « automatisation » recouvre des choses très différentes : un chatbot posé sur un site n’a rien à voir avec un agent connecté à votre facturation. À devis comparable, comparez le périmètre — combien de logiciels connectés, qui maintient, qui possède le code — plutôt que le chiffre en bas de page.' },
     { q: 'Faut-il un prestataire local ou métropolitain ?', a: 'Le travail technique se livre à distance dans les deux cas. Ce que le local apporte réellement : le même fuseau horaire quand un système tombe, la connaissance du terrain, et quelqu’un de joignable et responsable dans la même juridiction. Sur un projet simple, ces avantages comptent peu ; sur un système dont dépend votre exploitation, ils comptent beaucoup.' },
   ],
   related: [
-    ['/automatisation-ia-nouvelle-caledonie/', 'Notre agence en Nouvelle-Calédonie'],
+    ['/automatisation-ia-nouvelle-caledonie/', 'Notre agence en Kanaky (Nouvelle-Calédonie)'],
     ['/exemples-automatisation-pme/', '10 exemples d’automatisation'],
     ['/ia-locale-entreprise/', 'L’IA en local'],
   ],
@@ -166,7 +166,7 @@ export default [
     { h: 'Ce qui s’automatise utilement ici' },
     { list: [
       '**La gestion administrative** : courriers, dossiers, formulaires, comptes rendus — le gisement le plus sûr partout, et ici il ne dépend pas de la liaison si le système est local.',
-      '**Le lien avec l’extérieur** : correspondance avec les administrations, les fournisseurs et les partenaires basés en métropole ou en Nouvelle-Calédonie, avec un décalage horaire important.',
+      '**Le lien avec l’extérieur** : correspondance avec les administrations, les fournisseurs et les partenaires basés en métropole ou en Kanaky (Nouvelle-Calédonie), avec un décalage horaire important.',
       '**La traduction et la mise en forme** de documents bilingues.',
       '**Le suivi et les relances** commerciales ou administratives, qui se perdent facilement quand une seule personne porte tout.',
       '**L’archivage intelligent** : retrouver un document dans son propre historique en quelques secondes plutôt qu’en une après-midi.',
@@ -184,7 +184,7 @@ export default [
         ['Accompagnement mensuel', '12 000 – 60 000 F/mois'],
       ],
     }},
-    'Le travail se livre à distance, donc les fourchettes sont les mêmes qu’en Nouvelle-Calédonie. Ce qui change : la pertinence d’une installation locale, et l’absence quasi totale de concurrence sur le Territoire — ce qui veut aussi dire que vous devez être exigeant sur ce qu’on vous vend, faute de pouvoir comparer facilement.',
+    'Le travail se livre à distance, donc les fourchettes sont les mêmes qu’en Kanaky (Nouvelle-Calédonie). Ce qui change : la pertinence d’une installation locale, et l’absence quasi totale de concurrence sur le Territoire — ce qui veut aussi dire que vous devez être exigeant sur ce qu’on vous vend, faute de pouvoir comparer facilement.',
     { note: '**Le conseil le plus utile, même si vous ne faites jamais appel à nous :** avant tout projet, observez une semaine où partent vos heures. Ici plus qu’ailleurs, où les équipes sont petites et où chacun fait plusieurs métiers, c’est la seule façon de savoir ce qui mérite d’être automatisé. [La méthode est ici](/commencer-avec-ia-entreprise/), et elle est gratuite.' },
   ],
   faq: [

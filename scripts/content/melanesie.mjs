@@ -1,7 +1,7 @@
 /* MÉLANÉSIE — le repositionnement du 28/07.
  *
  * Décision de Kevyn : le focus principal devient la Mélanésie —
- * Kanaky/Nouvelle-Calédonie, Fidji, Vanuatu, Îles Salomon,
+ * Kanaky/Kanaky (Nouvelle-Calédonie), Fidji, Vanuatu, Îles Salomon,
  * Papouasie-Nouvelle-Guinée. Les autres marchés (NZ, AU, Réunion,
  * Tahiti) restent en ligne pour le référencement et la couverture,
  * mais ne sont plus le cœur.
@@ -9,7 +9,7 @@
  * Le cadre n'est pas une invention marketing : le Melanesian Spearhead
  * Group (MSG, fondé 1986, secrétariat à Port-Vila) réunit exactement
  * ces cinq membres — PNG, Fidji, Vanuatu, Îles Salomon et la
- * Nouvelle-Calédonie représentée par le FLNKS. ~13 millions
+ * Kanaky (Nouvelle-Calédonie) représentée par le FLNKS. ~13 millions
  * d'habitants.
  *
  * Ton : factuel et respectueux. On décrit une organisation régionale
@@ -57,7 +57,7 @@ export default [
 
     { map: true },
     { h: 'Une région, pas une collection de marchés lointains' },
-    'Le **Melanesian Spearhead Group** réunit depuis 1986 la Papouasie-Nouvelle-Guinée, les Fidji, le Vanuatu, les Îles Salomon et la Nouvelle-Calédonie — représentée par le FLNKS. Son secrétariat siège à Port-Vila. C’est un cadre institutionnel réel, avec des accords commerciaux, pas une catégorie géographique commode.',
+    'Le **Melanesian Spearhead Group** réunit depuis 1986 la Papouasie-Nouvelle-Guinée, les Fidji, le Vanuatu, les Îles Salomon et la Kanaky (Nouvelle-Calédonie) — représentée par le FLNKS. Son secrétariat siège à Port-Vila. C’est un cadre institutionnel réel, avec des accords commerciaux, pas une catégorie géographique commode.',
     'Ces territoires partagent des contraintes que les prestataires d’ailleurs traitent comme des exceptions : connectivité qui varie, saisons cycloniques au calendrier, distances entre îles, économies où le tourisme et les ressources pèsent lourd, et des tissus d’entreprises où chacun porte plusieurs métiers.',
     { note: 'Ces contraintes ne sont pas des handicaps à contourner. Ce sont des **spécifications**. Un système conçu pour continuer de fonctionner quand la liaison tombe est meilleur ici — et il se trouve qu’il est aussi meilleur ailleurs.' },
 
@@ -66,7 +66,7 @@ export default [
       minWidth: 620,
       head: ['Territoire', 'Population', 'PIB / habitant', 'Ce que ça implique'],
       rows: [
-        ['🇳🇨 Kanaky Nouvelle-Calédonie', '~270 000', '~34 000 USD', 'Notre base. **Tarif reprise** depuis la crise de 2024.'],
+        ['🇳🇨 Kanaky (Nouvelle-Calédonie)', '~270 000', '~34 000 USD', 'Notre base. **Tarif reprise** depuis la crise de 2024.'],
         ['🇵🇬 Papouasie-N.-Guinée', '~10,8 M', '~2 630 USD', 'Le géant. Économie à deux vitesses : ressources et banques solvables, reste très contraint.'],
         ['🇫🇯 Fidji', '~930 000', '~6 800 USD', 'Le plus avancé numériquement. Tourisme international solvable.'],
         ['🇻🇺 Vanuatu', '~320 000', '~3 300 USD', 'Petit marché, quasi zéro concurrence.'],
@@ -78,7 +78,7 @@ export default [
     { h: 'Des prix par pays, pas un tarif d’Auckland' },
     'Nous appliquons une grille par territoire, calée sur le pouvoir d’achat réel. Un prix calibré sur la Nouvelle-Zélande ferme quatre de ces cinq marchés — et un marché fermé ne sert personne.',
     { list: [
-      '**Nouvelle-Calédonie** — **tarif reprise**, réduit depuis la crise de 2024 : [le détail en XPF](/prix-automatisation-ia-nouvelle-caledonie/).',
+      '**Kanaky (Nouvelle-Calédonie)** — **tarif reprise**, réduit depuis la crise de 2024 : [le détail en XPF](/prix-automatisation-ia-nouvelle-caledonie/).',
       '**Vanuatu** — grille dédiée, à partir de 35 000 VUV le workflow : [voir la page](/automatisation-ia-vanuatu/).',
       '**Fidji, Îles Salomon, PNG** — grilles adaptées, cotées en monnaie locale : [Fidji](/ai-automation-fiji/) · [Salomon](/ai-automation-solomon-islands/) · [PNG](/ai-automation-papua-new-guinea/).',
     ]},
@@ -99,15 +99,15 @@ export default [
     { note: 'Nous ne sommes pas présents physiquement dans les cinq territoires — nous travaillons depuis Nouméa et Auckland. Quand un prestataire installé sur place vous servirait mieux, nous le disons. Chaque page pays contient cette réserve, écrite noir sur blanc.' },
   ],
   faq: [
-    { q: 'Qu’est-ce que la Mélanésie exactement ?', a: 'Une région du Pacifique regroupant la Papouasie-Nouvelle-Guinée, les Îles Salomon, le Vanuatu, les Fidji et la Nouvelle-Calédonie. Ces cinq territoires forment depuis 1986 le Melanesian Spearhead Group, une organisation régionale dotée d’accords commerciaux, dont le secrétariat siège à Port-Vila. Environ treize millions d’habitants au total.' },
-    { q: 'Pourquoi des prix différents selon les pays ?', a: 'Parce que le pouvoir d’achat varie d’un facteur quinze entre la Nouvelle-Calédonie et les Îles Salomon. Un tarif unique calibré sur le marché le plus riche fermerait les quatre autres. La prestation, elle, ne change pas : même code, même documentation, même exigence.' },
-    { q: 'Travaillez-vous en anglais ?', a: 'Oui. La Mélanésie est bilingue par nature — français en Nouvelle-Calédonie, anglais aux Fidji, en PNG et aux Salomon, les deux au Vanuatu. Nos pages et nos systèmes le sont aussi. Pour les langues locales, nous sommes prudents et nous le disons : les modèles actuels les traitent mal, et une relecture par des locuteurs reste nécessaire.' },
+    { q: 'Qu’est-ce que la Mélanésie exactement ?', a: 'Une région du Pacifique regroupant la Papouasie-Nouvelle-Guinée, les Îles Salomon, le Vanuatu, les Fidji et la Kanaky (Nouvelle-Calédonie). Ces cinq territoires forment depuis 1986 le Melanesian Spearhead Group, une organisation régionale dotée d’accords commerciaux, dont le secrétariat siège à Port-Vila. Environ treize millions d’habitants au total.' },
+    { q: 'Pourquoi des prix différents selon les pays ?', a: 'Parce que le pouvoir d’achat varie d’un facteur quinze entre la Kanaky (Nouvelle-Calédonie) et les Îles Salomon. Un tarif unique calibré sur le marché le plus riche fermerait les quatre autres. La prestation, elle, ne change pas : même code, même documentation, même exigence.' },
+    { q: 'Travaillez-vous en anglais ?', a: 'Oui. La Mélanésie est bilingue par nature — français en Kanaky (Nouvelle-Calédonie), anglais aux Fidji, en PNG et aux Salomon, les deux au Vanuatu. Nos pages et nos systèmes le sont aussi. Pour les langues locales, nous sommes prudents et nous le disons : les modèles actuels les traitent mal, et une relecture par des locuteurs reste nécessaire.' },
     { q: 'Êtes-vous présents dans tous ces pays ?', a: 'Non. Nous travaillons depuis Nouméa et Auckland, à distance, avec des déplacements possibles. Là où une présence physique régulière est déterminante pour vous, un prestataire local est le meilleur choix et nous le disons sur chaque page pays plutôt que de laisser croire le contraire.' },
   ],
   related: [
     ['/machine-prospection-commerciale/', 'La machine de prospection commerciale'],
     ['/melanesia/', 'This page in English'],
-    ['/automatisation-ia-nouvelle-caledonie/', 'Nouvelle-Calédonie'],
+    ['/automatisation-ia-nouvelle-caledonie/', 'Kanaky (Nouvelle-Calédonie)'],
     ['/automatisation-ia-vanuatu/', 'Vanuatu'],
     ['/ai-automation-fiji/', 'Fidji'],
   ],
@@ -147,7 +147,7 @@ export default [
 
     { map: true },
     { h: 'A region, not a scattering of remote markets' },
-    'The **Melanesian Spearhead Group** has brought together Papua New Guinea, Fiji, Vanuatu, Solomon Islands and New Caledonia — represented by the FLNKS — since 1986. Its secretariat sits in Port Vila. It is a real institutional framework with trade agreements, not a convenient geographic label.',
+    'The **Melanesian Spearhead Group** has brought together Papua New Guinea, Fiji, Vanuatu, Solomon Islands and Kanaky (New Caledonia) — represented by the FLNKS — since 1986. Its secretariat sits in Port Vila. It is a real institutional framework with trade agreements, not a convenient geographic label.',
     'These territories share constraints that outside providers treat as edge cases: uneven connectivity, cyclone seasons that are scheduled rather than surprising, distance between islands, economies weighted toward tourism and resources, and business communities where everyone wears several hats.',
     { note: 'Those constraints are not handicaps to work around. They are **specifications**. A system designed to keep working when the link drops is better here — and it turns out to be better everywhere else too.' },
 
@@ -156,7 +156,7 @@ export default [
       minWidth: 620,
       head: ['Territory', 'Population', 'GDP per capita', 'What that means'],
       rows: [
-        ['🇳🇨 Kanaky New Caledonia', '~270,000', '~USD 34,000', 'Our base. **Recovery rate** since the 2024 crisis.'],
+        ['🇳🇨 Kanaky (New Caledonia)', '~270,000', '~USD 34,000', 'Our base. **Recovery rate** since the 2024 crisis.'],
         ['🇵🇬 Papua New Guinea', '~10.8M', '~USD 2,630', 'The giant. Two-speed economy: resources and banking solvent, the rest heavily constrained.'],
         ['🇫🇯 Fiji', '~930,000', '~USD 6,800', 'The most digitally advanced. International tourism can pay.'],
         ['🇻🇺 Vanuatu', '~320,000', '~USD 3,300', 'Small market, almost no competition.'],
@@ -168,7 +168,7 @@ export default [
     { h: 'Per-country pricing, not an Auckland rate card' },
     'We price per territory, against real purchasing power. A rate calibrated on New Zealand closes four of these five markets — and a closed market serves nobody.',
     { list: [
-      '**New Caledonia** — **recovery rate**, reduced since the 2024 crisis: [detail in XPF](/prix-automatisation-ia-nouvelle-caledonie/).',
+      '**Kanaky (New Caledonia)** — **recovery rate**, reduced since the 2024 crisis: [detail in XPF](/prix-automatisation-ia-nouvelle-caledonie/).',
       '**Vanuatu** — dedicated list, workflows from VUV 35,000: [see the page](/ai-automation-vanuatu/).',
       '**Fiji, Solomon Islands, PNG** — adapted lists, quoted in local currency: [Fiji](/ai-automation-fiji/) · [Solomon Islands](/ai-automation-solomon-islands/) · [PNG](/ai-automation-papua-new-guinea/).',
     ]},
@@ -189,9 +189,9 @@ export default [
     { note: 'We are not physically present in all five territories — we work from Nouméa and Auckland. Where a locally-based provider would serve you better, we say so. Every country page carries that caveat in writing.' },
   ],
   faq: [
-    { q: 'What exactly is Melanesia?', a: 'A Pacific region comprising Papua New Guinea, Solomon Islands, Vanuatu, Fiji and New Caledonia. Since 1986 those five have formed the Melanesian Spearhead Group, a regional organisation with trade agreements and a secretariat in Port Vila. Around thirteen million people in total.' },
-    { q: 'Why different prices in different countries?', a: 'Because purchasing power varies by a factor of fifteen between New Caledonia and Solomon Islands. A single rate calibrated on the wealthiest market would close the other four. The delivery does not change: same code, same documentation, same standard.' },
-    { q: 'Do you work in French as well as English?', a: 'Yes. Melanesia is bilingual by nature — French in New Caledonia, English in Fiji, PNG and Solomon Islands, both in Vanuatu. Our pages and systems follow. For local languages we are cautious and say so: current models handle them poorly, and review by fluent speakers remains necessary.' },
+    { q: 'What exactly is Melanesia?', a: 'A Pacific region comprising Papua New Guinea, Solomon Islands, Vanuatu, Fiji and Kanaky (New Caledonia). Since 1986 those five have formed the Melanesian Spearhead Group, a regional organisation with trade agreements and a secretariat in Port Vila. Around thirteen million people in total.' },
+    { q: 'Why different prices in different countries?', a: 'Because purchasing power varies by a factor of fifteen between Kanaky (New Caledonia) and Solomon Islands. A single rate calibrated on the wealthiest market would close the other four. The delivery does not change: same code, same documentation, same standard.' },
+    { q: 'Do you work in French as well as English?', a: 'Yes. Melanesia is bilingual by nature — French in Kanaky (New Caledonia), English in Fiji, PNG and Solomon Islands, both in Vanuatu. Our pages and systems follow. For local languages we are cautious and say so: current models handle them poorly, and review by fluent speakers remains necessary.' },
     { q: 'Are you present in all these countries?', a: 'No. We work remotely from Nouméa and Auckland, with travel where it helps. Where regular on-site presence is decisive for you, a local provider is the better choice — and we say so on each country page rather than implying otherwise.' },
   ],
   related: [

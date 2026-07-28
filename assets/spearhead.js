@@ -42,7 +42,7 @@
       anchor: [167.6, -16.6], parts: 200,
       m: [[166.9, -15.2, 6.5, 5, -20], [167.3, -16.2, 5, 4, -12], [168.3, -17.7, 4.5, 3, 0],
           [169.0, -18.8, 3.6, 2.6, -18], [169.4, -19.5, 3.2, 2.4, 0], [167.8, -16.9, 3, 2.2, -25]] },
-    { id: 'ncl', msg: 1, home: 1, n: 'Kanaky New Caledonia', f: 'Kanaky Nouvelle-Calédonie', city: 'Nouméa',
+    { id: 'ncl', msg: 1, home: 1, n: 'Kanaky (New Caledonia)', f: 'Kanaky (Nouvelle-Calédonie)', city: 'Nouméa',
       pop: '~270 000', gdp: '~34 000 USD',
       pr: { f: 'Tarif reprise, en XPF', n: 'Recovery rate, in XPF' },
       url: { f: '/automatisation-ia-nouvelle-caledonie/', n: '/ai-automation-new-caledonia/' },

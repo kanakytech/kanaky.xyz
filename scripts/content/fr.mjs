@@ -1,4 +1,4 @@
-/* Guides en français — Nouvelle-Calédonie, Polynésie française, La Réunion.
+/* Guides en français — Kanaky (Nouvelle-Calédonie), Polynésie française, La Réunion.
  *
  * Le site comptait 69 pages EN pour 6 pages FR alors que trois marchés
  * sur cinq sont francophones. Ces pages sont des adaptations écrites en
@@ -60,13 +60,13 @@ export default [
     { q: 'Quel budget prévoir pour commencer ?', a: 'Pour un premier workflow bien choisi : entre 1 000 et 4 000 € (environ 120 000 à 480 000 F CFP) en sur-mesure, précédé d’un audit gratuit. Commencer par un seul processus limite le risque : si le résultat ne se mesure pas, vous le savez avant d’avoir engagé davantage.' },
     { q: 'Pourquoi de tels écarts entre agences ?', a: 'Parce que la prestation ne recouvre pas la même chose : un chatbot posé sur un site n’a rien à voir avec un agent connecté à la facturation et au planning. À devis égal, comparez le périmètre — nombre de systèmes connectés, qui maintient, qui possède le code — plutôt que le chiffre.' },
     { q: 'L’IA en local coûte-t-elle plus cher ?', a: 'Plus cher à installer, moins cher à l’usage : le matériel remplace l’abonnement, et chaque exécution devient gratuite. Pour des données clients sensibles ou un gros volume répétitif, le calcul penche vite du côté local — et vos données ne quittent jamais l’entreprise.' },
-    { q: 'Le prix est-il différent en Nouvelle-Calédonie ou en Polynésie ?', a: 'Le travail se livre à distance, donc les fourchettes restent proches de la métropole. Ce qui change localement : la fiscalité (TGC, TVA polynésienne), la connectivité — un système qui continue de fonctionner quand la liaison tombe a une valeur particulière dans le Pacifique — et la rareté des prestataires qui connaissent vraiment le terrain.' },
+    { q: 'Le prix est-il différent en Kanaky (Nouvelle-Calédonie) ou en Polynésie ?', a: 'Le travail se livre à distance, donc les fourchettes restent proches de la métropole. Ce qui change localement : la fiscalité (TGC, TVA polynésienne), la connectivité — un système qui continue de fonctionner quand la liaison tombe a une valeur particulière dans le Pacifique — et la rareté des prestataires qui connaissent vraiment le terrain.' },
   ],
   related: [
     ['/machine-prospection-commerciale/', 'La machine de prospection — 36 000 F, une fois'],
     ['/exemples-automatisation-pme/', '10 exemples d’automatisation pour TPE et PME'],
     ['/commencer-avec-ia-entreprise/', 'Par où commencer avec l’IA'],
-    ['/automatisation-ia-nouvelle-caledonie/', 'Notre agence en Nouvelle-Calédonie'],
+    ['/automatisation-ia-nouvelle-caledonie/', 'Notre agence en Kanaky (Nouvelle-Calédonie)'],
   ],
 },
 
@@ -222,14 +222,14 @@ export default [
   ],
   faq: [
     { q: 'L’IA locale est-elle aussi bonne que ChatGPT ?', a: 'Pas sur les tâches les plus difficiles — les grands modèles hébergés gardent l’avantage en raisonnement complexe. Pour résumer, trier, rédiger et interroger vos propres documents, les bons modèles ouverts sont assez proches pour que la différence ne change généralement pas le résultat. Testez sur votre travail réel, pas sur des benchmarks.' },
-    { q: 'Est-ce légal d’utiliser l’IA sur des données clients ?', a: 'C’est précisément là que le local change la donne : quand le modèle tourne chez vous, aucune donnée n’est transmise à un tiers — la question du transfert ne se pose plus. Restent vos obligations propres (RGPD à La Réunion, loi Informatique et libertés applicable en Nouvelle-Calédonie et en Polynésie) : accès, conservation, sécurité. Elles s’appliquent à vos systèmes, IA ou pas.' },
+    { q: 'Est-ce légal d’utiliser l’IA sur des données clients ?', a: 'C’est précisément là que le local change la donne : quand le modèle tourne chez vous, aucune donnée n’est transmise à un tiers — la question du transfert ne se pose plus. Restent vos obligations propres (RGPD à La Réunion, loi Informatique et libertés applicable en Kanaky (Nouvelle-Calédonie) et en Polynésie) : accès, conservation, sécurité. Elles s’appliquent à vos systèmes, IA ou pas.' },
     { q: 'Quel budget matériel prévoir ?', a: 'Pour essayer : zéro, votre machine actuelle suffit probablement. Pour un usage quotidien confortable : un Mac à mémoire généreuse ou une station avec carte graphique — un investissement à quatre chiffres en euros, amorti d’autant plus vite que le volume est grand, puisque chaque exécution devient gratuite.' },
     { q: 'Et si la machine tombe en panne ?', a: 'Comme pour tout outil critique : une sauvegarde des données et de la configuration, et un plan B écrit. La différence avec un service cloud, c’est que la panne est la vôtre — réparable — et non celle d’un fournisseur, sa politique tarifaire ou ses conditions d’utilisation, sur lesquelles vous ne pouvez rien.' },
   ],
   related: [
     ['/exemples-automatisation-pme/', '10 exemples d’automatisation'],
     ['/combien-coute-automatisation-ia/', 'Combien ça coûte, vraiment'],
-    ['/automatisation-ia-nouvelle-caledonie/', 'Notre agence en Nouvelle-Calédonie'],
+    ['/automatisation-ia-nouvelle-caledonie/', 'Notre agence en Kanaky (Nouvelle-Calédonie)'],
   ],
 },
 

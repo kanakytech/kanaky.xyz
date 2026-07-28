@@ -2,7 +2,7 @@
  *
  * Choix de Kevyn le 28/07 : après l'audit qui montre l'Australie hors de
  * portée à court terme, concentrer sur les marchés où être premier est
- * atteignable en semaines : Wallis, Nouvelle-Calédonie, Vanuatu, Fidji.
+ * atteignable en semaines : Wallis, Kanaky (Nouvelle-Calédonie), Vanuatu, Fidji.
  *
  * Le Vanuatu est officiellement bilingue français/anglais (+ bislama) :
  * deux pages avec hreflang réciproque, pas une traduction molle.
@@ -40,7 +40,7 @@ export default [
   h1: 'Automatiser son entreprise <span style="color:var(--grey-4);font-weight:300;">au Vanuatu.</span>',
   cta: 'service-fr',
   body: [
-    { lead: 'Le Vanuatu est à une heure de vol de Nouméa, partage la moitié de sa langue de travail avec la Nouvelle-Calédonie, et n’a quasiment aucune offre sérieuse en automatisation. C’est un marché délaissé — ce qui est une difficulté quand on cherche un prestataire, et une opportunité quand on est celui qui décide de s’en occuper.' },
+    { lead: 'Le Vanuatu est à une heure de vol de Nouméa, partage la moitié de sa langue de travail avec la Kanaky (Nouvelle-Calédonie), et n’a quasiment aucune offre sérieuse en automatisation. C’est un marché délaissé — ce qui est une difficulté quand on cherche un prestataire, et une opportunité quand on est celui qui décide de s’en occuper.' },
 
     { h: 'Ce qui compte vraiment ici : la connectivité et les distances' },
     'Avant de parler d’IA, il faut parler du terrain. Le pays est fait d’îles séparées par de vraies distances, la connectivité varie fortement d’un endroit à l’autre, et les épisodes cycloniques font partie du calendrier plutôt que de l’imprévu.',
@@ -141,7 +141,7 @@ export default [
     'The corridor is commercially real, not theoretical: a **French Week** bringing together institutions and the private sector from both territories was held in Port Vila in July 2026.',
 
     { h: 'Our Vanuatu pricing' },
-    'We run a **separate price list for Vanuatu**, well below our New Zealand and New Caledonian rates. The reason is straightforward and we would rather state it than hide it: a price calibrated on Auckland makes no sense in Port Vila, and a rate nobody can afford serves neither of us.',
+    'We run a **separate price list for Vanuatu**, well below our New Zealand and Kanaky (New Caledonia) rates. The reason is straightforward and we would rather state it than hide it: a price calibrated on Auckland makes no sense in Port Vila, and a rate nobody can afford serves neither of us.',
     { table: {
       minWidth: 540,
       head: ['Engagement', 'Vanuatu rate', 'For comparison'],

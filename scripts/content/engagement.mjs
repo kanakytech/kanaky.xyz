@@ -72,7 +72,7 @@ export default [
     { h: 'Où va l’argent' },
     'Au territoire où le contrat est signé. Un client calédonien finance une association calédonienne ; un client de Port-Vila, une association vanuataise. La valeur reste là où elle est produite — c’est le principe, et c’est aussi la raison pour laquelle nous ne centralisons pas les dons vers une organisation unique.',
     'Les domaines que nous privilégions, sans être limitatifs : **environnement et protection du milieu marin, éducation et jeunesse, langues et patrimoine culturel, insertion**. Si votre association ne rentre dans aucune de ces cases mais compte pour vous, elle nous convient.',
-    { note: '**Une condition pratique :** pour que le versement soit traçable et déductible, l’organisme doit être d’intérêt général et, en Nouvelle-Calédonie, avoir déposé ses statuts auprès du service compétent. Nous vérifions ce point avec vous avant de contractualiser — cela évite les mauvaises surprises des deux côtés.' },
+    { note: '**Une condition pratique :** pour que le versement soit traçable et déductible, l’organisme doit être d’intérêt général et, en Kanaky (Nouvelle-Calédonie), avoir déposé ses statuts auprès du service compétent. Nous vérifions ce point avec vous avant de contractualiser — cela évite les mauvaises surprises des deux côtés.' },
 
     { h: 'Ce que ce n’est pas' },
     { list: [
@@ -89,11 +89,11 @@ export default [
     { q: 'Le don s’ajoute-t-il au prix que je paie ?', a: 'Non. Le prix affiché est celui que vous payez. Les 10 % sont prélevés sur notre part, après encaissement. Votre facture est identique, que vous choisissiez une association ou non.' },
     { q: 'Puis-je choisir l’association ?', a: 'Oui, c’est le principe : vous choisissez au moment de signer. La seule condition est que l’organisme soit d’intérêt général et implanté sur le territoire où le contrat est signé. Si vous n’avez pas de préférence, nous vous proposons une liste et vous tranchez.' },
     { q: 'Comment savoir que le versement a bien eu lieu ?', a: 'Chaque versement est publié sur cette page — association, montant, date — et le reçu de don vous est transmis. Un engagement annoncé sans preuve ne vaut rien, et nous préférons une page vide au départ à un chiffre que personne ne peut vérifier.' },
-    { q: 'Est-ce que ça vous coûte vraiment quelque chose ?', a: 'Oui. Le mécénat ouvre droit à un crédit d’impôt de 60 % du don en Nouvelle-Calédonie, mais plafonné à 0,5 % du chiffre d’affaires — alors que nous reversons 10 %. Le crédit couvre donc environ 3 % du montant versé ; le reste sort de notre marge. C’est précisément ce qui distingue un engagement d’un montage.' },
-    { q: 'Et si je travaille avec vous depuis un territoire que vous ne couvrez pas ?', a: 'Le principe reste le même : 10 % vont à une association de votre territoire, choisie par vous. Nous vérifions simplement, avant de contractualiser, que l’organisme peut recevoir un don depuis la Nouvelle-Calédonie et émettre un reçu.' },
+    { q: 'Est-ce que ça vous coûte vraiment quelque chose ?', a: 'Oui. Le mécénat ouvre droit à un crédit d’impôt de 60 % du don en Kanaky (Nouvelle-Calédonie), mais plafonné à 0,5 % du chiffre d’affaires — alors que nous reversons 10 %. Le crédit couvre donc environ 3 % du montant versé ; le reste sort de notre marge. C’est précisément ce qui distingue un engagement d’un montage.' },
+    { q: 'Et si je travaille avec vous depuis un territoire que vous ne couvrez pas ?', a: 'Le principe reste le même : 10 % vont à une association de votre territoire, choisie par vous. Nous vérifions simplement, avant de contractualiser, que l’organisme peut recevoir un don depuis la Kanaky (Nouvelle-Calédonie) et émettre un reçu.' },
   ],
   related: [
-    ['/prix-automatisation-ia-nouvelle-caledonie/', 'Nos tarifs reprise en Nouvelle-Calédonie'],
+    ['/prix-automatisation-ia-nouvelle-caledonie/', 'Nos tarifs reprise en Kanaky (Nouvelle-Calédonie)'],
     ['/melanesie/', 'Nos marchés en Mélanésie'],
     ['/local-commitment/', 'This page in English'],
   ],
@@ -135,7 +135,7 @@ export default [
     { note: '**One detail that matters: 10% of what we receive, not of what we invoice.** An unpaid invoice triggers no donation. That is what makes this sustainable rather than declarative — we do not promise money we have not been paid.' },
 
     { h: 'What it actually costs us' },
-    'Corporate giving in New Caledonia earns a tax credit of 60% of the donation — **but capped at 0.5% of turnover** (tax code, articles Lp 37-2 and Lp 136-3). We give 10%, which is twenty times that ceiling.',
+    'Corporate giving in Kanaky (New Caledonia) earns a tax credit of 60% of the donation — **but capped at 0.5% of turnover** (tax code, articles Lp 37-2 and Lp 136-3). We give 10%, which is twenty times that ceiling.',
     { table: {
       minWidth: 580,
       head: ['Turnover', 'Given (10%)', 'Tax credit', 'Real cost to us'],
@@ -150,9 +150,9 @@ export default [
     'We publish this because it is the only way to tell a commitment from an optimisation. A scheme designed around the tax ceiling would sit at 0.5% — not at 10%.',
 
     { h: 'Where the money goes' },
-    'To the territory where the contract is signed. A New Caledonian client funds a New Caledonian association; a Port Vila client funds a Vanuatu one. Value stays where it is produced — which is also why we do not pool donations into a single organisation.',
+    'To the territory where the contract is signed. A client in Kanaky (New Caledonia) funds an association in Kanaky (New Caledonia); a Port Vila client funds a Vanuatu one. Value stays where it is produced — which is also why we do not pool donations into a single organisation.',
     'The areas we lean toward, without excluding others: **environment and marine protection, education and youth, language and cultural heritage, employment pathways**. If your association fits none of these but matters to you, it works for us.',
-    { note: '**A practical condition:** for the payment to be traceable and receipted, the organisation must be of public interest and — in New Caledonia — have filed its statutes with the relevant service. We check this with you before contracting, which avoids unpleasant surprises on both sides.' },
+    { note: '**A practical condition:** for the payment to be traceable and receipted, the organisation must be of public interest and — in Kanaky (New Caledonia) — have filed its statutes with the relevant service. We check this with you before contracting, which avoids unpleasant surprises on both sides.' },
 
     { h: 'What this is not' },
     { list: [
@@ -169,8 +169,8 @@ export default [
     { q: 'Does the donation get added to my price?', a: 'No. The advertised price is what you pay. The 10% is taken from our share after payment is received. Your invoice is the same whether or not you choose an association.' },
     { q: 'Can I choose the association?', a: 'Yes — that is the point. You choose when signing. The only condition is that the organisation be of public interest and based in the territory where the contract is signed. If you have no preference, we suggest a list and you decide.' },
     { q: 'How do I know the payment was made?', a: 'Every payment is published on this page — association, amount, date — and the donation receipt is passed to you. A commitment announced without proof is worth nothing, which is why we would rather start with an empty page than an unverifiable number.' },
-    { q: 'Does this actually cost you anything?', a: 'Yes. Corporate giving in New Caledonia earns a 60% tax credit, but capped at 0.5% of turnover, while we give 10%. The credit therefore covers about 3% of what is given; the rest comes out of our margin. That gap is precisely what separates a commitment from an arrangement.' },
-    { q: 'What if I am in a territory you do not list?', a: 'The principle holds: 10% goes to an association in your territory, chosen by you. We simply check before contracting that the organisation can receive a donation from New Caledonia and issue a receipt.' },
+    { q: 'Does this actually cost you anything?', a: 'Yes. Corporate giving in Kanaky (New Caledonia) earns a 60% tax credit, but capped at 0.5% of turnover, while we give 10%. The credit therefore covers about 3% of what is given; the rest comes out of our margin. That gap is precisely what separates a commitment from an arrangement.' },
+    { q: 'What if I am in a territory you do not list?', a: 'The principle holds: 10% goes to an association in your territory, chosen by you. We simply check before contracting that the organisation can receive a donation from Kanaky (New Caledonia) and issue a receipt.' },
   ],
   related: [
     ['/engagement-local/', 'Cette page en français'],
