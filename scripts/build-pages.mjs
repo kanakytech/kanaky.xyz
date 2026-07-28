@@ -414,6 +414,7 @@ ${related ? `
   </section>
 
 ${footer}
+<script src="/assets/ecosystem.js" defer></script>
 </body>
 </html>
 `;
