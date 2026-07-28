@@ -83,6 +83,10 @@
   .eco-a:hover .eco-arr{transform:translateX(3px);color:${C.lime}}
   .eco-tail{margin:0;padding:14px 22px 18px;border-top:1px solid ${C.line};font-size:.76rem;color:${C.tx2};line-height:1.6}
   @keyframes ecoPulse{50%{opacity:.35}}
+  .eco-mob{display:none;padding:7px}
+  .eco-mob svg{width:17px;height:17px}
+  .eco-mob .eco-lbl{display:none}
+  @media(max-width:768px){.eco-mob{display:inline-flex;margin-left:auto;margin-right:8px}}
   @media(max-width:640px){
     .eco-btn .eco-lbl{display:none}
     .eco-panel{left:0;right:0;bottom:0;top:auto!important;width:100%;border-radius:22px 22px 0 0;transform:translateY(24px);transform-origin:bottom center}
@@ -93,22 +97,33 @@
   document.head.appendChild(css);
 
   /* déclencheur — mini-constellation du fer de lance */
-  const btn = document.createElement('button');
-  btn.className = 'eco-btn'; btn.type = 'button';
-  btn.setAttribute('aria-haspopup', 'dialog'); btn.setAttribute('aria-expanded', 'false');
-  btn.innerHTML = `<svg viewBox="0 0 18 18" fill="none" aria-hidden="true">
+  const mkTrigger = () => {
+    const b = document.createElement('button');
+    b.className = 'eco-btn'; b.type = 'button';
+    b.setAttribute('aria-haspopup', 'dialog'); b.setAttribute('aria-expanded', 'false');
+    b.setAttribute('aria-label', T.title);
+    b.innerHTML = `<svg viewBox="0 0 18 18" fill="none" aria-hidden="true">
     <path d="M3.5 3.5 8 7.5l4 3 3 4" stroke="currentColor" stroke-width="1" opacity=".45"/>
     <circle class="eco-dot" cx="3.5" cy="3.5" r="1.7" fill="currentColor"/>
     <circle class="eco-dot" cx="8" cy="7.5" r="1.5" fill="currentColor"/>
     <circle class="eco-dot" cx="12" cy="10.5" r="1.5" fill="currentColor"/>
     <circle class="eco-dot" cx="15" cy="14.5" r="1.9" fill="currentColor"/>
   </svg><span class="eco-lbl">${T.label}</span>`;
+    return b;
+  };
+  const btn = mkTrigger();
 
   const links = document.querySelector('ul.nav-links');
   const navIn = document.querySelector('.nav-in');
   if (links) { const li = document.createElement('li'); li.className = 'eco-li'; li.appendChild(btn); links.appendChild(li); }
   else if (navIn) { navIn.insertBefore(btn, navIn.querySelector('.nav-cta')); }
   else { btn.classList.add('eco-float'); document.body.appendChild(btn); }
+
+  /* sur mobile, ul.nav-links est masquée derrière le hamburger : un
+   * second déclencheur (icône seule) vit à côté du hamburger */
+  let mobBtn = null;
+  const ham = links && document.querySelector('nav .hamburger');
+  if (ham) { mobBtn = mkTrigger(); mobBtn.classList.add('eco-mob'); ham.parentNode.insertBefore(mobBtn, ham); }
 
   /* panneau */
   const veil = document.createElement('div'); veil.className = 'eco-veil';
@@ -132,27 +147,32 @@
   <p class="eco-tail">${T.tail}</p>`;
   document.body.appendChild(veil); document.body.appendChild(panel);
 
-  let open = false;
+  let open = false, lastT = btn;
+  const triggers = mobBtn ? [btn, mobBtn] : [btn];
   const place = () => {
     if (innerWidth <= 640) { panel.style.top = ''; panel.style.right = ''; return; }
-    const r = btn.getBoundingClientRect();
+    const src = lastT.offsetParent ? lastT : (triggers.find((t) => t.offsetParent) || lastT);
+    const r = src.getBoundingClientRect();
     panel.style.top = Math.min(r.bottom + 12, innerHeight - 100) + 'px';
     panel.style.right = Math.max(16, innerWidth - r.right - 8) + 'px';
   };
   const show = () => {
     place(); open = true;
-    btn.setAttribute('aria-expanded', 'true');
+    triggers.forEach((t) => t.setAttribute('aria-expanded', 'true'));
     veil.classList.add('on');
+    /* double rAF pour laisser peindre l'état initial ; setTimeout en
+     * filet — certains webviews throttlent rAF hors focus */
     requestAnimationFrame(() => requestAnimationFrame(() => panel.classList.add('on')));
+    setTimeout(() => panel.classList.add('on'), 90);
     setTimeout(() => { const a = panel.querySelector('.eco-a'); a && a.focus(); }, reduced ? 0 : 120);
   };
   const hide = (refocus = true) => {
     open = false;
-    btn.setAttribute('aria-expanded', 'false');
+    triggers.forEach((t) => t.setAttribute('aria-expanded', 'false'));
     veil.classList.remove('on'); panel.classList.remove('on');
-    if (refocus) btn.focus();
+    if (refocus) lastT.focus();
   };
-  btn.addEventListener('click', () => (open ? hide() : show()));
+  triggers.forEach((t) => t.addEventListener('click', () => { lastT = t; open ? hide() : show(); }));
   veil.addEventListener('click', () => hide());
   panel.querySelector('.eco-x').addEventListener('click', () => hide());
   addEventListener('keydown', (e) => {
