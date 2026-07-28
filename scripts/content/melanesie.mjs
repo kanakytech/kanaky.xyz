@@ -82,6 +82,7 @@ export default [
       '**Vanuatu** — grille dédiée, à partir de 35 000 VUV le workflow : [voir la page](/automatisation-ia-vanuatu/).',
       '**Fidji, Îles Salomon, PNG** — grilles adaptées, cotées en monnaie locale : [Fidji](/ai-automation-fiji/) · [Salomon](/ai-automation-solomon-islands/) · [PNG](/ai-automation-papua-new-guinea/).',
     ]},
+    'Et sur chaque paiement reçu, **10 % vont à une association du territoire concerné**, choisie par le client — [le détail ici](/engagement-local/).',
     'Le principe est simple et nous l’assumons : **le tarif suit le marché, la prestation ne change pas.** Même code, même documentation, même exigence. Facturer moins pour livrer moins en silence serait malhonnête.',
 
     { h: 'Ce que nous construisons ici, et pourquoi' },
@@ -170,6 +171,7 @@ export default [
       '**Vanuatu** — dedicated list, workflows from VUV 35,000: [see the page](/ai-automation-vanuatu/).',
       '**Fiji, Solomon Islands, PNG** — adapted lists, quoted in local currency: [Fiji](/ai-automation-fiji/) · [Solomon Islands](/ai-automation-solomon-islands/) · [PNG](/ai-automation-papua-new-guinea/).',
     ]},
+    'And on every payment received, **10% goes to an association in that territory**, chosen by the client — [details here](/local-commitment/).',
     'The principle is simple and we state it: **the rate follows the market, the work does not change.** Same code, same documentation, same standard. Charging less to quietly deliver less would be dishonest.',
 
     { h: 'What we build here, and why' },

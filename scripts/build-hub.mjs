@@ -13,6 +13,7 @@ const BUILD_DATE = new Date().toISOString().slice(0, 10);
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
 const CLUSTERS = [
+  { key: 'engagement',   title: 'Engagement local',        blurb: 'Dix pour cent de chaque paiement reçu vont à une association du territoire où le contrat est signé, choisie par le client. Le mécanisme, ce que ça coûte réellement, et les versements publiés.' },
   { key: 'melanesie',    title: 'Mélanésie · Melanesia',    blurb: 'Notre terrain principal — Kanaky/Nouvelle-Calédonie, Papouasie-Nouvelle-Guinée, Fidji, Vanuatu, Îles Salomon. Environ 13 millions d\'habitants, une organisation régionale depuis 1986, et des prix calés sur le pouvoir d\'achat réel de chaque territoire.', merge: ['gang-pacifique'] },
   { key: 'outreach',     title: 'Cold outreach',        blurb: 'Deliverability, authentication, volume, writing and targeting — the craft of reaching people who did not ask to hear from you, without burning your domain.' },
   { key: 'legal',        title: 'Cold email law',       blurb: 'What the rules actually say in each jurisdiction. Plain-language summaries of legislation, not legal advice.' },

@@ -146,6 +146,7 @@ const footer = `  <footer>
         <a href="/#about">About</a>
         <a href="/case-studies/">Case Studies</a>
         <a href="/blog/">Blog</a>
+        <a href="/engagement-local/">Les 10 % reversés</a>
         <a href="/contact/">Contact</a>
       </div>
     </div>
@@ -315,7 +316,7 @@ ${footer}
 }
 
 /* ── build ── */
-const modules = ['outreach', 'legal', 'alternatives', 'local-ai', 'industries', 'automation', 'locations', 'fr', 'pacifique', 'gang-pacifique', 'melanesie'];
+const modules = ['outreach', 'legal', 'alternatives', 'local-ai', 'industries', 'automation', 'locations', 'fr', 'pacifique', 'gang-pacifique', 'melanesie', 'engagement'];
 let pages = [];
 for (const m of modules) {
   const f = path.join(HERE, 'content', `${m}.mjs`);

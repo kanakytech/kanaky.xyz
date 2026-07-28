@@ -42,6 +42,7 @@ export default [
         ['Logiciel acheté une fois', '~36 000 F', '~36 000 F', 'Vous l’exploitez vous-même, code inclus'],
       ],
     }},
+    'Et sur chaque paiement que nous recevons ici, **10 % vont à une association calédonienne que vous choisissez** — [le mécanisme et les montants versés](/engagement-local/).',
     { note: '**Ce que ce tarif n’est pas :** une version au rabais. Même code, même documentation, même exigence, même propriété du code — c’est le prix qui bouge, pas le travail. Et ce n’est pas une promotion à durée limitée destinée à créer de l’urgence : la grille reprise reste en place tant que le tissu économique local en a besoin.' },
     { h: 'Ce qui fait grimper un devis' },
     { list: [
