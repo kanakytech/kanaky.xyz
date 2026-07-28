@@ -14,14 +14,14 @@ const T = {
     msg: 'Membres du Groupe fer de lance mélanésien',
     other: 'Autres marchés desservis',
     hint: 'Survolez ou touchez un territoire pour le détail',
-    note: 'Silhouettes évoquées par particules — positions réelles, contours non cartographiques. La Réunion, dans l’océan Indien, sort du cadre.',
+    note: 'Côtes réelles (Natural Earth), simplifiées pour l’écran. La Réunion, dans l’océan Indien, sort du cadre.',
   },
   en: {
     label: 'The Melanesian Spearhead',
     msg: 'Melanesian Spearhead Group members',
     other: 'Other markets served',
     hint: 'Hover or tap a territory for detail',
-    note: 'Island silhouettes evoked in particles — real positions, non-cartographic outlines. Réunion, in the Indian Ocean, falls outside this frame.',
+    note: 'Real coastlines (Natural Earth), simplified for screen. Réunion, in the Indian Ocean, falls outside this frame.',
   },
 };
 
@@ -66,5 +66,6 @@ ${CSS}
   <div class="km2-info"><p class="km2-empty">${t.hint}</p></div>
   <p class="km2-foot">${t.note}</p>
 </div>
+<script src="/assets/spearhead-data.js"></script>
 <script src="/assets/spearhead.js" defer></script>`;
 }

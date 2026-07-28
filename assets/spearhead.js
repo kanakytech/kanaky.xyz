@@ -14,8 +14,8 @@
 (function () {
   if (window.__spearInit) return; window.__spearInit = true;
 
-  var VB = { w: 1000, h: 560, pad: 62 };
-  var LON = [140, 215], LAT = [-4, -40];
+  var VB = { w: 1000, h: 640, pad: 56 };
+  var LON = [138, 216], LAT = [-1, -48];
   function px(lon) { return VB.pad + (lon - LON[0]) / (LON[1] - LON[0]) * (VB.w - VB.pad * 2); }
   function py(lat) { return VB.pad + (lat - LAT[0]) / (LAT[1] - LAT[0]) * (VB.h - VB.pad * 2); }
 
@@ -84,8 +84,19 @@
   function mulberry(seed) { return function () { seed |= 0; seed = seed + 0x6D2B79F5 | 0; var t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
 
   function buildParticles() {
-    var rnd = mulberry(20260728), pts = [];
+    var rnd = mulberry(20260728), pts = [], SH = window.__SPEAR_SHAPES || {};
     PLACES.forEach(function (p) {
+      var sh = SH[p.id];
+      if (sh && sh.p && sh.p.length) {
+        sh.p.forEach(function (q) {
+          pts.push({ ter: p.id, msg: !!p.msg,
+            hx: q[0] + (rnd()-0.5)*1.4, hy: q[1] + (rnd()-0.5)*1.4,
+            sx: VB.w/2 + (rnd()-0.5)*VB.w*1.3, sy: VB.h/2 + (rnd()-0.5)*VB.h*1.3,
+            s: (p.msg ? 1.0 : 0.75) + rnd()*0.75,
+            ph: rnd()*Math.PI*2, sp: 0.4 + rnd()*0.8, d: rnd()*0.45 });
+        });
+        return;
+      }
       var per = Math.max(6, Math.round(p.parts / p.m.length));
       p.m.forEach(function (m) {
         var cx = px(m[0]), cy = py(m[1]), rx = m[2], ry = m[3], rot = m[4] * Math.PI / 180;
@@ -180,6 +191,20 @@
       ctx.strokeStyle = 'rgba(255,255,255,0.035)'; ctx.lineWidth = 1;
       [-10, -20, -30].forEach(function (la) { var y = py(la) * scale * dpr; ctx.beginPath(); ctx.moveTo(VB.pad * scale * dpr, y); ctx.lineTo((VB.w - VB.pad) * scale * dpr, y); ctx.stroke(); });
       [150, 165, 180, 195, 210].forEach(function (lo) { var x = px(lo) * scale * dpr; ctx.beginPath(); ctx.moveTo(x, VB.pad * scale * dpr); ctx.lineTo(x, (VB.h - VB.pad) * scale * dpr); ctx.stroke(); });
+
+      /* côtes réelles, très discrètes */
+      var SH = window.__SPEAR_SHAPES || {};
+      ctx.lineWidth = 1 * dpr;
+      PLACES.forEach(function (p) {
+        var sh = SH[p.id]; if (!sh || !sh.o) return;
+        var hot = hover === p.id;
+        ctx.strokeStyle = hot ? 'rgba(200,240,96,0.55)' : (p.msg ? 'rgba(200,240,96,0.16)' : 'rgba(160,160,155,0.10)');
+        sh.o.forEach(function (ring) {
+          ctx.beginPath();
+          ring.forEach(function (q, i) { var x=q[0]*scale*dpr, y=q[1]*scale*dpr; i ? ctx.lineTo(x,y) : ctx.moveTo(x,y); });
+          ctx.stroke();
+        });
+      });
 
       /* la lance se trace après l'assemblage */
       var lineP = reduced ? 1 : Math.max(0, Math.min(1, (t - 1.5) / 1.4));
