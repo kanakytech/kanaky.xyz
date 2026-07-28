@@ -24,6 +24,8 @@
    (Safari iOS, vieux Chrome Android) élargissent le viewport si seul
    body est clippé, et la page charge dézoomée */
 html { scroll-behavior: smooth; overflow-x: hidden; max-width: 100%; }
+/* les ancres ne doivent pas atterrir sous la nav fixe */
+[id] { scroll-margin-top: 96px; }
 
 body {
   background: var(--black);
