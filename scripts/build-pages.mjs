@@ -76,6 +76,11 @@ function block(b, lang, i = 0) {
 
   if (b.code) return `<pre class="${rv} gx-code"><code>${esc(b.code)}</code></pre>`;
 
+  /* term : comme code, mais rejoué en animation par term-replay.js
+   * (le transcript statique reste le fallback sans JS / reduced-motion) */
+  if (b.term) return `<pre class="${rv} gx-code" data-term-replay><code>${esc(b.term)}</code></pre>
+<script src="/assets/term-replay.js" defer></script>`;
+
   if (b.map) return melanesiaMap(lang);
 
   return '';

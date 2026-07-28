@@ -86,6 +86,29 @@ export default [
     ]},
     'La livraison est automatique : quelques secondes après le paiement, votre copie est construite et envoyée par e-mail.',
 
+    { h: 'L’installation : une commande, le reste en menus' },
+    'Pas de fichier de configuration à remplir, pas de manuel à lire d’abord. Vous tapez une commande, et la machine conduit sa propre installation : des menus à flèches pour chaque choix, des préréglages pour les fournisseurs d’e-mail et d’IA courants, les clés saisies masquées comme un mot de passe. Elle installe ses propres dépendances et teste chaque connexion en direct **avant** d’enregistrer quoi que ce soit — si une clé est fausse, vous le savez sur-le-champ, avec une explication en clair et la possibilité de corriger.',
+    { term: `$ node setup.js
+
+┌──────────────────────────────────────────────┐
+│ Cold Outreach Machine — Setup                │
+└──────────────────────────────────────────────┘
+
+  What would you like to do?
+   ❯ Set everything up          about 5 minutes
+     Test my existing configuration
+     Quit
+
+  1 / 6 — Installing dependencies
+  ✓ Dependencies installed
+  3 / 6 — The writing engine
+  ✓ Writing engine connected — test draft written
+  4 / 6 — Sending
+  ✓ SMTP server reachable
+  ✓ Configuration saved · your machine is ready` },
+    'L’installateur parle anglais — le logiciel est vendu sur cinq marchés, dont trois anglophones. L’appel d’installation, lui, se fait dans votre langue : on déroule ces écrans ensemble.',
+    { note: 'Déjà installé, et quelque chose ne marche plus ? La même commande propose **« Test my existing configuration »** : elle revérifie en quelques secondes le moteur de rédaction, le serveur d’envoi et la base de données contre vos réglages enregistrés, et vous dit lequel a lâché.' },
+
     { h: 'Où tourne la rédaction — vous choisissez' },
     { cards: [
       { t: 'Chez un fournisseur IA', d: 'Meilleure qualité de rédaction, quelques francs par message, et vos coordonnées de prospects transitent par ce fournisseur.' },

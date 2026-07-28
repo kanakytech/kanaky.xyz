@@ -60,7 +60,7 @@
     {
       "@type": "FAQPage",
       "mainEntity": [
-        {"@type":"Question","name":"Do I need to be technical?","acceptedAnswer":{"@type":"Answer","text":"You need to be able to follow instructions and copy-paste. The documentation assumes no programming knowledge, and the setup call exists so the technical part is done with you rather than left to you."}},
+        {"@type":"Question","name":"Do I need to be technical?","acceptedAnswer":{"@type":"Answer","text":"You need to be able to follow instructions and copy-paste. The installation is one command that opens a guided menu and configures everything by asking questions, the documentation assumes no programming knowledge, and the setup call exists so the technical part is done with you rather than left to you."}},
         {"@type":"Question","name":"Isn't this just spam?","acceptedAnswer":{"@type":"Answer","text":"Spam is one message sent to thousands of people who were never considered. This is the opposite: a small number of companies chosen because they fit, each researched, each email written about them specifically, sent once and never repeated. The machine keeps a permanent exclusion list and will not contact anyone who asks to be left alone."}},
         {"@type":"Question","name":"What stops my domain getting blacklisted?","acceptedAnswer":{"@type":"Answer","text":"Messages are spaced 25 to 45 minutes apart rather than sent in bursts, sending only happens inside business hours, and a hard daily ceiling is enforced. The documentation also covers SPF, DKIM and DMARC configuration."}},
         {"@type":"Question","name":"Can I use it for more than one business?","acceptedAnswer":{"@type":"Answer","text":"Yes. The licence covers you for as many of your own businesses and markets as you like, forever. It does not allow reselling the code or running it as a service for third parties."}},
@@ -375,8 +375,8 @@ $ node verify-unique.js campaign.json<br>
     </div>
     <div class="inc-card rv d1">
       <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M5 4h14v16H5zM8 9h8M8 13h8M8 17h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      <h3>Setup documentation</h3>
-      <p>Written for someone who isn't a developer. Every step, every setting, and every mistake we already made so you don't have to — including the deliverability rules that keep your domain alive.</p>
+      <h3>A setup that runs itself</h3>
+      <p>One command opens a guided installer — arrow-key menus, live connection tests, nothing to edit by hand. Written documentation covers every detail behind it, including the deliverability rules that keep your domain alive.</p>
     </div>
     <div class="inc-card rv d2">
       <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M15.5 10.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" stroke="currentColor" stroke-width="1.7"/><path d="M5 20a7 7 0 0 1 14 0" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
@@ -388,6 +388,43 @@ $ node verify-unique.js campaign.json<br>
       <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
       <h3>30 days of support</h3>
       <p>Something breaks, something's unclear, or you want to point it at a different market — you email us, and the person who wrote the code answers.</p>
+    </div>
+  </div>
+</section>
+
+<section id="install">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="kick">Installation</div>
+      <h2>One command. The rest is menus.</h2>
+      <p>You don't edit configuration files and you don't read a manual first. You type one command, and the machine walks you through its own installation — arrow-key menus for every choice, presets for the common email and AI providers, keys typed in masked like a password prompt. It installs its own dependencies and tests every connection live, before anything is saved: if a key is wrong, you find out right there, with a plain explanation and a chance to fix it.</p>
+      <p>Five minutes, roughly. And if you'd rather not do even that alone, the live setup call is included — we run it with you.</p>
+    </div>
+    <div class="rv d1" style="max-width:52em">
+      <div class="shot" style="margin-top:6px">
+        <div class="shot-bar"><i></i><i></i><i></i><span>setup — the actual first run</span></div>
+        <div class="shot-body" data-term-replay>
+$ node setup.js<br>
+<br>
+<span class="g">┌──────────────────────────────────────────────┐</span><br>
+<span class="g">│</span> Cold Outreach Machine — Setup&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="g">│</span><br>
+<span class="g">└──────────────────────────────────────────────┘</span><br>
+<br>
+&nbsp;&nbsp;What would you like to do?<br>
+&nbsp;&nbsp;&nbsp;<span class="g">❯ Set everything up</span>&nbsp;&nbsp;<span class="m">about 5 minutes</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Test my existing configuration<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quit<br>
+<br>
+<span class="m">1 / 6 — Installing dependencies</span><br>
+<span class="g">✓</span> Dependencies installed<br>
+<span class="m">3 / 6 — The writing engine</span><br>
+<span class="g">✓</span> Writing engine connected — test draft written<br>
+<span class="m">4 / 6 — Sending</span><br>
+<span class="g">✓</span> SMTP server reachable<br>
+<span class="g">✓</span> Configuration saved · your machine is ready
+        </div>
+      </div>
+      <div class="detail" style="margin-top:18px">Already set up and something stopped working? The same command has a second menu entry — <b>Test my existing configuration</b> — that re-checks the writing engine, the email server and the database against your saved settings in a few seconds, and tells you which one broke.</div>
     </div>
   </div>
 </section>
@@ -448,7 +485,7 @@ $ node verify-unique.js campaign.json<br>
     <div class="faq rv d1">
       <details>
         <summary>Do I need to be technical? <span class="pl">+</span></summary>
-        <div class="ans">You need to be able to follow instructions and copy-paste. The documentation assumes no programming knowledge, and the setup call exists precisely so the technical part is done with you rather than left to you. If you can set up an email account, you can run this.</div>
+        <div class="ans">You need to be able to follow instructions and copy-paste — that's genuinely it. The installation is one command that opens a guided menu and configures everything by asking you questions, the documentation assumes no programming knowledge, and the setup call exists precisely so the technical part is done with you rather than left to you. If you can set up an email account, you can run this.</div>
       </details>
       <details>
         <summary>Can I run it without sending my data to an AI company? <span class="pl">+</span></summary>
@@ -530,5 +567,6 @@ $ node verify-unique.js campaign.json<br>
     });
   })();
 </script>
+<script src="/assets/term-replay.js" defer></script>
 </body>
 </html>
