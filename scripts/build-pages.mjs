@@ -19,7 +19,9 @@ import { melanesiaMap } from './map-melanesia.mjs';
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(HERE, '..');
 const BUILD_DATE = process.env.BUILD_DATE || new Date().toISOString().slice(0, 10);
-const OG = 'https://kanaky.xyz/assets/og/cold-outreach-machine.png';
+const OG_COLD = 'https://kanaky.xyz/assets/og/cold-outreach-machine.png';
+const OG_BRAND = 'https://kanaky.xyz/assets/og/kanaky-tech.png';
+const ogFor = (p) => /cold|outreach|email|spam|deliverab|prospection|instantly|smartlead|lemlist|apollo|warm-up|spf-dkim|sending-domain/.test(p.slug + ' ' + (p.keywords || '')) ? OG_COLD : OG_BRAND;
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
@@ -321,7 +323,7 @@ function render(p) {
       author: { '@type': 'Person', name: 'Kevyn Wahuzue', url: 'https://www.linkedin.com/in/kevyn-wahuzue/' },
       publisher: { '@type': 'Organization', name: 'Kanaky Tech', url: 'https://kanaky.xyz/' },
       mainEntityOfPage: url,
-      image: [OG],
+      image: [ogFor(p)],
     },
     ...(faq.length ? [{
       '@type': 'FAQPage',
@@ -362,11 +364,11 @@ function render(p) {
   <meta property="og:description" content="${esc(p.description)}" />
   <meta property="og:url" content="${url}" />
   <meta property="og:site_name" content="Kanaky Tech" />
-  <meta property="og:image" content="${OG}" />
+  <meta property="og:image" content="${ogFor(p)}" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="${OG}" />
+  <meta name="twitter:image" content="${ogFor(p)}" />
   <link rel="icon" type="image/jpeg" href="/assets/kanaky-tech-logo.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
