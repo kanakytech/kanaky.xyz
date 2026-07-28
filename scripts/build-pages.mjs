@@ -14,6 +14,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { melanesiaMap } from './map-melanesia.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(HERE, '..');
@@ -33,7 +34,7 @@ function inline(s) {
 }
 
 /* ── body blocks ── */
-function block(b) {
+function block(b, lang) {
   if (typeof b === 'string') return `<p>${inline(b)}</p>`;
 
   if (b.h) return `<h2 style="color:var(--white);font-size:1.55rem;font-weight:600;letter-spacing:-0.025em;margin:52px 0 18px;">${inline(b.h)}</h2>`;
@@ -70,6 +71,8 @@ function block(b) {
         <div style="font-weight:600;margin-bottom:10px;">${inline(c.t)}</div>
         <p style="color:var(--grey-4);font-size:0.93rem;line-height:1.7;margin:0;">${inline(c.d)}</p>
       </div>`).join('')}</div>`;
+
+  if (b.map) return melanesiaMap(lang);
 
   if (b.code) return `<pre style="background:var(--grey-1);border:1px solid var(--border);border-radius:12px;padding:20px;overflow-x:auto;margin:24px 0;"><code style="font-size:0.88rem;line-height:1.7;color:var(--grey-4);">${esc(b.code)}</code></pre>`;
 
@@ -279,7 +282,7 @@ ${nav}
     <h1 class="reveal" style="font-size:clamp(1.9rem,4.4vw,3rem);font-weight:700;letter-spacing:-0.035em;line-height:1.14;margin:0 0 26px;">${p.h1}</h1>
 
     <div class="reveal delay-1" style="color:var(--grey-4);font-size:1.06rem;line-height:1.85;">
-${p.body.map(block).map((s) => '      ' + s).join('\n')}
+${p.body.map((b) => block(b, p.lang)).map((s) => '      ' + s).join('\n')}
 ${faq.length ? `
       <h2 style="color:var(--white);font-size:1.55rem;font-weight:600;letter-spacing:-0.025em;margin:56px 0 8px;">${ui.faq}</h2>
 ${faq.map((f, i) => `      <div style="border-top:1px solid var(--border);${i === faq.length - 1 ? 'border-bottom:1px solid var(--border);' : ''}padding:24px 0;">

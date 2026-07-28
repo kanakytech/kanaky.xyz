@@ -55,6 +55,7 @@ export default [
   body: [
     { lead: 'La Mélanésie compte environ treize millions d’habitants répartis sur cinq territoires, une organisation régionale qui les réunit depuis 1986, et presque aucune offre technologique qui la prenne au sérieux comme un ensemble. Les prestataires y voient soit des marchés trop petits, soit des extensions lointaines de l’Australie. Nous en venons.' },
 
+    { map: true },
     { h: 'Une région, pas une collection de marchés lointains' },
     'Le **Melanesian Spearhead Group** réunit depuis 1986 la Papouasie-Nouvelle-Guinée, les Fidji, le Vanuatu, les Îles Salomon et la Nouvelle-Calédonie — représentée par le FLNKS. Son secrétariat siège à Port-Vila. C’est un cadre institutionnel réel, avec des accords commerciaux, pas une catégorie géographique commode.',
     'Ces territoires partagent des contraintes que les prestataires d’ailleurs traitent comme des exceptions : connectivité qui varie, saisons cycloniques au calendrier, distances entre îles, économies où le tourisme et les ressources pèsent lourd, et des tissus d’entreprises où chacun porte plusieurs métiers.',
@@ -142,6 +143,7 @@ export default [
   body: [
     { lead: 'Melanesia is about thirteen million people across five territories, with a regional organisation binding them since 1986, and almost no technology provider treating it seriously as a whole. Providers elsewhere see either markets too small to bother with, or distant extensions of Australia. We are from here.' },
 
+    { map: true },
     { h: 'A region, not a scattering of remote markets' },
     'The **Melanesian Spearhead Group** has brought together Papua New Guinea, Fiji, Vanuatu, Solomon Islands and New Caledonia — represented by the FLNKS — since 1986. Its secretariat sits in Port Vila. It is a real institutional framework with trade agreements, not a convenient geographic label.',
     'These territories share constraints that outside providers treat as edge cases: uneven connectivity, cyclone seasons that are scheduled rather than surprising, distance between islands, economies weighted toward tourism and resources, and business communities where everyone wears several hats.',
