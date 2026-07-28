@@ -20,7 +20,10 @@
   --maxw: 1200px;
 }
 
-html { scroll-behavior: smooth; }
+/* le clip horizontal doit vivre sur html ET body : certains mobiles
+   (Safari iOS, vieux Chrome Android) élargissent le viewport si seul
+   body est clippé, et la page charge dézoomée */
+html { scroll-behavior: smooth; overflow-x: hidden; max-width: 100%; }
 
 body {
   background: var(--black);
@@ -30,7 +33,10 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  max-width: 100%;
 }
+
+img, svg, video, canvas { max-width: 100%; }
 
 a { color: inherit; }
 
