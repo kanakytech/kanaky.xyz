@@ -28,18 +28,21 @@ export default [
   cta: 'service-fr',
   body: [
     { lead: 'La plupart des prestataires calédoniens répondent « ça dépend, dites-nous votre budget ». Voici l’inverse : des fourchettes en francs Pacifique, ce qui les fait bouger, et les situations où la réponse honnête est de ne rien dépenser.' },
-    { h: 'Les fourchettes, en XPF' },
+    { h: 'Nos tarifs reprise — Nouvelle-Calédonie' },
+    'Deux ans après mai 2024, l’économie calédonienne redresse la tête sans être sortie d’affaire : l’IEOM note un climat des affaires revenu près de sa moyenne et des embauches qui repartent, mais **l’investissement reste en recul** et beaucoup d’entreprises encaissent encore. Le nickel remonte, le tourisme aussi, et la trésorerie de la plupart des TPE, non.',
+    '**Nous appliquons donc une grille réduite au pays, pas nos tarifs pleins.** Kanaky Tech est une entreprise calédonienne : facturer ici comme à Auckland pendant que le tissu local se relève n’aurait aucun sens.',
     { table: {
-      minWidth: 540,
-      head: ['Prestation', 'Fourchette', 'Ce que ça recouvre'],
+      minWidth: 600,
+      head: ['Prestation', 'Tarif reprise', 'Tarif plein', 'Ce que ça recouvre'],
       rows: [
-        ['Audit d’opportunités', '0 F', 'Chez nous : gratuit, et vous gardez les conclusions'],
-        ['Un workflow automatisé', '120 000 – 480 000 F', 'Devis, relances, tri des demandes, rapports'],
-        ['Un agent IA connecté à vos outils', '360 000 – 950 000 F', 'Lit vos données, agit dans vos logiciels'],
-        ['Accompagnement mensuel', '12 000 – 60 000 F/mois', 'Maintenance, ajustements, support'],
-        ['Logiciel acheté une fois', '~36 000 F', 'Vous l’exploitez vous-même, code inclus'],
+        ['Audit d’opportunités', '**Gratuit**', 'Gratuit', 'Vous gardez les conclusions, engagement ou pas'],
+        ['Un workflow automatisé', '**80 000 – 250 000 F**', '120 000 – 480 000 F', 'Devis, relances, tri des demandes, rapports'],
+        ['Un agent IA connecté à vos outils', '**250 000 – 600 000 F**', '360 000 – 950 000 F', 'Lit vos données, agit dans vos logiciels'],
+        ['Accompagnement mensuel', '**8 000 – 40 000 F/mois**', '12 000 – 60 000 F/mois', 'Maintenance, ajustements, support'],
+        ['Logiciel acheté une fois', '~36 000 F', '~36 000 F', 'Vous l’exploitez vous-même, code inclus'],
       ],
     }},
+    { note: '**Ce que ce tarif n’est pas :** une version au rabais. Même code, même documentation, même exigence, même propriété du code — c’est le prix qui bouge, pas le travail. Et ce n’est pas une promotion à durée limitée destinée à créer de l’urgence : la grille reprise reste en place tant que le tissu économique local en a besoin.' },
     { h: 'Ce qui fait grimper un devis' },
     { list: [
       '**Le nombre de logiciels à connecter.** Automatiser un devis qui part de votre boîte mail est simple. Le brancher sur votre facturation, votre agenda et votre fichier clients — c’est là que les heures partent. **L’intégration coûte plus cher que l’IA elle-même**, toujours.',
@@ -64,7 +67,7 @@ export default [
     { note: 'Le calcul qui compte n’est pas le prix, c’est **le prix par heure récupérée**. Un workflow à 250 000 F qui rend dix heures par mois est remboursé en quelques mois puis rapporte. Exigez de tout prestataire — nous compris — une estimation d’heures récupérées **avant** de signer. Qui ne peut pas la donner n’a pas regardé votre entreprise.' },
   ],
   faq: [
-    { q: 'Quel budget pour démarrer en Nouvelle-Calédonie ?', a: 'Comptez 120 000 à 480 000 F CFP pour un premier workflow bien choisi, précédé d’un audit gratuit. Commencer par un seul processus limite le risque : si le résultat ne se mesure pas au bout d’un mois, vous le savez avant d’avoir engagé davantage.' },
+    { q: 'Quel budget pour démarrer en Nouvelle-Calédonie ?', a: 'Au tarif reprise : 80 000 à 250 000 F CFP pour un premier workflow bien choisi, précédé d’un audit gratuit. C’est une grille réduite que nous appliquons au pays depuis la crise, parce que nous sommes une entreprise calédonienne et que l’investissement des TPE n’est pas revenu. Commencer par un seul processus limite le risque : si le résultat ne se mesure pas au bout d’un mois, vous le savez avant d’avoir engagé davantage.' },
     { q: 'Existe-t-il des aides pour financer un projet IA en NC ?', a: 'Des dispositifs d’accompagnement à la transformation numérique existent, portés notamment par la Province Sud et les organismes consulaires, mais leurs conditions et enveloppes évoluent. Le réflexe utile : contacter la CCI-NC avec votre devis en main avant d’engager la dépense, plutôt qu’après.' },
     { q: 'Pourquoi de tels écarts entre prestataires calédoniens ?', a: 'Parce que le mot « automatisation » recouvre des choses très différentes : un chatbot posé sur un site n’a rien à voir avec un agent connecté à votre facturation. À devis comparable, comparez le périmètre — combien de logiciels connectés, qui maintient, qui possède le code — plutôt que le chiffre en bas de page.' },
     { q: 'Faut-il un prestataire local ou métropolitain ?', a: 'Le travail technique se livre à distance dans les deux cas. Ce que le local apporte réellement : le même fuseau horaire quand un système tombe, la connaissance du terrain, et quelqu’un de joignable et responsable dans la même juridiction. Sur un projet simple, ces avantages comptent peu ; sur un système dont dépend votre exploitation, ils comptent beaucoup.' },

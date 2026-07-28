@@ -66,7 +66,7 @@ export default [
       minWidth: 620,
       head: ['Territoire', 'Population', 'PIB / habitant', 'Ce que ça implique'],
       rows: [
-        ['🇳🇨 Nouvelle-Calédonie', '~270 000', '~34 000 USD', 'Marché le plus solvable. Notre base.'],
+        ['🇳🇨 Nouvelle-Calédonie', '~270 000', '~34 000 USD', 'Notre base. **Tarif reprise** depuis la crise de 2024.'],
         ['🇵🇬 Papouasie-N.-Guinée', '~10,8 M', '~2 630 USD', 'Le géant. Économie à deux vitesses : ressources et banques solvables, reste très contraint.'],
         ['🇫🇯 Fidji', '~930 000', '~6 800 USD', 'Le plus avancé numériquement. Tourisme international solvable.'],
         ['🇻🇺 Vanuatu', '~320 000', '~3 300 USD', 'Petit marché, quasi zéro concurrence.'],
@@ -78,7 +78,7 @@ export default [
     { h: 'Des prix par pays, pas un tarif d’Auckland' },
     'Nous appliquons une grille par territoire, calée sur le pouvoir d’achat réel. Un prix calibré sur la Nouvelle-Zélande ferme quatre de ces cinq marchés — et un marché fermé ne sert personne.',
     { list: [
-      '**Nouvelle-Calédonie** — tarifs pleins : [le détail en XPF](/prix-automatisation-ia-nouvelle-caledonie/).',
+      '**Nouvelle-Calédonie** — **tarif reprise**, réduit depuis la crise de 2024 : [le détail en XPF](/prix-automatisation-ia-nouvelle-caledonie/).',
       '**Vanuatu** — grille dédiée, à partir de 35 000 VUV le workflow : [voir la page](/automatisation-ia-vanuatu/).',
       '**Fidji, Îles Salomon, PNG** — grilles adaptées, cotées en monnaie locale : [Fidji](/ai-automation-fiji/) · [Salomon](/ai-automation-solomon-islands/) · [PNG](/ai-automation-papua-new-guinea/).',
     ]},
@@ -154,7 +154,7 @@ export default [
       minWidth: 620,
       head: ['Territory', 'Population', 'GDP per capita', 'What that means'],
       rows: [
-        ['🇳🇨 New Caledonia', '~270,000', '~USD 34,000', 'The most solvent market. Our base.'],
+        ['🇳🇨 New Caledonia', '~270,000', '~USD 34,000', 'Our base. **Recovery rate** since the 2024 crisis.'],
         ['🇵🇬 Papua New Guinea', '~10.8M', '~USD 2,630', 'The giant. Two-speed economy: resources and banking solvent, the rest heavily constrained.'],
         ['🇫🇯 Fiji', '~930,000', '~USD 6,800', 'The most digitally advanced. International tourism can pay.'],
         ['🇻🇺 Vanuatu', '~320,000', '~USD 3,300', 'Small market, almost no competition.'],
@@ -166,7 +166,7 @@ export default [
     { h: 'Per-country pricing, not an Auckland rate card' },
     'We price per territory, against real purchasing power. A rate calibrated on New Zealand closes four of these five markets — and a closed market serves nobody.',
     { list: [
-      '**New Caledonia** — full rates: [detail in XPF](/prix-automatisation-ia-nouvelle-caledonie/).',
+      '**New Caledonia** — **recovery rate**, reduced since the 2024 crisis: [detail in XPF](/prix-automatisation-ia-nouvelle-caledonie/).',
       '**Vanuatu** — dedicated list, workflows from VUV 35,000: [see the page](/ai-automation-vanuatu/).',
       '**Fiji, Solomon Islands, PNG** — adapted lists, quoted in local currency: [Fiji](/ai-automation-fiji/) · [Solomon Islands](/ai-automation-solomon-islands/) · [PNG](/ai-automation-papua-new-guinea/).',
     ]},

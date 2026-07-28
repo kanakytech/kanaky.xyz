@@ -49,7 +49,7 @@ const PLACES = (lang) => {
       url: fr ? '/automatisation-ia-vanuatu/' : '/ai-automation-vanuatu/' },
     { id: 'ncl', name: 'New Caledonia', nameFr: 'Nouvelle-Calédonie', city: 'Nouméa',
       lon: 166.45, lat: -22.27, msg: true, pop: '~270 000', gdp: '~34 000 USD',
-      price: fr ? 'Tarifs pleins, en XPF' : 'Full rates, in XPF', home: true,
+      price: fr ? 'Tarif reprise, en XPF' : 'Recovery rate, in XPF', home: true,
       url: fr ? '/automatisation-ia-nouvelle-caledonie/' : '/ai-automation-new-caledonia/' },
     { id: 'fji', name: 'Fiji', nameFr: 'Fidji', city: 'Suva',
       lon: 178.44, lat: -18.14, msg: true, pop: '~933 000', gdp: '~6 800 USD',
