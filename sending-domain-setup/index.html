@@ -23,6 +23,71 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/kanaky.css">
+  <style>
+    /* ── ambiance héritée de la page produit ── */
+    .gx-hero{position:relative}
+    .gx-hero::before{content:'';position:absolute;top:-140px;left:50%;transform:translateX(-50%);width:min(900px,120vw);height:480px;background:radial-gradient(ellipse at 50% 40%,rgba(200,240,96,.055),transparent 62%);pointer-events:none;z-index:-1}
+    .gx-eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);border:1px solid rgba(200,240,96,.25);border-radius:99px;padding:7px 14px;margin-bottom:26px}
+    .gx-eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent);animation:gxPulse 2.4s ease-in-out infinite}
+    @keyframes gxPulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(200,240,96,.4)}50%{opacity:.65;box-shadow:0 0 0 5px rgba(200,240,96,0)}}
+    .gx-in{opacity:0;transform:translateY(28px);animation:gxRise 1.05s cubic-bezier(.16,1,.3,1) forwards}
+    .gx-in.d1{animation-delay:.12s}.gx-in.d2{animation-delay:.24s}.gx-in.d3{animation-delay:.36s}
+    @keyframes gxRise{to{opacity:1;transform:translateY(0)}}
+    h1.gx-title{letter-spacing:-.04em;line-height:1.06}
+    .gx-h2{position:relative;border-left:none;padding-left:0}
+    .gx-h2::after{content:'';display:block;width:52px;height:2px;margin-top:12px;background:linear-gradient(90deg,var(--accent),rgba(200,240,96,.15))}
+    .gx-note{position:relative;overflow:hidden}
+    .gx-note::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,transparent 32%,rgba(255,255,255,.045) 46%,transparent 60%);background-size:220% 100%;animation:gxSheen 7s ease-in-out 1.4s infinite;pointer-events:none}
+    @keyframes gxSheen{0%{background-position:130% 0}45%,100%{background-position:-60% 0}}
+    .gx-card{background:linear-gradient(180deg,rgba(200,240,96,.03),transparent 65%)}
+    .gx-card:hover{box-shadow:0 14px 40px -18px rgba(200,240,96,.14)}
+    .gx-steps li:hover .gx-num{background:var(--accent);color:#050505;border-color:var(--accent);transition:all .35s cubic-bezier(.16,1,.3,1)}
+    .gx-tablewrap{background:linear-gradient(180deg,rgba(255,255,255,.012),transparent)}
+    .gx-tablewrap tbody tr{transition:background .3s ease}
+    .gx-tablewrap tbody tr:hover{background:rgba(200,240,96,.035)}
+    .gx-toc a{position:relative}
+    .gx-toc a:hover{padding-left:4px;transition:all .3s cubic-bezier(.16,1,.3,1)}
+    @media(prefers-reduced-motion:reduce){.gx-in{opacity:1;transform:none;animation:none}.gx-eyebrow::before{animation:none}.gx-note::after{animation:none}}
+    .gx-lead{font-size:1.17rem;color:var(--white);font-weight:300;line-height:1.72;margin-bottom:34px}
+    .gx-h2{color:var(--white);font-size:1.55rem;font-weight:600;letter-spacing:-.025em;margin:56px 0 18px;padding-left:16px;border-left:2px solid var(--accent);scroll-margin-top:96px}
+    .gx-h3{color:var(--white);font-size:1.12rem;font-weight:600;margin:34px 0 12px}
+    .gx-list{list-style:none;padding:0;margin:22px 0}
+    .gx-list li{display:flex;gap:12px;margin-bottom:13px;line-height:1.8}
+    .gx-list li>i{flex:none;color:var(--accent);opacity:.75;margin-top:6px;line-height:0}
+    .gx-steps{list-style:none;padding:0;margin:26px 0;counter-reset:gx}
+    .gx-steps li{display:flex;gap:18px;padding:18px 0;border-top:1px solid var(--border);line-height:1.75}
+    .gx-steps li:last-child{border-bottom:1px solid var(--border)}
+    .gx-num{flex:none;counter-increment:gx;width:26px;height:26px;border-radius:50%;border:1px solid rgba(200,240,96,.3);color:var(--accent);display:grid;place-items:center;font-size:.78rem;font-variant-numeric:tabular-nums;margin-top:2px}
+    .gx-num::before{content:counter(gx)}
+    .gx-tablewrap{border:1px solid var(--border);border-radius:14px;overflow-x:auto;margin:28px 0}
+    .gx-tablewrap table{width:100%;border-collapse:collapse;font-size:.94rem}
+    .gx-tablewrap th{text-align:left;padding:15px 20px;font-weight:600;color:var(--white);border-bottom:1px solid var(--border);white-space:nowrap}
+    .gx-tablewrap td{padding:14px 20px;border-bottom:1px solid rgba(255,255,255,.04)}
+    .gx-tablewrap td:first-child{color:var(--white)}
+    .gx-tablewrap tr:last-child td{border-bottom:none}
+    .gx-note{display:flex;gap:14px;margin:32px 0;padding:20px 22px;border-radius:14px;border:1px solid rgba(200,240,96,.16);background:linear-gradient(180deg,rgba(200,240,96,.05),transparent 70%);line-height:1.78}
+    .gx-note>i{flex:none;color:var(--accent);margin-top:3px;line-height:0}
+    .gx-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin:30px 0}
+    .gx-card{border:1px solid var(--border);border-radius:14px;padding:24px;transition:border-color .4s ease,transform .4s cubic-bezier(.16,1,.3,1)}
+    .gx-card:hover{border-color:rgba(200,240,96,.28);transform:translateY(-2px)}
+    .gx-card>i{color:var(--accent);opacity:.8;line-height:0;display:block;margin-bottom:12px}
+    .gx-card h4{margin:0 0 9px;font-size:1rem;font-weight:600;color:var(--white)}
+    .gx-card p{margin:0;font-size:.93rem;line-height:1.7}
+    .gx-code{background:var(--grey-1);border:1px solid var(--border);border-radius:12px;padding:20px;overflow-x:auto;margin:24px 0}
+    .gx-code code{font-size:.88rem;line-height:1.7;color:var(--grey-4)}
+    .gx-toc{margin:34px 0 44px;padding:22px 24px;border:1px solid var(--border);border-radius:14px;background:rgba(255,255,255,.012)}
+    .gx-toc-head{display:flex;align-items:center;gap:9px;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--grey-3);margin-bottom:14px}
+    .gx-toc-head i{color:var(--accent);line-height:0}
+    .gx-toc ol{margin:0;padding-left:20px;color:var(--grey-3)}
+    .gx-toc li{margin-bottom:8px;line-height:1.6}
+    .gx-toc a{color:var(--grey-4);text-decoration:none;transition:color .25s ease}
+    .gx-toc a:hover{color:var(--accent)}
+    .gx-faq{border-top:1px solid var(--border);padding:24px 0}
+    .gx-faq:last-of-type{border-bottom:1px solid var(--border)}
+    .gx-faq h3{font-size:1.03rem;font-weight:600;margin:0 0 10px;color:var(--white)}
+    .gx-faq p{margin:0;line-height:1.78}
+    @media(max-width:640px){.gx-h2{font-size:1.35rem;margin-top:44px}.gx-lead{font-size:1.08rem}}
+  </style>
 
   <script type="application/ld+json">
 {
@@ -142,58 +207,47 @@
     <a href="/contact/">Contact</a>
   </div>
 
-  <section class="section" style="padding-top:140px;max-width:820px;margin:0 auto;">
-    <div class="section-label reveal-left">Setup</div>
-    <h1 class="reveal" style="font-size:clamp(1.9rem,4.4vw,3rem);font-weight:700;letter-spacing:-0.035em;line-height:1.14;margin:0 0 26px;">Setting up a sending domain. <span style="color:var(--grey-4);font-weight:300;">The cheapest insurance you will buy.</span></h1>
+  <section class="section gx-hero" style="padding-top:140px;max-width:820px;margin:0 auto;">
+    <div class="gx-eyebrow gx-in">Setup</div>
+    <h1 class="gx-in d1 gx-title" style="font-size:clamp(1.9rem,4.4vw,3rem);font-weight:700;margin:0 0 26px;">Setting up a sending domain. <span style="color:var(--grey-4);font-weight:300;">The cheapest insurance you will buy.</span></h1>
 
     <div class="reveal delay-1" style="color:var(--grey-4);font-size:1.06rem;line-height:1.85;">
-      <p style="font-size:1.16rem;color:var(--white);font-weight:300;line-height:1.72;margin-bottom:34px;">Twelve dollars a year buys you a domain whose only job is cold outreach. If deliverability ever degrades — and over a long enough run, something eventually goes wrong — the damage stays there. Your invoices, your client threads, your password resets and your reputation with existing customers are untouched. There is no cheaper insurance in this business.</p>
-      <h2 style="color:var(--white);font-size:1.55rem;font-weight:600;letter-spacing:-0.025em;margin:52px 0 18px;">Why not just use your main domain</h2>
-      <p>Because your main domain carries everything that matters. Quotes, contracts, invoices, booking confirmations, password resets. A deliverability problem there does not just mean prospects miss your pitch — it means a client does not receive an invoice, and you find out three weeks later when the payment is late.</p>
-      <p>Cold outreach is inherently the riskiest mail you will ever send: to people who did not ask for it, at volume, from templates you are still refining. Keeping that traffic away from the domain your business depends on is basic separation of concerns.</p>
-      <h2 style="color:var(--white);font-size:1.55rem;font-weight:600;letter-spacing:-0.025em;margin:52px 0 18px;">Choosing the name</h2>
-      <ul style="color:var(--grey-4);line-height:1.85;padding-left:22px;margin:20px 0;"><li style="margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Stay recognisably related to your brand.</strong> <code style="background:var(--grey-1);padding:2px 6px;border-radius:4px;font-size:0.9em;">yourcompany-outreach.com</code>, <code style="background:var(--grey-1);padding:2px 6px;border-radius:4px;font-size:0.9em;">yourcompanyhq.com</code>, <code style="background:var(--grey-1);padding:2px 6px;border-radius:4px;font-size:0.9em;">getyourcompany.com</code>, or the same name on a different extension. The recipient should be able to tell it is you.</li><li style="margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Avoid anything that reads as disposable.</strong> Random strings, heavy hyphenation, or novelty extensions cost you credibility with both humans and filters.</li><li style="margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Prefer common extensions.</strong> <code style="background:var(--grey-1);padding:2px 6px;border-radius:4px;font-size:0.9em;">.com</code>, <code style="background:var(--grey-1);padding:2px 6px;border-radius:4px;font-size:0.9em;">.co</code>, or your national extension. Some newer extensions carry a worse average reputation purely because of who else uses them.</li><li style="margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Do not buy an expired domain to save time.</strong> You inherit whatever history it has, and you cannot see that history before buying. A fresh domain with no reputation is safer than a cheap one with a bad one.</li></ul>
-      <h2 style="color:var(--white);font-size:1.55rem;font-weight:600;letter-spacing:-0.025em;margin:52px 0 18px;">Configuring it</h2>
-      <div style="margin:26px 0;">
-      <div style="display:flex;gap:18px;padding:18px 0;border-top:1px solid var(--border);">
-        <div style="color:var(--accent);font-weight:600;min-width:26px;font-variant-numeric:tabular-nums;">1</div>
-        <div style="color:var(--grey-4);line-height:1.75;flex:1;"><strong style="color:var(--white);font-weight:500;">Buy the domain</strong> at any registrar. This is a commodity — price is the only real difference.</div>
-      </div>
-      <div style="display:flex;gap:18px;padding:18px 0;border-top:1px solid var(--border);">
-        <div style="color:var(--accent);font-weight:600;min-width:26px;font-variant-numeric:tabular-nums;">2</div>
-        <div style="color:var(--grey-4);line-height:1.75;flex:1;"><strong style="color:var(--white);font-weight:500;">Connect it to an email provider.</strong> Google Workspace, Microsoft 365, Zoho and others all work. You need real mailboxes, not just a forwarding rule, so that replies arrive somewhere a human reads.</div>
-      </div>
-      <div style="display:flex;gap:18px;padding:18px 0;border-top:1px solid var(--border);">
-        <div style="color:var(--accent);font-weight:600;min-width:26px;font-variant-numeric:tabular-nums;">3</div>
-        <div style="color:var(--grey-4);line-height:1.75;flex:1;"><strong style="color:var(--white);font-weight:500;">Add SPF, DKIM and DMARC.</strong> Your provider gives you the exact values. This step is not optional — see <a href="/spf-dkim-dmarc-explained/" style="color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(200,240,96,0.3);">SPF, DKIM and DMARC explained</a>.</div>
-      </div>
-      <div style="display:flex;gap:18px;padding:18px 0;border-top:1px solid var(--border);">
-        <div style="color:var(--accent);font-weight:600;min-width:26px;font-variant-numeric:tabular-nums;">4</div>
-        <div style="color:var(--grey-4);line-height:1.75;flex:1;"><strong style="color:var(--white);font-weight:500;">Set up forwarding to your real inbox,</strong> so replies reach you without needing to check a second mailbox all day. Reply from the sending address, though, not your main one.</div>
-      </div>
-      <div style="display:flex;gap:18px;padding:18px 0;border-top:1px solid var(--border);">
-        <div style="color:var(--accent);font-weight:600;min-width:26px;font-variant-numeric:tabular-nums;">5</div>
-        <div style="color:var(--grey-4);line-height:1.75;flex:1;"><strong style="color:var(--white);font-weight:500;">Warm it up before real volume.</strong> A new domain needs two to four weeks of gradual sending — see <a href="/email-warm-up-explained/" style="color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(200,240,96,0.3);">email warm-up explained</a>.</div>
-      </div></div>
-      <h2 style="color:var(--white);font-size:1.55rem;font-weight:600;letter-spacing:-0.025em;margin:52px 0 18px;">One detail people miss</h2>
-      <p>Put a real website on the sending domain, even a single page. It can simply redirect to your main site. A domain sending business email with nothing at all behind it is a small negative signal, and it looks odd to any recipient who types the address into a browser to check whether you are real — which is exactly what a careful prospect does.</p>
+      <p class="reveal gx-lead">Twelve dollars a year buys you a domain whose only job is cold outreach. If deliverability ever degrades — and over a long enough run, something eventually goes wrong — the damage stays there. Your invoices, your client threads, your password resets and your reputation with existing customers are untouched. There is no cheaper insurance in this business.</p>
+      <nav class="gx-toc reveal" aria-label="On this page">
+        <div class="gx-toc-head"><i><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></i>On this page</div>
+        <ol><li><a href="#why-not-just-use-your-main-domain">Why not just use your main domain</a></li><li><a href="#choosing-the-name">Choosing the name</a></li><li><a href="#configuring-it">Configuring it</a></li><li><a href="#one-detail-people-miss">One detail people miss</a></li></ol>
+      </nav>
+      <h2 id="why-not-just-use-your-main-domain" class="reveal delay-1 gx-h2">Why not just use your main domain</h2>
+      <p class="reveal delay-2">Because your main domain carries everything that matters. Quotes, contracts, invoices, booking confirmations, password resets. A deliverability problem there does not just mean prospects miss your pitch — it means a client does not receive an invoice, and you find out three weeks later when the payment is late.</p>
+      <p class="reveal">Cold outreach is inherently the riskiest mail you will ever send: to people who did not ask for it, at volume, from templates you are still refining. Keeping that traffic away from the domain your business depends on is basic separation of concerns.</p>
+      <h2 id="choosing-the-name" class="reveal delay-1 gx-h2">Choosing the name</h2>
+      <ul class="reveal delay-2 gx-list"><li><i><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12h14"/></svg></i><span><strong style="color:var(--white);font-weight:500;">Stay recognisably related to your brand.</strong> <code style="background:var(--grey-1);padding:2px 6px;border-radius:4px;font-size:0.9em;">yourcompany-outreach.com</code>, <code style="background:var(--grey-1);padding:2px 6px;border-radius:4px;font-size:0.9em;">yourcompanyhq.com</code>, <code style="background:var(--grey-1);padding:2px 6px;border-radius:4px;font-size:0.9em;">getyourcompany.com</code>, or the same name on a different extension. The recipient should be able to tell it is you.</span></li><li><i><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12h14"/></svg></i><span><strong style="color:var(--white);font-weight:500;">Avoid anything that reads as disposable.</strong> Random strings, heavy hyphenation, or novelty extensions cost you credibility with both humans and filters.</span></li><li><i><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12h14"/></svg></i><span><strong style="color:var(--white);font-weight:500;">Prefer common extensions.</strong> <code style="background:var(--grey-1);padding:2px 6px;border-radius:4px;font-size:0.9em;">.com</code>, <code style="background:var(--grey-1);padding:2px 6px;border-radius:4px;font-size:0.9em;">.co</code>, or your national extension. Some newer extensions carry a worse average reputation purely because of who else uses them.</span></li><li><i><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12h14"/></svg></i><span><strong style="color:var(--white);font-weight:500;">Do not buy an expired domain to save time.</strong> You inherit whatever history it has, and you cannot see that history before buying. A fresh domain with no reputation is safer than a cheap one with a bad one.</span></li></ul>
+      <h2 id="configuring-it" class="reveal gx-h2">Configuring it</h2>
+      <ol class="reveal delay-1 gx-steps">
+        <li><span class="gx-num"></span><div><strong style="color:var(--white);font-weight:500;">Buy the domain</strong> at any registrar. This is a commodity — price is the only real difference.</div></li>
+        <li><span class="gx-num"></span><div><strong style="color:var(--white);font-weight:500;">Connect it to an email provider.</strong> Google Workspace, Microsoft 365, Zoho and others all work. You need real mailboxes, not just a forwarding rule, so that replies arrive somewhere a human reads.</div></li>
+        <li><span class="gx-num"></span><div><strong style="color:var(--white);font-weight:500;">Add SPF, DKIM and DMARC.</strong> Your provider gives you the exact values. This step is not optional — see <a href="/spf-dkim-dmarc-explained/" style="color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(200,240,96,0.3);">SPF, DKIM and DMARC explained</a>.</div></li>
+        <li><span class="gx-num"></span><div><strong style="color:var(--white);font-weight:500;">Set up forwarding to your real inbox,</strong> so replies reach you without needing to check a second mailbox all day. Reply from the sending address, though, not your main one.</div></li>
+        <li><span class="gx-num"></span><div><strong style="color:var(--white);font-weight:500;">Warm it up before real volume.</strong> A new domain needs two to four weeks of gradual sending — see <a href="/email-warm-up-explained/" style="color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(200,240,96,0.3);">email warm-up explained</a>.</div></li></ol>
+      <h2 id="one-detail-people-miss" class="reveal delay-2 gx-h2">One detail people miss</h2>
+      <p class="reveal">Put a real website on the sending domain, even a single page. It can simply redirect to your main site. A domain sending business email with nothing at all behind it is a small negative signal, and it looks odd to any recipient who types the address into a browser to check whether you are real — which is exactly what a careful prospect does.</p>
 
       <h2 style="color:var(--white);font-size:1.55rem;font-weight:600;letter-spacing:-0.025em;margin:56px 0 8px;">Common questions</h2>
-      <div style="border-top:1px solid var(--border);padding:24px 0;">
-        <h3 style="font-size:1.03rem;font-weight:600;margin:0 0 10px;color:var(--white);">How many sending domains do I need?</h3>
-        <p style="margin:0;line-height:1.78;">One is enough for most small businesses at moderate volume. You add domains when you need more volume than a single domain can safely carry, or when you are running genuinely separate campaigns to different markets. Adding domains is the safe way to scale; pushing one domain harder is not.</p>
+      <div class="gx-faq reveal">
+        <h3>How many sending domains do I need?</h3>
+        <p>One is enough for most small businesses at moderate volume. You add domains when you need more volume than a single domain can safely carry, or when you are running genuinely separate campaigns to different markets. Adding domains is the safe way to scale; pushing one domain harder is not.</p>
       </div>
-      <div style="border-top:1px solid var(--border);padding:24px 0;">
-        <h3 style="font-size:1.03rem;font-weight:600;margin:0 0 10px;color:var(--white);">Can I use a subdomain instead of a separate domain?</h3>
-        <p style="margin:0;line-height:1.78;">You can, and it is better than using your main domain directly, but subdomains share some reputation with the parent. For twelve dollars a year, full separation removes the question entirely.</p>
+      <div class="gx-faq reveal delay-1">
+        <h3>Can I use a subdomain instead of a separate domain?</h3>
+        <p>You can, and it is better than using your main domain directly, but subdomains share some reputation with the parent. For twelve dollars a year, full separation removes the question entirely.</p>
       </div>
-      <div style="border-top:1px solid var(--border);padding:24px 0;">
-        <h3 style="font-size:1.03rem;font-weight:600;margin:0 0 10px;color:var(--white);">Should the sending domain have its own website?</h3>
-        <p style="margin:0;line-height:1.78;">Yes, even a redirect to your main site. It costs nothing, removes a small negative signal, and satisfies the prospect who checks whether you exist before replying.</p>
+      <div class="gx-faq reveal delay-2">
+        <h3>Should the sending domain have its own website?</h3>
+        <p>Yes, even a redirect to your main site. It costs nothing, removes a small negative signal, and satisfies the prospect who checks whether you exist before replying.</p>
       </div>
-      <div style="border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:24px 0;">
-        <h3 style="font-size:1.03rem;font-weight:600;margin:0 0 10px;color:var(--white);">Do I reply from the sending domain or my main one?</h3>
-        <p style="margin:0;line-height:1.78;">Reply from the sending domain, so the conversation stays consistent and the thread history stays intact. Set up forwarding so you see replies without living in a second inbox. Once a conversation becomes a real client relationship, moving it to your main domain is natural.</p>
+      <div class="gx-faq reveal">
+        <h3>Do I reply from the sending domain or my main one?</h3>
+        <p>Reply from the sending domain, so the conversation stays consistent and the thread history stays intact. Set up forwarding so you see replies without living in a second inbox. Once a conversation becomes a real client relationship, moving it to your main domain is natural.</p>
       </div>
 
       <div style="border-top:1px solid var(--border);margin-top:52px;padding-top:30px;">

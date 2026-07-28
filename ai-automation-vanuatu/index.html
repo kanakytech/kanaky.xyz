@@ -26,6 +26,71 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/kanaky.css">
+  <style>
+    /* ── ambiance héritée de la page produit ── */
+    .gx-hero{position:relative}
+    .gx-hero::before{content:'';position:absolute;top:-140px;left:50%;transform:translateX(-50%);width:min(900px,120vw);height:480px;background:radial-gradient(ellipse at 50% 40%,rgba(200,240,96,.055),transparent 62%);pointer-events:none;z-index:-1}
+    .gx-eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);border:1px solid rgba(200,240,96,.25);border-radius:99px;padding:7px 14px;margin-bottom:26px}
+    .gx-eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent);animation:gxPulse 2.4s ease-in-out infinite}
+    @keyframes gxPulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(200,240,96,.4)}50%{opacity:.65;box-shadow:0 0 0 5px rgba(200,240,96,0)}}
+    .gx-in{opacity:0;transform:translateY(28px);animation:gxRise 1.05s cubic-bezier(.16,1,.3,1) forwards}
+    .gx-in.d1{animation-delay:.12s}.gx-in.d2{animation-delay:.24s}.gx-in.d3{animation-delay:.36s}
+    @keyframes gxRise{to{opacity:1;transform:translateY(0)}}
+    h1.gx-title{letter-spacing:-.04em;line-height:1.06}
+    .gx-h2{position:relative;border-left:none;padding-left:0}
+    .gx-h2::after{content:'';display:block;width:52px;height:2px;margin-top:12px;background:linear-gradient(90deg,var(--accent),rgba(200,240,96,.15))}
+    .gx-note{position:relative;overflow:hidden}
+    .gx-note::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,transparent 32%,rgba(255,255,255,.045) 46%,transparent 60%);background-size:220% 100%;animation:gxSheen 7s ease-in-out 1.4s infinite;pointer-events:none}
+    @keyframes gxSheen{0%{background-position:130% 0}45%,100%{background-position:-60% 0}}
+    .gx-card{background:linear-gradient(180deg,rgba(200,240,96,.03),transparent 65%)}
+    .gx-card:hover{box-shadow:0 14px 40px -18px rgba(200,240,96,.14)}
+    .gx-steps li:hover .gx-num{background:var(--accent);color:#050505;border-color:var(--accent);transition:all .35s cubic-bezier(.16,1,.3,1)}
+    .gx-tablewrap{background:linear-gradient(180deg,rgba(255,255,255,.012),transparent)}
+    .gx-tablewrap tbody tr{transition:background .3s ease}
+    .gx-tablewrap tbody tr:hover{background:rgba(200,240,96,.035)}
+    .gx-toc a{position:relative}
+    .gx-toc a:hover{padding-left:4px;transition:all .3s cubic-bezier(.16,1,.3,1)}
+    @media(prefers-reduced-motion:reduce){.gx-in{opacity:1;transform:none;animation:none}.gx-eyebrow::before{animation:none}.gx-note::after{animation:none}}
+    .gx-lead{font-size:1.17rem;color:var(--white);font-weight:300;line-height:1.72;margin-bottom:34px}
+    .gx-h2{color:var(--white);font-size:1.55rem;font-weight:600;letter-spacing:-.025em;margin:56px 0 18px;padding-left:16px;border-left:2px solid var(--accent);scroll-margin-top:96px}
+    .gx-h3{color:var(--white);font-size:1.12rem;font-weight:600;margin:34px 0 12px}
+    .gx-list{list-style:none;padding:0;margin:22px 0}
+    .gx-list li{display:flex;gap:12px;margin-bottom:13px;line-height:1.8}
+    .gx-list li>i{flex:none;color:var(--accent);opacity:.75;margin-top:6px;line-height:0}
+    .gx-steps{list-style:none;padding:0;margin:26px 0;counter-reset:gx}
+    .gx-steps li{display:flex;gap:18px;padding:18px 0;border-top:1px solid var(--border);line-height:1.75}
+    .gx-steps li:last-child{border-bottom:1px solid var(--border)}
+    .gx-num{flex:none;counter-increment:gx;width:26px;height:26px;border-radius:50%;border:1px solid rgba(200,240,96,.3);color:var(--accent);display:grid;place-items:center;font-size:.78rem;font-variant-numeric:tabular-nums;margin-top:2px}
+    .gx-num::before{content:counter(gx)}
+    .gx-tablewrap{border:1px solid var(--border);border-radius:14px;overflow-x:auto;margin:28px 0}
+    .gx-tablewrap table{width:100%;border-collapse:collapse;font-size:.94rem}
+    .gx-tablewrap th{text-align:left;padding:15px 20px;font-weight:600;color:var(--white);border-bottom:1px solid var(--border);white-space:nowrap}
+    .gx-tablewrap td{padding:14px 20px;border-bottom:1px solid rgba(255,255,255,.04)}
+    .gx-tablewrap td:first-child{color:var(--white)}
+    .gx-tablewrap tr:last-child td{border-bottom:none}
+    .gx-note{display:flex;gap:14px;margin:32px 0;padding:20px 22px;border-radius:14px;border:1px solid rgba(200,240,96,.16);background:linear-gradient(180deg,rgba(200,240,96,.05),transparent 70%);line-height:1.78}
+    .gx-note>i{flex:none;color:var(--accent);margin-top:3px;line-height:0}
+    .gx-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin:30px 0}
+    .gx-card{border:1px solid var(--border);border-radius:14px;padding:24px;transition:border-color .4s ease,transform .4s cubic-bezier(.16,1,.3,1)}
+    .gx-card:hover{border-color:rgba(200,240,96,.28);transform:translateY(-2px)}
+    .gx-card>i{color:var(--accent);opacity:.8;line-height:0;display:block;margin-bottom:12px}
+    .gx-card h4{margin:0 0 9px;font-size:1rem;font-weight:600;color:var(--white)}
+    .gx-card p{margin:0;font-size:.93rem;line-height:1.7}
+    .gx-code{background:var(--grey-1);border:1px solid var(--border);border-radius:12px;padding:20px;overflow-x:auto;margin:24px 0}
+    .gx-code code{font-size:.88rem;line-height:1.7;color:var(--grey-4)}
+    .gx-toc{margin:34px 0 44px;padding:22px 24px;border:1px solid var(--border);border-radius:14px;background:rgba(255,255,255,.012)}
+    .gx-toc-head{display:flex;align-items:center;gap:9px;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--grey-3);margin-bottom:14px}
+    .gx-toc-head i{color:var(--accent);line-height:0}
+    .gx-toc ol{margin:0;padding-left:20px;color:var(--grey-3)}
+    .gx-toc li{margin-bottom:8px;line-height:1.6}
+    .gx-toc a{color:var(--grey-4);text-decoration:none;transition:color .25s ease}
+    .gx-toc a:hover{color:var(--accent)}
+    .gx-faq{border-top:1px solid var(--border);padding:24px 0}
+    .gx-faq:last-of-type{border-bottom:1px solid var(--border)}
+    .gx-faq h3{font-size:1.03rem;font-weight:600;margin:0 0 10px;color:var(--white)}
+    .gx-faq p{margin:0;line-height:1.78}
+    @media(max-width:640px){.gx-h2{font-size:1.35rem;margin-top:44px}.gx-lead{font-size:1.08rem}}
+  </style>
 
   <script type="application/ld+json">
 {
@@ -166,50 +231,54 @@
     <a href="/contact/">Contact</a>
   </div>
 
-  <section class="section" style="padding-top:140px;max-width:820px;margin:0 auto;">
-    <div class="section-label reveal-left">Vanuatu</div>
-    <h1 class="reveal" style="font-size:clamp(1.9rem,4.4vw,3rem);font-weight:700;letter-spacing:-0.035em;line-height:1.14;margin:0 0 26px;">AI automation <span style="color:var(--grey-4);font-weight:300;">in Vanuatu.</span></h1>
+  <section class="section gx-hero" style="padding-top:140px;max-width:820px;margin:0 auto;">
+    <div class="gx-eyebrow gx-in">Vanuatu</div>
+    <h1 class="gx-in d1 gx-title" style="font-size:clamp(1.9rem,4.4vw,3rem);font-weight:700;margin:0 0 26px;">AI automation <span style="color:var(--grey-4);font-weight:300;">in Vanuatu.</span></h1>
 
     <div class="reveal delay-1" style="color:var(--grey-4);font-size:1.06rem;line-height:1.85;">
-      <p style="font-size:1.16rem;color:var(--white);font-weight:300;line-height:1.72;margin-bottom:34px;">Vanuatu is an hour's flight from Nouméa, works in both English and French, and has almost no serious automation offering. That is a problem when you are looking for a provider — and an opportunity for whoever decides to take the market seriously.</p>
-      <h2 style="color:var(--white);font-size:1.55rem;font-weight:600;letter-spacing:-0.025em;margin:52px 0 18px;">Connectivity and distance decide the design</h2>
-      <p>Before discussing AI, the ground reality matters. The country spans islands separated by real distances, connectivity varies sharply by location, and cyclone season is a scheduled event rather than a surprise.</p>
-      <p><strong style="color:var(--white);font-weight:500;">The non-negotiable consequence: favour what keeps working when the link drops.</strong> A tool hosted on the other side of the world stops when your connection does. A system processing your documents and drafting your replies on a machine in your own office does not. That is the core argument for <a href="/run-ai-locally-business/" style="color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(200,240,96,0.3);">running AI locally</a>, and it carries more weight in Vanuatu than almost anywhere.</p>
-      <h2 style="color:var(--white);font-size:1.55rem;font-weight:600;letter-spacing:-0.025em;margin:52px 0 18px;">What actually pays back here</h2>
-      <ul style="color:var(--grey-4);line-height:1.85;padding-left:22px;margin:20px 0;"><li style="margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Tourism and hospitality</strong> — the pillar of the economy. Booking enquiries, group requests and inter-island transfer coordination are the most valuable and the most frequently lost to slow replies.</li><li style="margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Bilingual correspondence.</strong> English and French, plus Bislama at reception. Automated translation and adaptation of client correspondence is high-value here, not a gimmick.</li><li style="margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Inter-island coordination</strong> — the administrative back-and-forth between Port Vila, Luganville and the outer islands creates a communication load automation absorbs well.</li><li style="margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Document handling</strong> — supplier invoices, dockets, files. The most reliable gain anywhere, and independent of connectivity when the system runs locally.</li><li style="margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Follow-ups</strong>, commercial and on unpaid invoices, which almost nobody sustains by hand.</li></ul>
-      <h2 style="color:var(--white);font-size:1.55rem;font-weight:600;letter-spacing:-0.025em;margin:52px 0 18px;">The logical neighbour</h2>
-      <p>Nouméa is an hour away by air, within an hour of your timezone, with close administrative and commercial ties. When a system stops on a Tuesday morning, your provider is awake. A European or Asian provider works while you sleep, which adds a day to every exchange.</p>
-      <p>The corridor is commercially real, not theoretical: a <strong style="color:var(--white);font-weight:500;">French Week</strong> bringing together institutions and the private sector from both territories was held in Port Vila in July 2026.</p>
-      <h2 style="color:var(--white);font-size:1.55rem;font-weight:600;letter-spacing:-0.025em;margin:52px 0 18px;">Our Vanuatu pricing</h2>
-      <p>We run a <strong style="color:var(--white);font-weight:500;">separate price list for Vanuatu</strong>, well below our New Zealand and New Caledonian rates. The reason is straightforward and we would rather state it than hide it: a price calibrated on Auckland makes no sense in Port Vila, and a rate nobody can afford serves neither of us.</p>
-      <div style="border:1px solid var(--border);border-radius:14px;overflow-x:auto;margin:28px 0;">
-      <table style="width:100%;border-collapse:collapse;min-width:460px;font-size:0.94rem;">
-        <thead><tr style="border-bottom:1px solid var(--border);"><th style="text-align:left;padding:15px 20px;font-weight:600;color:var(--white);">Engagement</th><th style="text-align:left;padding:15px 20px;font-weight:600;color:var(--white);">Vanuatu rate</th><th style="text-align:left;padding:15px 20px;font-weight:600;color:var(--white);">For comparison</th></tr></thead>
-        <tbody style="color:var(--grey-4);"><tr style="border-bottom:1px solid var(--border);"><td style="padding:14px 20px;color:var(--white);">Opportunity audit</td><td style="padding:14px 20px;">Free</td><td style="padding:14px 20px;">Free everywhere</td></tr><tr style="border-bottom:1px solid var(--border);"><td style="padding:14px 20px;color:var(--white);">A single automated workflow</td><td style="padding:14px 20px;"><strong style="color:var(--white);font-weight:500;">VUV 35,000 – 90,000</strong></td><td style="padding:14px 20px;">3–5× higher in NZ</td></tr><tr style="border-bottom:1px solid var(--border);"><td style="padding:14px 20px;color:var(--white);">Full pack (2–3 workflows)</td><td style="padding:14px 20px;"><strong style="color:var(--white);font-weight:500;">VUV 150,000 – 220,000</strong></td><td style="padding:14px 20px;">—</td></tr><tr style="border-bottom:1px solid var(--border);"><td style="padding:14px 20px;color:var(--white);">Ongoing support</td><td style="padding:14px 20px;"><strong style="color:var(--white);font-weight:500;">VUV 6,000 – 18,000/month</strong></td><td style="padding:14px 20px;">4–6× higher in NZ</td></tr><tr><td style="padding:14px 20px;color:var(--white);">Local AI system on your hardware</td><td style="padding:14px 20px;">Quoted, hardware at cost</td><td style="padding:14px 20px;">—</td></tr></tbody>
+      <p class="reveal gx-lead">Vanuatu is an hour's flight from Nouméa, works in both English and French, and has almost no serious automation offering. That is a problem when you are looking for a provider — and an opportunity for whoever decides to take the market seriously.</p>
+      <nav class="gx-toc reveal" aria-label="On this page">
+        <div class="gx-toc-head"><i><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></i>On this page</div>
+        <ol><li><a href="#connectivity-and-distance-decide-the-design">Connectivity and distance decide the design</a></li><li><a href="#what-actually-pays-back-here">What actually pays back here</a></li><li><a href="#the-logical-neighbour">The logical neighbour</a></li><li><a href="#our-vanuatu-pricing">Our Vanuatu pricing</a></li></ol>
+      </nav>
+      <h2 id="connectivity-and-distance-decide-the-design" class="reveal delay-1 gx-h2">Connectivity and distance decide the design</h2>
+      <p class="reveal delay-2">Before discussing AI, the ground reality matters. The country spans islands separated by real distances, connectivity varies sharply by location, and cyclone season is a scheduled event rather than a surprise.</p>
+      <p class="reveal"><strong style="color:var(--white);font-weight:500;">The non-negotiable consequence: favour what keeps working when the link drops.</strong> A tool hosted on the other side of the world stops when your connection does. A system processing your documents and drafting your replies on a machine in your own office does not. That is the core argument for <a href="/run-ai-locally-business/" style="color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(200,240,96,0.3);">running AI locally</a>, and it carries more weight in Vanuatu than almost anywhere.</p>
+      <h2 id="what-actually-pays-back-here" class="reveal delay-1 gx-h2">What actually pays back here</h2>
+      <ul class="reveal delay-2 gx-list"><li><i><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12h14"/></svg></i><span><strong style="color:var(--white);font-weight:500;">Tourism and hospitality</strong> — the pillar of the economy. Booking enquiries, group requests and inter-island transfer coordination are the most valuable and the most frequently lost to slow replies.</span></li><li><i><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12h14"/></svg></i><span><strong style="color:var(--white);font-weight:500;">Bilingual correspondence.</strong> English and French, plus Bislama at reception. Automated translation and adaptation of client correspondence is high-value here, not a gimmick.</span></li><li><i><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12h14"/></svg></i><span><strong style="color:var(--white);font-weight:500;">Inter-island coordination</strong> — the administrative back-and-forth between Port Vila, Luganville and the outer islands creates a communication load automation absorbs well.</span></li><li><i><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12h14"/></svg></i><span><strong style="color:var(--white);font-weight:500;">Document handling</strong> — supplier invoices, dockets, files. The most reliable gain anywhere, and independent of connectivity when the system runs locally.</span></li><li><i><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12h14"/></svg></i><span><strong style="color:var(--white);font-weight:500;">Follow-ups</strong>, commercial and on unpaid invoices, which almost nobody sustains by hand.</span></li></ul>
+      <h2 id="the-logical-neighbour" class="reveal gx-h2">The logical neighbour</h2>
+      <p class="reveal delay-1">Nouméa is an hour away by air, within an hour of your timezone, with close administrative and commercial ties. When a system stops on a Tuesday morning, your provider is awake. A European or Asian provider works while you sleep, which adds a day to every exchange.</p>
+      <p class="reveal delay-2">The corridor is commercially real, not theoretical: a <strong style="color:var(--white);font-weight:500;">French Week</strong> bringing together institutions and the private sector from both territories was held in Port Vila in July 2026.</p>
+      <h2 id="our-vanuatu-pricing" class="reveal gx-h2">Our Vanuatu pricing</h2>
+      <p class="reveal delay-1">We run a <strong style="color:var(--white);font-weight:500;">separate price list for Vanuatu</strong>, well below our New Zealand and New Caledonian rates. The reason is straightforward and we would rather state it than hide it: a price calibrated on Auckland makes no sense in Port Vila, and a rate nobody can afford serves neither of us.</p>
+      <div class="reveal delay-2 gx-tablewrap">
+      <table style="min-width:460px">
+        <thead><tr><th>Engagement</th><th>Vanuatu rate</th><th>For comparison</th></tr></thead>
+        <tbody><tr><td>Opportunity audit</td><td>Free</td><td>Free everywhere</td></tr><tr><td>A single automated workflow</td><td><strong style="color:var(--white);font-weight:500;">VUV 35,000 – 90,000</strong></td><td>3–5× higher in NZ</td></tr><tr><td>Full pack (2–3 workflows)</td><td><strong style="color:var(--white);font-weight:500;">VUV 150,000 – 220,000</strong></td><td>—</td></tr><tr><td>Ongoing support</td><td><strong style="color:var(--white);font-weight:500;">VUV 6,000 – 18,000/month</strong></td><td>4–6× higher in NZ</td></tr><tr><td>Local AI system on your hardware</td><td>Quoted, hardware at cost</td><td>—</td></tr></tbody>
       </table>
     </div>
-      <p>As a rough guide, VUV 100,000 is around EUR 700. We quote in vatu so you know exactly what you are paying, with no exchange-rate surprises.</p>
-      <h3 style="color:var(--white);font-size:1.12rem;font-weight:600;margin:34px 0 12px;">Why this price list exists</h3>
-      <ul style="color:var(--grey-4);line-height:1.85;padding-left:22px;margin:20px 0;"><li style="margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">The system is already built.</strong> We are not starting from scratch for each client — most of our work in Vanuatu is adapting and installing rather than inventing. We pass that lower cost on instead of pocketing it.</li><li style="margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">A market being built beats a market priced shut.</strong> We would rather have ten Vanuatu businesses working with us than none who found the price out of reach.</li><li style="margin-bottom:10px;"><strong style="color:var(--white);font-weight:500;">Same work, not a stripped-down version.</strong> The rate changes; the delivery does not. Same code, same documentation, same standard. Charging less to quietly deliver less would be dishonest.</li></ul>
-      <div style="border-left:2px solid var(--accent);padding:4px 0 4px 22px;margin:30px 0;color:var(--grey-4);line-height:1.78;">These rates apply to businesses established in Vanuatu. A foreign company operating through Port Vila falls under our standard rates — this list exists for the local economy, not for structuring.</div>
-      <div style="border-left:2px solid var(--accent);padding:4px 0 4px 22px;margin:30px 0;color:var(--grey-4);line-height:1.78;"><strong style="color:var(--white);font-weight:500;">The most useful advice, even if you never work with us:</strong> spend a week observing where your hours actually go before committing to anything. In small teams where everyone wears several hats, it is the only way to know what deserves automating. <a href="/how-to-start-with-ai/" style="color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(200,240,96,0.3);">The method is here</a>, and it costs nothing.</div>
+      <p class="reveal">As a rough guide, VUV 100,000 is around EUR 700. We quote in vatu so you know exactly what you are paying, with no exchange-rate surprises.</p>
+      <h3 class="reveal delay-1 gx-h3">Why this price list exists</h3>
+      <ul class="reveal delay-2 gx-list"><li><i><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12h14"/></svg></i><span><strong style="color:var(--white);font-weight:500;">The system is already built.</strong> We are not starting from scratch for each client — most of our work in Vanuatu is adapting and installing rather than inventing. We pass that lower cost on instead of pocketing it.</span></li><li><i><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12h14"/></svg></i><span><strong style="color:var(--white);font-weight:500;">A market being built beats a market priced shut.</strong> We would rather have ten Vanuatu businesses working with us than none who found the price out of reach.</span></li><li><i><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12h14"/></svg></i><span><strong style="color:var(--white);font-weight:500;">Same work, not a stripped-down version.</strong> The rate changes; the delivery does not. Same code, same documentation, same standard. Charging less to quietly deliver less would be dishonest.</span></li></ul>
+      <aside class="reveal gx-note"><i><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></i><div>These rates apply to businesses established in Vanuatu. A foreign company operating through Port Vila falls under our standard rates — this list exists for the local economy, not for structuring.</div></aside>
+      <aside class="reveal delay-1 gx-note"><i><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></i><div><strong style="color:var(--white);font-weight:500;">The most useful advice, even if you never work with us:</strong> spend a week observing where your hours actually go before committing to anything. In small teams where everyone wears several hats, it is the only way to know what deserves automating. <a href="/how-to-start-with-ai/" style="color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(200,240,96,0.3);">The method is here</a>, and it costs nothing.</div></aside>
 
       <h2 style="color:var(--white);font-size:1.55rem;font-weight:600;letter-spacing:-0.025em;margin:56px 0 8px;">Common questions</h2>
-      <div style="border-top:1px solid var(--border);padding:24px 0;">
-        <h3 style="font-size:1.03rem;font-weight:600;margin:0 0 10px;color:var(--white);">Does AI work with unreliable connectivity?</h3>
-        <p style="margin:0;line-height:1.78;">It depends entirely on the setup. A cloud service stops when your link stops. A model installed on a machine in your office keeps processing documents and drafting replies regardless. In Vanuatu this is not a technical preference — it should be your first selection criterion.</p>
+      <div class="gx-faq reveal">
+        <h3>Does AI work with unreliable connectivity?</h3>
+        <p>It depends entirely on the setup. A cloud service stops when your link stops. A model installed on a machine in your office keeps processing documents and drafting replies regardless. In Vanuatu this is not a technical preference — it should be your first selection criterion.</p>
       </div>
-      <div style="border-top:1px solid var(--border);padding:24px 0;">
-        <h3 style="font-size:1.03rem;font-weight:600;margin:0 0 10px;color:var(--white);">Are there automation providers in Vanuatu?</h3>
-        <p style="margin:0;line-height:1.78;">Very few specialists, which cuts both ways: less choice, but also less commercial pressure to sell you things you do not need. Be correspondingly demanding — ask for an estimate of hours saved before signing, who owns the code, and what happens if you change provider.</p>
+      <div class="gx-faq reveal delay-1">
+        <h3>Are there automation providers in Vanuatu?</h3>
+        <p>Very few specialists, which cuts both ways: less choice, but also less commercial pressure to sell you things you do not need. Be correspondingly demanding — ask for an estimate of hours saved before signing, who owns the code, and what happens if you change provider.</p>
       </div>
-      <div style="border-top:1px solid var(--border);padding:24px 0;">
-        <h3 style="font-size:1.03rem;font-weight:600;margin:0 0 10px;color:var(--white);">Do you work in English and French?</h3>
-        <p style="margin:0;line-height:1.78;">Both, which matters in a country where businesses switch language depending on who they are talking to. The systems we build handle bilingual correspondence. For Bislama, current models are considerably less reliable and we say so rather than hiding it — human review remains necessary.</p>
+      <div class="gx-faq reveal delay-2">
+        <h3>Do you work in English and French?</h3>
+        <p>Both, which matters in a country where businesses switch language depending on who they are talking to. The systems we build handle bilingual correspondence. For Bislama, current models are considerably less reliable and we say so rather than hiding it — human review remains necessary.</p>
       </div>
-      <div style="border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:24px 0;">
-        <h3 style="font-size:1.03rem;font-weight:600;margin:0 0 10px;color:var(--white);">Do you need to travel to Vanuatu?</h3>
-        <p style="margin:0;line-height:1.78;">Rarely for a first project — audits and setup are done remotely. For local hardware installation or team training, travel from Nouméa is straightforward: an hour's flight, shorter than many domestic trips within Australia.</p>
+      <div class="gx-faq reveal">
+        <h3>Do you need to travel to Vanuatu?</h3>
+        <p>Rarely for a first project — audits and setup are done remotely. For local hardware installation or team training, travel from Nouméa is straightforward: an hour's flight, shorter than many domestic trips within Australia.</p>
       </div>
 
       <div style="border-top:1px solid var(--border);margin-top:52px;padding-top:30px;">
