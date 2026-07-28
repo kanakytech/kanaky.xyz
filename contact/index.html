@@ -13,7 +13,7 @@
   <meta property="og:url" content="https://kanaky.xyz/contact/" />
   <meta property="og:site_name" content="Kanaky Tech" />
   <meta name="twitter:card" content="summary_large_image" />
-  <link rel="icon" type="image/jpeg" href="https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg" />
+  <link rel="icon" type="image/jpeg" href="/assets/kanaky-tech-logo.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -39,7 +39,7 @@
         "@type": "Organization",
         "name": "Kanaky Tech",
         "url": "https://kanaky.xyz/",
-        "logo": "https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg",
+        "logo": "/assets/kanaky-tech-logo.jpg",
         "description": "The Pacific's AI automation and agent development studio, building AI agents and automating business processes for SMEs, agencies and institutions across New Caledonia, New Zealand and the Pacific.",
         "contactPoint": [
           {"@type":"ContactPoint","contactType":"sales","email":"kevyn@kanaky.xyz","telephone":"+64 22 371 6309","areaServed":["NZ","NC","Pacific"],"availableLanguage":["en","fr"]},
@@ -74,7 +74,7 @@
   <div class="cursor-ring" id="cursor-ring"></div>
   <nav>
     <a href="/" class="logo-mark">
-      <img class="logo-img" src="https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg" alt="Kanaky Tech logo" />
+      <img class="logo-img" src="/assets/kanaky-tech-logo.jpg" alt="Kanaky Tech logo" />
       <span class="logo-text">Kanaky Tech</span>
     </a>
     <ul class="nav-links">
@@ -189,13 +189,17 @@
       <!-- OPTIONAL MAILTO FORM -->
       <div class="reveal delay-1" style="max-width:760px;margin-top:48px;border:1px solid var(--border);border-left:2px solid var(--accent);padding:32px;">
         <span class="eyebrow">Quick message</span>
-        <form action="mailto:kevyn@kanaky.xyz" method="post" enctype="text/plain" style="display:flex;flex-direction:column;gap:16px;margin-top:18px;">
+        <form action="https://formsubmit.co/kevyn@kanaky.xyz" method="POST" style="display:flex;flex-direction:column;gap:16px;margin-top:18px;">
           <input type="text" name="name" placeholder="Your name" required style="background:var(--grey-1);border:1px solid var(--border);color:var(--white);font-family:inherit;font-size:15px;padding:14px 16px;border-radius:2px;" />
           <input type="email" name="email" placeholder="Your email" required style="background:var(--grey-1);border:1px solid var(--border);color:var(--white);font-family:inherit;font-size:15px;padding:14px 16px;border-radius:2px;" />
           <textarea name="message" rows="4" placeholder="What would you like to automate?" required style="background:var(--grey-1);border:1px solid var(--border);color:var(--white);font-family:inherit;font-size:15px;padding:14px 16px;border-radius:2px;resize:vertical;"></textarea>
+          <input type="hidden" name="_subject" value="Nouveau message — kanaky.xyz/contact" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value="https://kanaky.xyz/contact/?sent=1" />
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
           <button type="submit" class="btn-primary" style="align-self:flex-start;">Send message</button>
         </form>
-        <p style="font-size:12px;color:var(--grey-3);margin-top:14px;">This opens your email client. Prefer to write directly? Email <a href="mailto:kevyn@kanaky.xyz" style="color:var(--white);border-bottom:1px solid rgba(200,240,96,0.4);text-decoration:none;">kevyn@kanaky.xyz</a>.</p>
+        <p style="font-size:12px;color:var(--grey-3);margin-top:14px;">Your message lands straight in our inbox. Prefer to write directly? Email <a href="mailto:kevyn@kanaky.xyz" style="color:var(--white);border-bottom:1px solid rgba(200,240,96,0.4);text-decoration:none;">kevyn@kanaky.xyz</a>.</p>
       </div>
     </div>
   </section>
@@ -250,7 +254,7 @@
   <footer>
     <div class="footer-top">
       <div class="footer-brand">
-        <a href="/" class="logo-mark"><img class="logo-img" src="https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg" alt="Kanaky Tech logo" /><span class="logo-text">Kanaky Tech</span></a>
+        <a href="/" class="logo-mark"><img class="logo-img" src="/assets/kanaky-tech-logo.jpg" alt="Kanaky Tech logo" /><span class="logo-text">Kanaky Tech</span></a>
         <p>The Pacific's AI automation &amp; agent development studio. We build AI agents and automate business processes for SMEs, agencies and institutions across Kanaky (New Caledonia), New Zealand and the Pacific.</p>
       </div>
       <div class="footer-col">
@@ -294,5 +298,11 @@
   </footer>
   <script src="/assets/site.js"></script>
 <script src="/assets/ecosystem.js" defer></script>
+<script>
+  if (new URLSearchParams(location.search).get('sent')) {
+    var f = document.querySelector('form');
+    if (f) f.outerHTML = '<p style="border:1px solid rgba(200,240,96,.35);border-radius:2px;padding:18px 20px;color:var(--white);margin-top:18px;">Message sent — we reply within one business day.</p>';
+  }
+</script>
 </body>
 </html>

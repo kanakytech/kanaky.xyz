@@ -166,7 +166,7 @@ const GX_CSS = `<style>
 
 const nav = `  <nav>
     <a href="/" class="logo-mark">
-      <img class="logo-img" src="https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg" alt="Kanaky Tech logo" />
+      <img class="logo-img" src="/assets/kanaky-tech-logo.jpg" alt="Kanaky Tech logo" />
       <span class="logo-text">Kanaky Tech</span>
     </a>
     <ul class="nav-links">
@@ -191,7 +191,7 @@ const nav = `  <nav>
 const footer = `  <footer>
     <div class="footer-top">
       <div class="footer-brand">
-        <a href="/" class="logo-mark"><img class="logo-img" src="https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg" alt="Kanaky Tech logo" /><span class="logo-text">Kanaky Tech</span></a>
+        <a href="/" class="logo-mark"><img class="logo-img" src="/assets/kanaky-tech-logo.jpg" alt="Kanaky Tech logo" /><span class="logo-text">Kanaky Tech</span></a>
         <p>The Pacific's AI automation &amp; agent development studio. We build AI agents and automate business processes for SMEs, agencies and institutions across Kanaky (New Caledonia), New Zealand and the Pacific.</p>
       </div>
       <div class="footer-col">
@@ -367,7 +367,7 @@ function render(p) {
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="${OG}" />
-  <link rel="icon" type="image/jpeg" href="https://i.ibb.co/GvmCR1Rb/kanaky-tech-logo.jpg" />
+  <link rel="icon" type="image/jpeg" href="/assets/kanaky-tech-logo.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
