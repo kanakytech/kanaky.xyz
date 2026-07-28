@@ -66,7 +66,7 @@ export default [
       minWidth: 620,
       head: ['Territoire', 'Population', 'PIB / habitant', 'Ce que ça implique'],
       rows: [
-        ['🇳🇨 Nouvelle-Calédonie', '~270 000', '~34 000 USD', 'Notre base. **Tarif reprise** depuis la crise de 2024.'],
+        ['🇳🇨 Kanaky Nouvelle-Calédonie', '~270 000', '~34 000 USD', 'Notre base. **Tarif reprise** depuis la crise de 2024.'],
         ['🇵🇬 Papouasie-N.-Guinée', '~10,8 M', '~2 630 USD', 'Le géant. Économie à deux vitesses : ressources et banques solvables, reste très contraint.'],
         ['🇫🇯 Fidji', '~930 000', '~6 800 USD', 'Le plus avancé numériquement. Tourisme international solvable.'],
         ['🇻🇺 Vanuatu', '~320 000', '~3 300 USD', 'Petit marché, quasi zéro concurrence.'],
@@ -156,7 +156,7 @@ export default [
       minWidth: 620,
       head: ['Territory', 'Population', 'GDP per capita', 'What that means'],
       rows: [
-        ['🇳🇨 New Caledonia', '~270,000', '~USD 34,000', 'Our base. **Recovery rate** since the 2024 crisis.'],
+        ['🇳🇨 Kanaky New Caledonia', '~270,000', '~USD 34,000', 'Our base. **Recovery rate** since the 2024 crisis.'],
         ['🇵🇬 Papua New Guinea', '~10.8M', '~USD 2,630', 'The giant. Two-speed economy: resources and banking solvent, the rest heavily constrained.'],
         ['🇫🇯 Fiji', '~930,000', '~USD 6,800', 'The most digitally advanced. International tourism can pay.'],
         ['🇻🇺 Vanuatu', '~320,000', '~USD 3,300', 'Small market, almost no competition.'],

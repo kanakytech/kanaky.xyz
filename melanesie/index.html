@@ -260,146 +260,43 @@
         <ol><li><a href="#une-region-pas-une-collection-de-marches-lointai">Une région, pas une collection de marchés lointains</a></li><li><a href="#les-cinq-marches-sans-enjoliver">Les cinq marchés, sans enjoliver</a></li><li><a href="#des-prix-par-pays-pas-un-tarif-d-auckland">Des prix par pays, pas un tarif d’Auckland</a></li><li><a href="#ce-que-nous-construisons-ici-et-pourquoi">Ce que nous construisons ici, et pourquoi</a></li><li><a href="#d-ou-nous-parlons">D’où nous parlons</a></li></ol>
       </nav>
       
-<div class="km-wrap reveal" style="margin:44px 0;">
-  <style>
-    .km-wrap{border:1px solid var(--border);border-radius:18px;background:radial-gradient(120% 90% at 30% 0%,rgba(200,240,96,.06),transparent 62%),#050505;overflow:hidden}
-    .km-head{display:flex;flex-wrap:wrap;gap:14px;align-items:baseline;justify-content:space-between;padding:24px 26px 4px}
-    .km-head h3{font-size:1.15rem;font-weight:600;letter-spacing:-.02em;margin:0;color:var(--white)}
-    .km-legend{display:flex;gap:18px;flex-wrap:wrap;font-size:.78rem;color:var(--grey-3)}
-    .km-legend i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:middle}
-    .km-svg{display:block;width:100%;height:auto}
-    .km-pt{cursor:pointer;opacity:0;animation:kmIn .7s cubic-bezier(.16,1,.3,1) forwards;animation-delay:var(--d)}
-    @keyframes kmIn{to{opacity:1}}
-    .km-core{fill:#6e6e69;transition:fill .3s ease,r .3s cubic-bezier(.16,1,.3,1)}
-    .km-msg .km-core{fill:var(--accent)}
-    .km-home .km-core{fill:#fff}
-    .km-halo{fill:var(--accent);opacity:0;transition:opacity .4s ease}
-    .km-msg .km-halo{opacity:.09;animation:kmPulse 3.4s ease-in-out infinite;animation-delay:var(--d)}
-    @keyframes kmPulse{0%,100%{opacity:.07;transform:scale(1)}50%{opacity:.17;transform:scale(1.13)}}
-    .km-halo{transform-box:fill-box;transform-origin:center}
-    .km-lbl{fill:var(--grey-3);font-size:11.5px;font-family:inherit;text-anchor:middle;pointer-events:none;transition:fill .3s ease}
-    .km-msg .km-lbl{fill:var(--grey-4)}
-    .km-pt:hover .km-core,.km-pt:focus .km-core{r:10;fill:var(--accent)}
-    .km-pt:hover .km-lbl,.km-pt:focus .km-lbl{fill:#fff}
-    .km-pt:hover .km-halo,.km-pt:focus .km-halo{opacity:.26}
-    .km-pt:focus{outline:none}
-    .km-pt:focus .km-core{stroke:#fff;stroke-width:1.5}
-    .km-spear{fill:none;stroke:var(--accent);stroke-width:1.4;stroke-opacity:.42;stroke-dasharray:1400;stroke-dashoffset:1400;animation:kmDraw 2.6s cubic-bezier(.16,1,.3,1) .5s forwards}
-    @keyframes kmDraw{to{stroke-dashoffset:0}}
-    .km-grid{stroke:rgba(255,255,255,.045);stroke-width:1}
-    .km-info{border-top:1px solid var(--border);padding:22px 26px;min-height:104px}
-    .km-info .km-empty{color:var(--grey-3);font-size:.9rem;margin:0}
-    .km-info h4{margin:0 0 3px;font-size:1.05rem;font-weight:600;color:var(--white)}
-    .km-info .km-city{color:var(--grey-3);font-size:.83rem;margin:0 0 14px}
-    .km-stats{display:flex;flex-wrap:wrap;gap:26px;margin-bottom:14px}
-    .km-stats div span{display:block;font-size:.7rem;letter-spacing:.09em;text-transform:uppercase;color:var(--grey-3);margin-bottom:3px}
-    .km-stats div b{font-weight:500;color:var(--grey-4);font-size:.94rem}
-    .km-foot{padding:0 26px 20px;color:var(--grey-3);font-size:.78rem;line-height:1.6}
-    @media(max-width:640px){.km-lbl{font-size:14px}.km-head{padding:20px 18px 4px}.km-info,.km-foot{padding-left:18px;padding-right:18px}}
-    @media(prefers-reduced-motion:reduce){.km-pt{opacity:1;animation:none}.km-msg .km-halo{animation:none}.km-spear{stroke-dashoffset:0;animation:none}}
+<style>
+    .km2-wrap{border:1px solid var(--border);border-radius:18px;background:radial-gradient(120% 90% at 30% 0%,rgba(200,240,96,.06),transparent 62%),#050505;overflow:hidden;margin:44px 0}
+    .km2-head{display:flex;flex-wrap:wrap;gap:14px;align-items:baseline;justify-content:space-between;padding:24px 26px 10px}
+    .km2-head h3{font-size:1.15rem;font-weight:600;letter-spacing:-.02em;margin:0;color:var(--white)}
+    .km2-legend{display:flex;gap:18px;flex-wrap:wrap;font-size:.78rem;color:var(--grey-3)}
+    .km2-legend i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:middle}
+    .km2-stage{position:relative;width:100%}
+    .km2-stage canvas{display:block;width:100%}
+    .km2-lbl{position:absolute;transform:translate(-50%,-170%);background:none;border:none;cursor:pointer;font-family:inherit;font-size:11.5px;color:var(--grey-3);padding:4px 8px;border-radius:8px;transition:color .3s ease,background .3s ease;white-space:nowrap}
+    .km2-lbl.is-msg{color:var(--grey-4)}
+    .km2-lbl.is-home{color:var(--white);font-weight:600}
+    .km2-lbl:hover,.km2-lbl:focus-visible{color:var(--accent);background:rgba(200,240,96,.07);outline:none}
+    .km2-info{border-top:1px solid var(--border);padding:22px 26px;min-height:104px}
+    .km2-info .km2-empty{color:var(--grey-3);font-size:.9rem;margin:0}
+    .km2-info h4{margin:0 0 3px;font-size:1.05rem;font-weight:600;color:var(--white)}
+    .km2-info .km2-city{color:var(--grey-3);font-size:.83rem;margin:0 0 14px}
+    .km2-stats{display:flex;flex-wrap:wrap;gap:26px;margin-bottom:14px}
+    .km2-stats div span{display:block;font-size:.7rem;letter-spacing:.09em;text-transform:uppercase;color:var(--grey-3);margin-bottom:3px}
+    .km2-stats div b{font-weight:500;color:var(--grey-4);font-size:.94rem}
+    .km2-foot{padding:0 26px 20px;color:var(--grey-3);font-size:.78rem;line-height:1.6;margin:0}
+    @media(max-width:640px){.km2-lbl{font-size:13px}.km2-head,.km2-info{padding-left:18px;padding-right:18px}.km2-foot{padding-left:18px;padding-right:18px}}
   </style>
-
-  <div class="km-head">
+<div class="km2-wrap reveal" data-lang="fr">
+  <div class="km2-head">
     <h3>Le fer de lance mélanésien</h3>
-    <div class="km-legend">
+    <div class="km2-legend">
       <span><i style="background:var(--accent)"></i>Membres du Groupe fer de lance mélanésien</span>
-      <span><i style="background:#6e6e69"></i>Autres marchés desservis</span>
+      <span><i style="background:#8c8c86"></i>Autres marchés desservis</span>
     </div>
   </div>
-
-  <svg class="km-svg" viewBox="0 0 1000 560" role="img" aria-label="Le fer de lance mélanésien">
-    <g class="km-grid">
-      <line x1="62" y1="134.7" x2="938" y2="134.7"/><line x1="62" y1="255.8" x2="938" y2="255.8"/><line x1="62" y1="376.9" x2="938" y2="376.9"/>
-      <line x1="178.8" y1="62" x2="178.8" y2="498"/><line x1="354.0" y1="62" x2="354.0" y2="498"/><line x1="529.2" y1="62" x2="529.2" y2="498"/><line x1="704.4" y1="62" x2="704.4" y2="498"/><line x1="879.6" y1="62" x2="879.6" y2="498"/>
-    </g>
-    <path class="km-spear" d="M145.9,127.9 L295.0,127.8 L392.8,228.3 L370.9,283.3"/>
-    <path class="km-spear" d="M392.8,228.3 L511.0,233.3" style="animation-delay:1.9s"/>
-      <g class="km-pt km-msg" data-id="png" tabindex="0" role="button"
-         aria-label="Papouasie-Nouvelle-Guinée" style="--d:0.00s">
-        <circle class="km-halo" cx="145.9" cy="127.9" r="18.2"/>
-        <circle class="km-core" cx="145.9" cy="127.9" r="7"/>
-        <text class="km-lbl" x="145.9" y="109.9">Papouasie-Nouvelle-Guinée</text>
-      </g>
-      <g class="km-pt km-msg" data-id="sol" tabindex="0" role="button"
-         aria-label="Îles Salomon" style="--d:0.09s">
-        <circle class="km-halo" cx="295.0" cy="127.8" r="18.2"/>
-        <circle class="km-core" cx="295.0" cy="127.8" r="7"/>
-        <text class="km-lbl" x="295.0" y="109.8">Îles Salomon</text>
-      </g>
-      <g class="km-pt km-msg" data-id="vut" tabindex="0" role="button"
-         aria-label="Vanuatu" style="--d:0.18s">
-        <circle class="km-halo" cx="392.8" cy="228.3" r="18.2"/>
-        <circle class="km-core" cx="392.8" cy="228.3" r="7"/>
-        <text class="km-lbl" x="392.8" y="210.3">Vanuatu</text>
-      </g>
-      <g class="km-pt km-msg km-home" data-id="ncl" tabindex="0" role="button"
-         aria-label="Nouvelle-Calédonie" style="--d:0.27s">
-        <circle class="km-halo" cx="370.9" cy="283.3" r="18.2"/>
-        <circle class="km-core" cx="370.9" cy="283.3" r="7"/>
-        <text class="km-lbl" x="370.9" y="265.3">Nouvelle-Calédonie</text>
-      </g>
-      <g class="km-pt km-msg" data-id="fji" tabindex="0" role="button"
-         aria-label="Fidji" style="--d:0.36s">
-        <circle class="km-halo" cx="511.0" cy="233.3" r="18.2"/>
-        <circle class="km-core" cx="511.0" cy="233.3" r="7"/>
-        <text class="km-lbl" x="511.0" y="215.3">Fidji</text>
-      </g>
-      <g class="km-pt" data-id="nzl" tabindex="0" role="button"
-         aria-label="Nouvelle-Zélande" style="--d:0.45s">
-        <circle class="km-halo" cx="468.0" cy="459.9" r="11.700000000000001"/>
-        <circle class="km-core" cx="468.0" cy="459.9" r="4.5"/>
-        <text class="km-lbl" x="468.0" y="444.4">Nouvelle-Zélande</text>
-      </g>
-      <g class="km-pt" data-id="aus" tabindex="0" role="button"
-         aria-label="Australie" style="--d:0.54s">
-        <circle class="km-halo" cx="192.9" cy="423.8" r="11.700000000000001"/>
-        <circle class="km-core" cx="192.9" cy="423.8" r="4.5"/>
-        <text class="km-lbl" x="192.9" y="408.3">Australie</text>
-      </g>
-      <g class="km-pt" data-id="wlf" tabindex="0" role="button"
-         aria-label="Wallis-et-Futuna" style="--d:0.63s">
-        <circle class="km-halo" cx="573.9" cy="174.4" r="11.700000000000001"/>
-        <circle class="km-core" cx="573.9" cy="174.4" r="4.5"/>
-        <text class="km-lbl" x="573.9" y="158.9">Wallis-et-Futuna</text>
-      </g>
-      <g class="km-pt" data-id="pyf" tabindex="0" role="button"
-         aria-label="Polynésie française" style="--d:0.72s">
-        <circle class="km-halo" cx="886.4" cy="227.3" r="11.700000000000001"/>
-        <circle class="km-core" cx="886.4" cy="227.3" r="4.5"/>
-        <text class="km-lbl" x="886.4" y="211.8">Polynésie française</text>
-      </g>
-  </svg>
-
-  <div class="km-info" id="kmInfo"><p class="km-empty">Touchez un territoire pour le détail</p></div>
-  <p class="km-foot">Positions indicatives. La Réunion, dans l’océan Indien, sort du cadre de cette carte.</p>
+  <div class="km2-stage" role="img" aria-label="Le fer de lance mélanésien">
+    <canvas></canvas>
+  </div>
+  <div class="km2-info"><p class="km2-empty">Survolez ou touchez un territoire pour le détail</p></div>
+  <p class="km2-foot">Silhouettes évoquées par particules — positions réelles, contours non cartographiques. La Réunion, dans l’océan Indien, sort du cadre.</p>
 </div>
-<script>
-(function(){
-  var D={"png":{"n":"Papouasie-Nouvelle-Guinée","c":"Port Moresby","p":"10,8 M","g":"~2 630 USD","pr":"Deux bandes — PME/ONG et corporate","u":"/ai-automation-papua-new-guinea/","m":1},"sol":{"n":"Îles Salomon","c":"Honiara","p":"~800 000","g":"~2 200 USD","pr":"Notre tarif régional le plus bas","u":"/ai-automation-solomon-islands/","m":1},"vut":{"n":"Vanuatu","c":"Port-Vila","p":"~320 000","g":"~3 300 USD","pr":"Grille dédiée, dès 35 000 VUV","u":"/automatisation-ia-vanuatu/","m":1},"ncl":{"n":"Nouvelle-Calédonie","c":"Nouméa","p":"~270 000","g":"~34 000 USD","pr":"Tarif reprise, en XPF","u":"/automatisation-ia-nouvelle-caledonie/","m":1},"fji":{"n":"Fidji","c":"Suva","p":"~933 000","g":"~6 800 USD","pr":"Adaptée","u":"/ai-automation-fiji/","m":1},"nzl":{"n":"Nouvelle-Zélande","c":"Auckland","p":"~5,2 M","g":"~48 000 USD","pr":"Tarifs pleins","u":"/ai-automation-new-zealand/","m":0},"aus":{"n":"Australie","c":"Sydney","p":"~26 M","g":"~65 000 USD","pr":"Tarifs pleins","u":"/ai-automation-australia/","m":0},"wlf":{"n":"Wallis-et-Futuna","c":"Mata-Utu","p":"~11 500","g":"—","pr":"Tarifs NC","u":"/automatisation-ia-wallis-et-futuna/","m":0},"pyf":{"n":"Polynésie française","c":"Papeete","p":"~280 000","g":"~22 000 USD","pr":"Tarifs en XPF","u":"/automatisation-ia-tahiti/","m":0}};
-  var L={"pop":"Population","gdp":"PIB / hab","price":"Tarification","visit":"Voir la page"};
-  var box=document.getElementById('kmInfo');
-  if(!box) return;
-  function show(id){
-    var d=D[id]; if(!d) return;
-    box.innerHTML='<h4>'+d.n+'</h4><p class="km-city">'+d.c+'</p>'+
-      '<div class="km-stats">'+
-        '<div><span>'+L.pop+'</span><b>'+d.p+'</b></div>'+
-        '<div><span>'+L.gdp+'</span><b>'+d.g+'</b></div>'+
-        '<div><span>'+L.price+'</span><b>'+d.pr+'</b></div>'+
-      '</div>'+
-      '<a href="'+d.u+'" class="project-link">'+L.visit+' <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>';
-  }
-  document.querySelectorAll('.km-pt').forEach(function(g){
-    var id=g.getAttribute('data-id');
-    g.addEventListener('mouseenter',function(){show(id)});
-    g.addEventListener('focus',function(){show(id)});
-    g.addEventListener('click',function(){show(id)});
-    g.addEventListener('keydown',function(e){
-      if(e.key==='Enter'||e.key===' '){e.preventDefault();var d=D[id];if(d)location.href=d.u}
-    });
-  });
-})();
-</script>
+<script src="/assets/spearhead.js" defer></script>
       <h2 id="une-region-pas-une-collection-de-marches-lointai" class="reveal delay-2 gx-h2">Une région, pas une collection de marchés lointains</h2>
       <p class="reveal">Le <strong style="color:var(--white);font-weight:500;">Melanesian Spearhead Group</strong> réunit depuis 1986 la Papouasie-Nouvelle-Guinée, les Fidji, le Vanuatu, les Îles Salomon et la Nouvelle-Calédonie — représentée par le FLNKS. Son secrétariat siège à Port-Vila. C’est un cadre institutionnel réel, avec des accords commerciaux, pas une catégorie géographique commode.</p>
       <p class="reveal delay-1">Ces territoires partagent des contraintes que les prestataires d’ailleurs traitent comme des exceptions : connectivité qui varie, saisons cycloniques au calendrier, distances entre îles, économies où le tourisme et les ressources pèsent lourd, et des tissus d’entreprises où chacun porte plusieurs métiers.</p>
@@ -408,7 +305,7 @@
       <div class="reveal delay-1 gx-tablewrap">
       <table style="min-width:460px">
         <thead><tr><th>Territoire</th><th>Population</th><th>PIB / habitant</th><th>Ce que ça implique</th></tr></thead>
-        <tbody><tr><td>🇳🇨 Nouvelle-Calédonie</td><td>~270 000</td><td>~34 000 USD</td><td>Notre base. <strong style="color:var(--white);font-weight:500;">Tarif reprise</strong> depuis la crise de 2024.</td></tr><tr><td>🇵🇬 Papouasie-N.-Guinée</td><td>~10,8 M</td><td>~2 630 USD</td><td>Le géant. Économie à deux vitesses : ressources et banques solvables, reste très contraint.</td></tr><tr><td>🇫🇯 Fidji</td><td>~930 000</td><td>~6 800 USD</td><td>Le plus avancé numériquement. Tourisme international solvable.</td></tr><tr><td>🇻🇺 Vanuatu</td><td>~320 000</td><td>~3 300 USD</td><td>Petit marché, quasi zéro concurrence.</td></tr><tr><td>🇸🇧 Îles Salomon</td><td>~800 000</td><td>~2 200 USD</td><td>Le plus contraint. Institutions et ONG plus que PME.</td></tr></tbody>
+        <tbody><tr><td>🇳🇨 Kanaky Nouvelle-Calédonie</td><td>~270 000</td><td>~34 000 USD</td><td>Notre base. <strong style="color:var(--white);font-weight:500;">Tarif reprise</strong> depuis la crise de 2024.</td></tr><tr><td>🇵🇬 Papouasie-N.-Guinée</td><td>~10,8 M</td><td>~2 630 USD</td><td>Le géant. Économie à deux vitesses : ressources et banques solvables, reste très contraint.</td></tr><tr><td>🇫🇯 Fidji</td><td>~930 000</td><td>~6 800 USD</td><td>Le plus avancé numériquement. Tourisme international solvable.</td></tr><tr><td>🇻🇺 Vanuatu</td><td>~320 000</td><td>~3 300 USD</td><td>Petit marché, quasi zéro concurrence.</td></tr><tr><td>🇸🇧 Îles Salomon</td><td>~800 000</td><td>~2 200 USD</td><td>Le plus contraint. Institutions et ONG plus que PME.</td></tr></tbody>
       </table>
     </div>
       <p class="reveal delay-2">Autrement dit : <strong style="color:var(--white);font-weight:500;">la Mélanésie n’est pas un marché homogène et nous ne prétendrons pas le contraire.</strong> Le pouvoir d’achat varie d’un facteur quinze entre Nouméa et Honiara. C’est précisément pourquoi un tarif unique n’a aucun sens.</p>
