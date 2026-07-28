@@ -10,15 +10,15 @@
 
 const T = {
   fr: {
-    label: 'Le fer de lance mélanésien',
-    msg: 'Membres du Groupe fer de lance mélanésien',
+    label: 'La Mélanésie et le Pacifique',
+    msg: 'Mélanésie',
     other: 'Autres marchés desservis',
     hint: 'Survolez ou touchez un territoire pour le détail',
     note: 'Côtes réelles (Natural Earth), simplifiées pour l’écran. La Réunion, dans l’océan Indien, sort du cadre.',
   },
   en: {
-    label: 'The Melanesian Spearhead',
-    msg: 'Melanesian Spearhead Group members',
+    label: 'Melanesia &amp; the Pacific',
+    msg: 'Melanesia',
     other: 'Other markets served',
     hint: 'Hover or tap a territory for detail',
     note: 'Real coastlines (Natural Earth), simplified for screen. Réunion, in the Indian Ocean, falls outside this frame.',
