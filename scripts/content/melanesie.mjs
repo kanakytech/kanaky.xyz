@@ -105,6 +105,7 @@ export default [
     { q: 'Êtes-vous présents dans tous ces pays ?', a: 'Non. Nous travaillons depuis Nouméa et Auckland, à distance, avec des déplacements possibles. Là où une présence physique régulière est déterminante pour vous, un prestataire local est le meilleur choix et nous le disons sur chaque page pays plutôt que de laisser croire le contraire.' },
   ],
   related: [
+    ['/machine-prospection-commerciale/', 'La machine de prospection commerciale'],
     ['/melanesia/', 'This page in English'],
     ['/automatisation-ia-nouvelle-caledonie/', 'Nouvelle-Calédonie'],
     ['/automatisation-ia-vanuatu/', 'Vanuatu'],

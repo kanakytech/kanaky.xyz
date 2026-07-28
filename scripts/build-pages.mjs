@@ -111,7 +111,8 @@ const footer = `  <footer>
       </div>
       <div class="footer-col">
         <h4>Product</h4>
-        <a href="/marketplace/cold-outreach-machine/">Cold Outreach Machine</a>
+        <a href="/machine-prospection-commerciale/">Machine de prospection (FR)</a>
+        <a href="/marketplace/cold-outreach-machine/">Cold Outreach Machine (EN)</a>
         <a href="/cold-email-software-one-time-payment/">Buy once vs subscribe</a>
         <a href="/self-hosted-cold-email/">Self-hosted cold email</a>
         <a href="/guides/">All guides</a>
@@ -316,7 +317,7 @@ ${footer}
 }
 
 /* ── build ── */
-const modules = ['outreach', 'legal', 'alternatives', 'local-ai', 'industries', 'automation', 'locations', 'fr', 'pacifique', 'gang-pacifique', 'melanesie', 'engagement'];
+const modules = ['outreach', 'legal', 'alternatives', 'local-ai', 'industries', 'automation', 'locations', 'fr', 'pacifique', 'gang-pacifique', 'melanesie', 'engagement', 'produit-fr'];
 let pages = [];
 for (const m of modules) {
   const f = path.join(HERE, 'content', `${m}.mjs`);

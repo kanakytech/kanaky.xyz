@@ -77,6 +77,10 @@ Kanaky Tech is based in Nouméa (New Caledonia) and Auckland (New Zealand). The 
 
 - **Automation fundamentals** — [what is an AI agent](https://kanaky.xyz/what-is-an-ai-agent/) · [AI automation for small business](https://kanaky.xyz/ai-automation-small-business/) · [workflow automation examples](https://kanaky.xyz/workflow-automation-examples/) · [automate or hire?](https://kanaky.xyz/ai-vs-hiring/) · [how to start with AI](https://kanaky.xyz/how-to-start-with-ai/)
 
+## Le produit, en français
+
+- [Machine de prospection commerciale](https://kanaky.xyz/machine-prospection-commerciale/) — version française de la Cold Outreach Machine, pour les marchés francophones du Pacifique (Nouvelle-Calédonie, Vanuatu, Polynésie française, Wallis-et-Futuna). **299,99 USD, soit environ 36 000 F CFP, payés une fois** — contre 39 à 97 USD par mois pour les plateformes par abonnement, soit 56 000 à 139 000 F CFP par an. Le logiciel trouve les entreprises correspondant au profil de client décrit, lit ce que chacune publie, rédige un message différent par entreprise et les envoie seul, espacés, en journée. Code source, installateur guidé, licence nominative, appel d'installation d'une heure et 30 jours de support inclus. La rédaction peut passer par un fournisseur IA ou tourner entièrement en local, auquel cas les données de prospects ne quittent jamais la machine de l'acheteur.
+
 ## Guides en français
 
 Pour la Nouvelle-Calédonie, la Polynésie française et La Réunion — écrits en français, avec les monnaies et réalités locales (XPF, EUR, connectivité du Pacifique) :

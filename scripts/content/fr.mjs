@@ -63,6 +63,7 @@ export default [
     { q: 'Le prix est-il différent en Nouvelle-Calédonie ou en Polynésie ?', a: 'Le travail se livre à distance, donc les fourchettes restent proches de la métropole. Ce qui change localement : la fiscalité (TGC, TVA polynésienne), la connectivité — un système qui continue de fonctionner quand la liaison tombe a une valeur particulière dans le Pacifique — et la rareté des prestataires qui connaissent vraiment le terrain.' },
   ],
   related: [
+    ['/machine-prospection-commerciale/', 'La machine de prospection — 36 000 F, une fois'],
     ['/exemples-automatisation-pme/', '10 exemples d’automatisation pour TPE et PME'],
     ['/commencer-avec-ia-entreprise/', 'Par où commencer avec l’IA'],
     ['/automatisation-ia-nouvelle-caledonie/', 'Notre agence en Nouvelle-Calédonie'],
