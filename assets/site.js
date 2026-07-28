@@ -6,17 +6,14 @@
 (function () {
   var isMobile = window.innerWidth <= 768;
 
-  /* ─── CURSOR ─── */
-  var ring = document.getElementById('cursor-ring');
-  if (ring && !isMobile) {
-    document.addEventListener('mousemove', function (e) {
-      ring.style.left = e.clientX + 'px';
-      ring.style.top = e.clientY + 'px';
-    });
-    document.querySelectorAll('a, button, .card, .tag, .faq-q, .contact-card').forEach(function (el) {
-      el.addEventListener('mouseenter', function () { ring.classList.add('active'); });
-      el.addEventListener('mouseleave', function () { ring.classList.remove('active'); });
-    });
+  /* ─── CURSEUR ─── remplacé par la torche (assets/torch.js).
+     Le div .cursor-ring des pages est neutralisé en CSS ; la torche
+     décide elle-même de ses conditions (souris fine, pas de
+     reduced-motion, viewport desktop). */
+  if (!isMobile) {
+    var tj = document.createElement('script');
+    tj.src = '/assets/torch.js'; tj.defer = true;
+    document.head.appendChild(tj);
   }
 
   /* ─── SCROLL REVEAL + COUNTERS ─── */
