@@ -177,7 +177,7 @@ export default [
       '**If off-the-shelf software already solves it** — a bespoke version of something you can subscribe to is a poor trade, whoever builds it.',
       '**If you have not tracked where your hours go** — [do that first](/how-to-start-with-ai/); it is free and it decides everything else.',
     ]},
-    { note: 'We publish [51 guides](/guides/) on outreach, local AI and automation — including the Australian legal pages — because we would rather you arrive knowing what good looks like. An informed client is a better client.' },
+    { note: 'We publish [70+ guides](/guides/) on outreach, local AI and automation — including the Australian legal pages — because we would rather you arrive knowing what good looks like. An informed client is a better client.' },
   ],
   faq: [
     { q: 'Do you work with Australian businesses remotely?', a: 'Yes — from Auckland and Nouméa, which share the Australian east coast working day (two hours ahead of AEST). Audits, builds and support all run remotely. For large rollouts needing on-site presence, a local agency is genuinely the better choice and we say so.' },

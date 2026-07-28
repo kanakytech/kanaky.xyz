@@ -55,7 +55,7 @@ export default [
     { note: '**Un détail qui compte : 10 % de ce que nous encaissons, pas de ce que nous facturons.** Une facture impayée ne déclenche aucun versement. C’est ce qui rend l’engagement tenable plutôt que déclaratif — nous ne promettons pas de l’argent que nous n’avons pas reçu.' },
 
     { h: 'Ce que ça nous coûte vraiment' },
-    'Le mécénat d’entreprise ouvre droit, en Nouvelle-Calédonie, à un crédit d’impôt de 60 % du don — **mais plafonné à 0,5 % du chiffre d’affaires** (code des impôts, articles Lp 37-2 et Lp 136-3). Or nous reversons 10 %, soit vingt fois ce plafond.',
+    'Le mécénat d’entreprise ouvre droit, en Kanaky (Nouvelle-Calédonie), à un crédit d’impôt de 60 % du don — **mais plafonné à 0,5 % du chiffre d’affaires** (code des impôts, articles Lp 37-2 et Lp 136-3). Or nous reversons 10 %, soit vingt fois ce plafond.',
     { table: {
       minWidth: 580,
       head: ['Chiffre d’affaires', 'Don versé (10 %)', 'Crédit d’impôt', 'Coût réel pour nous'],

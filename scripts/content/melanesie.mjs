@@ -94,7 +94,7 @@ export default [
     ]},
 
     { h: 'D’où nous parlons' },
-    'Kanaky Tech est une entreprise calédonienne, immatriculée en Nouvelle-Calédonie, fondée par quelqu’un d’ici. Notre travail le plus visible n’est pas commercial : c’est le [dictionnaire des langues kanak](https://dictionnaire.kanaky.xyz), qui réunit neuf langues, près de vingt mille mots et des enregistrements de locuteurs natifs.',
+    'Kanaky Tech est une entreprise calédonienne, immatriculée en Kanaky (Nouvelle-Calédonie), fondée par quelqu’un d’ici. Notre travail le plus visible n’est pas commercial : c’est le [dictionnaire des langues kanak](https://dictionnaire.kanaky.xyz), qui réunit neuf langues, près de vingt mille mots et des enregistrements de locuteurs natifs.',
     'Nous le mentionnons pour une raison précise. La question de savoir **où vivent les données d’une région — celles des entreprises, des institutions, des langues — et qui les contrôle** n’est pas une question d’infrastructure. C’est une question de pouvoir. Nous avons construit ce dictionnaire en le prenant au sérieux, et nous construisons les systèmes de nos clients de la même façon.',
     { note: 'Nous ne sommes pas présents physiquement dans les cinq territoires — nous travaillons depuis Nouméa et Auckland. Quand un prestataire installé sur place vous servirait mieux, nous le disons. Chaque page pays contient cette réserve, écrite noir sur blanc.' },
   ],
@@ -184,7 +184,7 @@ export default [
     ]},
 
     { h: 'Where we speak from' },
-    'Kanaky Tech is a New Caledonian company, registered in New Caledonia, founded by someone from here. Our most visible work is not commercial: it is the [Kanak languages dictionary](https://dictionnaire.kanaky.xyz), bringing together nine languages, nearly twenty thousand words and native-speaker recordings.',
+    'Kanaky Tech is a New Caledonian company, registered in Kanaky (New Caledonia), founded by someone from here. Our most visible work is not commercial: it is the [Kanak languages dictionary](https://dictionnaire.kanaky.xyz), bringing together nine languages, nearly twenty thousand words and native-speaker recordings.',
     'We mention it for a specific reason. The question of **where a region\'s data lives — its businesses, its institutions, its languages — and who controls it** is not an infrastructure question. It is a question about power. We built that dictionary taking it seriously, and we build our clients\' systems the same way.',
     { note: 'We are not physically present in all five territories — we work from Nouméa and Auckland. Where a locally-based provider would serve you better, we say so. Every country page carries that caveat in writing.' },
   ],
@@ -221,7 +221,7 @@ export default [
     availableChannel: { '@type': 'ServiceChannel', serviceUrl: 'https://kanaky.xyz/ai-automation-papua-new-guinea/', availableLanguage: ['en'] },
   }],
   body: [
-    { lead: 'Papua New Guinea is the giant of Melanesia — around 10.8 million people and a GDP near USD 34 billion — and also its most uneven economy. Understanding that unevenness is the whole difference between automation that pays back and money spent on the wrong thing.' },
+    { lead: 'Papua New Guinea is the giant of Melanesia — around 10.8 million people and a GDP near USD 28 billion — and also its most uneven economy. Understanding that unevenness is the whole difference between automation that pays back and money spent on the wrong thing.' },
 
     { h: 'A two-speed economy, and it matters' },
     'PNG runs on two tracks that barely touch. Resources, banking, telecoms and logistics operate at international standards with budgets to match. Alongside them sits a very large informal and subsistence economy, with GDP per capita around USD 2,630 and infrastructure that varies enormously outside the main centres.',

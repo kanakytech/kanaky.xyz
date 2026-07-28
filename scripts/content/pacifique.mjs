@@ -172,7 +172,7 @@ export default [
       '**L’archivage intelligent** : retrouver un document dans son propre historique en quelques secondes plutôt qu’en une après-midi.',
     ]},
     { h: 'Le fuseau horaire joue pour vous' },
-    'Wallis-et-Futuna est à UTC+12, le même fuseau qu’Auckland, et deux heures d’avance sur Nouméa. Un prestataire calédonien ou néo-zélandais travaille pendant vos heures de bureau — un prestataire métropolitain travaille pendant que vous dormez. Sur un système dont dépend votre activité, cette différence se mesure en jours de blocage.',
+    'Wallis-et-Futuna est à UTC+12, le même fuseau qu’Auckland, et une heure d’avance sur Nouméa. Un prestataire calédonien ou néo-zélandais travaille pendant vos heures de bureau — un prestataire métropolitain travaille pendant que vous dormez. Sur un système dont dépend votre activité, cette différence se mesure en jours de blocage.',
     { h: 'Les prix' },
     { table: {
       minWidth: 460,
@@ -184,13 +184,13 @@ export default [
         ['Accompagnement mensuel', '12 000 – 60 000 F/mois'],
       ],
     }},
-    'Le travail se livre à distance, donc les fourchettes sont les mêmes qu’en Kanaky (Nouvelle-Calédonie). Ce qui change : la pertinence d’une installation locale, et l’absence quasi totale de concurrence sur le Territoire — ce qui veut aussi dire que vous devez être exigeant sur ce qu’on vous vend, faute de pouvoir comparer facilement.',
+    'Le travail se livre à distance, donc les fourchettes sont proches de celles de la métropole — la Kanaky (Nouvelle-Calédonie) bénéficie, elle, d’un tarif reprise spécifique. Ce qui change : la pertinence d’une installation locale, et l’absence quasi totale de concurrence sur le Territoire — ce qui veut aussi dire que vous devez être exigeant sur ce qu’on vous vend, faute de pouvoir comparer facilement.',
     { note: '**Le conseil le plus utile, même si vous ne faites jamais appel à nous :** avant tout projet, observez une semaine où partent vos heures. Ici plus qu’ailleurs, où les équipes sont petites et où chacun fait plusieurs métiers, c’est la seule façon de savoir ce qui mérite d’être automatisé. [La méthode est ici](/commencer-avec-ia-entreprise/), et elle est gratuite.' },
   ],
   faq: [
     { q: 'L’IA est-elle utilisable avec une connexion limitée ?', a: 'Oui, à condition de choisir le bon montage. Un service en ligne s’arrête quand la liaison s’arrête ; un modèle installé sur une machine dans votre bureau continue de traiter vos documents et de rédiger vos réponses. C’est précisément le cas où l’IA locale n’est pas une préférence mais un cahier des charges.' },
     { q: 'Y a-t-il des prestataires sur le Territoire ?', a: 'Très peu, et c’est à double tranchant : peu de choix, mais aussi peu de concurrence pour vous vendre l’inutile. La contrepartie est qu’il faut être exigeant — demandez systématiquement une estimation d’heures gagnées, qui possède le code, et ce qui se passe si vous changez de prestataire.' },
-    { q: 'Faut-il passer par un prestataire de Nouméa ?', a: 'C’est souvent le choix pratique : deux heures de décalage seulement, même monnaie, mêmes références administratives et une culture de travail proche. Un prestataire néo-zélandais partage exactement votre fuseau. Un prestataire métropolitain travaillera pendant votre nuit, ce qui allonge chaque aller-retour d’une journée.' },
+    { q: 'Faut-il passer par un prestataire de Nouméa ?', a: 'C’est souvent le choix pratique : une heure de décalage seulement, même monnaie, mêmes références administratives et une culture de travail proche. Un prestataire néo-zélandais partage exactement votre fuseau. Un prestataire métropolitain travaillera pendant votre nuit, ce qui allonge chaque aller-retour d’une journée.' },
     { q: 'Quel budget pour une petite structure ?', a: 'Un premier workflow utile se situe entre 120 000 et 480 000 F CFP, avec un audit gratuit au départ. Pour une très petite structure, commencer par un seul processus — souvent l’administratif ou les relances — permet de mesurer avant d’engager davantage.' },
   ],
   related: [
