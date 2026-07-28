@@ -93,6 +93,7 @@
             hx: q[0] + (rnd()-0.5)*1.4, hy: q[1] + (rnd()-0.5)*1.4,
             sx: VB.w/2 + (rnd()-0.5)*VB.w*1.3, sy: VB.h/2 + (rnd()-0.5)*VB.h*1.3,
             s: (p.msg ? 1.0 : 0.75) + rnd()*0.75,
+            amp: 0.9 + rnd()*1.5,
             ph: rnd()*Math.PI*2, sp: 0.4 + rnd()*0.8, d: rnd()*0.45 });
         });
         return;
@@ -110,6 +111,7 @@
             hx: cx + ex * cos - ey * sin, hy: cy + ex * sin + ey * cos,
             sx: VB.w / 2 + (rnd() - 0.5) * VB.w * 1.3, sy: VB.h / 2 + (rnd() - 0.5) * VB.h * 1.3,
             s: (p.msg ? 1.15 : 0.85) + rnd() * 0.9,
+            amp: 0.9 + rnd() * 1.5,
             ph: rnd() * Math.PI * 2, sp: 0.4 + rnd() * 0.8,
             d: rnd() * 0.45,
           });
@@ -127,6 +129,17 @@
     var pts = buildParticles();
     var hover = null, t0 = performance.now(), scale = 1, dpr = Math.min(devicePixelRatio || 1, 2);
     var running = false, visible = false, raf = 0;
+
+    /* courants océaniques — poussière lumineuse qui dérive d'ouest en
+     * est à travers tout le cadre, très faible, jamais au premier plan */
+    var rnd2 = mulberry(20260729), cur = [];
+    for (var ci = 0; ci < 64; ci++) {
+      cur.push({
+        x0: rnd2() * VB.w, y0: VB.pad + rnd2() * (VB.h - VB.pad * 2),
+        v: 3.5 + rnd2() * 5.5, wf: 0.15 + rnd2() * 0.3, wa: 4 + rnd2() * 9,
+        s: 0.45 + rnd2() * 0.75, ph: rnd2() * Math.PI * 2, lime: rnd2() < 0.3,
+      });
+    }
 
     /* étiquettes HTML — focusables, elles portent l'accessibilité */
     PLACES.forEach(function (p) {
@@ -187,6 +200,19 @@
       var W = canvas.width, H = canvas.height;
       ctx.clearRect(0, 0, W, H);
 
+      /* courants océaniques (fond, désactivés en reduced-motion) */
+      if (!reduced) {
+        var span = VB.w + 60;
+        for (var k = 0; k < cur.length; k++) {
+          var c0 = cur[k];
+          var cx = ((c0.x0 + t * c0.v) % span + span) % span - 30;
+          var cy = c0.y0 + Math.sin(t * c0.wf + c0.ph) * c0.wa;
+          var ca = (0.045 + 0.05 * (0.5 + 0.5 * Math.sin(t * 0.9 + c0.ph)));
+          ctx.fillStyle = c0.lime ? 'rgba(200,240,96,' + ca.toFixed(3) + ')' : 'rgba(190,190,185,' + ca.toFixed(3) + ')';
+          ctx.beginPath(); ctx.arc(cx * scale * dpr, cy * scale * dpr, c0.s * scale * dpr, 0, 6.2832); ctx.fill();
+        }
+      }
+
       /* grille discrète */
       ctx.strokeStyle = 'rgba(255,255,255,0.035)'; ctx.lineWidth = 1;
       [-10, -20, -30].forEach(function (la) { var y = py(la) * scale * dpr; ctx.beginPath(); ctx.moveTo(VB.pad * scale * dpr, y); ctx.lineTo((VB.w - VB.pad) * scale * dpr, y); ctx.stroke(); });
@@ -211,23 +237,47 @@
       ctx.strokeStyle = 'rgba(200,240,96,0.4)'; ctx.lineWidth = 1.3 * dpr;
       if (lineP > 0) { spearPath(SPEAR, lineP); if (lineP >= 1) spearPath(BRANCH, Math.min(1, (t - 2.9) / 0.8)); }
 
+      /* pulsation d'énergie le long de la lance, une fois tracée */
+      if (!reduced && lineP >= 1 && t > 3.7) {
+        ctx.save();
+        ctx.setLineDash([3 * dpr, 150 * dpr]);
+        ctx.lineDashOffset = -((t * 46) % 153) * dpr;
+        ctx.strokeStyle = 'rgba(200,240,96,0.85)'; ctx.lineWidth = 1.8 * dpr;
+        spearPath(SPEAR, 1); spearPath(BRANCH, 1);
+        ctx.restore();
+      }
+
       /* particules */
       for (var i = 0; i < pts.length; i++) {
         var p = pts[i];
         var e = reduced ? 1 : Math.max(0, Math.min(1, (t - p.d) / 1.5));
         e = 1 - Math.pow(1 - e, 3);
         var x = (p.sx + (p.hx - p.sx) * e), y = (p.sy + (p.hy - p.sy) * e);
-        if (e >= 1 && !reduced) { x += Math.sin(t * p.sp + p.ph) * 0.9; y += Math.cos(t * p.sp * 0.8 + p.ph) * 0.9; }
+        var hot = hover && p.ter === hover;
+        if (e >= 1 && !reduced) {
+          /* dérive normalisée en pixels ÉCRAN (÷scale), sinon elle
+           * devient invisible sur mobile ; excitée au survol */
+          var amp = Math.min(p.amp / Math.max(scale, 0.32), 4.5) * (hot ? 2.1 : 1);
+          var spd = p.sp * (hot ? 1.7 : 1);
+          x += Math.sin(t * spd + p.ph) * amp;
+          y += Math.cos(t * spd * 0.8 + p.ph) * amp;
+        }
         var c = p.msg ? LIME : GREY;
         var alpha = p.msg ? 0.8 : 0.4;
         var size = p.s;
         if (hover) {
-          if (p.ter === hover) { alpha = 1; size *= 1.55; c = p.msg ? WHITE : LIME; }
+          if (hot) { alpha = 1; size *= 1.55; c = p.msg ? WHITE : LIME; }
           else alpha *= 0.22;
         }
         if (!reduced) alpha *= 0.75 + 0.25 * Math.sin(t * 1.7 + p.ph);
+        var X = x * scale * dpr, Y = y * scale * dpr, S = size * scale * dpr;
+        if (hot && !reduced) {
+          /* halo doux derrière les particules du territoire survolé */
+          ctx.fillStyle = 'rgba(200,240,96,0.07)';
+          ctx.beginPath(); ctx.arc(X, Y, S * 2.6, 0, 6.2832); ctx.fill();
+        }
         ctx.fillStyle = 'rgba(' + c[0] + ',' + c[1] + ',' + c[2] + ',' + alpha.toFixed(3) + ')';
-        ctx.beginPath(); ctx.arc(x * scale * dpr, y * scale * dpr, size * scale * dpr, 0, 6.2832); ctx.fill();
+        ctx.beginPath(); ctx.arc(X, Y, S, 0, 6.2832); ctx.fill();
       }
     }
 
