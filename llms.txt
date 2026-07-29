@@ -127,3 +127,6 @@ The piece also states the four developments that would prove the position wrong,
 - https://kanaky.xyz/ia-hotellerie-pensions-polynesie/ — hôtels et pensions de famille en Polynésie
 - https://kanaky.xyz/ia-commerce-papeete/ — commerces de Papeete
 - https://kanaky.xyz/ia-prestataires-nautiques-polynesie/ — plongée, excursions, charter
+
+## Journal — un article de fond par jour
+- https://kanaky.xyz/actualite-ia-pme-pacifique-juillet-2026/ — 2026-07-29 — l'étude Google ATLAS (15 M d'interactions, aucune automatisation massive constatée) et le SMG calédonien à 1 000 F de l'heure : ce que ces chiffres imposent à une PME du Pacifique
