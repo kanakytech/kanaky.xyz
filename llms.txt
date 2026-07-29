@@ -129,5 +129,8 @@ The piece also states the four developments that would prove the position wrong,
 - https://kanaky.xyz/ia-prestataires-nautiques-polynesie/ — plongée, excursions, charter
 
 ## Journal — un article de fond par jour
+- https://kanaky.xyz/journal/ — sommaire du journal, tenu à jour à chaque publication (FR + EN)
+- https://kanaky.xyz/automatiser-sans-attendre-la-fibre/ — 2026-07-30 — pourquoi la fibre parfaite n'est pas une condition pour automatiser : une opération d'automatisation échange ~20 Ko, soit 750 fois moins qu'une minute de visio ; chiffres OPT-NC (63 327 accès fibre fin 2024, 20 des 33 communes, 4G à 99 %), latence réelle Nouméa-Sydney, et les trois cas où le débit décide vraiment
+- https://kanaky.xyz/automation-without-perfect-internet/ — 2026-07-30 — English edition: the bandwidth arithmetic of business automation (~20 KB per operation), OPT-NC fibre and 4G coverage figures, island latency, outage-tolerant design, and the three cases where the connection genuinely decides
 - https://kanaky.xyz/actualite-ia-pme-pacifique-juillet-2026/ — 2026-07-29 — l'étude Google ATLAS (15 M d'interactions, aucune automatisation massive constatée) et le SMG calédonien à 1 000 F de l'heure : ce que ces chiffres imposent à une PME du Pacifique
 - https://kanaky.xyz/ai-news-pacific-smes-july-2026/ — 2026-07-29 — English edition: the Google ATLAS study (15M interactions, no mass automation found) and New Caledonia's 1,000 XPF hourly minimum wage — what these numbers permit a Pacific small business to conclude

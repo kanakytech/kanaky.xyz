@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>You Don't Need Perfect Internet to Automate a Business — The Arithmetic</title>
+  <meta name="description" content="A business automation moves about 20 kilobytes per operation — 750 times less than one minute of video calling. The bandwidth maths, real latency figures from the islands, and the three cases where the connection genuinely decides." />
+  <meta name="keywords" content="automate business slow internet, bandwidth needed for AI automation, island business connectivity, offline AI automation, New Caledonia fibre coverage, Pacific internet latency business" />
+  <link rel="canonical" href="https://kanaky.xyz/automation-without-perfect-internet/" />
+  <link rel="alternate" hreflang="en" href="https://kanaky.xyz/automation-without-perfect-internet/" />
+  <link rel="alternate" hreflang="fr" href="https://kanaky.xyz/automatiser-sans-attendre-la-fibre/" />
+  <link rel="alternate" hreflang="x-default" href="https://kanaky.xyz/automation-without-perfect-internet/" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="You Don't Need Perfect Internet to Automate a Business — The Arithmetic" />
+  <meta property="og:description" content="A business automation moves about 20 kilobytes per operation — 750 times less than one minute of video calling. The bandwidth maths, real latency figures from the islands, and the three cases where the connection genuinely decides." />
+  <meta property="og:url" content="https://kanaky.xyz/automation-without-perfect-internet/" />
+  <meta property="og:site_name" content="Kanaky Tech" />
+  <meta property="og:image" content="https://kanaky.xyz/assets/og/kanaky-tech.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://kanaky.xyz/assets/og/kanaky-tech.png" />
+  <link rel="icon" type="image/jpeg" href="/assets/kanaky-tech-logo.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/kanaky.css">
+  <style>
+    /* ── ambiance héritée de la page produit ── */
+    .gx-hero{position:relative}
+    .gx-hero::before{content:'';position:absolute;top:-140px;left:50%;transform:translateX(-50%);width:min(900px,120vw);height:480px;background:radial-gradient(ellipse at 50% 40%,rgba(200,240,96,.055),transparent 62%);pointer-events:none;z-index:-1}
+    .gx-eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);border:1px solid rgba(200,240,96,.25);border-radius:99px;padding:7px 14px;margin-bottom:26px}
+    .gx-eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent);animation:gxPulse 2.4s ease-in-out infinite}
+    @keyframes gxPulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(200,240,96,.4)}50%{opacity:.65;box-shadow:0 0 0 5px rgba(200,240,96,0)}}
+    .gx-in{opacity:0;transform:translateY(28px);animation:gxRise 1.05s cubic-bezier(.16,1,.3,1) forwards}
+    .gx-in.d1{animation-delay:.12s}.gx-in.d2{animation-delay:.24s}.gx-in.d3{animation-delay:.36s}
+    @keyframes gxRise{to{opacity:1;transform:translateY(0)}}
+    h1.gx-title{letter-spacing:-.04em;line-height:1.06}
+    .gx-h2{position:relative;border-left:none;padding-left:0}
+    .gx-h2::after{content:'';display:block;width:52px;height:2px;margin-top:12px;background:linear-gradient(90deg,var(--accent),rgba(200,240,96,.15))}
+    .gx-note{position:relative;overflow:hidden}
+    .gx-note::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,transparent 32%,rgba(255,255,255,.045) 46%,transparent 60%);background-size:220% 100%;animation:gxSheen 7s ease-in-out 1.4s infinite;pointer-events:none}
+    @keyframes gxSheen{0%{background-position:130% 0}45%,100%{background-position:-60% 0}}
+    .gx-card{background:linear-gradient(180deg,rgba(200,240,96,.03),transparent 65%)}
+    .gx-card:hover{box-shadow:0 14px 40px -18px rgba(200,240,96,.14)}
+    .gx-steps li:hover .gx-num{background:var(--accent);color:#050505;border-color:var(--accent);transition:all .35s cubic-bezier(.16,1,.3,1)}
+    .gx-tablewrap{background:linear-gradient(180deg,rgba(255,255,255,.012),transparent)}
+    .gx-tablewrap tbody tr{transition:background .3s ease}
+    .gx-tablewrap tbody tr:hover{background:rgba(200,240,96,.035)}
+    .gx-toc a{position:relative}
+    .gx-toc a:hover{padding-left:4px;transition:all .3s cubic-bezier(.16,1,.3,1)}
+    @media(prefers-reduced-motion:reduce){.gx-in{opacity:1;transform:none;animation:none}.gx-eyebrow::before{animation:none}.gx-note::after{animation:none}}
+    .gx-lead{font-size:1.17rem;color:var(--white);font-weight:300;line-height:1.72;margin-bottom:34px}
+    .gx-h2{color:var(--white);font-size:1.55rem;font-weight:600;letter-spacing:-.025em;margin:56px 0 18px;padding-left:16px;border-left:2px solid var(--accent);scroll-margin-top:96px}
+    .gx-h3{color:var(--white);font-size:1.12rem;font-weight:600;margin:34px 0 12px}
+    .gx-list{list-style:none;padding:0;margin:22px 0}
+    .gx-list li{display:flex;gap:12px;margin-bottom:13px;line-height:1.8}
+    .gx-list li>i{flex:none;color:var(--accent);opacity:.75;margin-top:6px;line-height:0}
+    .gx-steps{list-style:none;padding:0;margin:26px 0;counter-reset:gx}
+    .gx-steps li{display:flex;gap:18px;padding:18px 0;border-top:1px solid var(--border);line-height:1.75}
+    .gx-steps li:last-child{border-bottom:1px solid var(--border)}
+    .gx-num{flex:none;counter-increment:gx;width:26px;height:26px;border-radius:50%;border:1px solid rgba(200,240,96,.3);color:var(--accent);display:grid;place-items:center;font-size:.78rem;font-variant-numeric:tabular-nums;margin-top:2px}
+    .gx-num::before{content:counter(gx)}
+    .gx-tablewrap{border:1px solid var(--border);border-radius:14px;overflow-x:auto;margin:28px 0}
+    .gx-tablewrap table{width:100%;border-collapse:collapse;font-size:.94rem}
+    .gx-tablewrap th{text-align:left;padding:15px 20px;font-weight:600;color:var(--white);border-bottom:1px solid var(--border);white-space:nowrap}
+    .gx-tablewrap td{padding:14px 20px;border-bottom:1px solid rgba(255,255,255,.04)}
+    .gx-tablewrap td:first-child{color:var(--white)}
+    .gx-tablewrap tr:last-child td{border-bottom:none}
+    .gx-note{display:flex;gap:14px;margin:32px 0;padding:20px 22px;border-radius:14px;border:1px solid rgba(200,240,96,.16);background:linear-gradient(180deg,rgba(200,240,96,.05),transparent 70%);line-height:1.78}
+    .gx-note>i{flex:none;color:var(--accent);margin-top:3px;line-height:0}
+    .gx-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin:30px 0}
+    .gx-card{border:1px solid var(--border);border-radius:14px;padding:24px;transition:border-color .4s ease,transform .4s cubic-bezier(.16,1,.3,1)}
+    .gx-card:hover{border-color:rgba(200,240,96,.28);transform:translateY(-2px)}
+    .gx-card>i{color:var(--accent);opacity:.8;line-height:0;display:block;margin-bottom:12px}
+    .gx-card h4{margin:0 0 9px;font-size:1rem;font-weight:600;color:var(--white)}
+    .gx-card p{margin:0;font-size:.93rem;line-height:1.7}
+    .gx-code{background:var(--grey-1);border:1px solid var(--border);border-radius:12px;padding:20px;overflow-x:auto;margin:24px 0}
+    .gx-code code{font-size:.88rem;line-height:1.7;color:var(--grey-4)}
+    .gx-toc{margin:34px 0 44px;padding:22px 24px;border:1px solid var(--border);border-radius:14px;background:rgba(255,255,255,.012)}
+    .gx-toc-head{display:flex;align-items:center;gap:9px;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--grey-3);margin-bottom:14px}
+    .gx-toc-head i{color:var(--accent);line-height:0}
+    .gx-toc ol{margin:0;padding-left:20px;color:var(--grey-3)}
+    .gx-toc li{margin-bottom:8px;line-height:1.6}
+    .gx-toc a{color:var(--grey-4);text-decoration:none;transition:color .25s ease}
+    .gx-toc a:hover{color:var(--accent)}
+    .gx-faq{border-top:1px solid var(--border);padding:24px 0}
+    .gx-faq:last-of-type{border-bottom:1px solid var(--border)}
+    .gx-faq h3{font-size:1.03rem;font-weight:600;margin:0 0 10px;color:var(--white)}
+    .gx-faq p{margin:0;line-height:1.78}
+    @media(max-width:640px){.gx-h2{font-size:1.35rem;margin-top:44px}.gx-lead{font-size:1.08rem}}
+  </style>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://kanaky.xyz/automation-without-perfect-internet/#article",
+      "headline": "Perfect internet is not a prerequisite. Here is the arithmetic.",
+      "description": "A business automation moves about 20 kilobytes per operation — 750 times less than one minute of video calling. The bandwidth maths, real latency figures from the islands, and the three cases where the connection genuinely decides.",
+      "datePublished": "2026-07-30",
+      "dateModified": "2026-07-30",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Person",
+        "name": "Kevyn Wahuzue",
+        "url": "https://www.linkedin.com/in/kevyn-wahuzue/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Kanaky Tech",
+        "url": "https://kanaky.xyz/"
+      },
+      "mainEntityOfPage": "https://kanaky.xyz/automation-without-perfect-internet/",
+      "image": [
+        "https://kanaky.xyz/assets/og/kanaky-tech.png"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://kanaky.xyz/automation-without-perfect-internet/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What connection speed does automating a small business actually require?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For text-based automations — quotes, payment chasing, email triage, customer replies — a few hundred kilobits per second is enough, and decent 4G will do. The stable 4 Mbps threshold is mostly about comfort for the people supervising. Bandwidth only becomes a design criterion for video calling, syncing large files, and sending audio or images to a remote model."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if the connection drops mid-job?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nothing should be lost, provided it was designed for. A properly built automation queues its operations, retries automatically after an outage, and resumes where it stopped. That is a requirement to set before signing rather than an extra to bolt on afterwards — and it does not cost more."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the Pacific genuinely badly served for connectivity?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Less than the reputation suggests, at least in Kanaky (New Caledonia). OPT-NC reports 63,327 fibre accesses created by the end of 2024, a 81 per cent connection rate on fixed lines, and availability in 20 of 33 communes in the first quarter of 2025, covering 97 per cent of fixed-service households and businesses. Add the Gondwana-2 cable to Fiji, in service since 25 August 2022, which removed the single point of failure to the outside world."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should a business with a poor line run AI locally instead?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is a trade-off, not an obvious call. Locally you gain independence from the network and control of your data; you lose reasoning power against the largest remote models, and you take on a machine to look after. Where the line is poor or the data sensitive, the trade-off tilts clearly toward local. Otherwise, an asynchronous design is enough to make the network non-blocking."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Kanaky Tech",
+          "item": "https://kanaky.xyz/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://kanaky.xyz/guides/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Journal · Connectivity",
+          "item": "https://kanaky.xyz/automation-without-perfect-internet/"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "headline": "You Don't Need Perfect Internet to Automate a Business — The Arithmetic",
+      "datePublished": "2026-07-30",
+      "author": {
+        "@id": "https://kanaky.xyz/#kevyn"
+      },
+      "publisher": {
+        "@id": "https://kanaky.xyz/#organization"
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <div class="cursor-ring" id="cursor-ring"></div>
+  <nav>
+    <a href="/" class="logo-mark">
+      <img class="logo-img" src="/assets/kanaky-tech-logo.jpg" alt="Kanaky Tech logo" />
+      <span class="logo-text">Kanaky Tech</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/ai-audit/">AI Audit</a></li>
+      <li><a href="/guides/">Guides</a></li>
+      <li><a href="/marketplace/">Marketplace</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/contact/" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="/#services">Services</a>
+    <a href="/ai-audit/">AI Audit</a>
+    <a href="/guides/">Guides</a>
+    <a href="/marketplace/">Marketplace</a>
+    <a href="/blog/">Blog</a>
+    <a href="/contact/">Contact</a>
+  </div>
+
+  <section class="section gx-hero" style="padding-top:140px;max-width:820px;margin:0 auto;">
+    <div class="gx-eyebrow gx-in">Journal</div>
+    <h1 class="gx-in d1 gx-title" style="font-size:clamp(1.9rem,4.4vw,3rem);font-weight:700;margin:0 0 26px;">Perfect internet is not a prerequisite. <span style="color:var(--grey-4);font-weight:300;">Here is the arithmetic.</span></h1>
+
+    <div class="reveal delay-1" style="color:var(--grey-4);font-size:1.06rem;line-height:1.85;">
+      <p class="reveal gx-lead">One sentence turns up in nearly every first conversation, whether the business is in Nouméa, Port Vila or a shed outside Whangārei: we will look at this once we have a better connection. It is offered in good faith, and it rests on a measurement error. A business automation does not move video, it moves text — and the gap between those two is a factor of a thousand.</p>
+      <nav class="gx-toc reveal" aria-label="On this page">
+        <div class="gx-toc-head"><i><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></i>On this page</div>
+        <ol><li><a href="#what-an-automation-actually-weighs">What an automation actually weighs</a></li><li><a href="#the-island-constraint-is-latency-not-bandwidth">The island constraint is latency, not bandwidth</a></li><li><a href="#the-state-of-the-network-in-published-figures">The state of the network, in published figures</a></li><li><a href="#the-real-risk-is-the-outage-not-the-slowness">The real risk is the outage, not the slowness</a></li><li><a href="#the-three-cases-where-the-objection-holds">The three cases where the objection holds</a></li><li><a href="#what-to-check-before-starting">What to check before starting</a></li></ol>
+      </nav>
+      <h2 id="what-an-automation-actually-weighs" class="reveal delay-1 gx-h2">What an automation actually weighs</h2>
+      <p class="reveal delay-2">Take the most ordinary task there is: a system that drafts a payment reminder, sends it, and records what it did. What crosses the network is the request sent to the model and the answer that comes back — say 3,000 words of context and 700 words of reply. In characters, roughly twenty kilobytes for the round trip. No video, no images, no attachments.</p>
+      <p class="reveal">Now set that against what your line already carries without complaint. One minute of high-definition video calling moves about <strong style="color:var(--white);font-weight:500;">15 megabytes</strong>. So a single minute on a video call shifts as much data as <strong style="color:var(--white);font-weight:500;">750 payment reminders</strong>. A 4K film, at fifteen gigabytes, is worth seven hundred and fifty thousand of them. A system handling two hundred operations a day consumes roughly four megabytes daily — a quarter of one minute of video, spread across eight hours.</p>
+      <h2 id="the-island-constraint-is-latency-not-bandwidth" class="reveal delay-1 gx-h2">The island constraint is latency, not bandwidth</h2>
+      <p class="reveal delay-2">Response time is the genuinely island-specific question. Gondwana-1, the first submarine cable serving Kanaky (New Caledonia), runs 2,080 kilometres from Nouméa to Sydney and entered service in September 2008. Light in fibre travels about 200,000 kilometres per second, which puts the physical round trip to Sydney at roughly twenty milliseconds — thirty to forty in practice, once the equipment along the way is counted. To a data centre on the US west coast, budget 150 to 200 milliseconds.</p>
+      <p class="reveal">Two hundred milliseconds on an operation nobody is watching has no consequence whatsoever. A quote formatted in eleven seconds rather than nine changes nobody's day. Latency only bites when a human is waiting at a screen — and most of what gets automated in a small business happens with nobody at a screen at all. That is the property worth hunting for: asynchronous work is indifferent to geography.</p>
+      <h2 id="the-state-of-the-network-in-published-figures" class="reveal delay-1 gx-h2">The state of the network, in published figures</h2>
+      <p class="reveal delay-2">It also helps to argue from figures rather than impressions. According to OPT-NC, the territory's operator, <strong style="color:var(--white);font-weight:500;">63,327 fibre accesses</strong> had been created by the end of 2024, more than 8,600 of them during that year alone, for a <strong style="color:var(--white);font-weight:500;">81 per cent</strong> connection rate across the fixed-line base. Fibre was available in <strong style="color:var(--white);font-weight:500;">20 of 33 communes</strong> in the first quarter of 2025, and those twenty account for <strong style="color:var(--white);font-weight:500;">97 per cent</strong> of the households and businesses using fixed services. On mobile: 537 active sites as of April 2025, with 4G coverage reported at <strong style="color:var(--white);font-weight:500;">99 per cent of the population</strong>.</p>
+      <p class="reveal">Which means the business waiting for fibre usually already has it, and the one that does not has 4G that comfortably clears the twenty-kilobyte bar described above. The region has also stopped hanging by a single thread. As reported by Outremers360, Gondwana-2 — linking Nouméa to Fiji — and the domestic Picot-2 cable entered service on <strong style="color:var(--white);font-weight:500;">25 August 2022</strong> at a final cost of 4.675 billion XPF. Before that date, one break cut the territory off. That is no longer true.</p>
+      <h2 id="the-real-risk-is-the-outage-not-the-slowness" class="reveal delay-1 gx-h2">The real risk is the outage, not the slowness</h2>
+      <p class="reveal delay-2">One serious objection remains: networks go down. They do here, as they do everywhere. But that risk is not managed by waiting for more bandwidth — it is managed at design time, and it costs nothing extra.</p>
+      <p class="reveal">A fragile system is one that insists on being online at the exact moment you use it. A sound system queues the work, retries by itself, and picks up where it stopped when the line comes back. That is a configuration decision, not a capital expense. We build automations that way for a plain reason: the question is never whether the connection will drop, only when — and what happens in the meantime.</p>
+      <div class="reveal delay-1 gx-tablewrap">
+      <table style="min-width:460px">
+        <thead><tr><th>What the system does</th><th>Data moved</th><th>What fibre changes</th></tr></thead>
+        <tbody><tr><td>Draft and send a payment reminder</td><td>~20 KB per reminder</td><td>Nothing</td></tr><tr><td>Turn notes into a four-page quote</td><td>~60 KB</td><td>Nothing</td></tr><tr><td>Sort and route 200 emails a day</td><td>~4 MB per day</td><td>Nothing</td></tr><tr><td>Transcribe a one-hour meeting</td><td>~30 MB of audio</td><td>Helpful, not required</td></tr><tr><td>Video call with a client in Auckland</td><td>1.5 Mbps sustained</td><td>Yes, genuinely</td></tr><tr><td>Model running on a machine in the office</td><td>0 after install</td><td>Nothing at all</td></tr></tbody>
+      </table>
+    </div>
+      <h2 id="the-three-cases-where-the-objection-holds" class="reveal delay-2 gx-h2">The three cases where the objection holds</h2>
+      <p class="reveal">It would be dishonest to claim bandwidth never matters. Three uses depend on it. Video calling, which needs a sustained stream and forgives jitter badly. Syncing large files — drawings, site photography, video rushes. And sending audio or images to a remote model: an hour of meeting audio to transcribe weighs about thirty megabytes, fifteen hundred times a payment reminder. If your project lives there, the line is a real constraint.</p>
+      <p class="reveal delay-1">There is also an answer that removes the question entirely. A model installed on <a href="/run-ai-locally-business/" style="color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(200,240,96,0.3);">a machine sitting inside the business</a> uses no bandwidth at all once downloaded: it keeps working through the outage, and the documents never leave the building. It is not the right answer everywhere — the reasoning power available locally still trails the largest remote models. It is the right answer when the line is genuinely poor, or the data genuinely sensitive.</p>
+      <h2 id="what-to-check-before-starting" class="reveal delay-2 gx-h2">What to check before starting</h2>
+      <ol class="reveal gx-steps">
+        <li><span class="gx-num"></span><div>Measure instead of guessing. Run a speed test at the hour your team actually works, three days running. Below a stable 4 Mbps some uses get uncomfortable; above it, bandwidth is no longer your problem.</div></li>
+        <li><span class="gx-num"></span><div>List the candidate tasks and mark, for each one, whether a human is waiting on the answer. The ones where nobody waits are insensitive to the network. Start there, without exception.</div></li>
+        <li><span class="gx-num"></span><div>Insist on the queue. Every automation must be able to fail, wait and resume unattended. A supplier who cannot answer that question has answered a different one about themselves.</div></li>
+        <li><span class="gx-num"></span><div>Separate the sensitive data. Accounts, medical records, identity documents: whatever must not leave can be processed on the premises, regardless of what the network is doing.</div></li></ol>
+      <aside class="reveal delay-1 gx-note"><i><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></i><div>Waiting for perfect fibre before automating is waiting for a runway before riding a bicycle. OPT-NC's own figures say the network already reaches the large majority of businesses in the territory, and the arithmetic says these automations needed a thousand times less than assumed. What is missing is almost never bandwidth. It is the choice of the three tasks, and a design that survives an outage.</div></aside>
+
+      <h2 style="color:var(--white);font-size:1.55rem;font-weight:600;letter-spacing:-0.025em;margin:56px 0 8px;">Common questions</h2>
+      <div class="gx-faq reveal">
+        <h3>What connection speed does automating a small business actually require?</h3>
+        <p>For text-based automations — quotes, payment chasing, email triage, customer replies — a few hundred kilobits per second is enough, and decent 4G will do. The stable 4 Mbps threshold is mostly about comfort for the people supervising. Bandwidth only becomes a design criterion for video calling, syncing large files, and sending audio or images to a remote model.</p>
+      </div>
+      <div class="gx-faq reveal delay-1">
+        <h3>What happens if the connection drops mid-job?</h3>
+        <p>Nothing should be lost, provided it was designed for. A properly built automation queues its operations, retries automatically after an outage, and resumes where it stopped. That is a requirement to set before signing rather than an extra to bolt on afterwards — and it does not cost more.</p>
+      </div>
+      <div class="gx-faq reveal delay-2">
+        <h3>Is the Pacific genuinely badly served for connectivity?</h3>
+        <p>Less than the reputation suggests, at least in Kanaky (New Caledonia). OPT-NC reports 63,327 fibre accesses created by the end of 2024, a 81 per cent connection rate on fixed lines, and availability in 20 of 33 communes in the first quarter of 2025, covering 97 per cent of fixed-service households and businesses. Add the Gondwana-2 cable to Fiji, in service since 25 August 2022, which removed the single point of failure to the outside world.</p>
+      </div>
+      <div class="gx-faq reveal">
+        <h3>Should a business with a poor line run AI locally instead?</h3>
+        <p>It is a trade-off, not an obvious call. Locally you gain independence from the network and control of your data; you lose reasoning power against the largest remote models, and you take on a machine to look after. Where the line is poor or the data sensitive, the trade-off tilts clearly toward local. Otherwise, an asynchronous design is enough to make the network non-blocking.</p>
+      </div>
+
+      <div style="border-top:1px solid var(--border);margin-top:52px;padding-top:30px;">
+        <div style="color:var(--grey-3);font-size:0.8rem;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:18px;">Keep reading</div>
+        <a href="/local-ai-vs-cloud-ai/" class="project-link" style="display:block;margin-bottom:14px;">Local AI vs cloud AI — an honest comparison <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="/local-llm-hardware-requirements/" class="project-link" style="display:block;margin-bottom:14px;">Local LLM hardware — what you actually need <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="/ai-automation-small-business/" class="project-link" style="display:block;margin-bottom:14px;">AI automation for small business: what to do first <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2 class="reveal">Find out what AI<br/>can do for you.</h2>
+    <p class="reveal delay-1">Kanaky Tech is an AI automation agency working across New Zealand and the Pacific. Start with a free AI opportunity audit: we map how your business actually runs, rank what is worth automating, and give you a clear scope before anything is built — no obligation.</p>
+    <div class="cta-actions reveal delay-2">
+      <a href="/ai-audit/" class="btn-primary">Book a free AI audit
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="/ai-automation-new-zealand/" class="btn-ghost">AI automation in New Zealand</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="logo-mark"><img class="logo-img" src="/assets/kanaky-tech-logo.jpg" alt="Kanaky Tech logo" /><span class="logo-text">Kanaky Tech</span></a>
+        <p>The Pacific's AI automation &amp; agent development studio. We build AI agents and automate business processes for SMEs, agencies and institutions across Kanaky (New Caledonia), New Zealand and the Pacific.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="/machine-prospection-commerciale/">Machine de prospection (FR)</a>
+        <a href="/marketplace/cold-outreach-machine/">Cold Outreach Machine (EN)</a>
+        <a href="/cold-email-software-one-time-payment/">Buy once vs subscribe</a>
+        <a href="/self-hosted-cold-email/">Self-hosted cold email</a>
+        <a href="/guides/">All guides</a>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="/business-process-automation/">Business Process Automation</a>
+        <a href="/ai-agents-new-caledonia/">AI Agent Development</a>
+        <a href="/private-ai-systems/">Private AI Systems</a>
+        <a href="/ai-audit/">AI Opportunity Audit</a>
+      </div>
+      <div class="footer-col">
+        <h4>Mélanésie</h4>
+        <a href="/melanesie/">Toute la Mélanésie · Melanesia</a>
+        <a href="/automatisation-ia-nouvelle-caledonie/">Kanaky (Nouvelle-Calédonie)</a>
+        <a href="/ai-automation-papua-new-guinea/">Papua New Guinea</a>
+        <a href="/ai-automation-fiji/">Fiji</a>
+        <a href="/automatisation-ia-vanuatu/">Vanuatu</a>
+        <a href="/ai-automation-solomon-islands/">Solomon Islands</a>
+      </div>
+      <div class="footer-col">
+        <h4>Aussi</h4>
+        <a href="/ai-automation-new-zealand/">New Zealand</a>
+        <a href="/ai-automation-agency-auckland/">Auckland</a>
+        <a href="/ai-automation-australia/">Australia</a>
+        <a href="/automatisation-ia-tahiti/">Tahiti</a>
+        <a href="/automatisation-ia-la-reunion/">La Réunion</a>
+        <a href="/automatisation-ia-wallis-et-futuna/">Wallis-et-Futuna</a>
+      </div>
+      <div class="footer-col">
+        <h4>Écosystème</h4>
+        <a href="https://dictionnaire.kanaky.xyz" target="_blank" rel="noopener">Dictionnaire langues kanak</a>
+        <a href="https://studio.keou.systems" target="_blank" rel="noopener">Keou Studio</a>
+        <a href="/marketplace/">Marketplace</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="/#about">About</a>
+        <a href="/case-studies/">Case Studies</a>
+        <a href="/blog/">Blog</a>
+        <a href="/engagement-local/">Les 10 % reversés</a>
+        <a href="/contact/">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Kanaky Tech · Nouméa · Auckland · kanaky.xyz</span>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/company/kanaky-tech" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="https://github.com/kanakytech" target="_blank" rel="noopener" aria-label="GitHub"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg></a>
+        <a href="mailto:kevyn@kanaky.xyz" aria-label="Email"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></a>
+      </div>
+    </div>
+  </footer>
+  <script src="/assets/site.js"></script>
+<script src="/assets/ecosystem.js" defer></script>
+</body>
+</html>
