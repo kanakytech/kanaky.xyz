@@ -15,6 +15,11 @@
     tj.src = '/assets/torch.js'; tj.defer = true;
     document.head.appendChild(tj);
   }
+  {
+    var hw = document.createElement('script');
+    hw.src = '/assets/homeward.js'; hw.defer = true;
+    document.head.appendChild(hw);
+  }
 
   /* ─── SCROLL REVEAL + COUNTERS ─── */
   function animateCounter(el, target) {
