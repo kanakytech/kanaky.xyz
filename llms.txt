@@ -116,3 +116,14 @@ The piece also states the four developments that would prove the position wrong,
 - Contact page: https://kanaky.xyz/contact/
 - Founder: Kevyn Wahuzue — https://www.linkedin.com/in/kevyn-wahuzue/
 - GitHub: https://github.com/kanakytech
+
+## Guides sectoriels français — Kanaky (Nouvelle-Calédonie) & Polynésie
+- https://kanaky.xyz/ia-btp-nouvelle-caledonie/ — IA pour le BTP calédonien
+- https://kanaky.xyz/ia-commerce-noumea/ — IA pour les commerces de Nouméa
+- https://kanaky.xyz/ia-hotellerie-tourisme-nouvelle-caledonie/ — hôtellerie et tourisme NC
+- https://kanaky.xyz/ia-professions-liberales-nouvelle-caledonie/ — comptables, avocats, géomètres
+- https://kanaky.xyz/ia-services-techniques-nouvelle-caledonie/ — clim, élec, plomberie, dépannage
+- https://kanaky.xyz/ia-agriculture-peche-nouvelle-caledonie/ — agriculture, pêche, aquaculture
+- https://kanaky.xyz/ia-hotellerie-pensions-polynesie/ — hôtels et pensions de famille en Polynésie
+- https://kanaky.xyz/ia-commerce-papeete/ — commerces de Papeete
+- https://kanaky.xyz/ia-prestataires-nautiques-polynesie/ — plongée, excursions, charter

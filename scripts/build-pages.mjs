@@ -423,7 +423,7 @@ ${footer}
 }
 
 /* ── build ── */
-const modules = ['outreach', 'legal', 'alternatives', 'local-ai', 'industries', 'automation', 'locations', 'fr', 'pacifique', 'gang-pacifique', 'melanesie', 'engagement', 'produit-fr'];
+const modules = ['outreach', 'legal', 'alternatives', 'local-ai', 'industries', 'automation', 'locations', 'fr', 'pacifique', 'gang-pacifique', 'melanesie', 'engagement', 'produit-fr', 'secteurs-nc', 'secteurs-pf'];
 let pages = [];
 for (const m of modules) {
   const f = path.join(HERE, 'content', `${m}.mjs`);
