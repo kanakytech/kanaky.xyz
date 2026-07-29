@@ -10,6 +10,7 @@ export default [
 {
   slug: 'actualite-ia-pme-pacifique-juillet-2026',
   lang: 'fr',
+  alt: { lang: 'en', url: 'https://kanaky.xyz/ai-news-pacific-smes-july-2026/' },
   title: 'Actualité IA, juillet 2026 : ce que ça change pour une PME du Pacifique',
   description: 'Google publie une étude sur 15 millions d’interactions et ne trouve pas d’automatisation massive du travail. En parallèle, le SMG calédonien passe à 1 000 F de l’heure. Ce que ces deux chiffres imposent de conclure, et rien de plus.',
   keywords: 'actualité IA PME Pacifique, étude Google ATLAS IA travail, IA remplace les emplois, automatisation PME Nouvelle-Calédonie, SMG 2026 Nouvelle-Calédonie, IA petite entreprise Océanie',
@@ -67,6 +68,73 @@ export default [
   extraGraph: [{
     '@type': 'Article',
     headline: 'Actualité IA, juillet 2026 : ce que ça change pour une PME du Pacifique',
+    datePublished: '2026-07-29',
+    author: { '@id': 'https://kanaky.xyz/#kevyn' },
+    publisher: { '@id': 'https://kanaky.xyz/#organization' },
+  }],
+},
+
+{
+  slug: 'ai-news-pacific-smes-july-2026',
+  lang: 'en',
+  alt: { lang: 'fr', url: 'https://kanaky.xyz/actualite-ia-pme-pacifique-juillet-2026/' },
+  title: 'AI News, July 2026: What It Actually Means for a Pacific Small Business',
+  description: 'Google studies 15 million AI interactions and finds no evidence of mass workplace automation. The same week, New Caledonia sets its minimum wage at 1,000 XPF an hour. What these two numbers permit a small business to conclude — and nothing more.',
+  keywords: 'AI news Pacific business, Google ATLAS study AI jobs, is AI replacing jobs 2026, AI adoption small business, New Caledonia minimum wage 2026, AI automation Oceania SME',
+  eyebrow: 'Journal',
+  short: 'Journal · AI news',
+  h1: 'This week in AI. <span style="color:var(--grey-4);font-weight:300;">What the numbers actually support.</span>',
+  cta: 'service',
+  body: [
+    { lead: 'Two stories landed this week and appear to point in opposite directions. Google confirmed it may spend up to US$205 billion on AI infrastructure in 2026 — and, the same week, published a study reporting that it can find no evidence of mass workplace automation. If you run a small business in Nouméa, Port Vila or Suva, the useful question is not which headline wins. It is which of these numbers, if any, touches your company next Monday.' },
+
+    { h: 'The study nobody expected from Google' },
+    'As Ars Technica detailed on 28 July, a team at Google Research analysed 15 million anonymised conversations with its models and mapped them against the official classification of US occupations. The project is called the AI & Economy ATLAS. Its conclusion, published by a company with every commercial reason to claim the opposite: the researchers found nothing to support the idea that AI is about to trigger mass automation and displacement of knowledge work.',
+    'The figures deserve a slow read. Across every task catalogued for every occupation, only **21 per cent** see meaningful use of the tool. In **29 per cent of occupations, not a single task** crosses that threshold. In another 30 per cent, fewer than a quarter of tasks do. And in just 3 per cent of occupations does AI touch at least three quarters of the catalogued work — software quality analysts, HR specialists, document management staff. Usage, the researchers write, remains shallow and overwhelmingly collaborative.',
+
+    { h: 'The detail that concerns this region' },
+    'One finding matters here more than the rest. The occupations over-represented in the data are finance, software development and systems administration. The under-represented ones are sales, transport and food service — which is, near enough, the real economy of Kanaky (New Caledonia), Vanuatu and Fiji.',
+    'The lazy reading would be that AI has nothing to offer those trades. The study itself refutes it: the researchers record tens of thousands of conversations from motor mechanics testing components with the model\'s help, photos attached. The better reading is different. These trades receive nothing by osmosis. A financial analyst stumbles onto the tool because the work already happens in a browser; the owner of a trucking firm in Nouméa does not. What is missing is not the machine\'s capability — it is someone to install it where the work is done.',
+
+    { h: 'What an hour is worth here from 1 August' },
+    'The second number of the week is local. As reported by NC la 1ère, the government of New Caledonia has approved the new guaranteed minimum wage: **169,014 XPF gross** per month from 1 August 2026, up from 167,602 since June 2025 — an hourly floor of **1,000 XPF**, a little under €8.40 at the currency\'s fixed peg to the euro. The agricultural minimum rises to 143,662 XPF, or 850 an hour.',
+    'A thousand francs an hour is a floor, before employer contributions — and an owner\'s hour is worth several multiples of it. Now run the calculation the study makes credible: the documented gains sit on routine cognitive tasks that demand little expertise — drafting, rephrasing, translating, retrieving a piece of information, formatting. Add those up in a six-person firm: the quote typed up properly, the unpaid invoice chased, the reply written for a client in another language, the site report assembled. Six hours a week is a conservative estimate. Over forty-five working weeks that is 270 hours — more than a quarter of a million francs a year at the floor rate alone, and considerably more when the hours belong to the owner.',
+
+    { table: {
+      minWidth: 560,
+      head: ['What the study says', 'What it implies for a small Pacific firm'],
+      rows: [
+        ['Only 21% of tasks see real use', 'Do not budget a transformation. Pick three named tasks.'],
+        ['86% of observed use is cognitive, not manual', 'The gain sits in the office, not the workshop or the worksite.'],
+        ['The tool serves mostly low-expertise tasks', 'Your trade is not under threat. Your paperwork is.'],
+        ['Sales, transport, food service: marginal use', 'Nothing arrives on its own. Someone has to install it.'],
+      ],
+    }},
+
+    { h: 'Google\'s capex is not your problem. Your future bill might be' },
+    'Which leaves the first story. Again per Ars Technica, Google spent **US$44.9 billion** on AI infrastructure in the second quarter of 2026 against US$39.1 billion in operating cash flow — its first quarter of negative free cash flow on record, at −5.8 billion, with an annual envelope announced at up to 205 billion versus 91 in 2025.',
+    'A company booking US$119.8 billion in quarterly revenue absorbs that without flinching. The question, for you, sits elsewhere: sums of that size eventually resurface in prices. Resting your whole operation on a monthly bill denominated in a foreign currency, set at the discretion of a supplier on the other side of the planet, is a bet — the same bet behind the software subscriptions many businesses in this region have watched double in three years. It is one reason why, when the job allows it, we build systems that [run on a machine inside the business](/run-ai-locally-business/) rather than on a meter running somewhere else.',
+
+    { h: 'What these numbers justify doing, and nothing more' },
+    'A study of American usage does not describe a small firm in Koné or Luganville, and pretending otherwise would be its own kind of spin. But it corrects two symmetrical mistakes, both expensive. The first is believing you must act urgently or be swept aside: the data says the opposite — adoption is shallow everywhere. The second is concluding there is nothing to do: the data says the opposite of that too, because wherever the tool is installed on the right tasks, it stays.',
+    'Between the two sits a measured course: name three routine tasks that cost you hours, automate one, measure for a month, then decide. That is how [our free audit](/ai-audit/) begins, and it is also something a business can do alone, without us. As for [how much of our revenue stays in the region](/local-commitment/), the figures are published line by line.',
+
+    { note: 'Nothing in this week\'s news obliges a Pacific business to hurry. Two things do emerge, and they point the same way: the real gains sit on ordinary, nameable tasks, and nobody is coming to install them for you. Three tasks, measured over one month — that is everything these numbers support, and it is already a great deal.' },
+  ],
+  faq: [
+    { q: 'Does the Google study mean AI is overhyped?', a: 'It says something more precise: as of publication, observed usage remains shallow and largely collaborative, and end-to-end automation is rare. The researchers themselves note this could change with newer models or more capable robotics. What is overhyped is not the tool — it is the speed at which it was supposed to replace whole occupations with nobody having to lift a finger.' },
+    { q: 'My industry barely appears in the data. Should I wait?', a: 'Wait for what, exactly? The under-representation of sales or transport in these figures measures spontaneous usage, not potential. The administrative side of a transport company — quotes, consignment notes, chasing payments, customer replies — is precisely the routine cognitive work where the study records gains. The difference lies in who installs the system, not in the industry.' },
+    { q: 'Should a small team worry about jobs?', a: 'In a six-person company the question rarely takes that form: there is no surplus position, there are surplus hours on positions already full. Google\'s data points the same way, since the tasks handed to the machine are the least expert ones and rarely the core of anyone\'s trade. We have never built a system whose purpose was to remove a job, and [the comparison deserves to be made openly](/ai-vs-hiring/).' },
+    { q: 'Will AI prices rise?', a: 'Nobody knows, and anyone claiming certainty should be read with caution. What is documented is the scale of the money committed: up to US$205 billion for Google in 2026, per its own announcements as reported by Ars Technica. Investment on that scale looks for a return. The reasonable defence is not to walk away from the tools — it is to avoid making your business dependent on a single supplier, and to keep the most sensitive workloads on a machine you own.' },
+  ],
+  related: [
+    ['/ai-automation-small-business/', 'AI automation for small business: what to do first'],
+    ['/run-ai-locally-business/', 'Run AI locally — your data stays in-house'],
+    ['/marketplace/cold-outreach-machine/', 'The Cold Outreach Machine — bought once, yours'],
+  ],
+  extraGraph: [{
+    '@type': 'Article',
+    headline: 'AI News, July 2026: What It Actually Means for a Pacific Small Business',
     datePublished: '2026-07-29',
     author: { '@id': 'https://kanaky.xyz/#kevyn' },
     publisher: { '@id': 'https://kanaky.xyz/#organization' },

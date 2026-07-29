@@ -130,3 +130,4 @@ The piece also states the four developments that would prove the position wrong,
 
 ## Journal — un article de fond par jour
 - https://kanaky.xyz/actualite-ia-pme-pacifique-juillet-2026/ — 2026-07-29 — l'étude Google ATLAS (15 M d'interactions, aucune automatisation massive constatée) et le SMG calédonien à 1 000 F de l'heure : ce que ces chiffres imposent à une PME du Pacifique
+- https://kanaky.xyz/ai-news-pacific-smes-july-2026/ — 2026-07-29 — English edition: the Google ATLAS study (15M interactions, no mass automation found) and New Caledonia's 1,000 XPF hourly minimum wage — what these numbers permit a Pacific small business to conclude
