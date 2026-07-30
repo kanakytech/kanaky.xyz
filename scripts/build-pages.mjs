@@ -18,7 +18,10 @@ import { melanesiaMap } from './map-melanesia.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(HERE, '..');
-const BUILD_DATE = process.env.BUILD_DATE || new Date().toISOString().slice(0, 10);
+/* date locale Nouvelle-Zélande : un build du matin en UTC daterait la
+   veille (Pacific/Auckland = UTC+12/13) */
+const BUILD_DATE = process.env.BUILD_DATE
+  || new Date().toLocaleDateString('en-CA', { timeZone: 'Pacific/Auckland' });
 const OG_COLD = 'https://kanaky.xyz/assets/og/cold-outreach-machine.png';
 const OG_BRAND = 'https://kanaky.xyz/assets/og/kanaky-tech.png';
 const ogFor = (p) => /cold|outreach|email|spam|deliverab|prospection|instantly|smartlead|lemlist|apollo|warm-up|spf-dkim|sending-domain/.test(p.slug + ' ' + (p.keywords || '')) ? OG_COLD : OG_BRAND;
@@ -318,7 +321,7 @@ function render(p) {
       headline: p.h1.replace(/<[^>]+>/g, ''),
       description: p.description,
       datePublished: p.published || BUILD_DATE,
-      dateModified: BUILD_DATE,
+      dateModified: p.modified || p.published || BUILD_DATE,
       inLanguage: p.lang === 'fr' ? 'fr' : 'en',
       author: { '@type': 'Person', name: 'Kevyn Wahuzue', url: 'https://www.linkedin.com/in/kevyn-wahuzue/' },
       publisher: { '@type': 'Organization', name: 'Kanaky Tech', url: 'https://kanaky.xyz/' },
