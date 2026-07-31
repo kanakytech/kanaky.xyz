@@ -18,11 +18,12 @@ export default [
   short: 'Journal',
   h1: 'Journal. <span style="color:var(--grey-4);font-weight:300;">One piece a day, in two languages.</span>',
   cta: 'service',
-  published: '2026-07-30',
+  published: '2026-07-31',
   body: [
     { lead: 'One long-form piece per working day, on what AI automation actually does for a business in this part of the world. Each one states a position, names its sources and shows its arithmetic. Every piece appears in French and in English — not a word-for-word translation, but the same substance written natively in each language. Most recent first.' },
 
     { list: [
+      '**31 July 2026** — [Why island businesses are better positioned for AI than they think](/island-businesses-ai-advantage/) · [Français — Pourquoi la petite taille est un avantage face à l’IA](/petite-entreprise-avantage-ia/)',
       '**30 July 2026** — [Automatiser sans attendre la fibre parfaite : le calcul](/automatiser-sans-attendre-la-fibre/) · [English — You don’t need perfect internet to automate](/automation-without-perfect-internet/)',
       '**29 July 2026** — [Actualité IA, juillet 2026 : ce que ça change pour une PME du Pacifique](/actualite-ia-pme-pacifique-juillet-2026/) · [English — AI news, July 2026: what it actually means](/ai-news-pacific-smes-july-2026/)',
     ] },
@@ -34,6 +35,160 @@ export default [
     ['/ai-audit/', 'Book a free AI opportunity audit'],
     ['/local-commitment/', 'The 10% that stays in the region'],
   ],
+},
+
+{
+  slug: 'island-businesses-ai-advantage',
+  lang: 'en',
+  alt: { lang: 'fr', url: 'https://kanaky.xyz/petite-entreprise-avantage-ia/' },
+  title: 'Why Island Businesses Are Better Positioned for AI Than They Think',
+  description: 'MIT found that 95 per cent of enterprise AI pilots return nothing measurable. The reasons they fail — layered budgets, internal builds, nobody owning the workflow — are precisely what a six-person Pacific firm does not have. The case, with counted figures.',
+  keywords: 'small business AI advantage, why AI pilots fail, AI adoption small firms Pacific, MIT GenAI divide study, AI automation New Caledonia small business, island business technology adoption',
+  eyebrow: 'Journal',
+  short: 'Journal · Scale',
+  h1: 'Small, and far from everything. <span style="color:var(--grey-4);font-weight:300;">On this technology, both work in your favour.</span>',
+  cta: 'service',
+  published: '2026-07-31',
+  body: [
+    { lead: 'The sentence arrives early, usually with a shrug: this sort of thing is for big companies in big places. It is the most consistent assumption I meet, from Nouméa to Suva, and it has the causality backwards. The best-resourced organisations on the planet are failing at AI adoption at a rate that would be a scandal in any other capital programme — for reasons a six-person firm on an island does not have.' },
+
+    { h: 'The failure rate nobody here caused' },
+    'Start with a number that deserves to be better known. MIT\'s NANDA initiative published *The GenAI Divide: State of AI in Business 2025* in August 2025, built on 150 interviews with business leaders, a survey of 350 employees and 300 public deployments. Roughly **5 per cent** of enterprise AI pilots produce a measurable acceleration in revenue. The other **95 per cent** return nothing that reaches the accounts, against a spend the report places in the tens of billions of dollars.',
+    'The authors are careful about the cause, and the answer is not the intuitive one. The models are not the problem. The failure is organisational — what the report calls a learning gap between generic tools and the way a company actually works. Pilots die in the distance between the demonstration and the workflow.',
+
+    { h: 'Read the diagnosis again as a description of scale' },
+    'Three findings are worth setting side by side. More than half of generative AI budgets went to sales and marketing tools, while the returns researchers could trace sat in back-office work. Solutions bought from specialised vendors succeeded around **67 per cent** of the time, roughly three times the rate of internal builds. And uptake of generic chatbots was near-universal while the tasks stayed trivial.',
+    'Each of those is a symptom of size. Budgets flow to the department with the loudest voice at the table. Internal builds stall because the people who understand the process and the people who write the code are four floors and two quarters apart. Generic tools stay trivial because no one is accountable for pushing them into the real work. Now count how many of those conditions exist in a company where the person choosing the tool is the person doing the job.',
+
+    { h: 'Ninety per cent of employees already did it themselves' },
+    'The same report records something more interesting than the failure rate. Around 40 per cent of firms had bought official enterprise AI subscriptions; roughly **90 per cent of employees** were using personal AI tools for parts of their work anyway. The unofficial version delivered. The sanctioned one stalled in committee.',
+    'That gap is a serious governance problem for a bank and a non-event for a plumbing firm in Koné. There is no shadow usage to reconcile, no procurement cycle measured in quarters. Whoever notices that quoting eats four hours can decide that afternoon to do it differently, and will feel the difference on Friday. That closeness is not a consolation prize for being small. On this technology it is the scarce ingredient, and it cannot be bought.',
+
+    { h: 'What the region actually looks like, in counted businesses' },
+    'The argument is not marginal, because here the small firm is not the exception — it is the population. Stats NZ counted **617,330 enterprises** in New Zealand at February 2025, and **74 per cent of them had no paid employees at all**. In Kanaky (New Caledonia), ISEE recorded **61,367 active enterprises** on 1 January 2025, down 2.2 per cent in twelve months — a real contraction, which makes recovered hours matter more rather than less.',
+    'Wider still: the Asian Development Bank\'s Asia SME Monitor 2025 puts micro, small and medium enterprises at **99.8 per cent** of all firms across its 26 developing member economies, employing **67.6 per cent** of the workforce while producing **38.7 per cent** of output. About 72 per cent of them operate in traditional services — trade, accommodation, food. Two thirds of the workers against under two fifths of the output is roughly where administrative drag lives, and that drag is what this technology removes most reliably.',
+
+    { table: {
+      minWidth: 600,
+      head: ['What kills the enterprise pilot', 'Does a six-person firm have it?'],
+      rows: [
+        ['Budget captured by the loudest department', 'No — one person holds the budget'],
+        ['Gap between who knows the process and who builds', 'No — same person, same room'],
+        ['Procurement cycle measured in quarters', 'No — decided over one afternoon'],
+        ['Unofficial usage the company must reconcile', 'No — nothing to reconcile'],
+        ['A supplier bench within reach', 'Yes, and this one is a real disadvantage'],
+      ],
+    }},
+
+    { h: 'The column where distance still costs' },
+    'Making this case without the other side of it would be worthless. Small and remote carries real penalties, and three are structural. There is no local bench: few suppliers within a plane ride who have done the work before, which makes a poor first choice slower to recover from. There is single-person risk: the owner deciding everything is an advantage until the week the owner is unwell. And there is billing friction, since most of these tools price in US dollars, with the exchange rate sitting quietly in the margin.',
+    'None of those argue for waiting. They argue for keeping the first project small enough that a bad supplier costs a month instead of a year — which is precisely the discipline the 95 per cent never imposed on themselves.',
+
+    { h: 'How to spend the advantage' },
+    { steps: [
+      'Pick the task by the hours it consumes, not by how modern it sounds. The traceable returns in the MIT data sat in back-office work — the least glamorous shelf in the building.',
+      'Buy the specific before you build the general. Bought vendor solutions succeeded about three times as often as internal builds. Being small makes that easier to accept, not harder.',
+      'Keep the loop inside one head, then write it down. Whoever does the task decides how it changes and reads the result — free to you, unavailable to almost every large company. Document it as though someone else will run it, because one day someone will.',
+      'Fix the measurement before the tool: hours per week on the task, counted for two weeks, written down. Without that line you are guessing, and [a pilot becomes permanent](/ai-pilot/) without ever proving anything.',
+    ] },
+
+    { note: 'The evidence does not say AI is easy. It says the difficulty is organisational, and that the organisations struggling most are the ones with the most organisation. A firm where one person sees the whole process, decides in an afternoon and feels the result within the week is not behind — it holds the input money has failed to buy. What remains is choosing the task honestly, and measuring it.' },
+  ],
+  faq: [
+    { q: 'Does the MIT study mean AI does not work?', a: 'It means something more specific. The researchers found that generic tools rarely survive contact with an entrenched workflow, and that the gap is organisational rather than technical. Where deployments were narrow, bought from specialists and aimed at back-office work, they did produce returns — that is the 5 per cent. The lesson is not to avoid the technology but to avoid the shape of project that failed.' },
+    { q: 'We have no IT person. Is that a blocker?', a: 'On the evidence, less of one than assumed. Systems built internally succeeded at roughly a third the rate of solutions bought from specialised vendors, so an in-house engineering team is not what separates success from failure. What matters is that someone owns the process being changed and can tell whether it improved — and in a small business that person already exists.' },
+    { q: 'Our business is trade or hospitality, not an office. Does any of this apply?', a: 'The ADB puts about 72 per cent of MSMEs across its member economies in traditional services — trade, accommodation, food. Those businesses still produce quotes, chase payments, answer enquiries, order stock and file paperwork, and that is exactly the routine cognitive work where returns have been documented. The trade itself stays where it is; the paperwork around it is what moves.' },
+    { q: 'If small firms are so well positioned, why do so few in the Pacific use AI?', a: 'Because the constraint is distribution, not capability. No vendor is flying to Port Vila to demonstrate anything, there is no procurement department to route a proposal through, and the tools carry no instructions for a firm of six. That is a gap in who brings the technology to the work, not a gap in whether the work would benefit.' },
+  ],
+  related: [
+    ['/ai-pilot/', 'AI Pilot — one working tool in a week, paid only if it works'],
+    ['/how-to-start-with-ai/', 'How to start with AI — a sequence that works'],
+    ['/melanesia/', 'AI automation across Melanesia'],
+  ],
+  extraGraph: [{
+    '@type': 'Article',
+    headline: 'Why Island Businesses Are Better Positioned for AI Than They Think',
+    datePublished: '2026-07-31',
+    author: { '@id': 'https://kanaky.xyz/#kevyn' },
+    publisher: { '@id': 'https://kanaky.xyz/#organization' },
+  }],
+},
+
+{
+  slug: 'petite-entreprise-avantage-ia',
+  lang: 'fr',
+  alt: { lang: 'en', url: 'https://kanaky.xyz/island-businesses-ai-advantage/' },
+  title: 'Pourquoi la petite taille est un avantage face à l’IA — le cas des entreprises insulaires',
+  description: 'Le MIT constate que 95 % des projets IA en grande entreprise ne rapportent rien de mesurable. Les causes qu’il identifie — budgets captés, développements internes, personne qui possède le processus — sont exactement ce qu’une entreprise de six personnes n’a pas.',
+  keywords: 'avantage petite entreprise IA, pourquoi les projets IA échouent, adoption IA TPE PME Pacifique, IA petite entreprise Nouvelle-Calédonie, étude MIT IA entreprise, automatisation TPE insulaire',
+  eyebrow: 'Journal',
+  short: 'Journal · Taille',
+  h1: 'Petites, et loin de tout. <span style="color:var(--grey-4);font-weight:300;">Sur cette technologie, les deux jouent pour vous.</span>',
+  cta: 'service-fr',
+  published: '2026-07-31',
+  body: [
+    { lead: 'La phrase tombe tôt, souvent avec un haussement d’épaules : tout ça, c’est pour les grandes boîtes des grands pays. C’est l’idée la plus constante que je rencontre, de Nouméa à Port-Vila, et elle prend le raisonnement à l’envers. Les organisations les mieux dotées de la planète échouent sur l’adoption de l’IA à un rythme qui ferait scandale dans n’importe quel autre programme d’investissement — pour des raisons qu’une entreprise de six personnes n’a pas.' },
+
+    { h: 'Le taux d’échec dont personne ici n’est responsable' },
+    'Commençons par un chiffre qui mériterait d’être connu. L’initiative NANDA du MIT a publié en août 2025 l’étude *The GenAI Divide: State of AI in Business 2025* : 150 entretiens de dirigeants, 350 salariés interrogés, 300 déploiements analysés. Environ **5 %** des projets pilotes d’IA en entreprise produisent une accélération mesurable du chiffre d’affaires. Les **95 %** restants ne rapportent rien qui arrive jusqu’à la comptabilité, face à des dépenses chiffrées en dizaines de milliards de dollars.',
+    'Les auteurs sont prudents sur la cause, et la réponse n’est pas celle qu’on attend. Les modèles ne sont pas en cause. L’échec est organisationnel : le rapport parle d’un écart d’apprentissage entre un outil générique et la manière dont une entreprise travaille réellement. Un pilote meurt dans la distance qui sépare la démonstration du processus.',
+
+    { h: 'Relisez le diagnostic comme une description de la taille' },
+    'Trois constats gagnent à être posés côte à côte. Plus de la moitié des budgets d’IA générative partent vers des outils commerciaux et marketing, alors que les gains traçables se trouvaient dans l’administratif. Les solutions achetées à des fournisseurs spécialisés réussissent dans environ **67 %** des cas, près de trois fois le taux des développements internes. Et l’usage des assistants génériques est quasi universel pendant que les tâches confiées restent anodines.',
+    'Chacun est un symptôme de taille. Les budgets vont au service qui parle le plus fort. Les développements internes calent parce que ceux qui connaissent le processus et ceux qui écrivent le code sont séparés par quatre étages et deux trimestres. Les outils génériques restent anodins parce que personne n’a la charge de les pousser dans le vrai travail. Comptez maintenant combien de ces conditions existent dans une entreprise où celui qui choisit l’outil est celui qui fait le travail.',
+
+    { h: 'Neuf salariés sur dix s’en étaient déjà chargés seuls' },
+    'Le même rapport relève plus intéressant que le taux d’échec. Environ 40 % des entreprises avaient souscrit des abonnements IA officiels ; près de **90 % des salariés** utilisaient de toute façon des outils personnels pour une partie de leur travail. La version non officielle produisait des résultats, la version validée s’enlisait en comité.',
+    'Cet écart est un problème de gouvernance pour une banque, un non-événement pour un plombier de Koné. Pas d’usage parallèle à régulariser, pas de cycle d’achat en trimestres. Celui qui constate qu’un devis lui prend quatre heures peut décider l’après-midi même de s’y prendre autrement, et en verra l’effet vendredi. Cette proximité n’est pas un lot de consolation : c’est l’ingrédient rare, et il ne s’achète pas.',
+
+    { h: 'Le tissu économique réel, en entreprises comptées' },
+    'L’argument n’est pas marginal : ici, la petite entreprise n’est pas l’exception, elle est la population. Stats NZ recensait **617 330 entreprises** en Nouvelle-Zélande en février 2025, dont **74 % sans aucun salarié**. En Kanaky (Nouvelle-Calédonie), l’ISEE comptait **61 367 entreprises actives** au 1er janvier 2025, en baisse de 2,2 % en douze mois — une contraction réelle, qui rend les heures récupérées plus précieuses et non moins.',
+    'Plus largement, l’Asia SME Monitor 2025 de la Banque asiatique de développement établit que les micro, petites et moyennes entreprises représentent **99,8 %** des entreprises de ses 26 économies membres en développement, **67,6 %** des emplois et **38,7 %** de la production. Environ 72 % d’entre elles relèvent des services traditionnels : commerce, hébergement, restauration. Deux tiers des actifs pour moins de deux cinquièmes de la production, c’est à peu près là que se loge le frottement administratif — et c’est ce que cette technologie enlève le plus sûrement.',
+
+    { table: {
+      minWidth: 600,
+      head: ['Ce qui tue le projet en grande entreprise', 'Une entreprise de six personnes l’a-t-elle ?'],
+      rows: [
+        ['Budget capté par le service le plus bruyant', 'Non — une seule personne tient le budget'],
+        ['Écart entre qui connaît le métier et qui construit', 'Non — même personne, même pièce'],
+        ['Cycle d’achat qui se compte en trimestres', 'Non — décidé en une après-midi'],
+        ['Usage parallèle des salariés à régulariser', 'Non — rien à régulariser'],
+        ['Un vivier de prestataires à portée', 'Oui, et c’est un vrai désavantage'],
+      ],
+    }},
+
+    { h: 'La colonne où l’éloignement coûte encore' },
+    'Défendre cette position sans son revers n’aurait aucune valeur. Être petit et loin comporte des pénalités réelles, dont trois sont structurelles. Pas de vivier local : peu de prestataires à portée d’avion ayant déjà fait ce travail, donc un mauvais choix se rattrape plus lentement. Le risque de la personne seule : le dirigeant qui décide de tout est un avantage jusqu’à la semaine où il est malade. Et le frottement de facturation, ces outils étant tarifés en dollars, le taux de change installé discrètement dans la marge.',
+    'Aucun ne plaide pour attendre, mais pour garder le premier chantier assez petit qu’un mauvais prestataire coûte un mois et non un an — la discipline que les 95 % ne se sont jamais imposée.',
+
+    { h: 'Comment dépenser cet avantage' },
+    { steps: [
+      'Choisissez la tâche selon les heures qu’elle consomme, pas selon son air de modernité. Les gains traçables de l’étude se trouvaient dans l’administratif — le rayon le moins flatteur du magasin.',
+      'Achetez le spécifique avant de construire le général : les solutions achetées à des spécialistes ont réussi environ trois fois plus souvent que les développements internes. La petite taille rend l’arbitrage plus facile à accepter.',
+      'Gardez la boucle dans une seule tête, puis écrivez-la. Celui qui fait la tâche décide de sa transformation et en lit le résultat — gratuit chez vous, hors de portée de presque toutes les grandes entreprises. Documentez comme si quelqu’un d’autre devait reprendre, parce qu’un jour quelqu’un reprendra.',
+      'Réglez la mesure avant l’outil : les heures par semaine sur la tâche, comptées quinze jours, écrites quelque part. Sans cette ligne, vous devinerez après coup — [c’est par là que commence une méthode qui tient](/commencer-avec-ia-entreprise/).',
+    ] },
+
+    { note: 'Les données ne disent pas que l’IA est facile. Elles disent que la difficulté est organisationnelle, et que les organisations qui peinent le plus sont celles qui ont le plus d’organisation. Une entreprise où une seule personne voit le processus, décide en une après-midi et en constate l’effet dans la semaine détient l’ingrédient que l’argent n’a pas su acheter. Reste à choisir la tâche, et à la mesurer.' },
+  ],
+  faq: [
+    { q: 'L’étude du MIT signifie-t-elle que l’IA ne fonctionne pas ?', a: 'Elle dit quelque chose de plus précis. Les chercheurs constatent qu’un outil générique survit rarement au contact d’un processus installé, et que l’écart est organisationnel plutôt que technique. Là où les déploiements étaient étroits, achetés à des spécialistes et orientés vers l’administratif, ils ont produit des gains : ce sont les 5 %. La leçon n’est pas d’éviter la technologie, mais d’éviter la forme de projet qui a échoué.' },
+    { q: 'Nous n’avons personne en informatique. Est-ce bloquant ?', a: 'Moins qu’on ne le croit, si l’on s’en tient aux données. Les systèmes développés en interne ont réussi environ trois fois moins souvent que les solutions achetées à des fournisseurs spécialisés : une équipe technique maison n’est donc pas ce qui sépare la réussite de l’échec. Ce qui compte, c’est que quelqu’un possède le processus modifié et sache dire s’il s’est amélioré — et dans une petite entreprise, cette personne existe déjà.' },
+    { q: 'Nous sommes dans le commerce ou la restauration, pas dans un bureau. Est-ce que ça nous concerne ?', a: 'La Banque asiatique de développement situe environ 72 % des micro et petites entreprises de ses économies membres dans les services traditionnels : commerce, hébergement, restauration. Ces entreprises produisent quand même des devis, relancent des impayés, répondent à des demandes, passent des commandes et remplissent des formulaires. C’est exactement le travail cognitif routinier où les gains sont documentés. Le métier reste où il est ; c’est la paperasse autour qui bouge.' },
+    { q: 'Si les petites structures sont si bien placées, pourquoi si peu d’entre elles s’y mettent ici ?', a: 'Parce que la contrainte porte sur la diffusion, pas sur la capacité. Aucun fournisseur ne prend l’avion pour Port-Vila afin de faire une démonstration, il n’existe pas de service achats pour orienter une proposition, et ces outils n’arrivent avec aucun mode d’emploi pour une entreprise de six personnes. C’est un manque dans la façon dont la technologie rejoint le travail, pas dans l’intérêt qu’elle aurait à le rejoindre.' },
+  ],
+  related: [
+    ['/commencer-avec-ia-entreprise/', 'Par où commencer avec l’IA dans votre entreprise'],
+    ['/automatiser-ou-embaucher/', 'Automatiser ou embaucher : le comparatif honnête'],
+    ['/prix-automatisation-ia-nouvelle-caledonie/', 'Prix de l’automatisation IA, fourchettes réelles en XPF'],
+  ],
+  extraGraph: [{
+    '@type': 'Article',
+    headline: 'Pourquoi la petite taille est un avantage face à l’IA — le cas des entreprises insulaires',
+    datePublished: '2026-07-31',
+    author: { '@id': 'https://kanaky.xyz/#kevyn' },
+    publisher: { '@id': 'https://kanaky.xyz/#organization' },
+  }],
 },
 
 {
