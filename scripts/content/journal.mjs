@@ -18,11 +18,12 @@ export default [
   short: 'Journal',
   h1: 'Journal. <span style="color:var(--grey-4);font-weight:300;">One piece a day, in two languages.</span>',
   cta: 'service',
-  published: '2026-07-31',
+  published: '2026-08-01',
   body: [
     { lead: 'One long-form piece per working day, on what AI automation actually does for a business in this part of the world. Each one states a position, names its sources and shows its arithmetic. Every piece appears in French and in English — not a word-for-word translation, but the same substance written natively in each language. Most recent first.' },
 
     { list: [
+      '**1 August 2026** — [Facturation en retard : ce que la loi du pays de juin 2026 a déplacé](/facturation-en-retard-cout-reel/) · [English — Seven days of paperwork, thirty-one days of cash](/late-invoicing-real-cost/)',
       '**31 July 2026** — [Why island businesses are better positioned for AI than they think](/island-businesses-ai-advantage/) · [Français — Pourquoi la petite taille est un avantage face à l’IA](/petite-entreprise-avantage-ia/)',
       '**30 July 2026** — [Automatiser sans attendre la fibre parfaite : le calcul](/automatiser-sans-attendre-la-fibre/) · [English — You don’t need perfect internet to automate](/automation-without-perfect-internet/)',
       '**29 July 2026** — [Actualité IA, juillet 2026 : ce que ça change pour une PME du Pacifique](/actualite-ia-pme-pacifique-juillet-2026/) · [English — AI news, July 2026: what it actually means](/ai-news-pacific-smes-july-2026/)',
@@ -35,6 +36,156 @@ export default [
     ['/ai-audit/', 'Book a free AI opportunity audit'],
     ['/local-commitment/', 'The 10% that stays in the region'],
   ],
+},
+
+{
+  slug: 'facturation-en-retard-cout-reel',
+  lang: 'fr',
+  alt: { lang: 'en', url: 'https://kanaky.xyz/late-invoicing-real-cost/' },
+  title: 'Facturation en retard : le coût réel pour une PME de Nouméa, chiffré',
+  description: 'Depuis la loi du pays publiée au JONC le 19 juin 2026, le délai de paiement part de la date de facture, plus de la date du chantier. Le calcul complet : marche d’escalier de la fin de mois, chiffres IEOM, taux de découvert, et ce que ça coûte en francs sur un exercice.',
+  keywords: 'délais de paiement Nouvelle-Calédonie, facturation en retard PME, loi du pays délais de paiement 2026, trésorerie PME Nouméa, DSO Nouvelle-Calédonie, automatiser la facturation entreprise, relance impayés Nouvelle-Calédonie',
+  eyebrow: 'Journal',
+  short: 'Journal · Trésorerie',
+  h1: 'Sept jours de paperasse, trente-et-un jours de trésorerie. <span style="color:var(--grey-4);font-weight:300;">Le calcul, depuis juin 2026.</span>',
+  cta: 'service-fr',
+  published: '2026-08-01',
+  body: [
+    { lead: 'La date qui déclenche le compte à rebours du paiement en Kanaky (Nouvelle-Calédonie) n’est plus celle du chantier : c’est celle de votre facture. Le changement date de cette année, il est passé inaperçu hors des fédérations professionnelles, et il transforme un défaut d’organisation en perte sèche. Voici le calcul, avec les chiffres de l’IEOM.' },
+
+    { h: 'Ce que la loi du pays a déplacé' },
+    'Jusqu’à cette année, l’article Lp. 443-2 du code de commerce applicable localement fixait le délai maximal à trente jours suivant la réception des marchandises ou l’exécution de la prestation : le point de départ était le travail, pas le papier. Le Congrès a adopté le 26 mai 2026 un texte d’encadrement des pratiques commerciales, selon *Les Nouvelles calédoniennes*, promulgué le 12 juin et publié au Journal officiel de la Nouvelle-Calédonie le 19 juin. Le nouveau régime porte le délai à trente jours fin de mois suivant l’émission de la facture, selon la Fédération calédonienne du BTP.',
+    'Lu vite, c’est un desserrement de contrainte pour celui qui paie. Lu de près, c’est un transfert de risque vers celui qui facture. Tant que le délai courait depuis la prestation, une facture tardive ne coûtait que le retard de l’encaissement : l’horloge tournait déjà. Elle ne tourne plus. Tant que la facture n’est pas partie, rien n’est exigible et aucune pénalité ne se déclenche. Le retard de facturation a cessé d’être une négligence administrative pour devenir une renonciation.',
+
+    { h: 'La marche d’escalier de la fin de mois' },
+    'Le mécanisme « trente jours fin de mois » n’est pas linéaire, et c’est là que se joue l’essentiel. Un chantier se termine le 26 juin. Si la facture part le 27, l’échéance tombe trente jours après le 30 juin : le 30 juillet. Si elle part le 3 juillet parce que le devis était resté dans le camion et qu’un week-end est passé par là, l’échéance devient trente jours après le 31 juillet : le 30 août.',
+    'Sept jours de paperasse viennent d’acheter trente-et-un jours de découvert. Ce n’est pas une pénalité, c’est de l’arithmétique de calendrier, parfaitement légale des deux côtés : le client n’a rien fait de mal. Une facture émise le dernier jour du mois et la même facture émise le lendemain sont séparées par un mois entier de trésorerie. La seule règle de gestion qui compte ici tient en une phrase : rien ne doit franchir la fin du mois.',
+
+    { h: 'Ce qui s’ajoute par-dessus, mesuré' },
+    'À ce décalage volontaire s’ajoute celui que vous ne contrôlez pas. L’IEOM, dans son étude sur les délais de paiement en Nouvelle-Calédonie en 2024, mesure des délais clients moyens de **38,9 jours** de chiffre d’affaires et des délais fournisseurs de **44,9 jours**, tous deux au-dessus du plafond légal. Il chiffre à près de **10,1 milliards XPF** — environ 85 millions d’euros — la trésorerie que le seul respect strict de la loi aurait libérée sur 2024. Les secteurs les plus exposés qu’il identifie : construction, services aux entreprises, transports.',
+    'La trajectoire va dans le bon sens : la précédente étude de l’IEOM, sur données 2019, relevait 47 jours de délais clients et 59 % d’entreprises réglant au-delà de trente jours. Restent huit ou neuf jours de retard moyen que personne n’automatise — ils relèvent d’un rapport de force avec un donneur d’ordre qui se finance sur ses fournisseurs.',
+
+    { table: {
+      minWidth: 640,
+      head: ['Chantier terminé le 26 juin', 'Facture émise le 27 juin', 'Facture émise le 3 juillet'],
+      rows: [
+        ['Échéance légale (30 jours fin de mois)', '30 juillet', '30 août'],
+        ['Encaissement au retard moyen constaté (IEOM)', 'vers le 8 août', 'vers le 8 septembre'],
+        ['Jours de trésorerie perdus', '—', '31'],
+        ['Coût de découvert, facture de 500 000 F', '—', 'environ 2 200 F'],
+        ['Si la règle vaut pour toutes vos factures', '—', 'un mois de chiffre d’affaires dehors, en permanence'],
+      ],
+    }},
+
+    { h: 'Le vrai coût n’est pas l’intérêt' },
+    'Sur une facture isolée, l’intérêt est dérisoire. Le taux moyen des découverts aux entreprises calédoniennes s’établit à **5,26 %** au premier trimestre 2026 selon l’IEOM : un mois de découvert sur 500 000 F coûte à peu près 2 200 F. Personne ne fait faillite là-dessus, et prétendre le contraire serait malhonnête.',
+    'Le coût est ailleurs, et il est structurel. Si le décalage vaut pour toute votre facturation, votre encours sort durablement d’un mois de chiffre d’affaires. Pour une entreprise qui facture 40 millions XPF par an, ce sont **3,3 millions XPF** — environ 28 000 euros — qui ne reviennent jamais dans le compte : ils changent de position dans le temps, une fois, définitivement. Les financer au taux de découvert coûte de l’ordre de **175 000 F par an**. C’est un plancher de trésorerie abaissé d’un cran, et ce cran décide de votre capacité à passer un mois creux.',
+
+    { h: 'Le texte vous donne une arme, encore inachevée' },
+    'La même loi du pays instaure une indemnité forfaitaire de recouvrement, due de plein droit par tout professionnel en retard ; son montant doit être fixé par arrêté du gouvernement et ne l’était pas à la publication du texte — à vérifier avant de l’inscrire dans vos conditions de vente. Les pénalités, elles, existaient déjà : plancher à trois fois le taux de l’intérêt légal, soit 8,25 % au second semestre 2026, et mention obligatoire dont l’omission expose, selon l’Autorité de la concurrence de la Nouvelle-Calédonie, à une amende administrative pouvant atteindre 5 millions XPF. La plupart des petites entreprises copient cette clause sans la lire et ne l’actionnent jamais — décision commerciale défendable. Mais une pénalité qu’on choisit de ne pas appliquer n’est pas une pénalité qu’on n’a pas le droit d’appliquer, et depuis juin la facture tardive vous met dans le second cas.',
+
+    { h: 'Ce qui s’automatise, et ce qui ne s’automatise pas' },
+    { steps: [
+      'La date d’émission. Seul point de la chaîne entièrement sous votre contrôle, et celui qui pèse un mois. La plupart des retards ne viennent pas de la saisie mais de la recherche : le devis signé, les heures pointées, la photo du chantier. Rassembler ces pièces à la clôture du bon de travail, et non à la fin de la semaine, supprime la marche d’escalier sans rien changer à la relation client.',
+      'La relance. Trois messages — sept jours avant l’échéance, le jour même, sept jours après — partis sans que personne n’ait à décider de les envoyer. Tout le monde connaît la séquence, presque personne ne la tient : elle demande de la constance, pas de l’intelligence.',
+      'Ce qui ne s’automatise pas : le coup de fil au client qui ne paie pas parce qu’il n’a pas encaissé lui-même. Un système bien réglé sait seulement vous dire lequel appeler, et quand. [Mesurez d’abord](/commencer-avec-ia-entreprise/) le délai réel entre la fin d’un travail et le départ de sa facture.',
+    ] },
+
+    { note: 'Une entreprise se défait rarement sur ses factures impayées et souvent sur ses factures non émises. Le déplacement de juin 2026 rend la distinction coûteuse : l’horloge légale attend désormais votre paperasse. Le calcul tient en une ligne — les jours entre la fin du travail et l’émission de la facture, multipliés par ce que vaut une journée chez vous. À faire avant d’acheter quoi que ce soit.' },
+  ],
+  faq: [
+    { q: 'Depuis quand le délai de paiement part-il de la date de facture en Nouvelle-Calédonie ?', a: 'Le texte a été adopté par le Congrès le 26 mai 2026, promulgué le 12 juin et publié au Journal officiel de la Nouvelle-Calédonie le 19 juin 2026. Il modifie le régime de l’article Lp. 443-2 du code de commerce applicable localement : le délai maximal passe à trente jours fin de mois suivant l’émission de la facture, là où il courait auparavant à compter de la réception des marchandises ou de l’exécution de la prestation. Vérifiez la rédaction exacte au JONC avant de modifier vos conditions générales de vente.' },
+    { q: 'Concrètement, combien coûte une semaine de retard de facturation ?', a: 'Cela dépend entièrement de l’endroit où tombe la fin du mois. Une facture émise le 3 du mois plutôt que le 27 du mois précédent décale l’échéance d’un mois entier, à cause de la règle des trente jours fin de mois. Sur une facture de 500 000 F, le coût de découvert d’un mois est d’environ 2 200 F au taux moyen de 5,26 % relevé par l’IEOM au premier trimestre 2026. Le poste sérieux n’est pas cet intérêt mais le décalage permanent de l’encours si le retard est systématique : de l’ordre d’un mois de chiffre d’affaires sorti du compte.' },
+    { q: 'Peut-on vraiment facturer des pénalités de retard à un client local ?', a: 'Juridiquement oui : le plancher est fixé à trois fois le taux de l’intérêt légal, soit 8,25 % au second semestre 2026, et la mention est obligatoire dans les conditions générales de vente. La loi du pays y ajoute une indemnité forfaitaire de recouvrement due de plein droit, dont le montant doit être fixé par arrêté du gouvernement. Commercialement, c’est un autre débat, et beaucoup d’entreprises choisissent de ne pas les appliquer. La différence utile est que la mention conserve le droit de le faire le jour où un dossier dérape.' },
+    { q: 'Faut-il un logiciel de facturation pour corriger ça ?', a: 'Pas nécessairement un nouveau. La plupart des petites entreprises d’ici ont déjà de quoi éditer une facture ; ce qui manque, c’est le déclencheur automatique entre la clôture du travail et l’édition, et la séquence de relance qui suit. Ces deux briques se posent le plus souvent au-dessus de l’outil existant. Commencez par mesurer le délai réel d’émission sur vingt dossiers : si la moyenne est inférieure à deux jours, le problème est ailleurs et l’outil ne réglera rien.' },
+  ],
+  related: [
+    ['/ia-btp-nouvelle-caledonie/', 'IA et BTP en Nouvelle-Calédonie — le secteur le plus exposé aux retards'],
+    ['/exemples-automatisation-pme/', 'Exemples concrets d’automatisation pour une PME'],
+    ['/prix-automatisation-ia-nouvelle-caledonie/', 'Prix de l’automatisation IA, fourchettes réelles en XPF'],
+  ],
+  extraGraph: [{
+    '@type': 'Article',
+    headline: 'Facturation en retard : le coût réel pour une PME de Nouméa, chiffré',
+    datePublished: '2026-08-01',
+    author: { '@id': 'https://kanaky.xyz/#kevyn' },
+    publisher: { '@id': 'https://kanaky.xyz/#organization' },
+  }],
+},
+
+{
+  slug: 'late-invoicing-real-cost',
+  lang: 'en',
+  alt: { lang: 'fr', url: 'https://kanaky.xyz/facturation-en-retard-cout-reel/' },
+  title: 'Late Invoicing: The Real Cost for a Small Business, Measured',
+  description: 'New Caledonia moved the payment clock from the day the job ends to the day the invoice is issued. Seven days of paperwork can now buy thirty-one days of overdraft. The arithmetic, with IEOM and Xero figures.',
+  keywords: 'late invoicing cost small business, payment terms New Caledonia 2026, days sales outstanding Pacific, invoice automation small business, late payment New Zealand small business, cash flow invoicing delay',
+  eyebrow: 'Journal',
+  short: 'Journal · Cash flow',
+  h1: 'Seven days of paperwork, thirty-one days of cash. <span style="color:var(--grey-4);font-weight:300;">A calendar rule most owners have not priced.</span>',
+  cta: 'service',
+  published: '2026-08-01',
+  body: [
+    { lead: 'In Kanaky (New Caledonia), the clock on getting paid no longer starts when the job finishes. It starts when the invoice goes out. The change landed this year, passed largely unnoticed outside trade federations, and it turns an ordinary administrative habit into a straight loss. The arithmetic fits on the back of a docket, and is worth doing wherever you trade.' },
+
+    { h: 'What the law moved' },
+    'Until this year, article Lp. 443-2 of the commercial code applied locally set the maximum payment term at thirty days from receipt of goods or completion of the service. The trigger was the work, not the paperwork. New Caledonia\'s Congress adopted a commercial practices bill on 26 May 2026, according to *Les Nouvelles calédoniennes*, promulgated on 12 June and published in the territory\'s official journal on 19 June. Under the new regime the term becomes thirty days end-of-month following the invoice date, per the Fédération calédonienne du BTP.',
+    'Read quickly, that looks like relief for whoever pays. Read closely, it is a transfer of risk to whoever bills. While the term ran from the work itself, a late invoice cost only the delay in banking the money — the deadline was already running. It is not running now. Until the invoice leaves, nothing is due and no penalty can attach. Late invoicing has stopped being untidy admin and become a waiver.',
+
+    { h: 'The end-of-month step' },
+    'The thirty-days-end-of-month mechanism is not linear, and that is where the money sits. A job finishes on 26 June. Invoice it on the 27th and payment falls due thirty days after 30 June: 30 July. Invoice it on 3 July, because the signed quote was in the ute and a weekend intervened, and the due date becomes 30 August.',
+    'Seven days of paperwork just bought thirty-one days of overdraft. That is not a penalty, it is calendar arithmetic, and it is lawful on both sides: the customer has done nothing wrong. An invoice issued on the last day of a month and the same invoice issued the next morning are a full month apart in cash terms. Which reduces the only operating rule that matters here to one line: nothing crosses a month end.',
+
+    { h: 'What gets added on top' },
+    'To that self-inflicted gap you add the one you do not control. The IEOM, in its study of payment terms in New Caledonia for 2024, measures average customer terms of **38.9 days** of turnover and supplier terms of **44.9 days** of purchases, both above the legal ceiling. It puts at roughly **10.1 billion XPF** — about 85 million euros — the working capital that strict compliance alone would have freed across 2024. The most exposed sectors it names are construction, business services and transport.',
+    'The direction of travel is favourable: the previous IEOM study, on 2019 data, found 47 days of customer terms and 59 per cent of firms settling beyond thirty days. What remains is the eight or nine days of average overrun, which no automation removes — that is a balance of power with a client financing itself on its suppliers. New Zealand is a comparison rather than a consolation: Xero Small Business Insights puts Kiwi small firms at 24.1 days to be paid and 4.7 days late in its latest quarter, ahead of Australia, the UK and the US, and still costed late payment to them at NZ$827 million in 2023, up 81 per cent on 2021.',
+
+    { table: {
+      minWidth: 640,
+      head: ['Job finished 26 June', 'Invoiced 27 June', 'Invoiced 3 July'],
+      rows: [
+        ['Legal due date (30 days end of month)', '30 July', '30 August'],
+        ['Cash in, at the average overrun IEOM measures', 'around 8 August', 'around 8 September'],
+        ['Days of cash lost', '—', '31'],
+        ['Overdraft cost on a 500,000 XPF invoice', '—', 'about 2,200 XPF'],
+        ['If the habit applies to every invoice', '—', 'a month of turnover permanently outside the account'],
+      ],
+    }},
+
+    { h: 'The interest is the cheap part' },
+    'On a single invoice the interest is trivial. The average overdraft rate for New Caledonian businesses stood at **5.26 per cent** in the first quarter of 2026 according to the IEOM. A month of overdraft on 500,000 XPF costs roughly 2,200 XPF. Nobody fails on that, and saying otherwise would be dishonest.',
+    'The cost is structural instead. If the delay applies across your billing, your receivables sit permanently one month of turnover higher. For a firm invoicing 40 million XPF a year that is **3.3 million XPF**, near enough 28,000 euros, that never comes back into the account — it shifts position in time, once, for good. Financing it at the overdraft rate runs to about **175,000 XPF a year**, every year. It is a cash floor lowered by one notch, and that notch decides whether a quiet month is survivable.',
+
+    { h: 'The law hands you a lever, still unfinished' },
+    'The same act creates a flat-rate recovery indemnity, owed as of right by any business paying late; its amount is to be set by government order and had not been fixed when the text was published — worth checking before you write it into your terms. Penalties already existed: a floor of three times the legal interest rate, which puts them at 8.25 per cent for the second half of 2026, and a compulsory mention whose omission exposes you, according to New Caledonia\'s competition authority, to a fine of up to 1 million XPF for an individual and 5 million for a company. Most small firms copy that clause without reading it and never use it — a defensible commercial call. But choosing not to apply a penalty is not the same as having no penalty to apply, and since June the late invoice puts you in the second case.',
+
+    { h: 'What automates, and what does not' },
+    { steps: [
+      'The issue date. The only link in the chain fully under your control, and the one worth a month. Most invoicing delay is not typing, it is looking: the signed quote, the hours logged, the photo of the site. Pulling those together when the job is closed off, rather than when the week is, removes the end-of-month step without touching the customer relationship.',
+      'The follow-up. Three calibrated messages — seven days before the due date, on it, seven days after — sent without anyone having to decide to send them. Everyone knows this sequence and almost nobody sustains it: it asks for consistency, not intelligence.',
+      'What does not automate: the call to a customer who has not paid because they have not been paid. A well-built system can only tell you which one to ring, and when. [Measure first](/how-to-start-with-ai/) the real gap between finishing a job and issuing its invoice, across twenty jobs.',
+    ] },
+
+    { note: 'A business is rarely undone by the invoices it cannot collect and often by the ones it never sent. The June 2026 change makes that distinction expensive: the legal clock now waits for your paperwork. The calculation fits on one line — days between finishing the work and issuing the invoice, multiplied by what a day is worth to you. Run it before buying anything.' },
+  ],
+  faq: [
+    { q: 'When did New Caledonia move the payment clock to the invoice date?', a: 'The bill was adopted by Congress on 26 May 2026, promulgated on 12 June and published in the territory\'s official journal on 19 June 2026. It changes the regime under article Lp. 443-2 of the locally applicable commercial code: the maximum term becomes thirty days end-of-month following the invoice date, where it previously ran from receipt of goods or completion of the service. Check the exact wording in the official journal before amending your terms of sale.' },
+    { q: 'What does a week of invoicing delay actually cost?', a: 'It depends entirely on where the month end falls. An invoice issued on the 3rd rather than the 27th of the previous month moves the due date by a full month, because of the thirty-days-end-of-month rule. On a 500,000 XPF invoice, a month of overdraft costs about 2,200 XPF at the 5.26 per cent average the IEOM recorded for the first quarter of 2026. The serious line is not that interest but the permanent shift in receivables if the delay is habitual: on the order of one month of turnover out of the account.' },
+    { q: 'Does any of this apply outside New Caledonia?', a: 'The legal trigger is specific to New Caledonia, but the arithmetic is not. Anywhere terms are expressed end-of-month, the day you issue decides which month you get paid in. Xero measures New Zealand small firms at 24.1 days to be paid and 4.7 days late in its latest quarter, and priced late payment to Kiwi small businesses at NZ$827 million for 2023. The controllable part of that gap is still the issue date.' },
+    { q: 'Do I need new invoicing software to fix this?', a: 'Not necessarily new software. Most small firms here already have something that produces an invoice; what is missing is the automatic trigger between closing the job and issuing the document, and the follow-up sequence after it. Both usually sit on top of the existing tool. Start by measuring the real issue delay across twenty jobs — if the average is under two days, the problem is elsewhere and no tool will fix it.' },
+  ],
+  related: [
+    ['/ai-for-builders/', 'AI for builders and trades — where the hours actually go'],
+    ['/workflow-automation-examples/', 'Workflow automation examples that hold up'],
+    ['/ai-automation-small-business/', 'AI automation for small business — the practical view'],
+  ],
+  extraGraph: [{
+    '@type': 'Article',
+    headline: 'Late Invoicing: The Real Cost for a Small Business, Measured',
+    datePublished: '2026-08-01',
+    author: { '@id': 'https://kanaky.xyz/#kevyn' },
+    publisher: { '@id': 'https://kanaky.xyz/#organization' },
+  }],
 },
 
 {
