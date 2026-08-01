@@ -81,10 +81,13 @@ function block(b, lang, i = 0) {
 
   if (b.code) return `<pre class="${rv} gx-code"><code>${esc(b.code)}</code></pre>`;
 
-  /* term : comme code, mais rejoué en animation par term-replay.js
+  /* term : comme code, mais rejoué en animation par term-replay.js.
+   * Le ?v= est indispensable : sans lui, un visiteur déjà venu garde
+   * l'ancien script en cache et voit le scénario d'un autre produit.
+   * À incrémenter à chaque changement de term-replay.js.
    * (le transcript statique reste le fallback sans JS / reduced-motion) */
-  if (b.term) return `<pre class="${rv} gx-code" data-term-replay><code>${esc(b.term)}</code></pre>
-<script src="/assets/term-replay.js" defer></script>`;
+  if (b.term) return `<pre class="${rv} gx-code" data-term-replay${b.scene ? ` data-term-scene="${esc(b.scene)}"` : ''}><code>${esc(b.term)}</code></pre>
+<script src="/assets/term-replay.js?v=2" defer></script>`;
 
   if (b.map) return melanesiaMap(lang);
 

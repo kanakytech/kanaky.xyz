@@ -8,7 +8,14 @@
  *
  * Cible : tout élément [data-term-replay] (le <code> d'un <pre>, ou
  * un .shot-body). L'animation ne tourne que quand l'élément est
- * visible (IntersectionObserver). */
+ * visible (mesure directe du rect, pas d'IntersectionObserver : les
+ * webviews ne déclenchent pas toujours l'IO au défilement).
+ *
+ * SCÉNARIO — un élément peut porter data-term-scene="<clé>" pour choisir
+ * lequel rejouer. Sans attribut, on retombe sur 'outreach' (historique).
+ * Avant, le scénario était codé en dur : n'importe quelle page animait
+ * l'installation de la machine de prospection, même une page vendant
+ * autre chose. */
 (() => {
   if (window.__TR) return; window.__TR = 1;
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -35,7 +42,8 @@
     { l: 'Test my existing configuration' },
     { l: 'Quit' },
   ];
-  const SC = [
+  const SCENES = {};
+  SCENES.outreach = [
     { type: '$ node setup.js', speed: 52 },
     { p: 420 },
     { l: '┌──────────────────────────────────────────────┐', c: 'tr-g' },
@@ -62,7 +70,46 @@
     { p: 4200 },
   ];
 
+  /* Assistant : l'installation n'est pas un wizard, c'est une conversation.
+   * Le rythme le montre — une phrase tapée, puis les réponses. */
+  const Q = (n, q) => [{ l: '' }, { l: `  ${n} / 9   ${q}`, c: 'tr-m' }];
+  SCENES.assistant = [
+    { type: '$ claude', speed: 58 },
+    { p: 500 },
+    { l: '' },
+    { pre: '> ', type: 'Read INSTALL.md and set this up for me.', speed: 42, c: 'tr-b' },
+    { p: 480 },
+    { l: '' },
+    { spin: { run: 'reading INSTALL.md', ms: 1100, done: 'Following install/INTERVIEW.md — nine questions' } },
+    ...Q(1, 'What do you want to call me?'),
+    { pre: '  ❯ ', type: 'Atlas', speed: 95 },
+    ...Q(2, 'Your name, and what should I call you?'),
+    { pre: '  ❯ ', type: 'Marie Dupont — Marie is fine', speed: 52 },
+    ...Q(3, 'In a sentence or two: what do you do?'),
+    { pre: '  ❯ ', type: 'I run a two-person design studio.', speed: 44 },
+    ...Q(9, 'Anything I must never do without asking?'),
+    { pre: '  ❯ ', type: 'Never email a client without my go-ahead', speed: 44 },
+    { p: 520 },
+    { l: '' },
+    { l: '  ─────────────────────────────────────────', c: 'tr-m' },
+    { spin: { run: 'applying', ms: 900, done: 'workspace          ~/Documents/Atlas' } },
+    { spin: { run: 'writing the working contract', ms: 800, done: 'working contract   CLAUDE.md' } },
+    { spin: { run: 'seeding memory', ms: 750, done: 'memory             index seeded' } },
+    { spin: { run: 'starting the phone bridge', ms: 1300, done: 'phone bridge       running (survives reboot)' } },
+    { spin: { run: 'fetching the speech model', ms: 1500, done: 'voice notes        large-v3-turbo, local' } },
+    { spin: { run: 'scheduling agents', ms: 900, done: 'morning brief      weekdays 07:00' } },
+    { spin: { run: 'building the continuity kit', ms: 1000, done: 'continuity kit     built · nightly 21:20' } },
+    { p: 350 },
+    { l: '' },
+    { spin: { run: 'sending a test message to your phone', ms: 1600, done: 'Delivered.' } },
+    { p: 300 },
+    { l: '' },
+    { l: '  Atlas is running. Talk to me here, or from Telegram.', c: 'tr-g tr-b' },
+    { p: 4500 },
+  ];
+
   function run(el) {
+    const SC = SCENES[el.dataset.termScene] || SCENES.outreach;
     const host = el.matches('pre') ? (el.querySelector('code') || el) : el;
     /* fige la hauteur du transcript statique : zéro saut de page */
     host.style.minHeight = host.offsetHeight + 'px';
@@ -71,7 +118,9 @@
     const shell = el.closest('.shot, pre') || el;
     shell.setAttribute('role', 'img');
     shell.setAttribute('aria-label', el.dataset.termLabel ||
-      'Terminal recording: one command runs the guided setup — menus, live connection tests, done.');
+      (SC === SCENES.assistant
+        ? 'Terminal recording: one sentence starts the setup, nine questions follow, and the assistant configures itself.'
+        : 'Terminal recording: one command runs the guided setup — menus, live connection tests, done.'));
 
     /* visibilité par mesure directe plutôt qu'IntersectionObserver :
      * même résultat, mais fiable aussi dans les webviews qui ne

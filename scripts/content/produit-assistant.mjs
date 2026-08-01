@@ -138,7 +138,7 @@ export default [
 
     { h: 'The install is a conversation' },
     'You hand it the folder and say one sentence. It asks nine questions — all with defaults you can accept by pressing enter — and configures everything from your answers.',
-    { term: TERM_EN },
+    { term: TERM_EN, scene: 'assistant' },
     { note: 'That is the whole installation. Twenty to forty minutes, most of it waiting on downloads. Every step is documented for manual setup too — nothing here is a black box, and you get the full source.' },
 
     { h: 'What changes, day to day' },
@@ -237,7 +237,7 @@ export default [
 
     { h: 'L’installation est une conversation' },
     'Vous lui donnez le dossier et vous dites une phrase. Il pose neuf questions — toutes avec une valeur par défaut qu’il suffit de valider — et configure tout à partir de vos réponses.',
-    { term: TERM_FR },
+    { term: TERM_FR, scene: 'assistant' },
     { note: 'C’est toute l’installation. Vingt à quarante minutes, dont l’essentiel à attendre des téléchargements. Chaque étape est aussi documentée pour une installation à la main — rien n’est une boîte noire, et le code source est fourni.' },
 
     { h: 'Ce que ça change, au quotidien' },
