@@ -75,6 +75,7 @@ export default [
     { q: 'Faut-il un prestataire local ou métropolitain ?', a: 'Le travail technique se livre à distance dans les deux cas. Ce que le local apporte réellement : le même fuseau horaire quand un système tombe, la connaissance du terrain, et quelqu’un de joignable et responsable dans la même juridiction. Sur un projet simple, ces avantages comptent peu ; sur un système dont dépend votre exploitation, ils comptent beaucoup.' },
   ],
   related: [
+    ['/assistant-ia-personnel/', 'Assistant IA personnel — 1 490 USD'],
     ['/automatisation-ia-nouvelle-caledonie/', 'Notre agence en Kanaky (Nouvelle-Calédonie)'],
     ['/exemples-automatisation-pme/', '10 exemples d’automatisation'],
     ['/ia-locale-entreprise/', 'L’IA en local'],

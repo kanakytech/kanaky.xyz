@@ -227,6 +227,7 @@ export default [
     { q: 'Et si la machine tombe en panne ?', a: 'Comme pour tout outil critique : une sauvegarde des données et de la configuration, et un plan B écrit. La différence avec un service cloud, c’est que la panne est la vôtre — réparable — et non celle d’un fournisseur, sa politique tarifaire ou ses conditions d’utilisation, sur lesquelles vous ne pouvez rien.' },
   ],
   related: [
+    ['/assistant-ia-personnel/', 'Un assistant IA personnel, installé chez vous'],
     ['/exemples-automatisation-pme/', '10 exemples d’automatisation'],
     ['/combien-coute-automatisation-ia/', 'Combien ça coûte, vraiment'],
     ['/automatisation-ia-nouvelle-caledonie/', 'Notre agence en Kanaky (Nouvelle-Calédonie)'],

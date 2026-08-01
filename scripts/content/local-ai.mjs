@@ -494,6 +494,7 @@ export default [
     { q: 'What hardware do I need?', a: 'A machine with 16GB of memory runs a small model adequately; 32GB or more is comfortable. For a personal assistant the responsiveness matters more than raw capability — a fast model you consult constantly is worth more than a slow one you avoid.' },
   ],
   related: [
+    ['/ai-chief-of-staff/', 'The assistant we build and install for you'],
     ['/run-ai-locally-business/', 'Running AI locally'],
     ['/ollama-for-business/', 'Ollama for business'],
     ['/local-ai-vs-cloud-ai/', 'Local vs cloud, compared'],

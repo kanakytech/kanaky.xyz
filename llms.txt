@@ -19,6 +19,10 @@ Kanaky Tech is based in Nouméa (New Caledonia) and Auckland (New Zealand). The 
 - [AI Agent Development](https://kanaky.xyz/ai-agents-new-caledonia/): custom AI agents grounded in a business's own data and tools, not generic chatbots.
 - [Private AI Systems](https://kanaky.xyz/private-ai-systems/): AI in a controlled environment — client data is never used to train public models; engagements available under NDA.
 
+## Products you can buy directly
+- [Cold Outreach Machine](https://kanaky.xyz/marketplace/cold-outreach-machine/) — US$299.99 once, not a subscription. Finds companies matching the customer profile you describe, reads what each publishes, writes a different email per company, sends them paced inside working hours. Runs on your own machine; the AI writing can run entirely locally. Source code, guided installer, setup call, 30 days support. French: [Machine de prospection commerciale](https://kanaky.xyz/machine-prospection-commerciale/).
+- [AI Chief of Staff](https://kanaky.xyz/ai-chief-of-staff/) — US$1,490 once, installed with you in a 90-minute session. A persistent layer for an AI coding assistant you already subscribe to: memory that survives between sessions so you stop re-explaining your business; a Telegram bridge answering on your phone by text, voice note or photo, with speech transcription running locally so no audio is uploaded; scheduled agents producing a morning brief or evening wrap unattended; and a continuity kit of a few megabytes that rebuilds the entire setup on a new machine. Everything runs on the buyer's own hardware. Custom builds around a buyer's own tools, workflows, trade, team or messaging channels are quoted per project. French: [Assistant IA personnel](https://kanaky.xyz/assistant-ia-personnel/).
+
 ## Who it serves
 - Small and medium businesses wanting to remove time-consuming manual work.
 - Creative and digital agencies needing a white-label AI production and automation partner that delivers under their brand.
