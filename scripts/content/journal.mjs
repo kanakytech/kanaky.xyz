@@ -18,11 +18,12 @@ export default [
   short: 'Journal',
   h1: 'Journal. <span style="color:var(--grey-4);font-weight:300;">One piece a day, in two languages.</span>',
   cta: 'service',
-  published: '2026-08-01',
+  published: '2026-08-02',
   body: [
     { lead: 'One long-form piece per working day, on what AI automation actually does for a business in this part of the world. Each one states a position, names its sources and shows its arithmetic. Every piece appears in French and in English — not a word-for-word translation, but the same substance written natively in each language. Most recent first.' },
 
     { list: [
+      '**2 August 2026** — [The real cost of an unanswered enquiry, measured](/cost-of-an-unanswered-enquiry/) · [Français — La demande client restée sans réponse : le calcul](/demande-client-sans-reponse-cout/)',
       '**1 August 2026** — [Facturation en retard : ce que la loi du pays de juin 2026 a déplacé](/facturation-en-retard-cout-reel/) · [English — Seven days of paperwork, thirty-one days of cash](/late-invoicing-real-cost/)',
       '**31 July 2026** — [Why island businesses are better positioned for AI than they think](/island-businesses-ai-advantage/) · [Français — Pourquoi la petite taille est un avantage face à l’IA](/petite-entreprise-avantage-ia/)',
       '**30 July 2026** — [Automatiser sans attendre la fibre parfaite : le calcul](/automatiser-sans-attendre-la-fibre/) · [English — You don’t need perfect internet to automate](/automation-without-perfect-internet/)',
@@ -36,6 +37,158 @@ export default [
     ['/ai-audit/', 'Book a free AI opportunity audit'],
     ['/local-commitment/', 'The 10% that stays in the region'],
   ],
+},
+
+{
+  slug: 'cost-of-an-unanswered-enquiry',
+  lang: 'en',
+  alt: { lang: 'fr', url: 'https://kanaky.xyz/demande-client-sans-reponse-cout/' },
+  title: 'The Real Cost of an Unanswered Enquiry, Measured',
+  description: 'Half the speed-to-lead statistics in circulation have no traceable source. Here is what survives a check — Harvard Business Review on 1.25 million leads, Drift on 433 companies — and the three numbers that turn it into your figure rather than someone else\'s.',
+  keywords: 'cost of slow lead response, lead response time statistics, unanswered enquiry small business, speed to lead small business, missed enquiries revenue, automate enquiry response small business',
+  eyebrow: 'Journal',
+  short: 'Journal · Enquiries',
+  h1: 'The enquiry nobody answered. <span style="color:var(--grey-4);font-weight:300;">The only lost revenue that leaves no trace.</span>',
+  cta: 'service',
+  published: '2026-08-02',
+  body: [
+    { lead: 'An unanswered enquiry costs money and records nothing. It never reaches the accounts, no line item appears against it, and by Friday nobody in the business remembers it existed. That silence is why it is the one loss most owners have never put a figure on — and the figure is calculable. Just not from the statistics the industry keeps circulating, and the difference between those two things is worth more than the number.' },
+
+    { h: 'What survives a look at the sources' },
+    'Speed-to-lead research gets quoted constantly and checked rarely. Two claims appear in nearly every vendor deck: that 78 per cent of customers buy from whoever replies first, and that 35 to 50 per cent of sales go to the first vendor to respond. Follow either one back and there is no published methodology at any point — the citations loop between blogs quoting each other. Discard both.',
+    'What is left is a smaller set and a considerably more useful one. The 2011 *Harvard Business Review* study by James Oldroyd, Kristina McElheran and David Elkington examined **1.25 million sales leads** across 42 companies: firms attempting contact within an hour were roughly **seven times** as likely to qualify a lead as those trying an hour later, and more than sixty times as likely as those waiting a full day. The same authors audited 2,241 US companies and measured an average first response of **42 hours**, with **23 per cent never responding at all**. Oldroyd\'s earlier work with InsideSales — six companies, 15,000 leads, over 100,000 call attempts — put the odds of actually reaching someone at 100 times higher inside five minutes than at thirty. Drift\'s 2017 secret-shopper test of 433 business software firms found **7 per cent** replying within five minutes and **55 per cent** not replying across five working days. XANT\'s 2021 analysis of 5.7 million inbound leads is the most recent of the set, and reports eight times the conversion inside five minutes.',
+    'Now note the dates. Most of that is over a decade old, and much of it was funded by companies selling response software; I would not stake a decision on any single figure in it. What makes the pattern serious is that separate samples, different decades and unrelated industries all point one way, and none point back.',
+
+    { h: 'The multiplier is not your number' },
+    'This is where most articles on the subject stop, and where the useful part starts. A seven-times qualification multiplier measured across 42 American companies tells you nothing about what a delay costs in your business. Three numbers do, and you already hold all three: how many enquiries go past a day unanswered, what one converted enquiry is worth, and how far your close rate really differs between the ones answered quickly and the ones answered late.',
+    'Multiply them out and something awkward surfaces. The answer is governed by average job value, not by response speed. Identical delay, identical fix, three completely different verdicts.',
+
+    { table: {
+      minWidth: 680,
+      head: ['Same delay, three businesses', 'Café or small retailer', 'Trades or services firm', 'Charter or tour operator'],
+      rows: [
+        ['Enquiries a month going past 24 hours', '20', '15', '8'],
+        ['Value of one converted enquiry', 'NZ$80', 'NZ$2,400', 'NZ$5,500'],
+        ['Conversion gap assumed, fast against slow', '5 points', '10 points', '10 points'],
+        ['Extra jobs a year if the gap closes', '12', '18', '10'],
+        ['Revenue at stake per year', 'about NZ$960', 'about NZ$43,200', 'about NZ$52,800'],
+        ['Worth building a system for?', 'No', 'Yes', 'Without question'],
+      ],
+    }},
+
+    'Those conversion gaps are assumptions, stated as assumptions — substitute your own and the shape holds. A café losing under a thousand dollars a year to slow replies should not buy anything; the honest advice is to leave it alone. The same delay at the charter operator is worth fifty times more, on fewer enquiries. And convert to gross margin first: NZ$43,200 at a 30 per cent margin is about NZ$13,000 of actual money — still real, no longer dramatic.',
+
+    { h: 'Where enquiries actually die' },
+    'Response time is the wrong first question anyway, because the expensive enquiries are not answered slowly — they are never answered. 411 Locals tracked 85 small businesses across 58 industries and found **37.8 per cent** of calls reaching a live person, an equal share going to voicemail and about a quarter simply ringing out. The fieldwork ran from 2013 to 2015 — an order of magnitude, not a current benchmark.',
+    'In this region there is a second leak, more specific and easier to fix: the enquiry that lands on a channel nobody owns. The Facebook page message read by whoever last had the login. The WhatsApp thread on a personal phone that goes home at five. The contact form still posting to an address a web developer created three years ago. Those enquiries are not late — they are invisible, and appear in no count of anything. Add the time difference on top: a message sent from Europe or Asia arrives here overnight, and by the time it is read, someone closer has answered it.',
+
+    { h: 'What actually closes the gap' },
+    { steps: [
+      'Find the channels before you count anything. List every route an enquiry can take into the business, including the ones nobody admits to. Most of the recovery is discovered here, before any tool is involved.',
+      'Acknowledge with content, not with a receipt. "We have received your message" resets nothing and everybody knows what it means. A reply carrying a price range, a next step and a named time buys you days of patience, and it is the part a machine drafts well.',
+      'Send the second one. Velocify\'s analysis of roughly 3.5 million leads found half were never contacted a second time, while 93 per cent of converted ones were reached by the sixth attempt. It is the cheapest fix available and it requires no technology whatsoever.',
+      'Automate the night, not the judgment. Overnight a system can acknowledge, classify by urgency and draft the reply. In the morning a person decides what is worth taking on. [Start by measuring](/ai-audit/) how many enquiries arrived last month and how many got an answer the same day.',
+    ] },
+
+    { h: 'When speed is the wrong project' },
+    'It would be easy to end there, and dishonest. Fast replies cannot repair a price problem, a reputation problem or an offer nobody wants — answering quicker only gets you to no quicker. There is also a failure mode the vendor decks leave out: an enquiry answered in ninety seconds by a system that then takes four days to produce the quote is worse than a slow, honest reply. Speed at the front of a slow process advertises the slow process.',
+
+    { note: 'The reason this loss goes unmeasured is that it produces no evidence. Nothing arrives, nothing is filed, nothing is missed. The correction is unglamorous and takes about an hour: count last month\'s enquiries by channel, count how many were answered the same day, multiply the gap by what one converted enquiry is worth. Whatever comes out, it is your figure rather than a decade-old multiplier from someone else\'s industry — and if it comes out small, the right decision is to walk away and spend the attention elsewhere.' },
+  ],
+  faq: [
+    { q: 'How fast do I actually need to reply to an enquiry?', a: 'The published research consistently rewards the first hour and rewards the first five minutes disproportionately, but the honest answer for most small businesses is that the gap worth closing is between "same day" and "never", not between five minutes and one hour. Chasing a five-minute response usually means staffing or software; getting every enquiry answered the same working day usually means fixing which channels are monitored. The second one is cheaper and recovers more.' },
+    { q: 'Are the famous speed-to-lead statistics reliable?', a: 'Partly. The Harvard Business Review work on 1.25 million leads, the InsideSales call-attempt data and Drift\'s test of 433 companies all have stated samples and methods. The widely quoted claims that 78 per cent of buyers purchase from the first responder, or that 35 to 50 per cent of sales go to the first vendor, have no traceable primary source and should not be used. Most of the credible material is also over ten years old and much of it was vendor-funded, which is why it is better treated as a direction than as a coefficient.' },
+    { q: 'How do I calculate what slow replies cost my business?', a: 'Three figures, all of which you already have. Count the enquiries in one recent month that went more than 24 hours without a reply. Take the average value of one enquiry that converts. Estimate, honestly, the difference in close rate between the ones you answer quickly and the ones you do not — five to ten percentage points is a defensible working assumption. Multiply the three, then multiply by your gross margin. If the result does not clear the cost of a fix by a comfortable margin, do not buy the fix.' },
+    { q: 'Can this be handled without hiring someone to answer the phone?', a: 'Usually, because the problem is rarely a shortage of people to answer. It is that enquiries arrive on channels with no owner and outside working hours. Routing every channel into one place, sending a useful acknowledgement automatically, and having drafted replies waiting each morning covers most of it. Where a human is genuinely irreplaceable is the judgment call about whether a job is worth taking — and that part should stay where it is.' },
+  ],
+  related: [
+    ['/ai-for-marine-businesses/', 'AI for marine and charter operators — where bookings leak'],
+    ['/workflow-automation-examples/', 'Workflow automation examples that hold up'],
+    ['/ai-audit/', 'Book a free AI opportunity audit'],
+  ],
+  extraGraph: [{
+    '@type': 'Article',
+    headline: 'The Real Cost of an Unanswered Enquiry, Measured',
+    datePublished: '2026-08-02',
+    author: { '@id': 'https://kanaky.xyz/#kevyn' },
+    publisher: { '@id': 'https://kanaky.xyz/#organization' },
+  }],
+},
+
+{
+  slug: 'demande-client-sans-reponse-cout',
+  lang: 'fr',
+  alt: { lang: 'en', url: 'https://kanaky.xyz/cost-of-an-unanswered-enquiry/' },
+  title: 'La demande client restée sans réponse : le coût réel, calculé',
+  description: 'La moitié des statistiques sur le délai de réponse commerciale n’a aucune source vérifiable. Ce qui résiste à la vérification — Harvard Business Review sur 1,25 million de demandes, Drift sur 433 entreprises — et les trois chiffres qui donnent le vôtre.',
+  keywords: 'délai de réponse demande client, demande client sans réponse, coût réponse tardive prospect, répondre aux demandes clients PME, automatiser réponse demande client, perte de chiffre d’affaires demandes non traitées',
+  eyebrow: 'Journal',
+  short: 'Journal · Demandes',
+  h1: 'La demande à laquelle personne n’a répondu. <span style="color:var(--grey-4);font-weight:300;">La seule perte qui ne laisse aucune trace.</span>',
+  cta: 'service-fr',
+  published: '2026-08-02',
+  body: [
+    { lead: 'Une demande client sans réponse coûte de l’argent et n’enregistre rien. Elle n’arrive jamais jusqu’à la comptabilité, aucune ligne ne lui correspond, et le vendredi personne ne se souvient qu’elle a existé. Ce silence explique qu’elle soit la seule perte que presque aucun dirigeant n’a chiffrée — et elle se chiffre. Simplement pas avec les statistiques que le secteur fait circuler, et l’écart entre les deux vaut mieux que le résultat.' },
+
+    { h: 'Ce qui résiste à la vérification des sources' },
+    'Les études sur le délai de réponse commerciale sont citées en permanence et vérifiées rarement. Deux affirmations reviennent dans presque tous les argumentaires : 78 % des clients achèteraient à celui qui répond le premier, et 35 à 50 % des ventes iraient au premier fournisseur à répondre. Remontez l’une ou l’autre : aucune méthodologie publiée nulle part, les citations tournant en boucle entre des blogs qui se recopient. À écarter, toutes les deux.',
+    'Reste un ensemble plus mince et nettement plus utile. L’étude publiée en 2011 par la *Harvard Business Review*, signée James Oldroyd, Kristina McElheran et David Elkington, porte sur **1,25 million de demandes** dans 42 entreprises : celles qui tentaient un contact dans l’heure avaient environ **sept fois** plus de chances de qualifier la demande que celles qui s’y prenaient une heure plus tard, et plus de soixante fois plus que celles qui attendaient un jour. Les mêmes auteurs ont testé 2 241 entreprises américaines : délai moyen de première réponse **42 heures**, et **23 % qui ne répondaient jamais**. Les travaux antérieurs d’Oldroyd avec InsideSales — six entreprises, 15 000 demandes, plus de 100 000 tentatives d’appel — situent les chances de joindre quelqu’un à 100 fois supérieures dans les cinq premières minutes qu’à trente. Le client mystère de Drift, en 2017, sur 433 éditeurs de logiciels : **7 %** de réponses sous cinq minutes, **55 %** aucune réponse en cinq jours ouvrés. Et l’analyse de XANT en 2021, la plus récente, sur 5,7 millions de demandes entrantes : huit fois le taux de conversion en deçà de cinq minutes.',
+    'Regardez maintenant les dates. L’essentiel a plus de dix ans, et une bonne partie a été financée par des vendeurs de logiciels de réponse : je ne fonderais aucune décision sur un chiffre isolé de cet ensemble. Ce qui rend la tendance sérieuse, c’est que des échantillons distincts, à des décennies différentes et dans des secteurs sans rapport, vont tous dans le même sens.',
+
+    { h: 'Le multiplicateur n’est pas votre chiffre' },
+    'C’est ici que la plupart des articles s’arrêtent, et ici que commence la partie utile. Un facteur sept mesuré sur 42 entreprises américaines ne dit rien de ce qu’un délai coûte chez vous. Trois chiffres le disent, et vous les détenez déjà : combien de demandes passent la journée sans réponse, ce que vaut une demande transformée, et de combien votre taux de transformation diffère entre celles traitées vite et celles traitées tard.',
+    'Posez la multiplication et quelque chose de gênant apparaît : le résultat est commandé par le montant moyen d’une affaire, pas par la vitesse de réponse. Même délai, même correctif, trois verdicts sans rapport.',
+
+    { table: {
+      minWidth: 680,
+      head: ['Même délai, trois entreprises', 'Commerce de détail', 'Artisan ou prestataire', 'Prestataire nautique'],
+      rows: [
+        ['Demandes par mois dépassant 24 heures', '20', '15', '8'],
+        ['Valeur d’une demande transformée', '6 000 F', '180 000 F', '450 000 F'],
+        ['Écart de transformation supposé, vite/tard', '5 points', '10 points', '10 points'],
+        ['Affaires gagnées en plus sur l’année', '12', '18', '10'],
+        ['Chiffre d’affaires en jeu par an', 'environ 72 000 F', 'environ 3 240 000 F', 'environ 4 320 000 F'],
+        ['Faut-il monter un système ?', 'Non', 'Oui', 'Sans hésitation'],
+      ],
+    }},
+
+    'Ces écarts sont des hypothèses, annoncées comme telles — remplacez-les par les vôtres, la forme du résultat tient. Un commerce qui perd moins de cent mille francs par an sur des réponses tardives ne doit rien acheter : le conseil honnête est de laisser ça tranquille. Le même délai chez le prestataire nautique pèse soixante fois plus, sur moins de demandes. Et ramenez à la marge d’abord : 3,24 millions de francs à 30 % font environ un million de vrai argent — sérieux, plus spectaculaire.',
+
+    { h: 'Là où les demandes meurent vraiment' },
+    'Le délai est de toute façon la mauvaise première question : les demandes coûteuses ne sont pas traitées tard, elles ne sont jamais traitées. La société 411 Locals a suivi 85 petites entreprises dans 58 secteurs et relevé **37,8 %** d’appels aboutissant à une personne, autant partant sur messagerie, et près d’un quart sonnant dans le vide. Le relevé date de 2013-2015 : un ordre de grandeur, pas une référence actuelle.',
+    'S’y ajoute une fuite plus spécifique, et plus facile à colmater : la demande qui arrive sur un canal qui n’appartient à personne. Le message de la page Facebook, lu par celui qui avait l’identifiant en dernier. Le fil WhatsApp sur un téléphone personnel qui rentre à la maison à dix-sept heures. Le formulaire de contact qui écrit encore à une adresse créée par un prestataire web il y a trois ans. Ces demandes ne sont pas en retard : elles sont invisibles, et n’apparaissent dans aucun décompte. Ajoutez le décalage horaire — parti d’Europe, un message arrive ici la nuit, et quand on le lit, un concurrent plus proche a déjà répondu.',
+
+    { h: 'Ce qui referme réellement l’écart' },
+    { steps: [
+      'Trouvez les canaux avant de compter. Listez toutes les voies par lesquelles une demande peut entrer dans l’entreprise, y compris celles que personne n’avoue. L’essentiel du gain se découvre là, avant tout outil.',
+      'Accusez réception avec du contenu, pas avec un reçu. « Nous avons bien reçu votre message » ne remet aucun compteur à zéro, et tout le monde sait ce que ça veut dire. Une réponse portant une fourchette de prix, une étape suivante et une heure annoncée achète plusieurs jours de patience — la partie qu’une machine rédige bien.',
+      'Envoyez la deuxième. L’analyse de Velocify sur environ 3,5 millions de demandes relève que la moitié n’a jamais eu de second contact, alors que 93 % de celles qui se transforment sont jointes au plus tard à la sixième tentative. Le correctif le moins cher qui existe, sans aucune technologie.',
+      'Automatisez la nuit, pas le jugement. Un système accuse réception, classe par urgence et prépare le brouillon ; le matin, une personne décide de ce qui vaut la peine d’être pris. [Commencez par mesurer](/commencer-avec-ia-entreprise/) combien de demandes sont arrivées le mois dernier et combien ont eu une réponse le jour même.',
+    ] },
+
+    { h: 'Quand la vitesse est le mauvais chantier' },
+    'S’arrêter là serait commode et malhonnête. Une réponse rapide ne répare ni un prix, ni une réputation, ni une offre dont personne ne veut : répondre plus vite ne fait qu’arriver plus vite au refus. Il existe aussi un mode d’échec absent des argumentaires : une demande traitée en quatre-vingt-dix secondes par un système qui met ensuite quatre jours à sortir le devis est pire qu’une réponse lente et franche. La vitesse en façade d’un processus lent fait la publicité du processus lent.',
+
+    { note: 'Si cette perte n’est jamais mesurée, c’est qu’elle ne produit aucune preuve : rien n’arrive, rien n’est classé, rien ne manque. La correction prend une heure et n’a rien de flatteur — comptez les demandes du mois dernier par canal, celles qui ont eu une réponse le jour même, et multipliez l’écart par ce que vaut une demande transformée. Le résultat est le vôtre, pas un multiplicateur vieux de dix ans emprunté au secteur d’un autre. Et s’il sort petit, refermez le dossier.' },
+  ],
+  faq: [
+    { q: 'En combien de temps faut-il répondre à une demande client ?', a: 'Les études publiées récompensent systématiquement la première heure, et de manière disproportionnée les cinq premières minutes. Mais la réponse honnête pour la plupart des petites entreprises est que l’écart à combler se situe entre « le jour même » et « jamais », pas entre cinq minutes et une heure. Viser cinq minutes suppose du personnel ou du logiciel ; obtenir que toute demande reçoive une réponse dans la journée ouvrée suppose surtout de corriger quels canaux sont surveillés. Le second est moins cher et récupère davantage.' },
+    { q: 'Les statistiques connues sur le délai de réponse sont-elles fiables ?', a: 'En partie. Les travaux de la Harvard Business Review sur 1,25 million de demandes, les données d’appels d’InsideSales et le test de Drift sur 433 entreprises annoncent leur échantillon et leur méthode. En revanche, les affirmations très répandues selon lesquelles 78 % des acheteurs achèteraient au premier répondant, ou 35 à 50 % des ventes iraient au premier fournisseur, n’ont aucune source primaire identifiable et ne devraient pas être utilisées. L’essentiel du matériel crédible a par ailleurs plus de dix ans et a souvent été financé par des fournisseurs : à traiter comme une direction, pas comme un coefficient.' },
+    { q: 'Comment calculer ce que me coûtent les réponses tardives ?', a: 'Trois chiffres, que vous détenez déjà. Comptez, sur un mois récent, les demandes restées plus de 24 heures sans réponse. Prenez la valeur moyenne d’une demande qui se transforme. Estimez honnêtement l’écart de taux de transformation entre celles traitées vite et les autres — cinq à dix points est une hypothèse de travail défendable. Multipliez les trois, puis appliquez votre marge brute. Si le résultat ne dépasse pas confortablement le coût du correctif, n’achetez pas le correctif.' },
+    { q: 'Peut-on régler ça sans embaucher quelqu’un pour répondre ?', a: 'Le plus souvent oui, parce que le problème est rarement un manque de personnes pour répondre. Il vient de demandes qui arrivent sur des canaux sans propriétaire et en dehors des horaires. Ramener tous les canaux au même endroit, envoyer automatiquement un accusé de réception utile et trouver des brouillons prêts chaque matin couvre l’essentiel. Là où l’humain reste irremplaçable, c’est le jugement sur l’intérêt d’une affaire — et cette partie doit rester où elle est.' },
+  ],
+  related: [
+    ['/ia-prestataires-nautiques-polynesie/', 'IA pour les prestataires nautiques — là où les réservations fuient'],
+    ['/exemples-automatisation-pme/', '10 exemples d’automatisation en PME'],
+    ['/commencer-avec-ia-entreprise/', 'Par où commencer avec l’IA dans votre entreprise'],
+  ],
+  extraGraph: [{
+    '@type': 'Article',
+    headline: 'La demande client restée sans réponse : le coût réel, calculé',
+    datePublished: '2026-08-02',
+    author: { '@id': 'https://kanaky.xyz/#kevyn' },
+    publisher: { '@id': 'https://kanaky.xyz/#organization' },
+  }],
 },
 
 {
