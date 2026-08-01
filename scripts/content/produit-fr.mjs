@@ -41,6 +41,7 @@ export default [
     offers: {
       '@type': 'Offer',
       price: '299.99',
+      priceValidUntil: '2026-08-11',
       priceCurrency: 'USD',
       availability: 'https://schema.org/InStock',
       url: 'https://kanaky.xyz/marketplace/cold-outreach-machine/',
@@ -65,7 +66,7 @@ export default [
       minWidth: 520,
       head: ['', 'Cette machine', 'Les plateformes par abonnement'],
       rows: [
-        ['Prix', '**299,99 USD** — soit environ **36 000 F CFP**, une fois', '39 à 97 USD **par mois**'],
+        ['Prix', '**299,99 USD** — environ **36 000 F CFP**, une fois. <s>499 USD</s> — prix de lancement **jusqu’au 11 août 2026**', '39 à 97 USD **par mois**'],
         ['Sur un an', '36 000 F, puis plus rien', '**56 000 à 139 000 F**, chaque année'],
         ['Si vous arrêtez de payer', 'Elle continue de tourner', 'L’accès s’arrête'],
         ['Le code', 'Il est à vous', 'Vous n’y avez pas accès'],

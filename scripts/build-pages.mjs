@@ -265,7 +265,7 @@ const footer = `  <footer>
 const CTA = {
   product: {
     h: 'Hire a salesperson once.<br/>Keep them forever.',
-    p: 'The Cold Outreach Machine finds the companies you sell to, writes a different email for each one, and sends them on its own — paced, inside working hours. US$299.99, paid once, live setup call included.',
+    p: 'The Cold Outreach Machine finds the companies you sell to, writes a different email for each one, and sends them on its own — paced, inside working hours. US$299.99 as a launch price until 11 August, then US$499 — paid once, live setup call included.',
     a: ['/marketplace/cold-outreach-machine/', 'See the machine'],
     b: ['/cold-email-software-one-time-payment/', 'Buy once vs subscribe'],
   },
