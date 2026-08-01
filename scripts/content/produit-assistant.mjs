@@ -128,7 +128,7 @@ export default [
       '@type': 'Offer',
       price: '1490.00',
       priceCurrency: 'USD',
-      availability: 'https://schema.org/InStock',
+      availability: 'https://schema.org/PreOrder',
       url: 'https://kanaky.xyz/ai-chief-of-staff/',
       seller: { '@id': 'https://kanaky.xyz/#organization' },
     },
@@ -164,6 +164,8 @@ export default [
         ['**Licence**', 'One business, unlimited machines, no expiry, no subscription'],
       ],
     }},
+    { note: '**Opening soon.** The first installations are being scheduled now, and places are limited by the fact that each one includes a live session. If you want one of the first slots, [write to us](/contact/) — say what you do and what you would want it to handle, and you will be first in line when booking opens.' },
+
     'The install largely runs itself — that is not what the session is for. Three decisions determine whether this becomes part of your day or another thing you configured once and stopped opening: **what it should remember and what is noise, what it must never do without asking, and which recurring task is worth automating before the others.** That hour is the product.',
 
     { h: 'Built around your work instead' },
@@ -227,7 +229,7 @@ export default [
       '@type': 'Offer',
       price: '1490.00',
       priceCurrency: 'USD',
-      availability: 'https://schema.org/InStock',
+      availability: 'https://schema.org/PreOrder',
       url: 'https://kanaky.xyz/assistant-ia-personnel/',
       seller: { '@id': 'https://kanaky.xyz/#organization' },
     },
@@ -263,6 +265,8 @@ export default [
         ['**Licence**', 'Une entreprise, machines illimitées, sans expiration, sans abonnement'],
       ],
     }},
+    { note: '**Ouverture prochaine.** Les premières installations sont en cours de programmation, et les places sont limitées par le fait que chacune comprend une session en direct. Pour avoir un des premiers créneaux, [écrivez-nous](/contact/) — dites ce que vous faites et ce que vous aimeriez lui confier, vous serez prioritaire à l’ouverture.' },
+
     'L’installation se fait quasiment seule — ce n’est pas à ça que sert la session. Trois décisions déterminent si ça devient une part de votre journée ou une chose de plus configurée une fois puis abandonnée : **ce qu’il doit retenir et ce qui est du bruit, ce qu’il ne doit jamais faire sans demander, et quelle tâche récurrente automatiser avant les autres.** Cette heure-là, c’est le produit.',
 
     { h: 'Ou construit autour de votre métier' },
