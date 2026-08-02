@@ -18,11 +18,12 @@ export default [
   short: 'Journal',
   h1: 'Journal. <span style="color:var(--grey-4);font-weight:300;">One piece a day, in two languages.</span>',
   cta: 'service',
-  published: '2026-08-02',
+  published: '2026-08-03',
   body: [
     { lead: 'One long-form piece per working day, on what AI automation actually does for a business in this part of the world. Each one states a position, names its sources and shows its arithmetic. Every piece appears in French and in English — not a word-for-word translation, but the same substance written natively in each language. Most recent first.' },
 
     { list: [
+      '**3 August 2026** — [L’IA locale en cinq minutes : ce qui tourne vraiment sur un ordinateur normal](/ia-locale-en-cinq-minutes/) · [English — What actually runs on a normal computer in 2026](/local-ai-on-a-normal-computer/)',
       '**2 August 2026** — [The real cost of an unanswered enquiry, measured](/cost-of-an-unanswered-enquiry/) · [Français — La demande client restée sans réponse : le calcul](/demande-client-sans-reponse-cout/)',
       '**1 August 2026** — [Facturation en retard : ce que la loi du pays de juin 2026 a déplacé](/facturation-en-retard-cout-reel/) · [English — Seven days of paperwork, thirty-one days of cash](/late-invoicing-real-cost/)',
       '**31 July 2026** — [Why island businesses are better positioned for AI than they think](/island-businesses-ai-advantage/) · [Français — Pourquoi la petite taille est un avantage face à l’IA](/petite-entreprise-avantage-ia/)',
@@ -37,6 +38,164 @@ export default [
     ['/ai-audit/', 'Book a free AI opportunity audit'],
     ['/local-commitment/', 'The 10% that stays in the region'],
   ],
+},
+
+{
+  slug: 'ia-locale-en-cinq-minutes',
+  lang: 'fr',
+  alt: { lang: 'en', url: 'https://kanaky.xyz/local-ai-on-a-normal-computer/' },
+  title: 'L’IA locale expliquée simplement : ce qui tourne sur un ordinateur normal en 2026',
+  description: 'La règle « un paramètre, un octet de mémoire » ne tient plus depuis mars 2026. Mistral Small 4 : 119 milliards de paramètres, 6,5 milliards actifs, et soixante gigaoctets à charger. Pourquoi mémoire et vitesse sont devenues deux questions distinctes, et ce que ça change pour une PME.',
+  keywords: 'IA locale entreprise, faire tourner un modèle IA en local, IA sans connexion internet PME, mémoire vive modèle IA, Mistral Small 4 poids ouverts, modèle IA sur ordinateur portable, IA locale Nouvelle-Calédonie',
+  eyebrow: 'Journal',
+  short: 'Journal · IA locale',
+  h1: 'L’IA locale, en cinq minutes. <span style="color:var(--grey-4);font-weight:300;">Ce qui tourne sur la machine que vous avez déjà.</span>',
+  cta: 'service-fr',
+  published: '2026-08-03',
+  body: [
+    { lead: 'Un dirigeant qui pose la question n’a pas cinq minutes à perdre en vocabulaire. Voici donc la version courte, avec une seule chose à retenir avant de signer un devis matériel : depuis le printemps 2026, « est-ce que ça tourne sur ma machine ? » n’a plus une réponse mais deux. Les confondre est aujourd’hui la façon la plus répandue d’acheter le mauvais ordinateur.' },
+
+    { h: 'Ce que c’est, sans vocabulaire' },
+    'Un modèle d’IA est un fichier. Un très gros fichier de chiffres, téléchargé une fois, qu’un petit programme lit pour produire du texte. C’est tout. Pas d’abonnement, pas de compte, pas de liaison permanente : une fois le fichier sur le disque, on peut débrancher le câble réseau et le modèle continue de répondre.',
+    'La conséquence tient en une phrase. Ce que vous lui donnez à lire ne part nulle part — ni le contrat, ni le fichier clients, ni la comptabilité, ni le dossier d’un salarié. Pour une bonne partie des métiers, ce n’est pas un raffinement : c’est la seule configuration dans laquelle on accepte de montrer les vrais documents à une machine.',
+
+    { h: 'La règle de calcul qui a changé cette année' },
+    'Pendant trois ans, la règle du pouce était commode : un modèle réclame à peu près autant de gigaoctets de mémoire vive que son nombre de milliards de paramètres, une fois compressé. Nous l’avons écrite telle quelle sur notre propre [page matériel](/local-llm-hardware-requirements/). Elle est devenue incomplète, et il vaut mieux le dire ici que laisser quelqu’un s’en apercevoir après l’achat.',
+    'Ce qui l’a cassée porte un nom qu’il est inutile de retenir — mélange d’experts — mais dont l’effet se lit sur une facture. Prenez Mistral Small 4, publié le 16 mars 2026 par l’éditeur parisien, poids téléchargeables sous licence Apache 2.0 : **119 milliards de paramètres au total, dont 6,5 milliards seulement travaillent à chaque réponse.** Le modèle a donc la vitesse d’un petit modèle et l’encombrement d’un très gros. Compressé en 4 bits, son fichier réclame de l’ordre de soixante gigaoctets de mémoire pour être chargé. Le mot « Small » de son nom ne parle pas de votre ordinateur.',
+    'D’où les deux réponses, et c’est la seule phrase technique de cet article : **la mémoire suit le nombre total de paramètres, la vitesse suit le nombre actif.** Quelqu’un qui vous vante un modèle rapide ne vous a rien dit sur la machine qu’il faut pour le tenir en mémoire. C’est très exactement l’endroit où les budgets dérapent.',
+
+    { table: {
+      minWidth: 640,
+      head: ['Mémoire de la machine', 'Ce qui tient dedans, compressé en 4 bits', 'Ce que ça fait, honnêtement'],
+      rows: [
+        ['8 Go', 'Modèles de 3 à 4 milliards de paramètres', 'Résumer, classer, extraire. Rédaction courte correcte.'],
+        ['16 Go', 'Modèles de 7 à 8 milliards', 'Le point d’entrée réaliste. Couvre l’essentiel du travail de bureau.'],
+        ['32 Go', 'Modèles de 12 à 14 milliards, contexte confortable', 'Nettement meilleur sur les documents longs et le français soutenu.'],
+        ['64 Go et plus', 'Les grands modèles ouverts, mélange d’experts compris', 'Le plus proche du cloud qu’on puisse tenir chez soi.'],
+      ],
+    }},
+
+    'La colonne du milieu est de l’arithmétique, pas une opinion : un paramètre compressé en 4 bits pèse un demi-octet, le reste est de la place pour le texte en cours de traitement. La colonne de droite, elle, n’est pas de l’arithmétique — et c’est pourtant la seule qui décide de quelque chose.',
+
+    { h: 'Ce qu’un modèle de huit milliards fait vraiment' },
+    'Sur une machine de 16 Go que vous possédez déjà, un modèle de cette taille lit un contrat de quarante pages et en ressort les échéances et les pénalités. Il trie deux cents courriels par urgence. Il rédige la première version d’une réponse, d’un compte rendu, d’une traduction. Il retrouve, dans vos propres devis, ce qui avait été facturé sur un chantier comparable. Ce sont des tâches ennuyeuses et fréquentes, et c’est là que la gratuité par exécution pèse : en local, la deux-centième réponse coûte le même prix que la première, c’est-à-dire rien.',
+    'Ce qu’il ne fait pas mérite la même netteté. Il se trompe sur les raisonnements longs et sur les calculs. Il ignore tout de ce qui s’est passé après son entraînement. Il invente des références avec le même aplomb qu’il en cite des vraies. Un modèle local supprime la page blanche, pas la relecture — et surtout pas la responsabilité de ce qui sort signé de votre entreprise.',
+
+    { h: 'Le français n’est pas un détail de confort' },
+    'Pour une entreprise de Kanaky (Nouvelle-Calédonie), de Wallis ou de Polynésie, le rang d’un modèle sur des tests anglophones dit peu de chose de ce qu’il vaudra sur un courrier administratif en français. Les modèles européens ouverts sont ici l’option sérieuse : Mistral publie ses poids et destine explicitement sa famille Les Ministraux aux appareils du bord, ordinateurs personnels et téléphones compris. Interrogé par TechCrunch le 4 juillet 2026, son dirigeant Arthur Mensch annonçait un nouveau modèle à poids ouverts pour l’été, avec un accès anticipé dès juillet. Selon Artificial Analysis, Mistral Small 4 obtient 20 sur son indice d’intelligence, contre une médiane de 9 pour les modèles ouverts de sa catégorie.',
+    'Le test qui compte ne figure dans aucun classement. Prenez trois documents réellement produits par votre entreprise, en français, et regardez ce que le modèle en fait. Un score publié par un laboratoire ne saura jamais si l’outil comprend la formulation d’un bon de commande calédonien.',
+
+    { h: 'Les cinq minutes, concrètement' },
+    { steps: [
+      'Installez Ollama sur la machine que vous avez. Une commande, gratuit, et réversible : la désinstallation ne laisse rien derrière elle.',
+      'Téléchargez un seul modèle de 7 à 8 milliards de paramètres. Un seul. La tentation d’en essayer six fait perdre la semaine et ne conclut rien.',
+      'Donnez-lui du vrai travail pendant cinq jours : vos documents, vos courriers, vos devis. Pas des questions posées pour l’éprouver.',
+      'Tenez deux colonnes, « assez bon » et « pas assez bon ». C’est le seul livrable de la semaine, et il vaut plus que n’importe quel comparatif en ligne.',
+      'Alors seulement, décidez s’il faut acheter du matériel. [Une heure de cadrage](/commencer-avec-ia-entreprise/) suffit généralement à trancher, et souvent la réponse est non.',
+    ] },
+
+    { h: 'Quand la réponse est non' },
+    'Trois cas où monter tout ça n’a aucun sens, et où un abonnement cloud reste le bon choix. Si le volume est faible — quelques dizaines de demandes par mois — le matériel ne s’amortira jamais, et l’arithmétique est sans appel. Si vos données n’ont rien de particulièrement sensible, vous payez une confidentialité dont vous n’avez pas l’usage. Et si personne dans l’entreprise n’a envie de s’occuper d’une machine, le système finira éteint dans un placard au bout de deux mois : ce n’est pas un problème de technologie, et aucun matériel ne le corrige.',
+
+    { note: 'La question à poser à quiconque vous vend de l’IA locale tient en deux temps, et se pose avant le devis : combien de paramètres au total, et combien actifs à chaque réponse. Le premier chiffre dit la mémoire qu’il faut acheter. Le second dit la vitesse que vous aurez. Un fournisseur qui ne donne que le second vous montre une démonstration, pas un système.' },
+  ],
+  faq: [
+    { q: 'Combien de mémoire faut-il vraiment pour faire tourner un modèle en local ?', a: 'Comptez un demi-octet par paramètre pour un modèle compressé en 4 bits, plus une réserve pour le texte en cours de traitement. Un modèle de 8 milliards de paramètres occupe donc environ 5 à 6 Go et tient confortablement dans une machine de 16 Go, ce qui correspond à beaucoup d’ordinateurs de bureau déjà en service. En dessous de 8 Go de mémoire, il reste possible de faire tourner de très petits modèles, mais l’écart de qualité se sent immédiatement sur du travail réel.' },
+    { q: 'Pourquoi un modèle appelé « Small » peut-il réclamer soixante gigaoctets ?', a: 'Parce que « small » qualifie désormais le nombre de paramètres qui travaillent à chaque réponse, pas la taille du fichier à charger. Mistral Small 4, publié le 16 mars 2026, totalise 119 milliards de paramètres dont 6,5 milliards seulement sont actifs à chaque requête : il répond vite comme un petit modèle, mais l’intégralité des poids doit tenir en mémoire, soit une soixantaine de gigaoctets une fois compressée en 4 bits. C’est la distinction à vérifier avant tout achat de matériel.' },
+    { q: 'Un modèle local fonctionne-t-il vraiment sans connexion internet ?', a: 'Oui, complètement, une fois le fichier téléchargé. C’est la propriété qui distingue le plus nettement le local du cloud, et elle compte particulièrement dans un territoire dont la connectivité dépend d’un câble sous-marin. Ce qui continue d’exiger une connexion, ce sont les mises à jour du modèle et tout ce que vous branchez autour — messagerie, agenda, outils tiers. Le modèle lui-même, non.' },
+    { q: 'Existe-t-il des modèles ouverts vraiment bons en français ?', a: 'Oui, et c’est aujourd’hui l’argument le plus solide en faveur des modèles européens pour une entreprise francophone du Pacifique. Mistral publie des poids téléchargeables, sous licence Apache 2.0 pour Mistral Small 4, et destine sa famille Les Ministraux aux appareils personnels. Reste que le classement d’un modèle sur des tests anglophones ne vous dit presque rien : la seule vérification qui vaille consiste à lui soumettre trois de vos propres documents en français et à juger le résultat.' },
+  ],
+  related: [
+    ['/ia-locale-entreprise/', 'L’IA en local : le guide pratique complet'],
+    ['/combien-coute-automatisation-ia/', 'Combien coûte vraiment une automatisation'],
+    ['/commencer-avec-ia-entreprise/', 'Par où commencer avec l’IA dans votre entreprise'],
+  ],
+  extraGraph: [{
+    '@type': 'Article',
+    headline: 'L’IA locale expliquée simplement : ce qui tourne sur un ordinateur normal en 2026',
+    datePublished: '2026-08-03',
+    author: { '@id': 'https://kanaky.xyz/#kevyn' },
+    publisher: { '@id': 'https://kanaky.xyz/#organization' },
+  }],
+},
+
+{
+  slug: 'local-ai-on-a-normal-computer',
+  lang: 'en',
+  alt: { lang: 'fr', url: 'https://kanaky.xyz/ia-locale-en-cinq-minutes/' },
+  title: 'Local AI for Small Firms — What Actually Runs on a Normal Computer in 2026',
+  description: 'The rule of thumb that a model needs roughly its parameter count in gigabytes stopped holding in March 2026. Mistral Small 4 carries 119 billion parameters and activates 6.5 billion. Why memory and speed are now two separate questions, and what a small firm should buy.',
+  keywords: 'local AI small business, run LLM on laptop 2026, local model memory requirements, mixture of experts memory, Mistral Small 4 open weights, offline AI business, local AI Pacific',
+  eyebrow: 'Journal',
+  short: 'Journal · Local AI',
+  h1: 'Local AI, in five minutes. <span style="color:var(--grey-4);font-weight:300;">What actually runs on the machine you already own.</span>',
+  cta: 'service',
+  published: '2026-08-03',
+  body: [
+    { lead: 'An owner asking this question has no interest in vocabulary, so here is the short version — with one thing worth knowing before any hardware quote gets signed. Since the spring of 2026, "will it run on my machine?" no longer has one answer. It has two, and confusing them has become the most common way to buy the wrong computer.' },
+
+    { h: 'What it is, without the jargon' },
+    'A model is a file. A very large file of numbers, downloaded once, which a small program reads in order to produce text. That is the whole of it. No subscription, no account, no permanent connection: once the file is on the disk you can unplug the network cable and it keeps answering.',
+    'The consequence fits in a sentence. Whatever you hand it to read goes nowhere — not the contract, not the client list, not the accounts, not an employee file. For a good number of trades that is not a refinement. It is the only arrangement under which anyone is willing to show a machine the real documents, and showing it the real documents is where nearly all the value sits.',
+
+    { h: 'The arithmetic that changed this year' },
+    'For three years the rule of thumb was convenient: a model wants roughly as many gigabytes of memory as it has billions of parameters, once compressed. We wrote it that way on our own [hardware page](/local-llm-hardware-requirements/). It has become incomplete, and it is better said here than discovered after the purchase order.',
+    'What broke it has a name not worth memorising — mixture of experts — and an effect that shows up on an invoice. Take Mistral Small 4, released on 16 March 2026 by the Paris company with downloadable weights under an Apache 2.0 licence: **119 billion parameters in total, of which only 6.5 billion do any work on a given response.** It therefore has the speed of a small model and the footprint of a very large one. Compressed to 4 bits, the file wants something in the order of sixty gigabytes of memory to load. The word "Small" in the name is not describing your computer.',
+    'Hence the two answers, and this is the only technical sentence in the piece: **memory follows the total parameter count, speed follows the active one.** Anyone praising a model for being fast has told you nothing about the machine required to hold it. That gap is precisely where hardware budgets go wrong.',
+
+    { table: {
+      minWidth: 640,
+      head: ['Memory in the machine', 'What fits, compressed to 4 bits', 'What it honestly does'],
+      rows: [
+        ['8GB', 'Models of 3 to 4 billion parameters', 'Summarising, sorting, extracting. Decent short drafting.'],
+        ['16GB', 'Models of 7 to 8 billion', 'The realistic entry point. Covers most desk work.'],
+        ['32GB', '12 to 14 billion, with comfortable context', 'Markedly better on long documents and formal register.'],
+        ['64GB and up', 'Large open-weight models, mixture-of-experts included', 'The closest thing to cloud quality you can keep in the building.'],
+      ],
+    }},
+
+    'The middle column is arithmetic rather than opinion: a parameter compressed to 4 bits weighs half a byte, and the remainder is room for the text being worked on. The right-hand column is not arithmetic — and it is the only one that decides anything.',
+
+    { h: 'What an eight-billion model actually does' },
+    'On a 16GB machine you already own, a model that size reads a forty-page contract and returns the dates and the penalty clauses. It sorts two hundred emails by urgency. It writes the first version of a reply, a set of minutes, a translation. It finds, in your own past quotes, what was charged on a comparable job. These are dull, frequent tasks, and that is where free-per-run matters: locally, the two-hundredth answer costs exactly what the first one did, which is nothing.',
+    'What it does not do deserves the same directness. It gets long chains of reasoning wrong, and arithmetic wrong more often than that. It knows nothing of what happened after it was trained. It invents citations with the same composure it uses for real ones. A local model removes the blank page. It does not remove the read-through, and it certainly does not remove responsibility for what leaves your business with your name on it.',
+
+    { h: 'Language is not a comfort feature' },
+    'For a firm in Kanaky (New Caledonia), Vanuatu or Fiji, a model\'s ranking on English-language tests says little about what it is worth on the correspondence you actually send. Where the work is bilingual, European open-weight models are the serious option: Mistral publishes its weights and aims its Les Ministraux family explicitly at edge devices, personal computers and phones included. Speaking to TechCrunch on 4 July 2026, chief executive Arthur Mensch flagged a further open-weight model for the summer with early access opening in July. Artificial Analysis scores Mistral Small 4 at 20 on its intelligence index, against a median of 9 for open-weight models in the same class.',
+    'The test that counts appears in no league table. Take three documents your business genuinely produced and see what the model makes of them. A benchmark run in a laboratory will never tell you whether the thing understands how a purchase order is worded here.',
+
+    { h: 'The five minutes, in practice' },
+    { steps: [
+      'Install Ollama on the machine you already have. One command, free, and reversible — uninstalling leaves nothing behind.',
+      'Download exactly one model in the 7 to 8 billion range. One. The urge to try six of them costs a week and concludes nothing.',
+      'Give it real work for five days: your documents, your correspondence, your quotes. Not questions designed to test it.',
+      'Keep two columns, "good enough" and "not good enough". That list is the only deliverable of the week, and it is worth more than any comparison article online.',
+      'Only then decide whether hardware is warranted. [An hour of scoping](/ai-audit/) usually settles it, and the answer is often no.',
+    ] },
+
+    { h: 'When the answer is no' },
+    'Three cases where building this makes no sense and a cloud subscription remains the right call. If the volume is low — a few dozen requests a month — the hardware will never pay itself back, and the arithmetic is not close. If your data is not particularly sensitive, you are buying privacy you have no use for. And if nobody in the business wants to look after a machine, the system will be switched off in a cupboard within two months. That is not a technology problem, and no amount of hardware fixes it.',
+
+    { note: 'The question to put to anyone selling you local AI comes in two parts, and it comes before the quote: how many parameters in total, and how many active per response. The first number tells you the memory you have to buy. The second tells you the speed you will get. A supplier who offers only the second is showing you a demonstration rather than a system.' },
+  ],
+  faq: [
+    { q: 'How much memory do I need to run a model locally?', a: 'Budget half a byte per parameter for a model compressed to 4 bits, plus headroom for the text being processed. An 8-billion-parameter model therefore occupies about 5 to 6GB and sits comfortably in a 16GB machine, which describes a great many computers already in service. Below 8GB you can still run very small models, but the drop in quality is obvious within a day of real work.' },
+    { q: 'Why does a model called "Small" need sixty gigabytes?', a: 'Because "small" now refers to how many parameters work on each response, not to the size of the file you have to load. Mistral Small 4, released on 16 March 2026, holds 119 billion parameters of which only 6.5 billion are active per request: it answers with the speed of a small model, but the full set of weights must fit in memory, which is roughly sixty gigabytes once compressed to 4 bits. That distinction is the thing to check before buying any hardware.' },
+    { q: 'Does a local model really work without an internet connection?', a: 'Yes, entirely, once the file is downloaded. It is the property that separates local from cloud most sharply, and it matters more in a territory whose connectivity depends on a single submarine cable. What still needs a connection is updating the model and anything you wire around it — mail, calendars, third-party tools. The model itself does not.' },
+    { q: 'Which open-weight models handle languages other than English well?', a: 'European releases are currently the strongest argument for local AI in a bilingual business. Mistral publishes downloadable weights, Apache 2.0 in the case of Mistral Small 4, and its Les Ministraux family targets personal devices. That said, a model\'s position in an English-language ranking tells you very little about your case. The only worthwhile check is to feed it three of your own documents in the language you actually work in and judge the output yourself.' },
+  ],
+  related: [
+    ['/local-llm-hardware-requirements/', 'Hardware requirements for local models'],
+    ['/local-ai-vs-cloud-ai/', 'Local versus cloud, compared honestly'],
+    ['/ai-audit/', 'Book a free AI opportunity audit'],
+  ],
+  extraGraph: [{
+    '@type': 'Article',
+    headline: 'Local AI for Small Firms — What Actually Runs on a Normal Computer in 2026',
+    datePublished: '2026-08-03',
+    author: { '@id': 'https://kanaky.xyz/#kevyn' },
+    publisher: { '@id': 'https://kanaky.xyz/#organization' },
+  }],
 },
 
 {
