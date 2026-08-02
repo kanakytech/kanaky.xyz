@@ -36,7 +36,7 @@ export default [
     url: 'https://kanaky.xyz/machine-prospection-commerciale/',
     category: 'Logiciel de prospection commerciale',
     description: 'Logiciel de prospection vendu une fois, sans abonnement. Il identifie les entreprises correspondant au profil de client décrit, lit ce que chacune publie, rédige un message différent par entreprise et les envoie à un rythme espacé pendant les heures ouvrées. Tourne sur votre propre machine ; la rédaction peut passer par un fournisseur IA ou tourner entièrement en local.',
-    brand: { '@id': 'https://kanaky.xyz/#organization' },
+    brand: { '@type': 'Brand', name: 'Kanaky Tech' },
     inLanguage: 'fr',
     offers: {
       '@type': 'Offer',
@@ -45,6 +45,21 @@ export default [
       priceCurrency: 'USD',
       availability: 'https://schema.org/InStock',
       url: 'https://kanaky.xyz/marketplace/cold-outreach-machine/',
+      hasMerchantReturnPolicy: {
+        '@type': 'MerchantReturnPolicy',
+        applicableCountry: 'NZ',
+        returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted',
+      },
+      shippingDetails: {
+        '@type': 'OfferShippingDetails',
+        shippingRate: { '@type': 'MonetaryAmount', value: 0, currency: 'USD' },
+        shippingDestination: { '@type': 'DefinedRegion', addressCountry: ['NZ', 'AU', 'NC', 'PF', 'FR', 'US', 'CA', 'GB'] },
+        deliveryTime: {
+          '@type': 'ShippingDeliveryTime',
+          handlingTime: { '@type': 'QuantitativeValue', minValue: 0, maxValue: 1, unitCode: 'DAY' },
+          transitTime: { '@type': 'QuantitativeValue', minValue: 0, maxValue: 0, unitCode: 'DAY' },
+        },
+      },
       seller: { '@id': 'https://kanaky.xyz/#organization' },
     },
   }],

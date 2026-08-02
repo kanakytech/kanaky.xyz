@@ -101,8 +101,8 @@
       "@id": "https://kanaky.xyz/machine-prospection-commerciale/#article",
       "headline": "Recrutez un commercial une fois. Gardez-le pour toujours.",
       "description": "Un logiciel de prospection acheté une fois, pas un abonnement : il trouve les entreprises qui correspondent à vos clients idéaux, écrit un message différent pour chacune et les envoie seul, à un rythme qui protège votre domaine. Code source inclus, appel d’installation, 30 jours de support.",
-      "datePublished": "2026-08-01",
-      "dateModified": "2026-08-01",
+      "datePublished": "2026-08-02",
+      "dateModified": "2026-08-02",
       "inLanguage": "fr",
       "author": {
         "@type": "Person",
@@ -199,7 +199,8 @@
       "category": "Logiciel de prospection commerciale",
       "description": "Logiciel de prospection vendu une fois, sans abonnement. Il identifie les entreprises correspondant au profil de client décrit, lit ce que chacune publie, rédige un message différent par entreprise et les envoie à un rythme espacé pendant les heures ouvrées. Tourne sur votre propre machine ; la rédaction peut passer par un fournisseur IA ou tourner entièrement en local.",
       "brand": {
-        "@id": "https://kanaky.xyz/#organization"
+        "@type": "Brand",
+        "name": "Kanaky Tech"
       },
       "inLanguage": "fr",
       "offers": {
@@ -209,6 +210,47 @@
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
         "url": "https://kanaky.xyz/marketplace/cold-outreach-machine/",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "NZ",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": 0,
+            "currency": "USD"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": [
+              "NZ",
+              "AU",
+              "NC",
+              "PF",
+              "FR",
+              "US",
+              "CA",
+              "GB"
+            ]
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "DAY"
+            }
+          }
+        },
         "seller": {
           "@id": "https://kanaky.xyz/#organization"
         }

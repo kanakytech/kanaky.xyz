@@ -101,8 +101,8 @@
       "@id": "https://kanaky.xyz/ai-chief-of-staff/#article",
       "headline": "Stop introducing yourself to your own assistant.",
       "description": "Most AI assistants forget you between sessions. This one does not. It remembers across sessions, answers on your phone by text or voice note, works on a schedule while you sleep, and rebuilds itself on a new machine in an hour. US$1,490, installed with you.",
-      "datePublished": "2026-08-01",
-      "dateModified": "2026-08-01",
+      "datePublished": "2026-08-02",
+      "dateModified": "2026-08-02",
       "inLanguage": "en",
       "author": {
         "@type": "Person",
@@ -199,7 +199,8 @@
       "category": "AI assistant configuration toolkit",
       "description": "A persistent operating layer for Claude Code: memory that survives sessions, a Telegram bridge with local voice transcription, scheduled autonomous agents, and a continuity kit that rebuilds the whole setup on a new machine. Runs entirely on the buyer’s own machine. Sold with a guided 90-minute setup session.",
       "brand": {
-        "@id": "https://kanaky.xyz/#organization"
+        "@type": "Brand",
+        "name": "Kanaky Tech"
       },
       "inLanguage": "en",
       "offers": {
@@ -208,6 +209,47 @@
         "priceCurrency": "USD",
         "availability": "https://schema.org/PreOrder",
         "url": "https://kanaky.xyz/ai-chief-of-staff/",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "NZ",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": 0,
+            "currency": "USD"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": [
+              "NZ",
+              "AU",
+              "NC",
+              "PF",
+              "FR",
+              "US",
+              "CA",
+              "GB"
+            ]
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "DAY"
+            }
+          }
+        },
         "seller": {
           "@id": "https://kanaky.xyz/#organization"
         }

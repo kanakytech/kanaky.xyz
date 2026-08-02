@@ -122,7 +122,7 @@ export default [
     url: 'https://kanaky.xyz/ai-chief-of-staff/',
     category: 'AI assistant configuration toolkit',
     description: 'A persistent operating layer for Claude Code: memory that survives sessions, a Telegram bridge with local voice transcription, scheduled autonomous agents, and a continuity kit that rebuilds the whole setup on a new machine. Runs entirely on the buyer’s own machine. Sold with a guided 90-minute setup session.',
-    brand: { '@id': 'https://kanaky.xyz/#organization' },
+    brand: { '@type': 'Brand', name: 'Kanaky Tech' },
     inLanguage: 'en',
     offers: {
       '@type': 'Offer',
@@ -130,6 +130,21 @@ export default [
       priceCurrency: 'USD',
       availability: 'https://schema.org/PreOrder',
       url: 'https://kanaky.xyz/ai-chief-of-staff/',
+      hasMerchantReturnPolicy: {
+        '@type': 'MerchantReturnPolicy',
+        applicableCountry: 'NZ',
+        returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted',
+      },
+      shippingDetails: {
+        '@type': 'OfferShippingDetails',
+        shippingRate: { '@type': 'MonetaryAmount', value: 0, currency: 'USD' },
+        shippingDestination: { '@type': 'DefinedRegion', addressCountry: ['NZ', 'AU', 'NC', 'PF', 'FR', 'US', 'CA', 'GB'] },
+        deliveryTime: {
+          '@type': 'ShippingDeliveryTime',
+          handlingTime: { '@type': 'QuantitativeValue', minValue: 0, maxValue: 1, unitCode: 'DAY' },
+          transitTime: { '@type': 'QuantitativeValue', minValue: 0, maxValue: 0, unitCode: 'DAY' },
+        },
+      },
       seller: { '@id': 'https://kanaky.xyz/#organization' },
     },
   }],
@@ -223,7 +238,7 @@ export default [
     url: 'https://kanaky.xyz/assistant-ia-personnel/',
     category: 'Configuration d’assistant IA',
     description: 'Une couche persistante pour Claude Code : une mémoire qui survit aux sessions, un pont Telegram avec transcription vocale locale, des agents planifiés autonomes, et un kit de continuité qui reconstruit toute l’installation sur une machine neuve. Tourne entièrement sur la machine de l’acheteur. Vendu avec une session d’installation guidée de 90 minutes.',
-    brand: { '@id': 'https://kanaky.xyz/#organization' },
+    brand: { '@type': 'Brand', name: 'Kanaky Tech' },
     inLanguage: 'fr',
     offers: {
       '@type': 'Offer',
@@ -231,6 +246,21 @@ export default [
       priceCurrency: 'USD',
       availability: 'https://schema.org/PreOrder',
       url: 'https://kanaky.xyz/assistant-ia-personnel/',
+      hasMerchantReturnPolicy: {
+        '@type': 'MerchantReturnPolicy',
+        applicableCountry: 'NZ',
+        returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted',
+      },
+      shippingDetails: {
+        '@type': 'OfferShippingDetails',
+        shippingRate: { '@type': 'MonetaryAmount', value: 0, currency: 'USD' },
+        shippingDestination: { '@type': 'DefinedRegion', addressCountry: ['NZ', 'AU', 'NC', 'PF', 'FR', 'US', 'CA', 'GB'] },
+        deliveryTime: {
+          '@type': 'ShippingDeliveryTime',
+          handlingTime: { '@type': 'QuantitativeValue', minValue: 0, maxValue: 1, unitCode: 'DAY' },
+          transitTime: { '@type': 'QuantitativeValue', minValue: 0, maxValue: 0, unitCode: 'DAY' },
+        },
+      },
       seller: { '@id': 'https://kanaky.xyz/#organization' },
     },
   }],
