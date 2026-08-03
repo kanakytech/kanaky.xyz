@@ -240,6 +240,12 @@ footer { border-top: 1px solid var(--border); padding: 56px 48px 32px; position:
 .footer-social { display: flex; gap: 12px; }
 .footer-social a { display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border: 1px solid var(--border); color: var(--grey-3); text-decoration: none; transition: all 0.3s; }
 .footer-social a:hover { border-color: rgba(255,255,255,0.25); color: var(--white); }
+/* mentions légales + identifiants d'entreprise, sur toutes les pages */
+.footer-legal { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 6px 14px; font-size: 12px; letter-spacing: 0.02em; }
+.footer-legal a { color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.3s; }
+.footer-legal a:hover { color: var(--white); }
+.footer-legal a + a::before { content: '·'; color: rgba(255,255,255,0.18); margin-right: 14px; }
+.footer-ids { color: rgba(255,255,255,0.22); font-size: 11px; letter-spacing: 0.05em; width: 100%; text-align: center; }
 
 /* ─── REVEAL ─── */
 .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.9s cubic-bezier(0.16,1,0.3,1), transform 0.9s cubic-bezier(0.16,1,0.3,1); }

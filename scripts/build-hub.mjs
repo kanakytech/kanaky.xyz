@@ -187,11 +187,19 @@ ${sections}
         <a href="/#about">About</a>
         <a href="/case-studies/">Case Studies</a>
         <a href="/blog/">Blog</a>
+        <a href="/legal/">Legal &amp; company info</a>
         <a href="/contact/">Contact</a>
       </div>
     </div>
     <div class="footer-bottom">
       <span class="footer-copy">© 2026 Kanaky Tech · Nouméa · Auckland · kanaky.xyz</span>
+      <nav class="footer-legal" aria-label="Legal">
+        <a href="/legal/">Legal &amp; company information</a>
+        <a href="/legal/#privacy">Privacy</a>
+        <a href="/legal/#terms">Terms</a>
+        <a href="/contact/">Contact</a>
+        <span class="footer-ids">NZBN 9429053554017 · RIDET 1 445 709.002</span>
+      </nav>
     </div>
   </footer>
   <script src="/assets/site.js"></script>
