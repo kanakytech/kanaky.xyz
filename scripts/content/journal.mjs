@@ -18,11 +18,12 @@ export default [
   short: 'Journal',
   h1: 'Journal. <span style="color:var(--grey-4);font-weight:300;">One piece a day, in two languages.</span>',
   cta: 'service',
-  published: '2026-08-03',
+  published: '2026-08-04',
   body: [
     { lead: 'One long-form piece per working day, on what AI automation actually does for a business in this part of the world. Each one states a position, names its sources and shows its arithmetic. Every piece appears in French and in English — not a word-for-word translation, but the same substance written natively in each language. Most recent first.' },
 
     { list: [
+      '**4 August 2026** — [Automatiser sans licencier : ce que la phrase engage vraiment](/automatiser-sans-licencier/) · [English — What the promise actually covers](/automating-without-layoffs/)',
       '**3 August 2026** — [L’IA locale en cinq minutes : ce qui tourne vraiment sur un ordinateur normal](/ia-locale-en-cinq-minutes/) · [English — What actually runs on a normal computer in 2026](/local-ai-on-a-normal-computer/)',
       '**2 August 2026** — [The real cost of an unanswered enquiry, measured](/cost-of-an-unanswered-enquiry/) · [Français — La demande client restée sans réponse : le calcul](/demande-client-sans-reponse-cout/)',
       '**1 August 2026** — [Facturation en retard : ce que la loi du pays de juin 2026 a déplacé](/facturation-en-retard-cout-reel/) · [English — Seven days of paperwork, thirty-one days of cash](/late-invoicing-real-cost/)',
@@ -38,6 +39,162 @@ export default [
     ['/ai-audit/', 'Book a free AI opportunity audit'],
     ['/local-commitment/', 'The 10% that stays in the region'],
   ],
+},
+
+{
+  slug: 'automatiser-sans-licencier',
+  lang: 'fr',
+  alt: { lang: 'en', url: 'https://kanaky.xyz/automating-without-layoffs/' },
+  title: 'Automatiser sans licencier : ce que la phrase engage vraiment, chiffres à l’appui',
+  description: 'Le secteur privé calédonien a perdu 13 200 emplois en deux ans. Dans ce contexte, promettre d’automatiser « sans licencier » demande mieux qu’une réassurance. L’arithmétique sur une entreprise de six personnes, la mesure danoise sur 25 000 salariés, et l’endroit exact où la promesse devient malhonnête.',
+  keywords: 'automatiser sans licencier, automatisation et emploi PME, IA suppression de postes, emploi salarié Nouvelle-Calédonie 2025, licenciement économique mutation technologique, obligation de reclassement Nouvelle-Calédonie, IA et emploi Pacifique',
+  eyebrow: 'Journal',
+  short: 'Journal · Emploi',
+  h1: 'Automatiser sans licencier. <span style="color:var(--grey-4);font-weight:300;">Ce que la phrase engage, et ce qu’elle ne couvre pas.</span>',
+  cta: 'service-fr',
+  published: '2026-08-04',
+  body: [
+    { lead: 'C’est la question qui vient en deuxième, jamais en premier, et presque toujours à voix plus basse : est-ce que ça veut dire supprimer des postes. Elle mérite une réponse chiffrée plutôt qu’une réassurance. Voici la nôtre — ce qu’elle couvre, et l’endroit précis où l’engagement cesse d’être honnête.' },
+
+    { h: 'Pourquoi la question pèse plus lourd ici' },
+    'Selon la synthèse annuelle de l’emploi de l’ISEE, le secteur privé de Kanaky (Nouvelle-Calédonie) comptait 55 880 salariés en 2025 : 4 050 de moins qu’un an plus tôt, soit un recul de 7 %, et 13 200 de moins qu’il y a deux ans. Tous secteurs confondus, les 77 120 salariés recensés ramènent le territoire sous son niveau de 2008. La construction cède 13 % en un an et touche son plus bas depuis trente ans ; l’industrie perd 11,8 %. Les employeurs privés ne sont plus que 9 140, en baisse de 15 % sur deux ans.',
+    'Une entreprise qui tient debout dans ces conditions n’a pas un problème de sureffectif : elle a un problème de charge. Les mêmes commandes avec une équipe amputée, et personne à qui confier ce que plus personne ne fait. Le même ISEE relève un recul de 34 % des ruptures de contrats : la phase de réduction s’essouffle, elle ne s’étend pas.',
+
+    { h: 'Ce que les données disent de l’effet sur l’emploi' },
+    'Le Bureau international du travail a publié le 20 mai 2025 une mise à jour de son indice mondial d’exposition professionnelle à l’IA générative. Un emploi sur quatre dans le monde présente une exposition, très inégalement répartie : 34 % dans les pays à revenu élevé contre 11 % dans les pays à faible revenu. La conclusion des auteurs est explicite : peu d’emplois se composent de tâches entièrement automatisables par la technologie actuelle, et la transformation des postes reste l’effet le plus probable. Leur inquiétude porte sur la qualité des emplois plus que sur leur disparition.',
+    'Une mesure directe existe aussi, et elle est danoise. Anders Humlum et Emilie Vestergaard ont apparié deux enquêtes d’adoption aux registres administratifs de l’emploi : 25 000 salariés, 7 000 établissements, onze métiers parmi les plus exposés. Le gain de temps moyen s’établit à 2,8 %. Sur les salaires et les heures déclarées, aucun effet significatif dans aucun des onze métiers, avec des intervalles excluant un effet supérieur à 1 %.',
+
+    { h: 'L’arithmétique, sur une entreprise de six personnes' },
+    'Six personnes à 39 heures représentent 234 heures par semaine. Supprimer un poste suppose d’en libérer 39, soit un sixième du total. Le gain diffus mesuré au Danemark en libère 6,5. Il faudrait six fois l’effet observé pour que la question de l’effectif se pose seulement.',
+    'L’objection est juste, et il vaut mieux la formuler soi-même : cette moyenne porte sur l’usage général d’un assistant conversationnel, pas sur l’automatisation ciblée d’un processus. Sur une tâche unique et répétée — relancer les impayés, sortir un devis, trier les demandes — on ne gagne pas 3 % mais 70 ou 80 %. C’est exactement ce que nous vendons. Seulement cette tâche ne constitue presque jamais un emploi entier : elle fait quatre heures par semaine chez trois personnes.',
+    'Cette dispersion est le fait central, et le plus souvent tu. Un gain concentré sur un processus se répartit sur plusieurs fiches de poste, et il en faut un nombre considérable pour qu’il se recompose en un poste entier. Une entreprise de six personnes n’a pas ce nombre de processus ; une de deux cents, oui — et [le calcul](/combien-coute-automatisation-ia/) n’y obéit pas à la même logique.',
+
+    { h: 'Les trois cas, et celui où le discours dérape' },
+    { table: {
+      minWidth: 660,
+      head: ['Ce qui arrive', 'Effet sur l’effectif', 'Ce qu’il faut dire'],
+      rows: [
+        ['Réaffectation. Les heures libérées vont à un travail nommé d’avance : rappeler les devis sans réponse, ouvrir un créneau le samedi.', 'Aucun', 'Lequel, précisément, et avant de commencer.'],
+        ['Non-remplacement. Personne n’est licencié ; un départ volontaire n’est pas remplacé, six ou dix mois plus tard.', 'Il baisse', 'Que c’est un choix. Ici « sans licencier » devient techniquement exact et pratiquement trompeur.'],
+        ['Suppression de poste. Le poste disparaît parce que son contenu a disparu.', 'Il baisse', 'Le mot juste, et la procédure qui va avec.'],
+      ],
+    }},
+    'Le deuxième cas est le seul intéressant : c’est le seul où la formule tient sans être vraie. Il est fréquent, légal et souvent raisonnable. Ce qui ne l’est pas, c’est d’y arriver en ayant laissé croire au premier.',
+
+    { h: 'Ce que la loi calédonienne impose déjà' },
+    'Le code du travail de Nouvelle-Calédonie range les mutations technologiques parmi les motifs économiques recevables, aux articles Lp. 122-9 et suivants : automatiser peut légalement fonder un licenciement. Mais la procédure impose l’entretien préalable, l’information des délégués du personnel — ou, à défaut, du directeur du travail — et une lettre motivée énonçant les recherches menées. Selon la Direction du travail et de l’emploi, un licenciement économique dont le reclassement n’a pas été sérieusement recherché est privé de cause réelle et sérieuse.',
+    'Ce cadre n’est pas un bouclier mais une discipline : il oblige à écrire ce qui a été tenté avant de supprimer. Une direction incapable de produire cet écrit n’a pas un problème d’outillage.',
+
+    { h: 'La version tenable de l’engagement' },
+    { steps: [
+      'Nommer le processus, jamais la personne. « Le devis part en moins de deux heures » est un objectif de processus ; « tenir l’accueil à deux » est un objectif d’effectif. Les deux se défendent, aucun ne se déguise en l’autre.',
+      'Écrire d’avance la destination des heures libérées, avec une tâche et un volume. Sans destination, elles retournent à la boîte de réception en trois semaines.',
+      'Fixer la durée d’observation avant toute décision d’effectif — un trimestre — et l’annoncer au démarrage. Une équipe qui découvre la règle après coup a raison de se méfier de la suivante.',
+      'Confier le réglage aux personnes dont il modifie le travail. Un outil imposé par-dessus est éteint en deux mois.',
+      'Si la conclusion reste qu’un poste ne se justifie plus, quitter le vocabulaire de l’automatisation pour celui de la procédure. [Cadrer en amont](/commencer-avec-ia-entreprise/) évite de trancher sous contrainte.',
+    ] },
+
+    { h: 'Le cas où la réponse honnête est non' },
+    'Une entreprise dont le carnet de commandes s’est effondré porte une masse salariale calibrée pour un volume disparu. L’automatisation y rend de la capacité à une équipe qui en a déjà trop : le problème est commercial, et le traiter par la technologie revient à financer un contournement. Ça se dit en cadrage, pas une fois le devis signé.',
+
+    { note: 'La question à poser à un prestataire tient en une phrase : que suis-je censé faire des heures que vous me rendez. Sans réponse, ce n’est pas de l’automatisation qu’il vend — c’est une réduction d’effectif sans le nommer, en vous laissant porter la procédure et la conversation avec l’équipe. Autant les décider avant la signature.' },
+  ],
+  faq: [
+    { q: 'Automatiser conduit-il mécaniquement à supprimer des postes ?', a: 'Les données disponibles ne le montrent pas à l’échelle où travaillent la plupart des entreprises du territoire. L’étude danoise de Humlum et Vestergaard, portant sur 25 000 salariés et 7 000 établissements dans onze métiers exposés, mesure un gain de temps moyen de 2,8 % et aucun effet significatif sur les salaires ou les heures. Le Bureau international du travail conclut de son côté que peu d’emplois sont entièrement automatisables et que la transformation des postes reste l’effet le plus probable. La suppression de poste est une décision de gestion, pas une conséquence de l’outil.' },
+    { q: 'Peut-on licencier pour motif économique en invoquant l’automatisation en Nouvelle-Calédonie ?', a: 'Oui. Le code du travail de Nouvelle-Calédonie range les mutations technologiques parmi les motifs économiques recevables, aux articles Lp. 122-9 et suivants. La procédure reste entière : entretien préalable, information des délégués du personnel ou à défaut du directeur du travail, lettre motivée. L’employeur doit surtout démontrer qu’il a sérieusement cherché à reclasser le salarié dans l’entreprise ; à défaut, le licenciement est privé de cause réelle et sérieuse.' },
+    { q: 'Ne pas remplacer un départ, est-ce vraiment « automatiser sans licencier » ?', a: 'Techniquement oui, et c’est là que la formule devient trompeuse. Aucune procédure n’est engagée, aucun salarié ne perd son emploi, mais l’effectif baisse et la charge se redistribue sur ceux qui restent. C’est un choix parfaitement défendable dans un marché qui a perdu 13 200 emplois privés en deux ans. Il devient malhonnête seulement quand on l’a présenté à l’équipe comme une simple libération de temps.' },
+    { q: 'Comment savoir si les heures libérées ont vraiment servi à quelque chose ?', a: 'En leur ayant donné une destination écrite avant le démarrage, avec une tâche identifiée et un volume attendu. Sans cela, la capacité rendue se dissipe dans les interruptions ordinaires et personne ne peut dire, trois mois plus tard, si le système a produit un effet. C’est la cause la plus fréquente des automatisations jugées décevantes : elles fonctionnaient, mais rien n’avait été prévu pour recevoir ce qu’elles rendaient.' },
+  ],
+  related: [
+    ['/automatiser-ou-embaucher/', 'Automatiser ou embaucher : la comparaison chiffrée'],
+    ['/exemples-automatisation-pme/', 'Exemples concrets d’automatisation en PME'],
+    ['/automatisation-ia-nouvelle-caledonie/', 'L’automatisation par l’IA en Nouvelle-Calédonie'],
+  ],
+  extraGraph: [{
+    '@type': 'Article',
+    headline: 'Automatiser sans licencier : ce que la phrase engage vraiment, chiffres à l’appui',
+    datePublished: '2026-08-04',
+    author: { '@id': 'https://kanaky.xyz/#kevyn' },
+    publisher: { '@id': 'https://kanaky.xyz/#organization' },
+  }],
+},
+
+{
+  slug: 'automating-without-layoffs',
+  lang: 'en',
+  alt: { lang: 'fr', url: 'https://kanaky.xyz/automatiser-sans-licencier/' },
+  title: 'Automating Without Layoffs — What the Promise Actually Covers',
+  description: 'A Danish study of 25,000 workers found average time savings of 2.8% and no measurable effect on hours or pay. Here is the arithmetic on a six-person firm, what New Zealand law already requires of a restructure, and the exact point where "no redundancies" stops being an honest sentence.',
+  keywords: 'automating without layoffs, AI job losses small business, does automation cause redundancies, restructuring consultation New Zealand, AI and employment Pacific, automation headcount small firm',
+  eyebrow: 'Journal',
+  short: 'Journal · Jobs',
+  h1: 'Automating without layoffs. <span style="color:var(--grey-4);font-weight:300;">What the promise covers, and where it stops.</span>',
+  cta: 'service',
+  published: '2026-08-04',
+  body: [
+    { lead: 'It is the second question, never the first, and it usually arrives at lower volume: does this mean jobs go. It deserves arithmetic rather than reassurance. Here is ours — what the promise genuinely covers, and the precise point, three steps into the reasoning, where it stops being an honest sentence.' },
+
+    { h: 'Why the question is heavier in this part of the world' },
+    'The reason to take it seriously is regional and recent. According to the annual employment summary from ISEE, the statistics institute of Kanaky (New Caledonia), private-sector employment there stood at 55,880 in 2025 — down 4,050 in a year, a fall of 7 percent, and 13,200 below where it was two years earlier. Total salaried employment, 77,120 people, has dropped below its 2008 level. Construction shed 13 percent in twelve months and sits at a thirty-year low. Private employers now number 9,140, down 15 percent over two years.',
+    'Nothing in New Zealand looks like that. But the firm that survives such a contraction has the shape most small businesses already have: the same order book, fewer hands, and no one left to hand the overflow to. That is the real starting position, and it changes what the word "automation" is being asked to do.',
+
+    { h: 'What the evidence shows about employment' },
+    'On 20 May 2025 the International Labour Organization published an update to its global index of occupational exposure to generative AI. One job in four worldwide carries some exposure, distributed very unevenly: 34 percent in high-income countries against 11 percent in low-income ones. The authors are direct about the consequence — few jobs consist of tasks that are fully automatable with current technology, and transformation of roles remains the likeliest outcome. Their stated worry is job quality rather than job disappearance.',
+    'There is also a direct measurement, and it is Danish. Anders Humlum and Emilie Vestergaard linked two large adoption surveys to Denmark\'s administrative employment records: 25,000 workers, 7,000 workplaces, eleven of the most exposed occupations. Average time saved came to 2.8 percent. On earnings and recorded hours they found no significant effect anywhere, with confidence intervals ruling out anything larger than 1 percent.',
+
+    { h: 'The arithmetic on a six-person firm' },
+    'Six people at 39 hours is 234 hours a week. Removing a role means freeing 39 of them, a sixth of the total. The diffuse gain measured in Denmark frees 6.5. You would need six times the observed effect before headcount became a question at all.',
+    'The objection is fair, and better made here than left to someone else: that average covers general use of a chat assistant, not targeted automation of a defined process. On a single repeated task — chasing unpaid invoices, producing a quote, triaging enquiries — the saving is not 3 percent but 70 or 80. That is true, and it is precisely what we sell. What it is not is a whole job. It is four hours a week spread across three people.',
+    'That dispersion is the central fact and the one most often left out. A gain concentrated on one process lands across several job descriptions, and it takes a great many automated processes before the fragments reassemble into a full role. A six-person firm does not have that many. A two-hundred-person firm does, and [the same work](/business-process-automation/) answers to a different logic there.',
+
+    { h: 'Three outcomes, and the one where the language slips' },
+    { table: {
+      minWidth: 660,
+      head: ['What happens', 'Effect on headcount', 'What has to be said'],
+      rows: [
+        ['Reallocation. The freed hours go to work named in advance: calling back quotes that went quiet, opening a Saturday slot.', 'None', 'Which work, specifically, and before the build starts.'],
+        ['Non-replacement. Nobody is made redundant; somebody resigns six or ten months later and is not replaced.', 'It falls', 'That this is a decision. Here "no layoffs" is technically accurate and practically misleading.'],
+        ['Disestablishment. The role goes because its contents went.', 'It falls', 'The correct word, and the process that attaches to it.'],
+      ],
+    }},
+    'The second row is the only interesting one: it is the only case where the phrase holds up without being true. It is common, lawful and frequently sensible. What is not sensible is arriving there having let everyone believe in the first row.',
+
+    { h: 'What New Zealand law already requires' },
+    'Restructuring on the back of new technology is lawful here, and nobody needs permission to consider it. What the Employment Relations Act 2000 requires is a genuine business reason and a good-faith process around it: giving affected employees the information the proposal actually rests on, inviting feedback before any decision is made, considering it properly, and looking at redeployment inside the business before any employment ends. A decision taken first and consulted on afterwards is the standard way employers lose these cases.',
+    'That framework is not a shield but a discipline, and a useful one: it forces the reasoning onto paper before the outcome is fixed. An owner who cannot write down what was tried has a management problem, not a tooling problem.',
+
+    { h: 'The version of the commitment that holds' },
+    { steps: [
+      'Name the process, never the person. "Quotes go out inside two hours" is a process target; "run reception with two people" is a headcount target. Both are defensible. Neither should be dressed as the other.',
+      'Write down where the freed hours go, with a named task and an expected volume, before anything is built. Without a destination they are reabsorbed by the inbox within three weeks.',
+      'Set the observation window before any headcount decision — one quarter — and say so at the start. A team that learns the rule afterwards is right to distrust the next one.',
+      'Let the people whose work changes do the tuning. A tool imposed over a team is switched off within two months.',
+      'If the conclusion is still that a role no longer stands up, drop the language of automation and pick up the language of process. [An hour of scoping](/ai-audit/) stops that decision being made under pressure.',
+    ] },
+
+    { h: 'When the honest answer is no' },
+    'A firm whose order book has collapsed carries a payroll sized for volume that no longer exists. Automation there hands spare capacity to a team that already has too much: the problem is commercial, and treating it with technology funds an elaborate way of not deciding. That belongs in the scoping hour, not once the invoice exists.',
+
+    { note: 'The question worth putting to any supplier fits in one line: what am I meant to do with the hours you hand back. If there is no answer, they are not selling automation. They are selling a headcount reduction without naming it, and leaving you to carry both the process and the conversation with your team. Better decided before signing than after.' },
+  ],
+  faq: [
+    { q: 'Does automating a small business inevitably cost jobs?', a: 'The available evidence does not show that at the scale most small firms operate. The Danish study by Humlum and Vestergaard, covering 25,000 workers and 7,000 workplaces across eleven exposed occupations, measured average time savings of 2.8 percent and no significant effect on earnings or recorded hours. The International Labour Organization concludes separately that few jobs are fully automatable and that role transformation is the likelier outcome. Cutting a role is a management decision, not a consequence of the tool.' },
+    { q: 'Can I make someone redundant in New Zealand because a system now does their work?', a: 'Yes, provided there is a genuine business reason and the process is run in good faith under the Employment Relations Act 2000. That means giving affected employees the information the proposal relies on, seeking and genuinely considering their feedback before deciding, and looking at redeployment within the business first. Employers who lose these cases usually lose on process rather than on the underlying commercial logic.' },
+    { q: 'Is not replacing someone who leaves really "automating without layoffs"?', a: 'Technically yes, and that is where the phrase becomes misleading. No process is run, nobody loses a job, but headcount falls and the remaining work redistributes onto the people still there. It is a perfectly defensible choice. It only becomes dishonest when the team was told the project was about freeing up time and nothing else.' },
+    { q: 'How do I know whether the freed hours were actually worth anything?', a: 'By giving them a written destination before the build starts, with a named task and an expected volume. Without that, the recovered capacity dissolves into ordinary interruptions and nobody can say three months later whether the system achieved anything. This is the most common reason automations get written off as disappointing: they worked, but nothing had been set up to receive what they gave back.' },
+  ],
+  related: [
+    ['/ai-vs-hiring/', 'AI versus hiring: the honest comparison'],
+    ['/workflow-automation-examples/', 'Workflow automation examples that pay for themselves'],
+    ['/ai-audit/', 'Book a free AI opportunity audit'],
+  ],
+  extraGraph: [{
+    '@type': 'Article',
+    headline: 'Automating Without Layoffs — What the Promise Actually Covers',
+    datePublished: '2026-08-04',
+    author: { '@id': 'https://kanaky.xyz/#kevyn' },
+    publisher: { '@id': 'https://kanaky.xyz/#organization' },
+  }],
 },
 
 {
