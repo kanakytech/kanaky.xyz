@@ -18,11 +18,12 @@ export default [
   short: 'Journal',
   h1: 'Journal. <span style="color:var(--grey-4);font-weight:300;">One piece a day, in two languages.</span>',
   cta: 'service',
-  published: '2026-08-04',
+  published: '2026-08-05',
   body: [
     { lead: 'One long-form piece per working day, on what AI automation actually does for a business in this part of the world. Each one states a position, names its sources and shows its arithmetic. Every piece appears in French and in English — not a word-for-word translation, but the same substance written natively in each language. Most recent first.' },
 
     { list: [
+      '**5 August 2026** — [Quoting speed as a competitive weapon: what the numbers actually support](/quoting-speed-the-numbers/) · [Français — Le devis en deux heures au lieu de cinq jours, anatomie](/devis-en-deux-heures-anatomie/)',
       '**4 August 2026** — [Automatiser sans licencier : ce que la phrase engage vraiment](/automatiser-sans-licencier/) · [English — What the promise actually covers](/automating-without-layoffs/)',
       '**3 August 2026** — [L’IA locale en cinq minutes : ce qui tourne vraiment sur un ordinateur normal](/ia-locale-en-cinq-minutes/) · [English — What actually runs on a normal computer in 2026](/local-ai-on-a-normal-computer/)',
       '**2 August 2026** — [The real cost of an unanswered enquiry, measured](/cost-of-an-unanswered-enquiry/) · [Français — La demande client restée sans réponse : le calcul](/demande-client-sans-reponse-cout/)',
@@ -39,6 +40,162 @@ export default [
     ['/ai-audit/', 'Book a free AI opportunity audit'],
     ['/local-commitment/', 'The 10% that stays in the region'],
   ],
+},
+
+{
+  slug: 'quoting-speed-the-numbers',
+  lang: 'en',
+  alt: { lang: 'fr', url: 'https://kanaky.xyz/devis-en-deux-heures-anatomie/' },
+  title: 'Quoting Speed as a Competitive Weapon — What the Numbers Actually Support',
+  description: 'A quote that takes five days to arrive contains under two hours of work. The rest is storage. Here is the stage-by-stage anatomy, why the ISEE building index kills the "prices are moving" argument for speed, and the honest ceiling on a two-hour promise.',
+  keywords: 'quote turnaround time small business, faster quoting trades, automate quoting process, quote response time win rate, estimating time savings contractors, process cycle efficiency quoting',
+  eyebrow: 'Journal',
+  short: 'Journal · Quoting',
+  h1: 'The quote that takes five days. <span style="color:var(--grey-4);font-weight:300;">Almost none of it is work.</span>',
+  cta: 'service',
+  published: '2026-08-05',
+  body: [
+    { lead: 'A quote that takes five days to reach the client contains, in nearly every job book I have opened, somewhere between forty minutes and two hours of actual work. Everything else is the document sitting still: in a diary waiting for a site visit, in an inbox waiting for a supplier price, on a kitchen table waiting for the owner to have a free evening. That ratio is the entire subject, and you can measure it by Friday without buying anything.' },
+
+    { h: 'The statistic everyone quotes, and why this piece will not' },
+    'Search for what fast quoting is worth and the same claims come back: being first doubles your win rate, firms that quote same-day take a third more work, quick follow-up lifts conversion by 27 per cent. Trace any of them to a stated method and there is nothing there — a vendor blog citing a vendor blog. We ran that exercise properly for [the cost of an unanswered enquiry](/cost-of-an-unanswered-enquiry/) and reached the same place: two of the most repeated speed figures in the industry have no primary source at all.',
+    'What survives is thin and worth saying plainly. The 2011 *Harvard Business Review* study by Oldroyd, McElheran and Elkington, covering 1.25 million leads, measures contact and qualification — not quotes. No comparable dataset exists for quote turnaround in any industry. Anyone offering you a quoting multiplier is inventing it. So the honest reading of "the numbers" in the title is not an industry benchmark. It is two figures out of your own job book.',
+
+    { h: 'Touch time and elapsed time' },
+    'Touch time is the total minutes a person spends actually producing the quote. Elapsed time is the wall clock, from enquiry to the client holding the document. Divide the first by the second and you have what the lean literature calls process cycle efficiency. The rule of thumb published across that literature puts most unimproved processes between 5 and 10 per cent, and treats 25 per cent as the point where a process earns the description. It is a rule of thumb rather than a measured constant, and it deserves to be used as one.',
+    'Apply it. One hour fifty of work spread across five working days is 110 minutes against roughly 2,400 available — under 5 per cent. That number says something quite specific, and it is not that quoting is slow. It is that quoting barely happens. The five days are storage.',
+
+    { table: {
+      minWidth: 700,
+      head: ['Stage of a five-day quote', 'Touch time', 'Elapsed', 'What it is waiting on'],
+      rows: [
+        ['Enquiry read, job understood, call returned', '15 min', '4 hours', 'Somebody noticing the message'],
+        ['Site visit, or specification confirmed', '45 min', '2 days', 'Two diaries agreeing'],
+        ['Supplier prices requested and received', '10 min', '1.5 days', 'A third party — genuinely'],
+        ['Pricing, margin, wording, formatting', '35 min', '1 day', 'An evening the owner has free'],
+        ['Sent, and a follow-up scheduled', '5 min', 'half a day', 'Nothing at all'],
+        ['**Total**', '**about 1 h 50**', '**5 days**', '**Under 5 per cent efficiency**'],
+      ],
+    }},
+
+    { h: 'The margin argument does not hold' },
+    'One justification for speed should be put down before it spreads: that a slow quote loses money because input prices move underneath it. In Kanaky (New Caledonia) that claim is checkable. The BT21 all-works index published monthly by ISEE, the territory\'s statistics institute, stood at 99.72 in February 2026 and 102.02 provisionally in May, a rise of 1.7 per cent across the preceding twelve months. May\'s movement came mostly from diesel, up 21.5 per cent, alongside bitumen at 6.5 per cent and the equipment index at 2 per cent.',
+    'Read that properly. Even in a month with a violent fuel component, the general index moves about a point. Five days of that is a rounding error against any sane margin. Price drift is a real problem across a ninety-day validity window; it is not an argument for answering faster, and selling it as one is dishonest. Quoting speed is worth money because the client is comparing you against someone else this week — not because concrete moved.',
+
+    { h: 'What compresses, and what does not' },
+    'Go back to the table and sort it by who is waiting. Two rows wait on the physical world: a site visit needs two diaries to meet, and a supplier answers when the supplier answers. Those are floors, and pretending otherwise is how projects lose credibility in week three. Everything else is waiting on the business itself — roughly fifty-five minutes of work stretched across three days.',
+    'That is where a two-hour quote comes from. Not from working faster, but from deleting the storage between the working. And it sets an honest ceiling: for a job that genuinely needs a visit, two hours is a fiction. The promise holds on standard, repeat-shape work with a known specification, which in most trade books is more than half the volume. So the correct sentence is not "every quote in two hours". It is "quotes that need no visit go out the same day, and the rest get a dated commitment within two hours".',
+
+    { steps: [
+      'Measure both numbers on the last ten quotes before changing anything. Job book, two columns, one afternoon. Most owners are wrong about which stage is slow, and it is rarely the one they blame.',
+      'Split the jobs that need a visit from the ones that do not, and write that split down as a rule rather than deciding it case by case. This one distinction does more than any software.',
+      'Put the price list into a template that assembles the document from a handful of inputs. The 35 minutes of pricing and formatting is where a machine is genuinely good and genuinely safe: arithmetic and layout, not judgement about scope.',
+      'Ask suppliers for a standing price file instead of a quote per job. A monthly sheet removes the day-and-a-half row entirely for anything standard.',
+      'Commit to a time in the first reply. "You will have this by Thursday midday" holds a client through a wait that unexplained silence loses. [An hour of scoping](/ai-audit/) is usually enough to find which rows are yours.',
+    ] },
+
+    { h: 'Where quoting fast loses money' },
+    'Speed is the easiest thing in this field to oversell, so the failure modes belong in the same article. The first is scope. A quote produced quickly on work that was never pinned down becomes a variation argument three weeks later, and variations cost more than the job you won by being early. Firms pricing bespoke work know this and are right to resist. The rule that keeps both: compress the administrative wait, never the scope conversation. Where scope is genuinely unclear, the fast output is a dated holding position with its assumptions listed — a different document, which should look like one.',
+    'The second is quieter. A quote sent in two hours and never followed up performs worse than a slow quote from someone who rings on Tuesday. Sending is not the finish line, and the follow-up is the cheapest component of the whole system.',
+
+    { note: 'All of this rests on two numbers you do not have yet and could have by Friday: how many minutes of work a quote actually contains, and how many hours it spends in storage. If the ratio comes back above 25 per cent, quoting is not your problem and this is the wrong project — go and look at where enquiries land instead. If it comes back under 10 per cent, which it usually does, you are not slow at quoting. You are queuing, and a queue is the cheapest thing in a business to remove.' },
+  ],
+  faq: [
+    { q: 'How fast can a quote realistically go out?', a: 'It depends entirely on whether the job needs a site visit. For standard work with a known specification, same-day is achievable and two hours is achievable once the price list sits in a template — because almost all of the delay is waiting rather than working. For anything requiring a visit or a bespoke supplier price, two hours is not honest, and the useful commitment is a dated one given within two hours. Promising a single turnaround figure across both categories is how quoting promises fail.' },
+    { q: 'Is there real evidence that the first quote wins the job?', a: 'Not in any form worth relying on. The widely repeated claims — that being first doubles win rates, or that same-day quoting adds a third to won work — have no traceable methodology behind them. The credible speed research, notably the 2011 Harvard Business Review study of 1.25 million leads, measures contact and lead qualification, not quote turnaround. The defensible position is narrower: a client actively comparing suppliers this week is more likely to decide before a slow quote arrives. That is a reason to be quick without inventing a coefficient.' },
+    { q: 'Does automating quotes make the pricing less accurate?', a: 'It should not, because the part worth automating is not the pricing judgement. Assembling a document from an agreed price list, applying the margin rule, checking the arithmetic and formatting the output are mechanical steps where a machine outperforms a tired person at nine in the evening. Deciding what the job involves, whether the scope is complete and whether the work is worth taking stays with the person who carries the risk. Systems that blur that line produce fast quotes that lose money on variations.' },
+    { q: 'What is the single first thing to change if quotes take too long?', a: 'Measure touch time against elapsed time on the last ten quotes, then look at which stages are waiting on you rather than on a third party. In almost every case the largest recoverable block is the pricing-and-formatting evening, which sits waiting for the owner to be free. Removing that one queue typically cuts a five-day quote to under two, before anything else changes and before any supplier or diary problem is touched.' },
+  ],
+  related: [
+    ['/ai-for-builders/', 'AI for builders and construction firms'],
+    ['/workflow-automation-examples/', 'Workflow automation examples that hold up'],
+    ['/business-process-automation/', 'Business process automation, explained plainly'],
+  ],
+  extraGraph: [{
+    '@type': 'Article',
+    headline: 'Quoting Speed as a Competitive Weapon — What the Numbers Actually Support',
+    datePublished: '2026-08-05',
+    author: { '@id': 'https://kanaky.xyz/#kevyn' },
+    publisher: { '@id': 'https://kanaky.xyz/#organization' },
+  }],
+},
+
+{
+  slug: 'devis-en-deux-heures-anatomie',
+  lang: 'fr',
+  alt: { lang: 'en', url: 'https://kanaky.xyz/quoting-speed-the-numbers/' },
+  title: 'Le devis en deux heures au lieu de cinq jours : anatomie du temps perdu',
+  description: 'Un devis qui met cinq jours à partir contient rarement plus de deux heures de travail. Le reste est de l’attente. La décomposition étape par étape, ce que l’index BT21 de l’ISEE dit vraiment de l’argument « les prix bougent », et le plafond honnête de la promesse.',
+  keywords: 'délai de devis, devis rapide artisan, automatiser les devis, gagner du temps sur les devis PME, index BT21 Nouvelle-Calédonie, devis BTP Nouméa, automatisation devis entreprise',
+  eyebrow: 'Journal',
+  short: 'Journal · Devis',
+  h1: 'Le devis qui met cinq jours. <span style="color:var(--grey-4);font-weight:300;">Il ne contient presque pas de travail.</span>',
+  cta: 'service-fr',
+  published: '2026-08-05',
+  body: [
+    { lead: 'Un devis qui met cinq jours à parvenir au client contient, dans la quasi-totalité des carnets que nous avons ouverts, entre quarante minutes et deux heures de travail réel. Tout le reste, c’est le document immobile : dans un agenda avant une visite, dans une boîte mail avant un prix fournisseur, sur un coin de table avant que le gérant ait une soirée. Ce rapport est le sujet entier, et il se mesure sans rien acheter.' },
+
+    { h: 'Le chiffre que tout le monde cite, et pourquoi celui-ci ne le citera pas' },
+    'Cherchez ce que rapporte un devis rapide et les mêmes affirmations reviennent : être le premier double le taux de signature, répondre le jour même décroche un tiers d’affaires en plus, relancer vite monte la conversion de 27 %. Remontez l’une d’elles jusqu’à une méthode déclarée : il n’y a rien, un blog d’éditeur qui cite un blog d’éditeur. Nous avons fait l’exercice pour [le coût d’une demande restée sans réponse](/demande-client-sans-reponse-cout/), avec le même résultat — deux des statistiques les plus recopiées du secteur n’ont aucune source primaire.',
+    'Ce qui résiste est mince. L’étude publiée en 2011 dans la *Harvard Business Review* par Oldroyd, McElheran et Elkington, sur 1,25 million de demandes, mesure la prise de contact et la qualification — pas les devis. Aucun jeu de données comparable n’existe sur le délai d’émission d’un devis, dans aucun secteur. Qui vous vend un multiplicateur sur ce point l’invente. La lecture honnête du mot « chiffres » n’est donc pas un étalon sectoriel : ce sont deux nombres tirés de votre propre carnet.',
+
+    { h: 'Temps de travail et temps écoulé' },
+    'Le temps de travail, c’est le total des minutes pendant lesquelles une personne fabrique effectivement le devis. Le temps écoulé, c’est l’horloge murale, de la demande jusqu’au moment où le client tient le document. Divisez le premier par le second : c’est ce que la littérature lean appelle l’efficience du cycle. L’ordre de grandeur qu’on y trouve situe la plupart des processus non retravaillés entre 5 et 10 %, et retient 25 % comme seuil. C’est une règle empirique et non une constante mesurée ; elle doit être maniée comme telle.',
+    'Appliquez-la. Une heure cinquante étalée sur cinq jours ouvrés, c’est 110 minutes sur environ 2 400 disponibles : moins de 5 %. Ce chiffre dit quelque chose de précis, et ce n’est pas que faire un devis serait lent. C’est que faire un devis n’a presque pas lieu. Les cinq jours sont du stockage.',
+
+    { table: {
+      minWidth: 700,
+      head: ['Étape d’un devis à cinq jours', 'Temps de travail', 'Temps écoulé', 'Ce qu’on attend'],
+      rows: [
+        ['Demande lue, chantier compris, rappel effectué', '15 min', '4 heures', 'Que quelqu’un voie le message'],
+        ['Visite sur place, ou spécification confirmée', '45 min', '2 jours', 'Que deux agendas se rencontrent'],
+        ['Prix fournisseurs demandés et reçus', '10 min', '1,5 jour', 'Un tiers — réellement'],
+        ['Chiffrage, marge, rédaction, mise en forme', '35 min', '1 jour', 'Une soirée libre du gérant'],
+        ['Envoi, et relance programmée', '5 min', 'une demi-journée', 'Rien du tout'],
+        ['**Total**', '**environ 1 h 50**', '**5 jours**', '**Moins de 5 % d’efficience**'],
+      ],
+    }},
+
+    { h: 'L’argument de la marge ne tient pas' },
+    'Une justification de la vitesse mérite d’être écartée : le devis lent coûterait de l’argent parce que les prix d’achat bougent en dessous. En Kanaky (Nouvelle-Calédonie), l’affirmation est vérifiable. L’index BT21 « tous travaux confondus », publié chaque mois par l’ISEE, s’établissait à 99,72 en février 2026 et à 102,02 en provisoire au mois de mai, soit une progression de 1,7 % sur les douze mois précédents. La hausse de mai tenait surtout au gazole, à +21,5 %, accompagné du bitume à +6,5 % et de l’indice matériel à +2 %.',
+    'Lisez-le correctement : même sur un mois où le carburant s’emballe, l’index général prend environ un point. Cinq jours là-dedans sont une erreur d’arrondi face à n’importe quelle marge saine. La dérive des prix est un vrai sujet sur une validité de quatre-vingt-dix jours ; ce n’est pas un argument pour répondre plus vite. Le devis rapide vaut de l’argent parce que le client compare cette semaine — pas parce que le béton a bougé.',
+
+    { h: 'Ce qui se comprime et ce qui ne se comprime pas' },
+    'Reprenez le tableau et triez-le par « qui attend quoi ». Deux lignes attendent le monde physique : une visite suppose que deux agendas se rencontrent, un fournisseur répond quand il répond. Ce sont des planchers. Tout le reste attend l’entreprise elle-même — cinquante-cinq minutes de travail étirées sur trois jours.',
+    'C’est de là que vient le devis en deux heures. Pas d’un travail plus rapide, mais de la suppression du stockage entre les moments de travail. Et cela fixe un plafond honnête : pour un chantier qui exige vraiment une visite, deux heures est une fiction. La promesse tient sur les travaux standards, à spécification connue — soit, dans la plupart des carnets, plus de la moitié du volume. La formulation juste n’est donc pas « tous les devis en deux heures », mais « les devis sans visite partent le jour même, les autres reçoivent une date ferme sous deux heures ».',
+
+    { steps: [
+      'Mesurer les deux nombres sur les dix derniers devis avant de changer quoi que ce soit. Le carnet, deux colonnes, un après-midi. La plupart des gérants se trompent sur l’étape lente, et c’est rarement celle qu’ils accusent.',
+      'Séparer les chantiers qui exigent une visite de ceux qui n’en exigent pas, et écrire cette règle au lieu de trancher au cas par cas. Cette seule distinction fait davantage que n’importe quel logiciel.',
+      'Mettre la bibliothèque de prix dans un modèle qui assemble le document à partir de quelques entrées. Les 35 minutes de chiffrage et de mise en forme sont l’endroit où une machine est bonne et sans danger : de l’arithmétique et de la mise en page, pas un jugement sur le périmètre.',
+      'Demander aux fournisseurs un fichier de prix permanent plutôt qu’une consultation par chantier. Une feuille mensuelle supprime la ligne d’un jour et demi sur tout ce qui est standard.',
+      'Annoncer une date dès la première réponse. « Vous l’aurez jeudi midi » retient un client là où un silence sans explication le perd. [Un cadrage d’une heure](/commencer-avec-ia-entreprise/) suffit à identifier les lignes qui vous appartiennent.',
+    ] },
+
+    { h: 'Là où le devis rapide fait perdre de l’argent' },
+    'La vitesse est ce qui se survend le plus facilement dans ce métier ; les modes de défaillance ont donc leur place ici. Le premier est le périmètre. Un devis produit vite sur un chantier jamais cadré devient une discussion d’avenant trois semaines plus tard, et les avenants coûtent plus cher que le chantier gagné en arrivant tôt. Les entreprises qui chiffrent du sur-mesure le savent et ont raison de résister. La règle qui préserve les deux : comprimer l’attente administrative, jamais la conversation sur le périmètre. Quand celui-ci reste flou, la sortie rapide est une position d’attente datée, hypothèses listées — un autre document, qui doit en avoir l’air.',
+    'Le second est plus discret. Un devis parti en deux heures et jamais relancé fait moins bien qu’un devis lent d’un concurrent qui appelle le mardi. L’envoi n’est pas la ligne d’arrivée.',
+
+    { note: 'Tout ceci repose sur deux nombres que vous pourriez avoir vendredi : combien de minutes de travail contient réellement un devis, et combien d’heures il passe en stockage. Si le rapport ressort au-dessus de 25 %, le devis n’est pas votre problème et ce chantier est le mauvais — allez plutôt regarder où atterrissent les demandes. S’il ressort sous 10 %, ce qui est le cas habituel, vous n’êtes pas lent à faire des devis. Vous faites la queue, et une file d’attente est la chose la moins coûteuse à supprimer dans une entreprise.' },
+  ],
+  faq: [
+    { q: 'En combien de temps un devis peut-il réellement partir ?', a: 'Tout dépend de la nécessité d’une visite. Pour un travail standard à spécification connue, le jour même est atteignable et deux heures le deviennent dès que la bibliothèque de prix est dans un modèle — parce que la quasi-totalité du délai est de l’attente et non du travail. Pour un chantier exigeant une visite ou un prix fournisseur sur mesure, deux heures n’est pas honnête, et l’engagement utile est une date ferme donnée sous deux heures. Annoncer un délai unique pour les deux catégories est la façon habituelle dont ces promesses se cassent.' },
+    { q: 'Existe-t-il une preuve que le premier devis emporte l’affaire ?', a: 'Aucune sur laquelle il soit raisonnable de s’appuyer. Les affirmations les plus répandues — être le premier doublerait le taux de signature, le devis du jour même ajouterait un tiers d’affaires — n’ont aucune méthodologie traçable derrière elles. La recherche crédible sur la vitesse, notamment l’étude de la Harvard Business Review de 2011 sur 1,25 million de demandes, mesure la prise de contact et la qualification, pas le délai d’émission d’un devis. La position défendable est plus étroite : un client qui compare activement cette semaine a de bonnes chances d’avoir tranché avant l’arrivée d’un devis lent. C’est une raison d’aller vite sans inventer de coefficient.' },
+    { q: 'Automatiser les devis rend-il le chiffrage moins juste ?', a: 'Cela ne devrait pas, parce que la partie qui mérite d’être automatisée n’est pas le jugement de prix. Assembler un document à partir d’une bibliothèque validée, appliquer la règle de marge, vérifier l’arithmétique et mettre en forme sont des étapes mécaniques où la machine fait mieux qu’une personne fatiguée à vingt et une heures. Décider de ce que comprend le chantier, si le périmètre est complet et si l’affaire vaut d’être prise reste à celui qui porte le risque. Les systèmes qui brouillent cette frontière produisent des devis rapides qui perdent de l’argent en avenants.' },
+    { q: 'Par quoi commencer si les devis mettent trop de temps ?', a: 'Par mesurer le temps de travail et le temps écoulé sur les dix derniers devis, puis regarder quelles étapes attendent après vous plutôt qu’après un tiers. Dans presque tous les cas, le bloc récupérable le plus gros est la soirée de chiffrage et de mise en forme, qui attend que le gérant soit disponible. Supprimer cette seule file ramène en général un devis de cinq jours sous les deux jours, avant tout autre changement et sans avoir touché au problème des agendas ou des fournisseurs.' },
+  ],
+  related: [
+    ['/ia-btp-nouvelle-caledonie/', 'L’IA pour le BTP en Nouvelle-Calédonie'],
+    ['/exemples-automatisation-pme/', 'Exemples concrets d’automatisation en PME'],
+    ['/automatisation-ia-nouvelle-caledonie/', 'L’automatisation par l’IA en Nouvelle-Calédonie'],
+  ],
+  extraGraph: [{
+    '@type': 'Article',
+    headline: 'Le devis en deux heures au lieu de cinq jours : anatomie du temps perdu',
+    datePublished: '2026-08-05',
+    author: { '@id': 'https://kanaky.xyz/#kevyn' },
+    publisher: { '@id': 'https://kanaky.xyz/#organization' },
+  }],
 },
 
 {
