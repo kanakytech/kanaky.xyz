@@ -18,11 +18,12 @@ export default [
   short: 'Journal',
   h1: 'Journal. <span style="color:var(--grey-4);font-weight:300;">One piece a day, in two languages.</span>',
   cta: 'service',
-  published: '2026-08-05',
+  published: '2026-08-07',
   body: [
     { lead: 'One long-form piece per working day, on what AI automation actually does for a business in this part of the world. Each one states a position, names its sources and shows its arithmetic. Every piece appears in French and in English — not a word-for-word translation, but the same substance written natively in each language. Most recent first.' },
 
     { list: [
+      '**7 August 2026** — [The follow-up nobody sends, and the break-even nobody calculates](/the-follow-up-nobody-sends/) · [Français — La relance que personne n’envoie : le calcul du seuil](/la-relance-que-personne-ne-fait/)',
       '**5 August 2026** — [Quoting speed as a competitive weapon: what the numbers actually support](/quoting-speed-the-numbers/) · [Français — Le devis en deux heures au lieu de cinq jours, anatomie](/devis-en-deux-heures-anatomie/)',
       '**4 August 2026** — [Automatiser sans licencier : ce que la phrase engage vraiment](/automatiser-sans-licencier/) · [English — What the promise actually covers](/automating-without-layoffs/)',
       '**3 August 2026** — [L’IA locale en cinq minutes : ce qui tourne vraiment sur un ordinateur normal](/ia-locale-en-cinq-minutes/) · [English — What actually runs on a normal computer in 2026](/local-ai-on-a-normal-computer/)',
@@ -40,6 +41,170 @@ export default [
     ['/ai-audit/', 'Book a free AI opportunity audit'],
     ['/local-commitment/', 'The 10% that stays in the region'],
   ],
+},
+
+{
+  slug: 'the-follow-up-nobody-sends',
+  lang: 'en',
+  alt: { lang: 'fr', url: 'https://kanaky.xyz/la-relance-que-personne-ne-fait/' },
+  title: 'The Follow-Up Nobody Sends — And the Break-Even Nobody Calculates',
+  description: 'Seven businesses in ten never send a second message on a quote that went silent. The one published dataset, the folklore built on top of it, and the break-even calculation that lands near one recovered job in two hundred whatever the trade or the currency.',
+  keywords: 'quote follow up, sales follow up statistics, follow up email small business, second follow up reply rate, follow up automation quotes, lead nurture small business New Caledonia',
+  eyebrow: 'Journal',
+  short: 'Journal · Follow-up',
+  h1: 'The follow-up nobody sends. <span style="color:var(--grey-4);font-weight:300;">The arithmetic is not close.</span>',
+  cta: 'service',
+  published: '2026-08-07',
+  body: [
+    { lead: 'The message in question is the least glamorous thing a business can send: a second contact about a quote that got no answer. No new offer, no discount, four sentences. It is also, on the only large dataset anyone has published, the message that seven businesses in ten never send. The interesting part is not whether it works, but that the arithmetic is so lopsided that whether it works barely matters.' },
+
+    { h: 'One dataset, and the folklore built on top of it' },
+    'Yesware, which sells email tracking to sales teams, analysed more than 500,000 messages sent by its users during the first quarter of 2014. Two findings are worth carrying. Of the threads that got no reply, 70 per cent stopped after the first attempt and only 19 per cent went as far as a second message. Where a second was sent, roughly 21 per cent of those threads produced a reply, and about a quarter answered eventually across the whole sequence.',
+    'Handle it carefully, because it is vendor telemetry rather than research. The population is people who had already bought a sales-email tool, the period is twelve years old, and a reply is not a sale. What it supports is narrow and still worth having: a second message to a silent thread is not a rounding error, and almost nobody sends one.',
+    'Now the claim you will actually meet. "Eighty per cent of sales require five follow-ups" appears in nearly every sales article written since 2010, and traces back to Marketing Donut, a British small-business publisher, whose own wording is that "different studies carried out at different times, in different places, by different market research companies over a number of years" reveal it. No study is named — no sample, no method, no date. We hit the same dead end tracing [speed-to-lead statistics](/cost-of-an-unanswered-enquiry/) and [quoting multipliers](/quoting-speed-the-numbers/). In this field the most repeated numbers are reliably the ones with least behind them.',
+
+    { h: 'The question worth asking instead' },
+    'Since the true effect size cannot be recovered from published sources, stop asking how well follow-up works and ask how well it would have to work. That has a clean answer, and it needs three numbers you already hold: the minutes a follow-up takes, what an hour of that person costs you, and the gross contribution of an average won job. Multiply the first two, divide by the third, and you have the recovery rate at which the habit pays for itself.',
+    'Below is that calculation for three shapes of business in this part of the world, assumptions stated so you can substitute your own.',
+
+    { table: {
+      minWidth: 720,
+      head: ['Business shape', 'Follow-up cost per quote', 'Contribution per won job', 'Break-even recovery rate'],
+      rows: [
+        ['Trade firm, Nouméa — 15 quotes a month, two follow-ups totalling 8 min, owner time at 3,000 XPF an hour', '400 XPF', '95,000 XPF — a 380,000 XPF job at 25 % margin', '**1 quote in 238** · 0.42 %'],
+        ['Nautical operator — 60 enquiries a month, 4 min per enquiry, staff time at 2,000 XPF an hour', '133 XPF', '27,000 XPF — a 45,000 XPF booking at 60 % margin', '**1 in 203** · 0.49 %'],
+        ['Professional services, Auckland — 8 proposals a month, 15 min each, chargeable time at NZ$90 an hour', 'NZ$22.50', 'NZ$5,225 — a NZ$9,500 engagement at 55 % margin', '**1 in 232** · 0.43 %'],
+      ],
+    }},
+
+    'Three trades, two currencies, job values two orders of magnitude apart — and the break-even lands between one quote in two hundred and one in two hundred and forty every time. That is not a coincidence, it is the point of the exercise: cost and value both scale with the size of the business, so the ratio survives the change of scale almost intact. For the trade firm the entire year of the habit costs twenty-four hours — one recovered job pays for all of it, and roughly nine more besides.',
+    'Which settles the argument unusually. You need not believe the 21 per cent, or any published figure at all: following up fails to pay only if it recovers nothing whatsoever, only if every client who went silent was always going to stay silent. Nobody who has kept a job book believes that.',
+
+    { h: 'So why does it not happen' },
+    'If the maths were the obstacle this would be a maths problem. It is not. The three real reasons are structural.',
+
+    { list: [
+      '**No trigger.** A quote goes out and nothing anywhere records the date it should be chased. The follow-up depends on someone remembering, and people remember the jobs they won.',
+      '**No owner.** In a five-person firm the person who wrote the quote is on site the following week. Chasing belongs to whoever is free, which is nobody.',
+      '**No record.** Quotes live in a sent-items folder — a filing cabinet with no index. You cannot work through a list you cannot produce.',
+    ] },
+
+    'None of that is repaired by resolving to try harder, which is why the resolution collapses in the second week. It is repaired by moving the trigger out of a person and into a system far smaller than the word suggests.',
+
+    { steps: [
+      'Produce the list before anything else: every quote sent in the last ninety days, with a date and a status. If that takes more than an hour, you have found the real problem and it is not follow-up.',
+      'Fix one interval and write it down. Day four and day twelve suits most trades; what matters is deciding once rather than renegotiating per client.',
+      'Make the reminder arrive by itself — a dated task created when the quote is sent, not a note to self. This single change does most of the work, and needs no AI.',
+      'Write the two messages once, as drafts with a gap in them. Rewriting a follow-up from scratch each time is what makes it feel expensive.',
+      'Let the system prepare the message, then stop: a person reads it, changes a line, presses send. [An hour of scoping](/ai-audit/) usually shows which of these five you are missing.',
+    ] },
+
+    { h: 'Where following up costs money' },
+    'Two failure modes, and the second is the one that matters here. The first is the empty message — "just checking in", "bumping this up your inbox". It adds nothing and teaches the client that your messages can be skipped without consequence. A follow-up has to carry one thing the first did not: a lead time that has changed, a supplier price that has held, a comparable job finished nearby.',
+    'The second is specific to a market this size. In Nouméa or Port Vila you will meet this person again, at a trade counter or a school gate, and a sequence that reads as bulk mail does damage no recovered job repays. That is the honest argument for a stopping rule: two follow-ups, then nothing until they come back to you. Not because a third message never works, but because the cost of becoming the firm that will not stop is paid somewhere the numbers cannot show you.',
+
+    { note: 'The calculation takes ten minutes with your own figures: cost per follow-up, divided by contribution per won job. If your break-even comes back above one in fifty, your quote volume is too low for this to be the priority — look at the enquiry side instead. If it lands where it does for almost everyone, near one in two hundred, then follow-up is not a tactic you are weighing up. It is money already on the table that nothing in your business picks up.' },
+  ],
+  faq: [
+    { q: 'How many times should you follow up on a quote?', a: 'Twice is the defensible answer for most small firms: once around day four, once around day twelve, then stop until the client comes back. There is no dataset supporting a specific number, so the interval is a judgement rather than a finding. What the arithmetic does support is that two well-spaced messages cost so little against the contribution of one won job that they pay for themselves at a recovery rate below half a per cent. Beyond two, the gain becomes speculative while the relational cost in a small market becomes real.' },
+    { q: 'Is there actual evidence that following up wins work?', a: 'Very little, and it is worth being clear about that. The most quoted claim — that 80 per cent of sales need five follow-ups — traces to Marketing Donut, which attributes it to unnamed studies by unnamed research companies over unstated years. Nothing there can be checked. The one substantial published dataset is Yesware’s analysis of over 500,000 emails in the first quarter of 2014, which found that 70 per cent of unanswered threads stopped after a single attempt and that second messages drew replies about 21 per cent of the time. That is vendor telemetry from a self-selected population, twelve years old, and it measures replies rather than won work.' },
+    { q: 'Should follow-ups be automated?', a: 'The reminder should be; the message should not be sent unread. The part worth handing to a machine is the part people fail at — noticing that a quote has gone quiet, producing the list, drafting the text and putting it in front of someone at the right moment. The part to keep is the last thirty seconds, where a person adds the detail that makes the message specific to that client and that job. Sequences that send themselves on warm leads are how a small firm acquires a reputation for bulk mail, which costs more than the jobs recovered.' },
+    { q: 'What is the first thing to fix if quotes go unchased?', a: 'Produce a list of every quote sent in the last ninety days with its date and status. Most owners discover this takes far longer than expected, and that discovery is the finding: the follow-up is not being skipped through lack of will but because the list does not exist and cannot be reconstructed on a Friday afternoon. Fix the record first, then the trigger, then the wording. Doing it in the other order produces well-written messages that never get sent.' },
+  ],
+  related: [
+    ['/cost-of-an-unanswered-enquiry/', 'The real cost of an unanswered enquiry'],
+    ['/quoting-speed-the-numbers/', 'Quoting speed — what the numbers support'],
+    ['/workflow-automation-examples/', 'Workflow automation examples that hold up'],
+  ],
+  extraGraph: [{
+    '@type': 'Article',
+    headline: 'The Follow-Up Nobody Sends — And the Break-Even Nobody Calculates',
+    datePublished: '2026-08-07',
+    author: { '@id': 'https://kanaky.xyz/#kevyn' },
+    publisher: { '@id': 'https://kanaky.xyz/#organization' },
+  }],
+},
+
+{
+  slug: 'la-relance-que-personne-ne-fait',
+  lang: 'fr',
+  alt: { lang: 'en', url: 'https://kanaky.xyz/the-follow-up-nobody-sends/' },
+  title: 'La relance que personne n’envoie : le calcul du seuil de rentabilité',
+  description: 'Sept entreprises sur dix n’envoient jamais de second message sur un devis resté sans réponse. Le seul jeu de données publié, le folklore construit dessus, et le calcul du seuil qui tombe près d’une affaire récupérée sur deux cents, quel que soit le métier ou la monnaie.',
+  keywords: 'relance devis, relancer un client sans réponse, relance commerciale PME, taux de réponse relance, automatiser les relances, relance devis Nouvelle-Calédonie',
+  eyebrow: 'Journal',
+  short: 'Journal · Relance',
+  h1: 'La relance que personne n’envoie. <span style="color:var(--grey-4);font-weight:300;">Le calcul n’est même pas serré.</span>',
+  cta: 'service-fr',
+  published: '2026-08-07',
+  body: [
+    { lead: 'Le message dont il est question est le moins spectaculaire qu’une entreprise puisse écrire : un second contact à propos d’un devis resté sans réponse. Pas de nouvelle offre, pas de remise, quatre phrases. C’est aussi, d’après le seul jeu de données publié à grande échelle, le message que sept entreprises sur dix n’envoient jamais. L’intéressant n’est pas de savoir s’il fonctionne, mais que le calcul penche à ce point qu’il n’est presque plus nécessaire de le savoir.' },
+
+    { h: 'Un jeu de données, et le folklore bâti par-dessus' },
+    'Yesware, qui vend du suivi d’e-mails aux équipes commerciales, a analysé plus de 500 000 messages envoyés par ses utilisateurs au premier trimestre 2014. Deux résultats méritent d’être retenus. Parmi les fils restés sans réponse, 70 % se sont arrêtés après la première tentative et 19 % seulement sont allés jusqu’à un second message. Là où il a été envoyé, environ 21 % des fils ont produit une réponse, un quart finissant par répondre sur l’ensemble de la séquence.',
+    'À manier avec précaution : ce sont des relevés d’éditeur, pas une recherche. La population est faite de gens qui avaient déjà acheté un outil de prospection par e-mail, la période a douze ans, et une réponse n’est pas une vente. Ce que cela soutient est étroit et utile : un second message sur un fil silencieux n’est pas une erreur d’arrondi, et presque personne ne l’envoie.',
+    'Vient ensuite l’affirmation que vous croiserez vraiment. « 80 % des ventes exigent cinq relances » figure dans presque tous les articles commerciaux écrits depuis 2010, et remonte à Marketing Donut, éditeur britannique destiné aux petites entreprises, dont la formulation propre est que « différentes études menées à différentes époques, en différents lieux, par différents instituts d’études de marché au fil des années » l’établissent. Aucune étude n’est nommée — ni échantillon, ni méthode, ni date. Nous avons buté sur la même impasse en traçant [les statistiques de délai de réponse](/demande-client-sans-reponse-cout/), puis [les multiplicateurs du devis rapide](/devis-en-deux-heures-anatomie/). Dans ce domaine, les chiffres les plus recopiés sont régulièrement ceux qui ont le moins derrière eux.',
+
+    { h: 'La question qu’il faut poser à la place' },
+    'Puisque l’ampleur réelle de l’effet ne se récupère pas dans les sources publiées, cessez de demander si la relance fonctionne et demandez à quel point elle devrait fonctionner. Cette version-là a une réponse nette, et elle réclame trois nombres que vous détenez déjà : les minutes que prend une relance, ce que coûte une heure de la personne qui la fait, et la marge brute d’une affaire moyenne remportée. Multipliez les deux premiers, divisez par le troisième : vous obtenez le taux de récupération à partir duquel l’habitude se paie toute seule.',
+    'Voici ce calcul pour trois formes d’entreprise de cette région, hypothèses affichées pour que vous puissiez y substituer les vôtres.',
+
+    { table: {
+      minWidth: 720,
+      head: ['Profil d’entreprise', 'Coût de relance par devis', 'Marge d’une affaire gagnée', 'Seuil de récupération'],
+      rows: [
+        ['Artisan, Nouméa — 15 devis par mois, deux relances de 8 min au total, heure du gérant à 3 000 XPF', '400 XPF', '95 000 XPF — chantier de 380 000 XPF à 25 % de marge', '**1 devis sur 238** · 0,42 %'],
+        ['Prestataire nautique — 60 demandes par mois, 4 min par demande, heure salariée à 2 000 XPF', '133 XPF', '27 000 XPF — réservation de 45 000 XPF à 60 % de marge', '**1 sur 203** · 0,49 %'],
+        ['Cabinet de services, Auckland — 8 propositions par mois, 15 min chacune, heure facturable à 90 NZD', '22,50 NZD', '5 225 NZD — mission de 9 500 NZD à 55 % de marge', '**1 sur 232** · 0,43 %'],
+      ],
+    }},
+
+    'Trois métiers, deux monnaies, des montants séparés par deux ordres de grandeur — et le seuil tombe à chaque fois entre un devis sur deux cents et un devis sur deux cent quarante. Ce n’est pas une coïncidence, c’est tout l’intérêt de l’exercice : coût et valeur grandissent tous deux avec la taille de l’entreprise, si bien que le rapport traverse le changement d’échelle presque intact. Pour l’artisan, une année entière de l’habitude coûte vingt-quatre heures — une affaire récupérée paie le tout, et neuf autres avec.',
+    'Ce qui tranche le débat d’une manière inhabituelle. Vous n’avez besoin de croire ni les 21 %, ni aucun chiffre publié : la relance ne se paie pas dans un seul cas, celui où elle ne récupère absolument rien, où tout client devenu silencieux devait de toute façon le rester. Personne ayant tenu un carnet de chantiers ne croit cela.',
+
+    { h: 'Pourquoi cela n’a donc pas lieu' },
+    'Si l’arithmétique était l’obstacle, ce serait un problème d’arithmétique. Ce n’en est pas un. Les trois vraies raisons tiennent à l’organisation.',
+
+    { list: [
+      '**Aucun déclencheur.** Un devis part et rien, nulle part, n’enregistre la date à laquelle il faudra le relancer. La relance dépend de quelqu’un qui s’en souvient, et on se souvient des affaires qu’on a gagnées.',
+      '**Aucun responsable.** Dans une entreprise de cinq personnes, celui qui a rédigé le devis est sur un chantier la semaine suivante. La relance revient à qui est disponible, c’est-à-dire à personne.',
+      '**Aucune trace.** Les devis vivent dans un dossier « éléments envoyés » — une armoire sans index. On ne traite pas une liste qu’on est incapable de produire.',
+    ] },
+
+    'Rien de cela ne se répare en décidant de faire mieux, et c’est pourquoi la décision s’effondre la deuxième semaine. Cela se répare en sortant le déclencheur d’une tête humaine pour le mettre dans un système bien plus petit que le mot ne le laisse croire.',
+
+    { steps: [
+      'Produire la liste avant tout le reste : tous les devis partis depuis quatre-vingt-dix jours, avec une date et un statut. Si cela prend plus d’une heure, vous avez trouvé le vrai problème, et ce n’est pas la relance.',
+      'Fixer un rythme et l’écrire. Le quatrième jour puis le douzième convient à la plupart des métiers ; ce qui compte est d’avoir tranché une fois plutôt que de rediscuter pour chaque client.',
+      'Faire arriver le rappel tout seul — une tâche datée créée au moment de l’envoi du devis, pas un pense-bête. Ce seul changement fait l’essentiel du travail, et ne demande aucune IA.',
+      'Rédiger les deux messages une fois, sous forme de brouillons à trou. Réécrire une relance entièrement à chaque fois est précisément ce qui la rend coûteuse.',
+      'Laisser le système préparer le message, puis s’arrêter : une personne le lit, change une ligne, appuie sur envoyer. [Un cadrage d’une heure](/commencer-avec-ia-entreprise/) suffit à repérer laquelle de ces cinq étapes vous manque.',
+    ] },
+
+    { h: 'Là où la relance fait perdre de l’argent' },
+    'Deux modes de défaillance, et c’est le second qui compte ici. Le premier est le message vide : « je reviens vers vous », « je fais remonter ce message ». Il n’apporte rien et apprend au client que vos messages peuvent être sautés sans conséquence. Une relance doit porter une chose que le premier message ne portait pas : un délai qui a changé, un prix fournisseur qui tient encore, un chantier comparable terminé à côté.',
+    'Le second est propre à un marché de cette taille. En Kanaky (Nouvelle-Calédonie), vous recroiserez cette personne — au comptoir d’un fournisseur, à la sortie de l’école — et une séquence qui sent le publipostage cause un dommage qu’aucune affaire récupérée ne rembourse. C’est le vrai argument en faveur d’une règle d’arrêt : deux relances, puis plus rien tant que le client ne revient pas. Non parce qu’un troisième message ne marche jamais, mais parce que le coût de devenir l’entreprise qui ne s’arrête pas se paie là où les chiffres ne le montrent pas.',
+
+    { note: 'Le calcul demande une dizaine de minutes avec vos propres nombres : coût d’une relance, divisé par la marge d’une affaire gagnée. Si votre seuil ressort au-dessus d’un devis sur cinquante, votre volume est trop faible pour que ce soit la priorité — regardez plutôt les demandes entrantes. S’il ressort autour d’un sur deux cents, là où il tombe pour presque tout le monde, la relance n’est pas une tactique que vous évaluez : c’est de l’argent déjà posé sur la table, que rien dans votre entreprise ne ramasse.' },
+  ],
+  faq: [
+    { q: 'Combien de fois faut-il relancer un devis ?', a: 'Deux fois est la réponse défendable pour la plupart des petites structures : une fois vers le quatrième jour, une fois vers le douzième, puis on s’arrête jusqu’à ce que le client revienne. Aucun jeu de données ne fonde un nombre précis, donc le rythme relève du jugement et non d’un résultat. Ce que l’arithmétique soutient, en revanche, c’est que deux messages bien espacés coûtent si peu face à la marge d’une seule affaire gagnée qu’ils se remboursent à un taux de récupération inférieur à un demi pour cent. Au-delà de deux, le gain devient spéculatif pendant que le coût relationnel, lui, devient réel dans un petit marché.' },
+    { q: 'Existe-t-il une preuve que relancer fait gagner des affaires ?', a: 'Très peu, et autant le dire clairement. L’affirmation la plus citée — 80 % des ventes exigeraient cinq relances — remonte à Marketing Donut, qui l’attribue à des études non nommées, menées par des instituts non nommés, sur des années non précisées. Rien n’y est vérifiable. Le seul jeu de données publié de taille sérieuse est l’analyse de Yesware portant sur plus de 500 000 e-mails au premier trimestre 2014 : 70 % des fils sans réponse s’arrêtaient après une seule tentative, et les seconds messages obtenaient une réponse dans environ 21 % des cas. Ce sont des relevés d’éditeur sur une population auto-sélectionnée, vieux de douze ans, et ils mesurent des réponses, pas des affaires signées.' },
+    { q: 'Faut-il automatiser les relances ?', a: 'Le rappel, oui ; le message, il ne doit pas partir sans être lu. La part qui mérite d’être confiée à une machine est celle où les humains échouent : remarquer qu’un devis est devenu silencieux, produire la liste, rédiger le brouillon et le poser devant quelqu’un au bon moment. La part à garder, ce sont les trente dernières secondes, où une personne ajoute le détail qui rend le message propre à ce client et à ce chantier. Les séquences qui s’envoient seules sur des prospects tièdes sont la façon dont une petite entreprise se fabrique une réputation de publipostage, ce qui coûte plus cher que les affaires récupérées.' },
+    { q: 'Par quoi commencer si les devis ne sont jamais relancés ?', a: 'Par produire la liste de tous les devis envoyés depuis quatre-vingt-dix jours, avec leur date et leur statut. La plupart des gérants découvrent que cela prend beaucoup plus longtemps que prévu, et cette découverte est le résultat : la relance n’est pas sautée par manque de volonté, mais parce que la liste n’existe pas et ne se reconstitue pas un vendredi après-midi. Réparer la trace d’abord, le déclencheur ensuite, la formulation en dernier. L’ordre inverse produit des messages bien écrits qui ne partent jamais.' },
+  ],
+  related: [
+    ['/demande-client-sans-reponse-cout/', 'Le coût d’une demande restée sans réponse'],
+    ['/devis-en-deux-heures-anatomie/', 'Le devis en deux heures : anatomie du temps perdu'],
+    ['/exemples-automatisation-pme/', 'Exemples concrets d’automatisation en PME'],
+  ],
+  extraGraph: [{
+    '@type': 'Article',
+    headline: 'La relance que personne n’envoie : le calcul du seuil de rentabilité',
+    datePublished: '2026-08-07',
+    author: { '@id': 'https://kanaky.xyz/#kevyn' },
+    publisher: { '@id': 'https://kanaky.xyz/#organization' },
+  }],
 },
 
 {
