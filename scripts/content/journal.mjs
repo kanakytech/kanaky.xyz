@@ -18,11 +18,12 @@ export default [
   short: 'Journal',
   h1: 'Journal. <span style="color:var(--grey-4);font-weight:300;">One piece a day, in two languages.</span>',
   cta: 'service',
-  published: '2026-08-07',
+  published: '2026-08-08',
   body: [
     { lead: 'One long-form piece per working day, on what AI automation actually does for a business in this part of the world. Each one states a position, names its sources and shows its arithmetic. Every piece appears in French and in English — not a word-for-word translation, but the same substance written natively in each language. Most recent first.' },
 
     { list: [
+      '**8 August 2026** — [Vingt-neuf journées, pas une saison : ce qu’un croisiériste laisse à Nouméa](/croisieristes-commerce-noumea/) · [English — What a cruise call actually leaves behind](/cruise-calls-noumea-retail/)',
       '**7 August 2026** — [The follow-up nobody sends, and the break-even nobody calculates](/the-follow-up-nobody-sends/) · [Français — La relance que personne n’envoie : le calcul du seuil](/la-relance-que-personne-ne-fait/)',
       '**5 August 2026** — [Quoting speed as a competitive weapon: what the numbers actually support](/quoting-speed-the-numbers/) · [Français — Le devis en deux heures au lieu de cinq jours, anatomie](/devis-en-deux-heures-anatomie/)',
       '**4 August 2026** — [Automatiser sans licencier : ce que la phrase engage vraiment](/automatiser-sans-licencier/) · [English — What the promise actually covers](/automating-without-layoffs/)',
@@ -41,6 +42,164 @@ export default [
     ['/ai-audit/', 'Book a free AI opportunity audit'],
     ['/local-commitment/', 'The 10% that stays in the region'],
   ],
+},
+
+{
+  slug: 'croisieristes-commerce-noumea',
+  lang: 'fr',
+  alt: { lang: 'en', url: 'https://kanaky.xyz/cruise-calls-noumea-retail/' },
+  title: 'Ce qu’un croisiériste change au commerce de Nouméa : vingt-neuf journées, pas une saison',
+  description: 'La Nouvelle-Calédonie a reçu 250 924 croisiéristes en 2025 pour quatre-vingts touchées de navires, contre 235 touchées en 2016. Lifou en a pris cinquante et une. Ce qu’il reste à Nouméa, ce que vaut une escale en francs, et pourquoi une date connue deux ans à l’avance surprend encore les commerces.',
+  keywords: 'croisière Nouméa commerce, croisiéristes Nouvelle-Calédonie 2025, escale paquebot Nouméa, préparer une escale de croisière, tourisme de croisière Nouvelle-Calédonie, commerce centre-ville Nouméa',
+  eyebrow: 'Journal',
+  short: 'Journal · Croisière',
+  h1: 'Vingt-neuf journées, pas une saison. <span style="color:var(--grey-4);font-weight:300;">Ce qu’une escale laisse vraiment à Nouméa.</span>',
+  cta: 'service-fr',
+  published: '2026-08-08',
+  body: [
+    { lead: 'Un paquebot amarré à la Gare Maritime dépose environ trois mille personnes dans le centre de Nouméa, avec une heure de départ affichée et non négociable. Le commerce qui en vit parle encore de « la saison de croisière », comme s’il s’agissait d’un flux. Les chiffres de 2025 disent autre chose : ce n’est plus une saison, c’est une trentaine de journées isolées, chacune plus lourde qu’il y a dix ans, et dont la date était connue bien avant que l’année commence.' },
+
+    { h: 'Quatre-vingts touchées, dont cinquante et une à Lifou' },
+    'L’ISEE a compté 250 924 croisiéristes en Kanaky (Nouvelle-Calédonie) sur l’année 2025, en hausse de 31 % sur les 191 515 de 2024. Le même relevé donne quatre-vingts touchées de navires, contre 235 en 2016 : une chute de deux tiers. Les deux chiffres pointent en sens opposés, et c’est leur rapport qui porte l’information.',
+    'Divisez. Trois mille cent trente-sept passagers par touchée en 2025, contre 2 168 en 2016 pour 509 463 croisiéristes. Le trafic a fondu, mais chaque escale est devenue environ 45 % plus lourde : les navires de la boucle australienne ont grossi pendant que leur nombre s’effondrait. Beaucoup moins de jours d’affluence, nettement plus denses.',
+    'Reste la répartition, et c’est là que la lecture depuis Nouméa devient inconfortable. Sur ces quatre-vingts touchées, cinquante et une sont allées à la seule baie d’Easo, à Lifou. Il en reste au maximum vingt-neuf pour Nouméa et le reste du territoire, Maré et l’île des Pins n’ayant pas rouvert leurs escales. Le chef-lieu est le port ; la destination que les passagers attendent est ailleurs. Toute la stratégie commerciale du centre-ville découle de cette phrase, et presque personne ne la formule.',
+
+    { h: 'Ce que vaut une escale, en francs' },
+    'Pas de multiplicateur emprunté ici, une arithmétique posée. Admettons qu’une touchée dépose 3 100 personnes et que la moitié atteigne le centre-ville à pied — la Gare Maritime y donne directement, l’hypothèse est basse plutôt que haute. Voilà ce que ça donne pour trois formes de commerce, hypothèses affichées pour que vous puissiez y substituer les vôtres.',
+
+    { table: {
+      minWidth: 760,
+      head: ['Profil', 'Flux touché', 'Captation posée', 'Panier moyen', 'Une escale', 'Vingt-neuf escales'],
+      rows: [
+        ['Boutique du centre-ville — artisanat, souvenirs, vitrine sur le parcours piéton', '1 550 passages', '4 %', '3 500 XPF', '**217 000 XPF**', '6,3 millions XPF'],
+        ['Café-restaurant du front de mer, service continu ce jour-là', '1 550 passages', '3 %', '2 800 XPF', '**129 000 XPF**', '3,7 millions XPF'],
+        ['Prestataire d’excursion, demi-journée, réservation prise avant l’accostage', '24 places', '—', '9 500 XPF', '**228 000 XPF**', '6,6 millions XPF'],
+      ],
+    }},
+
+    'Six millions de francs par an, ce n’est pas anecdotique pour une boutique : c’est souvent l’écart entre une année tenue et une année tendue. Mais ils arrivent en vingt-neuf morceaux, et tout le problème de gestion tient là. Un stock manquant le jour de l’escale ne se rattrape pas la semaine suivante mais dans trois semaines, si un navire revient. Une équipe sous-dimensionnée ne perd pas quelques ventes : elle perd une journée qui en vaut vingt.',
+
+    { h: 'Le chiffre que personne n’a mesuré' },
+    'Vient ensuite la question de la dépense par tête, et la réponse honnête est qu’elle n’existe pas sous forme vérifiable. La CCI-NC situe les retombées de la croisière autour de 2,5 milliards de francs aujourd’hui, contre environ sept milliards avant la crise. Divisé par les 250 924 croisiéristes de 2025, cela place la moyenne près de 9 900 francs par personne — toutes dépenses confondues, excursions comprises, dont l’essentiel ne passe jamais par une caisse de détail.',
+    'Au-delà de cette division, le terrain est vide. Le seul ordre de grandeur par jour et par passager qui circule encore dans la presse locale remonte à une estimation de 2009, avant que les navires changent de taille et la clientèle de composition. Une enquête de fréquentation a été annoncée plusieurs fois depuis la reprise ; tant qu’elle n’est pas publiée, personne ne peut dire ce qu’un passager laisse rue de l’Alma. Même impasse documentaire que sur [le coût d’une demande sans réponse](/demande-client-sans-reponse-cout/) : les chiffres les plus cités d’un secteur sont ceux qu’on n’a jamais mesurés. Prenez donc les 9 900 francs pour ce qu’ils sont — une division entre deux agrégats, pas un panier moyen.',
+
+    { h: 'La date est connue deux ans à l’avance' },
+    'Voilà l’asymétrie qui distingue ce pic de demande de tous les autres : le calendrier des touchées est publié par le Port autonome et par les compagnies longtemps avant l’année concernée. Ce n’est pas une prévision, c’est un horaire. Chacune de ces journées se prépare donc à froid, sans pari — et pourtant la plupart des commerces les découvrent le matin même, en apercevant la coque depuis la baie de la Moselle.',
+    'Ce qui manque n’est pas l’information mais le fil entre elle et l’entreprise. Cinq gestes le rétablissent, aucun n’exige d’investissement.',
+
+    { steps: [
+      'Verser le calendrier des touchées dans l’agenda de l’entreprise, une fois pour l’année, avec le nom du navire, sa capacité et l’heure de départ annoncée. La contrainte utile n’est pas l’heure d’arrivée : c’est le « tous à bord », qui ferme votre journée commerciale à la minute près.',
+      'Attacher à chaque date les décisions qui en découlent — commande fournisseur passée trois semaines avant, planning d’équipe, horaires élargis. Une date sans décision accrochée n’est qu’une décoration dans un calendrier.',
+      'Rendre l’information trouvable en anglais avant l’escale : fiche d’établissement à jour, horaires réels de ce jour-là, prix affichés, moyens de paiement acceptés. Un passager qui dispose de huit heures ne cherche pas deux fois.',
+      'Ouvrir la réservation avant l’accostage pour tout ce qui se réserve. Une excursion vendue en ligne la veille vaut mieux qu’une place attendue sur le quai, et c’est la seule portion du flux sur laquelle vous ayez une prise réelle.',
+      'Faire écrire le rappel par le système plutôt que par vous : la veille d’une touchée, une note qui rassemble le navire, l’effectif attendu, l’état du stock et l’équipe prévue. [Une heure de cadrage](/commencer-avec-ia-entreprise/) suffit généralement à repérer lequel de ces cinq fils manque.',
+    ] },
+
+    { h: 'Là où la préparation se retourne contre vous' },
+    'Trois façons de perdre de l’argent sur ce dossier.',
+    'La première est le sureffectif. Une touchée annulée pour houle ou pour météo — fréquent sur les escales desservies par navettes — laisse une équipe payée devant un magasin vide. Le calendrier donne la date, jamais la certitude : les décisions coûteuses doivent rester révocables jusqu’à la veille au soir.',
+    'La deuxième est la concentration. La CCI-NC relève que Carnival représente environ 80 % des escales, et projette une moyenne d’environ 130 touchées par an d’ici 2027, soit un tiers de moins qu’en 2023. Une activité bâtie sur vingt-neuf journées dépend en réalité des arbitrages d’un seul armateur, décidés très loin d’ici.',
+    'La troisième est plus discrète : ajuster son offre au passager de passage jusqu’à perdre le client résident. En 2025 le territoire a reçu 4,3 croisiéristes pour un seul touriste aérien — 58 421 arrivées par avion contre 250 924 par la mer — mais l’aérien reste entre neuf et trente-deux jours selon son marché d’origine, et le croisiériste huit heures. Le rapport de forces apparent n’est pas le rapport de forces économique, et une vitrine réorganisée autour du souvenir bon marché s’en aperçoit en février.',
+
+    { note: 'Le test tient en une question : ouvrez votre agenda et dites, sans chercher, quelle est la prochaine touchée à Nouméa et combien de passagers elle porte. Si la réponse ne vient pas, ce n’est pas un problème de tourisme ni de conjoncture — c’est un fil manquant entre une donnée publique, gratuite et connue à l’avance, et votre entreprise. Le rétablir coûte une matinée. C’est aussi la seule partie de ce dossier qui ne dépende de personne d’autre que vous.' },
+  ],
+  faq: [
+    { q: 'Combien d’escales de croisière Nouméa reçoit-elle par an ?', a: 'L’ISEE a recensé quatre-vingts touchées de navires en Kanaky (Nouvelle-Calédonie) en 2025, dont cinquante et une pour la seule baie d’Easo à Lifou. Il reste donc au maximum vingt-neuf touchées pour Nouméa et le reste du territoire, l’île des Pins et Maré n’ayant pas rouvert leurs escales. À titre de comparaison, le territoire comptait 235 touchées en 2016. La CCI-NC projette une moyenne d’environ 130 touchées par an d’ici 2027, soit un tiers de moins qu’en 2023 : le nombre remonte, sans revenir près de son niveau d’avant.' },
+    { q: 'Combien dépense un croisiériste à Nouméa ?', a: 'Aucune enquête publiée récemment ne permet de répondre précisément, et il faut se méfier des chiffres avancés avec assurance. La seule estimation disponible s’obtient par division : la CCI-NC situe les retombées de la croisière autour de 2,5 milliards de francs, ce qui rapporté aux 250 924 croisiéristes de 2025 donne environ 9 900 francs par personne, toutes dépenses confondues. Ce montant inclut les excursions, dont la plus grande part revient aux opérateurs et non aux commerces. L’ordre de grandeur par jour qui circule dans la presse locale remonte à une estimation de 2009, antérieure au changement de taille des navires.' },
+    { q: 'Comment savoir à l’avance quand un paquebot arrive ?', a: 'Le calendrier des touchées est publié par le Port autonome de Nouvelle-Calédonie et par les compagnies, souvent plus d’un an à l’avance, avec le nom du navire, sa capacité et les heures d’arrivée et de départ. C’est une donnée publique et gratuite. La difficulté n’est jamais de l’obtenir mais de la relier à l’entreprise : tant que ces dates ne sont pas dans l’agenda qui déclenche les commandes fournisseurs et les plannings d’équipe, elles ne servent à rien. Le report manuel d’une année entière prend une matinée.' },
+    { q: 'Un commerce peut-il vivre de la croisière à Nouméa ?', a: 'Non, et le calcul le montre sans ambiguïté. Sur des hypothèses raisonnables, une boutique bien placée peut tirer six millions de francs par an de vingt-neuf journées d’escale : c’est un appoint significatif, pas un modèle économique. Trois risques s’y ajoutent — les annulations pour météo, la dépendance à un armateur qui pèse environ 80 % des escales, et la dérive d’une offre construite pour le passager de passage au détriment du client résident, qui lui revient toute l’année. La croisière se traite comme un complément préparé, jamais comme une base.' },
+  ],
+  related: [
+    ['/ia-commerce-noumea/', 'L’IA pour un commerce de Nouméa'],
+    ['/ia-hotellerie-tourisme-nouvelle-caledonie/', 'Hôtellerie et tourisme : les usages qui tiennent'],
+    ['/exemples-automatisation-pme/', 'Exemples concrets d’automatisation en PME'],
+  ],
+  extraGraph: [{
+    '@type': 'Article',
+    headline: 'Ce qu’un croisiériste change au commerce de Nouméa : vingt-neuf journées, pas une saison',
+    datePublished: '2026-08-08',
+    author: { '@id': 'https://kanaky.xyz/#kevyn' },
+    publisher: { '@id': 'https://kanaky.xyz/#organization' },
+  }],
+},
+
+{
+  slug: 'cruise-calls-noumea-retail',
+  lang: 'en',
+  alt: { lang: 'fr', url: 'https://kanaky.xyz/croisieristes-commerce-noumea/' },
+  title: 'What a Cruise Call Actually Leaves in Nouméa — Twenty-Nine Days, Not a Season',
+  description: 'New Caledonia took 250,924 cruise passengers in 2025 across eighty ship calls, down from 235 calls in 2016. Lifou took fifty-one of them. What that leaves the capital, what one call is worth in francs, and why a date published two years ahead still arrives as a surprise.',
+  keywords: 'cruise passengers Noumea, New Caledonia cruise statistics 2025, cruise call retail impact, preparing for cruise ship day, Pacific cruise tourism business, shore excursion booking small business',
+  eyebrow: 'Journal',
+  short: 'Journal · Cruise',
+  h1: 'Twenty-nine days, not a season. <span style="color:var(--grey-4);font-weight:300;">What a cruise call actually leaves behind.</span>',
+  cta: 'service',
+  published: '2026-08-08',
+  body: [
+    { lead: 'A ship alongside the Gare Maritime puts roughly three thousand people into central Nouméa with a departure time that does not move. The businesses that live off this still talk about the cruise season, as though it were a flow. The 2025 figures describe something else: not a season but about thirty separate days, each heavier than its equivalent ten years ago, every one of them dated long before the year began.' },
+
+    { h: 'Eighty calls, fifty-one of them at Lifou' },
+    'ISEE, the territorial statistics office, counted 250,924 cruise passengers in Kanaky (New Caledonia) across 2025, up 31 per cent on the 191,515 of 2024. The same series records eighty ship calls for the year against 235 in 2016 — a two-thirds collapse. The two numbers point in opposite directions, and the ratio between them is where the information sits.',
+    'Divide them. Three thousand one hundred and thirty-seven passengers per call in 2025, against 2,168 in 2016 when 509,463 passengers arrived. Traffic fell away while each call grew about 45 per cent heavier. The ships working the Australian loop got larger as their number collapsed, so a shop now sees far fewer busy days — and considerably denser ones.',
+    'Then there is the distribution, which is where the view from the capital gets uncomfortable. Of those eighty calls, fifty-one went to Easo Bay at Lifou alone. That leaves at most twenty-nine for Nouméa and everywhere else, since Maré and the Isle of Pines have not reopened to calls. The capital is the port; the place passengers are looking forward to is somewhere else. Most of what a city-centre business should decide follows from that sentence, and almost nobody says it out loud.',
+
+    { h: 'What one call is worth' },
+    'No borrowed multiplier here, just arithmetic with its assumptions on the table. Say a call lands 3,100 people and half of them reach the city centre on foot — the terminal opens straight onto it, so that is a low estimate rather than a generous one. Three shapes of business, and you can substitute your own figures throughout.',
+
+    { table: {
+      minWidth: 760,
+      head: ['Business', 'Footfall reached', 'Assumed capture', 'Average sale', 'One call', 'Twenty-nine calls'],
+      rows: [
+        ['City-centre shop — craft and souvenirs, window on the walking route', '1,550 passers-by', '4 %', '3,500 XPF', '**217,000 XPF**', '6.3m XPF'],
+        ['Waterfront café serving straight through that day', '1,550 passers-by', '3 %', '2,800 XPF', '**129,000 XPF**', '3.7m XPF'],
+        ['Half-day tour operator, seats booked before the ship berths', '24 seats', '—', '9,500 XPF', '**228,000 XPF**', '6.6m XPF'],
+      ],
+    }},
+
+    'Six million francs a year — near NZ$90,000 — is not a rounding error for a small shop. It is frequently the gap between a year that held and a year that did not. But it arrives in twenty-nine pieces, and the whole management problem is in that clause. Stock missing on the day of a call is not recovered next week; it is recovered in three weeks, if a ship comes back. An under-staffed counter does not lose a few sales, it loses the entirety of a day worth twenty ordinary ones.',
+
+    { h: 'The number nobody has measured' },
+    'Which raises spend per head, and the honest answer is that no verifiable figure exists. The territorial chamber of commerce, CCI-NC, puts current cruise revenue at around 2.5 billion XPF against roughly seven billion before the crisis. Divided by the 250,924 passengers of 2025 that lands near 9,900 XPF a head — everything included, excursions among it, and most of an excursion never passes through a retail till.',
+    'Past that division there is nothing. The only per-day, per-passenger figure still circulating in the local press traces to an estimate made in 2009, before the ships changed size and the passenger mix changed with them. A visitor survey has been announced more than once since calls resumed; until it is published, nobody can tell you what a passenger leaves on rue de l’Alma. This is the same documentary dead end we hit tracing [speed-to-lead statistics](/cost-of-an-unanswered-enquiry/): the most-quoted numbers in a sector are reliably the ones nobody measured. So treat the 9,900 as what it is — one aggregate divided by another — and not as a basket size.',
+
+    { h: 'The date is published two years ahead' },
+    'Here is the asymmetry that makes this unlike every other demand spike: the call schedule is published by the port authority and the lines well before the year it covers. It is not a forecast, it is a timetable. Every one of those days can therefore be prepared cold, with no guesswork and no bet — and yet most businesses find out on the morning, spotting the hull across the bay.',
+    'What is missing is not the information. It is the thread between the information and the business. Five moves restore it, and none of them is an investment.',
+
+    { steps: [
+      'Load the year’s call schedule into the business calendar once, with ship name, capacity and stated departure. The useful constraint is not the arrival time but the all-aboard, which closes your trading day to the minute.',
+      'Attach the decisions to each date — the supplier order placed three weeks out, the roster, the extended hours. A date with no decision hanging off it is decoration.',
+      'Make yourself findable in English before the ship arrives: listing current, that day’s real hours, prices visible, payment methods stated. Someone with eight hours ashore does not search twice.',
+      'Open bookings before the ship berths for anything bookable. A tour sold online the night before beats a seat waited for on the quay, and it is the only part of the flow you genuinely control.',
+      'Let the system write the reminder instead of you: the evening before a call, one note pulling together the ship, the expected numbers, the stock position and the roster. [An hour of scoping](/ai-audit/) usually shows which of the five threads is the missing one.',
+    ] },
+
+    { h: 'Where preparing costs you money' },
+    'Three ways to lose money on this, all of them real.',
+    'Overstaffing is the first. A call cancelled for swell or weather — common wherever passengers come ashore by tender — leaves a paid roster in an empty shop. The calendar gives you the date and never the certainty, so the expensive commitments have to stay reversible until the evening before.',
+    'Concentration is the second. CCI-NC records that Carnival accounts for roughly 80 per cent of calls, and projects an average near 130 calls a year through 2027 — about a third below 2023. A business built on twenty-nine days is in practice exposed to the itinerary decisions of a single operator, taken a very long way from here, over which no local firm has any influence at all.',
+    'The third is quieter: tuning the offer to the passing passenger until the resident customer walks. A cruise passenger comes once; someone who lives here comes back fifty times a year. In 2025 the territory received 4.3 cruise passengers for every air arrival — 58,421 by air against 250,924 by sea — but the air visitor stays between nine and thirty-two days depending on their market, and the cruise passenger stays eight hours. The apparent balance of power is not the economic one, and a window rebuilt around cheap souvenirs discovers this in February.',
+
+    { note: 'The test is one question: open your calendar and say, without looking anything up, when the next call into Nouméa is and how many passengers it carries. If the answer does not come, this is not a tourism problem or a market problem. It is a missing thread between a piece of public, free, long-published data and your business. Restoring it costs a morning, and it is the only part of this subject that depends on nobody but you.' },
+  ],
+  faq: [
+    { q: 'How many cruise calls does Nouméa get in a year?', a: 'ISEE recorded eighty ship calls across Kanaky (New Caledonia) in 2025, of which fifty-one went to Easo Bay at Lifou alone. That leaves at most twenty-nine for Nouméa and the rest of the territory, with the Isle of Pines and Maré still closed to calls. For comparison the territory handled 235 calls in 2016. CCI-NC projects an average near 130 calls a year through 2027, about a third below 2023 — recovering, but nowhere near the previous decade.' },
+    { q: 'How much does a cruise passenger spend in Nouméa?', a: 'No recent published survey answers this, and figures quoted with confidence deserve suspicion. The only available estimate comes from division: CCI-NC puts cruise revenue near 2.5 billion XPF, which against the 250,924 passengers of 2025 gives roughly 9,900 XPF a head, everything included. That total covers excursions, most of whose value goes to operators rather than shops. The per-day figure still circulating locally traces to a 2009 estimate, made before ship sizes changed.' },
+    { q: 'Where do you find the cruise ship schedule in advance?', a: 'The call schedule is published by the Port autonome de Nouvelle-Calédonie and by the cruise lines, frequently more than a year ahead, with ship name, capacity and arrival and departure times. It is public and free. Obtaining it has never been the difficulty; connecting it to the business is. Until those dates sit in the calendar that triggers supplier orders and rosters, they change nothing. Transcribing a full year takes a morning.' },
+    { q: 'Can a business live off cruise traffic in Nouméa?', a: 'No, and the arithmetic settles it. On reasonable assumptions a well-placed shop might take six million XPF a year across twenty-nine call days — a meaningful supplement, not a business model. Three risks sit on top: weather cancellations, dependence on one line accounting for around 80 per cent of calls, and the drift of an offer built for passing passengers at the expense of residents who return all year. Cruise traffic is worth preparing for properly and worth never depending on.' },
+  ],
+  related: [
+    ['/ai-for-hospitality/', 'AI for hospitality and tourism operators'],
+    ['/ai-automation-new-caledonia/', 'AI automation in New Caledonia'],
+    ['/workflow-automation-examples/', 'Workflow automation examples that hold up'],
+  ],
+  extraGraph: [{
+    '@type': 'Article',
+    headline: 'What a Cruise Call Actually Leaves in Nouméa — Twenty-Nine Days, Not a Season',
+    datePublished: '2026-08-08',
+    author: { '@id': 'https://kanaky.xyz/#kevyn' },
+    publisher: { '@id': 'https://kanaky.xyz/#organization' },
+  }],
 },
 
 {
