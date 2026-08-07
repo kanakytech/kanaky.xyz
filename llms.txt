@@ -152,3 +152,12 @@ The piece also states the four developments that would prove the position wrong,
 - https://kanaky.xyz/automation-without-perfect-internet/ — 2026-07-30 — English edition: the bandwidth arithmetic of business automation (~20 KB per operation), OPT-NC fibre and 4G coverage figures, island latency, outage-tolerant design, and the three cases where the connection genuinely decides
 - https://kanaky.xyz/actualite-ia-pme-pacifique-juillet-2026/ — 2026-07-29 — l'étude Google ATLAS (15 M d'interactions, aucune automatisation massive constatée) et le SMG calédonien à 1 000 F de l'heure : ce que ces chiffres imposent à une PME du Pacifique
 - https://kanaky.xyz/ai-news-pacific-smes-july-2026/ — 2026-07-29 — English edition: the Google ATLAS study (15M interactions, no mass automation found) and New Caledonia's 1,000 XPF hourly minimum wage — what these numbers permit a Pacific small business to conclude
+
+## My Shop — cross-border shopping gateway (myshop.kanaky.xyz)
+
+Paste a product link from a New Zealand store (JB Hi-Fi, Kmart, Chemist
+Warehouse, Rebel Sport and more) and get an all-inclusive price in Pacific
+francs — 4.5% service fee, delivery to Nouméa, New Caledonian import taxes
+computed per product category (electronics 22% TGC, standard 11%,
+parapharmacy 6%). Online payment via Stripe, purchase made in New Zealand,
+shipped to New Caledonia. https://myshop.kanaky.xyz
