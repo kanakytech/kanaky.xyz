@@ -18,11 +18,12 @@ export default [
   short: 'Journal',
   h1: 'Journal. <span style="color:var(--grey-4);font-weight:300;">One piece a day, in two languages.</span>',
   cta: 'service',
-  published: '2026-08-08',
+  published: '2026-08-09',
   body: [
     { lead: 'One long-form piece per working day, on what AI automation actually does for a business in this part of the world. Each one states a position, names its sources and shows its arithmetic. Every piece appears in French and in English — not a word-for-word translation, but the same substance written natively in each language. Most recent first.' },
 
     { list: [
+      '**9 August 2026** — [Hiring or automating in New Zealand: an honest decision grid](/hiring-vs-automating-new-zealand/) · [Français — Embaucher ou automatiser en Nouvelle-Zélande : la grille](/embaucher-ou-automatiser-nouvelle-zelande/)',
       '**8 August 2026** — [Vingt-neuf journées, pas une saison : ce qu’un croisiériste laisse à Nouméa](/croisieristes-commerce-noumea/) · [English — What a cruise call actually leaves behind](/cruise-calls-noumea-retail/)',
       '**7 August 2026** — [The follow-up nobody sends, and the break-even nobody calculates](/the-follow-up-nobody-sends/) · [Français — La relance que personne n’envoie : le calcul du seuil](/la-relance-que-personne-ne-fait/)',
       '**5 August 2026** — [Quoting speed as a competitive weapon: what the numbers actually support](/quoting-speed-the-numbers/) · [Français — Le devis en deux heures au lieu de cinq jours, anatomie](/devis-en-deux-heures-anatomie/)',
@@ -42,6 +43,181 @@ export default [
     ['/ai-audit/', 'Book a free AI opportunity audit'],
     ['/local-commitment/', 'The 10% that stays in the region'],
   ],
+},
+
+{
+  slug: 'hiring-vs-automating-new-zealand',
+  lang: 'en',
+  alt: { lang: 'fr', url: 'https://kanaky.xyz/embaucher-ou-automatiser-nouvelle-zelande/' },
+  title: 'Hiring vs Automating in New Zealand — An Honest Decision Grid for 2026',
+  description: 'What a New Zealand employee actually costs once KiwiSaver at 3.5 per cent, the ACC work levy and statutory leave are counted, why the cost-per-hire figure everyone quotes is seven years old, and a six-row grid built on the question that decides it: which commitment can you reverse.',
+  keywords: 'hiring vs automating New Zealand, cost of an employee NZ 2026, KiwiSaver 3.5 percent employer cost, ACC work levy 2026/27, automate or hire small business NZ, 90-day trial period decision',
+  eyebrow: 'Journal',
+  short: 'Journal · Hire or automate',
+  h1: 'Hire, or automate? <span style="color:var(--grey-4);font-weight:300;">An honest grid, with the 2026 New Zealand numbers.</span>',
+  cta: 'service',
+  published: '2026-08-09',
+  body: [
+    { lead: 'The choice is usually staged as a salary against a subscription, and both of those figures are wrong. Two things moved this year in New Zealand and they point in opposite directions: on 1 April the statutory cost of employing someone rose again, and on 5 August Stats NZ published the loosest labour market in more than a decade. Neither is a reason on its own. Together they change which of the two answers you can take back.' },
+
+    { h: 'What an employee costs past the headline rate' },
+    'The Quarterly Employment Survey put average ordinary time hourly earnings at $44.62 in the June 2026 quarter, against $43.39 a year earlier. Take that as the base for one full-time person and the payroll arithmetic is short. Two thousand and eighty paid hours come to $92,810. Employer KiwiSaver, which rose from 3 to 3.5 per cent on 1 April 2026, adds $3,248. The ACC work levy at $0.69 per $100 of liable earnings — the average rate MBIE set for 2026/27, up from $0.66 — adds $640. Call the year $96,700.',
+    'That is a loading of 4.2 per cent on top of pay, which is smaller than most owners expect and is not where the useful number sits. The useful number appears when you stop counting hours you pay for and start counting hours the work can be done in.',
+
+    { table: {
+      minWidth: 620,
+      head: ['Basis', 'Hours a year', 'Cost per hour'],
+      rows: [
+        ['Paid hours — forty a week, fifty-two weeks', '2,080', '$46.49'],
+        ['Less four weeks annual holidays', '1,920', '$50.36'],
+        ['Less twelve public holidays', '**1,824**', '**$53.02**'],
+        ['Less ten days sick leave, if fully taken', '1,744', '$55.45'],
+      ],
+    }},
+
+    'So a business budgeting from $44.62 is buying availability at $53 to $55 an hour. The gap is 19 to 24 per cent and it is purely statutory: no desk, no software, no overheads, no management time. Run the same ladder on the adult minimum wage, $23.95 since 1 April 2026, and it goes from $23.95 to $28.46.',
+    'What actually changed in April is worth stating plainly rather than overselling. KiwiSaver moving half a point and the work levy moving three cents cost about $492 a year for one person at the average wage. That is not a reason to do anything. It is a reason to redo the arithmetic once, because the direction is fixed: the default KiwiSaver rate goes to 4 per cent in April 2028.',
+
+    { h: 'The cost-per-hire figure everyone quotes is seven years old' },
+    'Ask what a hire costs in this market and the same set of numbers comes back: $18,982 on average, $9,772 entry level, $17,841 mid, $34,440 for an executive, 47.2 days to fill a role against 39.2 in Australia. All of it traces to a single survey of more than 1,500 HR professionals across Australia and New Zealand, run by ELMO Software and published in November 2019. Self-selected respondents from a payroll vendor’s own audience, collected before the pandemic reordered wages and hiring alike, still quoted in 2026 as current. Same documentary dead end as [speed-to-lead statistics](/cost-of-an-unanswered-enquiry/): the most-cited figure in a field is the one nobody has remeasured.',
+    'Use it for the order of magnitude and nothing finer — recruitment costs weeks of attention, not a line item. What is checkable is the agency fee, quoted here at 15 to 20 per cent of first-year salary, which on a $92,810 role is $13,900 to $18,600.',
+
+    { h: 'The asymmetry the pitch has backwards' },
+    'Automation gets sold as the reversible choice and a hire as the commitment you are stuck with. In New Zealand in 2026 that is close to inverted, and this is the part of the decision that rarely reaches the spreadsheet.',
+    'Every employer has been able to use a ninety-day trial period since 23 December 2023, when the Employment Relations (Trial Periods) Amendment Act extended it beyond firms with fewer than twenty staff. It has to be agreed in writing, signed before the first shift and entered in good faith — but within those bounds, a hire that is not working can be ended inside three months. A person who is wrong for a role also announces it within a fortnight, in ways nobody has to be monitoring.',
+    'An automation fails differently. It does not resign. It stops matching three per cent of invoices, or silently drops the enquiries arriving through one form, and the first evidence is a year-end number nobody can account for. The reversal window on a hire is ninety days and visible; on an unwatched automation it lasts however long it takes someone to notice, routinely twelve months. Both belong in the grid.',
+
+    { h: 'The grid' },
+
+    { table: {
+      minWidth: 820,
+      head: ['Test', 'How to measure it', 'Points to automating', 'Points to hiring'],
+      rows: [
+        ['Size of the task', 'Hours a week, written down in half-hours for a fortnight — not remembered', 'Two to eight hours: $4,800 to $19,300 a year of someone’s time', 'Over fifteen hours: $36,300 and up, which is a role rather than a task'],
+        ['Variance', 'Of the last twenty instances, how many followed the same path', 'Eighteen or more', 'Fewer than fifteen'],
+        ['Judgement', 'Could a competent stranger work from your written rule', 'Yes, and the rule fits on one page', 'No, or the page keeps growing every month'],
+        ['Exposure', 'Does the output carry your name to a customer', 'Internal work, or a receipt-shaped message', 'Anything negotiated, disputed or sold'],
+        ['Failure mode', 'If this breaks quietly, when would you find out', 'Same day — the missing output is obvious', 'Months later — then a person needs to own it'],
+        ['Reversal', 'What undoing the decision costs in ninety days', 'The build, already spent and reusable', 'Ninety-day trial, if agreed in writing before day one'],
+      ],
+    }},
+
+    { h: 'Where 2026 points, including away from us' },
+    'Stats NZ put unemployment at 5.6 per cent in the June 2026 quarter, up from 5.4 in March and the highest in more than a decade. Underutilisation, the broader measure that also counts people working fewer hours than they want, reached 13.8 per cent. Wage inflation on the Labour Cost Index ran at 2.0 per cent over the year while consumer inflation ran at 4.1, so labour became cheaper in real terms at the same time as it became easier to find.',
+    'Read that honestly and it argues for hiring. Candidate availability is the best it has been since 2015, real wage pressure has gone, and the trial period makes the experiment genuinely cheap to run. We build automation for a living and it is still the correct reading of the data: if the work needs judgement, this is a better year to hire into it than 2024 was.',
+    'What it has not changed is the other half. A loose market lowers the price of hiring; it does not turn invoice matching into a job worth doing by hand. Work that was not worth a salary at three per cent unemployment is not worth one at 5.6, and the grid exists to keep those two conclusions apart.',
+
+    { h: 'The third column people leave out' },
+    'Contracting used to sit in the grey between the two. Since the Employment Relations Amendment Act took effect on 20 February 2026 it does not: a gateway test settles the question first. An arrangement meeting all four criteria — among them a written agreement specifying contractor status, and the freedom to work for others — is a contractor, and the older tests fall away. Miss one and the real-nature-of-the-relationship test returns as before. For a small firm the value is not the levy saving; it is that a risk previously carried quietly for three years now has a checkable answer.',
+
+    { note: 'The test to run before spending anything: take the task you were about to hire for and count what it actually consumes, in half-hours, written down across a fortnight. Then read it against the first row of the grid. A good share of the time the answer is neither — it is four hours a week, it will stay four hours a week, and it belongs to somebody’s Friday afternoon. The grid earns its keep by ruling that out cheaply, and after that by telling you which of the two remaining answers you can undo.' },
+  ],
+  faq: [
+    { q: 'What does an employee actually cost in New Zealand in 2026?', a: 'At the June 2026 quarter average of $44.62 an hour, one full-time person costs about $96,700 a year: $92,810 in pay, $3,248 in employer KiwiSaver at the 3.5 per cent rate that took effect on 1 April 2026, and $640 in ACC work levy at the average $0.69 per $100 that MBIE set for 2026/27. That is a 4.2 per cent loading on payroll. The figure that matters more is cost per available hour — after four weeks of annual holidays and twelve public holidays there are 1,824 of them, so the real rate is $53.02, or $55.45 if all ten sick days are taken.' },
+    { q: 'Is automating cheaper than hiring?', a: 'For a task of fixed shape at volume, yes, and the margin widens every year. For anything low-volume or judgement-dependent, no — building and maintaining an automation for work done twice a month never pays back. The threshold worth knowing in this market: at $53.02 per available hour, a task consuming eight hours a week costs about $19,300 a year of a person’s time. Below roughly two hours a week, neither answer is usually right and the task should simply stay where it is.' },
+    { q: 'Does the 90-day trial period still apply to every employer?', a: 'Yes. The Employment Relations (Trial Periods) Amendment Act extended it to employers of any size with effect from 23 December 2023; before that it was limited to firms with fewer than twenty staff. The conditions are strict — the trial clause must be in the written agreement, signed before the employee starts their first shift, and entered in good faith. Handled properly it makes a hire the more reversible of the two decisions, which is the opposite of how the comparison is usually presented.' },
+    { q: 'Should a softer labour market change the decision?', a: 'For judgement work, yes. Unemployment at 5.6 per cent in the June 2026 quarter and underutilisation at 13.8 per cent mean the widest candidate pool in over a decade, and Labour Cost Index growth of 2.0 per cent against 4.1 per cent inflation means real wages are falling. For repetitive work, no. A looser market makes hiring cheaper without making the underlying task worth a person, and treating it as a reason to staff up on routine processing is how firms end up with a role that has to be disestablished two years later.' },
+  ],
+  related: [
+    ['/ai-vs-hiring/', 'AI or hire someone — the general comparison'],
+    ['/ai-automation-new-zealand/', 'AI automation in New Zealand'],
+    ['/automating-without-layoffs/', 'What automating without layoffs actually covers'],
+  ],
+  extraGraph: [{
+    '@type': 'Article',
+    headline: 'Hiring vs Automating in New Zealand — An Honest Decision Grid for 2026',
+    datePublished: '2026-08-09',
+    author: { '@id': 'https://kanaky.xyz/#kevyn' },
+    publisher: { '@id': 'https://kanaky.xyz/#organization' },
+  }],
+},
+
+{
+  slug: 'embaucher-ou-automatiser-nouvelle-zelande',
+  lang: 'fr',
+  alt: { lang: 'en', url: 'https://kanaky.xyz/hiring-vs-automating-new-zealand/' },
+  title: 'Embaucher ou automatiser en Nouvelle-Zélande : la grille de décision, chiffres 2026',
+  description: 'Ce que coûte réellement un salarié néo-zélandais une fois comptés le KiwiSaver à 3,5 %, la cotisation ACC et les congés légaux, pourquoi le coût de recrutement que tout le monde cite date de sept ans, et la grille en six lignes bâtie sur la seule question qui tranche : laquelle des deux décisions pouvez-vous défaire.',
+  keywords: 'embaucher ou automatiser Nouvelle-Zelande, cout d un salarie Nouvelle-Zelande 2026, KiwiSaver 3,5 % employeur, cotisation ACC 2026, automatiser ou recruter PME, periode d essai 90 jours Nouvelle-Zelande',
+  eyebrow: 'Journal',
+  short: 'Journal · Embaucher ou automatiser',
+  h1: 'Embaucher, ou automatiser ? <span style="color:var(--grey-4);font-weight:300;">La grille honnête, avec les chiffres néo-zélandais de 2026.</span>',
+  cta: 'service-fr',
+  published: '2026-08-09',
+  body: [
+    { lead: 'On met d’habitude un salaire d’un côté et un abonnement de l’autre, et les deux montants sont faux. Deux choses ont bougé cette année en Nouvelle-Zélande, en sens opposé : le 1er avril, le coût légal d’un salarié a encore monté ; le 5 août, Stats NZ a publié le marché du travail le plus détendu depuis plus de dix ans. Aucune des deux ne tranche seule. Ensemble, elles déplacent la vraie question — laquelle des deux décisions pouvez-vous reprendre.' },
+
+    { h: 'Ce que coûte un salarié, au-delà du taux affiché' },
+    'L’enquête trimestrielle sur l’emploi situe le salaire horaire moyen hors heures supplémentaires à 44,62 dollars néo-zélandais au deuxième trimestre 2026, contre 43,39 un an plus tôt. Prenez ce niveau pour un temps plein et l’arithmétique tient en trois lignes. Deux mille quatre-vingts heures payées font 92 810 dollars. Le KiwiSaver employeur, passé de 3 à 3,5 % le 1er avril 2026, ajoute 3 248 dollars. La cotisation ACC accident du travail, au taux moyen de 0,69 dollar pour 100 dollars de rémunération fixé par le MBIE pour 2026/27 contre 0,66 auparavant, ajoute 640 dollars. Environ 96 700 dollars sur l’année.',
+    'Cela fait 4,2 % de charges au-dessus de la paie, moins que ce qu’imaginent la plupart des dirigeants — et ce n’est pas là que se trouve le chiffre utile. Il apparaît quand on cesse de compter les heures payées pour compter celles pendant lesquelles le travail peut être fait.',
+
+    { table: {
+      minWidth: 620,
+      head: ['Base de calcul', 'Heures par an', 'Coût horaire'],
+      rows: [
+        ['Heures payées — quarante par semaine, cinquante-deux semaines', '2 080', '46,49 NZD'],
+        ['Moins quatre semaines de congés annuels', '1 920', '50,36 NZD'],
+        ['Moins douze jours fériés', '**1 824**', '**53,02 NZD**'],
+        ['Moins dix jours de maladie, s’ils sont tous pris', '1 744', '55,45 NZD'],
+      ],
+    }},
+
+    'Une entreprise qui budgète à partir de 44,62 dollars achète donc de la disponibilité entre 53 et 55 dollars de l’heure. L’écart va de 19 à 24 % et il est entièrement légal : ni bureau, ni logiciel, ni frais généraux, ni temps d’encadrement. La même échelle appliquée au salaire minimum adulte, 23,95 dollars depuis le 1er avril 2026, mène de 23,95 à 28,46.',
+    'Ce qui a changé en avril mérite d’être dit sans le grossir. Un demi-point de KiwiSaver et trois centimes d’ACC représentent environ 492 dollars par an pour une personne au salaire moyen. Ce n’est pas un motif d’agir. C’est un motif de refaire le calcul une fois, parce que la trajectoire est écrite : le taux par défaut du KiwiSaver passera à 4 % en avril 2028.',
+
+    { h: 'Le coût de recrutement que tout le monde cite a sept ans' },
+    'Cherchez ce que coûte un recrutement sur ce marché et les mêmes montants reviennent : 18 982 dollars en moyenne, 9 772 pour un poste d’entrée, 34 440 pour un cadre dirigeant, 47,2 jours pour pourvoir un poste contre 39,2 en Australie. Tout cela vient d’une seule enquête auprès de plus de 1 500 professionnels des ressources humaines en Australie et en Nouvelle-Zélande, réalisée par ELMO Software et publiée en novembre 2019. Répondants auto-sélectionnés dans l’audience d’un éditeur de paie, données antérieures à la pandémie, citées en 2026 comme si elles décrivaient cette année. Même impasse documentaire que pour [les statistiques de délai de réponse](/demande-client-sans-reponse-cout/) : le chiffre le plus repris d’un domaine est celui que personne n’a remesuré.',
+    'Servez-vous-en pour l’ordre de grandeur, rien de plus fin : un recrutement coûte des semaines d’attention, pas une ligne comptable. Ce qui est vérifiable, c’est la commission d’un cabinet, entre 15 et 20 % du salaire de première année, soit 13 900 à 18 600 dollars sur un poste à 92 810.',
+
+    { h: 'L’asymétrie que l’argumentaire prend à l’envers' },
+    'On vend l’automatisation comme le choix réversible et l’embauche comme l’engagement dont on ne sort pas. En Nouvelle-Zélande en 2026, c’est à peu près l’inverse — et c’est la partie de la décision qui n’arrive jamais jusqu’au tableur.',
+    'Tout employeur peut recourir à une période d’essai de quatre-vingt-dix jours depuis le 23 décembre 2023, quand la loi modificative sur les périodes d’essai l’a étendue au-delà des entreprises de moins de vingt salariés. Elle doit figurer par écrit dans le contrat, être signée avant la première prise de poste et conclue de bonne foi ; dans ces limites, une embauche qui ne prend pas se termine en moins de trois mois. Et une personne qui ne convient pas le signale d’elle-même en quinze jours, sans que personne ait à surveiller quoi que ce soit.',
+    'Une automatisation, elle, échoue autrement. Elle ne démissionne pas. Elle cesse de rapprocher 3 % des factures, ou laisse tomber sans bruit les demandes arrivées par un formulaire, et la première trace est un chiffre de fin d’année que personne n’explique. La fenêtre de retour arrière sur une embauche est de quatre-vingt-dix jours et elle est visible ; sur une automatisation que personne ne surveille, elle dure le temps qu’il faut pour s’en apercevoir, couramment douze mois.',
+
+    { h: 'La grille' },
+
+    { table: {
+      minWidth: 820,
+      head: ['Critère', 'Comment le mesurer', 'Penche vers l’automatisation', 'Penche vers l’embauche'],
+      rows: [
+        ['Taille de la tâche', 'Heures par semaine, notées par demi-heures pendant quinze jours — pas de mémoire', 'De deux à huit heures : 4 800 à 19 300 dollars par an de temps humain', 'Plus de quinze heures : 36 300 dollars et au-delà, c’est un poste, pas une tâche'],
+        ['Variation', 'Sur les vingt derniers cas, combien ont suivi le même chemin', 'Dix-huit ou plus', 'Moins de quinze'],
+        ['Jugement', 'Une personne compétente mais nouvelle pourrait-elle appliquer votre règle écrite', 'Oui, et la règle tient sur une page', 'Non, ou la page s’allonge tous les mois'],
+        ['Exposition', 'Le résultat porte-t-il votre nom devant un client', 'Travail interne, ou message de la forme d’un accusé de réception', 'Tout ce qui se négocie, se conteste ou se vend'],
+        ['Mode d’échec', 'Si ça casse en silence, quand le sauriez-vous', 'Le jour même — l’absence du résultat saute aux yeux', 'Des mois plus tard — alors il faut quelqu’un pour en répondre'],
+        ['Retour arrière', 'Ce que coûte de défaire la décision en quatre-vingt-dix jours', 'La construction, déjà payée et réutilisable', 'La période d’essai, si elle a été signée avant le premier jour'],
+      ],
+    }},
+
+    { h: 'Ce que 2026 indique, y compris contre nous' },
+    'Stats NZ situe le chômage à 5,6 % au deuxième trimestre 2026, contre 5,4 % au premier, au plus haut depuis plus de dix ans. Le sous-emploi au sens large, qui compte aussi ceux qui travaillent moins d’heures qu’ils ne le voudraient, atteint 13,8 %. L’indice du coût du travail progresse de 2,0 % sur un an quand les prix montent de 4,1 % : la main-d’œuvre est devenue moins chère en termes réels au moment même où elle devenait plus facile à trouver.',
+    'Lu honnêtement, cela plaide pour l’embauche. Le vivier de candidats est le plus large depuis 2015, la pression salariale réelle a disparu, et la période d’essai rend l’expérience peu coûteuse. Nous vivons de la construction d’automatisations et c’est pourtant la bonne lecture des chiffres : si le travail demande du jugement, 2026 est une meilleure année pour embaucher que 2024.',
+    'Ce qu’il n’a pas changé, c’est l’autre moitié. Un marché détendu abaisse le prix d’une embauche ; il ne transforme pas le rapprochement des factures en métier. Un travail qui ne valait pas un salaire à 3 % de chômage ne le vaut pas davantage à 5,6 %, et la grille sert à empêcher que ces deux conclusions se mélangent.',
+
+    { h: 'La troisième colonne qu’on oublie' },
+    'Le recours à un indépendant occupait la zone grise entre les deux. Depuis l’entrée en vigueur de la loi modificative sur les relations de travail, le 20 février 2026, un test d’entrée tranche d’abord. Un contrat remplissant les quatre critères — dont un accord écrit précisant le statut d’indépendant et la liberté de travailler pour d’autres — établit un indépendant, et les anciens tests tombent. Qu’un critère manque et le test de la nature réelle de la relation revient comme avant. La valeur, pour une petite entreprise, n’est pas l’économie de cotisations : c’est qu’un risque porté en silence pendant trois ans a désormais une réponse vérifiable.',
+    'La méthode se transpose telle quelle en Kanaky (Nouvelle-Calédonie) : d’autres taux, un autre droit du travail, la même grille. Le [comparatif général](/automatiser-ou-embaucher/) vaut des deux côtés de la mer de Corail.',
+
+    { note: 'Le test à faire avant de dépenser quoi que ce soit : prenez la tâche pour laquelle vous alliez recruter et comptez ce qu’elle consomme réellement, par demi-heures écrites, pendant quinze jours. Confrontez le total à la première ligne de la grille. Souvent la réponse n’est ni l’une ni l’autre : quatre heures par semaine, quatre heures l’an prochain, et cela appartient au vendredi après-midi de quelqu’un. La grille gagne son coût en écartant ce cas pour rien, puis en désignant laquelle des deux réponses restantes est réversible.' },
+  ],
+  faq: [
+    { q: 'Combien coûte réellement un salarié en Nouvelle-Zélande en 2026 ?', a: 'Au salaire horaire moyen de 44,62 dollars néo-zélandais du deuxième trimestre 2026, un temps plein revient à environ 96 700 dollars par an : 92 810 de paie, 3 248 de KiwiSaver employeur au taux de 3,5 % entré en vigueur le 1er avril 2026, et 640 de cotisation ACC au taux moyen de 0,69 dollar pour 100 fixé par le MBIE pour 2026/27. Soit 4,2 % de charges sur la paie. Le chiffre qui compte davantage est le coût par heure disponible : après quatre semaines de congés annuels et douze jours fériés, il en reste 1 824, ce qui porte le taux réel à 53,02 dollars, ou 55,45 si les dix jours de maladie sont pris.' },
+    { q: 'Automatiser revient-il moins cher qu’embaucher ?', a: 'Pour une tâche de forme constante et à volume, oui, et l’écart se creuse d’année en année. Pour tout ce qui est rare ou demande du jugement, non : construire et entretenir une automatisation pour un travail fait deux fois par mois ne s’amortit jamais. Le seuil utile sur ce marché : à 53,02 dollars l’heure disponible, une tâche de huit heures par semaine coûte environ 19 300 dollars par an de temps humain. En dessous de deux heures hebdomadaires, aucune des deux réponses n’est généralement bonne et la tâche doit rester où elle est.' },
+    { q: 'La période d’essai de 90 jours s’applique-t-elle à toutes les entreprises ?', a: 'Oui. La loi modificative sur les périodes d’essai l’a ouverte aux employeurs de toute taille à compter du 23 décembre 2023 ; auparavant elle était réservée aux entreprises de moins de vingt salariés. Les conditions sont strictes : la clause doit figurer dans le contrat écrit, être signée avant la première prise de poste et conclue de bonne foi. Correctement utilisée, elle fait de l’embauche la plus réversible des deux décisions — l’inverse exact de la façon dont on présente habituellement la comparaison.' },
+    { q: 'Un marché du travail plus détendu doit-il changer la décision ?', a: 'Pour le travail de jugement, oui. Un chômage à 5,6 % au deuxième trimestre 2026 et un sous-emploi à 13,8 % signifient le vivier le plus large depuis plus de dix ans, et un coût du travail en hausse de 2,0 % face à 4,1 % d’inflation signifie que les salaires réels baissent. Pour le travail répétitif, non. Un marché détendu rend l’embauche moins chère sans rendre la tâche digne d’une personne, et le prendre pour un feu vert au recrutement sur du traitement de routine, c’est se retrouver deux ans plus tard avec un poste à supprimer.' },
+  ],
+  related: [
+    ['/automatiser-ou-embaucher/', 'Automatiser ou embaucher : le comparatif général'],
+    ['/automatiser-sans-licencier/', 'Automatiser sans licencier : ce que la promesse engage'],
+    ['/combien-coute-automatisation-ia/', 'Combien coûte une automatisation, vraiment'],
+  ],
+  extraGraph: [{
+    '@type': 'Article',
+    headline: 'Embaucher ou automatiser en Nouvelle-Zélande : la grille de décision, chiffres 2026',
+    datePublished: '2026-08-09',
+    author: { '@id': 'https://kanaky.xyz/#kevyn' },
+    publisher: { '@id': 'https://kanaky.xyz/#organization' },
+  }],
 },
 
 {
