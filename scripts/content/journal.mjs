@@ -18,11 +18,12 @@ export default [
   short: 'Journal',
   h1: 'Journal. <span style="color:var(--grey-4);font-weight:300;">One piece a day, in two languages.</span>',
   cta: 'service',
-  published: '2026-08-09',
+  published: '2026-08-10',
   body: [
     { lead: 'One long-form piece per working day, on what AI automation actually does for a business in this part of the world. Each one states a position, names its sources and shows its arithmetic. Every piece appears in French and in English — not a word-for-word translation, but the same substance written natively in each language. Most recent first.' },
 
     { list: [
+      '**10 August 2026** — [Relancer un impayé sans casser la relation : le calendrier et les cinq messages](/relancer-un-impaye-sans-casser-la-relation/) · [English — Chasing invoices without burning relationships](/chasing-invoices-without-burning-relationships/)',
       '**9 August 2026** — [Hiring or automating in New Zealand: an honest decision grid](/hiring-vs-automating-new-zealand/) · [Français — Embaucher ou automatiser en Nouvelle-Zélande : la grille](/embaucher-ou-automatiser-nouvelle-zelande/)',
       '**8 August 2026** — [Vingt-neuf journées, pas une saison : ce qu’un croisiériste laisse à Nouméa](/croisieristes-commerce-noumea/) · [English — What a cruise call actually leaves behind](/cruise-calls-noumea-retail/)',
       '**7 August 2026** — [The follow-up nobody sends, and the break-even nobody calculates](/the-follow-up-nobody-sends/) · [Français — La relance que personne n’envoie : le calcul du seuil](/la-relance-que-personne-ne-fait/)',
@@ -43,6 +44,202 @@ export default [
     ['/ai-audit/', 'Book a free AI opportunity audit'],
     ['/local-commitment/', 'The 10% that stays in the region'],
   ],
+},
+
+{
+  slug: 'relancer-un-impaye-sans-casser-la-relation',
+  lang: 'fr',
+  alt: { lang: 'en', url: 'https://kanaky.xyz/chasing-invoices-without-burning-relationships/' },
+  title: 'Relancer un impayé sans casser la relation : le calendrier et les cinq messages',
+  description: 'Depuis le 19 juin 2026 la date d’exigibilité se calcule sur l’émission de la facture, et depuis le 1er juillet le plancher des pénalités de retard est à 8,25 %. Ce que ces textes permettent vraiment : une relance qui applique une règle annoncée au lieu de porter un jugement. Calendrier en huit temps et messages mot pour mot.',
+  keywords: 'relancer un impaye Nouvelle-Caledonie, penalites de retard 8,25 pourcent, indemnite forfaitaire frais de recouvrement Nouvelle-Caledonie, loi du pays delais de paiement juin 2026, scripts de relance facture impayee, recouvrement amiable PME Noumea, injonction de payer Nouvelle-Caledonie',
+  eyebrow: 'Journal',
+  short: 'Journal · Relancer un impayé',
+  h1: 'Relancer un impayé. <span style="color:var(--grey-4);font-weight:300;">Dans un marché où l’on se recroise, la fermeté n’est pas le problème.</span>',
+  cta: 'service-fr',
+  published: '2026-08-10',
+  body: [
+    { lead: 'Deux textes ont bougé cet été sans que grand monde s’en serve. Depuis le 19 juin 2026, la date d’exigibilité d’une facture en Kanaky (Nouvelle-Calédonie) ne se calcule plus de la même façon ; depuis le 1er juillet, le plancher légal des pénalités de retard est passé à 8,25 %. Ni l’un ni l’autre ne fera payer un client. Ce qu’ils rendent possible, c’est une relance qui cesse d’être un jugement sur quelqu’un pour devenir l’application d’une règle annoncée avant la commande. La relation se joue là, pas dans le ton du message.' },
+
+    { h: 'Ce que la loi vous donne depuis cet été' },
+    'La loi du pays promulguée le 12 juin 2026 et publiée au JONC le 19 juin réécrit l’article Lp. 443-2 : le délai maximum n’est plus de trente jours à compter de la livraison, mais de trente jours fin de mois suivant l’émission de la facture. Nous avons chiffré ailleurs [ce que ce déplacement coûte à celui qui facture en retard](/facturation-en-retard-cout-reel/). Vu du créancier, il apporte une échéance que votre client et vous calculez à l’identique, sur un document daté par vous. Une relance a besoin de cela avant d’avoir besoin de style.',
+    'Les pénalités ne sont pas nouvelles, leur niveau si. L’article Lp. 441-6 IV fixe un plancher à trois fois le taux d’intérêt légal ; l’arrêté du 26 juin 2026 a porté ce taux à 2,75 % pour les créances dues aux professionnels au second semestre. Le plancher est donc passé de 7,86 % à 8,25 % le 1er juillet. Des CGV affichant encore 7,86 % sont sous le minimum légal, et l’absence de toute mention est sanctionnée jusqu’à cinq millions de francs (Lp. 441-6 VII).',
+    'Le même texte ajoute une indemnité forfaitaire pour frais de recouvrement, due de plein droit dès le retard, sans mise en demeure préalable, avec un complément possible sur justificatifs. Son montant est renvoyé à un arrêté du gouvernement dont nous n’avons pas trouvé la trace à ce jour : le droit existe, le chiffre n’est pas public. Inscrivez la mention sans montant, elle produira effet le jour de la parution.',
+
+    { h: 'L’argent n’est pas l’argument' },
+    'Reste à ne pas se raconter d’histoires sur ce que rapportent ces pénalités. Au plancher de 8,25 % l’an, voici ce qui se joue réellement.',
+
+    { table: {
+      minWidth: 560,
+      head: ['Facture', 'Retard', 'Pénalités dues, à 8,25 % l’an'],
+      rows: [
+        ['150 000 XPF', '30 jours', '1 017 XPF'],
+        ['438 000 XPF', '60 jours', '**5 940 XPF**'],
+        ['1 200 000 XPF', '90 jours', '24 411 XPF'],
+      ],
+    }},
+
+    'Cinq mille neuf cent quarante francs pour deux mois d’avance de trésorerie. C’est davantage que le découvert — l’IEOM relevait 5,26 % au premier trimestre 2026 — donc la pénalité couvre le financement et un peu au-dessus. Mais aucun de ces montants ne change une décision, ni la vôtre ni celle du débiteur. La clause de pénalités n’est pas un levier de recette : c’est un instrument de prévisibilité, qui transforme votre relance en application d’une règle imprimée.',
+
+    { h: 'Ce qui casse une relation, ce n’est pas la fermeté' },
+    'Trois choses abîment durablement un client, et la fermeté n’en fait pas partie. La surprise : le premier message qu’il reçoit sur cette facture est déjà un reproche. L’inégalité de traitement : vous relancez le petit chantier à quinze jours et laissez courir le gros client à quatre-vingt-dix, il finit par se le dire. L’émotion : un message écrit un soir de trésorerie tendue porte une charge que le montant ne justifie pas, et cette charge-là se retient.',
+    'La CCI de Nouvelle-Calédonie décrit une échelle solide : relance téléphonique notée, lettre simple une quinzaine de jours plus tard, recommandé accordant huit jours et annonçant les intérêts, mise en demeure, puis requête en injonction de payer — le créancier disposant de six mois pour faire signifier l’ordonnance, le débiteur d’un mois pour former opposition. La procédure est juste ; son défaut est ailleurs. Elle démarre après l’échéance, et tout ce que vous écrivez arrive alors dans un contexte de faute. C’est ce contexte, pas vos mots, qui fait le dégât.',
+    'La correction tient en une phrase : les deux premiers contacts doivent avoir lieu avant la date d’exigibilité, quand il n’y a encore rien à reprocher à personne.',
+
+    { h: 'Le calendrier' },
+
+    { table: {
+      minWidth: 800,
+      head: ['Moment', 'Canal', 'Ce que le message demande', 'Qui l’envoie'],
+      rows: [
+        ['À la signature du devis', 'Devis et CGV', 'Rien. Il annonce l’échéance, le taux de 8,25 % et l’indemnité', 'Vous, une fois pour toutes'],
+        ['Émission', 'Facture', 'Rien. Elle porte la date d’exigibilité en clair, pas la mention « 30 jours »', 'Automatique'],
+        ['J-3', 'Courriel', 'Rien. Il informe, et se lit sans se défendre', 'Automatique'],
+        ['J+2', 'Courriel', 'Un signalement si quelque chose bloque', 'Automatique'],
+        ['J+8', 'Courriel et relevé de compte', '**Une date de règlement**, pas un paiement', 'Automatique'],
+        ['J+15', 'Lettre recommandée', 'Le paiement, en indiquant les pénalités qui courent', 'Vous, signée'],
+        ['J+30', 'Mise en demeure recommandée', 'Le paiement sous huit jours, et la suite annoncée', 'Vous ou votre conseil'],
+        ['J+45', 'Requête en injonction de payer', 'Une décision de justice', 'Votre conseil'],
+      ],
+    }},
+
+    'Huit temps, dont cinq tombent avant tout durcissement. Le point n’est pas la longueur de l’échelle : c’est que le débiteur en connaisse les barreaux depuis la signature du devis. Personne ne se fâche d’un calendrier auquel il a dit oui.',
+
+    { h: 'Les cinq messages, mot pour mot' },
+
+    { steps: [
+      '**J-3, objet : « Facture 2026-114, échéance le 31 août ».** « Bonjour Marc, un mot d’avance : la facture 2026-114, 438 000 F, arrive à échéance lundi 31 août. Rien à faire si le virement est déjà parti. Je la joins, le RIB est en pied de page. » Ce message n’a rien à se faire pardonner : il arrive avant la faute.',
+      '**J+2, objet : « Facture 2026-114 — échéance passée lundi ».** « Bonjour Marc, la facture 2026-114 était exigible le 31 août et je ne vois pas le règlement au 2 septembre. C’est peut-être un décalage bancaire, ou quelque chose qui coince de mon côté : dites-le-moi si c’est le cas. Facture jointe. » Le fait, la date, une porte de sortie. Aucun adverbe.',
+      '**J+8, objet : « Facture 2026-114 — 438 000 F, huit jours ».** « Bonjour Marc, la facture 2026-114 reste ouverte depuis huit jours ; le relevé de votre compte est ci-joint. Si le montant ou la prestation posent question, appelez-moi aujourd’hui, on règle ça en dix minutes. Sinon, pouvez-vous m’indiquer une date de règlement ? » Une date, pas de l’argent : à une date, on répond sans perdre la face.',
+      '**J+15, lettre recommandée, signée par vous.** « La facture 2026-114 du 26 juillet 2026, d’un montant de 438 000 F, était exigible le 31 août 2026 et demeure impayée. Conformément à nos conditions générales de vente, des pénalités de retard au taux annuel de 8,25 % courent depuis le 1er septembre, ainsi que l’indemnité forfaitaire pour frais de recouvrement prévue par la réglementation. Je vous propose un règlement au plus tard le 22 septembre. » Des dates, un taux, une proposition.',
+      '**J+30, mise en demeure.** Même forme, plus courte, et une seule chose en plus : ce qui se passe ensuite, avec sa date. « À défaut de règlement au 8 octobre, le dossier sera transmis pour requête en injonction de payer. » Une mise en demeure qui n’annonce pas la suite n’est qu’une relance en majuscules.',
+    ] },
+
+    { h: 'Les trois phrases à retirer' },
+
+    { list: [
+      '**« Je me permets de vous relancer. »** Vous vous excusez de réclamer votre dû, ce qui fait glisser un droit vers une faveur — et une faveur se refuse.',
+      '**« Vous n’avez toujours pas payé. »** Le sujet devient la personne. Écrivez ce que fait la facture, jamais ce que fait le client : « la facture reste ouverte » dit la même chose sans désigner un coupable.',
+      '**« Merci de régulariser dès que possible. »** Sans date, vous n’avez rien demandé. Toute relance se termine par un jour du calendrier, y compris la première.',
+    ] },
+
+    { h: 'Où s’arrête l’automatisation' },
+    'Tout ce qui précède J+8 se programme et doit l’être : ces messages sont déclenchés par une date et un état de compte, ne demandent aucun jugement, et ne partent jamais quand on les laisse à la bonne volonté d’une fin de semaine chargée — même échec, même cause, que [la relance de devis](/la-relance-que-personne-ne-fait/).',
+    'À partir de J+15, la signature d’une personne redevient nécessaire, non par souci de forme mais parce que la suite se négocie : un échéancier, un acompte, un client qui traverse quelque chose. On automatise ce qui ne varie pas, on signe ce qui se discute.',
+    'D’où le seul point sur lequel nous refusons d’installer quoi que ce soit : la séquence s’arrête net dès qu’une réponse humaine arrive, quelle qu’elle soit. Sur un marché de 61 000 entreprises où l’on se recroise au chantier suivant, un rappel automatique envoyé le lendemain d’un appel coûte plus cher que la facture.',
+
+    { note: 'Le test qui ne coûte rien : ouvrez vos CGV et cherchez le taux de pénalité. S’il indique 7,86 %, il est sous le plancher légal depuis le 1er juillet ; s’il n’y a aucune ligne, c’est une omission sanctionnable et vous relancez depuis des années sans base écrite. Corrigez-la, portez la date d’exigibilité en clair sur vos factures, programmez les trois premiers messages. Le reste du calendrier ne servira presque jamais — c’est le but.' },
+  ],
+  faq: [
+    { q: 'Quel taux de pénalités de retard appliquer en Nouvelle-Calédonie en 2026 ?', a: 'Au minimum trois fois le taux d’intérêt légal, en vertu de l’article Lp. 441-6 IV. L’arrêté du 26 juin 2026, publié au Journal officiel le 30 juin, a fixé ce taux à 2,75 % pour les créances dues aux professionnels au second semestre : le plancher est donc de 8,25 % l’an depuis le 1er juillet 2026, contre 7,86 % au premier semestre. Le taux doit figurer dans les conditions générales de vente ; son omission est sanctionnée jusqu’à cinq millions de francs. Concrètement, une facture de 438 000 F réglée avec soixante jours de retard produit 5 940 F de pénalités.' },
+    { q: 'Quand une facture devient-elle exigible depuis la loi du pays de juin 2026 ?', a: 'Trente jours fin de mois suivant la date d’émission de la facture, et non plus trente jours à compter de la livraison ou de l’exécution de la prestation. La loi du pays a été promulguée le 12 juin 2026 et publiée au JONC le 19 juin ; elle modifie l’article Lp. 443-2. Une facture émise le 5 mars est donc exigible au 30 avril. Pour une relance, l’intérêt est pratique avant d’être juridique : l’échéance se calcule à partir d’un document que vous avez émis, et le client la calcule pareil.' },
+    { q: 'Faut-il une mise en demeure pour réclamer les frais de recouvrement ?', a: 'Non. Le texte de juin 2026 rend l’indemnité forfaitaire pour frais de recouvrement due de plein droit dès le retard constaté, sans mise en demeure préalable, et permet de demander un complément sur justificatifs si les frais réellement engagés la dépassent. Une réserve, en revanche : le montant du forfait est renvoyé à un arrêté du gouvernement dont nous n’avons pas trouvé trace à ce jour. La mention peut être inscrite dans les CGV sans chiffre, elle produira effet dès la publication.' },
+    { q: 'Peut-on automatiser les relances sans abîmer la relation client ?', a: 'Jusqu’au huitième jour de retard, oui, et c’est même la condition pour que ces messages partent : ils dépendent d’une date et d’un état de compte, pas d’un jugement. Au-delà, non. La suite se négocie — échéancier, acompte, situation particulière — et demande la signature d’une personne. Deux règles rendent le dispositif sûr : la séquence est annoncée à la signature du devis, et elle s’interrompt immédiatement dès qu’une réponse humaine arrive, quelle qu’elle soit.' },
+  ],
+  related: [
+    ['/facturation-en-retard-cout-reel/', 'Facturation en retard : ce que la loi de juin 2026 a déplacé'],
+    ['/la-relance-que-personne-ne-fait/', 'La relance de devis que personne n’envoie'],
+    ['/exemples-automatisation-pme/', 'Exemples d’automatisation pour une PME'],
+  ],
+  extraGraph: [{
+    '@type': 'Article',
+    headline: 'Relancer un impayé sans casser la relation : le calendrier et les cinq messages',
+    datePublished: '2026-08-10',
+    author: { '@id': 'https://kanaky.xyz/#kevyn' },
+    publisher: { '@id': 'https://kanaky.xyz/#organization' },
+  }],
+},
+
+{
+  slug: 'chasing-invoices-without-burning-relationships',
+  lang: 'en',
+  alt: { lang: 'fr', url: 'https://kanaky.xyz/relancer-un-impaye-sans-casser-la-relation/' },
+  title: 'Chasing Invoices Without Burning Relationships — The Schedule and Five Scripts',
+  description: 'New Zealand gives a supplier no automatic right to interest on a late commercial invoice, and repealed its payment disclosure regime in 2024. So the schedule is all you have — which means it has to be in the terms of trade before the job starts. Eight steps and the five messages, word for word.',
+  keywords: 'chasing unpaid invoices New Zealand, late payment interest NZ terms of trade, Business Payment Practices Act repealed, invoice reminder scripts small business, statutory demand section 289, Xero late payments June 2026, debt collection without damaging client relationship',
+  eyebrow: 'Journal',
+  short: 'Journal · Chasing invoices',
+  h1: 'Chasing an invoice. <span style="color:var(--grey-4);font-weight:300;">Firmness is not what breaks the relationship.</span>',
+  cta: 'service',
+  published: '2026-08-10',
+  body: [
+    { lead: 'New Zealand small businesses were paid 4.7 days late in the June 2026 quarter, on invoices that took 24.1 days to be paid. That is the best record among the countries Xero tracks — Australia sits at 6.0 days late, the United Kingdom at 8.3, the United States at 8.5, Canada at 11.3. It is also a country where, if your terms of trade do not say otherwise, being paid late costs the debtor nothing at all. Which puts the whole weight on something most firms improvise: the order in which they ask.' },
+
+    { h: 'What the law here does not give you' },
+    'There is no general statutory entitlement to interest on a late business-to-business payment here. Unlike the United Kingdom, where the Late Payment of Commercial Debts (Interest) Act 1998 attaches interest automatically, a New Zealand supplier can charge interest only if the right was agreed in writing before the work was done. If your quote and terms of trade are silent, you have no basis to add anything — not interest, not recovery costs — and the invoice you send at day sixty is worth what it was worth on day one.',
+    'Nor is there public pressure to fall back on. The Business Payment Practices Act 2023, which would have required large entities to disclose how long they take to pay, was repealed on 8 March 2024 — before most of its provisions took effect, about eight months after royal assent, on the stated ground that the regime as amended would not have been effective. A voluntary code developed with BusinessNZ replaced it. Read plainly: the register a small supplier could have checked a client against does not exist.',
+    'The contrast with the French Pacific is worth knowing if you invoice across it. In Kanaky (New Caledonia), a country law published on 19 June 2026 moved the due date to thirty days end-of-month from invoice issue, and since 1 July the statutory floor for late-payment penalties has been 8.25 per cent a year — owed whether or not the supplier negotiated for it, with a recovery indemnity due without any formal demand. Same ocean, opposite defaults: there, the law does part of the chasing; here, none of it.',
+
+    { h: 'So the terms of trade are the whole instrument' },
+    'That is mostly a disadvantage, but it forces a discipline that improves collection in either jurisdiction: everything you will ever do about a late invoice has to be written down and agreed before the job. Due date, interest rate, recovery costs, and — the part almost nobody includes — the schedule of reminders itself.',
+    'A defensible rate to put there, compensatory rather than punitive, is 1.5 per cent per month on overdue amounts plus actual recovery costs. On a $4,800 invoice sixty days late that is $144, and nobody changes behaviour for $144. As with the New Caledonian regime, the clause is not a revenue line: it is what turns a reminder from your personal opinion of a client into the operation of a rule they signed.',
+
+    { h: 'What actually damages a client relationship' },
+    'Three things, and firmness is not among them. Surprise: the first message a client receives about an invoice is already a complaint. Inconsistency: you chase the $2,000 job at fifteen days and let the $40,000 client run to ninety, and they work it out eventually. Emotion: a message written on a tight cash week carries a charge the amount does not justify, and the charge is what gets remembered.',
+    'Every standard collection ladder shares one flaw — it begins after the due date. By then anything you write lands in a context of fault, and it is the context, not your wording, that does the damage. The fix is one sentence long: the first two contacts happen before the invoice is due, while there is nothing to accuse anyone of.',
+
+    { h: 'The schedule' },
+
+    { table: {
+      minWidth: 800,
+      head: ['When', 'Channel', 'What it asks for', 'Who sends it'],
+      rows: [
+        ['At quote acceptance', 'Quote and terms of trade', 'Nothing. It states the due date, the interest rate and the reminder schedule', 'You, once'],
+        ['Issue', 'Invoice', 'Nothing. It carries the due date as a date, not as "30 days"', 'Automatic'],
+        ['3 days before due', 'Email', 'Nothing. It informs, and can be read without defending anything', 'Automatic'],
+        ['Due + 2', 'Email', 'A flag, if something is blocking payment', 'Automatic'],
+        ['Due + 8', 'Email and statement', '**A payment date**, not a payment', 'Automatic'],
+        ['Due + 15', 'Letter, signed', 'Payment, noting the interest running', 'You'],
+        ['Due + 30', 'Formal demand', 'Payment within seven days, and the next step named', 'You or your adviser'],
+        ['Due + 45', 'Disputes Tribunal or statutory demand', 'A decision', 'Your adviser'],
+      ],
+    }},
+
+    'On the last line, the choice matters. The Disputes Tribunal hears claims up to $30,000 and is the right venue where the debt is genuinely argued about. A statutory demand under section 289 of the Companies Act 1993 is a different instrument: available against a company for a debt over $1,000, giving fifteen working days to comply and ten to apply to set it aside. It is not a faster collection letter, and using it on a disputed debt is how a creditor ends up paying the other side’s costs.',
+
+    { h: 'The five messages, word for word' },
+
+    { steps: [
+      '**Three days before due — subject: "Invoice 2026-114, due Monday 31 August".** "Hi Marc, one ahead of time: invoice 2026-114, $4,800, falls due on Monday 31 August. Nothing to do if the payment is already away. I have attached it so you are not hunting for it — bank details at the foot." Nothing here needs forgiving, because it arrives before the fault.',
+      '**Due + 2 — subject: "Invoice 2026-114 — was due Monday".** "Hi Marc, invoice 2026-114 was due on 31 August and I cannot see the payment as at 2 September. It may be a banking lag, or something stuck at my end — tell me if it is. Invoice attached." The fact, the date, and a way out. No adverbs.',
+      '**Due + 8 — subject: "Invoice 2026-114 — $4,800, eight days".** "Hi Marc, invoice 2026-114 is still open after eight days; a statement of your account is attached. If there is a question about the amount or the work, call me today and we will sort it in ten minutes. Otherwise, can you give me a payment date?" You are asking for a date, not for money — a date can be answered without losing face.',
+      '**Due + 15 — a letter, signed by you.** "Invoice 2026-114 dated 26 July 2026, for $4,800, fell due on 31 August 2026 and remains unpaid. Under clause 6 of our terms of trade, interest of 1.5 per cent per month has been running since 1 September, together with recovery costs. I propose payment by 22 September." Dates, a rate, a proposal.',
+      '**Due + 30 — the formal demand.** Same form, shorter, with exactly one addition: what happens next, and when. "If payment is not received by 8 October, the account will be referred for recovery." A demand that does not name the next step is a reminder in capital letters.',
+    ] },
+
+    { h: 'Three sentences to delete' },
+
+    { list: [
+      '**"Just following up on this."** It apologises for asking, which turns an entitlement into a favour — and a favour can be declined.',
+      '**"You still have not paid."** The subject becomes the person. Write what the invoice is doing, never what the client is doing: "the invoice is still open" says the same thing without naming a culprit.',
+      '**"Please attend to this as soon as possible."** With no date, you have asked for nothing. Every message ends on a day of the calendar, including the first one.',
+    ] },
+
+    { h: 'Where the automation stops' },
+    'Everything up to day eight should be automatic. Those messages are triggered by a date and an account balance, require no judgement, and left to goodwill on a busy Friday they simply never go — the same failure, for the same reason, as [the quote follow-up nobody sends](/the-follow-up-nobody-sends/).',
+    'From day fifteen, a person signs. Not for form’s sake, but because what follows is negotiated: an instalment arrangement, a part payment, a client going through something. Automate what does not vary; sign what gets discussed.',
+    'Which gives the one rule we will not install a system without: the sequence stops dead the moment any human reply arrives, whatever it says. In a market this size, where the same names come back on the next job, an automated reminder sent the morning after a phone call costs more than the invoice.',
+
+    { note: 'The check that costs nothing: open your terms of trade and look for the interest clause. If there is none, you have been chasing for years with no written basis — and in New Zealand that means no basis at all. Add the clause, put the due date on the invoice as a date, and schedule the first three messages. Most of the rest of the ladder will never be used; that is the point of having it.' },
+  ],
+  faq: [
+    { q: 'Can I charge interest on an overdue invoice in New Zealand?', a: 'Only if the right was agreed in writing before the work was done. New Zealand has no general statute that entitles a supplier to interest on a late business-to-business payment — unlike the United Kingdom, where the Late Payment of Commercial Debts (Interest) Act 1998 applies automatically. If your quote and terms of trade are silent on interest and recovery costs, you cannot add either after the fact. A defensible clause sits around 1.5 per cent per month on overdue amounts plus actual recovery costs, which on a $4,800 invoice sixty days late comes to about $144.' },
+    { q: 'How late are New Zealand small businesses actually paid?', a: 'Xero Small Business Insights put late payments at 4.7 days in the June 2026 quarter, up from 4.3 days in the March quarter but better than the 5.3-day average for 2025. Invoices took 24.1 days to be paid overall, against 24.0 days in the March quarter and a 24.9-day average in 2025. New Zealand is the best performer among the countries Xero tracks: Australia 6.0 days late, the United Kingdom 8.3, the United States 8.5, Canada 11.3. The tail matters more than the average — a handful of accounts running past sixty days is what a schedule is built for.' },
+    { q: 'Is there a public register of how quickly large companies pay?', a: 'No. The Business Payment Practices Act 2023 would have required large entities to disclose their payment times, but it was repealed on 8 March 2024 by the Business Payment Practices Act Repeal Act, before most of its provisions came into force. The government said the regime as amended would not have been effective, and pointed instead to a voluntary code developed with BusinessNZ plus faster payment commitments from public agencies. For a small supplier, this means there is no public record to check a prospective client against before agreeing to terms.' },
+    { q: 'When should I use a statutory demand instead of the Disputes Tribunal?', a: 'Only when the debt is clear and simply unpaid. A statutory demand under section 289 of the Companies Act 1993 can be served on a company for a debt over $1,000 and gives fifteen working days to pay, arrange or secure it, with ten working days for the debtor to apply to set it aside. Where the amount or the work is genuinely in dispute, it is the wrong instrument and a creditor who uses it can end up paying the other side’s costs. Disputed claims up to $30,000 belong in the Disputes Tribunal.' },
+  ],
+  related: [
+    ['/late-invoicing-real-cost/', 'Seven days of paperwork, thirty-one days of cash'],
+    ['/the-follow-up-nobody-sends/', 'The follow-up nobody sends, and the break-even nobody calculates'],
+    ['/workflow-automation-examples/', 'Workflow automation examples for a small firm'],
+  ],
+  extraGraph: [{
+    '@type': 'Article',
+    headline: 'Chasing Invoices Without Burning Relationships — The Schedule and Five Scripts',
+    datePublished: '2026-08-10',
+    author: { '@id': 'https://kanaky.xyz/#kevyn' },
+    publisher: { '@id': 'https://kanaky.xyz/#organization' },
+  }],
 },
 
 {
