@@ -18,11 +18,12 @@ export default [
   short: 'Journal',
   h1: 'Journal. <span style="color:var(--grey-4);font-weight:300;">One piece a day, in two languages.</span>',
   cta: 'service',
-  published: '2026-08-10',
+  published: '2026-08-11',
   body: [
     { lead: 'One long-form piece per working day, on what AI automation actually does for a business in this part of the world. Each one states a position, names its sources and shows its arithmetic. Every piece appears in French and in English — not a word-for-word translation, but the same substance written natively in each language. Most recent first.' },
 
     { list: [
+      '**11 August 2026** — [Where your data sleeps: sovereignty in three questions](/where-your-data-sleeps/) · [Français — La souveraineté des données en Océanie](/souverainete-des-donnees-oceanie/)',
       '**10 August 2026** — [Relancer un impayé sans casser la relation : le calendrier et les cinq messages](/relancer-un-impaye-sans-casser-la-relation/) · [English — Chasing invoices without burning relationships](/chasing-invoices-without-burning-relationships/)',
       '**9 August 2026** — [Hiring or automating in New Zealand: an honest decision grid](/hiring-vs-automating-new-zealand/) · [Français — Embaucher ou automatiser en Nouvelle-Zélande : la grille](/embaucher-ou-automatiser-nouvelle-zelande/)',
       '**8 August 2026** — [Vingt-neuf journées, pas une saison : ce qu’un croisiériste laisse à Nouméa](/croisieristes-commerce-noumea/) · [English — What a cruise call actually leaves behind](/cruise-calls-noumea-retail/)',
@@ -44,6 +45,158 @@ export default [
     ['/ai-audit/', 'Book a free AI opportunity audit'],
     ['/local-commitment/', 'The 10% that stays in the region'],
   ],
+},
+
+{
+  slug: 'where-your-data-sleeps',
+  lang: 'en',
+  alt: { lang: 'fr', url: 'https://kanaky.xyz/souverainete-des-donnees-oceanie/' },
+  title: 'Where Your Data Sleeps — Data Sovereignty for a Pacific Business, in Three Questions',
+  description: 'Texas froze new grid connections for data centres on 3 August 2026, which is a reminder that hosting is a political variable. What actually decides sovereignty: the CLOUD Act follows the company not the building, New Zealand law lets you host anywhere because a cloud provider is your agent, and New Caledonia has run a GDPR-grade regime since 1 June 2019.',
+  keywords: 'data sovereignty Pacific business, cloud hosting New Zealand Privacy Act IPP 12, CLOUD Act small business, data protection New Caledonia CNIL, AWS Auckland region, cloud exit clause, offshore data hosting Oceania',
+  eyebrow: 'Journal',
+  short: 'Journal · Where data sleeps',
+  h1: 'Where your data sleeps. <span style="color:var(--grey-4);font-weight:300;">Not a patriotism question. A jurisdiction one.</span>',
+  cta: 'service',
+  published: '2026-08-11',
+  body: [
+    { lead: 'On 3 August, Governor Greg Abbott declared a moratorium on all new power-grid connections for data centres in Texas, and directed the Public Utility Commission and ERCOT to audit every project already moving through the interconnection queue. As Ars Technica reported, the same governor had called Texas the epicentre of AI development less than a year earlier. Nothing in that decision concerns privacy. It concerns electricity. Which is the useful part: where your records physically sleep is a variable set by people you will never meet, and it moves.' },
+
+    { h: 'Three questions hiding inside one word' },
+    'Sovereignty is mostly used as a slogan, and slogans cannot be acted on. Underneath it sit three separable questions, which a small business can answer one at a time in an afternoon. Which state can compel someone to hand over your records. Which law governs what may be done with them. And whether you can leave — how fast, and at what price.',
+    'The first has a settled answer that vendor pages tend to skate past. The Clarifying Lawful Overseas Use of Data Act, signed on 23 March 2018, provides that a provider subject to United States jurisdiction must preserve and produce data in its possession, custody or control regardless of whether the servers sit inside or outside the country. Jurisdiction follows the company, not the building. A database in a Sydney or Auckland region operated by an American corporation is reachable through the parent; the same database on a machine belonging to a company incorporated where you live is not. That is not an argument against American providers — we run on several — but it does settle what the phrase "hosted locally" buys and what it does not.',
+
+    { h: 'What the law where you sit actually asks of you' },
+    'New Zealand looks stricter than it is. Principle 12 of the Privacy Act 2020 reads like a transfer rule: you may send personal information overseas only if the recipient is bound by comparable safeguards, by law or by agreement, or the person has expressly agreed. Section 11 then removes most of its force: information held by an agent is treated as held by the principal, so the Office of the Privacy Commissioner\'s own guidance says that in most circumstances you will be responsible for the personal information you put in the cloud, not the cloud provider — and no principle 12 agreement is required where the provider acts purely as your agent. Read plainly: nothing in New Zealand law stops a five-person firm putting its entire client base on a server anywhere on earth. Since 1 May 2026 there is one new duty worth diarising: principle 3A requires you to tell people when you have collected information about them from somebody other than them.',
+    'Kanaky (New Caledonia) runs the opposite default, which surprises people on both sides of the Coral Sea. The GDPR does not apply there as European law — the territory is not EU soil for that purpose. But ordonnance n° 2018-1125 of 12 December 2018 rewrote the loi Informatique et Libertés so that its provisions refer across to the European text, and since 1 June 2019 the territory has been under the same regime as metropolitan France, with the CNIL competent to inspect and to fine. A Nouméa business therefore lives with transfer rules, purpose limitation and a record of processing that its Auckland counterpart does not, and is exposed to European-scale penalties for ignoring them.',
+
+    { table: {
+      minWidth: 720,
+      head: ['', 'New Zealand', 'Kanaky (New Caledonia)'],
+      rows: [
+        ['Governing text', 'Privacy Act 2020', 'Loi Informatique et Libertés, extended by ordonnance n° 2018-1125'],
+        ['Hosting offshore', 'Permitted, and not a disclosure where the provider is your agent (s 11)', 'A transfer, requiring a lawful basis and safeguards'],
+        ['Regulator', 'Privacy Commissioner — compliance notices, no general fining power', 'CNIL — inspection and fining powers'],
+        ['Largest fine', '**$10,000**, and only for obstruction-type offences under s 212', '**European scale**, up to 4 per cent of worldwide turnover'],
+        ['Newest duty', 'Principle 3A since 1 May 2026 — disclose indirect collection', 'Aligned with metropolitan France since 1 June 2019'],
+      ],
+    }},
+
+    { h: 'Local means something it did not mean two years ago' },
+    'AWS opened its Asia Pacific (New Zealand) Region in Auckland on 2 September 2025 — three availability zones and a stated NZ$7.5 billion investment. For an Auckland firm, keeping data in the country is now a dropdown menu.',
+    'For a Nouméa firm it is not. The nearest hyperscaler region remains Sydney, so local resolves to one of two things: an Australian region operated by a foreign company, or one of the datacentres operated inside the territory by Caledonian hosting firms, several of which now hold French health-data certification. Both are defensible choices. Neither is automatic.',
+    'Because a server in Nouméa is not safer for being in Nouméa. A local machine with no off-site backup, no restore ever tested and one person who knows the password is a worse custodian of a client list than any hyperscaler region on the planet. We have seen both, in the same week. Sovereignty you cannot operate is a sticker on a rack.',
+
+    { h: 'The test that decides it: can you leave' },
+    'Europe has legislated precisely this question, which makes it the only place with a public benchmark. Regulation (EU) 2023/2854, the Data Act, became applicable on 12 September 2025 and requires providers to strip out contractual and technical barriers to switching, with termination on a maximum two months\' notice. Until 12 January 2027 a provider may charge for the switch only what it actually costs; after that date switching charges are prohibited outright. The obligations reach non-EU providers serving EU customers.',
+    'No legislature in New Zealand, Australia or the French Pacific has done anything comparable. So the exit is a contract question here, and it is yours to raise. Two numbers convert it from principle into a decision: how many hours to obtain a complete, usable copy of everything you hold there, and what the provider charges to hand it over. Ask both in writing before signing. A vendor who cannot answer the first question has told you the answer.',
+
+    { h: 'The afternoon\'s work' },
+
+    { list: [
+      '**Name it twice.** The country the datacentre stands in, and the nationality of the company on the contract. These are two different answers and only the second one determines who can compel disclosure.',
+      '**Sort records into three piles** — would seriously damage us if published, would be embarrassing, is public anyway. Most firms find the first pile is one folder, and smaller than they feared.',
+      '**Keep the first pile on machines you control.** For routine work this now costs nothing in capability: [what runs on a normal computer](/local-ai-on-a-normal-computer/) has changed enough that summarising, sorting and drafting over sensitive files need not leave the building.',
+      '**Write the exit clause.** Export format, delivery deadline, cost, and a deletion certificate. Four lines, added before you sign, worth more than any badge on a vendor page.',
+      '**Test one restore a year, with a stopwatch.** The number you get is your real recovery time. Everything above it is paperwork.',
+    ] },
+
+    { note: 'The question was never whether to use foreign services — some are simply the best tool available, and refusing them means doing less. It is whether you can say, without looking anything up, which country the record sleeps in, which company can be ordered to produce it, and how long the way out takes. Most owners have none of the three answers, and the Texas moratorium is a reminder that the ground under the last one moves.' },
+  ],
+  faq: [
+    { q: 'Does New Zealand law stop me hosting client data overseas?', a: 'No. Principle 12 of the Privacy Act 2020 controls disclosure of personal information to overseas recipients, but section 11 treats information held by an agent as held by you — and the Office of the Privacy Commissioner\'s guidance states that a cloud provider storing or processing data purely on your behalf falls in that category, so no principle 12 agreement is required. The responsibility does not move: it stays with you, including for a breach at the provider. What changed most recently is principle 3A, in force since 1 May 2026, which requires you to tell people when you have collected information about them from a third-party source.' },
+    { q: 'Does the GDPR apply in New Caledonia?', a: 'Not directly, and the distinction matters more in theory than in practice. The territory is not EU soil for the purposes of the regulation, so the GDPR does not apply there of its own force. Ordonnance n° 2018-1125 of 12 December 2018 rewrote the loi Informatique et Libertés so that its provisions refer expressly across to the European text, and since 1 June 2019 New Caledonia has been under the same regime as metropolitan France, with the CNIL competent to inspect and to sanction. For a business in Nouméa the working answer is: assume GDPR-grade obligations, including on transfers outside the territory.' },
+    { q: 'Is a local server safer than a hyperscaler?', a: 'Not by virtue of being local. Sovereignty and security are separate properties and a small local machine frequently loses on the second one: no off-site copy, no tested restore, no patching discipline, one person holding the password. A hyperscaler region gives you durability and operational hygiene you would struggle to reproduce, at the price of a legal chain that reaches back to its parent company. The defensible position is to split by sensitivity rather than to pick a side — the records whose publication would damage the business on infrastructure you control, everything else where it runs best.' },
+    { q: 'What does the CLOUD Act mean for a small business in the Pacific?', a: 'The Clarifying Lawful Overseas Use of Data Act of 23 March 2018 provides that a provider subject to United States jurisdiction must produce data in its possession, custody or control regardless of where the servers are located. The practical consequence: choosing an Australian or New Zealand region from an American provider changes latency and residency, but not who can be ordered to produce the data. If that specific risk matters to your records, the variable to change is the nationality of the company on the contract, not the location of the building.' },
+  ],
+  related: [
+    ['/local-ai-vs-cloud-ai/', 'Local AI or cloud AI: how to choose'],
+    ['/private-ai-systems/', 'Private AI systems, explained'],
+    ['/ai-data-privacy-business/', 'AI and business data privacy'],
+  ],
+  extraGraph: [{
+    '@type': 'Article',
+    headline: 'Where Your Data Sleeps — Data Sovereignty for a Pacific Business, in Three Questions',
+    datePublished: '2026-08-11',
+    author: { '@id': 'https://kanaky.xyz/#kevyn' },
+    publisher: { '@id': 'https://kanaky.xyz/#organization' },
+  }],
+},
+
+{
+  slug: 'souverainete-des-donnees-oceanie',
+  lang: 'fr',
+  alt: { lang: 'en', url: 'https://kanaky.xyz/where-your-data-sleeps/' },
+  title: 'La souveraineté des données en Océanie : trois questions, pas un slogan',
+  description: 'Le Texas a gelé le 3 août 2026 tout nouveau raccordement électrique de datacenter : l’hébergement est une variable politique. Ce qui décide réellement de la souveraineté : le CLOUD Act suit l’entreprise et non le bâtiment, la loi néo-zélandaise laisse tout partir à l’étranger, et la Nouvelle-Calédonie applique un régime de niveau RGPD depuis le 1er juin 2019.',
+  keywords: 'souverainete des donnees Nouvelle-Caledonie, hebergement donnees Noumea, RGPD Nouvelle-Caledonie ordonnance 2018-1125, CNIL Nouvelle-Caledonie, CLOUD Act PME, cloud souverain Pacifique, clause de reversibilite cloud',
+  eyebrow: 'Journal',
+  short: 'Journal · Souveraineté des données',
+  h1: 'Où dorment vos données. <span style="color:var(--grey-4);font-weight:300;">Ce n’est pas une question de drapeau, mais de juridiction.</span>',
+  cta: 'service-fr',
+  published: '2026-08-11',
+  body: [
+    { lead: 'Le 3 août, le gouverneur Greg Abbott a décrété un moratoire sur tout nouveau raccordement de datacenter au réseau électrique du Texas, et demandé à la commission des services publics et à ERCOT, le gestionnaire du réseau, d’auditer chaque projet en file d’attente. Selon Ars Technica, le même gouverneur présentait le Texas, moins d’un an plus tôt, comme l’épicentre du développement de l’IA. Cette décision ne parle pas de vie privée. Elle parle d’électricité. Et c’est ce qui la rend utile : l’endroit où vos dossiers dorment physiquement est une variable réglée par des gens que vous ne rencontrerez jamais, et cette variable bouge.' },
+
+    { h: 'Trois questions cachées derrière un mot' },
+    'La souveraineté sert surtout de slogan, et un slogan ne se met pas en œuvre. Dessous, il y a trois questions séparables, auxquelles une petite entreprise répond une par une en un après-midi. Quel État peut contraindre quelqu’un à livrer vos dossiers. Quelle loi encadre ce qu’on a le droit d’en faire. Et si vous pouvez partir — en combien de temps, à quel prix.',
+    'La première a une réponse tranchée que les pages commerciales contournent. Le Clarifying Lawful Overseas Use of Data Act, signé le 23 mars 2018, oblige tout fournisseur relevant de la juridiction américaine à conserver et à produire les données en sa possession, sous sa garde ou sous son contrôle, que les serveurs se trouvent aux États-Unis ou ailleurs. La juridiction suit l’entreprise, pas le bâtiment. Une base installée dans une région Sydney ou Auckland opérée par une société américaine reste atteignable par la maison mère ; la même base sur une machine appartenant à une société immatriculée là où vous vivez ne l’est pas. Ce n’est pas un réquisitoire contre les fournisseurs américains — nous en utilisons plusieurs — mais cela fixe ce que « hébergé localement » achète — et ce qu’il n’achète pas.',
+
+    { h: 'Ce que votre droit vous demande vraiment' },
+    'Le cas calédonien est mal connu de ceux-là mêmes qu’il concerne. Le RGPD ne s’applique pas en Nouvelle-Calédonie en tant que droit européen : le territoire n’est pas sol de l’Union à cet égard. Mais l’ordonnance n° 2018-1125 du 12 décembre 2018 a réécrit la loi Informatique et Libertés de façon que ses dispositions renvoient expressément au texte européen, et depuis le 1er juin 2019 le territoire relève du même régime que la métropole, la CNIL étant compétente pour contrôler et pour sanctionner. Une entreprise de Nouméa vit donc avec des règles de transfert hors territoire, une limitation des finalités, un registre des traitements, et une exposition à des sanctions d’échelle européenne.',
+    'La Nouvelle-Zélande, elle, paraît plus stricte qu’elle ne l’est. Le principe 12 du Privacy Act 2020 ressemble à une règle de transfert : les données personnelles ne partent à l’étranger que si le destinataire est tenu à des garanties comparables, par la loi ou par contrat, ou si la personne y a expressément consenti. L’article 11 en retire l’essentiel de la portée : les informations détenues par un mandataire sont réputées détenues par le mandant, et la doctrine du Bureau du commissaire à la vie privée précise qu’aucun accord au titre du principe 12 n’est exigé quand le prestataire agit purement pour votre compte : c’est vous qui restez responsable des données déposées dans le cloud. En clair : rien dans le droit néo-zélandais n’empêche un cabinet de cinq personnes de poser son fichier clients sur un serveur n’importe où sur la planète. Depuis le 1er mai 2026 s’ajoute un devoir à noter : le principe 3A impose d’informer les personnes lorsque vous avez collecté des informations les concernant auprès d’un tiers.',
+
+    { table: {
+      minWidth: 720,
+      head: ['', 'Kanaky (Nouvelle-Calédonie)', 'Nouvelle-Zélande'],
+      rows: [
+        ['Texte applicable', 'Loi Informatique et Libertés, étendue par l’ordonnance n° 2018-1125', 'Privacy Act 2020'],
+        ['Hébergement hors du pays', 'Un transfert, qui exige une base légale et des garanties', 'Autorisé, et pas une divulgation quand le prestataire est votre mandataire (art. 11)'],
+        ['Autorité', 'CNIL — pouvoirs de contrôle et de sanction', 'Commissaire à la vie privée — mises en demeure, pas d’amende générale'],
+        ['Sanction maximale', '**Échelle européenne**, jusqu’à 4 % du chiffre d’affaires mondial', '**10 000 NZD**, et seulement pour les délits d’obstruction de l’article 212'],
+        ['Obligation la plus récente', 'Alignement sur la métropole depuis le 1er juin 2019', 'Principe 3A depuis le 1er mai 2026 — signaler la collecte indirecte'],
+      ],
+    }},
+
+    { h: '« Local » ne veut plus dire la même chose qu’il y a deux ans' },
+    'AWS a ouvert sa région Asie-Pacifique (Nouvelle-Zélande) à Auckland le 2 septembre 2025 : trois zones de disponibilité et un investissement annoncé de 7,5 milliards de dollars néo-zélandais. Pour un cabinet d’Auckland, garder ses données dans le pays est devenu un menu déroulant.',
+    'Pour une entreprise de Nouméa, non. La région d’hyperscaler la plus proche reste Sydney, et « local » se résout donc en deux options : une région australienne opérée par une société étrangère, ou l’un des datacenters exploités dans le territoire par des hébergeurs calédoniens, dont plusieurs affichent désormais la certification hébergeur de données de santé. Les deux choix se défendent. Aucun ne va de soi.',
+    'Car un serveur à Nouméa n’est pas plus sûr parce qu’il est à Nouméa. Une machine locale sans copie externalisée, dont la restauration n’a jamais été testée et dont une seule personne connaît le mot de passe, garde moins bien un fichier clients que n’importe quelle région d’hyperscaler. Nous avons vu les deux situations la même semaine. Une souveraineté qu’on n’exploite pas est un autocollant sur une baie.',
+
+    { h: 'Le test qui tranche : pouvez-vous partir' },
+    'L’Europe a légiféré exactement sur ce point : c’est le seul repère public disponible. Le règlement (UE) 2023/2854, dit Data Act, est applicable depuis le 12 septembre 2025 : les fournisseurs doivent supprimer les obstacles contractuels et techniques au changement de prestataire, avec une résiliation sous un préavis maximal de deux mois. Jusqu’au 12 janvier 2027, un fournisseur ne peut facturer le transfert qu’à hauteur des coûts réellement engagés ; après cette date, ces frais sont purement interdits. Le texte atteint aussi les prestataires non européens qui servent des clients de l’Union.',
+    'Aucun législateur de Nouvelle-Calédonie, de Nouvelle-Zélande ou d’Australie n’a fait l’équivalent. La sortie est donc ici une affaire de contrat, et c’est à vous de la poser. Deux chiffres transforment le principe en décision : combien d’heures pour obtenir une copie complète et exploitable de tout ce que vous détenez chez lui, et combien il facture pour vous la remettre. Posez les deux questions par écrit avant de signer. Un fournisseur incapable de répondre à la première a déjà répondu.',
+
+    { h: 'Le travail d’un après-midi' },
+
+    { list: [
+      '**Nommez deux fois.** Le pays où se trouve le datacenter, et la nationalité de la société inscrite au contrat. Ce sont deux réponses différentes, et seule la seconde détermine qui peut exiger la communication.',
+      '**Triez vos dossiers en trois tas** — ce dont la publication nous abîmerait durablement, ce qui serait gênant, ce qui est déjà public. La plupart constatent que le premier tas tient dans un dossier, plus petit qu’elles ne le craignaient.',
+      '**Gardez ce premier tas sur des machines que vous maîtrisez.** Pour les travaux courants, cela ne coûte plus rien en capacité : [ce qui tourne sur un ordinateur normal](/ia-locale-en-cinq-minutes/) a assez changé pour que résumer, trier et rédiger sur des fichiers sensibles n’ait plus à sortir du bureau.',
+      '**Écrivez la clause de réversibilité.** Format d’export, délai de remise, coût, certificat de suppression. Quatre lignes ajoutées avant signature, qui valent mieux que tous les logos d’une page commerciale.',
+      '**Testez une restauration par an, chronomètre en main.** Le chiffre obtenu est votre vrai délai de reprise. Tout ce qui est au-dessus relève de la paperasse.',
+    ] },
+
+    { note: 'La question n’a jamais été d’utiliser ou non des services étrangers : certains sont simplement le meilleur outil disponible, et s’en priver revient à faire moins. Elle est de pouvoir dire, sans rien consulter, dans quel pays dort le dossier, quelle société peut être sommée de le produire, et combien de temps prend la porte de sortie. La plupart des dirigeants n’ont aucune des trois réponses, et le moratoire texan rappelle que le sol se dérobe sous la dernière.' },
+  ],
+  faq: [
+    { q: 'Le RGPD s’applique-t-il en Nouvelle-Calédonie ?', a: 'Pas directement, et la nuance compte plus en théorie qu’en pratique. Le territoire n’est pas sol de l’Union européenne au sens du règlement, qui ne s’y applique donc pas de plein droit. L’ordonnance n° 2018-1125 du 12 décembre 2018 a réécrit la loi Informatique et Libertés de sorte que ses dispositions renvoient expressément au texte européen : depuis le 1er juin 2019, la Nouvelle-Calédonie relève du même régime juridique que la métropole, et la CNIL est compétente pour contrôler et sanctionner. Pour une entreprise de Nouméa, la réponse opérationnelle est donc : considérez que vous avez des obligations de niveau RGPD, y compris sur les transferts hors du territoire.' },
+    { q: 'Un serveur à Nouméa est-il plus sûr qu’un hébergeur mondial ?', a: 'Pas du fait d’être à Nouméa. Souveraineté et sécurité sont deux propriétés distinctes, et une petite machine locale perd souvent sur la seconde : pas de copie hors site, restauration jamais testée, mises à jour irrégulières, une seule personne qui détient le mot de passe. Une région d’hyperscaler apporte une durabilité et une hygiène d’exploitation difficiles à reproduire, au prix d’une chaîne juridique qui remonte à sa maison mère. La position défendable consiste à découper par sensibilité plutôt qu’à choisir un camp : les dossiers dont la publication abîmerait l’entreprise sur une infrastructure que vous maîtrisez, le reste là où il fonctionne le mieux.' },
+    { q: 'Que change concrètement le CLOUD Act pour une PME du Pacifique ?', a: 'Le Clarifying Lawful Overseas Use of Data Act du 23 mars 2018 oblige un fournisseur relevant de la juridiction américaine à produire les données en sa possession, sous sa garde ou sous son contrôle, quel que soit le pays où sont installés les serveurs. Conséquence pratique : choisir une région australienne ou néo-zélandaise chez un prestataire américain change la latence et la localisation, mais pas l’identité de celui qui peut être sommé de livrer les données. Si ce risque précis compte pour vos dossiers, la variable à modifier est la nationalité de la société au contrat, pas l’adresse du bâtiment.' },
+    { q: 'Comment vérifier qu’on peut quitter un prestataire cloud ?', a: 'En demandant deux chiffres par écrit avant de signer : le délai pour obtenir une copie complète et exploitable de vos données, et le coût facturé pour cette remise. Ajoutez ensuite une clause de réversibilité en quatre lignes — format d’export, délai, coût, certificat de suppression. Le Data Act européen, applicable depuis le 12 septembre 2025, impose déjà cela aux fournisseurs qui servent des clients de l’Union, avec interdiction totale des frais de transfert au 12 janvier 2027 ; aucun texte équivalent n’existe en Océanie, ce qui laisse la question entièrement à votre contrat.' },
+  ],
+  related: [
+    ['/ia-locale-entreprise/', 'L’IA locale en entreprise : ce que ça implique'],
+    ['/ia-locale-en-cinq-minutes/', 'L’IA locale expliquée en cinq minutes'],
+    ['/automatiser-sans-attendre-la-fibre/', 'Automatiser sans attendre la fibre parfaite'],
+  ],
+  extraGraph: [{
+    '@type': 'Article',
+    headline: 'La souveraineté des données en Océanie : trois questions, pas un slogan',
+    datePublished: '2026-08-11',
+    author: { '@id': 'https://kanaky.xyz/#kevyn' },
+    publisher: { '@id': 'https://kanaky.xyz/#organization' },
+  }],
 },
 
 {
