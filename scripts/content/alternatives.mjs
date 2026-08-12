@@ -26,7 +26,7 @@ export default [
       minWidth: 620,
       head: ['', 'Instantly', 'Cold Outreach Machine'],
       rows: [
-        ['Pricing model', 'Subscription, from about $37/month', 'US$299.99, paid once'],
+        ['Pricing model', 'Subscription, from about $37/month', 'US$499, paid once'],
         ['If you stop paying', 'Access ends', 'It keeps running — the code is yours'],
         ['Where it runs', 'Their platform', 'Your machine or your server'],
         ['Your prospect data', 'Stored on their servers', 'Stays with you'],
@@ -53,7 +53,7 @@ export default [
       '**The bottleneck is research and writing, not sending.** This is the common case, and it is the one most tools do not address — a sending platform does not give back the eight to twelve minutes per company that research takes.',
     ]},
     { h: 'The break-even, plainly' },
-    'Against Instantly\'s entry tier at about $37 a month, a $299.99 purchase pays for itself in roughly eight months. Against the higher tier near $97, in about three. After that the licence line is zero — though infrastructure costs (domain, sending, AI writing) continue in both models, so the saving is on the fee rather than the total. [Full cost breakdown here.](/blog/cold-email-subscription-vs-one-time-cost/)',
+    'Against Instantly\'s entry tier at about $37 a month, a $499 purchase pays for itself in roughly eight months. Against the higher tier near $97, in about three. After that the licence line is zero — though infrastructure costs (domain, sending, AI writing) continue in both models, so the saving is on the fee rather than the total. [Full cost breakdown here.](/blog/cold-email-subscription-vs-one-time-cost/)',
     { note: 'If you are currently testing whether outbound works for your business at all, rent for a quarter. Buying makes sense once you know the channel is worth keeping — that is a genuinely better sequence than committing up front.' },
   ],
   faq: [
@@ -86,7 +86,7 @@ export default [
       minWidth: 620,
       head: ['', 'Smartlead', 'Cold Outreach Machine'],
       rows: [
-        ['Pricing model', 'Subscription, from about $39/month', 'US$299.99, paid once'],
+        ['Pricing model', 'Subscription, from about $39/month', 'US$499, paid once'],
         ['Built for', 'Scale, agencies, many clients', 'One business, steady volume'],
         ['Mailbox rotation', 'Core strength', 'Single mailbox by design'],
         ['Warm-up', 'Automated across mailboxes', 'Manual, documented'],
@@ -118,7 +118,7 @@ export default [
   faq: [
     { q: 'Does the Cold Outreach Machine rotate mailboxes?', a: 'No — it is built around a single sending mailbox at deliberately moderate volume. That is a real limitation if you need scale. The design assumption is that most small businesses are better served by twenty well-researched emails a day from one credible address than by hundreds rotated across many.' },
     { q: 'Can I use it for multiple clients as an agency?', a: 'The licence does not permit operating it as a service for third parties — it grants use inside one legal entity. If you are an agency running outbound on behalf of clients, a platform subscription is both the appropriate tool and the appropriate licence.' },
-    { q: 'What if I outgrow it?', a: 'Then you have a good problem and a platform subscription is the right next step. Buying once at $299.99 and later moving to a subscription because volume demands it is a reasonable path — you will have learned what your market responds to, which is the expensive knowledge.' },
+    { q: 'What if I outgrow it?', a: 'Then you have a good problem and a platform subscription is the right next step. Buying once at $499 and later moving to a subscription because volume demands it is a reasonable path — you will have learned what your market responds to, which is the expensive knowledge.' },
     { q: 'How does the AI writing compare to sequence templates?', a: 'Different approach entirely. Templates with variables produce recognisable structure across recipients; the machine writes each message from what that specific company publishes, and checks the batch for repeated phrasing before sending. The trade-off is that it needs a good description of who you are targeting to write well.' },
   ],
   related: [
@@ -144,7 +144,7 @@ export default [
       minWidth: 620,
       head: ['', 'lemlist', 'Cold Outreach Machine'],
       rows: [
-        ['Pricing model', 'Subscription, from about $39/month; multichannel tiers priced per user', 'US$299.99, paid once, one business'],
+        ['Pricing model', 'Subscription, from about $39/month; multichannel tiers priced per user', 'US$499, paid once, one business'],
         ['Cost as the team grows', 'Rises per seat', 'Unchanged'],
         ['Channels', 'Email plus LinkedIn and calls in higher tiers', 'Email only'],
         ['Personalisation', 'Custom images, variables, dynamic content', 'Whole message written per company'],
@@ -203,7 +203,7 @@ export default [
       minWidth: 620,
       head: ['', 'Apollo', 'Cold Outreach Machine'],
       rows: [
-        ['Model', 'Subscription, data plus sequencing', 'One-time purchase, US$299.99'],
+        ['Model', 'Subscription, data plus sequencing', 'One-time purchase, US$499'],
         ['Where leads come from', 'Their contact database', 'Found from your description, from public sources'],
         ['Best for', 'Defined industries, tech, mid-market and up', 'Local, trade and niche markets'],
         ['Data freshness', 'Depends on their refresh cycle', 'Collected at the time you search'],
@@ -256,7 +256,7 @@ export default [
       { t: '1. Subscription platforms', d: 'Instantly, Smartlead, lemlist and similar. Roughly $39–97/month. Managed warm-up, team features, support desks. You supply the list and the copy.' },
       { t: '2. Data platforms', d: 'Apollo and similar. A contact database plus sequencing. You are mainly paying for the data. Strong in well-indexed industries, weak in local and trade markets.' },
       { t: '3. Self-hosted senders', d: 'Cleanmails (~$199), Broadcast (~$250), AcelleMail (from ~$80). Bought once, run on your server. Delivery infrastructure — you still build the list and write everything.' },
-      { t: '4. Find-and-write systems', d: 'Bought once and also do the research and writing. Our Cold Outreach Machine ($299.99) is in this category. Higher one-time cost, aimed at the part that takes the hours.' },
+      { t: '4. Find-and-write systems', d: 'Bought once and also do the research and writing. Our Cold Outreach Machine ($499) is in this category. Higher one-time cost, aimed at the part that takes the hours.' },
     ]},
     { h: 'The questions that decide it' },
     { steps: [

@@ -72,7 +72,7 @@ export default [
         ['A single automated workflow', 'Low four figures'],
         ['A custom AI agent connected to your systems', 'Mid four figures'],
         ['Ongoing support and iteration', 'Monthly, scoped to what you need'],
-        ['Software you run yourself', 'From US$299.99, bought once'],
+        ['Software you run yourself', 'From US$499, bought once'],
       ],
     }},
     'The last line matters for smaller operators: if what you need is outbound prospecting, you can [buy the system outright](/marketplace/cold-outreach-machine/) and run it yourself rather than paying an agency to operate it. We would rather tell you that than sell you a retainer you do not need.',
@@ -104,7 +104,7 @@ export default [
   ],
   faq: [
     { q: 'What does an AI automation agency in Auckland actually do?', a: 'It identifies the repetitive, rule-based work consuming your team\'s hours and builds systems that handle it — quoting, enquiry response, document processing, reporting, scheduling, follow-up. The work is part consulting (finding where the hours go) and part building (making the system and connecting it to what you already use).' },
-    { q: 'How much does AI automation cost in New Zealand?', a: 'A single automated workflow typically lands in the low four figures; a custom AI agent connected to your systems, mid four figures. The audit is free. If your need is outbound prospecting specifically, software you buy once from US$299.99 and run yourself is usually the better value than an agency engagement.' },
+    { q: 'How much does AI automation cost in New Zealand?', a: 'A single automated workflow typically lands in the low four figures; a custom AI agent connected to your systems, mid four figures. The audit is free. If your need is outbound prospecting specifically, software you buy once from US$499 and run yourself is usually the better value than an agency engagement.' },
     { q: 'How long does a first project take?', a: 'A well-scoped single workflow is usually days to a few weeks. The timeline is driven by how many existing systems it has to connect to, not by the AI part — integration is consistently the underestimated half.' },
     { q: 'Do you work with small businesses or only larger companies?', a: 'Mostly small businesses and sole operators, which is where the admin burden falls hardest because there is no support staff absorbing it. The economics often work better at small scale: one workflow returning ten hours a month is material to a two-person business in a way it is not to a large one.' },
     { q: 'Do you only work in Auckland?', a: 'Auckland and across New Zealand, plus Kanaky (New Caledonia) and the wider Pacific. Most work happens remotely regardless of location; being in Auckland means we can sit in your office when that is genuinely more useful than a call.' },
@@ -156,7 +156,7 @@ export default [
       '**The 88-day economy** — farms and regional businesses handling seasonal worker enquiries at volume.',
       '**Professional services** — document extraction and client communication, with [data that stays in Australia](/ai-data-privacy-business/) where that is a requirement.',
       '**E-commerce** — catalogue content, support deflection done honestly, returns patterns. See [AI for e-commerce](/ai-for-ecommerce/).',
-      '**Outbound prospecting** — the [Cold Outreach Machine](/marketplace/cold-outreach-machine/) runs on your own hardware, is bought once at US$299.99, and enforces the mechanics the [Spam Act 2003](/cold-email-law-australia/) requires: identification, functional unsubscribe, permanent opt-outs.',
+      '**Outbound prospecting** — the [Cold Outreach Machine](/marketplace/cold-outreach-machine/) runs on your own hardware, is bought once at US$499, and enforces the mechanics the [Spam Act 2003](/cold-email-law-australia/) requires: identification, functional unsubscribe, permanent opt-outs.',
     ]},
 
     { h: 'Compliance is not an afterthought here' },
@@ -181,7 +181,7 @@ export default [
   ],
   faq: [
     { q: 'Do you work with Australian businesses remotely?', a: 'Yes — from Auckland and Nouméa, which share the Australian east coast working day (two hours ahead of AEST). Audits, builds and support all run remotely. For large rollouts needing on-site presence, a local agency is genuinely the better choice and we say so.' },
-    { q: 'How much does AI automation cost in Australia?', a: 'Australian mid-market engagements commonly run from the low tens of thousands of dollars upward. Our model targets small businesses: a single automated workflow in the low four figures, a free audit first, and software you can buy outright from US$299.99 if what you need is outbound prospecting you run yourself.' },
+    { q: 'How much does AI automation cost in Australia?', a: 'Australian mid-market engagements commonly run from the low tens of thousands of dollars upward. Our model targets small businesses: a single automated workflow in the low four figures, a free audit first, and software you can buy outright from US$499 if what you need is outbound prospecting you run yourself.' },
     { q: 'Is your outreach software compliant with the Spam Act?', a: 'The machine enforces the technical requirements — sender identification, a functional unsubscribe, permanent opt-outs, no harvested lists — and its licence states plainly that legal responsibility for a campaign rests with the sender, as the Act provides. Our guide to the Spam Act 2003 and the Privacy Act covers what that means in practice.' },
     { q: 'Can you guarantee data stays in Australia?', a: 'For systems we build to run on your own hardware or your own Australian-region cloud, yes by construction — nothing leaves infrastructure you control. For workflows using overseas AI providers, no, and we will tell you exactly which data crosses where before anything is built, so the decision is yours and informed.' },
   ],

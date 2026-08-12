@@ -228,7 +228,7 @@ export default [
         ['A single automated workflow', 'Low four figures'],
         ['A custom AI agent connected to your systems', 'Mid four figures'],
         ['Ongoing support', 'Monthly, scoped'],
-        ['Software you buy once and run yourself', 'From US$299.99'],
+        ['Software you buy once and run yourself', 'From US$499'],
       ],
     }},
     '**The trap:** offshore providers quoting very low prices for template work that does not connect to anything you use. The integration — making it talk to your booking system, your accounting, your existing tools — is where the real work and the real value sit. A cheap system that automates nothing you actually do is the most expensive option available.',

@@ -24,7 +24,7 @@ import { fileURLToPath } from 'node:url';
 const ROOT = path.resolve(fileURLToPath(new URL('..', import.meta.url)));
 const DRY = process.argv.includes('--dry');
 
-const FROM = '299.99';
+const FROM = '499';
 const TO = '499';
 const DEADLINE = '11 August 2026';
 
@@ -32,32 +32,32 @@ const DEADLINE = '11 August 2026';
  * longues d'abord, sinon une courte en casse une longue. */
 const UNWIND = [
   // page de vente
-  [`<span class="c"><s style="opacity:.55">US$499</s> &nbsp;launch price until 11 August — paid once, no subscription</span>`,
+  [`<span class="c">paid once — no subscription, no per-lead fee</span>`,
    `<span class="c">paid once — no subscription, no per-lead fee</span>`],
   [`        <div style="font-size:1.05rem;opacity:.5;text-decoration:line-through;margin-bottom:2px;">US$499</div>\n`, ''],
-  [`<div class="sub"><b style="color:#C8F060">Launch price — until 11 August 2026.</b><br>Paid once. No subscription. No per-lead pricing. It goes to US$499 after that.</div>`,
+  [`<div class="sub">Paid once. No subscription. No per-lead pricing.</div>`,
    `<div class="sub">Paid once. No subscription. No per-lead pricing.</div>`],
   [`\n        <div style="font-size:.85rem;opacity:.6;margin-top:4px;">launch price · <s>$499</s> from 11 August</div>`, ''],
   // home
   [`          <div style="font-size:0.95rem;color:var(--grey-3);text-decoration:line-through;line-height:1;margin-bottom:3px;">US$499</div>\n`, ''],
-  [`<div style="color:var(--accent);font-size:0.85rem;margin-top:6px;font-weight:500;">launch price · until 11 Aug</div>`,
+  [`<div style="color:var(--grey-3);font-size:0.85rem;margin-top:6px;">paid once</div>`,
    `<div style="color:var(--grey-3);font-size:0.85rem;margin-top:6px;">paid once</div>`],
   // prose et métadonnées
-  ['Launch price US$499 until 11 August 2026, then US$499. One payment, yours forever.',
+  ['One payment of US$499, yours forever.',
    'One payment of US$499, yours forever.'],
-  ['Full source code plus a setup call. Launch price US$499 until 11 August, then US$499.',
+  ['Full source code plus a setup call. US$499, paid once.',
    'Full source code plus a setup call. US$499, paid once.'],
-  ['US$499 as a launch price until 11 August, then US$499 — paid once, live setup call included.',
+  ['US$499, paid once, live setup call included.',
    'US$499, paid once, live setup call included.'],
-  ['US$499 launch price until 11 August, then US$499', 'US$499, paid once'],
-  ['30 days of support — US$499 until 11 August, then US$499.', '30 days of support — US$499, paid once.'],
-  ['It is US$499 as a launch price until 11 August 2026, after which it goes to its standard price of US$499. ', ''],
-  ['US$499 as a launch price until 11 August 2026, after which it returns to its standard price of US$499. Paid once either way — there is no subscription',
+  ['US$499, paid once', 'US$499, paid once'],
+  ['30 days of support — US$499, paid once.', '30 days of support — US$499, paid once.'],
+  ['', ''],
+  ['US$499, paid once. There is no subscription',
    'US$499, paid once. There is no subscription'],
-  ['US$499 once as a launch price until 11 August 2026, then US$499. Not a subscription.',
+  ['US$499 once, not a subscription.',
    'US$499 once, not a subscription.'],
   // français
-  ['**299,99 USD** — environ **36 000 F CFP**, une fois. <s>499 USD</s> — prix de lancement **jusqu’au 11 août 2026**',
+  ['**499 USD** — environ **36 000 F CFP**, une fois. <s>499 USD</s> — prix de lancement **jusqu’au 11 août 2026**',
    '**499 USD** — environ **60 000 F CFP**, une fois'],
   ['      priceValidUntil: \'2026-08-11\',\n', ''],
   ['        "priceValidUntil": "2026-08-11",\n', ''],
@@ -87,8 +87,8 @@ for (const f of walk(ROOT)) {
   s = s.split(`$${FROM}`).join(`$${TO}`);
   s = s.split(`"${FROM}"`).join(`"${TO}"`);
   s = s.split(`'${FROM}'`).join(`'${TO}'`);
-  s = s.split('299,99 USD').join('499 USD');
-  s = s.split('<span class="val">299</span><span class="dec">.99</span>')
+  s = s.split('499 USD').join('499 USD');
+  s = s.split('<span class="val">499</span><span class="dec"></span>')
        .join('<span class="val">499</span><span class="dec"></span>');
 
   // 2. retirer l'habillage "prix de lancement"
