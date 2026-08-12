@@ -36,14 +36,14 @@
       n: 'Kanaky Tech', d: FR ? 'Automatisation IA — Mélanésie, NZ, Pacifique' : 'AI automation — Melanesia, NZ, Pacific' },
     { id: 'dico', icon: I.dico, url: 'https://dictionnaire.kanaky.xyz/', dom: 'dictionnaire.kanaky.xyz',
       n: FR ? 'Dictionnaire des langues kanak' : 'Kanak Languages Dictionary', d: FR ? '9 langues · 19 672 mots · gratuit' : '9 languages · 19,672 words · free' },
-    { id: 'keou', icon: I.keou, url: 'https://studio.keou.systems/', dom: 'studio.keou.systems',
-      n: 'Keou Studio', d: FR ? 'Production visuelle par IA' : 'AI visual production' },
+    { id: 'keou', icon: I.keou, url: 'https://studio.kanaky.xyz/', dom: 'studio.kanaky.xyz',
+      n: 'Keou Studio', d: FR ? 'Production visuelle par IA — gratuit' : 'AI visual production — free' },
     { id: 'market', icon: I.market, url: 'https://kanaky.xyz/marketplace/', dom: 'kanaky.xyz/marketplace',
       n: 'Marketplace', d: FR ? 'Systèmes complets, achetés une fois' : 'Complete systems, bought once' },
   ];
   const host = location.hostname;
   const cur = host.includes('dictionnaire') ? 'dico'
-    : host.includes('keou') ? 'keou'
+    : (host.startsWith('studio.') || host.includes('keou')) ? 'keou'
     : location.pathname.startsWith('/marketplace') ? 'market' : 'studio';
 
   const C = theme === 'light'

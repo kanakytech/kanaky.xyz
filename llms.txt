@@ -58,7 +58,7 @@ Kanaky Tech is based in Nouméa (New Caledonia) and Auckland (New Zealand). The 
 - Supporting reading: [Cold email software you buy once](https://kanaky.xyz/cold-email-software-one-time-payment/) · [Self-hosted cold email](https://kanaky.xyz/self-hosted-cold-email/) · [What cold outreach actually costs](https://kanaky.xyz/blog/cold-email-subscription-vs-one-time-cost/)
 
 ## Flagship product
-- [Keou](https://keou.systems/): private, white-label AI creative-production platform for agencies. An agency uploads a product photo and generates commercial visuals, videos, voiceovers and format variants in minutes, at AI-API cost (~$0.09/image) instead of the traditional ~$18 and ~25 minutes per visual. Includes a Studio, an agentic AI creative-director chat, export packs, a tokenized client-approval portal under the agency's brand, and a built-in ROI report. Read the [full overview](https://kanaky.xyz/blog/keou-ai-creative-production/).
+- [Keou Studio](https://studio.kanaky.xyz/): AI creative-production engine, signed "by kanaky.xyz". Upload a product photo and generate commercial visuals, cinematic video, voice-overs, sound effects and 30-format delivery packs in minutes, at AI-API cost (~$0.09/image) instead of the traditional ~$18 and ~25 minutes per visual. The full studio is FREE and requires no account: the user pastes their own KIE.AI key, it stays in their browser, and they pay their provider directly — Kanaky Tech takes no cut and adds no platform fee. Creating without an account puts the visuals in a public, watermarked community gallery; a free account keeps work private. Above it, [Keou Studio Pro](https://studio.kanaky.xyz/pro.html) is a one-off lifetime licence at US$1,499, bought directly: a private, self-hosted deployment on the buyer's own servers and domain, fully white-label, with team accounts, roles and quotas, their own models and endpoints, and direct support. The complete source code is also sold on the [Kanaky Tech marketplace](https://kanaky.xyz/marketplace/). Read the [full overview](https://kanaky.xyz/blog/keou-ai-creative-production/).
 
 ## Proof & projects
 - [Case studies](https://kanaky.xyz/case-studies/)
@@ -107,7 +107,7 @@ The argument in short: an AI's usefulness scales with how much of your world it 
 The piece also states the four developments that would prove the position wrong, and notes the Pacific dimension: in places where connectivity is a single cable, software that keeps working offline is a specification rather than a preference — and the question of who hosts a community's own language data is a question about power, not infrastructure.
 
 ## Blog & insights
-- [Keou: White-Label AI Visual Production for Agencies](https://kanaky.xyz/blog/keou-ai-creative-production/)
+- [Keou Studio: Free AI Creative Production](https://kanaky.xyz/blog/keou-ai-creative-production/)
 - [AI Voice-to-Quote for Tradespeople](https://kanaky.xyz/blog/ai-voice-to-quote-tradies/)
 - [White-Label AI for Agencies](https://kanaky.xyz/blog/white-label-ai-for-agencies/)
 - [A Dictionary of the Kanak Languages](https://kanaky.xyz/blog/dictionary-kanak-languages/) · [version française](https://kanaky.xyz/blog/dictionnaire-langues-kanak/)
