@@ -18,11 +18,12 @@ export default [
   short: 'Journal',
   h1: 'Journal. <span style="color:var(--grey-4);font-weight:300;">One piece a day, in two languages.</span>',
   cta: 'service',
-  published: '2026-08-11',
+  published: '2026-08-13',
   body: [
     { lead: 'One long-form piece per working day, on what AI automation actually does for a business in this part of the world. Each one states a position, names its sources and shows its arithmetic. Every piece appears in French and in English — not a word-for-word translation, but the same substance written natively in each language. Most recent first.' },
 
     { list: [
+      '**13 August 2026** — [A prospecting system’s day, hour by hour](/prospecting-system-hour-by-hour/) · [Français — Une journée d’un système de prospection, heure par heure](/journee-type-systeme-prospection/)',
       '**11 August 2026** — [Where your data sleeps: sovereignty in three questions](/where-your-data-sleeps/) · [Français — La souveraineté des données en Océanie](/souverainete-des-donnees-oceanie/)',
       '**10 August 2026** — [Relancer un impayé sans casser la relation : le calendrier et les cinq messages](/relancer-un-impaye-sans-casser-la-relation/) · [English — Chasing invoices without burning relationships](/chasing-invoices-without-burning-relationships/)',
       '**9 August 2026** — [Hiring or automating in New Zealand: an honest decision grid](/hiring-vs-automating-new-zealand/) · [Français — Embaucher ou automatiser en Nouvelle-Zélande : la grille](/embaucher-ou-automatiser-nouvelle-zelande/)',
@@ -45,6 +46,172 @@ export default [
     ['/ai-audit/', 'Book a free AI opportunity audit'],
     ['/local-commitment/', 'The 10% that stays in the region'],
   ],
+},
+
+{
+  slug: 'prospecting-system-hour-by-hour',
+  lang: 'en',
+  alt: { lang: 'fr', url: 'https://kanaky.xyz/journee-type-systeme-prospection/' },
+  title: 'A Prospecting System\'s Day, Hour by Hour — What Runs, What Waits, What Stays Human',
+  description: 'A working prospecting system is idle most of the day, and that is the design. The full twenty-four hours on an Auckland clock: which windows matter across Pacific time zones, why sequencing on opens has been broken since 2021, the three things the machine is never allowed to do, and the forty minutes that stay human.',
+  keywords: 'prospecting automation schedule, cold email timing time zones Pacific, outbound sales system New Zealand, Gmail bulk sender spam rate, Apple Mail Privacy Protection open rates, Unsolicited Electronic Messages Act 2007, automated prospecting small business',
+  eyebrow: 'Journal',
+  short: 'Journal · A system\'s day',
+  h1: 'A prospecting system\'s day. <span style="color:var(--grey-4);font-weight:300;">Mostly idle, on purpose.</span>',
+  cta: 'service',
+  published: '2026-08-13',
+  body: [
+    { lead: 'A prospecting system that works properly does nothing for most of the day. That reads like a defect and it is the whole design: what the machine buys you is not throughput, it is a clock. It can arrive in someone\'s inbox at nine in their morning, on a day when you are asleep, without a person having set an alarm at three. Below is the actual twenty-four hours of one we run — the sends, the pauses, the roughly forty minutes that cannot be given to software, and the points where the sequence has to stop and wait for a human being.' },
+
+    { h: 'The constraint nobody prices: their morning is not your morning' },
+    'Auckland runs on UTC+12, and UTC+13 between late September and early April. Nouméa sits on UTC+11 and never moves. Port Vila is on UTC+11, Suva on UTC+12 — Fiji has not run daylight saving since the 2021-22 season — and Papeete is on UTC-10. Put those on one clock and the arithmetic turns blunt. A message that should land in a Papeete inbox at eight on Monday morning has to leave Auckland at six on Tuesday morning. Twenty-one hours separate the two towns, and they sit in the same ocean.',
+    'Between Kanaky (New Caledonia) and New Zealand the gap is the opposite problem: one hour in the southern winter, two in summer. Small gaps are the ones people get wrong, precisely because they feel ignorable. Send at nine your time in February and you have arrived at seven in theirs, in the tranche a person clears on a phone before getting to a desk — the one that gets deleted rather than read. Nothing about that is a copywriting failure. It is a scheduling failure, and scheduling is the one thing a machine does perfectly.',
+
+    { h: 'The day, on an Auckland clock' },
+
+    { table: {
+      minWidth: 760,
+      head: ['Time', 'What happens', 'Human minutes'],
+      rows: [
+        ['05:40', 'Verification pass on the day\'s forty addresses. Bounced, role-based (info@, contact@) and already-in-the-CRM entries are dropped before a single message is composed.', '0'],
+        ['06:00', 'Papeete window — eight in the morning there, the previous calendar day. Six messages.', '0'],
+        ['08:30', 'Overnight replies land in one place, sorted into three piles: answer today, answer this week, remove from the list.', '**20**'],
+        ['09:00', 'Nouméa and Port Vila window — eight local. Fifteen messages, twelve to twenty minutes apart.', '0'],
+        ['10:00', 'Auckland and Suva window. The rest of the day\'s allowance.', '0'],
+        ['11:30', 'Second touches — only to people who never replied, never to people who did.', '0'],
+        ['14:00', 'Anything that asks a question, mentions a price or asks who we are has stopped its own sequence and is waiting for a person.', '**15**'],
+        ['16:00', 'Nothing sends. Tomorrow\'s list is enriched: company size, a named person, one specific reason to write to them.', '**5**'],
+        ['18:00', 'Counters — bounces, complaints, replies. A bounce rate above two per cent holds tomorrow\'s send automatically, without asking.', '0'],
+        ['20:00 – 05:40', 'Idle. Deliberately.', '0'],
+      ],
+    }},
+
+    'Ninety minutes of machine activity spread across eighteen hours, and forty minutes of human work. The spread is the product: compressing the same forty messages into one afternoon would be quicker to run and worth measurably less, because two thirds would land outside the hours in which anyone answers anything.',
+
+    { h: 'Sequencing on opens has been broken since 2021' },
+    'Apple shipped Mail Privacy Protection with iOS 15 in September 2021. When it is on, Mail pre-loads remote content through a proxy, which means an open is recorded whether or not a human ever looked at the message. Enough recipients use Apple Mail that the metric can no longer carry a decision — and a system that branches on opens is not automating judgement, it is automating a coin toss and reporting the result as insight.',
+    'So the only triggers we let a sequence act on are the four that correspond to something a person actually did: a reply, a bounce, an unsubscribe, and time elapsed. That removes most of the clever branching sold with these tools, along with the class of mistake where a machine sends a warmer second message because a proxy in another hemisphere fetched an image.',
+
+    { h: 'Three things the machine is never allowed to do' },
+
+    { list: [
+      '**Answer.** Any reply containing a question, a number, an objection or a hint of irritation leaves the automation entirely and sits in a human queue. The machine\'s job ends at hello. Everything after that is the relationship, and a relationship answered by a template is worse than one answered slowly.',
+      '**Keep sending after a reply.** This is the single most common failure we are called in to fix, and it is not subtle: a person answers, the sequence has not registered it, and the next scheduled message arrives as though nobody spoke. One occurrence costs more than the campaign earns.',
+      '**Spend the complaint budget.** Since February 2024 Google has required bulk senders to authenticate their mail, offer one-click unsubscribe and hold their spam rate below 0.3 per cent in Postmaster Tools — roughly three complaints per thousand delivered messages. Microsoft applied comparable requirements to Outlook.com addresses from 5 May 2025. At forty messages a day, that tolerance amounts to about one complaint a week. It is not a lot of room, and no volume strategy survives running out of it.',
+      '**Write to someone the law does not allow.** In New Zealand the Unsolicited Electronic Messages Act 2007 accepts consent that is express, inferred or deemed — a business address conspicuously published, no statement refusing such messages, and content relevant to that person\'s role — and the Department of Internal Affairs can pursue penalties of up to NZ$200,000 against an individual and NZ$500,000 against an organisation. In Kanaky (New Caledonia), under the regime the CNIL supervises, business-to-business prospecting can proceed without prior consent provided the message relates to the person\'s professional function and every message carries a working way to object.',
+    ] },
+
+    { h: 'The forty minutes that cannot be given away' },
+    'Three tasks resist automation, and they are the three that decide the outcome. Choosing who goes on the list — which is judgement about a market, not a filter on a database. The first sentence of the message, which has to contain something only someone who looked would know. And the reply, which is a conversation.',
+    'The arithmetic underneath is unglamorous. Forty messages a day, five days, is two hundred a week. We plan on one reply in twenty; that is a planning figure we revise downward for a cold list, not a promise. Ten conversations a week, then, arriving in a mailbox that someone has to actually work. Which points at the real failure mode of a system like this, and it is never too few replies. It is an owner who quietly stopped reading them in week three because the machine kept producing them at a rate the calendar could not absorb.',
+
+    { h: 'What breaks it' },
+    'Lists rot silently — people change jobs, companies close — and a system with no verification step keeps writing into the gaps while the dashboard stays green. The bounce rate moves first, which is why the 18:00 counter holds the next day\'s send instead of emailing someone about it.',
+    'The other failure is regional and appears in no vendor documentation. A schedule that runs itself will send during a cyclone warning, on a day of mourning, or into a town where nobody is at work for reasons every local person knows and no calendar API contains. In this part of the world that happens several times a year. The requirement is a stop control a person can reach from a phone in under a minute, and the willingness to use it early. A machine writing cheerfully through a week like that burns more goodwill than a quarter of outreach earns back.',
+
+    { note: 'The honest summary of the day above: one person\'s forty minutes, plus a schedule that respects four time zones and refuses to improvise. Nothing in it is clever. It works because it happens at the same hours every day, including the days a person would have skipped — and because it stops the moment someone replies, the only event in the sequence that was ever the point.' },
+  ],
+  faq: [
+    { q: 'How many hours a day does a prospecting system actually work?', a: 'Ours is doing something for about ninety minutes, spread across roughly eighteen hours, and idle the rest. The spread is deliberate: messages have to arrive during working hours in four different time zones, which on an Auckland clock means separate windows at six, nine and ten in the morning. Compressing the same volume into one block would be faster to run and worth considerably less, because most of it would land when nobody is at a desk.' },
+    { q: 'Should a sequence branch on whether someone opened the email?', a: 'No. Apple Mail Privacy Protection, shipped with iOS 15 in September 2021, pre-loads remote content through a proxy, so an open is logged whether or not a person read anything. The proportion of recipients affected is large enough that the metric cannot support a decision. Trigger only on events that correspond to a real action: a reply, a bounce, an unsubscribe, or time elapsed.' },
+    { q: 'Is automated business prospecting legal in New Zealand and New Caledonia?', a: 'In both places, within conditions. New Zealand\'s Unsolicited Electronic Messages Act 2007 recognises express, inferred and deemed consent — the last covering a business address conspicuously published without a statement refusing such messages, where the content is relevant to that person\'s role. The Department of Internal Affairs enforces it, with penalties reaching NZ$200,000 for an individual and NZ$500,000 for an organisation. In New Caledonia, under the regime supervised by the CNIL, business-to-business prospecting does not require prior consent provided the message concerns the person\'s professional function and offers a working way to object in every message. In both jurisdictions, accurate sender identification and a functioning unsubscribe are not optional.' },
+    { q: 'How many emails a day should the system send?', a: 'Fewer than the tools suggest. Forty a day across a warmed domain is a defensible working figure for a small firm, and the binding constraint is not the sending cap but the complaint budget: Google asks bulk senders to hold spam rates under 0.3 per cent, which at that volume is about one complaint a week. If the replies are not coming, volume is the wrong variable to change — the list is.' },
+  ],
+  related: [
+    ['/how-many-cold-emails-per-day/', 'How many cold emails a day is safe'],
+    ['/cold-email-law-new-zealand/', 'Cold email law in New Zealand'],
+    ['/cold-email-follow-up/', 'Follow-ups that do not annoy'],
+  ],
+  extraGraph: [{
+    '@type': 'Article',
+    headline: 'A Prospecting System\'s Day, Hour by Hour — What Runs, What Waits, What Stays Human',
+    datePublished: '2026-08-13',
+    author: { '@id': 'https://kanaky.xyz/#kevyn' },
+    publisher: { '@id': 'https://kanaky.xyz/#organization' },
+  }],
+},
+
+{
+  slug: 'journee-type-systeme-prospection',
+  lang: 'fr',
+  alt: { lang: 'en', url: 'https://kanaky.xyz/prospecting-system-hour-by-hour/' },
+  title: 'Une journée d’un système de prospection, heure par heure',
+  description: 'Un système de prospection qui fonctionne ne fait rien la plupart du temps, et c’est voulu. Les vingt-quatre heures détaillées : les fenêtres d’envoi imposées par les fuseaux du Pacifique, pourquoi séquencer sur les ouvertures ne veut plus rien dire depuis 2021, les trois choses que la machine n’a pas le droit de faire, et les quarante minutes qui restent humaines.',
+  keywords: 'prospection automatisee Nouvelle-Caledonie, systeme de prospection PME, emailing B2B fuseaux horaires Pacifique, taux de plainte Gmail 0,3 pourcent, Apple Mail Privacy Protection taux d ouverture, prospection B2B CNIL, automatiser sa prospection Noumea',
+  eyebrow: 'Journal',
+  short: 'Journal · Une journée du système',
+  h1: 'Une journée d’un système de prospection. <span style="color:var(--grey-4);font-weight:300;">À l’arrêt la plupart du temps, et c’est voulu.</span>',
+  cta: 'service-fr',
+  published: '2026-08-13',
+  body: [
+    { lead: 'Un système de prospection correctement réglé ne fait rien pendant l’essentiel de la journée. Cela ressemble à un défaut et c’est toute l’idée : ce qu’on achète n’est pas du débit, c’est une horloge. La machine sait arriver dans une boîte mail à neuf heures du matin chez le destinataire, un jour où vous dormez, sans que personne n’ait mis un réveil à trois heures. Voici les vingt-quatre heures réelles de l’un des nôtres : les envois, les silences, les quarante minutes qu’aucun logiciel ne prendra, et les points précis où la séquence doit s’arrêter et attendre un être humain.' },
+
+    { h: 'La contrainte que personne ne chiffre : leur matin n’est pas le vôtre' },
+    'Nouméa vit sur UTC+11 et n’en bouge jamais. Port-Vila est sur UTC+11, Suva sur UTC+12 — les Fidji n’appliquent plus l’heure d’été depuis la saison 2021-2022 — Auckland sur UTC+12, et UTC+13 de fin septembre à début avril. Papeete est sur UTC-10. Mettez tout cela sur un seul cadran et l’arithmétique devient brutale : un message qui doit se poser dans une boîte de Papeete à huit heures le lundi matin doit partir de Nouméa à cinq heures du matin le mardi. Vingt et une heures séparent les deux villes, et elles sont dans le même océan.',
+    'Entre Kanaky (Nouvelle-Calédonie) et la Nouvelle-Zélande, le problème est inverse : une heure d’écart en hiver austral, deux en été. Les petits écarts sont ceux qu’on rate, justement parce qu’ils paraissent négligeables. Envoyez à neuf heures en février et vous arrivez à sept heures chez l’autre, dans la fournée qu’on liquide sur un téléphone avant d’être à son bureau — celle qu’on supprime au lieu de la lire. Rien là-dedans ne relève de la qualité du message. C’est une erreur de calendrier, et le calendrier est précisément ce qu’une machine tient sans faillir.',
+
+    { h: 'La journée, sur une horloge de Nouméa' },
+
+    { table: {
+      minWidth: 760,
+      head: ['Heure', 'Ce qui se passe', 'Minutes humaines'],
+      rows: [
+        ['04:40', 'Vérification des quarante adresses du jour. Les rebonds connus, les adresses génériques (info@, contact@) et ce qui est déjà dans le CRM sortent avant qu’un seul message ne soit rédigé.', '0'],
+        ['05:00', 'Fenêtre Papeete — huit heures du matin là-bas, la veille au calendrier. Six messages.', '0'],
+        ['07:30', 'Les réponses de la nuit arrivent au même endroit et sont triées en trois tas : répondre aujourd’hui, répondre cette semaine, retirer de la liste.', '**20**'],
+        ['08:00', 'Fenêtre Nouméa et Port-Vila — huit heures locales. Quinze messages, espacés de douze à vingt minutes.', '0'],
+        ['09:00', 'Fenêtre Auckland et Suva. Le reste du quota du jour.', '0'],
+        ['10:30', 'Deuxièmes touches — uniquement vers ceux qui n’ont jamais répondu, jamais vers ceux qui l’ont fait.', '0'],
+        ['13:00', 'Tout ce qui pose une question, cite un prix ou demande qui nous sommes a stoppé sa propre séquence et attend une personne.', '**15**'],
+        ['15:00', 'Aucun envoi. La liste du lendemain est enrichie : taille de l’entreprise, un nom, une raison précise de lui écrire.', '**5**'],
+        ['17:00', 'Compteurs — rebonds, plaintes, réponses. Un taux de rebond au-dessus de deux pour cent bloque l’envoi du lendemain, automatiquement, sans rien demander.', '0'],
+        ['19:00 – 04:40', 'À l’arrêt. Délibérément.', '0'],
+      ],
+    }},
+
+    'Quatre-vingt-dix minutes d’activité machine étalées sur dix-huit heures, et quarante minutes de travail humain. L’étalement est le produit : comprimer les mêmes quarante messages dans un après-midi irait plus vite et vaudrait nettement moins, puisque les deux tiers arriveraient en dehors des heures où quiconque répond.',
+
+    { h: 'Séquencer sur les ouvertures ne veut plus rien dire depuis 2021' },
+    'Apple a livré Mail Privacy Protection avec iOS 15 en septembre 2021. Quand l’option est active, Mail précharge les contenus distants via un relais : une ouverture est enregistrée qu’un humain ait regardé le message ou non. Assez de destinataires utilisent Apple Mail pour que l’indicateur ne puisse plus porter une décision — et un système qui bifurque sur les ouvertures n’automatise pas un jugement, il automatise un tirage à pile ou face et présente le résultat comme une information.',
+    'Nous ne laissons donc une séquence réagir qu’aux quatre événements qui correspondent à un geste réel : une réponse, un rebond, une désinscription, un délai écoulé. Cela supprime la plupart des branchements astucieux vendus avec ces outils, et avec eux cette bévue où la machine envoie un message plus chaleureux parce qu’un serveur relais, dans un autre hémisphère, a chargé une image.',
+
+    { h: 'Trois choses que la machine n’a pas le droit de faire' },
+
+    { list: [
+      '**Répondre.** Toute réponse qui contient une question, un chiffre, une objection ou un début d’agacement sort entièrement de l’automatisation et se pose dans une file humaine. Le travail de la machine s’arrête à bonjour. Ce qui suit est la relation, et une relation traitée au gabarit vaut moins qu’une relation traitée lentement.',
+      '**Continuer à envoyer après une réponse.** C’est la panne qu’on nous demande le plus souvent de réparer, et elle n’a rien de subtil : quelqu’un répond, la séquence ne l’a pas enregistré, et le message programmé suivant arrive comme si personne n’avait parlé. Une seule occurrence coûte plus cher que la campagne ne rapporte.',
+      '**Dépenser le budget de plaintes.** Depuis février 2024, Google demande aux expéditeurs en volume d’authentifier leur courrier, de proposer une désinscription en un clic et de maintenir leur taux de plainte sous 0,3 % dans Postmaster Tools — environ trois plaintes pour mille messages remis. Microsoft a appliqué des exigences comparables aux adresses Outlook.com à partir du 5 mai 2025. À quarante messages par jour, cette tolérance représente à peu près une plainte par semaine. La marge est mince, et aucune stratégie de volume ne survit à son épuisement.',
+      '**Écrire à quelqu’un à qui le droit interdit d’écrire.** En Kanaky (Nouvelle-Calédonie), sous le régime que contrôle la CNIL, la prospection entre professionnels se pratique sans consentement préalable à condition que le message se rapporte à la fonction professionnelle de la personne et que chaque envoi porte un moyen d’opposition qui marche. En Nouvelle-Zélande, l’Unsolicited Electronic Messages Act 2007 admet un consentement exprès, déduit ou présumé — adresse professionnelle publiée sans mention de refus, message pertinent au regard du poste — et le Department of Internal Affairs peut poursuivre jusqu’à 200 000 NZD contre une personne physique et 500 000 NZD contre une organisation.',
+    ] },
+
+    { h: 'Les quarante minutes qu’on ne délègue pas' },
+    'Trois tâches résistent à l’automatisation, et ce sont les trois qui décident du résultat. Choisir qui entre sur la liste, qui relève d’un jugement sur un marché et non d’un filtre dans une base. La première phrase du message, qui doit contenir quelque chose que seul quelqu’un ayant regardé pouvait savoir. Et la réponse, qui est une conversation.',
+    'L’arithmétique en dessous n’a rien de flatteur. Quarante messages par jour, cinq jours, font deux cents par semaine. Nous tablons sur une réponse sur vingt : c’est une hypothèse de travail, revue à la baisse sur une liste froide, pas une promesse. Cela fait dix conversations par semaine qui atterrissent dans une boîte que quelqu’un doit réellement traiter. Ce qui désigne la vraie panne de ce genre de système, et ce n’est jamais le manque de réponses. C’est un dirigeant qui a discrètement cessé de les lire en troisième semaine, parce que la machine en produisait à un rythme que son agenda n’absorbait pas.',
+
+    { h: 'Ce qui casse' },
+    'Une liste pourrit en silence — les gens changent de poste, des sociétés ferment — et un système sans étape de vérification continue d’écrire dans les trous, tableau de bord au vert. Le taux de rebond bouge le premier : c’est pourquoi le compteur de 17 heures bloque l’envoi du lendemain au lieu d’alerter quelqu’un.',
+    'L’autre panne est régionale et ne figure dans la documentation d’aucun éditeur. Un calendrier qui tourne seul écrira pendant une alerte cyclonique, un jour de deuil, ou vers une ville où personne n’est au travail pour des raisons que tout le monde sait ici et qu’aucune API de calendrier ne contient. Dans cette partie du monde, cela arrive plusieurs fois par an. Ce qu’il faut, c’est un arrêt d’urgence qu’une personne atteint depuis son téléphone en moins d’une minute, et la décision de s’en servir tôt. Une machine qui écrit joyeusement pendant une semaine pareille brûle plus de crédit qu’un trimestre de prospection n’en reconstitue.',
+
+    { note: 'Le résumé honnête de cette journée : quarante minutes d’une personne, plus un calendrier qui respecte quatre fuseaux et refuse d’improviser. Rien là-dedans n’est astucieux. Cela tient parce que cela se produit aux mêmes heures chaque jour, y compris les jours où un humain aurait sauté son tour — et parce que tout s’arrête dès qu’une personne répond, seul événement de la séquence qui ait jamais été le but.' },
+  ],
+  faq: [
+    { q: 'Combien d’heures par jour un système de prospection travaille-t-il vraiment ?', a: 'Le nôtre fait quelque chose pendant environ quatre-vingt-dix minutes, réparties sur dix-huit heures, et reste à l’arrêt le reste du temps. L’étalement est voulu : les messages doivent arriver aux heures ouvrées de quatre fuseaux différents, ce qui donne, sur une horloge de Nouméa, des fenêtres distinctes à cinq, huit et neuf heures du matin. Comprimer le même volume dans un seul bloc serait plus rapide à exécuter et vaudrait beaucoup moins, puisque l’essentiel arriverait quand personne n’est à son bureau.' },
+    { q: 'Faut-il faire dépendre une séquence de l’ouverture des messages ?', a: 'Non. Apple Mail Privacy Protection, livré avec iOS 15 en septembre 2021, précharge les contenus distants via un relais : une ouverture est comptabilisée qu’un humain ait lu ou non. La proportion de destinataires concernés est trop importante pour que l’indicateur porte une décision. Ne déclenchez que sur des événements correspondant à un geste réel : une réponse, un rebond, une désinscription, un délai écoulé.' },
+    { q: 'La prospection automatisée est-elle légale en Nouvelle-Calédonie et en Nouvelle-Zélande ?', a: 'Dans les deux cas, sous conditions. En Nouvelle-Calédonie, sous le régime contrôlé par la CNIL, la prospection entre professionnels ne requiert pas de consentement préalable dès lors que le message concerne la fonction professionnelle de la personne, que l’expéditeur est identifiable et qu’un moyen d’opposition figure dans chaque envoi. En Nouvelle-Zélande, l’Unsolicited Electronic Messages Act 2007 reconnaît un consentement exprès, déduit ou présumé — ce dernier couvrant une adresse professionnelle publiée sans mention de refus, pour un message pertinent au regard du poste — et le Department of Internal Affairs peut poursuivre jusqu’à 200 000 NZD contre une personne physique et 500 000 NZD contre une organisation.' },
+    { q: 'Combien de messages par jour faut-il envoyer ?', a: 'Moins que ce que suggèrent les outils. Quarante par jour sur un domaine chauffé est un ordre de grandeur défendable pour une petite structure, et la contrainte qui mord n’est pas le plafond d’envoi mais le budget de plaintes : Google demande aux expéditeurs en volume de rester sous 0,3 % de taux de plainte, soit environ une plainte par semaine à ce rythme. Si les réponses ne viennent pas, le volume est la mauvaise variable à modifier — c’est la liste qu’il faut reprendre.' },
+  ],
+  related: [
+    ['/machine-prospection-commerciale/', 'La machine de prospection commerciale'],
+    ['/exemples-automatisation-pme/', 'Exemples d’automatisation pour une PME'],
+    ['/relancer-un-impaye-sans-casser-la-relation/', 'Relancer un impayé sans casser la relation'],
+  ],
+  extraGraph: [{
+    '@type': 'Article',
+    headline: 'Une journée d’un système de prospection, heure par heure',
+    datePublished: '2026-08-13',
+    author: { '@id': 'https://kanaky.xyz/#kevyn' },
+    publisher: { '@id': 'https://kanaky.xyz/#organization' },
+  }],
 },
 
 {
