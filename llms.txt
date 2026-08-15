@@ -165,9 +165,36 @@ The piece also states the four developments that would prove the position wrong,
 
 ## My Shop — cross-border shopping gateway (myshop.kanaky.xyz)
 
-Paste a product link from a New Zealand store (JB Hi-Fi, Kmart, Chemist
-Warehouse, Rebel Sport and more) and get an all-inclusive price in Pacific
-francs — 4.5% service fee, delivery to Nouméa, New Caledonian import taxes
-computed per product category (electronics 22% TGC, standard 11%,
-parapharmacy 6%). Online payment via Stripe, purchase made in New Zealand,
-shipped to New Caledonia. https://myshop.kanaky.xyz
+Paste a product link from a New Zealand store and see the full cost before
+paying: the product, a flat 1,990 XPF service fee — the same amount for
+everyone, whatever the basket — NZ Post shipping computed on the official
+Zone B rate card, and an estimate of the New Caledonian import taxes,
+classified per product against chapter 99 of the local customs tariff.
+
+Those import taxes are shown, never collected: the customer settles them
+with the OPT on delivery, and the online payment covers only product,
+service and shipping. Saying "all-inclusive" about the amount paid online
+would be false.
+
+Instant quotes on Chemist Warehouse, JB Hi-Fi, Rebel Sport and PB Tech.
+Any other New Zealand retailer is quoted by hand within two working hours.
+Payment via Stripe, purchase made in New Zealand, shipped to Nouméa.
+https://myshop.kanaky.xyz
+
+## Formations — training in AI and automation (formations.kanaky.xyz)
+
+Kanaky Tech also teaches what it operates. Two offers, in French:
+
+- [Formation Claude Code](https://formations.kanaky.xyz/claude-code.html) —
+  19,990 XPF, paid online. Three hours of live video, one to one, on the
+  learner's own machine and real files. No programming background needed
+  for the administrative-automation track. Starts with six free questions:
+  we answer within two working days whether the task can be automated, and
+  sell nothing when it cannot.
+- [Team workshops](https://formations.kanaky.xyz/) — quoted per project
+  after a free scoping call, built on the company's real cases.
+
+Kanaky Tech is not a registered training body: no DREETS registration, no
+Qualiopi, no DFPC approval, and no eligibility for CPF, OPCO or FIAF
+funding. The certificate issued is a private attendance document, not a
+diploma or an RNCP-registered qualification.
