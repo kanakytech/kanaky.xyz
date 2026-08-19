@@ -230,6 +230,31 @@
     .v-grid { grid-template-columns: 1fr; }
   }
 
+
+  /* ── Le calculateur : montrer la méthode plutôt qu'asséner un chiffre ── */
+  .calc { margin: 26px 0 30px; padding: 24px; background: var(--grey-2);
+    border: 1px solid var(--border); border-radius: 6px; }
+  .calc-in { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .calc label { display: block; font-size: 13px; font-weight: 650; color: var(--white); }
+  .calc label span { display: block; font-size: 11.5px; font-weight: 400; color: var(--grey-3); margin: 2px 0 7px; }
+  .calc input, .calc select { width: 100%; padding: 9px 11px; font: inherit; font-size: 13.5px;
+    background: var(--grey-1); color: var(--white); border: 1px solid var(--border);
+    border-radius: 4px; font-variant-numeric: tabular-nums; }
+  .calc input:focus, .calc select:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .calc-out { display: block; margin-top: 22px; padding-top: 20px; border-top: 1px solid var(--border); }
+  .co-tot { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .co-tot b { font-size: 2.6rem; font-weight: 700; color: var(--accent); line-height: 1;
+    font-variant-numeric: tabular-nums; }
+  .co-tot span { font-size: 14px; color: var(--grey-4); }
+  .co-det { margin-top: 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .co-det p { display: flex; align-items: center; gap: 8px; margin: 0; font-size: 12.5px; color: var(--grey-4); }
+  .co-det i { width: 10px; height: 10px; border-radius: 2px; flex: 0 0 auto; }
+  .co-det b { margin-left: auto; color: var(--white); font-variant-numeric: tabular-nums; }
+  .co-eq { margin: 16px 0 0; font-size: 13.5px; color: var(--grey-4); }
+  .co-eq b { color: var(--white); font-variant-numeric: tabular-nums; }
+  .calc-note { margin: 18px 0 0; font-size: 11.5px; color: var(--grey-3); line-height: 1.6; }
+  @media (max-width: 640px) { .calc-in, .co-det { grid-template-columns: 1fr; } }
+
   </style>
 </head>
 <body>
@@ -681,6 +706,121 @@
 <tr><td>Comparaison directe avec les 0,26 mL de Google</td><td>Erreur de périmètre : Google exclut le scope 2, soit ~87 % du chiffre de Li et al. Google soustrait explicitement l'overhead <strong>avant</strong> d'appliquer le WUE</td><td>ÉLEVÉE</td></tr>
 <tr><td>Présentation comme une mesure de « l'IA aujourd'hui »</td><td>GPT-3 est un modèle de 2020. Les auteurs qualifient eux-mêmes leur hypothèse énergétique (0,004 kWh/requête) de « conservative » face aux 0,010 kWh d'un Llama-3-70B ou aux 0,016 kWh d'un Falcon-180B</td><td>ÉLEVÉE</td></tr></tbody></table></div>
 <p><strong>Ce qu'il faut en retenir.</strong> Le chiffre n'est ni un mensonge ni une mesure : c'est une <strong>estimation modélisée, à périmètre large, sur un modèle ancien, avec une amplitude géographique de facteur 6,7 explicitement publiée par ses auteurs</strong>. Son défaut principal, dans le débat public, n'est pas d'être faux — c'est d'être cité sans son périmètre et sans sa fourchette.</p>
+<h2 id="s9"><span class="hn">9</span>Les modèles récents : ce qu'on peut calculer, et ce qu'on ne peut pas</h2>
+
+<p>La question qui vient naturellement après tout ce qui précède : <strong>et les modèles d'aujourd'hui ?</strong> Le chiffre de référence de ce rapport porte sur GPT-3, un modèle de 2020. Depuis, les générations se sont succédé — GPT-4 et 5, Gemini, Llama, Claude, DeepSeek, Mistral. Combien d'eau consomment-elles&nbsp;?</p>
+
+<p>La réponse honnête tient en une phrase : <strong>pour la plupart d'entre eux, personne ne peut le calculer</strong>, et ce n'est pas faute de méthode — c'est faute de données d'entrée.</p>
+
+<h3><span class="hn3">9.1</span>Ce qui a cessé d'être publié</h3>
+
+<p>GPT-3 sert encore de référence mondiale pour une raison précise : <strong>c'est le dernier grand modèle dont l'énergie d'entraînement a été publiée</strong> — 1 287 MWh, par une équipe de Google et Berkeley. Après lui, la porte s'est fermée.</p>
+
+<p>Le nombre de paramètres de GPT-4 n'a jamais été confirmé par son éditeur : le chiffre de 1 760 milliards qui circule partout remonte à une déclaration orale non sourcée, reprise ensuite de proche en proche. Pour les modèles Claude — <strong>y compris les générations 2026</strong> — la vérification des documents techniques officiels ne trouve <strong>aucun nombre de paramètres, aucun budget de calcul, aucune consommation d'énergie, aucun volume d'eau</strong>. La seule mention d'eau jamais publiée est qualitative : un « refroidissement économe en eau », sans métrique.</p>
+
+<div class="note">
+  <p><strong>Une évolution mesurable.</strong> Une section environnementale figurait dans la documentation technique de Claude 3 (mars 2024) puis de Claude 4 (mai 2025) — sans chiffres, mais présente. Elle est absente des documents des générations suivantes. Ce constat vaut pour l'ensemble du secteur : <strong>la transparence chiffrée sur l'énergie des modèles frontière a reculé à mesure que leur usage s'est massifié.</strong> — <span class="conf eleve">ÉLEVÉE</span></p>
+</div>
+
+<p>Une exception notable : un opérateur a publié en 2025 une mesure en production pour son assistant grand public — 0,24 Wh et 0,26 mL d'eau par requête texte médiane, avec sa méthodologie. C'est à ce jour la seule donnée officielle de ce type sur un modèle fermé, et elle porte sur le seul refroidissement sur site.</p>
+
+<h3><span class="hn3">9.2</span>Ce qu'on peut mesurer : les modèles ouverts</h3>
+
+<p>Là où les poids d'un modèle sont publics, n'importe quel laboratoire peut le faire tourner sur du matériel instrumenté et <strong>mesurer</strong> l'énergie au wattmètre, au lieu de l'estimer. Ces valeurs-là sont solides — et elles donnent l'ordre de grandeur d'une génération.</p>
+
+<div class="tbl-wrap">
+<table class="data-table">
+  <caption>Énergie mesurée par requête sur des modèles à poids ouverts, et l'eau qui en découle</caption>
+  <thead><tr><th>Modèle</th><th>Énergie / requête</th><th>Eau estimée<br><span style="font-weight:400;text-transform:none;letter-spacing:0">scope 1 + 2, moyenne US</span></th><th>Mesure</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Qwen 3 32B</strong></td><td>0,026 Wh</td><td>≈ 0,11 mL</td><td>Banc universitaire, mesure directe</td></tr>
+    <tr><td><strong>Moyenne de 46 modèles ouverts</strong></td><td>0,051 Wh</td><td>≈ 0,22 mL</td><td>Banc universitaire, mesure directe</td></tr>
+    <tr><td><strong>DeepSeek-R1</strong> (variante distillée)</td><td>0,050 Wh</td><td>≈ 0,21 mL</td><td>Mesure directe</td></tr>
+    <tr><td><strong>Llama 3.1 405B</strong></td><td>0,21 Wh</td><td>≈ 0,89 mL</td><td>Médiane mesurée</td></tr>
+    <tr><td><strong>gpt-oss 20B</strong></td><td>2,02 Wh</td><td>≈ 8,5 mL</td><td>Mesure directe</td></tr>
+    <tr><td>Pour comparaison — <strong>GPT-3</strong> (hypothèse Li et al., 2023)</td><td>4 Wh</td><td>16,9 mL</td><td>Hypothèse, non mesurée</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>Deux enseignements. D'abord, <strong>l'écart entre les modèles ouverts mesurés et l'hypothèse de 2023 est d'un facteur 20 à 150</strong> : l'efficacité par requête a progressé vite, et l'hypothèse historique de 4 Wh est probablement très au-dessus de la réalité d'aujourd'hui. Ensuite, <strong>la taille du modèle ne décide pas de tout</strong> : un modèle de 20 milliards de paramètres peut consommer plus qu'un modèle de 405 milliards, selon la quantification, le matériel et la longueur de la réponse. — <span class="conf moyen">MOYENNE</span></p>
+
+<div class="note">
+  <p><strong>Pourquoi ces valeurs ne se transposent pas aux modèles fermés.</strong> Elles sont mesurées sur du matériel de laboratoire, à un régime de charge donné, pour une longueur de réponse donnée. Un service en production optimise le regroupement des requêtes, tourne sur d'autres puces, et sert des réponses de longueurs très variables. Elles donnent un <em>ordre de grandeur</em> de génération, pas le chiffre d'un service commercial.</p>
+</div>
+
+<h3><span class="hn3">9.3</span>Calculez vous-même</h3>
+
+<p>La conversion de l'énergie en eau, elle, n'a rien de secret. Si vous disposez d'une estimation d'énergie par requête à laquelle vous faites confiance, l'outil ci-dessous applique la formule de référence, coefficient par coefficient, et vous montre chaque étape du calcul.</p>
+
+<div class="calc">
+  <div class="calc-in">
+    <label for="c-e">Énergie par requête
+      <span>en wattheures (Wh)</span>
+      <input type="number" id="c-e" value="0.24" min="0" max="200" step="0.01" inputmode="decimal">
+    </label>
+    <label for="c-r">Où tourne le serveur
+      <span>détermine l'eau de la centrale</span>
+      <select id="c-r">
+        <option value="3.142">Moyenne États-Unis — 3,14 L/kWh</option>
+        <option value="1.8">États-Unis, autre référence — 1,8 L/kWh</option>
+        <option value="1.55">Allemagne — 1,55 L/kWh</option>
+        <option value="2.58">France — 2,58 L/kWh</option>
+        <option value="0">Réseau sans eau (éolien, PV) — 0 L/kWh</option>
+      </select>
+    </label>
+    <label for="c-w">Refroidissement du site
+      <span>WUE, litres par kWh informatique</span>
+      <select id="c-w">
+        <option value="0.55">Site classique — 0,55 L/kWh</option>
+        <option value="0.09">Site très économe — 0,09 L/kWh</option>
+        <option value="0">Refroidissement à sec — 0 L/kWh</option>
+      </select>
+    </label>
+    <label for="c-p">Efficacité du bâtiment
+      <span>PUE</span>
+      <select id="c-p">
+        <option value="1.17">Bon — 1,17</option>
+        <option value="1.1">Excellent — 1,10</option>
+        <option value="1.5">Moyen — 1,50</option>
+      </select>
+    </label>
+  </div>
+  <output class="calc-out" id="c-out" aria-live="polite"></output>
+  <p class="calc-note">Formule de Li et al. : l'eau du site s'applique à l'énergie informatique seule ; l'eau de la centrale s'applique à l'énergie informatique multipliée par le PUE. Le résultat ne couvre ni la fabrication du matériel, ni l'entraînement du modèle.</p>
+</div>
+
+<script>
+(function(){
+  var e=document.getElementById('c-e'), r=document.getElementById('c-r'),
+      w=document.getElementById('c-w'), p=document.getElementById('c-p'),
+      o=document.getElementById('c-out');
+  if(!e||!o) return;
+  var nb=function(x,d){ return x.toLocaleString('fr-FR',{minimumFractionDigits:d,maximumFractionDigits:d}); };
+  function calc(){
+    var kWh=(parseFloat(e.value)||0)/1000, wue=parseFloat(w.value), pue=parseFloat(p.value), ewif=parseFloat(r.value);
+    var s1=kWh*wue*1000, s2=kWh*pue*ewif*1000, tot=s1+s2;
+    var bt = tot>0 ? Math.round(500/tot) : 0;
+    o.innerHTML =
+      '<div class="co-tot"><b>'+nb(tot,2)+'</b><span>mL d\'eau par requête</span></div>'+
+      '<div class="co-det">'+
+        '<p><i style="background:var(--s1)"></i>Sur site — refroidissement<b>'+nb(s1,3)+' mL</b></p>'+
+        '<p><i style="background:var(--s2)"></i>Hors site — électricité<b>'+nb(s2,3)+' mL</b></p>'+
+      '</div>'+
+      (tot>0 ? '<p class="co-eq">Soit une bouteille de 50 cL toutes les <b>'+nb(bt,0)+'</b> requêtes.</p>' : '<p class="co-eq">Aucune eau consommée avec ces réglages.</p>');
+  }
+  [e,r,w,p].forEach(function(x){ x.addEventListener('input',calc); });
+  calc();
+})();
+</script>
+
+<h3><span class="hn3">9.4</span>Ce que ça implique</h3>
+
+<p>Le calculateur ci-dessus rend visible ce que tout le rapport démontre : <strong>en changeant uniquement le lieu et le refroidissement, à énergie identique, le résultat varie d'un facteur supérieur à 10</strong>. La technologie du modèle n'est pas la variable dominante — l'infrastructure et sa géographie le sont.</p>
+
+<p>Et c'est bien pour cela qu'un tableau « eau par modèle » n'existe pas dans ce rapport. Le publier supposerait de connaître, pour chaque modèle, l'énergie réelle par requête, le mix électrique de chaque centre de données qui le sert, et leur technique de refroidissement. <strong>Aucune de ces trois données n'est publique pour un modèle fermé.</strong> Un tel tableau ne serait pas une mesure : ce serait une suite d'hypothèses présentées comme un résultat — précisément ce que ce rapport s'efforce de ne pas faire. — <span class="conf eleve">ÉLEVÉE</span></p>
+
+
 <h2 id="s7"><span class="hn">7</span>Ce qu'on ne sait pas</h2>
 <p>Cette section est aussi importante que les précédentes.</p>
 <p>1. <strong>Aucune ventilation IA / non-IA n'existe.</strong> Aucun opérateur ne publie de métrique d'eau par charge de travail. Toute estimation « de l'IA » est dérivée d'hypothèses de puissance installée. <em>(Confiance : ÉLEVÉE sur le constat.)</em> 2. <strong>Aucune entreprise ne publie sa consommation d'eau indirecte (scope 2) sur l'ensemble de ses opérations</strong> — c'est-à-dire précisément le poste qui domine. 3. <strong>L'intensité en eau de l'électricité est l'incertitude dominante</strong> : 1,04 L/kWh (hypothèse AIE) contre 3,40–5,3 L/kWh (données déclarées, Siddik et al.), soit un facteur 3,8 à 5. Li et al. signalent en outre qu'une étude LBNL donne 4,35 L/kWh contre les 3,14 qu'ils retiennent (+38 %). 4. <strong>La localisation des charges IA n'est pas divulguée.</strong> C'est ce qui rend la marge d'erreur irréductible. 5. <strong>Le scope 3 (fabrication des puces et serveurs) est absent partout</strong>, faute de données publiques. Mistral signale explicitement l'absence de facteurs d'impact publics pour les GPU et qualifie son propre travail de « première approximation ». 6. <strong>Deux sources centrales n'ont pas pu être ouvertes</strong> : le rapport AIE <em>Energy and AI</em> (HTTP 403) et le billet de Sam Altman. Les valeurs qui en dépendent (~560 Md L/an, ~1 200 Md L en 2030, 2 M L/jour pour un DC de 100 MW, 0,3 mL/prompt) sont à traiter comme <strong>non vérifiées</strong>. 7. <strong>Les séries historiques ne sont pas stables.</strong> Microsoft a recalculé toutes ses années antérieures en 2026. Les comparaisons pluriannuelles publiées avant cette date sont caduques. 8. <strong>Meta exclut 1 019 ML de prélèvement lié à la construction</strong> de ses datacenters (+18 % sur son total) — un poste réel, hors comptage. 9. <strong>Google ne publie plus de WUE de flotte</strong> dans son rapport 2026. La visibilité sur cette métrique a diminué, pas augmenté. 10. <strong>L'effet rebond n'est traité par aucune source.</strong> Google documente une division par 33 de l'énergie par prompt tout en enregistrant +34 % de consommation d'eau absolue : le lien entre efficacité unitaire et volume total n'est analysé nulle part dans les sources consultées. 11. <strong>Sur le versant comparatif</strong> : les empreintes alimentaires n'ont pas été recalculées depuis 1996–2005 ; il n'existe pas, à la connaissance de l'auteur, d'ACV eau de la bouteille d'eau embouteillée revue par les pairs et publiquement accessible ; les chiffres viraux de « 12 000 L par smartphone » et « 400 000 L par voiture » n'ont <strong>aucune source primaire ouvrable</strong> et sont écartés de ce rapport.</p>
