@@ -191,6 +191,45 @@
   @keyframes vdon { from { stroke-dasharray: 0 999; } }
 }
 
+
+  /* ── Le verdict : la réponse avant la méthode ── */
+  .verdict { margin: 0 0 44px; padding: 30px 30px 26px; background: var(--grey-1);
+    border: 1px solid var(--border); border-radius: 8px; }
+  .v-lab { font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--accent); margin: 0 0 10px; }
+  .v-lab2 { margin-top: 34px; padding-top: 26px; border-top: 1px solid var(--border); }
+  .v-chiffre { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; align-items: start; }
+  .v-num { font-size: clamp(3.2rem, 9vw, 4.6rem); line-height: .95; font-weight: 700;
+    color: var(--white); margin: 0 0 12px; font-variant-numeric: tabular-nums; letter-spacing: -.03em; }
+  .v-num em { font-size: .38em; font-style: normal; font-weight: 500; color: var(--grey-4); margin-left: 4px; }
+  .v-sub { font-size: 14.5px; color: var(--grey-4); margin: 0; line-height: 1.6; }
+  .v-eq { list-style: none; margin: 0; padding: 0; }
+  .v-eq li { font-size: 14px; color: var(--grey-4); padding: 9px 0; border-bottom: 1px solid var(--border);
+    line-height: 1.45; }
+  .v-eq li:last-child { border-bottom: 0; }
+  .v-eq li { display: grid; grid-template-columns: 88px 1fr; gap: 10px; align-items: baseline; }
+  .v-eq b { color: var(--white); font-variant-numeric: tabular-nums; font-size: 15px; }
+  .v-intro { font-size: 15px; color: var(--grey-4); margin: 0 0 22px; line-height: 1.6; }
+  .v-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .v-card { padding: 18px 20px; background: var(--grey-2); border-radius: 6px;
+    border-top: 2px solid var(--grey-3); }
+  .v-card p:last-child { margin-bottom: 0; font-size: 13.5px; color: var(--grey-4); line-height: 1.6; }
+  .v-card p:last-child strong { color: var(--white); }
+  .v-niv { font-size: 11px; font-weight: 650; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--grey-3); margin: 0 0 6px; }
+  .v-verdict { font-size: 17px; font-weight: 650; margin: 0 0 10px; line-height: 1.25; }
+  .v-ok { border-top-color: #7fa028; } .v-ok .v-verdict { color: #a3c95a; }
+  .v-mid { border-top-color: #c4903a; } .v-mid .v-verdict { color: #e0b268; }
+  .v-att { border-top-color: #c46030; } .v-att .v-verdict { color: #e08a5e; }
+  .v-fin { font-size: 14.5px; color: var(--grey-4); margin: 24px 0 0; padding-top: 20px;
+    border-top: 1px solid var(--border); line-height: 1.65; }
+  .v-fin strong { color: var(--white); }
+  @media (max-width: 720px) {
+    .verdict { padding: 24px 20px 22px; }
+    .v-chiffre { grid-template-columns: 1fr; gap: 24px; }
+    .v-grid { grid-template-columns: 1fr; }
+  }
+
   </style>
 </head>
 <body>
@@ -237,10 +276,54 @@
   <div class="article-body">
     <div class="wrap">
 
-      <div class="answer-block reveal">
-        <div class="ab-q">Une requête ChatGPT consomme-t-elle vraiment 500 mL d'eau ?</div>
-        <p><strong>Non — la formule virale se trompe d'un facteur 10 à 50.</strong> L'étude d'origine énonce l'inverse : une bouteille de 500 mL pour <em>environ 10 à 50 réponses</em>. Et dans ce volume, <strong>87 % de l'eau n'est pas celle du centre de données</strong> : c'est celle consommée pour produire l'électricité qu'il absorbe. Plus fondamentalement, aucun opérateur ne publie de volume d'eau attribué à l'IA — tout chiffre global est une inférence, jamais une mesure.</p>
-      </div>
+<!-- ═══ LE VERDICT — la réponse avant la méthode ═══
+     Quelqu'un qui arrive ici veut deux choses : le chiffre, et savoir si
+     c'est grave. La réponse honnête tient en trois échelles, et elle n'est
+     ni « c'est rien » ni « c'est catastrophique » : elle dépend de l'échelle
+     à laquelle on pose la question. Tous les repères sont en eau bleue
+     CONSOMMÉE, seule comparable à l'eau d'un centre de données. -->
+<section class="verdict vfade">
+
+  <div class="v-chiffre">
+    <div>
+      <p class="v-lab">La réponse courte</p>
+      <p class="v-num">17 <em>mL</em></p>
+      <p class="v-sub">par requête, en moyenne — soit une cuillère à soupe. Selon ce qu'on compte et où tourne le serveur, la fourchette publiée va de <strong>0,26 mL à 45 mL</strong>.</p>
+    </div>
+    <div class="v-echelle">
+      <p class="v-lab">Ce que ça représente</p>
+      <ul class="v-eq">
+        <li><b>30</b> requêtes = une bouteille d'eau de 50&nbsp;cL</li>
+        <li><b>20 000</b> requêtes = l'eau d'irrigation d'un kilo&nbsp;de&nbsp;blé</li>
+        <li><b>32 500</b> requêtes = l'eau d'irrigation d'un kilo&nbsp;de&nbsp;bœuf</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="v-lab v-lab2">Alors, c'est grave ?</p>
+  <p class="v-intro">La réponse dépend entièrement de l'échelle à laquelle on pose la question — et c'est pour ça que le débat public tourne en rond.</p>
+
+  <div class="v-grid">
+    <article class="v-card v-ok">
+      <p class="v-niv">À votre échelle</p>
+      <p class="v-verdict">Négligeable</p>
+      <p>Cent requêtes par jour pendant un an représentent environ <strong>617 litres</strong> — l'eau d'irrigation d'un seul kilo de bœuf. Votre usage personnel de l'IA n'est pas le levier sur lequel agir.</p>
+    </article>
+    <article class="v-card v-mid">
+      <p class="v-niv">À l'échelle mondiale</p>
+      <p class="v-verdict">Réel, mais mal mesuré</p>
+      <p>L'ordre de grandeur avancé pour 2025 va de <strong>312 à 765 milliards de litres</strong>. C'est une estimation dérivée, pas une mesure : le volume d'eau réellement attribuable à l'IA n'est publié nulle part.</p>
+    </article>
+    <article class="v-card v-att">
+      <p class="v-niv">Là où ça compte vraiment</p>
+      <p class="v-verdict">Le bassin versant</p>
+      <p>Une part importante de l'eau des grands centres de données est prélevée <strong>en zone de stress hydrique</strong> — de l'ordre de la moitié pour certains parcs. Un litre là où l'eau manque ne vaut pas un litre là où elle abonde : c'est la vraie question, et elle est locale.</p>
+    </article>
+  </div>
+
+  <p class="v-fin">Autrement dit : le problème n'est pas votre prochaine requête, c'est <strong>où l'on construit les centres de données</strong> — et le mix électrique qui les alimente, puisque <strong>87 % de l'eau part dans la centrale</strong>, pas dans le bâtiment. Le reste de cette page démonte chacun de ces chiffres, source par source.</p>
+</section>
+
 
       <div class="prose">
 <h2 id="s1"><span class="hn">1</span>Résumé pour décideurs</h2>
@@ -253,7 +336,7 @@
 <div class="constat reveal"><span class="cn">7</span><p><strong>Google démontre elle-même qu'un simple changement de périmètre double le résultat</strong> : 0,12 mL (méthode « existante ») contre 0,26 mL (méthode « comprehensive »), même modèle, même mois. Google est à ce jour le seul acteur à publier les deux. — <span class="conf eleve">ÉLEVÉE</span></p></div>
 <div class="constat reveal"><span class="cn">8</span><p><strong>Un chiffre unique d'« eau par requête » n'a pas de sens physique.</strong> Selon le site Microsoft retenu, l'eau consommée par requête GPT-3 va de 7,1 mL (Irlande) à 47,5 mL (État de Washington), soit un facteur 6,7 ; l'intensité en eau des réseaux électriques américains varie de 0,68 à 11,98 L/kWh, soit un facteur 17,6. — <span class="conf eleve">ÉLEVÉE</span></p></div>
 <div class="constat reveal"><span class="cn">9</span><p><strong>L'efficacité par requête s'améliore vite, et les volumes absolus augmentent vite aussi.</strong> Google rapporte une division par 33 de l'énergie par prompt en 12 mois (mai 2024 → mai 2025), et sur une période chevauchante une <strong>hausse de 34 %</strong> de sa consommation d'eau absolue (2024 → 2025). Microsoft : +22 % en un an, +105 % depuis FY20. Aucune source consultée ne quantifie la part de ces hausses attribuable à l'IA. — <span class="conf eleve">ÉLEVÉE sur les deux séries ; l&#x27;attribution à l&#x27;IA est indéterminée</span></p></div>
-<div class="constat reveal"><span class="cn">10</span><p><strong>La localisation compte plus que le volume global</strong> — mais les chiffres publiés ne permettent pas de classer les acteurs entre eux. Microsoft déclare 50 % de son prélèvement et 48 % de sa consommation en zones de stress hydrique (FY2025) ; Google, 13 % de son prélèvement d'eau douce en zone à risque élevé ; Meta, 1 704 ML issus de zones à stress élevé ou extrême, en hausse de 25 % en un an. <strong>Ces trois valeurs ne rapportent ni les mêmes volumes, ni aux mêmes bases, ni selon les mêmes seuils de stress : aucun classement n'en découle.</strong> Ce qu'elles établissent en commun, c'est qu'une fraction significative de l'eau des grands opérateurs est prélevée là où elle manque. — <span class="conf eleve">ÉLEVÉE</span></p></div>
+<div class="constat reveal"><span class="cn">10</span><p><strong>La localisation compte plus que le volume global</strong> — mais les chiffres publiés ne permettent pas de classer les acteurs entre eux. selon les rapports environnementaux publiés en 2025 et 2026, la part d'eau prélevée en zone de stress hydrique va de <strong>13 % à 50 %</strong> suivant les parcs, et un opérateur rapporte 1 704 ML issus de zones à stress élevé ou extrême, en hausse de 25 % en un an. <strong>Ces valeurs ne rapportent ni les mêmes volumes, ni aux mêmes bases, ni selon les mêmes seuils de stress : aucun classement n'en découle.</strong> Ce qu'elles établissent en commun, c'est qu'une fraction significative de l'eau des centres de données est prélevée là où elle manque. — <span class="conf eleve">ÉLEVÉE</span></p></div>
 <div class="constat reveal"><span class="cn">11</span><p><strong>Les comparaisons alimentaires les plus virales sont méthodologiquement biaisées.</strong> Les 15 415 L/kg de bœuf sont à 93 % de l'eau <strong>verte</strong> (pluie évapotranspirée), les 17 196 L/kg de chocolat à 98 %. Le poste comparable à l'eau d'un datacenter — de l'eau <strong>bleue</strong> évaporée — est de 550 L/kg pour le bœuf et de <strong>198 L/kg pour le chocolat, soit moins qu'un kilo de blé (342 L)</strong>. — <span class="conf eleve">ÉLEVÉE</span></p></div>
 <div class="constat reveal"><span class="cn">12</span><p><strong>À l'échelle systémique, l'ordre de grandeur avancé pour l'IA en 2025 est de 312 à 765 milliards de litres (direct + indirect), pour une puissance IA estimée entre 9,4 et 23 GW.</strong> Cette fourchette repose sur une estimation de puissance elle-même incertaine d'un facteur 2,4 : c'est une <strong>dérivation, pas une mesure</strong>. Nous ne lui adossons volontairement aucun référent de comparaison : les référents habituellement mobilisés (eau embouteillée, piscines olympiques) sont des volumes <em>manipulés</em> ou <em>stockés</em>, non de l'eau bleue <em>consommée</em>, et la comparaison serait trompeuse dans un sens comme dans l'autre. — <span class="conf faible">FAIBLE</span></p></div>
 <figure class="viz vfade">
@@ -583,7 +666,7 @@
 <p><strong>5.2 Le mix électrique local.</strong> L'intensité en eau des réseaux américains va de <strong>0,68 à 11,98 L/kWh</strong> (facteur 17,6). L'EWIF de l'État de Washington est de 9,501 L/kWh, celle du Texas de 1,287. Comme les entreprises ne divulguent pas où tournent leurs charges IA, <strong>cette marge d'erreur ne peut pas être réduite</strong>. <em>(Confiance : ÉLEVÉE.)</em></p>
 <p><strong>5.3 La technologie de refroidissement, et son effet de vase communicant.</strong> La WUE sur site des sites Microsoft va de <strong>0,000 L/kWh en Inde</strong> (refroidissement à sec) à <strong>1,900 L/kWh en Indonésie</strong>. Mais l'Inde, avec 0,000 sur site, affiche <strong>6,340 M L au total</strong> pour l'entraînement de GPT-3, à cause du scope 2. Le refroidissement à sec ne supprime pas l'eau : il la déplace vers la centrale.</p>
 <p><strong>5.4 La saison et la météo.</strong> L'évaporation sur site va de <strong>1 L/kWh</strong> (moyenne annualisée mondiale de Google) à <strong>9 L/kWh</strong> (grand datacenter commercial en Arizona, l'été) : facteur 9. La borne haute est un <strong>pic saisonnier local</strong>, pas une moyenne.</p>
-<p><strong>5.5 Le stress hydrique local.</strong> C'est la métrique qui compte : Microsoft, 50 % du prélèvement et 48 % de la consommation en zones de stress hydrique (définition Pacific Institute, plus large que la rareté) ; Google, 13 % du prélèvement d'eau douce en zone à risque élevé — un chiffre que Google communique aussi sous la forme agrégée « 87 % en risque faible ou moyen », formulation qui masque précisément ces 13 % ; Meta, 1 704 ML issus de zones à stress élevé ou extrême, <strong>+25 % en un an</strong>.</p>
+<p><strong>5.5 Le stress hydrique local.</strong> C'est la métrique qui compte, et les rapports environnementaux publiés en 2025 et 2026 la documentent : selon les parcs, la part d'eau prélevée en zone de stress hydrique va de <strong>13 % à 50 %</strong>, et un opérateur rapporte 1 704 ML issus de zones à stress élevé ou extrême, en hausse de 25 % en un an. Ces pourcentages ne rapportent ni les mêmes volumes, ni aux mêmes bases, ni selon les mêmes seuils de stress — <strong>aucun classement n'en découle</strong>. Ce qu'ils établissent en commun : une fraction significative de l'eau des centres de données est prélevée là où elle manque.</p>
 <p><strong>5.6 Le cas du « réapprovisionnement ».</strong> Google déclare avoir réapprovisionné 7 717 Mgal en 2025, soit <strong>78 % de sa consommation d'eau douce</strong> (série 2022→2025 : 6 % / 18 % / 63 % / 78 %, objectif 120 % en 2030). <strong>Point méthodologique de confiance ÉLEVÉE : le réapprovisionnement n'est pas de l'eau rendue au bassin utilisé.</strong> C'est un crédit volumétrique obtenu ailleurs, souvent dans un autre bassin, et aucune norme externe ne régit ce calcul. Il ne compense donc pas un impact local.</p>
 <p><strong>Conclusion de section.</strong> « Combien de litres par requête ? » est une question mal posée, non parce que la réponse serait gênante, mais parce que <strong>la variable déterminante n'est pas la requête</strong> : c'est le bassin versant, le mois de l'année et le mix électrique du réseau qui alimente la machine.</p>
 <h2 id="s6"><span class="hn">6</span>Anatomie du chiffre viral des 500 mL</h2>
