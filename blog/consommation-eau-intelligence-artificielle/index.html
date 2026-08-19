@@ -145,6 +145,52 @@
     color:var(--accent); margin-bottom:10px; font-variant-numeric:tabular-nums; }
   .hn3 { color:var(--accent); margin-right:9px; font-variant-numeric:tabular-nums; }
   .prose h2 { scroll-margin-top:90px; }
+
+.viz {
+  --s1: #7fa028;  /* lime sourd — dérivé de l'accent de la maison */
+  --s2: #0090bd;  /* cyan */
+  --s3: #c46030;  /* orange */
+  --s4: #9159c6;  /* violet */
+  --viz-surface: #111;
+  --viz-grid: rgba(255,255,255,.09);
+  --viz-ink: #f0f0ec;
+  --viz-ink-2: #999;
+  margin: 34px 0 40px; padding: 26px 26px 22px;
+  background: var(--viz-surface); border: 1px solid var(--border);
+  border-radius: 6px;
+}
+.viz-t { font-size: 15px; font-weight: 650; color: var(--viz-ink); margin: 0 0 4px; letter-spacing: -.01em; }
+.viz-s { font-size: 12.5px; color: var(--viz-ink-2); margin: 0 0 20px; line-height: 1.5; }
+.viz-src { font-size: 11px; color: var(--grey-3); margin: 16px 0 0; line-height: 1.5; }
+.viz-lg { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 0 0 18px; font-size: 12px; color: var(--viz-ink-2); }
+.viz-lg i { display: inline-block; width: 11px; height: 11px; border-radius: 2px; margin-right: 7px; vertical-align: -1px; }
+.viz svg { display: block; width: 100%; height: auto; overflow: visible; }
+.viz text { font-family: inherit; }
+.vl { font-size: 12px; fill: var(--viz-ink); }
+.vv { font-size: 12px; fill: var(--viz-ink); font-weight: 650; font-variant-numeric: tabular-nums; }
+.vm { font-size: 11px; fill: var(--viz-ink-2); }
+.vgrid { stroke: var(--viz-grid); stroke-width: 1; }
+.vbar { transform-box: fill-box; transform-origin: left center; }
+.viz-tbl { margin-top: 16px; font-size: 12px; }
+.viz-tbl summary { cursor: pointer; color: var(--viz-ink-2); font-size: 11.5px; }
+.viz-tbl summary:hover { color: var(--accent); }
+.viz-tbl table { width: 100%; margin-top: 10px; border-collapse: collapse; }
+.viz-tbl th, .viz-tbl td { padding: 6px 8px; text-align: left; border-bottom: 1px solid var(--border); font-variant-numeric: tabular-nums; }
+.viz-tbl th { color: var(--viz-ink-2); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: .06em; }
+.viz [data-tip] { cursor: default; }
+.viz [data-tip]:hover, .viz [data-tip]:focus-visible { opacity: .82; outline: none; }
+.viz-hero { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; margin-bottom: 4px; }
+.viz-hero b { font-size: clamp(2.6rem, 7vw, 3.8rem); line-height: 1; color: var(--accent); font-weight: 700; font-variant-numeric: tabular-nums; }
+.viz-hero span { font-size: 13.5px; color: var(--viz-ink-2); max-width: 42ch; line-height: 1.5; }
+@media (prefers-reduced-motion: no-preference) {
+  .vanim { animation: vgrow .9s cubic-bezier(.22,1,.36,1) both; }
+  @keyframes vgrow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  .vfade { animation: vfade .7s ease both; }
+  @keyframes vfade { from { opacity: 0; } to { opacity: 1; } }
+  .vdon { animation: vdon 1.1s cubic-bezier(.22,1,.36,1) both; }
+  @keyframes vdon { from { stroke-dasharray: 0 999; } }
+}
+
   </style>
 </head>
 <body>
@@ -210,6 +256,38 @@
 <div class="constat reveal"><span class="cn">10</span><p><strong>La localisation compte plus que le volume global</strong> — mais les chiffres publiés ne permettent pas de classer les acteurs entre eux. Microsoft déclare 50 % de son prélèvement et 48 % de sa consommation en zones de stress hydrique (FY2025) ; Google, 13 % de son prélèvement d'eau douce en zone à risque élevé ; Meta, 1 704 ML issus de zones à stress élevé ou extrême, en hausse de 25 % en un an. <strong>Ces trois valeurs ne rapportent ni les mêmes volumes, ni aux mêmes bases, ni selon les mêmes seuils de stress : aucun classement n'en découle.</strong> Ce qu'elles établissent en commun, c'est qu'une fraction significative de l'eau des grands opérateurs est prélevée là où elle manque. — <span class="conf eleve">ÉLEVÉE</span></p></div>
 <div class="constat reveal"><span class="cn">11</span><p><strong>Les comparaisons alimentaires les plus virales sont méthodologiquement biaisées.</strong> Les 15 415 L/kg de bœuf sont à 93 % de l'eau <strong>verte</strong> (pluie évapotranspirée), les 17 196 L/kg de chocolat à 98 %. Le poste comparable à l'eau d'un datacenter — de l'eau <strong>bleue</strong> évaporée — est de 550 L/kg pour le bœuf et de <strong>198 L/kg pour le chocolat, soit moins qu'un kilo de blé (342 L)</strong>. — <span class="conf eleve">ÉLEVÉE</span></p></div>
 <div class="constat reveal"><span class="cn">12</span><p><strong>À l'échelle systémique, l'ordre de grandeur avancé pour l'IA en 2025 est de 312 à 765 milliards de litres (direct + indirect), pour une puissance IA estimée entre 9,4 et 23 GW.</strong> Cette fourchette repose sur une estimation de puissance elle-même incertaine d'un facteur 2,4 : c'est une <strong>dérivation, pas une mesure</strong>. Nous ne lui adossons volontairement aucun référent de comparaison : les référents habituellement mobilisés (eau embouteillée, piscines olympiques) sont des volumes <em>manipulés</em> ou <em>stockés</em>, non de l'eau bleue <em>consommée</em>, et la comparaison serait trompeuse dans un sens comme dans l'autre. — <span class="conf faible">FAIBLE</span></p></div>
+<figure class="viz vfade">
+  <p class="viz-t">Où va l'eau d'une requête d'IA</p>
+  <p class="viz-s">Estimation GPT-3 (Li et al.) : l'essentiel n'est pas le refroidissement du centre de données, mais l'eau consommée pour produire son électricité.</p>
+  <div class="viz-lg">
+    <span><i style="background:var(--s2)"></i>Hors site — production d'électricité</span>
+    <span><i style="background:var(--s1)"></i>Sur site — refroidissement</span>
+  </div>
+  <svg viewBox="0 0 420 200" role="img" aria-label="87 % de l'eau d'une requête est consommée hors site pour produire l'électricité, 13 % sur site pour le refroidissement">
+    <g transform="translate(100,100)">
+      <circle r="62" fill="none" stroke="var(--s2)" stroke-width="30" class="vdon"
+              stroke-dasharray="339 390" transform="rotate(-90)" data-tip><title>Hors site — 87 % (14,704 mL sur 16,904)</title></circle>
+      <circle r="62" fill="none" stroke="var(--s1)" stroke-width="30"
+              stroke-dasharray="51 390" stroke-dashoffset="-343" transform="rotate(-90)" data-tip><title>Sur site — 13 % (2,200 mL sur 16,904)</title></circle>
+      <text class="vv" text-anchor="middle" y="-2" style="font-size:26px">87 %</text>
+      <text class="vm" text-anchor="middle" y="17">hors site</text>
+    </g>
+    <g transform="translate(210,58)">
+      <text class="vl" y="0">16,9 mL par requête au total</text>
+      <text class="vm" y="22">14,704 mL — l'eau de la centrale</text>
+      <text class="vm" y="42">2,200 mL — l'eau du datacenter</text>
+      <text class="vm" y="70" style="fill:var(--accent)">Une WUE basse ne dit rien</text>
+      <text class="vm" y="88" style="fill:var(--accent)">de l'impact réel.</text>
+    </g>
+  </svg>
+  <details class="viz-tbl"><summary>Voir les données</summary>
+    <table><thead><tr><th>Poste</th><th>mL / requête</th><th>Part</th></tr></thead>
+    <tbody><tr><td>Hors site (scope 2)</td><td>14,704</td><td>87 %</td></tr>
+    <tr><td>Sur site (scope 1)</td><td>2,200</td><td>13 %</td></tr></tbody></table>
+  </details>
+  <p class="viz-src">Li, Yang, Islam, Ren — <em>Making AI Less Thirsty</em>, moyenne États-Unis. Confiance : élevée sur la domination de l'indirect.</p>
+</figure>
+
 <h2 id="s2"><span class="hn">2</span>Notions indispensables</h2>
 <p>Sans ces quatre distinctions, aucun chiffre de ce dossier n'est interprétable.</p>
 <h3><span class="hn3">2.1</span>Prélèvement (<em>withdrawal</em>) vs consommation (<em>consumption</em>)</h3>
@@ -234,6 +312,39 @@
 <tr><td>AIE (implicite, via de Vries-Gao)</td><td><strong>0,56 L/kWh</strong></td><td>Non précisée</td><td>Datacenters mondiaux 2023</td></tr></tbody></table></div>
 <p><strong>Comparer le 0,12 d'AWS au 1,15 de Google est une erreur de catégorie.</strong> Par ailleurs, l'origine de la « moyenne du secteur de 0,84 L/kWh » avancée par Amazon n'est pas sourcée, et l'année de référence de son chiffre varie selon les pages d'Amazon. <strong>Confiance sur l'incomparabilité : ÉLEVÉE.</strong></p>
 <p>Fait notable : <strong>le rapport environnemental Google 2026 ne publie plus de WUE moyenne de flotte</strong> (seulement un PUE de 1,09). La valeur de 1,15 L/kWh n'existe que dans l'article technique d'août 2025.</p>
+<figure class="viz vfade">
+  <p class="viz-t">Prélever n'est pas consommer</p>
+  <p class="viz-s">Sur un même objet, l'écart entre les deux notions atteint un facteur 291. C'est la première source d'erreur du débat public — et l'échelle ci-dessous est logarithmique, sans quoi les barres de consommation seraient invisibles.</p>
+  <div class="viz-lg">
+    <span><i style="background:var(--s3)"></i>Prélevé — restitué au milieu pour l'essentiel</span>
+    <span><i style="background:var(--s2)"></i>Consommé — ne revient pas</span>
+  </div>
+  <svg viewBox="0 0 640 178" role="img" aria-label="Réacteur nucléaire en circuit ouvert : 168 litres prélevés par kWh contre 1,02 consommé. Smartphone : 92 900 litres prélevés contre 319 consommés.">
+    <g transform="translate(160,16)">
+      <rect class="vbar vanim" y="0" height="17" width="332" rx="4" fill="var(--s3)" data-tip><title>Nucléaire circuit ouvert — 168 L/kWh prélevés</title></rect>
+      <rect class="vbar vanim" y="21" height="17" width="4" rx="4" fill="var(--s2)" data-tip style="animation-delay:.15s"><title>Nucléaire circuit ouvert — 1,02 L/kWh consommé</title></rect>
+      <text class="vl" x="-12" y="14" text-anchor="end">Nucléaire</text>
+      <text class="vm" x="-12" y="31" text-anchor="end">circuit ouvert, par kWh</text>
+      <text class="vv" x="344" y="13" style="font-size:11.5px">168 L</text>
+      <text class="vv" x="16" y="34" fill="var(--s2)" style="font-size:11.5px">1,02 L — facteur 165</text>
+    </g>
+    <g transform="translate(160,94)">
+      <rect class="vbar vanim" y="0" height="17" width="440" rx="4" fill="var(--s3)" data-tip style="animation-delay:.08s"><title>Smartphone — 92 900 L prélevés sur le cycle de vie</title></rect>
+      <rect class="vbar vanim" y="21" height="17" width="145" rx="4" fill="var(--s2)" data-tip style="animation-delay:.23s"><title>Smartphone — 319 L consommés</title></rect>
+      <text class="vl" x="-12" y="14" text-anchor="end">Smartphone</text>
+      <text class="vm" x="-12" y="31" text-anchor="end">cycle de vie complet</text>
+      <text class="vv" x="452" y="13" style="font-size:11.5px">92 900 L</text>
+      <text class="vv" x="157" y="34" fill="var(--s2)" style="font-size:11.5px">319 L — facteur 291</text>
+    </g>
+  </svg>
+  <details class="viz-tbl"><summary>Voir les données</summary>
+    <table><thead><tr><th>Objet</th><th>Prélevé</th><th>Consommé</th><th>Facteur</th></tr></thead>
+    <tbody><tr><td>Réacteur nucléaire, circuit ouvert (1 kWh)</td><td>168 L</td><td>1,02 L</td><td>165×</td></tr>
+    <tr><td>Smartphone Fairphone 5 (cycle de vie)</td><td>92 900 L</td><td>319 L</td><td>291×</td></tr></tbody></table>
+  </details>
+  <p class="viz-src">Macknick et al. (2012) ; Fraunhofer IZM pour Fairphone (2024). Échelle logarithmique — les valeurs exactes sont dans le tableau.</p>
+</figure>
+
 <h2 id="s3"><span class="hn">3</span>Ce que consomme l'IA</h2>
 <h3><span class="hn3">3.1</span>L'entraînement</h3>
 <div class="tbl-wrap"><table class="data-table"><thead><tr><th>Élément</th><th>Valeur</th><th>Périmètre</th><th>Confiance</th></tr></thead><tbody>
@@ -245,6 +356,39 @@
 <div class="note reveal"><p>— <strong>Scope 1</strong> = 1 287 MWh (énergie IT, Patterson et al.) × WUE sur site 0,550 L/kWh = <strong>0,708 M L</strong>. Le WUE de Li et al. porte sur l'énergie IT, hors PUE.</p><p>— <strong>Scope 2</strong> = 1 287 MWh × PUE 1,170 (énergie totale tirée du réseau) × EWIF 3,142 L/kWh = <strong>4,731 M L</strong>.</p><p>Appliquer le PUE au scope 1 donnerait 0,828 M L : l'écart de 17 % avec le chiffre publié vient précisément de là. C'est le genre de détail qui fait diverger deux estimations « du même » objet.</p></div>
 <p><strong>Limites décisives.</strong> La localisation réelle de l'entraînement de GPT-3 <strong>n'est pas publique</strong> : les auteurs balaient les sites Microsoft. Le chiffre de 700 000 L est le plus cité au monde et le plus systématiquement sorti de son contexte — c'est le <strong>scope 1 seul</strong>, soit 13 % du total estimé. L'eau incorporée dans les puces (scope 3) est absente. Enfin, <strong>les 281 000 m³ de Mistral ne sont pas comparables aux 5 439 m³ de GPT-3</strong> : périmètre ACV contre périmètre opérationnel, et 18 mois d'usage cumulé contre le seul entraînement.</p>
 <p><strong>Ce qu'on peut retenir : ÉLEVÉE</strong> — l'entraînement d'un grand modèle représente un volume d'eau de l'ordre de quelques milliers à quelques centaines de milliers de mètres cubes selon le périmètre. <strong>FAIBLE</strong> — toute valeur précise.</p>
+<figure class="viz vfade">
+  <p class="viz-t">Ce que « l'eau d'une requête » veut dire, selon qui mesure</p>
+  <p class="viz-s">Trois chiffres publiés, un facteur 173 entre eux — et aucun ne mesure la même chose. Le périmètre pèse davantage que la technologie.</p>
+  <svg viewBox="0 0 640 210" role="img" aria-label="Google 0,26 mL, Li et al. 16,9 mL, Mistral 45 mL par requête — trois périmètres différents">
+    <line class="vgrid" x1="190" y1="8" x2="190" y2="182"/>
+    <g transform="translate(190,26)">
+      <rect class="vbar vanim" x="0" y="0" height="22" width="3" rx="4" fill="var(--s1)" data-tip style="animation-delay:.05s"><title>Google — 0,26 mL, scope 1 seul</title></rect>
+      <text class="vl" x="-12" y="16" text-anchor="end">Google</text>
+      <text class="vm" x="-12" y="33" text-anchor="end">refroidissement seul</text>
+      <text class="vv" x="14" y="16" fill="var(--s1)">0,26 mL</text>
+    </g>
+    <g transform="translate(190,88)">
+      <rect class="vbar vanim" x="0" y="0" height="22" width="163" rx="4" fill="var(--s1)" data-tip style="animation-delay:.2s"><title>Li et al. — 16,904 mL, scope 1 + 2</title></rect>
+      <text class="vl" x="-12" y="16" text-anchor="end">Li et al.</text>
+      <text class="vm" x="-12" y="33" text-anchor="end">+ électricité</text>
+      <text class="vv" x="175" y="16">16,9 mL</text>
+    </g>
+    <g transform="translate(190,150)">
+      <rect class="vbar vanim" x="0" y="0" height="22" width="434" rx="4" fill="var(--s1)" data-tip style="animation-delay:.35s"><title>Mistral — 45 mL, analyse de cycle de vie complète</title></rect>
+      <text class="vl" x="-12" y="16" text-anchor="end">Mistral</text>
+      <text class="vm" x="-12" y="33" text-anchor="end">cycle de vie complet</text>
+      <text class="vv" x="446" y="16">45 mL</text>
+    </g>
+  </svg>
+  <details class="viz-tbl"><summary>Voir les données</summary>
+    <table><thead><tr><th>Source</th><th>mL / requête</th><th>Périmètre</th></tr></thead>
+    <tbody><tr><td>Google (août 2025)</td><td>0,26</td><td>Scope 1 — refroidissement sur site</td></tr>
+    <tr><td>Li et al. (GPT-3)</td><td>16,904</td><td>Scope 1 + 2</td></tr>
+    <tr><td>Mistral (juillet 2025)</td><td>45</td><td>Analyse de cycle de vie complète</td></tr></tbody></table>
+  </details>
+  <p class="viz-src">Rapports d'entreprises et Li et al. Ces trois valeurs ne sont pas comparables entre elles — c'est précisément ce que montre le graphique.</p>
+</figure>
+
 <h3><span class="hn3">3.2</span>L'inférence</h3>
 <p>C'est ici que se joue l'essentiel du débat public, et c'est ici que les périmètres divergent le plus.</p>
 <div class="tbl-wrap"><table class="data-table"><thead><tr><th>Source</th><th>Valeur par requête</th><th>Périmètre exact</th><th>Confiance</th></tr></thead><tbody>
@@ -295,6 +439,53 @@
 <tr><td>1 canette de soda 33 cl <em>(prorata de la valeur 50 cl)</em></td><td>≈ 111 à 204 L</td><td><strong>≈ 5 à 82 L</strong> selon l'origine du sucre</td><td>variable</td></tr></tbody></table></div>
 <p><strong>Trois enseignements — Confiance : ÉLEVÉE.</strong></p>
 <ul><li><strong>Le chocolat, champion des chiffres-chocs, a une empreinte bleue plus faible qu'un kilo de blé</strong> (198 L contre 342 L). Le total induit en erreur sur la pression réelle sur la ressource.</li><li>Le pâturage extensif a la <strong>plus grande</strong> empreinte totale du bœuf (21 829 L) et la <strong>plus petite</strong> empreinte bleue. Contre-intuitif, et documenté.</li><li>Pour le soda, <strong>99,7 à 99,8 % de l'empreinte est en amont</strong> : l'empreinte opérationnelle de l'usine n'est que de 0,5 L — exactement l'eau devenue ingrédient. Le même écart amont/site vaut pour l'IA, en sens inverse.</li></ul>
+<figure class="viz vfade">
+  <p class="viz-t">Le chiffre qui circule, et celui qui compte</p>
+  <p class="viz-s">Les empreintes alimentaires spectaculaires sont surtout de l'eau de pluie. Le poste comparable à l'eau d'un centre de données, c'est l'eau bleue — prélevée dans les rivières et les nappes.</p>
+  <div class="viz-lg">
+    <span><i style="background:var(--s2)"></i>Empreinte totale (verte + bleue + grise)</span>
+    <span><i style="background:var(--s1)"></i>Eau bleue seule — le poste comparable</span>
+  </div>
+  <svg viewBox="0 0 640 250" role="img" aria-label="Chocolat 17 196 litres au total mais 198 litres d'eau bleue ; bœuf 15 415 contre 550 ; blé 1 827 contre 342 ; riz 1 673 contre 341">
+    <g transform="translate(120,14)">
+      <rect class="vbar vanim" y="0" height="17" width="470" rx="4" fill="var(--s2)" data-tip><title>Chocolat — 17 196 L au total</title></rect>
+      <rect class="vbar vanim" y="21" height="17" width="5" rx="4" fill="var(--s1)" data-tip style="animation-delay:.15s"><title>Chocolat — 198 L d'eau bleue</title></rect>
+      <text class="vl" x="-12" y="22" text-anchor="end">Chocolat</text>
+      <text class="vv" x="482" y="13" style="font-size:11.5px">17 196 L</text>
+      <text class="vv" x="17" y="34" fill="var(--s1)" style="font-size:11.5px">198 L</text>
+    </g>
+    <g transform="translate(120,74)">
+      <rect class="vbar vanim" y="0" height="17" width="421" rx="4" fill="var(--s2)" data-tip style="animation-delay:.08s"><title>Bœuf — 15 415 L au total</title></rect>
+      <rect class="vbar vanim" y="21" height="17" width="15" rx="4" fill="var(--s1)" data-tip style="animation-delay:.23s"><title>Bœuf — 550 L d'eau bleue</title></rect>
+      <text class="vl" x="-12" y="22" text-anchor="end">Bœuf</text>
+      <text class="vv" x="433" y="13" style="font-size:11.5px">15 415 L</text>
+      <text class="vv" x="27" y="34" fill="var(--s1)" style="font-size:11.5px">550 L</text>
+    </g>
+    <g transform="translate(120,134)">
+      <rect class="vbar vanim" y="0" height="17" width="50" rx="4" fill="var(--s2)" data-tip style="animation-delay:.16s"><title>Blé — 1 827 L au total</title></rect>
+      <rect class="vbar vanim" y="21" height="17" width="9" rx="4" fill="var(--s1)" data-tip style="animation-delay:.31s"><title>Blé — 342 L d'eau bleue</title></rect>
+      <text class="vl" x="-12" y="22" text-anchor="end">Blé</text>
+      <text class="vv" x="62" y="13" style="font-size:11.5px">1 827 L</text>
+      <text class="vv" x="21" y="34" fill="var(--s1)" style="font-size:11.5px">342 L</text>
+    </g>
+    <g transform="translate(120,194)">
+      <rect class="vbar vanim" y="0" height="17" width="46" rx="4" fill="var(--s2)" data-tip style="animation-delay:.24s"><title>Riz — 1 673 L au total</title></rect>
+      <rect class="vbar vanim" y="21" height="17" width="9" rx="4" fill="var(--s1)" data-tip style="animation-delay:.39s"><title>Riz — 341 L d'eau bleue</title></rect>
+      <text class="vl" x="-12" y="22" text-anchor="end">Riz</text>
+      <text class="vv" x="58" y="13" style="font-size:11.5px">1 673 L</text>
+      <text class="vv" x="21" y="34" fill="var(--s1)" style="font-size:11.5px">341 L</text>
+    </g>
+  </svg>
+  <details class="viz-tbl"><summary>Voir les données</summary>
+    <table><thead><tr><th>Produit (1 kg)</th><th>Total (L)</th><th>Eau bleue (L)</th><th>Part verte</th></tr></thead>
+    <tbody><tr><td>Chocolat</td><td>17 196</td><td>198</td><td>98 %</td></tr>
+    <tr><td>Bœuf</td><td>15 415</td><td>550</td><td>93 %</td></tr>
+    <tr><td>Blé</td><td>1 827</td><td>342</td><td>70 %</td></tr>
+    <tr><td>Riz</td><td>1 673</td><td>341</td><td>68 %</td></tr></tbody></table>
+  </details>
+  <p class="viz-src">Mekonnen &amp; Hoekstra (2011, 2012), données 1996–2005. <strong style="color:var(--accent)">Le chocolat a une empreinte bleue plus faible qu'un kilo de blé.</strong></p>
+</figure>
+
 <h3><span class="hn3">4.3</span>Vie courante (prélèvements, sauf mention)</h3>
 <div class="tbl-wrap"><table class="data-table"><thead><tr><th>Usage</th><th>Volume</th><th>Note</th></tr></thead><tbody>
 <tr><td>Douche (8 L/min × 7,5 min)</td><td><strong>60 L</strong> — fourchette réelle 25 à 120 L</td><td>CIEau : 50 à 80 L. Deux sources concordantes → ÉLEVÉE</td></tr>
@@ -325,6 +516,59 @@
 <tr><td><strong>Hydroélectricité</strong></td><td><strong>245 en moyenne</strong>, 1,1 à 3 046 selon le barrage</td><td>—</td><td>—</td></tr></tbody></table></div>
 <p><strong>Quatre lectures — Confiance : ÉLEVÉE sauf mention.</strong></p>
 <ul><li>Le nucléaire en circuit ouvert est <strong>le cas d'école</strong> de la confusion : 165× d'écart sur la même centrale. Le rejet thermique reste un impact écologique réel, mais ce n'est pas de la consommation d'eau.</li><li>Le <strong>solaire à concentration humide consomme plus d'eau par kWh que le nucléaire ou le charbon</strong>, et il est généralement implanté en zone aride.</li><li>Les zéros du PV et de l'éolien sont des <strong>zéros opérationnels</strong>, pas des zéros de cycle de vie : la purification du silicium, l'acier et le béton sont hors périmètre. Dire « le solaire ne consomme pas d'eau » sur cette base est abusif. <strong>Confiance sur le cycle de vie complet : ON NE SAIT PAS, à partir de cette source.</strong></li><li>L'hydroélectricité est de loin la plus consommatrice par kWh, avec une variabilité de facteur 2 800 — mais <strong>l'allocation de l'évaporation du réservoir à l'électricité fait l'objet d'une controverse méthodologique ouverte que les sources consultées dans ce travail ne documentent pas</strong> (un barrage sert aussi à l'irrigation, à la régulation des crues et aux loisirs : lui imputer toute l'évaporation est un choix, pas une évidence). <strong>Confiance sur la valeur centrale de 245 L/kWh : FAIBLE.</strong></li></ul>
+<figure class="viz vfade">
+  <p class="viz-t">L'eau consommée pour produire un kilowattheure</p>
+  <p class="viz-s">Puisque l'essentiel de l'eau de l'IA est celle de sa centrale, le mix électrique du pays où tourne le centre de données décide de presque tout.</p>
+  <svg viewBox="0 0 640 232" role="img" aria-label="Eau consommée par kWh : hydroélectricité 245 litres en moyenne, solaire à concentration 3,43, charbon 2,60, nucléaire 2,54, gaz 0,78, photovoltaïque 0,004, éolien 0">
+    <g transform="translate(200,10)">
+      <rect class="vbar vanim" y="0" height="18" width="420" rx="4" fill="var(--s4)" data-tip><title>Hydroélectricité — 245 L/kWh en moyenne (1,1 à 3 046 selon le barrage)</title></rect>
+      <text class="vl" x="-12" y="14" text-anchor="end">Hydroélectricité</text>
+      <text class="vv" x="432" y="14" style="font-size:11.5px">245 L</text>
+    </g>
+    <g transform="translate(200,40)">
+      <rect class="vbar vanim" y="0" height="18" width="106" rx="4" fill="var(--s1)" data-tip style="animation-delay:.06s"><title>Solaire à concentration humide — 3,43 L/kWh</title></rect>
+      <text class="vl" x="-12" y="14" text-anchor="end">Solaire concentré</text>
+      <text class="vv" x="118" y="14" style="font-size:11.5px">3,43 L</text>
+    </g>
+    <g transform="translate(200,70)">
+      <rect class="vbar vanim" y="0" height="18" width="80" rx="4" fill="var(--s1)" data-tip style="animation-delay:.12s"><title>Charbon avec tour de refroidissement — 2,60 L/kWh</title></rect>
+      <text class="vl" x="-12" y="14" text-anchor="end">Charbon (tour)</text>
+      <text class="vv" x="92" y="14" style="font-size:11.5px">2,60 L</text>
+    </g>
+    <g transform="translate(200,100)">
+      <rect class="vbar vanim" y="0" height="18" width="78" rx="4" fill="var(--s1)" data-tip style="animation-delay:.18s"><title>Nucléaire avec tour de refroidissement — 2,54 L/kWh</title></rect>
+      <text class="vl" x="-12" y="14" text-anchor="end">Nucléaire (tour)</text>
+      <text class="vv" x="90" y="14" style="font-size:11.5px">2,54 L</text>
+    </g>
+    <g transform="translate(200,130)">
+      <rect class="vbar vanim" y="0" height="18" width="24" rx="4" fill="var(--s1)" data-tip style="animation-delay:.24s"><title>Gaz cycle combiné — 0,78 L/kWh</title></rect>
+      <text class="vl" x="-12" y="14" text-anchor="end">Gaz (cycle combiné)</text>
+      <text class="vv" x="36" y="14" style="font-size:11.5px">0,78 L</text>
+    </g>
+    <g transform="translate(200,160)">
+      <rect class="vbar vanim" y="0" height="18" width="3" rx="4" fill="var(--s1)" data-tip style="animation-delay:.3s"><title>Photovoltaïque — 0,004 L/kWh</title></rect>
+      <text class="vl" x="-12" y="14" text-anchor="end">Photovoltaïque</text>
+      <text class="vv" x="15" y="14" style="font-size:11.5px">0,004 L</text>
+    </g>
+    <g transform="translate(200,190)">
+      <rect class="vbar" y="0" height="18" width="2" rx="4" fill="var(--grey-3)"/>
+      <text class="vl" x="-12" y="14" text-anchor="end">Éolien</text>
+      <text class="vv" x="14" y="14" style="font-size:11.5px;fill:var(--viz-ink-2)">0 L</text>
+    </g>
+  </svg>
+  <details class="viz-tbl"><summary>Voir les données</summary>
+    <table><thead><tr><th>Source</th><th>Consommé (L/kWh)</th><th>Fourchette</th></tr></thead>
+    <tbody><tr><td>Hydroélectricité</td><td>245</td><td>1,1 – 3 046 selon le barrage</td></tr>
+    <tr><td>Solaire à concentration (humide)</td><td>3,43</td><td>2,74 – 4,20</td></tr>
+    <tr><td>Charbon, tour de refroidissement</td><td>2,60</td><td>1,82 – 4,16</td></tr>
+    <tr><td>Nucléaire, tour de refroidissement</td><td>2,54</td><td>2,20 – 3,20</td></tr>
+    <tr><td>Gaz cycle combiné, tour</td><td>0,78</td><td>0,49 – 1,14</td></tr>
+    <tr><td>Photovoltaïque</td><td>0,004</td><td>0 – 0,019</td></tr>
+    <tr><td>Éolien</td><td>0</td><td>0 – 0</td></tr></tbody></table>
+  </details>
+  <p class="viz-src">Macknick et al. (2012) ; Mekonnen &amp; Hoekstra (2012) pour l'hydroélectricité. Valeurs opérationnelles : hors fabrication des équipements. Les zéros du solaire et de l'éolien sont des zéros opérationnels, pas de cycle de vie.</p>
+</figure>
+
 <h3><span class="hn3">4.6</span>Ordres de grandeur — comparaisons honnêtes</h3>
 <p><em>Les conversions ci-dessous sont des <strong>calculs dérivés</strong> par l'auteur ; elles n'ont de valeur qu'illustrative. Elles ne retiennent que des référents d'eau bleue <strong>consommée</strong>, seuls comparables à l'eau d'un datacenter.</em></p>
 <div class="note reveal"><p><strong>Pourquoi la douche ne figure pas dans ce tableau.</strong> C'est la comparaison la plus répandue, et elle est fautive : les 60 L d'une douche sont un <strong>prélèvement</strong>, presque intégralement restitué au milieu après traitement. Les mettre en regard de millilitres <em>consommés</em> par requête surestime mécaniquement le nombre de requêtes équivalentes. La fraction réellement consommée d'une douche (évaporation, pertes réseau) n'est pas documentée dans les sources consultées — nous ne pouvons donc pas la corriger, seulement l'écarter.</p></div>
