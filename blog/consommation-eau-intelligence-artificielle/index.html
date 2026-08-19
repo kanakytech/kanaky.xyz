@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Combien d'eau consomme vraiment l'IA ? Le rapport complet | Kanaky Tech</title>
+  <meta name="description" content="Un rapport d'évaluation sur la consommation d'eau de l'intelligence artificielle : 12 constats avec niveaux de confiance, comparaisons chiffrées avec le quotidien, et l'anatomie du chiffre viral des 500 mL par requête." />
+  <link rel="canonical" href="https://kanaky.xyz/blog/consommation-eau-intelligence-artificielle/" />
+  <link rel="alternate" hreflang="fr" href="https://kanaky.xyz/blog/consommation-eau-intelligence-artificielle/" />
+  <link rel="alternate" hreflang="x-default" href="https://kanaky.xyz/blog/consommation-eau-intelligence-artificielle/" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Combien d'eau consomme vraiment l'IA ?" />
+  <meta property="og:description" content="12 constats avec niveaux de confiance, des comparaisons honnêtes avec le quotidien, et l'anatomie du chiffre viral des 500 mL par requête." />
+  <meta property="og:url" content="https://kanaky.xyz/blog/consommation-eau-intelligence-artificielle/" />
+  <meta property="og:site_name" content="Kanaky Tech" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Combien d'eau consomme vraiment l'IA ?" />
+  <meta name="twitter:description" content="Rapport sourcé : 12 constats, niveaux de confiance déclarés, comparaisons avec le quotidien." />
+  <meta property="article:published_time" content="2026-08-19" />
+  <meta property="article:author" content="Kevyn Wahuzue" />
+  <meta property="article:section" content="Research" />
+  <link rel="icon" type="image/jpeg" href="/assets/kanaky-tech-logo.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/kanaky.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://kanaky.xyz/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://kanaky.xyz/blog/" },
+          { "@type": "ListItem", "position": 3, "name": "Consommation d'eau de l'IA", "item": "https://kanaky.xyz/blog/consommation-eau-intelligence-artificielle/" }
+        ]
+      },
+      {
+        "@type": "Report",
+        "headline": "Combien d'eau consomme vraiment l'IA ? Le rapport complet",
+        "datePublished": "2026-08-19",
+        "dateModified": "2026-08-19",
+        "inLanguage": "fr",
+        "author": { "@type": "Person", "name": "Kevyn Wahuzue", "url": "https://www.linkedin.com/in/kevyn-wahuzue/" },
+        "publisher": { "@type": "Organization", "name": "Kanaky Tech", "logo": { "@type": "ImageObject", "url": "/assets/kanaky-tech-logo.jpg" } },
+        "mainEntityOfPage": "https://kanaky.xyz/blog/consommation-eau-intelligence-artificielle/",
+        "description": "Un rapport d'évaluation sur la consommation d'eau de l'intelligence artificielle : 12 constats avec niveaux de confiance, comparaisons chiffrées avec le quotidien, et l'anatomie du chiffre viral des 500 mL par requête.",
+        "about": [
+          { "@type": "Thing", "name": "Consommation d'eau des centres de données" },
+          { "@type": "Thing", "name": "Empreinte environnementale de l'intelligence artificielle" },
+          { "@type": "Thing", "name": "Empreinte eau" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Une requête ChatGPT consomme-t-elle 500 mL d'eau ?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Non. La source d'origine (Li et al., arXiv:2304.03271) écrit l'inverse : une bouteille de 500 mL pour environ 10 à 50 réponses. La formule virale se trompe donc d'un facteur 10 à 50. De plus, 87 % de ce volume est l'eau consommée pour produire l'électricité, pas l'eau du centre de données." }
+          },
+          {
+            "@type": "Question",
+            "name": "Quelle est la différence entre eau prélevée et eau consommée ?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Le prélèvement est le volume sorti d'une rivière ou d'une nappe, dont la majeure partie peut être restituée. La consommation est la fraction qui ne revient pas au milieu, essentiellement évaporée. Sur un même objet, l'écart atteint un facteur 165 pour un réacteur nucléaire en circuit ouvert et 291 pour un smartphone. Confondre les deux est la principale source d'erreur du débat public." }
+          },
+          {
+            "@type": "Question",
+            "name": "Sait-on combien d'eau l'IA consomme au total ?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Non. Aucun opérateur — Google, Microsoft, Meta — ne ventile son volume d'eau par charge de travail. Deux acteurs publient une intensité par requête, à périmètres non comparables. Toute affirmation de la forme « l'IA a consommé X litres » est une inférence, jamais une mesure." }
+          },
+          {
+            "@type": "Question",
+            "name": "Le chocolat consomme-t-il vraiment 17 000 litres d'eau par kilo ?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Ce chiffre existe, mais 98 % est de l'eau verte, c'est-à-dire de la pluie évapotranspirée par les cultures. Le poste comparable à l'eau d'un centre de données est l'eau bleue : 198 litres par kilo de chocolat, soit moins qu'un kilo de blé (342 litres)." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+
+    .article-hero { padding: 160px 48px 56px; border-bottom: 1px solid var(--border); }
+    .article-hero .wrap { max-width: 820px; margin: 0 auto; }
+    .article-hero h1 { font-size: clamp(32px, 4.6vw, 58px); font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; margin: 18px 0 22px; }
+    .article-hero .lead { font-size: 18px; color: var(--grey-4); line-height: 1.7; }
+    .article-meta-row { display: flex; align-items: center; gap: 14px; margin-top: 26px; font-size: 13px; color: var(--grey-3); flex-wrap: wrap; }
+    .article-meta-row .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--grey-3); }
+    .article-body { padding: 64px 48px; }
+    .article-body .wrap { max-width: 760px; margin: 0 auto; }
+    /* data table */
+    .data-table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 15px; }
+    .data-table caption { text-align: left; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--grey-3); margin-bottom: 12px; }
+    .data-table th, .data-table td { text-align: left; padding: 11px 14px; border-bottom: 1px solid var(--border); }
+    .data-table thead th { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--grey-3); font-weight: 600; }
+    .data-table td.num { text-align: right; font-variant-numeric: tabular-nums; color: var(--white); font-weight: 600; }
+    .data-table tbody tr:hover { background: rgba(255,255,255,0.02); }
+    .data-table tfoot td { padding-top: 14px; font-weight: 700; color: var(--accent); border-bottom: none; }
+    .data-table tfoot td.num { color: var(--accent); }
+    /* dictionary inline CTA */
+    .dict-cta { margin: 40px 0; padding: 28px 30px; border: 1px solid rgba(200,240,96,0.25); background: rgba(200,240,96,0.04); }
+    .dict-cta h3 { font-size: 20px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: -0.01em; }
+    .dict-cta p { font-size: 15px; color: var(--grey-3); line-height: 1.6; margin-bottom: 18px; }
+    .dict-cta a.btn-primary { display: inline-flex; align-items: center; gap: 8px; color: var(--black); border-bottom: none; }
+    .dict-cta a.btn-primary:hover { color: var(--black); border-bottom: none; }
+    .article-figure { margin: 38px 0; }
+    .article-figure img { width: 100%; height: auto; display: block; border: 1px solid var(--border); border-radius: 8px; }
+    .article-figure figcaption { margin-top: 10px; font-size: 13px; color: var(--grey-3); line-height: 1.5; text-align: center; }
+    @media (max-width: 768px) {
+      .article-hero { padding: 120px 24px 44px; }
+      .article-body { padding: 48px 24px; }
+      .data-table { font-size: 14px; }
+      .data-table th, .data-table td { padding: 9px 8px; }
+    }
+  
+
+  /* ── Spécifique au rapport ── */
+  /* Rapport : deux ajouts au CSS du site, tous deux porteurs d'information —
+     les pastilles de confiance (chaque constat en porte une) et la numérotation
+     des sections (la structure du rapport est réellement numérotée). */
+  .constat { display:grid; grid-template-columns:38px 1fr; gap:16px; align-items:start;
+    padding:20px 22px; margin:0 0 12px; background:var(--grey-2); border-radius:4px;
+    border-left:2px solid var(--accent); }
+  .constat p { margin:0; }
+  .cn { font-size:1.25rem; font-weight:700; color:var(--accent); line-height:1.35;
+    font-variant-numeric:tabular-nums; }
+  .conf { display:inline-block; font-size:11px; font-weight:700; letter-spacing:.09em;
+    text-transform:uppercase; padding:2px 9px; border-radius:2px; white-space:nowrap;
+    border:1px solid currentColor; vertical-align:middle; }
+  .conf.eleve { color:#8FD9A8; } .conf.moyen { color:#E5B45F; }
+  .conf.faible { color:#E58F7C; } .conf.neutre { color:var(--grey-4); }
+  .conf::before { content:"Confiance "; font-weight:500; opacity:.6; }
+  .flag { color:#E58F7C; } .flag.amb { color:#E5B45F; }
+  .note { margin:26px 0; padding:20px 24px; background:var(--grey-1);
+    border-left:2px solid var(--grey-3); border-radius:4px; font-size:.95rem; }
+  .note p:last-child { margin-bottom:0; }
+  .tbl-wrap { overflow-x:auto; margin:26px 0 32px; }
+  .tbl-wrap .data-table { margin:0; min-width:520px; }
+  .hn { display:block; font-size:12px; font-weight:700; letter-spacing:.14em;
+    color:var(--accent); margin-bottom:10px; font-variant-numeric:tabular-nums; }
+  .hn3 { color:var(--accent); margin-right:9px; font-variant-numeric:tabular-nums; }
+  .prose h2 { scroll-margin-top:90px; }
+  </style>
+</head>
+<body>
+
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <nav>
+    <a href="/" class="logo-mark">
+      <img class="logo-img" src="/assets/kanaky-tech-logo.jpg" alt="Kanaky Tech logo" />
+      <span class="logo-text">Kanaky Tech</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/ai-audit/">AI Audit</a></li>
+      <li><a href="/case-studies/">Case Studies</a></li>
+      <li><a href="/blog/" style="color:var(--white);">Blog</a></li>
+      <li><a href="/contact/" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="/#services">Services</a>
+    <a href="/ai-audit/">AI Audit</a>
+    <a href="/case-studies/">Case Studies</a>
+    <a href="/guides/">Guides</a>
+    <a href="/marketplace/">Marketplace</a>
+    <a href="/blog/">Blog</a>
+    <a href="/contact/">Contact</a>
+  </div>
+
+  
+  <header class="article-hero">
+    <div class="wrap">
+      <div class="breadcrumb reveal"><a href="/">Accueil</a><span>/</span><a href="/blog/">Blog</a><span>/</span>Consommation d'eau de l'IA</div>
+      <span class="eyebrow reveal" style="margin-top:18px;">Rapport d'évaluation · Méthode inspirée du GIEC</span>
+      <h1 class="reveal delay-1">Combien d'eau consomme <span style="font-weight:300;color:var(--grey-4);">vraiment l'intelligence artificielle&nbsp;?</span></h1>
+      <p class="lead reveal delay-2">Le débat public sur l'eau et l'IA circule sur des chiffres rarement vérifiés et presque jamais accompagnés de leur périmètre. Ce rapport rassemble ce que les sources primaires établissent réellement — avec, pour chaque affirmation, son niveau de confiance, et pour chaque comparaison, ce qu'elle mesure exactement.</p>
+      <div class="article-meta-row reveal delay-3">
+        <span>Par Kevyn Wahuzue</span><span class="dot"></span><span>Kanaky Tech · Auckland</span><span class="dot"></span><span>19 août 2026</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="article-body">
+    <div class="wrap">
+
+      <div class="answer-block reveal">
+        <div class="ab-q">Une requête ChatGPT consomme-t-elle vraiment 500 mL d'eau ?</div>
+        <p><strong>Non — la formule virale se trompe d'un facteur 10 à 50.</strong> L'étude d'origine énonce l'inverse : une bouteille de 500 mL pour <em>environ 10 à 50 réponses</em>. Et dans ce volume, <strong>87 % de l'eau n'est pas celle du centre de données</strong> : c'est celle consommée pour produire l'électricité qu'il absorbe. Plus fondamentalement, aucun opérateur ne publie de volume d'eau attribué à l'IA — tout chiffre global est une inférence, jamais une mesure.</p>
+      </div>
+
+      <div class="prose">
+<h2 id="s1"><span class="hn">1</span>Résumé pour décideurs</h2>
+<div class="constat reveal"><span class="cn">1</span><p><strong>Aucun opérateur ne ventile son volume d'eau total par charge de travail IA.</strong> Ni Google (rapport 2026), ni Microsoft (FY2025), ni Meta (2024) n'indiquent quelle part de leurs mètres cubes revient à l'IA. Deux acteurs (Google, Mistral) publient une <strong>intensité par requête</strong>, à périmètres non comparables entre eux et non raccordable aux volumes de flotte. Autrement dit : on dispose de ratios unitaires, jamais d'un volume absolu attribué à l'IA. Toute phrase de la forme « l'IA a consommé X litres » est donc une <strong>inférence</strong>, jamais une mesure. <em>(de Vries-Gao, Patterns, 17 déc. 2025 — constat vérifié indépendamment dans le cadre de ce travail)</em> — <span class="conf eleve">ÉLEVÉE</span></p></div>
+<div class="constat reveal"><span class="cn">2</span><p><strong>La confusion prélèvement / consommation produit des écarts d'un facteur 14 à 291 sur un même objet.</strong> Un réacteur nucléaire en circuit ouvert prélève 168 L/kWh mais n'en consomme que 1,02 (facteur 165). Un smartphone Fairphone 5 prélève 92 900 L sur son cycle de vie mais n'en consomme que 319 (facteur 291). Pour l'électricité américaine, le facteur d'intensité en eau est de 3,14 L/kWh en consommation contre 43,8 L/kWh en prélèvement (facteur 14). — <span class="conf eleve">ÉLEVÉE</span></p></div>
+<div class="constat reveal"><span class="cn">3</span><p><strong>Pour l'IA, l'essentiel de l'eau n'est pas dans le datacenter mais dans la centrale électrique.</strong> Dans l'estimation de référence pour GPT-3, 87 % de l'eau consommée à l'entraînement (4,731 M L sur 5,439 M L) est du scope 2 hors site. L'AIE, relayée par de Vries-Gao, donne 73 % d'indirect pour l'ensemble des datacenters en 2023. — <span class="conf moyen">ÉLEVÉE sur le fait que l&#x27;indirect domine ; MOYENNE sur la proportion exacte</span></p></div>
+<div class="constat reveal"><span class="cn">4</span><p><strong>C'est précisément ce scope 2 dominant qui est le plus mal connu.</strong> Les estimations d'intensité en eau de l'électricité varient de 1,04 L/kWh (hypothèse AIE) à 3,40–5,3 L/kWh (données réellement déclarées par les entreprises, Siddik et al.) : un facteur 3,8 à 5 sur le poste qui pèse le plus lourd. — <span class="conf faible">ÉLEVÉE sur l&#x27;existence de l&#x27;écart ; FAIBLE sur la valeur juste</span></p></div>
+<div class="constat reveal"><span class="cn">5</span><p><strong>Le chiffre « une bouteille de 500 mL par requête » est faux d'un facteur 10 à 50.</strong> La formulation d'origine (Li et al.) est « <strong>une bouteille de 500 mL pour environ 10 à 50 réponses</strong> ». Voir la section 6. — <span class="conf eleve">ÉLEVÉE</span></p></div>
+<div class="constat reveal"><span class="cn">6</span><p><strong>Les estimations par requête varient d'un facteur ~170 entre acteurs, pour des raisons qui ne sont pas séparables en l'état.</strong> L'écart combine au moins trois causes : le périmètre (scope 1 seul / scope 1+2 / analyse de cycle de vie), la génération de modèle et de matériel (à périmètre identique — scope 1 seul —, 2,200 mL pour GPT-3 en 2020 contre 0,26 mL pour Gemini en 2025, soit un facteur 8,5), et l'unité mesurée (prompt unique contre conversation complète). La part respective de ces causes n'est pas quantifiable avec les sources publiques. Google annonce 0,26 mL par prompt Gemini médian (refroidissement sur site seul, scope 1) ; Mistral annonce 45 mL par réponse de 400 tokens (analyse de cycle de vie complète) ; Li et al. donnent 16,9 mL pour GPT-3 (scope 1 + 2). Ces trois chiffres ne mesurent pas la même chose et ne sont <strong>pas</strong> comparables. — <span class="conf eleve">ÉLEVÉE</span></p></div>
+<div class="constat reveal"><span class="cn">7</span><p><strong>Google démontre elle-même qu'un simple changement de périmètre double le résultat</strong> : 0,12 mL (méthode « existante ») contre 0,26 mL (méthode « comprehensive »), même modèle, même mois. Google est à ce jour le seul acteur à publier les deux. — <span class="conf eleve">ÉLEVÉE</span></p></div>
+<div class="constat reveal"><span class="cn">8</span><p><strong>Un chiffre unique d'« eau par requête » n'a pas de sens physique.</strong> Selon le site Microsoft retenu, l'eau consommée par requête GPT-3 va de 7,1 mL (Irlande) à 47,5 mL (État de Washington), soit un facteur 6,7 ; l'intensité en eau des réseaux électriques américains varie de 0,68 à 11,98 L/kWh, soit un facteur 17,6. — <span class="conf eleve">ÉLEVÉE</span></p></div>
+<div class="constat reveal"><span class="cn">9</span><p><strong>L'efficacité par requête s'améliore vite, et les volumes absolus augmentent vite aussi.</strong> Google rapporte une division par 33 de l'énergie par prompt en 12 mois (mai 2024 → mai 2025), et sur une période chevauchante une <strong>hausse de 34 %</strong> de sa consommation d'eau absolue (2024 → 2025). Microsoft : +22 % en un an, +105 % depuis FY20. Aucune source consultée ne quantifie la part de ces hausses attribuable à l'IA. — <span class="conf eleve">ÉLEVÉE sur les deux séries ; l&#x27;attribution à l&#x27;IA est indéterminée</span></p></div>
+<div class="constat reveal"><span class="cn">10</span><p><strong>La localisation compte plus que le volume global</strong> — mais les chiffres publiés ne permettent pas de classer les acteurs entre eux. Microsoft déclare 50 % de son prélèvement et 48 % de sa consommation en zones de stress hydrique (FY2025) ; Google, 13 % de son prélèvement d'eau douce en zone à risque élevé ; Meta, 1 704 ML issus de zones à stress élevé ou extrême, en hausse de 25 % en un an. <strong>Ces trois valeurs ne rapportent ni les mêmes volumes, ni aux mêmes bases, ni selon les mêmes seuils de stress : aucun classement n'en découle.</strong> Ce qu'elles établissent en commun, c'est qu'une fraction significative de l'eau des grands opérateurs est prélevée là où elle manque. — <span class="conf eleve">ÉLEVÉE</span></p></div>
+<div class="constat reveal"><span class="cn">11</span><p><strong>Les comparaisons alimentaires les plus virales sont méthodologiquement biaisées.</strong> Les 15 415 L/kg de bœuf sont à 93 % de l'eau <strong>verte</strong> (pluie évapotranspirée), les 17 196 L/kg de chocolat à 98 %. Le poste comparable à l'eau d'un datacenter — de l'eau <strong>bleue</strong> évaporée — est de 550 L/kg pour le bœuf et de <strong>198 L/kg pour le chocolat, soit moins qu'un kilo de blé (342 L)</strong>. — <span class="conf eleve">ÉLEVÉE</span></p></div>
+<div class="constat reveal"><span class="cn">12</span><p><strong>À l'échelle systémique, l'ordre de grandeur avancé pour l'IA en 2025 est de 312 à 765 milliards de litres (direct + indirect), pour une puissance IA estimée entre 9,4 et 23 GW.</strong> Cette fourchette repose sur une estimation de puissance elle-même incertaine d'un facteur 2,4 : c'est une <strong>dérivation, pas une mesure</strong>. Nous ne lui adossons volontairement aucun référent de comparaison : les référents habituellement mobilisés (eau embouteillée, piscines olympiques) sont des volumes <em>manipulés</em> ou <em>stockés</em>, non de l'eau bleue <em>consommée</em>, et la comparaison serait trompeuse dans un sens comme dans l'autre. — <span class="conf faible">FAIBLE</span></p></div>
+<h2 id="s2"><span class="hn">2</span>Notions indispensables</h2>
+<p>Sans ces quatre distinctions, aucun chiffre de ce dossier n'est interprétable.</p>
+<h3><span class="hn3">2.1</span>Prélèvement (<em>withdrawal</em>) vs consommation (<em>consumption</em>)</h3>
+<ul><li><strong>Prélèvement</strong> : volume sorti d'une rivière, d'une nappe ou d'un réseau. La majeure partie peut être restituée au milieu.</li><li><strong>Consommation</strong> : fraction qui ne revient pas au bassin — évaporée, incorporée au produit, ou rejetée ailleurs.</li></ul>
+<p>Dans une tour de refroidissement de datacenter alimentée en eau de bonne qualité, <strong>environ 80 % du prélèvement est évaporé</strong>, donc consommé (Li et al., section 2.2 ; ratio confirmé indépendamment par Google). Pour un refroidissement à air avec assistance évaporative, Meta rapporte ~70 %. Un datacenter est donc, contrairement à une centrale en circuit ouvert ou à un usage domestique, une installation où prélèvement et consommation sont du même ordre de grandeur. <span class="conf eleve">ÉLEVÉE</span></p>
+<h3><span class="hn3">2.2</span>Eau sur site (scope 1) vs hors site (scope 2)</h3>
+<ul><li><strong>Sur site</strong> : le refroidissement du bâtiment.</li><li><strong>Hors site</strong> : l'eau consommée pour produire l'électricité que le datacenter absorbe (refroidissement des centrales, évaporation des retenues hydroélectriques).</li></ul>
+<p>Le scope 3 — eau incorporée dans la fabrication des puces et des serveurs — est exclu de la quasi-totalité des chiffres publics, faute de données. Li et al. l'excluent explicitement.</p>
+<p>Conséquence directe : <strong>une WUE (efficacité sur site) basse ne signifie pas un impact hydrique faible.</strong> Meta affiche 0,19 L/kWh grâce au refroidissement à air, technique qui consomme davantage d'électricité — donc davantage d'eau hors site. L'impact est déplacé, pas supprimé. <span class="conf eleve">ÉLEVÉE</span></p>
+<h3><span class="hn3">2.3</span>Eau verte, bleue, grise (<em>Water Footprint Assessment Manual</em>, Hoekstra et al., 2011)</h3>
+<div class="tbl-wrap"><table class="data-table"><thead><tr><th>Couleur</th><th>Définition</th><th>Comparable à l'eau d'un datacenter ?</th></tr></thead><tbody>
+<tr><td><strong>Verte</strong></td><td>Pluie stockée dans le sol, évapotranspirée par la plante. Pas un prélèvement.</td><td><strong>Non</strong></td></tr>
+<tr><td><strong>Bleue</strong></td><td>Eau de surface ou souterraine prélevée <strong>et consommée</strong>.</td><td><strong>Oui</strong> — c'est le seul poste comparable</td></tr>
+<tr><td><strong>Grise</strong></td><td>Volume théorique nécessaire pour diluer les polluants jusqu'aux normes. <strong>Indicateur de pollution, pas d'eau consommée.</strong> Son addition aux deux autres est contestée dans la littérature.</td><td><strong>Non</strong></td></tr></tbody></table></div>
+<p>L'eau d'un datacenter est quasi exclusivement de l'eau <strong>bleue évaporée</strong>. Toute comparaison avec un total verte+bleue+grise est une erreur de catégorie. <span class="conf eleve">ÉLEVÉE</span></p>
+<h3><span class="hn3">2.4</span>WUE (<em>Water Usage Effectiveness</em>)</h3>
+<p>Litres d'eau par kWh de charge informatique. <strong>Piège majeur : il en existe deux variantes non comparables.</strong></p>
+<div class="tbl-wrap"><table class="data-table"><thead><tr><th>Acteur</th><th>Valeur</th><th>Nature de la métrique</th><th>Périmètre</th></tr></thead><tbody>
+<tr><td>Google (article technique, août 2025)</td><td><strong>1,15 L/kWh</strong></td><td><strong>Consommation</strong> (ISO catégorie 2 : entrée − restitution)</td><td>Datacenters hébergeant les LLM, 2023 et 2024</td></tr>
+<tr><td>Meta (2024)</td><td><strong>0,19 L/kWh</strong></td><td><strong>Prélèvement</strong> (section intitulée « Water Withdrawal »)</td><td>Flotte datacenters</td></tr>
+<tr><td>AWS</td><td><strong>0,12 L/kWh</strong></td><td><strong>Prélèvement</strong></td><td>Flotte mondiale</td></tr>
+<tr><td>AIE (implicite, via de Vries-Gao)</td><td><strong>0,56 L/kWh</strong></td><td>Non précisée</td><td>Datacenters mondiaux 2023</td></tr></tbody></table></div>
+<p><strong>Comparer le 0,12 d'AWS au 1,15 de Google est une erreur de catégorie.</strong> Par ailleurs, l'origine de la « moyenne du secteur de 0,84 L/kWh » avancée par Amazon n'est pas sourcée, et l'année de référence de son chiffre varie selon les pages d'Amazon. <strong>Confiance sur l'incomparabilité : ÉLEVÉE.</strong></p>
+<p>Fait notable : <strong>le rapport environnemental Google 2026 ne publie plus de WUE moyenne de flotte</strong> (seulement un PUE de 1,09). La valeur de 1,15 L/kWh n'existe que dans l'article technique d'août 2025.</p>
+<h2 id="s3"><span class="hn">3</span>Ce que consomme l'IA</h2>
+<h3><span class="hn3">3.1</span>L'entraînement</h3>
+<div class="tbl-wrap"><table class="data-table"><thead><tr><th>Élément</th><th>Valeur</th><th>Périmètre</th><th>Confiance</th></tr></thead><tbody>
+<tr><td>GPT-3 (175 Md paramètres), <strong>sur site</strong></td><td><strong>0,708 million L</strong> (≈ 700 000 L)</td><td>Scope 1, moyenne US</td><td>MOYENNE</td></tr>
+<tr><td>GPT-3, <strong>total</strong></td><td><strong>5,439 millions L</strong></td><td>Scope 1 (0,708) + scope 2 (4,731)</td><td>MOYENNE</td></tr>
+<tr><td>GPT-3, hypothèse « Inde »</td><td>6,340 millions L au total</td><td>WUE sur site 0,000 L/kWh (refroidissement à sec) mais scope 2 élevé</td><td>MOYENNE</td></tr>
+<tr><td>Mistral Large 2 — <strong>cycle de vie complet sur 18 mois</strong> (entraînement + inférence + infrastructure) <span class="flag amb">▲</span> <em>non comparable à la ligne GPT-3 ci-dessus</em></td><td><strong>281 000 m³</strong></td><td>ACV ISO 14040/44, périmètre étendu</td><td>MOYENNE</td></tr></tbody></table></div>
+<p><strong>Méthode GPT-3</strong>, coefficient par coefficient — chacun s'applique à une énergie différente, et c'est ce qui explique le résultat :</p>
+<div class="note reveal"><p>— <strong>Scope 1</strong> = 1 287 MWh (énergie IT, Patterson et al.) × WUE sur site 0,550 L/kWh = <strong>0,708 M L</strong>. Le WUE de Li et al. porte sur l'énergie IT, hors PUE.</p><p>— <strong>Scope 2</strong> = 1 287 MWh × PUE 1,170 (énergie totale tirée du réseau) × EWIF 3,142 L/kWh = <strong>4,731 M L</strong>.</p><p>Appliquer le PUE au scope 1 donnerait 0,828 M L : l'écart de 17 % avec le chiffre publié vient précisément de là. C'est le genre de détail qui fait diverger deux estimations « du même » objet.</p></div>
+<p><strong>Limites décisives.</strong> La localisation réelle de l'entraînement de GPT-3 <strong>n'est pas publique</strong> : les auteurs balaient les sites Microsoft. Le chiffre de 700 000 L est le plus cité au monde et le plus systématiquement sorti de son contexte — c'est le <strong>scope 1 seul</strong>, soit 13 % du total estimé. L'eau incorporée dans les puces (scope 3) est absente. Enfin, <strong>les 281 000 m³ de Mistral ne sont pas comparables aux 5 439 m³ de GPT-3</strong> : périmètre ACV contre périmètre opérationnel, et 18 mois d'usage cumulé contre le seul entraînement.</p>
+<p><strong>Ce qu'on peut retenir : ÉLEVÉE</strong> — l'entraînement d'un grand modèle représente un volume d'eau de l'ordre de quelques milliers à quelques centaines de milliers de mètres cubes selon le périmètre. <strong>FAIBLE</strong> — toute valeur précise.</p>
+<h3><span class="hn3">3.2</span>L'inférence</h3>
+<p>C'est ici que se joue l'essentiel du débat public, et c'est ici que les périmètres divergent le plus.</p>
+<div class="tbl-wrap"><table class="data-table"><thead><tr><th>Source</th><th>Valeur par requête</th><th>Périmètre exact</th><th>Confiance</th></tr></thead><tbody>
+<tr><td><strong>Google</strong> (août 2025)</td><td><strong>0,26 mL</strong></td><td>Prompt texte <strong>médian</strong> Gemini Apps, mai 2025, <strong>scope 1 seul</strong> (refroidissement sur site) — l'overhead est explicitement soustrait avant application du WUE</td><td>ÉLEVÉE sur la valeur dans son périmètre</td></tr>
+<tr><td><strong>Google</strong>, méthode « existante »</td><td><strong>0,12 mL</strong></td><td>Même modèle, même mois, périmètre plus étroit (hors CPU/DRAM, hors machines au ralenti)</td><td>ÉLEVÉE</td></tr>
+<tr><td><strong>Li et al.</strong> (GPT-3)</td><td><strong>16,904 mL</strong> (2,200 sur site + 14,704 hors site)</td><td>Scope 1 + 2, moyenne US, conversation ≤ 800 mots d'entrée / 150–300 mots de sortie</td><td>MOYENNE</td></tr>
+<tr><td><strong>Li et al.</strong>, amplitude géographique</td><td><strong>7,107 mL (Irlande) → 47,506 mL (Washington)</strong></td><td>Idem, par site Microsoft</td><td>MOYENNE</td></tr>
+<tr><td><strong>Mistral</strong> (juillet 2025)</td><td><strong>45 mL</strong></td><td>Réponse de 400 tokens, <strong>ACV complète</strong> ISO 14040/44 + GHG Protocol, méthodologie AFNOR « Frugal AI », revue par Resilio et Hubblo. Exclut les terminaux utilisateurs</td><td>MOYENNE</td></tr>
+<tr><td><strong>OpenAI</strong> (Sam Altman, juin 2025)</td><td>0,3 mL</td><td><strong>Aucune méthode publiée.</strong> Google écrit que la divulgation « ne fournit aucune explication du périmètre ni de la méthodologie », ce qui la rend « impossible à comparer ». Billet original non ouvert dans ce travail.</td><td><strong>FAIBLE — affirmation d'entreprise non vérifiable</strong></td></tr></tbody></table></div>
+<p><strong>Comment lire cet écart de 0,26 mL à 45 mL (facteur 173).</strong></p>
+<p>Il ne s'agit pas d'une divergence sur la physique mais sur le périmètre :</p>
+<ul><li>Google mesure <strong>uniquement le refroidissement du bâtiment</strong>, et exclut l'eau de production électrique.</li><li>Li et al. mesurent <strong>refroidissement + production électrique</strong>, cette dernière pesant ~87 %.</li><li>Mistral mesure <strong>un cycle de vie</strong>, incluant l'amont et l'infrastructure. <em>La page consultée ne tranche pas explicitement la question de savoir si les 45 mL incluent le scope 2 électrique.</em></li></ul>
+<p><strong>Deux réserves supplémentaires, symétriques.</strong></p>
+<ul><li>Li et al. qualifient <strong>eux-mêmes</strong> leur estimation de « conservative » : elle repose sur 0,004 kWh par requête, alors qu'un Llama-3-70B consomme déjà ~0,010 kWh et un Falcon-180B ~0,016 kWh. GPT-3 est un modèle de 2020, non représentatif des modèles actuels.</li><li>Google publie une <strong>médiane</strong>, pas une moyenne, et précise que la distribution est fortement asymétrique. Le chiffre porte sur les prompts <strong>texte seulement</strong> (ni image, ni vidéo) et sur un <strong>point unique dans le temps</strong>.</li></ul>
+<h3><span class="hn3">3.3</span>Les volumes d'entreprise (toutes activités, IA non isolée)</h3>
+<div class="tbl-wrap"><table class="data-table"><thead><tr><th>Acteur</th><th>Prélèvement</th><th>Consommation</th><th>Année</th><th>Note</th></tr></thead><tbody>
+<tr><td><strong>Microsoft</strong></td><td>13 266 ML</td><td><strong>8 170 ML</strong></td><td>FY2025</td><td>Série FY20→FY25 : 3 990 / 4 794 / 5 329 / 5 818 / 6 693 / 8 170 ML (+105 %)</td></tr>
+<tr><td><strong>Google</strong> (groupe)</td><td>14 689 Mgal</td><td><strong>10 869 Mgal (41,1 M m³)</strong></td><td>2025</td><td>Série 2021→2025 : 4 562 / 5 565 / 6 352 / 8 135 / 10 869 (×2,4)</td></tr>
+<tr><td><strong>Google</strong> (datacenters seuls)</td><td>13 562 Mgal</td><td><strong>10 523 Mgal (39,8 M m³)</strong></td><td>2025</td><td>97 % de la consommation du groupe</td></tr>
+<tr><td><strong>Meta</strong></td><td>5 637 ML</td><td><strong>3 123 ML</strong> (dont 2 974 ML datacenters)</td><td>2024</td><td>+ 1 019 ML de <strong>construction non inclus</strong> (+18 %)</td></tr>
+<tr><td><strong>Amazon</strong> (datacenters)</td><td>2,5 Md gallons (9,5 M m³)</td><td><strong>non publiée</strong></td><td>2025</td><td>Aucune consommation publiée → comparaison impossible</td></tr></tbody></table></div>
+<p><strong>Trois avertissements de comparabilité — Confiance : ÉLEVÉE.</strong> 1. <strong>Microsoft a rétro-corrigé toutes ses séries historiques</strong> en 2026 après avoir « identifié des volumes d'eau non rapportés jusqu'ici ». Les publications antérieures (dont les 29 Md L / 23 Md L de 2023) ne sont <strong>pas comparables</strong> telles quelles aux chiffres récents. 2. <strong>Amazon ne publie pas de volume consommé</strong>, seulement un prélèvement : aucune comparaison avec Google ou Microsoft n'est possible. 3. Les métriques Google 2025 sont soumises à une <strong>assurance limitée</strong> par un tiers — un niveau d'assurance faible, pas un audit.</p>
+<p><strong>Sur la croissance : ÉLEVÉE.</strong> Google +34 % de consommation en un an, Microsoft +22 %. <strong>Sur son attribution à l'IA : indéterminée.</strong> Google l'attribue à « la demande croissante de services numériques » sans quantifier la part IA.</p>
+<h3><span class="hn3">3.4</span>Les agrégats mondiaux</h3>
+<div class="tbl-wrap"><table class="data-table"><thead><tr><th>Estimation</th><th>Valeur</th><th>Source</th><th>Confiance</th></tr></thead><tbody>
+<tr><td>Datacenters mondiaux, 2023</td><td>140 Md L direct + 373 Md L indirect = 513 Md L (73 % indirect)</td><td>AIE, relayée et recalculée par de Vries-Gao, <em>Patterns</em> 7(1), 17 déc. 2025</td><td><strong>MOYENNE</strong> — rapport AIE original non ouvert (HTTP 403)</td></tr>
+<tr><td><strong>IA seule</strong>, 2025</td><td><strong>312,5 à 764,6 Md L</strong> (direct + indirect), pour 9,4–23 GW de puissance IA</td><td>de Vries-Gao, <em>Patterns</em>, 2025</td><td><strong>FAIBLE à MOYENNE</strong></td></tr>
+<tr><td>IA, prélèvement projeté 2027</td><td>4,2 à 6,6 <strong>milliards de m³</strong></td><td>Li et al., annexe</td><td><strong>FAIBLE</strong></td></tr>
+<tr><td>Datacenters, projections AIE</td><td>~560 Md L/an aujourd'hui, ~1 200 Md L en 2030, 60 % indirect</td><td>AIE, <em>Energy and AI</em>, avril 2025</td><td><strong><span class="flag">◆</span> SOURCE NON OUVERTE — à ne pas citer sans vérification</strong></td></tr></tbody></table></div>
+<p><strong>Sur la projection 2027 de Li et al.</strong> : il s'agit de <strong>prélèvement</strong>, pas de consommation ; 97–98 % vient du scope 2, donc la valeur dépend presque entièrement d'un facteur électrique moyen américain (43,83 L/kWh) appliqué au monde entier ; et la projection de demande énergétique (93,5–147,4 TWh) provient d'une source tierce. <span class="conf faible">FAIBLE</span></p>
+<p><strong>Incohérence à signaler.</strong> Les ~560 Md L/an attribués à l'AIE pour « aujourd'hui » cohabitent mal avec les 513 Md L (140 + 373) attribués à l'AIE pour 2023 et relayés par de Vries-Gao. Les périmètres diffèrent probablement, mais <strong>cela n'a pas pu être confirmé</strong>, le rapport original étant inaccessible.</p>
+<h2 id="s4"><span class="hn">4</span>Mise en perspective</h2>
+<h3><span class="hn3">4.1</span>Comment lire les tableaux qui suivent</h3>
+<p>Trois règles, toutes de <strong>confiance ÉLEVÉE</strong> : 1. <strong>Ne comparer que des colonnes de même nature</strong> : eau bleue consommée avec eau bleue consommée. 2. <strong>Les usages domestiques listés sont des prélèvements</strong>, pas des consommations : l'essentiel part à l'égout, est traité et restitué. 3. <strong>Les empreintes alimentaires de référence portent sur 1996–2005</strong> et n'ont pas été recalculées globalement depuis. Les rendements ayant progressé, les valeurs par kg sont vraisemblablement 10 à 25 % plus basses aujourd'hui pour les céréales — mais <strong>aucune réévaluation publiée ne permet de le chiffrer</strong>. Confiance sur l'ordre de grandeur : ÉLEVÉE ; sur la valeur 2026 : MOYENNE.</p>
+<h3><span class="hn3">4.2</span>Alimentation — total affiché vs poste réellement comparable</h3>
+<div class="tbl-wrap"><table class="data-table"><thead><tr><th>Produit</th><th>Empreinte <strong>totale</strong> (verte+bleue+grise)</th><th><strong>Eau bleue seule</strong> — le seul poste comparable</th><th>Part verte</th></tr></thead><tbody>
+<tr><td>1 kg de bœuf</td><td>15 415 L (6 513 → 21 829 selon système)</td><td><strong>484 à 722 L</strong> (moy. 550)</td><td>93 %</td></tr>
+<tr><td>1 kg de chocolat</td><td>17 196 L</td><td><strong>198 L</strong></td><td>98 %</td></tr>
+<tr><td>1 tasse de café (7 g)</td><td>130 L</td><td><strong>≈ 1 L</strong></td><td>96 %</td></tr>
+<tr><td>1 tasse de thé (3 g)</td><td>27 L</td><td>—</td><td>majoritaire</td></tr>
+<tr><td>1 kg de blé</td><td>1 827 L</td><td><strong>342 L</strong></td><td>70 %</td></tr>
+<tr><td>1 kg de riz (paddy)</td><td>1 673 L</td><td><strong>341 L</strong> (part bleue 20 %, culture très irriguée)</td><td>68 %</td></tr>
+<tr><td>1 kg de fromage</td><td>5 060 L</td><td><strong>439 L</strong></td><td>84 %</td></tr>
+<tr><td>1 L de lait</td><td>≈ 1 050 L</td><td><strong>≈ 89 L</strong></td><td>85 %</td></tr>
+<tr><td>1 œuf (60 g)</td><td>≈ 196 L</td><td><strong>≈ 15 L</strong></td><td>79 %</td></tr>
+<tr><td>1 avocat (170–200 g)</td><td>≈ 337 à 396 L</td><td><strong>≈ 48 à 57 L</strong></td><td>43 % (+ 43 % d'eau <strong>grise</strong>)</td></tr>
+<tr><td>1 L de bière (part agricole)</td><td>≈ 298 L</td><td><strong>≈ 16 L</strong></td><td>85 %</td></tr>
+<tr><td>1 canette de soda 33 cl <em>(prorata de la valeur 50 cl)</em></td><td>≈ 111 à 204 L</td><td><strong>≈ 5 à 82 L</strong> selon l'origine du sucre</td><td>variable</td></tr></tbody></table></div>
+<p><strong>Trois enseignements — Confiance : ÉLEVÉE.</strong></p>
+<ul><li><strong>Le chocolat, champion des chiffres-chocs, a une empreinte bleue plus faible qu'un kilo de blé</strong> (198 L contre 342 L). Le total induit en erreur sur la pression réelle sur la ressource.</li><li>Le pâturage extensif a la <strong>plus grande</strong> empreinte totale du bœuf (21 829 L) et la <strong>plus petite</strong> empreinte bleue. Contre-intuitif, et documenté.</li><li>Pour le soda, <strong>99,7 à 99,8 % de l'empreinte est en amont</strong> : l'empreinte opérationnelle de l'usine n'est que de 0,5 L — exactement l'eau devenue ingrédient. Le même écart amont/site vaut pour l'IA, en sens inverse.</li></ul>
+<h3><span class="hn3">4.3</span>Vie courante (prélèvements, sauf mention)</h3>
+<div class="tbl-wrap"><table class="data-table"><thead><tr><th>Usage</th><th>Volume</th><th>Note</th></tr></thead><tbody>
+<tr><td>Douche (8 L/min × 7,5 min)</td><td><strong>60 L</strong> — fourchette réelle 25 à 120 L</td><td>CIEau : 50 à 80 L. Deux sources concordantes → ÉLEVÉE</td></tr>
+<tr><td>Bain</td><td><strong>80 L (Energy Saving Trust) à 200 L (CIEau)</strong></td><td>Facteur 2,5 entre deux agences publiques. Confiance : MOYENNE — retenir la fourchette</td></tr>
+<tr><td>Chasse d'eau</td><td>3 à 13 L selon l'âge (standard actuel 5–6 L)</td><td>~5 chasses/jour/personne</td></tr>
+<tr><td>Lave-linge</td><td>50 L/cycle (modèle EST) ; 60–130 L selon le parc réel (CIEau)</td><td>MOYENNE</td></tr>
+<tr><td>Lave-vaisselle</td><td>10 L (éco) à 25 L (pré-2000) ; 40 L à la main robinet ouvert</td><td>ÉLEVÉE</td></tr>
+<tr><td><strong>Consommation domestique France</strong></td><td><strong>148 L/jour/habitant</strong> (109 en Hauts-de-France, 228 en PACA)</td><td>ÉLEVÉE — données de facturation</td></tr></tbody></table></div>
+<h3><span class="hn3">4.4</span>Textile et objets</h3>
+<div class="tbl-wrap"><table class="data-table"><thead><tr><th>Objet</th><th>Valeur</th><th>Point critique</th></tr></thead><tbody>
+<tr><td>1 jean (1 kg de coton)</td><td><strong>10 850 L</strong> (bleue 4 900 / verte 4 450 / dilution 1 500)</td><td>Ici l'eau <strong>bleue domine</strong> (45 %) : le coton est irrigué. Variabilité par origine : 2 018 L/kg (Chine) à 8 662 (Inde) — facteur 4,3</td></tr>
+<tr><td>1 t-shirt coton (250 g)</td><td><strong>2 720 L</strong> (bleue 1 230)</td><td>Source primaire du « 2 700 L » qui circule partout</td></tr>
+<tr><td>1 smartphone (Fairphone 5, ACV complète)</td><td><strong>319 L consommés</strong> / <strong>92 900 L prélevés</strong></td><td><strong>Facteur 291 sur le même objet, dans la même étude.</strong> Le « 12 000–13 000 L par smartphone » très diffusé n'a aucune source primaire ouvrable et n'est pas repris ici</td></tr>
+<tr><td>1 voiture (VW Polo/Golf/Passat)</td><td><strong>52 000 à 83 000 L consommés</strong>, &gt;95 % en production</td><td>Le « 400 000 L par voiture » ne correspond à aucune source primaire vérifiable — écart de facteur 5 à 8 avec la seule ACV publiée</td></tr>
+<tr><td>1 bouteille d'eau 1 L</td><td>1,39 à 1,47 L prélevés (usine, hors emballage)</td><td><strong><span class="flag">◆</span> Item le plus faible du jeu de données</strong> : benchmarks industriels auto-déclarés, non revus par les pairs, rapport primaire non ouvert. Confiance : FAIBLE</td></tr></tbody></table></div>
+<h3><span class="hn3">4.5</span>Électricité — la clé du scope 2 de l'IA</h3>
+<p><em>Valeurs opérationnelles uniquement : hors cycle amont du combustible et hors fabrication des équipements.</em></p>
+<div class="tbl-wrap"><table class="data-table"><thead><tr><th>Source</th><th>Consommée (L/kWh)</th><th>Prélevée (L/kWh)</th><th>Facteur</th></tr></thead><tbody>
+<tr><td>Nucléaire, tour de refroidissement</td><td><strong>2,54</strong> (2,20–3,20)</td><td>4,17</td><td>1,6×</td></tr>
+<tr><td>Nucléaire, <strong>circuit ouvert</strong></td><td><strong>1,02</strong> (0,38–1,51)</td><td><strong>168</strong> (95–227)</td><td><strong>165×</strong></td></tr>
+<tr><td>Charbon, tour de refroidissement</td><td><strong>2,60</strong> (1,82–4,16)</td><td>3,80</td><td>1,5×</td></tr>
+<tr><td>Charbon, circuit ouvert</td><td><strong>0,95</strong></td><td><strong>138</strong> (76–189)</td><td>145×</td></tr>
+<tr><td>Gaz cycle combiné, tour</td><td><strong>0,78</strong> (0,49–1,14)</td><td>0,97</td><td>1,2×</td></tr>
+<tr><td>Gaz cycle combiné, circuit ouvert</td><td><strong>0,38</strong></td><td>43 (28–76)</td><td>113×</td></tr>
+<tr><td><strong>Solaire PV</strong></td><td><strong>0,004</strong> (0–0,019)</td><td>idem</td><td>—</td></tr>
+<tr><td><strong>Solaire à concentration (CSP humide)</strong></td><td><strong>3,43</strong> (2,74–4,20)</td><td>—</td><td>—</td></tr>
+<tr><td><strong>Éolien</strong></td><td><strong>0</strong> (0–0)</td><td>—</td><td>—</td></tr>
+<tr><td><strong>Hydroélectricité</strong></td><td><strong>245 en moyenne</strong>, 1,1 à 3 046 selon le barrage</td><td>—</td><td>—</td></tr></tbody></table></div>
+<p><strong>Quatre lectures — Confiance : ÉLEVÉE sauf mention.</strong></p>
+<ul><li>Le nucléaire en circuit ouvert est <strong>le cas d'école</strong> de la confusion : 165× d'écart sur la même centrale. Le rejet thermique reste un impact écologique réel, mais ce n'est pas de la consommation d'eau.</li><li>Le <strong>solaire à concentration humide consomme plus d'eau par kWh que le nucléaire ou le charbon</strong>, et il est généralement implanté en zone aride.</li><li>Les zéros du PV et de l'éolien sont des <strong>zéros opérationnels</strong>, pas des zéros de cycle de vie : la purification du silicium, l'acier et le béton sont hors périmètre. Dire « le solaire ne consomme pas d'eau » sur cette base est abusif. <strong>Confiance sur le cycle de vie complet : ON NE SAIT PAS, à partir de cette source.</strong></li><li>L'hydroélectricité est de loin la plus consommatrice par kWh, avec une variabilité de facteur 2 800 — mais <strong>l'allocation de l'évaporation du réservoir à l'électricité fait l'objet d'une controverse méthodologique ouverte que les sources consultées dans ce travail ne documentent pas</strong> (un barrage sert aussi à l'irrigation, à la régulation des crues et aux loisirs : lui imputer toute l'évaporation est un choix, pas une évidence). <strong>Confiance sur la valeur centrale de 245 L/kWh : FAIBLE.</strong></li></ul>
+<h3><span class="hn3">4.6</span>Ordres de grandeur — comparaisons honnêtes</h3>
+<p><em>Les conversions ci-dessous sont des <strong>calculs dérivés</strong> par l'auteur ; elles n'ont de valeur qu'illustrative. Elles ne retiennent que des référents d'eau bleue <strong>consommée</strong>, seuls comparables à l'eau d'un datacenter.</em></p>
+<div class="note reveal"><p><strong>Pourquoi la douche ne figure pas dans ce tableau.</strong> C'est la comparaison la plus répandue, et elle est fautive : les 60 L d'une douche sont un <strong>prélèvement</strong>, presque intégralement restitué au milieu après traitement. Les mettre en regard de millilitres <em>consommés</em> par requête surestime mécaniquement le nombre de requêtes équivalentes. La fraction réellement consommée d'une douche (évaporation, pertes réseau) n'est pas documentée dans les sources consultées — nous ne pouvons donc pas la corriger, seulement l'écarter.</p></div>
+<div class="tbl-wrap"><table class="data-table"><thead><tr><th>Équivalence <em>(calcul dérivé)</em></th><th>Selon Google (0,26 mL, <strong>scope 1 seul</strong>)</th><th>Selon Li et al. (16,9 mL, <strong>scope 1+2</strong>)</th><th>Selon Mistral (45 mL, <strong>ACV</strong>)</th></tr></thead><tbody>
+<tr><td>L'eau <strong>bleue</strong> d'1 kg de bœuf (550 L)</td><td>≈ 2 115 000 requêtes</td><td>≈ 32 500 requêtes</td><td>≈ 12 200 réponses</td></tr>
+<tr><td>Une bouteille de 500 mL</td><td>≈ 1 920 requêtes</td><td><strong>29,6 requêtes</strong></td><td>≈ 11 réponses</td></tr></tbody></table></div>
+<p><strong>Ce que ce tableau montre — Confiance : ÉLEVÉE.</strong> L'écart entre les trois colonnes (facteur 173) est <strong>plus grand que l'écart entre les lignes</strong>. Autrement dit : le choix du périmètre pèse davantage sur le résultat que l'usage comparé. C'est la raison pour laquelle ces équivalences, quel que soit le camp qui les brandit, ne tranchent rien.</p>
+<p><strong>Ce que ce tableau ne montre pas.</strong> Une douche est un acte individuel ; l'IA est une infrastructure. Comparer une requête à une douche répond à la question « mon usage personnel est-il lourd ? » — pas à la question « la concentration de datacenters dans ce bassin versant est-elle soutenable ? ». Ce sont deux questions différentes, et la seconde est celle qui se pose aux collectivités.</p>
+<h2 id="s5"><span class="hn">5</span>Ce qui détermine vraiment l'impact</h2>
+<p><strong>Le volume mondial est le mauvais indicateur.</strong> L'eau n'est pas une ressource fongible : un mètre cube évaporé en Irlande et un mètre cube évaporé en Arizona n'ont pas le même effet.</p>
+<p><strong>5.1 Le lieu, d'abord.</strong> Chez Microsoft, deux sites illustrent l'amplitude : <strong>Singapour, 423 ML prélevés pour 338 845 MWh</strong> ; <strong>Dublin, 18 ML pour 1 308 581 MWh</strong> — un écart d'intensité de plus de <strong>90×</strong> entre deux sites de la même entreprise, la même année. <em>(Confiance : ÉLEVÉE ; il s'agit de prélèvement, la consommation par site n'est pas publiée.)</em></p>
+<p><strong>5.2 Le mix électrique local.</strong> L'intensité en eau des réseaux américains va de <strong>0,68 à 11,98 L/kWh</strong> (facteur 17,6). L'EWIF de l'État de Washington est de 9,501 L/kWh, celle du Texas de 1,287. Comme les entreprises ne divulguent pas où tournent leurs charges IA, <strong>cette marge d'erreur ne peut pas être réduite</strong>. <em>(Confiance : ÉLEVÉE.)</em></p>
+<p><strong>5.3 La technologie de refroidissement, et son effet de vase communicant.</strong> La WUE sur site des sites Microsoft va de <strong>0,000 L/kWh en Inde</strong> (refroidissement à sec) à <strong>1,900 L/kWh en Indonésie</strong>. Mais l'Inde, avec 0,000 sur site, affiche <strong>6,340 M L au total</strong> pour l'entraînement de GPT-3, à cause du scope 2. Le refroidissement à sec ne supprime pas l'eau : il la déplace vers la centrale.</p>
+<p><strong>5.4 La saison et la météo.</strong> L'évaporation sur site va de <strong>1 L/kWh</strong> (moyenne annualisée mondiale de Google) à <strong>9 L/kWh</strong> (grand datacenter commercial en Arizona, l'été) : facteur 9. La borne haute est un <strong>pic saisonnier local</strong>, pas une moyenne.</p>
+<p><strong>5.5 Le stress hydrique local.</strong> C'est la métrique qui compte : Microsoft, 50 % du prélèvement et 48 % de la consommation en zones de stress hydrique (définition Pacific Institute, plus large que la rareté) ; Google, 13 % du prélèvement d'eau douce en zone à risque élevé — un chiffre que Google communique aussi sous la forme agrégée « 87 % en risque faible ou moyen », formulation qui masque précisément ces 13 % ; Meta, 1 704 ML issus de zones à stress élevé ou extrême, <strong>+25 % en un an</strong>.</p>
+<p><strong>5.6 Le cas du « réapprovisionnement ».</strong> Google déclare avoir réapprovisionné 7 717 Mgal en 2025, soit <strong>78 % de sa consommation d'eau douce</strong> (série 2022→2025 : 6 % / 18 % / 63 % / 78 %, objectif 120 % en 2030). <strong>Point méthodologique de confiance ÉLEVÉE : le réapprovisionnement n'est pas de l'eau rendue au bassin utilisé.</strong> C'est un crédit volumétrique obtenu ailleurs, souvent dans un autre bassin, et aucune norme externe ne régit ce calcul. Il ne compense donc pas un impact local.</p>
+<p><strong>Conclusion de section.</strong> « Combien de litres par requête ? » est une question mal posée, non parce que la réponse serait gênante, mais parce que <strong>la variable déterminante n'est pas la requête</strong> : c'est le bassin versant, le mois de l'année et le mix électrique du réseau qui alimente la machine.</p>
+<h2 id="s6"><span class="hn">6</span>Anatomie du chiffre viral des 500 mL</h2>
+<p><strong>Ce que dit la source.</strong> L'abstract de Li, Yang, Islam et Ren (<em>Making AI Less Thirsty</em>, arXiv:2304.03271) énonce : <strong>une bouteille de 500 mL pour environ 10 à 50 réponses</strong> de longueur moyenne, selon le lieu et le moment de déploiement.</p>
+<p><strong>Ce que la formulation devient en circulant.</strong> La phrase se transforme couramment en « une requête ChatGPT = une bouteille d'eau » ou « 500 mL par question » — formulation reprise dans la presse généraliste, sur les réseaux et dans des présentations d'entreprise depuis 2023. Nous ne citons pas ici d'occurrence précise : aucune reprise datée n'a été collectée et vérifiée dans le cadre de ce travail. <strong>Confiance sur l'existence de la déformation : ÉLEVÉE</strong> (elle est constatable par toute recherche sur la formule) ; <strong>confiance sur son ampleur ou sur les vecteurs précis : ON NE SAIT PAS.</strong></p>
+<p><strong>Une nuance dans la source elle-même.</strong> L'abstract annonce « 10 à 50 » ; la Table 1 donne en réalité 10,5 (Washington) à 70,4 (Irlande) requêtes par 500 mL. Les auteurs arrondissent donc leur borne haute <strong>vers le bas</strong> — la fourchette réelle publiée est plus large que celle qui est mise en avant.</p>
+<p><strong>D'où vient la fourchette.</strong> De la Table 1 : de <strong>10,5 requêtes par 500 mL</strong> (État de Washington, 47,506 mL/requête) à <strong>70,4 requêtes par 500 mL</strong> (Irlande, 7,107 mL/requête). La valeur centrale « moyenne US » est de <strong>29,6 requêtes pour 500 mL</strong>, soit 16,904 mL par requête.</p>
+<p><strong>Ce que le chiffre inclut.</strong> Scope 1 (2,200 mL) <strong>et</strong> scope 2 (14,704 mL) : <strong>87 % de la valeur est l'eau de production de l'électricité</strong>, pas le datacenter.</p>
+<p><strong>Les trois déformations les plus fréquentes.</strong></p>
+<div class="tbl-wrap"><table class="data-table"><thead><tr><th>Déformation</th><th>Erreur</th><th>Confiance</th></tr></thead><tbody>
+<tr><td>« 500 mL <strong>par requête</strong> »</td><td>Facteur <strong>10 à 50</strong></td><td>ÉLEVÉE</td></tr>
+<tr><td>Comparaison directe avec les 0,26 mL de Google</td><td>Erreur de périmètre : Google exclut le scope 2, soit ~87 % du chiffre de Li et al. Google soustrait explicitement l'overhead <strong>avant</strong> d'appliquer le WUE</td><td>ÉLEVÉE</td></tr>
+<tr><td>Présentation comme une mesure de « l'IA aujourd'hui »</td><td>GPT-3 est un modèle de 2020. Les auteurs qualifient eux-mêmes leur hypothèse énergétique (0,004 kWh/requête) de « conservative » face aux 0,010 kWh d'un Llama-3-70B ou aux 0,016 kWh d'un Falcon-180B</td><td>ÉLEVÉE</td></tr></tbody></table></div>
+<p><strong>Ce qu'il faut en retenir.</strong> Le chiffre n'est ni un mensonge ni une mesure : c'est une <strong>estimation modélisée, à périmètre large, sur un modèle ancien, avec une amplitude géographique de facteur 6,7 explicitement publiée par ses auteurs</strong>. Son défaut principal, dans le débat public, n'est pas d'être faux — c'est d'être cité sans son périmètre et sans sa fourchette.</p>
+<h2 id="s7"><span class="hn">7</span>Ce qu'on ne sait pas</h2>
+<p>Cette section est aussi importante que les précédentes.</p>
+<p>1. <strong>Aucune ventilation IA / non-IA n'existe.</strong> Aucun opérateur ne publie de métrique d'eau par charge de travail. Toute estimation « de l'IA » est dérivée d'hypothèses de puissance installée. <em>(Confiance : ÉLEVÉE sur le constat.)</em> 2. <strong>Aucune entreprise ne publie sa consommation d'eau indirecte (scope 2) sur l'ensemble de ses opérations</strong> — c'est-à-dire précisément le poste qui domine. 3. <strong>L'intensité en eau de l'électricité est l'incertitude dominante</strong> : 1,04 L/kWh (hypothèse AIE) contre 3,40–5,3 L/kWh (données déclarées, Siddik et al.), soit un facteur 3,8 à 5. Li et al. signalent en outre qu'une étude LBNL donne 4,35 L/kWh contre les 3,14 qu'ils retiennent (+38 %). 4. <strong>La localisation des charges IA n'est pas divulguée.</strong> C'est ce qui rend la marge d'erreur irréductible. 5. <strong>Le scope 3 (fabrication des puces et serveurs) est absent partout</strong>, faute de données publiques. Mistral signale explicitement l'absence de facteurs d'impact publics pour les GPU et qualifie son propre travail de « première approximation ». 6. <strong>Deux sources centrales n'ont pas pu être ouvertes</strong> : le rapport AIE <em>Energy and AI</em> (HTTP 403) et le billet de Sam Altman. Les valeurs qui en dépendent (~560 Md L/an, ~1 200 Md L en 2030, 2 M L/jour pour un DC de 100 MW, 0,3 mL/prompt) sont à traiter comme <strong>non vérifiées</strong>. 7. <strong>Les séries historiques ne sont pas stables.</strong> Microsoft a recalculé toutes ses années antérieures en 2026. Les comparaisons pluriannuelles publiées avant cette date sont caduques. 8. <strong>Meta exclut 1 019 ML de prélèvement lié à la construction</strong> de ses datacenters (+18 % sur son total) — un poste réel, hors comptage. 9. <strong>Google ne publie plus de WUE de flotte</strong> dans son rapport 2026. La visibilité sur cette métrique a diminué, pas augmenté. 10. <strong>L'effet rebond n'est traité par aucune source.</strong> Google documente une division par 33 de l'énergie par prompt tout en enregistrant +34 % de consommation d'eau absolue : le lien entre efficacité unitaire et volume total n'est analysé nulle part dans les sources consultées. 11. <strong>Sur le versant comparatif</strong> : les empreintes alimentaires n'ont pas été recalculées depuis 1996–2005 ; il n'existe pas, à la connaissance de l'auteur, d'ACV eau de la bouteille d'eau embouteillée revue par les pairs et publiquement accessible ; les chiffres viraux de « 12 000 L par smartphone » et « 400 000 L par voiture » n'ont <strong>aucune source primaire ouvrable</strong> et sont écartés de ce rapport.</p>
+<h2 id="s8"><span class="hn">8</span>Sources</h2>
+<h3>Littérature académique revue par les pairs ou en préprint</h3>
+<div class="tbl-wrap"><table class="data-table"><thead><tr><th>Référence</th><th>URL</th><th>Date</th></tr></thead><tbody>
+<tr><td>Li, Yang, Islam, Ren — <em>Making AI Less Thirsty</em> (version revue : <em>Communications of the ACM</em>, 2025)</td><td><a href="https://arxiv.org/abs/2304.03271" target="_blank" rel="noopener">https://arxiv.org/abs/2304.03271</a></td><td>v1 : 6 avr. 2023 ; v5 : 26 mars 2025</td></tr>
+<tr><td>Google — <em>Measuring the environmental impact of delivering AI at Google Scale</em></td><td><a href="https://arxiv.org/abs/2508.15734" target="_blank" rel="noopener">https://arxiv.org/abs/2508.15734</a></td><td>août 2025</td></tr>
+<tr><td>de Vries-Gao — <em>The carbon and water footprints of data centers</em>, <strong>Patterns</strong> 7(1), art. 101430</td><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12827721/" target="_blank" rel="noopener">https://pmc.ncbi.nlm.nih.gov/articles/PMC12827721/</a></td><td>17 déc. 2025</td></tr>
+<tr><td>Macknick, Newmark, Heath, Hallett — <em>Operational water consumption and withdrawal factors for electricity generating technologies</em>, <strong>Environ. Res. Lett.</strong> 7:045802</td><td><a href="https://iopscience.iop.org/article/10.1088/1748-9326/7/4/045802" target="_blank" rel="noopener">https://iopscience.iop.org/article/10.1088/1748-9326/7/4/045802</a></td><td>2012</td></tr>
+<tr><td>Mekonnen &amp; Hoekstra — <em>The green, blue and grey water footprint of crops and derived crop products</em>, <strong>HESS</strong> 15:1577-1600</td><td><a href="https://doi.org/10.5194/hess-15-1577-2011" target="_blank" rel="noopener">https://doi.org/10.5194/hess-15-1577-2011</a></td><td>2011 (données 1996–2005)</td></tr>
+<tr><td>Mekonnen &amp; Hoekstra — <em>A Global Assessment of the Water Footprint of Farm Animal Products</em>, <strong>Ecosystems</strong> 15(3):401-415</td><td><a href="https://doi.org/10.1007/s10021-011-9517-8" target="_blank" rel="noopener">https://doi.org/10.1007/s10021-011-9517-8</a></td><td>2012</td></tr>
+<tr><td>Mekonnen &amp; Hoekstra — <em>The blue water footprint of electricity from hydropower</em>, <strong>HESS</strong> 16:179-187</td><td><a href="https://doi.org/10.5194/hess-16-179-2012" target="_blank" rel="noopener">https://doi.org/10.5194/hess-16-179-2012</a></td><td>2012</td></tr>
+<tr><td>Chapagain, Hoekstra, Savenije, Gautam — <em>The water footprint of cotton consumption</em>, <strong>Ecological Economics</strong> 60(1):186-203</td><td><a href="https://www.waterfootprint.org/resources/multimediahub/Chapagain_et_al_2006_cotton_2.pdf" target="_blank" rel="noopener">https://www.waterfootprint.org/resources/multimediahub/Chapagain_et_al_2006_cotton_2.pdf</a></td><td>2006</td></tr>
+<tr><td>Ercin, Martinez-Aldaya, Hoekstra — <em>Corporate water footprint accounting… a sugar-containing carbonated beverage</em>, <strong>Water Resour. Manage.</strong> 25(2):721-741</td><td><a href="https://ayhoekstra.nl/pubs/Ercin-et-al-2011.pdf" target="_blank" rel="noopener">https://ayhoekstra.nl/pubs/Ercin-et-al-2011.pdf</a></td><td>2011</td></tr>
+<tr><td>Berger, Warsen, Krinke, Bach, Finkbeiner — <em>Water Footprint of European Cars</em>, <strong>Environ. Sci. Technol.</strong> 46(7):4091-4099</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/22390631/" target="_blank" rel="noopener">https://pubmed.ncbi.nlm.nih.gov/22390631/</a></td><td>2012</td></tr>
+<tr><td>Hoekstra, Chapagain, Aldaya, Mekonnen — <em>The Water Footprint Assessment Manual</em>, Earthscan</td><td><a href="https://waterfootprint.org/resources/TheWaterFootprintAssessmentManual_English.pdf" target="_blank" rel="noopener">https://waterfootprint.org/resources/TheWaterFootprintAssessmentManual_English.pdf</a></td><td>2011</td></tr>
+<tr><td>Fraunhofer IZM pour Fairphone — <em>Life Cycle Assessment of the Fairphone 5</em></td><td><a href="http://www.fairphone.com/wp-content/uploads/2024/09/Fairphone5_LCA_Report_2024.pdf" target="_blank" rel="noopener">http://www.fairphone.com/wp-content/uploads/2024/09/Fairphone5_LCA_Report_2024.pdf</a></td><td>2024</td></tr></tbody></table></div>
+<h3>Publications d'entreprises (auto-déclarées)</h3>
+<div class="tbl-wrap"><table class="data-table"><thead><tr><th>Référence</th><th>URL</th><th>Date</th></tr></thead><tbody>
+<tr><td>Microsoft — <em>2026 Environmental Data Fact Sheet</em> (Tables 8, 14, 15)</td><td><a href="https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/msc/documents/presentations/CSR/2026-Microsoft-Environmental-Data-Fact-Sheet-PDF.pdf" target="_blank" rel="noopener">https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/msc/documents/presentations/CSR/2026-Microsoft-Environmental-Data-Fact-Sheet-PDF.pdf</a></td><td>publié 2026, données FY2025</td></tr>
+<tr><td>Google — <em>2026 Environmental Report</em> (p. 96)</td><td><a href="https://sustainability.google/reports/google-2026-environmental-report/" target="_blank" rel="noopener">https://sustainability.google/reports/google-2026-environmental-report/</a></td><td>juin 2026, données 2025</td></tr>
+<tr><td>Meta — <em>2025 Environmental Data Index</em> (sections 3.1–3.3)</td><td><a href="https://sustainability.atmeta.com/asset/2025-environmental-data-index/" target="_blank" rel="noopener">https://sustainability.atmeta.com/asset/2025-environmental-data-index/</a></td><td>publié 2025, données 2024</td></tr>
+<tr><td>Amazon — <em>Data center water usage</em></td><td><a href="https://www.aboutamazon.com/news/sustainability/amazon-data-center-water-usage" target="_blank" rel="noopener">https://www.aboutamazon.com/news/sustainability/amazon-data-center-water-usage</a></td><td>consulté août 2026</td></tr>
+<tr><td>Mistral AI / Carbone 4 / ADEME — <em>Our contribution to a global environmental standard for AI</em></td><td><a href="https://mistral.ai/news/our-contribution-to-a-global-environmental-standard-for-ai" target="_blank" rel="noopener">https://mistral.ai/news/our-contribution-to-a-global-environmental-standard-for-ai</a></td><td>juillet 2025</td></tr></tbody></table></div>
+<h3>Agences publiques et organismes</h3>
+<div class="tbl-wrap"><table class="data-table"><thead><tr><th>Référence</th><th>URL</th><th>Date</th></tr></thead><tbody>
+<tr><td>Energy Saving Trust — <em>At Home with Water</em> (n = 86 171)</td><td><a href="https://database.waterwise.org.uk/wp-content/uploads/2019/09/Energy-Saving-Trust_At-Home-With-Water.pdf" target="_blank" rel="noopener">https://database.waterwise.org.uk/wp-content/uploads/2019/09/Energy-Saving-Trust_At-Home-With-Water.pdf</a></td><td>juillet 2013</td></tr>
+<tr><td>Centre d'information sur l'eau (CIEau) — usages domestiques de l'eau</td><td><a href="https://www.cieau.com/le-metier-de-leau/ressource-en-eau-eau-potable-eaux-usees/quels-sont-les-usages-domestiques-de-leau/" target="_blank" rel="noopener">https://www.cieau.com/le-metier-de-leau/ressource-en-eau-eau-potable-eaux-usees/quels-sont-les-usages-domestiques-de-leau/</a></td><td>publié 9 fév. 2017, mis à jour 4 juin 2026</td></tr>
+<tr><td>International Bottled Water Association — empreinte environnementale</td><td><a href="https://bottledwater.org/environmental-footprint/" target="_blank" rel="noopener">https://bottledwater.org/environmental-footprint/</a></td><td>consulté 2026</td></tr></tbody></table></div>
+<h3><span class="flag">◆</span> Sources citées mais NON ouvertes — à ne pas utiliser sans vérification</h3>
+<div class="tbl-wrap"><table class="data-table"><thead><tr><th>Référence</th><th>URL</th><th>Statut</th></tr></thead><tbody>
+<tr><td>AIE — <em>Energy and AI</em></td><td><a href="https://www.iea.org/reports/energy-and-ai" target="_blank" rel="noopener">https://www.iea.org/reports/energy-and-ai</a></td><td><strong>HTTP 403.</strong> Chiffres connus uniquement par relais secondaires</td></tr>
+<tr><td>Sam Altman — billet de blog personnel (0,3 mL/prompt)</td><td>non consulté</td><td><strong>Aucune méthode publiée.</strong> Traité comme affirmation d'entreprise non vérifiable</td></tr></tbody></table></div>
+<h2>Note finale au lecteur</h2>
+<p>Ce rapport ne conclut ni que la consommation d'eau de l'IA est négligeable, ni qu'elle est alarmante. Il établit trois choses vérifiables :</p>
+<ul><li><strong>Les chiffres qui circulent dans les deux camps reposent sur des périmètres incompatibles</strong>, et l'écart entre périmètres (facteur 173 sur une même requête) dépasse l'écart entre les usages qu'on cherche à comparer.</li><li><strong>La donnée qui permettrait de trancher — la consommation d'eau attribuable à l'IA, par site et par bassin versant — n'est publiée par personne.</strong></li><li><strong>La question pertinente n'est pas « combien de litres par requête »</strong> mais « quelle pression sur quel bassin, à quelle saison, avec quel mix électrique » — une question à laquelle les publications actuelles ne permettent de répondre que très partiellement, et seulement là où les entreprises publient site par site.</li></ul>
+<p>Le lecteur qui souhaite se forger un avis devrait, face à tout chiffre sur l'eau et l'IA, poser systématiquement quatre questions : <strong>Consommation ou prélèvement ? Sur site ou total ? Quelle localisation ? Quelle date, et pour quel modèle ?</strong> En l'absence de ces quatre réponses, le chiffre n'est pas interprétable.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="logo-mark"><img class="logo-img" src="/assets/kanaky-tech-logo.jpg" alt="Kanaky Tech logo" /><span class="logo-text">Kanaky Tech</span></a>
+        <p>The Pacific's AI automation &amp; agent development studio. We build AI agents and automate business processes for SMEs, agencies and institutions across Kanaky (New Caledonia), New Zealand and the Pacific.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="/business-process-automation/">Business Process Automation</a>
+        <a href="/ai-agents-new-caledonia/">AI Agent Development</a>
+        <a href="/private-ai-systems/">Private AI Systems</a>
+        <a href="/ai-audit/">AI Opportunity Audit</a>
+      </div>
+      <div class="footer-col">
+        <h4>Locations</h4>
+        <a href="/ai-automation-new-caledonia/">AI Automation · Kanaky (New Caledonia)</a>
+        <a href="/ai-automation-new-zealand/">AI Automation · New Zealand</a>
+        <a href="/ai-agents-auckland/">AI Agents · Auckland</a>
+        <a href="/ai-agents-new-caledonia/">AI Agents · Nouméa</a>
+      </div>
+      <div class="footer-col">
+        <h4>Écosystème</h4>
+        <a href="https://dictionnaire.kanaky.xyz" target="_blank" rel="noopener">Dictionnaire langues kanak</a>
+        <a href="https://studio.kanaky.xyz" target="_blank" rel="noopener">Keou Studio</a>
+        <a href="/marketplace/">Marketplace</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="/#about">About</a>
+        <a href="/case-studies/">Case Studies</a>
+        <a href="/guides/">Guides</a>
+        <a href="/marketplace/">Marketplace</a>
+        <a href="/who-to-contact-for-ai-automation/">Who to contact</a>
+        <a href="/blog/">Blog</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Kanaky Tech · Nouméa · Auckland · kanaky.xyz</span>
+      <nav class="footer-legal" aria-label="Legal">
+        <a href="/legal/">Legal &amp; company information</a>
+        <a href="/legal/#privacy">Privacy</a>
+        <a href="/legal/#terms">Terms</a>
+        <a href="/contact/">Contact</a>
+        <span class="footer-ids">NZBN 9429053554017 · GST 148-301-654</span>
+      </nav>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/company/kanaky-tech" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="https://github.com/kanakytech" target="_blank" rel="noopener" aria-label="GitHub"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg></a>
+        <a href="https://www.tiktok.com/@kanaky.tech" target="_blank" rel="noopener" aria-label="TikTok"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.66a8.18 8.18 0 004.79 1.52V6.71a4.85 4.85 0 01-1.02-.02z"/></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/site.js"></script>
+
+<script src="/assets/ecosystem.js" defer></script>
+</body>
+</html>
