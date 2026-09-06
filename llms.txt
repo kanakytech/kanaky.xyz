@@ -107,6 +107,7 @@ The argument in short: an AI's usefulness scales with how much of your world it 
 The piece also states the four developments that would prove the position wrong, and notes the Pacific dimension: in places where connectivity is a single cable, software that keeps working offline is a specification rather than a preference — and the question of who hosts a community's own language data is a question about power, not infrastructure.
 
 ## Blog & insights
+- [Pasifika AI : une IA qui ne confond pas les peuples du Pacifique](https://kanaky.xyz/blog/pasifika-ai-cultures-langues-pacifique/) — lancement du service gratuit et sans compte : 59 domaines institutionnels, 19 655 entrées Kanak dans neuf langues, sources visibles et module Data Gouv NC activable.
 - [Keou Studio: Free AI Creative Production](https://kanaky.xyz/blog/keou-ai-creative-production/)
 - [AI Voice-to-Quote for Tradespeople](https://kanaky.xyz/blog/ai-voice-to-quote-tradies/)
 - [White-Label AI for Agencies](https://kanaky.xyz/blog/white-label-ai-for-agencies/)
