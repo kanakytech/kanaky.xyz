@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Dictionnaire Kanak</title>
+  <desc id="desc">Un banian gravé sur la couverture d’un livre</desc>
+  <rect x="4" y="4" width="248" height="248" rx="48" fill="#f4f3ed" stroke="#111310" stroke-width="8"/>
+
+  <!-- Livre fermé : dos, couverture et pages. -->
+  <path d="M61 44h119c10 0 18 8 18 18v139H79c-15 0-27-12-27-27V53c0-5 4-9 9-9Z" fill="#111310"/>
+  <path d="M76 50h103c7 0 12 5 12 12v126H76c-8 0-14 2-19 7V68c0-10 8-18 19-18Z" fill="#f4f3ed" stroke="#111310" stroke-width="7"/>
+  <path d="M76 51v137M58 198c4-7 11-10 21-10h112v17H78c-9 0-16-2-20-7Z" fill="none" stroke="#111310" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Banian gravé : couronne, troncs aériens et racines. -->
+  <g fill="none" stroke="#111310" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M91 102c-9-3-12-14-6-21 4-5 10-6 16-4 3-12 18-17 28-10 8-12 27-8 29 6 11-2 20 6 19 17-1 8-7 13-14 14H99c-3 0-6-1-8-2Z" fill="#111310" stroke-width="4"/>
+    <path d="M128 94c0 16-1 29-5 41-3 8-9 15-19 22M130 95c2 17 7 29 17 40 5 6 8 13 9 22" stroke-width="8"/>
+    <path d="M108 105v38M148 104v42M95 106v29M163 104v31" stroke-width="5"/>
+    <path d="M83 166c14-13 29-13 44-1 14-13 29-13 46 0M91 176c11-8 23-8 36 0 13-9 25-9 38 0" stroke-width="6"/>
+  </g>
+
+  <!-- Traits de gravure sur la couverture. -->
+  <path d="M91 115h17M151 115h18M86 148h18M155 148h18" stroke="#111310" stroke-width="4" stroke-linecap="round" opacity=".55"/>
+</svg>
