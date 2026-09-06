@@ -18,10 +18,10 @@
 
   const T = FR ? {
     label: 'Écosystème', title: 'Écosystème Kanaky Tech', here: 'Vous êtes ici',
-    tail: 'Un studio, quatre plateformes — construites dans le Pacifique.',
+    tail: 'Un studio, cinq plateformes — construites dans le Pacifique.',
   } : {
     label: 'Ecosystem', title: 'Kanaky Tech ecosystem', here: 'You are here',
-    tail: 'One studio, four platforms — built in the Pacific.',
+    tail: 'One studio, five platforms — built in the Pacific.',
   };
 
   const I = {
@@ -29,6 +29,7 @@
     dico: '<svg viewBox="0 0 24 24" fill="none"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 19.5A2.5 2.5 0 0 0 6.5 22H20V2H6.5A2.5 2.5 0 0 0 4 4.5v15z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M9 7h7M9 11h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>',
     keou: '<svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2.5" stroke="currentColor" stroke-width="1.7"/><circle cx="9" cy="9" r="1.8" stroke="currentColor" stroke-width="1.6"/><path d="m3.5 17 5-5 4 4 3.5-3.5 4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>',
     market: '<svg viewBox="0 0 24 24" fill="none"><path d="M20.59 13.41 13.42 20.6a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="7.5" cy="7.5" r="1.4" fill="currentColor"/></svg>',
+    pasifika: '<svg viewBox="0 0 24 24" fill="none"><path d="M3 7.5c2.1-1.8 4.2-1.8 6.3 0s4.2 1.8 6.3 0 4.2-1.8 6.4 0M3 12c2.1-1.8 4.2-1.8 6.3 0s4.2 1.8 6.3 0 4.2-1.8 6.4 0M3 16.5c2.1-1.8 4.2-1.8 6.3 0s4.2 1.8 6.3 0 4.2-1.8 6.4 0" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>',
   };
 
   const P = [
@@ -38,11 +39,13 @@
       n: FR ? 'Dictionnaire des langues kanak' : 'Kanak Languages Dictionary', d: FR ? '9 langues · 19 672 mots · gratuit' : '9 languages · 19,672 words · free' },
     { id: 'keou', icon: I.keou, url: 'https://studio.kanaky.xyz/', dom: 'studio.kanaky.xyz',
       n: 'Keou Studio', d: FR ? 'Production visuelle par IA — gratuit' : 'AI visual production — free' },
+    { id: 'pasifika', icon: I.pasifika, url: 'https://pasifika.ai/', dom: 'pasifika.ai',
+      n: 'Pasifika AI', d: FR ? 'Cultures et langues du Pacifique — sourcées' : 'Pacific cultures and languages — sourced' },
     { id: 'market', icon: I.market, url: 'https://kanaky.xyz/marketplace/', dom: 'kanaky.xyz/marketplace',
       n: 'Marketplace', d: FR ? 'Systèmes complets, achetés une fois' : 'Complete systems, bought once' },
   ];
   const host = location.hostname;
-  const cur = host.includes('dictionnaire') ? 'dico'
+  const cur = host === 'pasifika.ai' ? 'pasifika' : host.includes('dictionnaire') ? 'dico'
     : (host.startsWith('studio.') || host.includes('keou')) ? 'keou'
     : location.pathname.startsWith('/marketplace') ? 'market' : 'studio';
 

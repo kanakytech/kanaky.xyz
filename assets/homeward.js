@@ -14,12 +14,13 @@
   if (window.__HOMEWARD) return; window.__HOMEWARD = 1;
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const FR = (document.documentElement.lang || 'en').toLowerCase().startsWith('fr');
-  const isHome = location.pathname === '/' || location.pathname === '/index.html';
+  const hub = '/home/';
+  const isHome = location.pathname === hub || location.pathname === '/home/index.html';
 
   /* précharger l'accueil depuis les pages intérieures */
   if (!isHome) {
     const l = document.createElement('link');
-    l.rel = 'prefetch'; l.href = '/'; l.as = 'document';
+    l.rel = 'prefetch'; l.href = hub; l.as = 'document';
     document.head.appendChild(l);
   }
 
@@ -43,8 +44,8 @@
   /* ── pastille de retour (pages intérieures uniquement) ── */
   if (!isHome) {
     const pill = document.createElement('a');
-    pill.className = 'hw-pill'; pill.href = '/';
-    pill.setAttribute('aria-label', FR ? 'Retour à l’accueil kanaky.xyz' : 'Back to kanaky.xyz home');
+    pill.className = 'hw-pill'; pill.href = hub;
+    pill.setAttribute('aria-label', FR ? 'Retour à l’écosystème Kanaky Tech' : 'Back to the Kanaky Tech ecosystem');
     pill.innerHTML = '<svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3.5 3.5 8 7.5l4 3 3 4" stroke="currentColor" stroke-width="1" opacity=".45"/><circle cx="3.5" cy="3.5" r="1.6" fill="currentColor"/><circle cx="8" cy="7.5" r="1.4" fill="currentColor"/><circle cx="12" cy="10.5" r="1.4" fill="currentColor"/><circle cx="15" cy="14.5" r="1.8" fill="currentColor"/></svg>' + (FR ? 'Accueil' : 'Home');
     document.body.appendChild(pill);
     let on = false;
@@ -121,9 +122,9 @@
     const a = e.target.closest && e.target.closest('a[href]');
     if (!a || a.target === '_blank') return;
     const href = a.getAttribute('href');
-    if (href !== '/' && href !== '/index.html' && !(a.origin === location.origin && a.pathname === '/' && !a.hash)) return;
+    if (href !== hub && href !== '/home/index.html' && !(a.origin === location.origin && a.pathname === hub && !a.hash)) return;
     if (isHome && !a.hash) return;
     e.preventDefault();
-    depart(a.hash ? '/' + a.hash : '/');
+    depart(a.hash ? hub + a.hash : hub);
   }, true);
 })();

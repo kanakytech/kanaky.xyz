@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Kanaky Tech — Écosystème</title>
+  <meta name="description" content="Découvrez les plateformes, outils publics et initiatives de l’écosystème Kanaky Tech, construit dans le Pacifique." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://kanaky.xyz/home/" />
+  <meta name="theme-color" content="#070807" />
+  <link rel="icon" type="image/jpeg" href="/assets/kanaky-tech-logo.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/ecosystem-home.css" />
+</head>
+<body>
+  <a class="skip" href="#platforms">Aller aux plateformes</a>
+  <canvas class="constellation" id="constellation" aria-hidden="true"></canvas>
+  <div class="glow glow-a" aria-hidden="true"></div>
+  <div class="glow glow-b" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="/home/" aria-label="Kanaky Tech — accueil de l’écosystème">
+      <img src="/assets/kanaky-tech-logo.jpg" width="42" height="42" alt="" />
+      <span>Kanaky Tech</span>
+    </a>
+    <div class="top-actions">
+      <div class="lang" role="group" aria-label="Langue">
+        <button type="button" data-locale="fr" aria-pressed="true">FR</button>
+        <button type="button" data-locale="en" aria-pressed="false">EN</button>
+      </div>
+      <a class="business-link" href="/">
+        <span data-fr="Studio &amp; services" data-en="Studio &amp; services">Studio &amp; services</span>
+        <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <p class="eyebrow"><span></span><span data-fr="Construit dans le Pacifique" data-en="Built in the Pacific">Construit dans le Pacifique</span></p>
+      <h1 id="hero-title" data-fr="Un écosystème.<br><em>Plusieurs portes.</em>" data-en="One ecosystem.<br><em>Many ways in.</em>">Un écosystème.<br><em>Plusieurs portes.</em></h1>
+      <p class="hero-copy" data-fr="Des plateformes utiles, accessibles et ancrées dans les réalités du Pacifique — réunies en un seul endroit." data-en="Useful, accessible platforms grounded in Pacific realities — brought together in one place.">Des plateformes utiles, accessibles et ancrées dans les réalités du Pacifique — réunies en un seul endroit.</p>
+      <a class="scroll-cue" href="#platforms"><span data-fr="Choisir une plateforme" data-en="Choose a platform">Choisir une plateforme</span><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m5 8 5 5 5-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </section>
+
+    <section class="platform-section" id="platforms" aria-labelledby="platform-title">
+      <div class="section-head reveal">
+        <p class="section-label" data-fr="Nos plateformes" data-en="Our platforms">Nos plateformes</p>
+        <h2 id="platform-title" data-fr="Où voulez-vous aller ?" data-en="Where would you like to go?">Où voulez-vous aller ?</h2>
+        <p data-fr="Chaque plateforme répond à un besoin précis. Choisissez, explorez, revenez ici quand vous voulez." data-en="Each platform answers a specific need. Choose one, explore, and come back here whenever you like.">Chaque plateforme répond à un besoin précis. Choisissez, explorez, revenez ici quand vous voulez.</p>
+      </div>
+
+      <div class="launcher">
+        <a class="app-card app-pasifika reveal" href="https://pasifika.ai/" data-app="pasifika">
+          <span class="app-icon"><img src="/assets/ecosystem-home/pasifika-ai.svg" width="64" height="60" alt="Logo Pasifika AI" /></span>
+          <span class="app-copy"><strong>Pasifika AI</strong><small data-fr="Cultures et langues du Pacifique, avec leurs sources." data-en="Pacific cultures and languages, with visible sources.">Cultures et langues du Pacifique, avec leurs sources.</small></span>
+          <span class="app-meta"><i data-fr="Gratuit · sans compte" data-en="Free · no account">Gratuit · sans compte</i><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+
+        <a class="app-card app-dico reveal" href="https://dictionnaire.kanaky.xyz/" data-app="dico">
+          <span class="app-icon"><img src="/assets/ecosystem-home/dictionnaire-kanak.jpg" width="64" height="64" alt="Logo du Dictionnaire des langues Kanak" /></span>
+          <span class="app-copy"><strong data-fr="Dictionnaire Kanak" data-en="Kanak Dictionary">Dictionnaire Kanak</strong><small data-fr="19 655 entrées dans neuf langues Kanak." data-en="19,655 entries across nine Kanak languages.">19 655 entrées dans neuf langues Kanak.</small></span>
+          <span class="app-meta"><i data-fr="Patrimoine · ouvert" data-en="Heritage · open">Patrimoine · ouvert</i><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+
+        <a class="app-card app-keou reveal" href="https://studio.kanaky.xyz/" data-app="keou">
+          <span class="app-icon"><img src="/assets/ecosystem-home/keou-studio.png" width="64" height="64" alt="Logo Keou Studio" /></span>
+          <span class="app-copy"><strong>Keou Studio</strong><small data-fr="Production visuelle assistée par IA, de l’idée aux formats finaux." data-en="AI-assisted visual production, from idea to final formats.">Production visuelle assistée par IA, de l’idée aux formats finaux.</small></span>
+          <span class="app-meta"><i data-fr="Créer · produire" data-en="Create · produce">Créer · produire</i><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+
+        <a class="app-card app-business reveal" href="/" data-app="business">
+          <span class="app-icon"><img src="/assets/kanaky-tech-logo.jpg" width="64" height="64" alt="Logo Kanaky Tech" /></span>
+          <span class="app-copy"><strong>Kanaky Tech</strong><small data-fr="Automatisation, agents IA et infrastructures privées pour les organisations." data-en="Automation, AI agents and private infrastructure for organisations.">Automatisation, agents IA et infrastructures privées pour les organisations.</small></span>
+          <span class="app-meta"><i data-fr="Studio &amp; services" data-en="Studio &amp; services">Studio &amp; services</i><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+      </div>
+    </section>
+
+    <section class="story" aria-labelledby="story-title">
+      <div class="story-intro reveal">
+        <p class="section-label" data-fr="Notre histoire" data-en="Our story">Notre histoire</p>
+        <h2 id="story-title" data-fr="La technologie prend du sens quand elle part du terrain." data-en="Technology becomes meaningful when it starts from the ground.">La technologie prend du sens quand elle part du terrain.</h2>
+      </div>
+      <div class="story-copy reveal">
+        <p data-fr="Kanaky Tech est né en 2024 en Kanaky–Nouvelle-Calédonie, puis s’est développé entre Nouméa et Auckland. Au départ, une conviction simple : le Pacifique ne doit pas seulement consommer des outils conçus ailleurs. Il peut construire les siens." data-en="Kanaky Tech was born in 2024 in Kanaky–New Caledonia, then grew between Nouméa and Auckland. It began with a simple belief: the Pacific should not only consume tools designed elsewhere. It can build its own.">Kanaky Tech est né en 2024 en Kanaky–Nouvelle-Calédonie, puis s’est développé entre Nouméa et Auckland. Au départ, une conviction simple : le Pacifique ne doit pas seulement consommer des outils conçus ailleurs. Il peut construire les siens.</p>
+        <p data-fr="Nos projets sont devenus les preuves de cette vision : préserver des langues, rendre des sources culturelles vérifiables, ouvrir les données publiques aux agents IA et donner aux entreprises des systèmes qu’elles peuvent comprendre et contrôler." data-en="Our projects became proof of that vision: preserve languages, make cultural sources verifiable, open public data to AI agents, and give businesses systems they can understand and control.">Nos projets sont devenus les preuves de cette vision : préserver des langues, rendre des sources culturelles vérifiables, ouvrir les données publiques aux agents IA et donner aux entreprises des systèmes qu’elles peuvent comprendre et contrôler.</p>
+      </div>
+    </section>
+
+    <section class="principles" aria-labelledby="vision-title">
+      <div class="section-head reveal">
+        <p class="section-label" data-fr="Notre vision" data-en="Our vision">Notre vision</p>
+        <h2 id="vision-title" data-fr="Utile ici. Ouvert quand c’est possible. Contrôlable toujours." data-en="Useful here. Open when possible. Always controllable.">Utile ici. Ouvert quand c’est possible. Contrôlable toujours.</h2>
+      </div>
+      <div class="principle-grid">
+        <article class="principle reveal"><span>01</span><h3 data-fr="Ancrage" data-en="Grounded">Ancrage</h3><p data-fr="Concevoir depuis les langues, les contraintes et les réalités économiques du Pacifique." data-en="Design from the languages, constraints and economic realities of the Pacific.">Concevoir depuis les langues, les contraintes et les réalités économiques du Pacifique.</p></article>
+        <article class="principle reveal"><span>02</span><h3 data-fr="Preuve" data-en="Evidence">Preuve</h3><p data-fr="Montrer les sources, les limites et les systèmes réels plutôt que vendre une promesse abstraite." data-en="Show sources, limits and real systems rather than sell an abstract promise.">Montrer les sources, les limites et les systèmes réels plutôt que vendre une promesse abstraite.</p></article>
+        <article class="principle reveal"><span>03</span><h3 data-fr="Souveraineté" data-en="Sovereignty">Souveraineté</h3><p data-fr="Garder la donnée, la compréhension et la valeur au plus près des personnes qu’elles servent." data-en="Keep data, understanding and value close to the people they serve.">Garder la donnée, la compréhension et la valeur au plus près des personnes qu’elles servent.</p></article>
+      </div>
+    </section>
+
+    <section class="actions" aria-labelledby="actions-title">
+      <div class="section-head reveal">
+        <p class="section-label" data-fr="Nos actions" data-en="What we do">Nos actions</p>
+        <h2 id="actions-title" data-fr="Des briques publiques et des systèmes en production." data-en="Public building blocks and production systems.">Des briques publiques et des systèmes en production.</h2>
+      </div>
+      <div class="action-grid">
+        <a class="action reveal" href="/mcp-datagouvnc/"><span class="action-icon data"><img src="/assets/ecosystem-home/data-gouv-nc.png" alt="Data Gouv NC" width="112" height="37" /></span><span><strong>MCP Data Gouv NC</strong><small data-fr="Les données publiques calédoniennes accessibles aux agents IA." data-en="New Caledonian public data made accessible to AI agents.">Les données publiques calédoniennes accessibles aux agents IA.</small></span><b>↗</b></a>
+        <a class="action reveal" href="/marketplace/"><span class="action-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.5 13.5 13.4 20.6a2 2 0 0 1-2.8 0L2 12V2h10l8.5 8.5a2.1 2.1 0 0 1 0 3Z" stroke="currentColor" stroke-width="1.5"/><circle cx="7.4" cy="7.4" r="1.4" fill="currentColor"/></svg></span><span><strong>Marketplace</strong><small data-fr="Des systèmes complets, acquis une fois et contrôlés par leur propriétaire." data-en="Complete systems, purchased once and controlled by their owner.">Des systèmes complets, acquis une fois et contrôlés par leur propriétaire.</small></span><b>↗</b></a>
+        <a class="action reveal" href="https://formations.kanaky.xyz/"><span class="action-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m3 9 9-5 9 5-9 5-9-5Z" stroke="currentColor" stroke-width="1.5"/><path d="M7 12v5c2.8 2 7.2 2 10 0v-5M21 9v6" stroke="currentColor" stroke-width="1.5"/></svg></span><span><strong data-fr="Formations IA" data-en="AI Training">Formations IA</strong><small data-fr="Comprendre, construire et garder la maîtrise des outils." data-en="Understand, build and keep control of the tools.">Comprendre, construire et garder la maîtrise des outils.</small></span><b>↗</b></a>
+      </div>
+    </section>
+
+    <section class="impact reveal" aria-label="Impact de l’écosystème">
+      <div><strong>59</strong><span data-fr="domaines institutionnels vérifiés" data-en="verified institutional domains">domaines institutionnels vérifiés</span></div>
+      <div><strong>9</strong><span data-fr="langues Kanak documentées" data-en="documented Kanak languages">langues Kanak documentées</span></div>
+      <div><strong>19 655</strong><span data-fr="entrées linguistiques indexées" data-en="indexed language entries">entrées linguistiques indexées</span></div>
+      <div><strong>0</strong><span data-fr="compte requis sur nos outils publics" data-en="accounts required on our public tools">compte requis sur nos outils publics</span></div>
+    </section>
+
+    <section class="closing reveal">
+      <img src="/assets/kanaky-tech-logo.jpg" width="70" height="70" alt="Logo Kanaky Tech" />
+      <h2 data-fr="Le Pacifique n’est pas une périphérie numérique." data-en="The Pacific is not a digital periphery.">Le Pacifique n’est pas une périphérie numérique.</h2>
+      <p data-fr="C’est un point de départ." data-en="It is a starting point.">C’est un point de départ.</p>
+      <a href="/" class="primary-cta"><span data-fr="Découvrir le studio Kanaky Tech" data-en="Discover the Kanaky Tech studio">Découvrir le studio Kanaky Tech</span><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 Kanaky Tech · Nouméa · Auckland</span>
+    <nav><a href="/legal/" data-fr="Informations légales" data-en="Legal information">Informations légales</a><a href="/contact/">Contact</a></nav>
+  </footer>
+  <script src="/assets/ecosystem-home.js" defer></script>
+</body>
+</html>
