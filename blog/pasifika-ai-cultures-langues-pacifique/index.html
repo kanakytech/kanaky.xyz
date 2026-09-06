@@ -47,13 +47,13 @@
     .article-hero{padding:160px 48px 56px;border-bottom:1px solid var(--border)}
     .article-hero .wrap{max-width:860px;margin:0 auto}.article-hero h1{font-size:clamp(34px,5vw,62px);font-weight:800;letter-spacing:-.035em;line-height:1.03;margin:18px 0 22px}
     .article-hero .lead{font-size:19px;color:var(--grey-4);line-height:1.7}.article-meta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px;font-size:13px;color:var(--grey-3)}
-    .article-body{padding:64px 48px}.article-body .wrap{max-width:760px;margin:0 auto}.article-figure{margin:0 0 42px}.article-figure img{width:100%;display:block;border:1px solid var(--border);border-radius:10px}.article-figure figcaption{margin-top:10px;text-align:center;font-size:13px;color:var(--grey-3)}
+    .article-body{padding:64px 48px}.article-body .wrap{max-width:760px;margin:0 auto}.article-figure{width:100%;margin:0 0 42px}.article-figure img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--border);border-radius:10px}.article-figure figcaption{margin-top:10px;text-align:center;font-size:13px;color:var(--grey-3)}
     .proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin:32px 0}.proof{background:var(--black);padding:24px}.proof strong{display:block;font-size:28px;color:var(--accent);margin-bottom:6px}.proof span{font-size:13px;color:var(--grey-3);line-height:1.45}
     .pai-cta{margin:42px 0;padding:30px;border:1px solid rgba(200,240,96,.28);background:rgba(200,240,96,.045)}.pai-cta h3{font-size:22px;margin-bottom:8px}.pai-cta p{margin-bottom:18px}
     .feature-block{margin:64px 0}.feature-kicker{display:inline-block;margin-bottom:10px;color:var(--accent);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}.feature-block h2{margin-top:0}.why-box{margin:22px 0 28px;padding:18px 20px;border-left:2px solid var(--accent);background:rgba(200,240,96,.045);color:var(--grey-4);line-height:1.65}.why-box strong{color:var(--white)}
-    .shot-pair{display:grid;grid-template-columns:minmax(190px,.65fr) minmax(0,1.35fr);gap:18px;align-items:start;margin:28px 0 40px}.shot-pair .article-figure{margin:0}.shot-pair img{background:#061f28}.article-figure.compact{max-width:680px;margin-left:auto;margin-right:auto}.article-figure.wide{width:min(1120px,calc(100vw - 48px));margin-left:50%;transform:translateX(-50%)}
+    .shot-pair{display:block;margin:28px 0 40px}.shot-pair .article-figure{margin:0 0 28px}.shot-pair img{background:#061f28}.article-figure.compact,.article-figure.wide{width:100%;max-width:none;margin-left:0;margin-right:0;transform:none}
     .reality-note{font-size:13px;color:var(--grey-3);margin-top:-20px;margin-bottom:36px}
-    @media(max-width:768px){.article-hero{padding:120px 24px 44px}.article-body{padding:48px 24px}.proof-grid,.shot-pair{grid-template-columns:1fr}.proof{padding:18px}.feature-block{margin:50px 0}.article-figure.wide{width:100%;margin-left:0;transform:none}}
+    @media(max-width:768px){.article-hero{padding:120px 24px 44px}.article-body{padding:48px 24px}.proof-grid{grid-template-columns:1fr}.proof{padding:18px}.feature-block{margin:50px 0}}
   </style>
 </head>
 <body>
@@ -86,7 +86,7 @@
         <h2>Une recherche volontairement plus petite</h2>
         <p>Quand une question demande des sources récentes, l’assistant ne parcourt pas le web ouvert. Il interroge une liste publique de 59 domaines : académies de langues, universités, musées, archives nationales, gouvernements et organisations régionales. La <a href="https://pasifika.ai/sources" target="_blank" rel="noopener">liste complète est visible</a>.</p>
         <div class="why-box"><strong>Pourquoi cette fonction existe.</strong> Une réponse culturelle ne doit pas devenir crédible simplement parce qu’elle est bien écrite. Les liens visibles permettent de remonter à l’institution, de lire le document d’origine et de former son propre jugement.</div>
-        <figure class="article-figure compact"><img src="/assets/blog/pasifika-ai/use-cases/01-reponse-culturelle-sourcee.png" width="734" height="934" loading="lazy" alt="Réponse réelle de Pasifika AI sur la signification du hongi, accompagnée de cinq sources institutionnelles Te Ara" /><figcaption>Cas réel : une question sur le hongi produit une réponse contextualisée et cinq pages institutionnelles consultables.</figcaption></figure>
+        <figure class="article-figure compact"><img src="/assets/blog/pasifika-ai/use-cases/01-reponse-culturelle-sourcee.png" width="960" height="540" loading="lazy" alt="Réponse réelle de Pasifika AI sur la signification du hongi, accompagnée de cinq sources institutionnelles Te Ara" /><figcaption>Cas réel : une question sur le hongi produit une réponse contextualisée et cinq pages institutionnelles consultables.</figcaption></figure>
       </section>
 
       <section class="feature-block">
@@ -95,7 +95,7 @@
         <p>Le <a href="https://dictionnaire.kanaky.xyz/" target="_blank" rel="noopener">dictionnaire des langues Kanak</a> publié par Kanaky Tech fournit un index de 19&nbsp;655 entrées dans neuf langues : Drehu, Nengone, A’jië, Paicî, Xârâcùù, Xârâgurè, Numèè, Zuanga-Yuanga et Naa Drubea.</p>
         <p>Après chaque réponse, un contrôle séparé du modèle examine les mots Kanak cités. Ceux qui ne figurent pas dans l’index sont montrés au lecteur comme non attestés. Le contrôle ne rend pas l’IA infaillible ; il rend son incertitude visible.</p>
         <div class="why-box"><strong>Pourquoi cette fonction existe.</strong> Un mot inventé peut être repris, partagé puis confondu avec une traduction authentique. L’index sert de preuve minimale et protège le lecteur contre cette fausse assurance.</div>
-        <figure class="article-figure compact"><img src="/assets/blog/pasifika-ai/use-cases/02-mot-kanak-verifie.png" width="734" height="733" loading="lazy" alt="Réponse réelle de Pasifika AI à la question comment dit-on mer en Drehu, avec vérification dans le dictionnaire Kanak" /><figcaption>Cas réel : « mer » en Drehu est relié à l’entrée attestée <em>gejë</em> et à sa source dictionnaire.</figcaption></figure>
+        <figure class="article-figure compact"><img src="/assets/blog/pasifika-ai/use-cases/02-mot-kanak-verifie.png" width="960" height="540" loading="lazy" alt="Réponse réelle de Pasifika AI à la question comment dit-on mer en Drehu, avec vérification dans le dictionnaire Kanak" /><figcaption>Cas réel : <em>gejë</em> est attesté ; une forme produite par le modèle mais absente de l’index est immédiatement signalée à vérifier auprès d’un locuteur.</figcaption></figure>
       </section>
 
       <section class="feature-block">
@@ -104,10 +104,10 @@
         <p>Le bouton « + » permet d’activer Data Gouv NC pour interroger le catalogue et les jeux de données publics calédoniens. L’outil reste désactivé par défaut : l’utilisateur choisit quand sa question appelle cette source supplémentaire.</p>
         <div class="why-box"><strong>Pourquoi cette fonction existe.</strong> Les données administratives demandent un traitement différent d’une question culturelle. Le connecteur rend la provenance visible et oblige l’assistant à distinguer ce que dit réellement le jeu de données de ce qu’on pourrait être tenté d’en déduire.</div>
         <div class="shot-pair">
-          <figure class="article-figure"><img src="/assets/blog/pasifika-ai/use-cases/03-activer-data-gouv-nc.png" width="326" height="192" loading="lazy" alt="Panneau réel des outils de Pasifika AI avec Data Gouv NC activé" /><figcaption>Activation explicite depuis le bouton « + ».</figcaption></figure>
-          <figure class="article-figure"><img src="/assets/blog/pasifika-ai/use-cases/04-data-gouv-nc-tribus-province-nord.png" width="734" height="952" loading="lazy" alt="Réponse réelle de Pasifika AI utilisant le jeu Data Gouv NC Tribus en Province Nord" /><figcaption>Cas réel : le jeu contient 252 enregistrements, mais Pasifika AI précise que cela ne prouve pas l’existence de 252 tribus distinctes.</figcaption></figure>
+          <figure class="article-figure"><img src="/assets/blog/pasifika-ai/use-cases/03-activer-data-gouv-nc.png" width="960" height="540" loading="lazy" alt="Panneau réel des outils de Pasifika AI avec Data Gouv NC activé" /><figcaption>Activation explicite depuis le bouton « + ».</figcaption></figure>
+          <figure class="article-figure"><img src="/assets/blog/pasifika-ai/use-cases/04-data-gouv-nc-tribus-province-nord.png" width="960" height="540" loading="lazy" alt="Réponse réelle de Pasifika AI utilisant le jeu Data Gouv NC Tribus en Province Nord" /><figcaption>Cas réel : le jeu contient 252 enregistrements, mais Pasifika AI précise que cela ne prouve pas l’existence de 252 tribus distinctes.</figcaption></figure>
         </div>
-        <p class="reality-note">Ces captures proviennent de l’interface publique de pasifika.ai. Le résultat n’a pas été réécrit pour l’article : l’assistant préfère ici dire « je ne dispose pas du chiffre précis » plutôt que transformer un nombre de lignes en fait administratif.</p>
+        <p class="reality-note">Ces captures proviennent de l’interface publique de pasifika.ai. Le résultat n’a pas été réécrit pour l’article : l’assistant donne la métadonnée vérifiée de 252 enregistrements tout en précisant qu’un nombre de lignes ne prouve pas l’existence de 252 tribus distinctes.</p>
       </section>
 
       <section class="feature-block">
@@ -115,7 +115,7 @@
         <h2>Poser une question et écouter la réponse</h2>
         <p>Le microphone permet la dictée en français ou en anglais lorsque le navigateur la prend en charge. Le texte apparaît avant l’envoi et reste modifiable. Pasifika AI ne reçoit pas le fichier audio ; selon le navigateur, la reconnaissance vocale peut cependant être traitée par son propre service. Le bouton « Écouter » utilise une voix locale installée sur l’appareil.</p>
         <div class="why-box"><strong>Pourquoi cette fonction existe.</strong> Sur mobile, la voix rend l’outil plus direct et plus accessible. Le choix de capacités déjà présentes dans le navigateur évite aussi d’ajouter un fournisseur vocal payant et de stocker des enregistrements.</div>
-        <figure class="article-figure compact"><img src="/assets/blog/pasifika-ai/use-cases/05-outils-voix-capacite.png" width="778" height="148" loading="lazy" alt="Zone de saisie réelle de Pasifika AI avec bouton outils, microphone, Data Gouv NC et capacité quotidienne" /><figcaption>Le même compositeur réunit l’outil Data Gouv NC, la dictée et la capacité disponible en temps réel.</figcaption></figure>
+        <figure class="article-figure compact"><img src="/assets/blog/pasifika-ai/use-cases/05-outils-voix-capacite.png" width="960" height="540" loading="lazy" alt="Zone de saisie réelle de Pasifika AI avec bouton outils, microphone, Data Gouv NC et capacité quotidienne" /><figcaption>Le même compositeur réunit l’outil Data Gouv NC, la dictée et la capacité disponible en temps réel.</figcaption></figure>
       </section>
 
       <section class="feature-block">
@@ -123,7 +123,7 @@
         <h2>Une continuité sans créer de compte</h2>
         <p>Les conversations restent dans le stockage local du navigateur, jusqu’à 40 conversations. Seuls les huit derniers messages utiles sont transmis lors d’une nouvelle question pour conserver le contexte. Pasifika AI ne maintient pas de base d’historique côté serveur, et « Tout effacer » retire les conversations locales.</p>
         <div class="why-box"><strong>Pourquoi cette fonction existe.</strong> Retrouver une conversation est utile ; imposer une identité pour y parvenir ne l’était pas. Le compromis conserve la continuité sur l’appareil tout en évitant comptes, profils et historique centralisé.</div>
-        <figure class="article-figure wide"><img src="/assets/blog/pasifika-ai/use-cases/06-historique-local.png" width="1440" height="1100" loading="lazy" alt="Fenêtre réelle de l’historique local de Pasifika AI expliquant le stockage dans le navigateur" /><figcaption>L’interface explique directement où les échanges sont gardés et ce qui est transmis.</figcaption></figure>
+        <figure class="article-figure wide"><img src="/assets/blog/pasifika-ai/use-cases/06-historique-local.png" width="960" height="540" loading="lazy" alt="Fenêtre réelle de l’historique local de Pasifika AI expliquant le stockage dans le navigateur" /><figcaption>L’interface explique directement où les échanges sont gardés et ce qui est transmis.</figcaption></figure>
       </section>
 
       <section class="feature-block">
@@ -131,7 +131,7 @@
         <h2>Gratuit, donc géré comme un bien commun</h2>
         <p>Pasifika AI n’impose ni inscription ni publicité. Sa capacité quotidienne partagée est affichée dans l’interface. Les dons sont volontaires et augmentent les moyens communs ; ils n’achètent ni priorité, ni réponse, ni quota individuel. Lorsque la limite est atteinte, le site explique pourquoi et indique l’heure de réouverture.</p>
         <div class="why-box"><strong>Pourquoi cette fonction existe.</strong> Un service gratuit a tout de même un coût. Montrer la capacité et l’équivalence indicative — 5&nbsp;$ financent environ 700 réponses sourcées — permet de comprendre le modèle sans publicité ni mécanique opaque.</div>
-        <figure class="article-figure wide"><img src="/assets/blog/pasifika-ai/use-cases/07-capacite-dons.png" width="800" height="700" loading="lazy" alt="Fenêtre réelle de soutien à Pasifika AI avec don par carte, Bitcoin et Solana" /><figcaption>Carte via Stripe, Bitcoin ou SOL : plusieurs voies de soutien, toutes facultatives.</figcaption></figure>
+        <figure class="article-figure wide"><img src="/assets/blog/pasifika-ai/use-cases/07-capacite-dons.png" width="960" height="540" loading="lazy" alt="Fenêtre réelle de soutien à Pasifika AI avec don par carte, Bitcoin et Solana" /><figcaption>Carte via Stripe, Bitcoin ou SOL : plusieurs voies de soutien, toutes facultatives.</figcaption></figure>
       </section>
 
       <h2>Ce que nous promettons — et ce que nous ne promettons pas</h2>
