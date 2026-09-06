@@ -25,16 +25,16 @@
   };
 
   const I = {
-    studio: '<svg viewBox="0 0 24 24" fill="none"><path d="M13 2 3.5 14H10l-1 8L18.5 10H12l1-8z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>',
-    dico: '<svg viewBox="0 0 24 24" fill="none"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 19.5A2.5 2.5 0 0 0 6.5 22H20V2H6.5A2.5 2.5 0 0 0 4 4.5v15z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M9 7h7M9 11h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>',
-    keou: '<svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2.5" stroke="currentColor" stroke-width="1.7"/><circle cx="9" cy="9" r="1.8" stroke="currentColor" stroke-width="1.6"/><path d="m3.5 17 5-5 4 4 3.5-3.5 4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>',
+    studio: '<img src="/assets/kanaky-tech-logo.jpg" alt="" width="36" height="36">',
+    dico: '<img src="/assets/ecosystem-home/dictionnaire-kanak.svg" alt="" width="36" height="36">',
+    keou: '<img src="/assets/ecosystem-home/keou-studio.png" alt="" width="36" height="36">',
     market: '<svg viewBox="0 0 24 24" fill="none"><path d="M20.59 13.41 13.42 20.6a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="7.5" cy="7.5" r="1.4" fill="currentColor"/></svg>',
-    pasifika: '<svg viewBox="0 0 24 24" fill="none"><path d="M3 7.5c2.1-1.8 4.2-1.8 6.3 0s4.2 1.8 6.3 0 4.2-1.8 6.4 0M3 12c2.1-1.8 4.2-1.8 6.3 0s4.2 1.8 6.3 0 4.2-1.8 6.4 0M3 16.5c2.1-1.8 4.2-1.8 6.3 0s4.2 1.8 6.3 0 4.2-1.8 6.4 0" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>',
+    pasifika: '<img src="/assets/ecosystem-home/pasifika-ai.svg" alt="" width="36" height="34">',
   };
 
   const P = [
     { id: 'studio', icon: I.studio, url: 'https://kanaky.xyz/', dom: 'kanaky.xyz',
-      n: 'Kanaky Tech', d: FR ? 'Automatisation IA — Mélanésie, NZ, Pacifique' : 'AI automation — Melanesia, NZ, Pacific' },
+      n: 'Business', d: FR ? 'Automatisation IA — Mélanésie, NZ, Pacifique' : 'AI automation — Melanesia, NZ, Pacific' },
     { id: 'dico', icon: I.dico, url: 'https://dictionnaire.kanaky.xyz/', dom: 'dictionnaire.kanaky.xyz',
       n: FR ? 'Dictionnaire des langues kanak' : 'Kanak Languages Dictionary', d: FR ? '9 langues · 19 672 mots · gratuit' : '9 languages · 19,672 words · free' },
     { id: 'keou', icon: I.keou, url: 'https://studio.kanaky.xyz/', dom: 'studio.kanaky.xyz',
@@ -77,6 +77,7 @@
   .eco-a:hover,.eco-a:focus-visible{background:${C.bg2};border-color:${C.line};outline:none}
   .eco-ic{width:44px;height:44px;border-radius:12px;border:1px solid ${C.line};display:flex;align-items:center;justify-content:center;color:${C.tx2};transition:color .22s,border-color .22s,background .22s}
   .eco-ic svg{width:21px;height:21px}
+  .eco-ic img{display:block;width:36px;height:36px;object-fit:contain;border-radius:9px}
   .eco-a:hover .eco-ic,.eco-a:focus-visible .eco-ic{color:${C.lime};border-color:transparent;background:${C.limeSoft}}
   .eco-tx b{display:block;font-size:.95rem;font-weight:600;color:${C.tx};letter-spacing:-.01em;line-height:1.3}
   .eco-tx span{display:block;font-size:.8rem;color:${C.tx2};line-height:1.45;margin-top:2px}
