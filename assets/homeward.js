@@ -26,7 +26,7 @@
 
   const css = document.createElement('style');
   css.textContent = [
-    '.hw-pill{position:fixed;left:18px;bottom:18px;z-index:9992;display:inline-flex;align-items:center;gap:9px;padding:11px 16px;border-radius:99px;background:rgba(8,8,8,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.12);color:#f0f0ec;font-family:inherit;font-size:12.5px;letter-spacing:.04em;text-decoration:none;opacity:0;transform:translateY(14px);transition:opacity .4s cubic-bezier(.22,1,.36,1),transform .4s cubic-bezier(.22,1,.36,1),border-color .3s;pointer-events:none}',
+    '.hw-pill{position:fixed;left:14px;bottom:14px;z-index:9992;display:inline-flex;align-items:center;gap:8px;padding:10px 15px;border-radius:99px;background:rgba(8,8,8,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.12);color:#f0f0ec;font-family:inherit;font-size:12.5px;line-height:1;letter-spacing:.03em;text-decoration:none;opacity:0;transform:translateY(14px);transition:opacity .4s cubic-bezier(.22,1,.36,1),transform .4s cubic-bezier(.22,1,.36,1),border-color .3s;pointer-events:none}',
     '.hw-pill.on{opacity:1;transform:none;pointer-events:auto}',
     '.hw-pill:hover{border-color:rgba(200,240,96,.5);color:#C8F060}',
     '.hw-pill svg{width:14px;height:14px}',
@@ -37,24 +37,18 @@
     '.hw-veil .hw-line{stroke:#C8F060;stroke-opacity:.5;stroke-width:1;stroke-dasharray:600;stroke-dashoffset:600;animation:hwLine .45s ease .12s forwards}',
     '@keyframes hwDot{from{opacity:0;transform:scale(.2)}to{opacity:1;transform:scale(1)}}',
     '@keyframes hwLine{to{stroke-dashoffset:0}}',
-    '@media(max-width:640px){.hw-pill{left:12px;bottom:12px;padding:10px 14px}}',
+    '@media(max-width:640px){.hw-pill{left:14px;bottom:14px}}',
   ].join('');
   document.head.appendChild(css);
 
-  /* ── pastille de retour (pages intérieures uniquement) ── */
-  if (!isHome) {
-    const pill = document.createElement('a');
-    pill.className = 'hw-pill'; pill.href = hub;
-    pill.setAttribute('aria-label', FR ? 'Retour à l’écosystème Kanaky Tech' : 'Back to the Kanaky Tech ecosystem');
-    pill.innerHTML = '<svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3.5 3.5 8 7.5l4 3 3 4" stroke="currentColor" stroke-width="1" opacity=".45"/><circle cx="3.5" cy="3.5" r="1.6" fill="currentColor"/><circle cx="8" cy="7.5" r="1.4" fill="currentColor"/><circle cx="12" cy="10.5" r="1.4" fill="currentColor"/><circle cx="15" cy="14.5" r="1.8" fill="currentColor"/></svg>' + (FR ? 'Accueil' : 'Home');
-    document.body.appendChild(pill);
-    let on = false;
-    const check = () => {
-      const want = scrollY > 480;
-      if (want !== on) { on = want; pill.classList.toggle('on', on); }
-    };
-    addEventListener('scroll', check, { passive: true }); check();
-  }
+  /* ── point d'entrée identique sur toutes les plateformes ── */
+  const pill = document.createElement('a');
+  pill.className = 'hw-pill on';
+  pill.href = isHome ? '#platforms' : hub;
+  pill.setAttribute('aria-label', FR ? 'Écosystème Kanaky Tech' : 'Kanaky Tech ecosystem');
+  pill.innerHTML = '<svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3.5 3.5 8 7.5l4 3 3 4" stroke="currentColor" stroke-width="1" opacity=".45"/><circle cx="3.5" cy="3.5" r="1.6" fill="currentColor"/><circle cx="8" cy="7.5" r="1.4" fill="currentColor"/><circle cx="12" cy="10.5" r="1.4" fill="currentColor"/><circle cx="15" cy="14.5" r="1.8" fill="currentColor"/></svg>' + (FR ? 'Écosystème' : 'Ecosystem');
+  if (isHome) pill.setAttribute('aria-current', 'page');
+  document.body.appendChild(pill);
 
   /* ── transition de départ vers l'accueil ── */
   function depart(href) {
