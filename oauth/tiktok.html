@@ -1,0 +1,12 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Kanaky Tech — relais OAuth</title>
+<meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1">
+<style>body{font-family:system-ui;background:#050505;color:#c8f060;display:grid;place-items:center;height:100vh;margin:0}p{max-width:34rem;text-align:center;line-height:1.5}code{color:#fff}</style></head>
+<body><p id="m">Relais vers le script sur ta machine…</p>
+<script>
+// Relais OAuth (TikTok exige une redirection https). On renvoie tel quel le retour
+// d'autorisation vers le script local qui écoute sur localhost — rien n'est stocké ici.
+const q=location.search;
+if(q){location.replace('http://localhost:8765/callback'+q);
+ setTimeout(()=>{document.getElementById('m').innerHTML='Si rien ne se passe, le script local n\'écoute pas. Copie cette adresse dans le terminal :<br><code>'+location.href.replace(/&/g,'&amp;')+'</code>'},2500)}
+else document.getElementById('m').textContent='Page de relais OAuth de Kanaky Tech. Rien à voir ici.';
+</script></body></html>
