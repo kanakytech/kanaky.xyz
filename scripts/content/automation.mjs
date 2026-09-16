@@ -8,6 +8,8 @@ export default [
 
 {
   slug: 'what-is-an-ai-agent',
+  published: '2026-08-13',
+  modified: '2026-09-16',
   alt: { lang: 'fr', url: 'https://kanaky.xyz/qu-est-ce-qu-un-agent-ia/' },
   title: 'What Is an AI Agent? A Plain Explanation With Real Examples',
   description: 'What distinguishes an AI agent from a chatbot or an automation: tools, decisions and loops. Real examples, where agents genuinely help, and where they fail in ways worth knowing about first.',
@@ -17,10 +19,10 @@ export default [
   h1: 'What is an AI agent? <span style="color:var(--grey-4);font-weight:300;">And how is it different from a chatbot?</span>',
   cta: 'service',
   body: [
-    { lead: 'The word "agent" has been attached to almost everything, which has made it close to meaningless in marketing material. The distinction that actually matters is simple: a chatbot produces text, an automation follows a fixed path, and an agent decides what to do next and then does it.' },
+    { lead: 'An AI agent is a system that uses a model to choose actions and tools, observe results and work toward a goal. A workflow defines the path in code. A chat interface can front either system: the architecture and permissions, not the chat box, determine what it can do.' },
     { h: 'The three things, distinguished' },
     { cards: [
-      { t: 'A chatbot', d: 'Takes input, returns text. It cannot act on anything. Useful for answering, useless for doing.' },
+      { t: 'A chatbot', d: 'A conversational interface. A basic version answers in text; a tool-connected version can also take actions. Inspect the system behind the interface.' },
       { t: 'An automation', d: 'Follows a path you defined. When X happens, do Y, then Z. Reliable and predictable, and it breaks on anything you did not anticipate.' },
       { t: 'An agent', d: 'Has a goal and a set of tools. It decides which to use, observes the result, and continues until the goal is met or it gives up. The path is not fixed in advance.' },
     ]},
@@ -29,7 +31,7 @@ export default [
       '**Tools.** It can do things beyond producing text — read a file, query a database, send an email, call an API, run a search.',
       '**Decisions.** It chooses which tool to use based on the situation, rather than following a predetermined order.',
       '**A loop.** It acts, observes what happened, and decides again. This is the part that distinguishes an agent from a single clever response.',
-      '**A stopping condition.** It knows when it is done, or when it cannot proceed — and a badly built agent that lacks this is the most common failure in practice.',
+      '**A stopping condition.** It knows when it is done, or when it cannot proceed — a step limit and an escalation path help bound an unsuccessful run.',
     ]},
     { h: 'A concrete example' },
     'Take handling an inbound enquiry.',
@@ -37,7 +39,7 @@ export default [
       minWidth: 560,
       head: ['Approach', 'What happens'],
       rows: [
-        ['Chatbot', 'Answers the question in the message, and nothing else.'],
+        ['Chatbot', 'A basic text-only chatbot answers the question; tool-connected chat systems can do more.'],
         ['Automation', 'Sends a fixed acknowledgement, creates a CRM record, notifies you. Always the same steps.'],
         ['Agent', 'Reads the enquiry, looks the company up, checks whether they are an existing customer, decides whether it is a quote request or a support issue, drafts an appropriate response, schedules a follow-up — and escalates to you when it hits something it cannot judge.'],
       ],
@@ -58,11 +60,14 @@ export default [
       '**Debugging is harder.** When an automation breaks, the path is fixed and you can find the step. When an agent goes wrong, you are reconstructing a decision sequence.',
     ]},
     { note: 'The practical rule: **use an automation where the path is known, an agent where it is not.** Most business problems described as needing agents actually have a fixed path, and would be better served by something predictable and cheaper to run.' },
+    { h: "Sources and how to read this guide" },
+    "The workflow/agent distinction follows [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents), published by Anthropic on 19 December 2024. The enquiry scenario is illustrative, not a measured client result. The implementation advice is Kanaky Tech’s editorial guidance; capabilities and costs depend on the chosen system.",
+    "Editorial review: 16 September 2026 · Kanaky Tech. Report a correction with the passage and reference: [contact](/contact/).",
   ],
   faq: [
     { q: 'What is the difference between an AI agent and automation?', a: 'An automation follows a path you defined in advance, which makes it predictable and brittle. An agent decides its own path using tools available to it, which makes it flexible and less predictable. If you can write down the steps, build an automation — it will be cheaper, faster and easier to debug.' },
     { q: 'Are AI agents reliable enough for business use?', a: 'For well-scoped tasks with a human reviewing consequential actions, yes. For unsupervised work with real consequences, be careful — they fail in ways that look like success, and errors compound inside loops. The common pattern that works is an agent that prepares and a person who approves.' },
-    { q: 'What does an AI agent cost to run?', a: 'It depends on how many steps it takes, which varies per task and is not fully predictable. That is a genuine budgeting difference from fixed automations. Running the model locally removes per-step cost entirely, which is one reason agent-style work suits local deployment — see [running AI locally](/run-ai-locally-business/).' },
+    { q: 'What does an AI agent cost to run?', a: 'It depends on how many steps it takes, which varies per task and is not fully predictable. That is a genuine budgeting difference from fixed automations. Running a model locally can avoid a model provider’s per-token fee, but hardware, electricity, maintenance and any external tools still cost money — see [running AI locally](/run-ai-locally-business/).' },
     { q: 'Do I need an agent, or just an automation?', a: 'Most businesses need automation and are being sold agents. If you can write the steps down, you do not need something that decides its own. Agents earn their complexity when the next step genuinely depends on what the previous one found.' },
   ],
   related: [

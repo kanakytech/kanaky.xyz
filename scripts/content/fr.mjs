@@ -302,6 +302,8 @@ export default [
 
 {
   slug: 'qu-est-ce-qu-un-agent-ia',
+  published: '2026-08-13',
+  modified: '2026-09-16',
   lang: 'fr',
   alt: { lang: 'en', url: 'https://kanaky.xyz/what-is-an-ai-agent/' },
   title: 'Qu’est-ce qu’un agent IA ? Explication simple, exemples réels',
@@ -312,10 +314,10 @@ export default [
   h1: 'Qu’est-ce qu’un agent IA ? <span style="color:var(--grey-4);font-weight:300;">Et en quoi ce n’est pas un chatbot.</span>',
   cta: 'service-fr',
   body: [
-    { lead: 'Le mot « agent » est aujourd’hui collé sur à peu près tout, ce qui l’a vidé de son sens commercial. La distinction utile tient en une phrase : un chatbot produit du texte, une automatisation suit un chemin fixé d’avance, un agent décide de la prochaine étape puis l’exécute.' },
+    { lead: 'Un agent IA utilise un modèle pour choisir des actions et des outils, observer les résultats et avancer vers un objectif. Un workflow définit le parcours dans le code. Une interface de chat peut donner accès à l’un ou à l’autre : les capacités dépendent de l’architecture et des permissions.' },
     { h: 'Les trois, distingués' },
     { cards: [
-      { t: 'Le chatbot', d: 'Reçoit une question, rend du texte. Il ne peut agir sur rien. Utile pour répondre, inutile pour faire.' },
+      { t: 'Le chatbot', d: 'Une interface conversationnelle. Une version simple répond par du texte ; une version connectée à des outils peut aussi agir. Il faut examiner le système derrière cette interface.' },
       { t: 'L’automatisation', d: 'Suit le chemin que vous avez défini : quand X arrive, faire Y puis Z. Fiable, prévisible — et cassante dès que survient ce que vous n’aviez pas prévu.' },
       { t: 'L’agent', d: 'A un objectif et des outils. Il choisit lequel utiliser, observe le résultat, recommence — jusqu’à l’objectif atteint ou l’échec constaté. Le chemin n’est pas écrit d’avance.' },
     ]},
@@ -325,7 +327,7 @@ export default [
       minWidth: 520,
       head: ['Approche', 'Ce qui se passe'],
       rows: [
-        ['Chatbot', 'Répond à la question posée. Rien d’autre.'],
+        ['Chatbot', 'Un chatbot textuel simple répond à la question ; une version connectée à des outils peut aller plus loin.'],
         ['Automatisation', 'Accusé de réception type, fiche créée, notification. Toujours les mêmes étapes.'],
         ['Agent', 'Lit la demande, cherche qui est l’entreprise, vérifie si c’est un client existant, qualifie — devis, urgence, question —, prépare une réponse adaptée, programme une relance. Et vous passe la main dès qu’il tombe sur ce qu’il ne sait pas juger.'],
       ],
@@ -335,7 +337,7 @@ export default [
       '**Des outils** : lire un fichier, interroger une base, envoyer un message, appeler un service.',
       '**Des décisions** : il choisit l’outil selon la situation, au lieu de dérouler un ordre prédéfini.',
       '**Une boucle** : agir, observer, décider à nouveau. C’est elle qui distingue l’agent d’une réponse isolée, aussi brillante soit-elle.',
-      '**Une condition d’arrêt** : savoir quand c’est fini — ou quand il n’y arrivera pas. Son absence est le défaut de fabrication le plus courant.',
+      '**Une condition d’arrêt** : savoir quand c’est fini — ou quand il n’y arrivera pas. Une limite d’étapes et un recours humain permettent de borner une exécution sans succès.',
     ]},
     { h: 'Où les agents échouent' },
     'Cette partie compte plus que la liste des prouesses, parce que les échecs d’agents se voient moins que les pannes d’automatisations :',
@@ -346,11 +348,14 @@ export default [
       '**Le débogage est plus dur.** Une automatisation cassée se lit étape par étape ; un agent qui a dérivé se reconstitue décision par décision.',
     ]},
     { note: 'La règle pratique : **là où le chemin est connu, une automatisation ; là où il ne l’est pas, un agent.** La plupart des besoins décrits comme « il nous faut un agent » ont en réalité un chemin parfaitement connu — et seraient mieux servis par quelque chose de prévisible et moins cher à faire tourner.' },
+    { h: "Sources et portée de ce guide" },
+    "La distinction entre workflow et agent suit [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents), publié le 19 décembre 2024. Le scénario de demande client est illustratif : ce n’est pas un résultat client mesuré. Les conseils de mise en œuvre sont ceux de Kanaky Tech ; capacités et coûts dépendent du système choisi.",
+    "Révision éditoriale : 16 septembre 2026 · Kanaky Tech. Pour une correction, indiquez le passage et une référence : [contact](/contact/).",
   ],
   faq: [
     { q: 'Quelle différence entre un agent IA et une automatisation ?', a: 'L’automatisation suit un chemin défini d’avance — prévisible et rigide. L’agent choisit son chemin avec les outils qu’on lui donne — souple et moins prévisible. Si vous pouvez écrire les étapes sur une feuille, il vous faut une automatisation : moins chère, plus rapide, plus simple à déboguer.' },
     { q: 'Les agents sont-ils assez fiables pour une entreprise ?', a: 'Pour des tâches bien bornées, avec un humain qui valide les actions à conséquence : oui. En autonomie totale sur des actions réelles : prudence — ils échouent d’une manière qui ressemble à une réussite. Le motif qui marche : l’agent prépare, l’humain approuve.' },
-    { q: 'Combien coûte un agent à l’usage ?', a: 'Cela dépend du nombre d’étapes qu’il prend, qui varie par tâche — une vraie différence budgétaire avec l’automatisation à coût fixe. Faire tourner le modèle en local supprime le coût par étape, ce qui rend les agents nettement plus sereins à exploiter — voir l’IA en local.' },
+    { q: 'Combien coûte un agent à l’usage ?', a: 'Cela dépend du nombre d’étapes qu’il prend, qui varie par tâche — une vraie différence budgétaire avec l’automatisation à coût fixe. Un modèle local peut éviter la facturation au token d’un fournisseur, mais le matériel, l’électricité, la maintenance et les outils externes restent des coûts — voir l’IA en local.' },
     { q: 'Ai-je besoin d’un agent, ou d’une simple automatisation ?', a: 'Dans la plupart des petites entreprises : d’une automatisation, alors qu’on leur vend un agent. L’agent gagne sa complexité quand l’étape suivante dépend réellement de ce que la précédente a découvert — recherche, tri qui demande de la lecture, tâches traversant plusieurs systèmes.' },
   ],
   related: [

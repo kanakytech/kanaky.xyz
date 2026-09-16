@@ -216,6 +216,7 @@ const footer = `  <footer>
         <a href="/ai-agents-new-caledonia/">AI Agent Development</a>
         <a href="/private-ai-systems/">Private AI Systems</a>
         <a href="/ai-audit/">AI Opportunity Audit</a>
+        <a href="https://formations.kanaky.xyz/en/">AI Training</a>
       </div>
       <div class="footer-col">
         <h4>Mélanésie</h4>
@@ -259,7 +260,7 @@ const footer = `  <footer>
         <a href="/legal/#privacy">Privacy</a>
         <a href="/legal/#terms">Terms</a>
         <a href="/contact/">Contact</a>
-        <span class="footer-ids">NZBN 9429053554017 · RIDET 1 445 709.002</span>
+        <span class="footer-ids">NZBN 9429053554017 · GST 148-301-654</span>
       </nav>
       <div class="footer-social">
         <a href="https://www.linkedin.com/company/kanaky-tech" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
@@ -430,7 +431,7 @@ ${related ? `
     </div>
   </section>
 
-${footer}
+${p.lang === 'fr' ? footer.replace('https://formations.kanaky.xyz/en/', 'https://formations.kanaky.xyz/').replace('>AI Training</a>', '>Formations IA</a>') : footer}
 <script src="/assets/ecosystem.js" defer></script>
 </body>
 </html>
@@ -447,16 +448,22 @@ for (const m of modules) {
   pages = pages.concat(mod.default.map((p) => ({ ...p, cluster: m })));
 }
 
+const onlyArg = process.argv.find(a => a.startsWith('--only='));
+const onlySlugs = onlyArg ? new Set(onlyArg.slice(7).split(',')) : null;
+if (onlySlugs) for (const slug of onlySlugs) {
+  if (!pages.some(p => p.slug === slug)) throw new Error(`Unknown page: ${slug}`);
+}
 const slugs = new Set();
 for (const p of pages) {
   if (slugs.has(p.slug)) throw new Error(`duplicate slug: ${p.slug}`);
   slugs.add(p.slug);
+  if (onlySlugs && !onlySlugs.has(p.slug)) continue;
   const dir = path.join(ROOT, p.slug);
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, 'index.html'), render(p));
 }
 
-console.log(`\n  ${pages.length} pages generated`);
+console.log(`\n  ${onlySlugs ? onlySlugs.size : pages.length} pages generated`);
 for (const m of modules) {
   const n = pages.filter((p) => p.cluster === m).length;
   if (n) console.log(`    ${m.padEnd(14)} ${n}`);
