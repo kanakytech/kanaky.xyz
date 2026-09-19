@@ -428,6 +428,10 @@ ${related ? `
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
       <a href="${cta.b[0]}" class="btn-ghost">${cta.b[1]}</a>
+      <!-- Un rendez-vous avec Kevyn : le même lien partout, quelle que soit la
+           page d'où l'on part. Trente minutes (ou quinze, ou quarante-cinq) pour
+           parler du besoin — pas un formulaire de plus. -->
+      <a href="https://calendly.com/k-wahuzuepro/rendez-vous-avec-kevyn" class="btn-ghost" target="_blank" rel="noopener">${p.lang === 'fr' ? 'Prendre rendez-vous' : 'Book a call'}</a>
     </div>
   </section>
 

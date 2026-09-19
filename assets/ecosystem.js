@@ -18,10 +18,10 @@
 
   const T = FR ? {
     label: 'Écosystème', title: 'Écosystème Kanaky Tech', here: 'Vous êtes ici',
-    tail: 'Un studio, six plateformes — construites dans le Pacifique.',
+    tail: 'Un studio, sept plateformes — construites dans le Pacifique.',
   } : {
     label: 'Ecosystem', title: 'Kanaky Tech ecosystem', here: 'You are here',
-    tail: 'One studio, six platforms — built in the Pacific.',
+    tail: 'One studio, seven platforms — built in the Pacific.',
   };
 
   const I = {
@@ -44,6 +44,8 @@
       n: 'Pasifika AI', d: FR ? 'Cultures et langues du Pacifique — sourcées' : 'Pacific cultures and languages — sourced' },
     { id: 'formations', icon: I.formations, url: 'https://formations.kanaky.xyz/', dom: 'formations.kanaky.xyz',
       n: FR ? 'Formations IA' : 'AI Training', d: FR ? 'En tête-à-tête, en visio — dès 9 990 F' : 'One-to-one, by video call — from 9,990 XPF' },
+    { id: 'starlink', icon: I.studio, url: 'https://starlink.kanaky.xyz/', dom: 'starlink.kanaky.xyz',
+      n: FR ? 'Starlink en Nouvelle-Calédonie' : 'Starlink in New Caledonia', d: FR ? 'Kit, fret et taxes calculés avant de payer' : 'Kit, freight and taxes calculated upfront' },
     { id: 'market', icon: I.market, url: 'https://kanaky.xyz/marketplace/', dom: 'kanaky.xyz/marketplace',
       n: 'Marketplace', d: FR ? 'Systèmes complets, achetés une fois' : 'Complete systems, bought once' },
   ];
