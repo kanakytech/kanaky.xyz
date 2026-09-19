@@ -18,10 +18,10 @@
 
   const T = FR ? {
     label: 'Écosystème', title: 'Écosystème Kanaky Tech', here: 'Vous êtes ici',
-    tail: 'Un studio, cinq plateformes — construites dans le Pacifique.',
+    tail: 'Un studio, six plateformes — construites dans le Pacifique.',
   } : {
     label: 'Ecosystem', title: 'Kanaky Tech ecosystem', here: 'You are here',
-    tail: 'One studio, five platforms — built in the Pacific.',
+    tail: 'One studio, six platforms — built in the Pacific.',
   };
 
   const I = {
@@ -30,6 +30,7 @@
     keou: '<img src="/assets/ecosystem-home/keou-studio.png" alt="" width="36" height="36">',
     market: '<svg viewBox="0 0 24 24" fill="none"><path d="M20.59 13.41 13.42 20.6a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="7.5" cy="7.5" r="1.4" fill="currentColor"/></svg>',
     pasifika: '<img src="/assets/ecosystem-home/pasifika-ai.svg" alt="" width="36" height="34">',
+    formations: '<img src="/assets/ecosystem-home/formations-ia.svg" alt="" width="36" height="36">',
   };
 
   const P = [
@@ -41,11 +42,13 @@
       n: 'Keou Studio', d: FR ? 'Production visuelle par IA — gratuit' : 'AI visual production — free' },
     { id: 'pasifika', icon: I.pasifika, url: 'https://pasifika.ai/', dom: 'pasifika.ai',
       n: 'Pasifika AI', d: FR ? 'Cultures et langues du Pacifique — sourcées' : 'Pacific cultures and languages — sourced' },
+    { id: 'formations', icon: I.formations, url: 'https://formations.kanaky.xyz/', dom: 'formations.kanaky.xyz',
+      n: FR ? 'Formations IA' : 'AI Training', d: FR ? 'En tête-à-tête, en visio — dès 9 990 F' : 'One-to-one, by video call — from 9,990 XPF' },
     { id: 'market', icon: I.market, url: 'https://kanaky.xyz/marketplace/', dom: 'kanaky.xyz/marketplace',
       n: 'Marketplace', d: FR ? 'Systèmes complets, achetés une fois' : 'Complete systems, bought once' },
   ];
   const host = location.hostname;
-  const cur = host === 'pasifika.ai' ? 'pasifika' : host.includes('dictionnaire') ? 'dico'
+  const cur = host === 'pasifika.ai' ? 'pasifika' : host.startsWith('formations.') ? 'formations' : host.includes('dictionnaire') ? 'dico'
     : (host.startsWith('studio.') || host.includes('keou')) ? 'keou'
     : location.pathname.startsWith('/marketplace') ? 'market' : 'studio';
 
