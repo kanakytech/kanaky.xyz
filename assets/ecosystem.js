@@ -37,7 +37,7 @@
     { id: 'studio', icon: I.studio, url: 'https://kanaky.xyz/', dom: 'kanaky.xyz',
       n: 'Business', d: FR ? 'Automatisation IA — Mélanésie, NZ, Pacifique' : 'AI automation — Melanesia, NZ, Pacific' },
     { id: 'dico', icon: I.dico, url: 'https://dictionnaire.kanaky.xyz/', dom: 'dictionnaire.kanaky.xyz',
-      n: FR ? 'Dictionnaire des langues kanak' : 'Kanak Languages Dictionary', d: FR ? '9 langues · 19 672 mots · gratuit' : '9 languages · 19,672 words · free' },
+      n: FR ? 'Dictionnaire Kanak' : 'Kanak Dictionary', d: FR ? '9 langues · 19 672 mots · gratuit' : '9 languages · 19,672 words · free' },
     { id: 'keou', icon: I.keou, url: 'https://studio.kanaky.xyz/', dom: 'studio.kanaky.xyz',
       n: 'Keou Studio', d: FR ? 'Production visuelle par IA — gratuit' : 'AI visual production — free' },
     { id: 'pasifika', icon: I.pasifika, url: 'https://pasifika.ai/', dom: 'pasifika.ai',

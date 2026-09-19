@@ -1,1 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Formations IA — Kanaky Tech"><rect width="64" height="64" rx="14" fill="#0a0a0a"/><g transform="translate(12 12) scale(1.6667)" fill="none" stroke="#c8f060" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-5 9 5-9 5-9-5Z"/><path d="M7 12v5c2.8 2 7.2 2 10 0v-5M21 9v6"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Formations IA — Kanaky Tech</title>
+  <desc id="desc">Une toque de diplômé gravée, dont le pompon trace la constellation du fer de lance</desc>
+  <rect x="4" y="4" width="248" height="248" rx="48" fill="#f4f3ed" stroke="#111310" stroke-width="8"/>
+
+  <!-- Corps de la toque, sous le plateau. -->
+  <path d="M76 118v44c0 10 23 22 52 22s52-12 52-22v-44" fill="#111310"/>
+  <path d="M92 164c20 10 52 10 72 0" fill="none" stroke="#f4f3ed" stroke-width="4" stroke-linecap="round" opacity=".6"/>
+
+  <!-- Plateau : losange noir, gravure intérieure ivoire. -->
+  <path d="M128 52 222 98 128 144 34 98Z" fill="#111310" stroke="#111310" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M128 72 180 98 128 124 76 98Z" fill="none" stroke="#f4f3ed" stroke-width="4" stroke-linejoin="round" opacity=".55"/>
+  <circle cx="128" cy="98" r="7" fill="#f4f3ed"/>
+
+  <!-- Cordon du pompon, puis la constellation du fer de lance
+       (même tracé que la pastille Écosystème, agrandi). -->
+  <path d="M128 98 204 104" stroke="#f4f3ed" stroke-width="4" stroke-linecap="round"/>
+  <g fill="#111310">
+    <path d="M204 104 206 132 212 158 218 188" fill="none" stroke="#111310" stroke-width="4" stroke-linecap="round" opacity=".55"/>
+    <circle cx="204" cy="106" r="8"/>
+    <circle cx="206" cy="132" r="6.5"/>
+    <circle cx="212" cy="158" r="6.5"/>
+    <circle cx="218" cy="190" r="9"/>
+  </g>
+</svg>
