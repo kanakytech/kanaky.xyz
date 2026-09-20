@@ -13,7 +13,7 @@ export default [
 {
   slug: 'instantly-alternative',
   title: 'An Instantly Alternative You Buy Once — Honest Comparison',
-  description: 'How the Cold Outreach Machine compares to Instantly: subscription versus one-time purchase, where Instantly is genuinely the better tool, and who each one actually suits.',
+  description: 'How the AI Sales Rep compares to Instantly: subscription versus one-time purchase, where Instantly is genuinely the better tool, and who each one actually suits.',
   keywords: 'Instantly alternative, Instantly.ai alternative, cold email tool alternative, Instantly vs',
   eyebrow: 'Comparison',
   short: 'Instantly alternative',
@@ -24,7 +24,7 @@ export default [
     { h: 'The core difference' },
     { table: {
       minWidth: 620,
-      head: ['', 'Instantly', 'Cold Outreach Machine'],
+      head: ['', 'Instantly', 'AI Sales Rep'],
       rows: [
         ['Pricing model', 'Subscription, from about $37/month', 'US$499, paid once'],
         ['If you stop paying', 'Access ends', 'It keeps running — the code is yours'],
@@ -57,9 +57,9 @@ export default [
     { note: 'If you are currently testing whether outbound works for your business at all, rent for a quarter. Buying makes sense once you know the channel is worth keeping — that is a genuinely better sequence than committing up front.' },
   ],
   faq: [
-    { q: 'Is the Cold Outreach Machine a direct replacement for Instantly?', a: 'For a solo operator or small business doing moderate-volume outbound, largely yes — with the difference that it also finds companies and writes each message, which is work Instantly leaves to you or to its higher tiers. For a team running many mailboxes with managed warm-up and shared reporting, no; that is what a platform subscription is for and you would be downgrading.' },
+    { q: 'Is the AI Sales Rep a direct replacement for Instantly?', a: 'For a solo operator or small business doing moderate-volume outbound, largely yes — with the difference that it also finds companies and writes each message, which is work Instantly leaves to you or to its higher tiers. For a team running many mailboxes with managed warm-up and shared reporting, no; that is what a platform subscription is for and you would be downgrading.' },
     { q: 'Can I migrate my existing campaigns?', a: 'Your prospect lists export as CSV from any platform and import cleanly. Campaign sequences do not transfer as such, because the machine generates messages per company rather than running fixed sequence templates — you describe your ideal customer and it writes from that instead.' },
-    { q: 'What about inbox warm-up?', a: 'This is the genuine gap. Instantly bundles automated warm-up across mailboxes; the Cold Outreach Machine documents a manual warm-up process instead. At one or two mailboxes, manual warm-up is a few minutes a day for a few weeks and works fine. At twenty mailboxes it does not scale, and a platform is the better tool.' },
+    { q: 'What about inbox warm-up?', a: 'This is the genuine gap. Instantly bundles automated warm-up across mailboxes; the AI Sales Rep documents a manual warm-up process instead. At one or two mailboxes, manual warm-up is a few minutes a day for a few weeks and works fine. At twenty mailboxes it does not scale, and a platform is the better tool.' },
     { q: 'Do I need technical skills?', a: 'No coding, but you will run a command in a terminal and paste DNS records into your domain. A guided installer asks for what it needs and tests each connection, and a live setup call is included — most buyers finish that call with the machine already running.' },
   ],
   related: [
@@ -84,7 +84,7 @@ export default [
     { h: 'The comparison' },
     { table: {
       minWidth: 620,
-      head: ['', 'Smartlead', 'Cold Outreach Machine'],
+      head: ['', 'Smartlead', 'AI Sales Rep'],
       rows: [
         ['Pricing model', 'Subscription, from about $39/month', 'US$499, paid once'],
         ['Built for', 'Scale, agencies, many clients', 'One business, steady volume'],
@@ -112,11 +112,11 @@ export default [
       '**When the bottleneck is upstream.** Smartlead sends what you give it. If your constraint is finding companies and writing to them individually — which for most small businesses it is — sending was never the expensive part.',
     ]},
     { h: 'The honest summary' },
-    'Smartlead is a scale tool. The Cold Outreach Machine is a one-business tool. They are not really competing for the same buyer, and if you are running an agency sending on behalf of eight clients, buying this would be a mistake — say so to yourself before switching on price alone.',
+    'Smartlead is a scale tool. The AI Sales Rep is a one-business tool. They are not really competing for the same buyer, and if you are running an agency sending on behalf of eight clients, buying this would be a mistake — say so to yourself before switching on price alone.',
     { note: 'Break-even against Smartlead\'s entry tier is roughly eight months; against its Pro tier near $94, roughly three. [The full cost picture](/blog/cold-email-subscription-vs-one-time-cost/) includes the infrastructure both models require.' },
   ],
   faq: [
-    { q: 'Does the Cold Outreach Machine rotate mailboxes?', a: 'No — it is built around a single sending mailbox at deliberately moderate volume. That is a real limitation if you need scale. The design assumption is that most small businesses are better served by twenty well-researched emails a day from one credible address than by hundreds rotated across many.' },
+    { q: 'Does the AI Sales Rep rotate mailboxes?', a: 'No — it is built around a single sending mailbox at deliberately moderate volume. That is a real limitation if you need scale. The design assumption is that most small businesses are better served by twenty well-researched emails a day from one credible address than by hundreds rotated across many.' },
     { q: 'Can I use it for multiple clients as an agency?', a: 'The licence does not permit operating it as a service for third parties — it grants use inside one legal entity. If you are an agency running outbound on behalf of clients, a platform subscription is both the appropriate tool and the appropriate licence.' },
     { q: 'What if I outgrow it?', a: 'Then you have a good problem and a platform subscription is the right next step. Buying once at $499 and later moving to a subscription because volume demands it is a reasonable path — you will have learned what your market responds to, which is the expensive knowledge.' },
     { q: 'How does the AI writing compare to sequence templates?', a: 'Different approach entirely. Templates with variables produce recognisable structure across recipients; the machine writes each message from what that specific company publishes, and checks the batch for repeated phrasing before sending. The trade-off is that it needs a good description of who you are targeting to write well.' },
@@ -142,7 +142,7 @@ export default [
     { h: 'The comparison' },
     { table: {
       minWidth: 620,
-      head: ['', 'lemlist', 'Cold Outreach Machine'],
+      head: ['', 'lemlist', 'AI Sales Rep'],
       rows: [
         ['Pricing model', 'Subscription, from about $39/month; multichannel tiers priced per user', 'US$499, paid once, one business'],
         ['Cost as the team grows', 'Rises per seat', 'Unchanged'],
@@ -171,7 +171,7 @@ export default [
     { note: 'A fair way to decide: if you would use the LinkedIn and calling steps, lemlist is a better product for you and the subscription is justified. If you would only ever use the email half, you are paying a multichannel price for a single channel.' },
   ],
   faq: [
-    { q: 'Does the Cold Outreach Machine do LinkedIn outreach?', a: 'No, deliberately. Automating LinkedIn breaches the platform\'s terms of service, and enforcement typically hits the account you have spent years building. If multichannel sequencing is central to your process, lemlist is the better fit — with the caveat that you are accepting that platform risk either way. See [cold email vs LinkedIn](/cold-email-vs-linkedin-outreach/).' },
+    { q: 'Does the AI Sales Rep do LinkedIn outreach?', a: 'No, deliberately. Automating LinkedIn breaches the platform\'s terms of service, and enforcement typically hits the account you have spent years building. If multichannel sequencing is central to your process, lemlist is the better fit — with the caveat that you are accepting that platform risk either way. See [cold email vs LinkedIn](/cold-email-vs-linkedin-outreach/).' },
     { q: 'How does per-seat pricing compare over time?', a: 'For one person, break-even against lemlist\'s entry tier is roughly eight months. The gap widens sharply with team size, since the machine\'s licence covers one business rather than one user — though it is genuinely built for a single operator, so a large team would be better served by the platform regardless of price.' },
     { q: 'Can I still personalise images or use dynamic content?', a: 'No. The personalisation approach is different: rather than inserting variable elements into a fixed message, the whole message is written for that specific company from what it publishes. Which approach works better depends on your market — visual personalisation lands well in some, and reads as gimmicky in others.' },
     { q: 'Is there a free trial?', a: 'No. It is a one-time purchase of source code, which does not lend itself to trials. What is included instead is a live setup call and thirty days of direct support, so you are not left alone with a folder of files.' },
@@ -201,7 +201,7 @@ export default [
     { h: 'The comparison' },
     { table: {
       minWidth: 620,
-      head: ['', 'Apollo', 'Cold Outreach Machine'],
+      head: ['', 'Apollo', 'AI Sales Rep'],
       rows: [
         ['Model', 'Subscription, data plus sequencing', 'One-time purchase, US$499'],
         ['Where leads come from', 'Their contact database', 'Found from your description, from public sources'],
@@ -228,7 +228,7 @@ export default [
     ]},
   ],
   faq: [
-    { q: 'Does the Cold Outreach Machine include a contact database?', a: 'No. It finds companies matching the profile you describe, from public sources, at the time you run it — rather than querying a pre-built database. For local and trade markets that produces fresher and more complete results; for filtering large organisations by firmographics, a database is the better instrument.' },
+    { q: 'Does the AI Sales Rep include a contact database?', a: 'No. It finds companies matching the profile you describe, from public sources, at the time you run it — rather than querying a pre-built database. For local and trade markets that produces fresher and more complete results; for filtering large organisations by firmographics, a database is the better instrument.' },
     { q: 'Can I import lists I already have?', a: 'Yes. Existing lists import as CSV, and everything you import is checked against the permanent contact registry so nobody is approached twice across campaigns.' },
     { q: 'Is data from a database legally safer than finding it yourself?', a: 'Not inherently, and often the opposite. Under Australian and European rules in particular, what matters is your lawful basis and your ability to show where data came from. A database record whose origin the vendor will not detail is harder to defend than an address you took from the company\'s own published contact page.' },
     { q: 'What if my market is not in any database?', a: 'That is the case this is built for, and it is more common than the tooling market suggests. Most local trades, marine businesses, hospitality operators and regional service companies are thinly covered in aggregate data but publish everything you need on their own sites.' },
@@ -256,7 +256,7 @@ export default [
       { t: '1. Subscription platforms', d: 'Instantly, Smartlead, lemlist and similar. Roughly $39–97/month. Managed warm-up, team features, support desks. You supply the list and the copy.' },
       { t: '2. Data platforms', d: 'Apollo and similar. A contact database plus sequencing. You are mainly paying for the data. Strong in well-indexed industries, weak in local and trade markets.' },
       { t: '3. Self-hosted senders', d: 'Cleanmails (~$199), Broadcast (~$250), AcelleMail (from ~$80). Bought once, run on your server. Delivery infrastructure — you still build the list and write everything.' },
-      { t: '4. Find-and-write systems', d: 'Bought once and also do the research and writing. Our Cold Outreach Machine ($499) is in this category. Higher one-time cost, aimed at the part that takes the hours.' },
+      { t: '4. Find-and-write systems', d: 'Bought once and also do the research and writing. Our AI Sales Rep ($499) is in this category. Higher one-time cost, aimed at the part that takes the hours.' },
     ]},
     { h: 'The questions that decide it' },
     { steps: [
@@ -271,7 +271,7 @@ export default [
     'The software fee is not the dominant cost of outbound. At twenty emails a day, researching and writing them by hand is roughly 650 to 1,000 hours a year. Priced at anything at all, that dwarfs any subscription on this page.',
     'Which reframes the whole decision: **compare tools on how many of those hours they give back**, not on their monthly price. A cheaper tool that leaves the research with you is not cheaper. [The full arithmetic is here.](/blog/cold-email-subscription-vs-one-time-cost/)',
     { h: 'When our answer is no' },
-    'The Cold Outreach Machine is the wrong purchase if you run an agency sending for multiple clients, if you need managed warm-up across many mailboxes, if you need a support desk answering within minutes, or if you are still testing whether outbound works for you at all. In those cases a subscription platform is genuinely better and we would rather say so here than have you find out afterwards.',
+    'The AI Sales Rep is the wrong purchase if you run an agency sending for multiple clients, if you need managed warm-up across many mailboxes, if you need a support desk answering within minutes, or if you are still testing whether outbound works for you at all. In those cases a subscription platform is genuinely better and we would rather say so here than have you find out afterwards.',
     { note: 'One thing that applies whatever you buy: no software fixes a bad list or an unauthenticated domain. Get [SPF, DKIM and DMARC](/spf-dkim-dmarc-explained/) right and [define who you are writing to](/building-an-ideal-customer-profile/) before spending anything at all. Those two steps are free and they decide more than the tool does.' },
   ],
   faq: [

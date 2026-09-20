@@ -156,7 +156,7 @@ export default [
       '**The 88-day economy** — farms and regional businesses handling seasonal worker enquiries at volume.',
       '**Professional services** — document extraction and client communication, with [data that stays in Australia](/ai-data-privacy-business/) where that is a requirement.',
       '**E-commerce** — catalogue content, support deflection done honestly, returns patterns. See [AI for e-commerce](/ai-for-ecommerce/).',
-      '**Outbound prospecting** — the [Cold Outreach Machine](/marketplace/cold-outreach-machine/) runs on your own hardware, is bought once at US$499, and enforces the mechanics the [Spam Act 2003](/cold-email-law-australia/) requires: identification, functional unsubscribe, permanent opt-outs.',
+      '**Outbound prospecting** — the [AI Sales Rep](/marketplace/cold-outreach-machine/) runs on your own hardware, is bought once at US$499, and enforces the mechanics the [Spam Act 2003](/cold-email-law-australia/) requires: identification, functional unsubscribe, permanent opt-outs.',
     ]},
 
     { h: 'Compliance is not an afterthought here' },
@@ -188,7 +188,7 @@ export default [
   related: [
     ['/cold-email-law-australia/', 'Cold email law in Australia'],
     ['/ai-automation-new-zealand/', 'AI automation in New Zealand'],
-    ['/marketplace/cold-outreach-machine/', 'The Cold Outreach Machine'],
+    ['/marketplace/cold-outreach-machine/', 'The AI Sales Rep'],
     ['/ai-audit/', 'Book a free AI audit'],
   ],
 },

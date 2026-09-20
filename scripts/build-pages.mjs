@@ -204,8 +204,8 @@ const footer = `  <footer>
       </div>
       <div class="footer-col">
         <h4>Product</h4>
-        <a href="/machine-prospection-commerciale/">Machine de prospection (FR)</a>
-        <a href="/marketplace/cold-outreach-machine/">Cold Outreach Machine (EN)</a>
+        <a href="/machine-prospection-commerciale/">Commercial IA (FR)</a>
+        <a href="/marketplace/cold-outreach-machine/">AI Sales Rep (EN)</a>
         <a href="/cold-email-software-one-time-payment/">Buy once vs subscribe</a>
         <a href="/self-hosted-cold-email/">Self-hosted cold email</a>
         <a href="/guides/">All guides</a>
@@ -275,8 +275,8 @@ const footer = `  <footer>
 const CTA = {
   product: {
     h: 'Hire a salesperson once.<br/>Keep them forever.',
-    p: 'The Cold Outreach Machine finds the companies you sell to, writes a different email for each one, and sends them on its own — paced, inside working hours. US$499, paid once, live setup call included.',
-    a: ['/marketplace/cold-outreach-machine/', 'See the machine'],
+    p: 'The AI Sales Rep finds the companies you sell to, writes a different email for each one, and sends them on its own — paced, inside working hours. US$999, paid once, live setup call included.',
+    a: ['/marketplace/cold-outreach-machine/', 'See the AI sales rep'],
     b: ['/cold-email-software-one-time-payment/', 'Buy once vs subscribe'],
   },
   service: {

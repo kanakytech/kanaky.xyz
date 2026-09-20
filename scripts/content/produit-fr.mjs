@@ -106,7 +106,7 @@ export default [
     { term: `$ node setup.js
 
 ┌──────────────────────────────────────────────┐
-│ Cold Outreach Machine — Setup                │
+│ Commercial IA — Setup                │
 └──────────────────────────────────────────────┘
 
   What would you like to do?

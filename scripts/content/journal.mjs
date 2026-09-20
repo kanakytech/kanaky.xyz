@@ -2266,7 +2266,7 @@ export default [
   related: [
     ['/ai-automation-small-business/', 'AI automation for small business: what to do first'],
     ['/run-ai-locally-business/', 'Run AI locally — your data stays in-house'],
-    ['/marketplace/cold-outreach-machine/', 'The Cold Outreach Machine — bought once, yours'],
+    ['/marketplace/cold-outreach-machine/', 'The AI Sales Rep — bought once, yours'],
   ],
   extraGraph: [{
     '@type': 'Article',

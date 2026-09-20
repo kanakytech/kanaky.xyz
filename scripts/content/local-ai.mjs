@@ -105,7 +105,7 @@ export default [
     'Start smaller than you think you need. A fast small model you actually use beats a large one that takes thirty seconds per response and quietly stops being used. [Hardware detail here.](/local-llm-hardware-requirements/)',
     { h: 'Using it in real work' },
     { steps: [
-      '**Point existing tools at it.** Anything that lets you set a custom API endpoint — including our own [Cold Outreach Machine](/marketplace/cold-outreach-machine/) — can use a local model instead of a cloud provider.',
+      '**Point existing tools at it.** Anything that lets you set a custom API endpoint — including our own [AI Sales Rep](/marketplace/cold-outreach-machine/) — can use a local model instead of a cloud provider.',
       '**Build a document assistant.** Combine Ollama with a local search index over your own files so the model can answer from your material without any of it leaving.',
       '**Automate a repetitive task.** Classification, extraction, first-draft writing. High volume is where local economics win decisively.',
       '**Serve a small team.** Run it on one machine on your network and let colleagues use it. Add authentication before you do — the default configuration assumes a single trusted user.',

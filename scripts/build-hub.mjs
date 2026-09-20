@@ -170,7 +170,7 @@ ${sections}
       </div>
       <div class="footer-col">
         <h4>Product</h4>
-        <a href="/marketplace/cold-outreach-machine/">Cold Outreach Machine</a>
+        <a href="/marketplace/cold-outreach-machine/">AI Sales Rep</a>
         <a href="/cold-email-software-one-time-payment/">Buy once vs subscribe</a>
         <a href="/self-hosted-cold-email/">Self-hosted cold email</a>
         <a href="/guides/">All guides</a>

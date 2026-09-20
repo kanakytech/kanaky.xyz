@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/* set-price.mjs — fait passer la Cold Outreach Machine au prix standard.
+/* set-price.mjs — fait passer la AI Sales Rep au prix standard.
  *
  * Pourquoi ce script existe : le prix est écrit en clair dans une
  * quarantaine d'endroits — pages de vente, articles de comparaison,
