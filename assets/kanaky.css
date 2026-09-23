@@ -62,7 +62,7 @@ body::after {
 
 
 /* ─── NAV ─── */
-nav {
+body > nav {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 200;
@@ -270,7 +270,7 @@ footer { border-top: 1px solid var(--border); padding: 56px 48px 32px; position:
 /* ─── MOBILE ─── */
 @media (max-width: 768px) {
   .cursor-ring { display: none; }
-  nav { padding: 16px 24px; }
+  body > nav { padding: 16px 24px; }
   nav .nav-links { display: none; }
   .hamburger { display: flex; }
   .section { padding: 72px 24px; }

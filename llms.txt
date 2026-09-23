@@ -30,6 +30,8 @@ Kanaky Tech is based in Nouméa (New Caledonia) and Auckland (New Zealand). The 
 - Institutions and public bodies, including open-data and heritage projects.
 
 ## Locations
+- [AI automation · Auckland](https://kanaky.xyz/ai-automation-agency-auckland/) — our base in Aotearoa
+- [AI automation · Gold Coast](https://kanaky.xyz/ai-automation-gold-coast/) — remote services from Auckland; no Gold Coast office
 - [AI Automation · New Caledonia](https://kanaky.xyz/ai-automation-new-caledonia/)
 - [AI Automation · New Zealand](https://kanaky.xyz/ai-automation-new-zealand/)
 - [AI Agents · Auckland](https://kanaky.xyz/ai-agents-auckland/)
