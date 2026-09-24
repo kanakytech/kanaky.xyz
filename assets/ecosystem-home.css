@@ -15,7 +15,7 @@ main,footer{position:relative;z-index:2}.hero{min-height:0;display:flex;flex-dir
 /* The app launcher is one continuous row at every width. */
 .launcher-hint{display:none;color:var(--muted);font-size:12px;margin-top:12px}
 .launcher a:focus-visible,.lang button:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
-@media(max-width:1100px){
+@media(max-width:1000px){
   .launcher{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:180px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;padding:8px 4px 18px;scrollbar-width:thin;scrollbar-color:var(--lime) var(--panel)}
   .app-card{scroll-snap-align:start}.launcher-hint{display:block}
 }
