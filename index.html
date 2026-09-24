@@ -410,7 +410,7 @@
 
   <style>
     /* Homepage-only components (hero canvas, stats, expertise grid, projects, about) */
-    .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 48px 90px; position: relative; overflow: hidden; }
+    .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-end; padding: 120px 48px 80px; position: relative; overflow: hidden; }
     #neural-canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
     .hero-content { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; width: 100%; }
     .hero-badge { display: inline-flex; align-items: center; gap: 10px; border: 1px solid rgba(255,255,255,0.08); padding: 6px 18px; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--grey-3); margin-bottom: 36px; }
@@ -488,7 +488,7 @@
     .loc-card p { font-size: 14px; color: var(--grey-3); line-height: 1.7; }
 
     @media (max-width: 768px) {
-      .hero { padding: 0 24px 56px; }
+      .hero { padding: 112px 24px 56px; }
       .stats-bar { grid-template-columns: 1fr 1fr; padding: 24px; }
       .stat-item { border-right: none; padding: 16px; border-bottom: 1px solid var(--border); }
       .expertise-grid { grid-template-columns: 1fr; }
@@ -496,6 +496,23 @@
       .about-inner { grid-template-columns: 1fr; gap: 36px; }
       .loc-grid { grid-template-columns: 1fr; }
     }
+
+    /* A short, practical path from the offer to the first conversation. */
+    .hero-content .reveal{opacity:1;transform:none;transition:none}
+    .hero-reassurance{color:var(--grey-4);font-size:12px;line-height:1.7;margin-top:22px;max-width:560px}
+    .first-project h2{font-size:clamp(30px,4vw,52px);line-height:1.08;letter-spacing:-.035em;max-width:800px;margin:0 0 32px}
+    .outcome-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+    .outcome-card{display:flex;flex-direction:column;padding:30px 26px;border:1px solid var(--border);border-radius:16px;background:linear-gradient(145deg,rgba(200,240,96,.04),transparent);color:var(--white);text-decoration:none;transition:border-color .2s,transform .2s}
+    .outcome-card:hover{border-color:var(--accent);transform:translateY(-3px)}
+    .outcome-number{font-size:11px;color:var(--accent);letter-spacing:.05em}
+    .outcome-card h3{font-size:23px;line-height:1.15;letter-spacing:-.025em;margin:22px 0 14px}
+    .outcome-card p{font-size:14px;color:var(--grey-4);line-height:1.75;margin-bottom:24px}
+    .outcome-link{font-size:12px;color:var(--accent);margin-top:auto}
+    .pilot-next{display:flex;align-items:center;justify-content:space-between;gap:28px;border:1px solid var(--border);border-radius:16px;padding:28px;margin-top:18px}
+    .pilot-next h3{font-size:22px;margin-bottom:10px}.pilot-next p{max-width:700px;color:var(--grey-4);font-size:14px;line-height:1.75}.pilot-next .btn-primary{flex-shrink:0}
+    .proof-links{display:flex;flex-wrap:wrap;gap:14px 26px;font-size:12px;line-height:1.7;margin-top:26px}.proof-links span{color:var(--grey-4)}.proof-links a{color:var(--white);text-underline-offset:4px}
+    .outcome-card:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+    @media(max-width:768px){.outcome-grid{grid-template-columns:1fr}.pilot-next{flex-direction:column;align-items:flex-start;padding:24px}.hero-reassurance{font-size:11px}}
   </style>
 <meta property="og:image" content="https://kanaky.xyz/assets/og/kanaky-tech.png" />
 <meta property="og:image:width" content="1200" />
@@ -540,23 +557,24 @@
         <span class="hero-badge-dot"></span>
         Business automation · Based in Auckland, serving the Pacific
       </div>
-      <h1 class="reveal delay-1">More time to grow the business. <span class="thin">Less spent running it.</span></h1>
-      <p class="hero-sub reveal delay-2">As a business grows, so does the admin behind it — quoting, scheduling, follow-ups, invoicing, updates. It quietly eats the hours your team needs to win clients and grow. We automate the repetitive operations so those hours go back into sales, clients and growth. <strong style="color:var(--white);font-weight:600;">AI is simply how we get there</strong> — private by default, on infrastructure you control.</p>
+      <h1 class="reveal delay-1">Less admin.<br><span class="thin">More room to grow.</span></h1>
+      <p class="hero-sub reveal delay-2">We build AI agents and automation for small businesses, agencies and teams across the Pacific. Turn enquiries, quotes and documents into organised workflows — connected to the tools you already use, with you in control.</p>
       <div class="hero-actions reveal delay-3">
         <a href="/ai-audit/" class="btn-primary">
           Book a free audit
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-        <a href="#growth" class="btn-ghost">See how it works</a>
+        <a href="#first-project" class="btn-ghost">Explore your first project</a>
       </div>
+      <p class="hero-reassurance">Free initial audit · A defined scope before you commit · Founder-led delivery</p>
     </div>
   </section>
 
   <!-- STATS / TRUST -->
   <div class="stats-bar">
     <div class="stat-item reveal delay-1">
-      <div class="stat-number"><span data-count="20" data-suffix=" min">20 min</span></div>
-      <div class="stat-label">What once took 25 hours</div>
+      <div class="stat-number">01</div>
+      <div class="stat-label">Workflow to start with</div>
     </div>
     <div class="stat-item reveal delay-2">
       <div class="stat-number" data-count="4">4</div>
@@ -571,6 +589,45 @@
       <div class="stat-label">Private by default</div>
     </div>
   </div>
+
+  <!-- FIRST PROJECT -->
+  <section class="section first-project" id="first-project" aria-labelledby="first-project-title">
+    <div class="section-label">Start with the work that slows you down</div>
+    <h2 id="first-project-title">What would you take off your team's plate?</h2>
+    <div class="outcome-grid">
+      <a class="outcome-card" href="/business-process-automation/">
+        <span class="outcome-number">01 / Enquiries &amp; follow-up</span>
+        <h3>Keep every enquiry moving.</h3>
+        <p>Collect the details, prepare a reply and route the next step to the right person. Your team handles the exceptions and approvals.</p>
+        <span class="outcome-link">Explore workflow automation ↗</span>
+      </a>
+      <a class="outcome-card" href="/ai-for-builders/">
+        <span class="outcome-number">02 / Quotes &amp; proposals</span>
+        <h3>Start with a draft, not a blank page.</h3>
+        <p>Turn job notes into a structured draft using your own scope and pricing rules. Check the details before anything reaches a client.</p>
+        <span class="outcome-link">See a quoting workflow ↗</span>
+      </a>
+      <a class="outcome-card" href="/private-ai-systems/">
+        <span class="outcome-number">03 / Documents &amp; knowledge</span>
+        <h3>Make your information usable.</h3>
+        <p>Find answers in approved documents and prepare recurring reports, with access and data handling defined around your business.</p>
+        <span class="outcome-link">Explore private AI systems ↗</span>
+      </a>
+    </div>
+    <div class="pilot-next"><div><h3>One useful workflow. A clear first step.</h3><p>Bring one repetitive task to a free audit. We identify where to start. A detailed roadmap, implementation and ongoing costs are scoped separately before you commit.</p></div><a class="btn-primary" href="https://calendly.com/k-wahuzuepro/rendez-vous-avec-kevyn" target="_blank" rel="noopener">Talk to Kevyn ↗</a></div>
+    <div class="proof-links"><span>Inspect what we build</span><a href="/mcp-datagouvnc/">Open-data integration ↗</a><a href="https://studio.kanaky.xyz/">Keou Studio ↗</a><a href="/case-studies/">Case studies &amp; demonstrations ↗</a></div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section">
+    <div class="section-label reveal-left">How we work</div>
+    <div class="steps">
+      <div class="step reveal delay-1"><div class="step-n">01 — Audit</div><h3>Find the opportunity</h3><p>We map your workflows and score where AI saves the most time and cost. Free, no commitment.</p></div>
+      <div class="step reveal delay-2"><div class="step-n">02 — Design</div><h3>Design the system</h3><p>We design the agent or automation around your tools and your team — with human checkpoints where they matter.</p></div>
+      <div class="step reveal delay-3"><div class="step-n">03 — Build</div><h3>Build &amp; integrate</h3><p>We build it, connect it to your existing systems (APIs, MCP, N8N) and test it against real cases.</p></div>
+      <div class="step reveal delay-4"><div class="step-n">04 — Embed</div><h3>Embed &amp; hand over</h3><p>We embed it in your operations, train your team and hand over a system you own and control.</p></div>
+    </div>
+  </section>
 
   <!-- GROWTH MODEL -->
   <!-- SPEARHEAD MAP -->
@@ -910,17 +967,6 @@
     </div>
   </section>
 
-  <!-- PROCESS -->
-  <section class="section">
-    <div class="section-label reveal-left">How we work</div>
-    <div class="steps">
-      <div class="step reveal delay-1"><div class="step-n">01 — Audit</div><h3>Find the opportunity</h3><p>We map your workflows and score where AI saves the most time and cost. Free, no commitment.</p></div>
-      <div class="step reveal delay-2"><div class="step-n">02 — Design</div><h3>Design the system</h3><p>We design the agent or automation around your tools and your team — with human checkpoints where they matter.</p></div>
-      <div class="step reveal delay-3"><div class="step-n">03 — Build</div><h3>Build &amp; integrate</h3><p>We build it, connect it to your existing systems (APIs, MCP, N8N) and test it against real cases.</p></div>
-      <div class="step reveal delay-4"><div class="step-n">04 — Embed</div><h3>Embed &amp; hand over</h3><p>We embed it in your operations, train your team and hand over a system you own and control.</p></div>
-    </div>
-  </section>
-
   <!-- CASE STUDIES TEASER -->
   <section class="section">
     <div class="section-label reveal-left">Case studies</div>
@@ -943,7 +989,7 @@
       <div class="project-card reveal delay-1">
         <span class="project-status live">Live</span>
         <h3>MCP Open Data NC</h3>
-        <p class="project-desc">The first Model Context Protocol server exposing Kanaky (New Caledonia)'s government open-data portal to AI agents. Lets Claude, GPT and other models query public datasets natively.</p>
+        <p class="project-desc">A Model Context Protocol server exposing Kanaky (New Caledonia)'s government open-data portal to AI agents. Lets Claude, GPT and other models query public datasets natively.</p>
         <div class="project-tech"><span>MCP Protocol</span><span>TypeScript</span><span>Open Data</span></div>
         <a href="/mcp-datagouvnc/" class="project-link">View project <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>

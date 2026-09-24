@@ -4,7 +4,7 @@
   const localeButtons = [...document.querySelectorAll('[data-locale]')];
 
   function setLocale(locale) {
-    const lang = locale === 'en' ? 'en' : 'fr';
+    const lang = locale === 'fr' ? 'fr' : 'en';
     document.documentElement.lang = lang;
     document.title = lang === 'fr' ? 'Kanaky Tech — Écosystème' : 'Kanaky Tech — Ecosystem';
     document.querySelectorAll('[data-fr][data-en]').forEach((el) => {
@@ -13,14 +13,23 @@
       else el.textContent = value;
     });
     localeButtons.forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.locale === lang)));
-    try { localStorage.setItem('kanaky-home-locale', lang); } catch (_) {}
+    document.querySelectorAll('[data-fr-label][data-en-label]').forEach((el) => {
+      el.setAttribute('aria-label', el.dataset[`${lang}Label`]);
+    });
   }
 
-  localeButtons.forEach((button) => button.addEventListener('click', () => setLocale(button.dataset.locale)));
-  let initial = 'fr';
+  // Only an explicit language choice overrides English, never the browser locale.
+  // The old key also stored inferred defaults, so it is deliberately not migrated.
+  const choiceKey = 'kanaky-home-locale-choice';
+  localeButtons.forEach((button) => button.addEventListener('click', () => {
+    const locale = button.dataset.locale;
+    setLocale(locale);
+    try { localStorage.setItem(choiceKey, locale); } catch (_) {}
+  }));
+  let initial = 'en';
   try {
-    const saved = localStorage.getItem('kanaky-home-locale');
-    initial = saved || ((navigator.language || '').toLowerCase().startsWith('en') ? 'en' : 'fr');
+    const saved = localStorage.getItem(choiceKey);
+    if (saved === 'fr' || saved === 'en') initial = saved;
   } catch (_) {}
   setLocale(initial);
 
