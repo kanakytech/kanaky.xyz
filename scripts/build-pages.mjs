@@ -13,7 +13,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import { melanesiaMap } from './map-melanesia.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
@@ -22,6 +22,20 @@ const ROOT = path.join(HERE, '..');
    veille (Pacific/Auckland = UTC+12/13) */
 const BUILD_DATE = process.env.BUILD_DATE
   || new Date().toLocaleDateString('en-CA', { timeZone: 'Pacific/Auckland' });
+
+/* Une page sans `published` dans sa source garde la date qu'elle porte
+ * déjà en ligne. Sans ça, chaque build rajeunissait 78 pages à la date
+ * du jour : un faux signal de fraîcheur. BUILD_DATE ne sert plus qu'à
+ * une page qui n'a encore jamais été publiée. */
+function publishedDate(p) {
+  if (p.published) return p.published;
+  try {
+    const html = fs.readFileSync(path.join(ROOT, p.slug, 'index.html'), 'utf8');
+    const m = html.match(/"datePublished": "(\d{4}-\d{2}-\d{2})"/);
+    if (m) return m[1];
+  } catch { /* page nouvelle : pas encore de fichier */ }
+  return BUILD_DATE;
+}
 const OG_COLD = 'https://kanaky.xyz/assets/og/cold-outreach-machine.png';
 const OG_BRAND = 'https://kanaky.xyz/assets/og/kanaky-tech.png';
 const ogFor = (p) => /cold|outreach|email|spam|deliverab|prospection|instantly|smartlead|lemlist|apollo|warm-up|spf-dkim|sending-domain/.test(p.slug + ' ' + (p.keywords || '')) ? OG_COLD : OG_BRAND;
@@ -208,6 +222,7 @@ const footer = `  <footer>
         <a href="/marketplace/cold-outreach-machine/">AI Sales Rep (EN)</a>
         <a href="/cold-email-software-one-time-payment/">Buy once vs subscribe</a>
         <a href="/self-hosted-cold-email/">Self-hosted cold email</a>
+        <a href="/ai-chief-of-staff/">AI Chief of Staff</a>
         <a href="/guides/">All guides</a>
       </div>
       <div class="footer-col">
@@ -239,8 +254,9 @@ const footer = `  <footer>
       <div class="footer-col">
         <h4>Écosystème</h4>
         <a href="https://pasifika.ai/" target="_blank" rel="noopener">Pasifika AI</a>
-        <a href="https://dictionnaire.kanaky.xyz" target="_blank" rel="noopener">Dictionnaire langues kanak</a>
+        <a href="https://dictionnaire.kanaky.xyz" target="_blank" rel="noopener">Dictionnaire des langues Kanak</a>
         <a href="https://studio.kanaky.xyz" target="_blank" rel="noopener">Keou Studio</a>
+        <a href="https://starlink.kanaky.xyz/" target="_blank" rel="noopener">Starlink Mini livré en Nouvelle-Calédonie</a>
         <a href="/marketplace/">Marketplace</a>
       </div>
       <div class="footer-col">
@@ -291,9 +307,18 @@ const CTA = {
     a: ['/private-ai-systems/', 'Private AI systems'],
     b: ['/ai-audit/', 'Book a free audit'],
   },
+  /* Pages NC (secteurs, prix, croisiéristes) : l'Audit Flash IA en français,
+   * réservé aux entreprises du territoire. 'service-fr' reste pour la
+   * Polynésie, Wallis-et-Futuna et la France. */
+  'service-nc': {
+    h: 'Découvrez ce que l’IA<br/>peut faire pour vous.',
+    p: 'Kanaky Tech est une agence d’automatisation IA basée à Auckland (Aotearoa), qui travaille à distance avec la Nouvelle-Calédonie. Premier pas : l’Audit Flash IA, 45 minutes en visio, offert aux entreprises du territoire. On regarde comment votre entreprise tourne réellement, on classe ce qui vaut la peine d’être automatisé, et vous repartez avec les conclusions — sans engagement.',
+    a: ['/nc/', 'Réserver l’audit gratuit'],
+    b: ['/automatisation-ia-nouvelle-caledonie/', 'Notre agence'],
+  },
   'service-fr': {
     h: 'Découvrez ce que l’IA<br/>peut faire pour vous.',
-    p: 'Kanaky Tech est une agence d’automatisation IA du Pacifique — Nouméa et Auckland. Premier pas : un audit gratuit de vos opportunités IA. On regarde comment votre entreprise tourne réellement, on classe ce qui vaut la peine d’être automatisé, et vous repartez avec les conclusions — sans engagement.',
+    p: 'Kanaky Tech est une agence d’automatisation IA basée à Auckland (Aotearoa), qui travaille à distance avec la Nouvelle-Calédonie et le Pacifique. Premier pas : un audit gratuit de vos opportunités IA. On regarde comment votre entreprise tourne réellement, on classe ce qui vaut la peine d’être automatisé, et vous repartez avec les conclusions — sans engagement.',
     a: ['/contact/', 'Écrivez-nous'],
     b: ['/automatisation-ia-nouvelle-caledonie/', 'Notre agence'],
   },
@@ -333,8 +358,8 @@ function render(p) {
       '@id': `${url}#article`,
       headline: p.h1.replace(/<[^>]+>/g, ''),
       description: p.description,
-      datePublished: p.published || BUILD_DATE,
-      dateModified: p.modified || p.published || BUILD_DATE,
+      datePublished: publishedDate(p),
+      dateModified: p.modified || publishedDate(p),
       inLanguage: p.lang === 'fr' ? 'fr' : 'en',
       author: { '@type': 'Person', name: 'Kevyn Wahuzue', url: 'https://www.linkedin.com/in/kevyn-wahuzue/' },
       publisher: { '@type': 'Organization', name: 'Kanaky Tech', url: 'https://kanaky.xyz/' },
@@ -352,10 +377,13 @@ function render(p) {
     }] : []),
     {
       '@type': 'BreadcrumbList',
+      // Journal : Accueil › Journal › article (le sommaire /journal/ s'arrête à Journal)
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Kanaky Tech', item: 'https://kanaky.xyz/' },
-        { '@type': 'ListItem', position: 2, name: 'Guides', item: 'https://kanaky.xyz/guides/' },
-        { '@type': 'ListItem', position: 3, name: p.short || p.title, item: url },
+        p.cluster === 'journal'
+          ? { '@type': 'ListItem', position: 2, name: 'Journal', item: 'https://kanaky.xyz/journal/' }
+          : { '@type': 'ListItem', position: 2, name: 'Guides', item: 'https://kanaky.xyz/guides/' },
+        ...(p.slug === 'journal' ? [] : [{ '@type': 'ListItem', position: 3, name: p.short || p.title, item: url }]),
       ],
     },
     ...(p.extraGraph || []),
@@ -374,7 +402,7 @@ function render(p) {
   <meta name="description" content="${esc(p.description)}" />
   ${p.keywords ? `<meta name="keywords" content="${esc(p.keywords)}" />` : ''}
   <link rel="canonical" href="${url}" />${hreflang}
-  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="robots" content="${p.noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large'}" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="${esc(p.ogTitle || p.title)}" />
   <meta property="og:description" content="${esc(p.description)}" />
@@ -401,7 +429,8 @@ ${JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }, null, 2)
 ${nav}
 
   <section class="section gx-hero" style="padding-top:140px;max-width:820px;margin:0 auto;">
-    <div class="gx-eyebrow gx-in">${esc(p.eyebrow || 'Guide')}</div>
+${p.cluster === 'journal' && p.slug !== 'journal' ? `    <nav class="gx-in" aria-label="${p.lang === 'fr' ? 'Fil d’Ariane' : 'Breadcrumb'}" style="font-size:.8rem;color:var(--grey-3);margin-bottom:18px;"><a href="/" style="color:var(--grey-3);text-decoration:none;">${p.lang === 'fr' ? 'Accueil' : 'Home'}</a> › <a href="/journal/" style="color:var(--grey-3);text-decoration:none;">Journal</a></nav>
+` : ''}    <div class="gx-eyebrow gx-in">${esc(p.eyebrow || 'Guide')}</div>
     <h1 class="gx-in d1 gx-title" style="font-size:clamp(1.9rem,4.4vw,3rem);font-weight:700;margin:0 0 26px;">${p.h1}</h1>
 
     <div class="reveal delay-1" style="color:var(--grey-4);font-size:1.06rem;line-height:1.85;">
@@ -435,7 +464,10 @@ ${related ? `
     </div>
   </section>
 
-${p.lang === 'fr' ? footer.replace('https://formations.kanaky.xyz/en/', 'https://formations.kanaky.xyz/').replace('>AI Training</a>', '>Formations IA</a>') : footer}
+${p.lang === 'fr' ? footer
+    .replace('<a href="https://formations.kanaky.xyz/en/">AI Training</a>',
+      '<a href="https://formations.kanaky.xyz/">Formations IA</a>\n        <a href="https://formations.kanaky.xyz/initiation.html">Initiation à l’IA</a>\n        <a href="https://formations.kanaky.xyz/claude-code.html">Formation Claude Code et MCP</a>')
+    .replace('<a href="/ai-chief-of-staff/">AI Chief of Staff</a>', '<a href="/assistant-ia-personnel/">Assistant IA personnel</a>') : footer}
 <script src="/assets/ecosystem.js" defer></script>
 </body>
 </html>
@@ -452,25 +484,34 @@ for (const m of modules) {
   pages = pages.concat(mod.default.map((p) => ({ ...p, cluster: m })));
 }
 
-const onlyArg = process.argv.find(a => a.startsWith('--only='));
-const onlySlugs = onlyArg ? new Set(onlyArg.slice(7).split(',')) : null;
-if (onlySlugs) for (const slug of onlySlugs) {
-  if (!pages.some(p => p.slug === slug)) throw new Error(`Unknown page: ${slug}`);
-}
 const slugs = new Set();
 for (const p of pages) {
   if (slugs.has(p.slug)) throw new Error(`duplicate slug: ${p.slug}`);
   slugs.add(p.slug);
-  if (onlySlugs && !onlySlugs.has(p.slug)) continue;
-  const dir = path.join(ROOT, p.slug);
-  fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(path.join(dir, 'index.html'), render(p));
 }
 
-console.log(`\n  ${onlySlugs ? onlySlugs.size : pages.length} pages generated`);
-for (const m of modules) {
-  const n = pages.filter((p) => p.cluster === m).length;
-  if (n) console.log(`    ${m.padEnd(14)} ${n}`);
+/* On n'écrit que si ce fichier est lancé directement (node scripts/build-pages.mjs).
+ * Un simple import — pour lire `pages` ou `render` — réécrivait 109 pages. */
+const isMain = process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href;
+
+if (isMain) {
+  const onlyArg = process.argv.find(a => a.startsWith('--only='));
+  const onlySlugs = onlyArg ? new Set(onlyArg.slice(7).split(',')) : null;
+  if (onlySlugs) for (const slug of onlySlugs) {
+    if (!pages.some(p => p.slug === slug)) throw new Error(`Unknown page: ${slug}`);
+  }
+  for (const p of pages) {
+    if (onlySlugs && !onlySlugs.has(p.slug)) continue;
+    const dir = path.join(ROOT, p.slug);
+    fs.mkdirSync(dir, { recursive: true });
+    fs.writeFileSync(path.join(dir, 'index.html'), render(p));
+  }
+
+  console.log(`\n  ${onlySlugs ? onlySlugs.size : pages.length} pages generated`);
+  for (const m of modules) {
+    const n = pages.filter((p) => p.cluster === m).length;
+    if (n) console.log(`    ${m.padEnd(14)} ${n}`);
+  }
 }
 
 export { pages, render };

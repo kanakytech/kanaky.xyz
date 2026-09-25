@@ -747,7 +747,7 @@ export default [
   eyebrow: 'Journal',
   short: 'Journal · Croisière',
   h1: 'Vingt-neuf journées, pas une saison. <span style="color:var(--grey-4);font-weight:300;">Ce qu’une escale laisse vraiment à Nouméa.</span>',
-  cta: 'service-fr',
+  cta: 'service-nc',
   published: '2026-08-08',
   body: [
     { lead: 'Un paquebot amarré à la Gare Maritime dépose environ trois mille personnes dans le centre de Nouméa, avec une heure de départ affichée et non négociable. Le commerce qui en vit parle encore de « la saison de croisière », comme s’il s’agissait d’un flux. Les chiffres de 2025 disent autre chose : ce n’est plus une saison, c’est une trentaine de journées isolées, chacune plus lourde qu’il y a dix ans, et dont la date était connue bien avant que l’année commence.' },

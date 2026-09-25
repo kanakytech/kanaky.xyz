@@ -15,7 +15,7 @@ const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replac
 const CLUSTERS = [
   { key: 'produit-fr',   title: 'Le produit, en français',  blurb: 'La machine de prospection commerciale : ce qu’elle fait, le prix en francs Pacifique, ce qu’il faut savoir avant d’acheter, et la question honnête à se poser d’abord.' },
   { key: 'engagement',   title: 'Engagement local',        blurb: 'Dix pour cent de chaque paiement reçu vont à une association du territoire où le contrat est signé, choisie par le client. Le mécanisme, ce que ça coûte réellement, et les versements publiés.' },
-  { key: 'melanesie',    title: 'Mélanésie · Melanesia',    blurb: 'Notre terrain principal — Kanaky/Nouvelle-Calédonie, Papouasie-Nouvelle-Guinée, Fidji, Vanuatu, Îles Salomon. Environ 13 millions d\'habitants, une organisation régionale depuis 1986, et des prix calés sur le pouvoir d\'achat réel de chaque territoire.', merge: ['gang-pacifique'] },
+  { key: 'melanesie',    title: 'Mélanésie · Melanesia',    blurb: 'Notre terrain principal — Kanaky (Nouvelle-Calédonie), Papouasie-Nouvelle-Guinée, Fidji, Vanuatu, Îles Salomon. Environ 13 millions d\'habitants, une organisation régionale depuis 1986, et des prix calés sur le pouvoir d\'achat réel de chaque territoire.', merge: ['gang-pacifique'] },
   { key: 'outreach',     title: 'Cold outreach',        blurb: 'Deliverability, authentication, volume, writing and targeting — the craft of reaching people who did not ask to hear from you, without burning your domain.' },
   { key: 'legal',        title: 'Cold email law',       blurb: 'What the rules actually say in each jurisdiction. Plain-language summaries of legislation, not legal advice.' },
   { key: 'alternatives', title: 'Choosing software',    blurb: 'Honest comparisons, including the cases where a competitor or a subscription is the better choice for you.' },
@@ -23,7 +23,8 @@ const CLUSTERS = [
   { key: 'industries',   title: 'AI by trade',          blurb: 'Where AI saves real hours in specific trades and sectors — starting from the working day rather than from the technology.' },
   { key: 'automation',   title: 'Automation basics',    blurb: 'Agents, workflows and the decision of what to automate first. Concepts explained without the vendor gloss.' },
   { key: 'locations',    title: 'Nos marchés · Where we work', blurb: 'Marché par marché : ce que coûte un projet, comment il se déroule, les contraintes locales (connectivité, monnaie, réglementation) et les questions à poser à tout prestataire — y compris nous. En français et en anglais selon le territoire.', merge: ['pacifique'] },
-  { key: 'fr',           title: 'En français',          blurb: 'Guides écrits en français pour la Nouvelle-Calédonie, la Polynésie française et La Réunion : prix réels, exemples concrets, IA locale, premiers pas.' },
+  { key: 'secteurs-nc',  title: 'Secteurs · Kanaky (Nouvelle-Calédonie)', blurb: 'Métier par métier : BTP, commerce, hôtellerie et tourisme, professions libérales, clim-élec-plomberie, agriculture et pêche. Ce que l’IA change au quotidien, et ce qu’il vaut mieux garder à la main.' },
+  { key: 'fr',           title: 'En français',          blurb: 'Guides écrits en français pour la Kanaky (Nouvelle-Calédonie), la Polynésie française et La Réunion : prix réels, exemples concrets, IA locale, premiers pas.' },
 ];
 
 let all = [];
@@ -106,7 +107,7 @@ const html = `<!DOCTYPE html>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/kanaky.css">
+  <link rel="stylesheet" href="/assets/kanaky.css?v=20260923">
   <script type="application/ld+json">
 ${JSON.stringify(itemList, null, 2)}
   </script>
@@ -146,6 +147,7 @@ ${JSON.stringify(itemList, null, 2)}
       <div class="about-body reveal delay-2">
         <p>These are the notes we would give someone starting out — on reaching people by email without burning a domain, on running AI where your data already lives, and on deciding what is worth automating.</p>
         <p>Where a competitor is the better answer for your situation, that is what the page says. A guide that only ever points at our own product would not be worth writing.</p>
+        <p>Dated notes — public figures, studies, what changes in the Pacific — are in the <a href="/journal/" style="color:var(--white);text-decoration:none;border-bottom:1px solid rgba(200,240,96,0.4);">Journal</a>.</p>
       </div>
     </div>
 ${sections}
@@ -158,7 +160,7 @@ ${sections}
       <a href="/ai-audit/" class="btn-primary">Book a free AI audit
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
-      <a href="/marketplace/cold-outreach-machine/" class="btn-ghost">See the machine</a>
+      <a href="/marketplace/cold-outreach-machine/" class="btn-ghost">See the AI sales rep</a>
     </div>
   </section>
 
@@ -166,7 +168,7 @@ ${sections}
     <div class="footer-top">
       <div class="footer-brand">
         <a href="/" class="logo-mark"><img class="logo-img" src="/assets/kanaky-tech-logo.jpg" alt="Kanaky Tech logo" /><span class="logo-text">Kanaky Tech</span></a>
-        <p>The Pacific's AI automation &amp; agent development studio. We build AI agents and automate business processes for SMEs, agencies and institutions across New Caledonia, New Zealand and the Pacific.</p>
+        <p>The Pacific's AI automation &amp; agent development studio. We build AI agents and automate business processes for SMEs, agencies and institutions across Kanaky (New Caledonia), New Zealand and the Pacific.</p>
       </div>
       <div class="footer-col">
         <h4>Product</h4>
@@ -181,13 +183,22 @@ ${sections}
         <a href="/ai-agents-new-caledonia/">AI Agent Development</a>
         <a href="/private-ai-systems/">Private AI Systems</a>
         <a href="/ai-audit/">AI Opportunity Audit</a>
+        <a href="https://formations.kanaky.xyz/en/">AI Training</a>
+      </div>
+      <div class="footer-col">
+        <h4>Écosystème</h4>
+        <a href="https://pasifika.ai/" target="_blank" rel="noopener">Pasifika AI</a>
+        <a href="https://dictionnaire.kanaky.xyz" target="_blank" rel="noopener">Dictionnaire des langues Kanak</a>
+        <a href="https://studio.kanaky.xyz" target="_blank" rel="noopener">Keou Studio</a>
+        <a href="https://starlink.kanaky.xyz/" target="_blank" rel="noopener">Starlink Mini livré en Nouvelle-Calédonie</a>
+        <a href="/marketplace/">Marketplace</a>
       </div>
       <div class="footer-col">
         <h4>Company</h4>
         <a href="/#about">About</a>
         <a href="/case-studies/">Case Studies</a>
+        <a href="/journal/">Journal</a>
         <a href="/blog/">Blog</a>
-        <a href="/legal/">Legal &amp; company info</a>
         <a href="/contact/">Contact</a>
       </div>
     </div>
@@ -198,11 +209,12 @@ ${sections}
         <a href="/legal/#privacy">Privacy</a>
         <a href="/legal/#terms">Terms</a>
         <a href="/contact/">Contact</a>
-        <span class="footer-ids">NZBN 9429053554017 · RIDET 1 445 709.002</span>
+        <span class="footer-ids">NZBN 9429053554017 · GST 148-301-654</span>
       </nav>
     </div>
   </footer>
   <script src="/assets/site.js"></script>
+<script src="/assets/ecosystem.js" defer></script>
 </body>
 </html>
 `;

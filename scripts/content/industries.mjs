@@ -11,6 +11,7 @@ export default [
 
 {
   slug: 'ai-for-electricians',
+  noindex: true, // sortie de l'index le 24/09 (19 imp., 0 clic) ; liens suivis
   title: 'AI for Electricians — Where It Saves Real Hours',
   description: 'Practical AI for electrical contractors: quoting from voice notes after a day on the tools, compliance paperwork, job scheduling and chasing work — with an honest view of what is not worth it.',
   keywords: 'AI for electricians, electrical contractor software, electrician quoting automation, trade business AI',
@@ -52,6 +53,7 @@ export default [
 
 {
   slug: 'ai-for-plumbers',
+  noindex: true, // sortie de l'index le 24/09 (19 imp., 0 clic) ; liens suivis
   title: 'AI for Plumbers — Practical Uses in a Callout-Driven Business',
   description: 'How plumbing businesses use AI where it actually helps: triaging emergency calls, quoting from the van, chasing unpaid invoices and keeping maintenance customers — without pretending it does the plumbing.',
   keywords: 'AI for plumbers, plumbing business automation, plumber quoting software, trade admin automation',
@@ -92,6 +94,7 @@ export default [
 
 {
   slug: 'ai-for-builders',
+  noindex: true, // sortie de l'index le 24/09 (19 imp., 0 clic) ; liens suivis
   title: 'AI for Builders and Construction — Where It Helps on Long Projects',
   description: 'AI for building companies: estimating support, variation tracking, subcontractor coordination, client updates and compliance documentation across projects that run for months.',
   keywords: 'AI for builders, construction automation, building company software, construction admin AI',
@@ -133,6 +136,7 @@ export default [
 
 {
   slug: 'ai-for-real-estate',
+  noindex: true, // sortie de l'index le 24/09 (19 imp., 0 clic) ; liens suivis
   title: 'AI for Real Estate Agencies — Beyond Writing Listing Descriptions',
   description: 'Practical AI for real estate: vendor reporting, buyer matching, appraisal preparation, database reactivation and the compliance trail — with a clear line on where automation damages trust.',
   keywords: 'AI for real estate, real estate automation, property agency AI, listing automation, real estate CRM AI',
@@ -179,6 +183,7 @@ export default [
 
 {
   slug: 'ai-for-recruitment-agencies',
+  noindex: true, // sortie de l'index le 24/09 (19 imp., 0 clic) ; liens suivis
   title: 'AI for Recruitment Agencies — Where It Helps and Where It Is Risky',
   description: 'AI in recruitment: candidate matching, screening support, business development and database reactivation — plus a direct look at bias, transparency obligations and why candidate data belongs in-house.',
   keywords: 'AI for recruitment, recruitment agency automation, candidate matching AI, recruiting AI bias',
@@ -224,6 +229,7 @@ export default [
 
 {
   slug: 'ai-for-marine-businesses',
+  noindex: true, // sortie de l'index le 24/09 (19 imp., 0 clic) ; liens suivis
   title: 'AI for Marine Businesses — Boatyards, Brokers and Marine Trades',
   description: 'AI for the marine industry: seasonal booking pressure, quoting survey and refit work, maintenance schedules that generate repeat revenue, and reaching commercial marine clients.',
   keywords: 'AI for marine business, boatyard software, marine trades automation, boat broker AI, marine services',
@@ -268,6 +274,7 @@ export default [
 
 {
   slug: 'ai-for-hospitality',
+  noindex: true, // sortie de l'index le 24/09 (19 imp., 0 clic) ; liens suivis
   title: 'AI for Hospitality — Restaurants, Cellar Doors and Small Venues',
   description: 'AI for hospitality operators: booking friction, group and event enquiries, rosters, supplier admin and reviews — and why the automation guests notice is usually the wrong automation.',
   keywords: 'AI for hospitality, restaurant automation, cellar door bookings, venue management AI, hospitality admin',
@@ -315,6 +322,7 @@ export default [
 
 {
   slug: 'ai-for-accountants',
+  noindex: true, // sortie de l'index le 24/09 (19 imp., 0 clic) ; liens suivis
   title: 'AI for Accounting Practices — Where the Billable Hours Go',
   description: 'AI in accounting practices: document processing, transaction coding, client queries and advisory capacity — plus what must stay under professional review and why peak season changes the maths.',
   keywords: 'AI for accountants, accounting practice automation, bookkeeping AI, tax practice efficiency',
@@ -357,6 +365,7 @@ export default [
 
 {
   slug: 'ai-for-ecommerce',
+  noindex: true, // sortie de l'index le 24/09 (19 imp., 0 clic) ; liens suivis
   title: 'AI for E-commerce — Product Content, Support and the Long Tail',
   description: 'AI for online retailers: product content at catalogue scale, support deflection done honestly, merchandising and the operational work behind the storefront.',
   keywords: 'AI for ecommerce, product description AI, ecommerce automation, online store AI, catalogue automation',
@@ -402,6 +411,7 @@ export default [
 
 {
   slug: 'ai-for-nonprofits',
+  noindex: true, // sortie de l'index le 24/09 (19 imp., 0 clic) ; liens suivis
   title: 'AI for Non-Profits and Community Organisations — Doing More With the Same People',
   description: 'AI for non-profits: grant applications and reporting, volunteer coordination, donor communication and the administrative load that consumes small teams — with a clear view of what to be careful with.',
   keywords: 'AI for nonprofits, charity automation, grant writing AI, community organisation admin, NGO efficiency',

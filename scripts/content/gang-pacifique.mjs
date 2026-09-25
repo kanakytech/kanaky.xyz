@@ -87,7 +87,7 @@ export default [
     { q: 'L’IA fonctionne-t-elle avec une connexion instable ?', a: 'Cela dépend entièrement du montage choisi. Un service en ligne s’arrête quand la liaison s’arrête. Un modèle installé sur une machine dans votre bureau continue de traiter vos documents et de préparer vos réponses. Au Vanuatu, ce n’est pas une préférence technique, c’est un critère de choix prioritaire.' },
     { q: 'Y a-t-il des prestataires au Vanuatu ?', a: 'Très peu de spécialistes en automatisation, ce qui est à double tranchant : peu de choix, mais aussi peu de pression commerciale pour vous vendre l’inutile. Soyez d’autant plus exigeant — demandez une estimation d’heures gagnées avant de signer, qui possède le code, et ce qui se passe si vous changez de prestataire.' },
     { q: 'Travaillez-vous en anglais et en français ?', a: 'Les deux, ce qui compte dans un pays où les entreprises passent d’une langue à l’autre selon l’interlocuteur. Les systèmes que nous construisons gèrent la correspondance bilingue ; pour le bislama, les modèles actuels sont beaucoup moins fiables et nous le disons plutôt que de le masquer — une relecture humaine reste nécessaire.' },
-    { q: 'Faut-il venir sur place ?', a: 'Rarement pour un premier projet : l’audit et la mise en place se font à distance. Pour une installation de matériel local ou une formation d’équipe, un déplacement depuis Nouméa est simple — une heure de vol, ce qui est plus court que bien des trajets internes en Australie.' },
+    { q: 'Faut-il venir sur place ?', a: 'Rarement pour un premier projet : l’audit et la mise en place se font à distance. Pour une installation de matériel local ou une formation d’équipe, le déplacement est simple : Port-Vila est à une heure de vol de Nouméa, ce qui est plus court que bien des trajets internes en Australie.' },
   ],
   related: [
     ['/ai-automation-vanuatu/', 'This page in English'],
@@ -168,7 +168,7 @@ export default [
     { q: 'Does AI work with unreliable connectivity?', a: 'It depends entirely on the setup. A cloud service stops when your link stops. A model installed on a machine in your office keeps processing documents and drafting replies regardless. In Vanuatu this is not a technical preference — it should be your first selection criterion.' },
     { q: 'Are there automation providers in Vanuatu?', a: 'Very few specialists, which cuts both ways: less choice, but also less commercial pressure to sell you things you do not need. Be correspondingly demanding — ask for an estimate of hours saved before signing, who owns the code, and what happens if you change provider.' },
     { q: 'Do you work in English and French?', a: 'Both, which matters in a country where businesses switch language depending on who they are talking to. The systems we build handle bilingual correspondence. For Bislama, current models are considerably less reliable and we say so rather than hiding it — human review remains necessary.' },
-    { q: 'Do you need to travel to Vanuatu?', a: 'Rarely for a first project — audits and setup are done remotely. For local hardware installation or team training, travel from Nouméa is straightforward: an hour\'s flight, shorter than many domestic trips within Australia.' },
+    { q: 'Do you need to travel to Vanuatu?', a: 'Rarely for a first project — audits and setup are done remotely. For local hardware installation or team training, travel is straightforward: Port Vila is an hour\'s flight from Nouméa, shorter than many domestic trips within Australia.' },
   ],
   related: [
     ['/automatisation-ia-vanuatu/', 'Cette page en français'],
@@ -228,7 +228,7 @@ export default [
         ['A single automated workflow', 'Low four figures'],
         ['A custom AI agent connected to your systems', 'Mid four figures'],
         ['Ongoing support', 'Monthly, scoped'],
-        ['Software you buy once and run yourself', 'From US$499'],
+        ['Software you buy once and run yourself', 'From US$999'],
       ],
     }},
     '**The trap:** offshore providers quoting very low prices for template work that does not connect to anything you use. The integration — making it talk to your booking system, your accounting, your existing tools — is where the real work and the real value sit. A cheap system that automates nothing you actually do is the most expensive option available.',
@@ -243,13 +243,13 @@ export default [
     ]},
 
     { h: 'Where we fit, and where we do not' },
-    'We work from Auckland and Nouméa — close timezones, Pacific context, and the habit of building for places where connectivity is not guaranteed. What we do not have is a Suva office, and if regular in-person presence matters to you, a Fiji-based provider is genuinely the better choice. We would rather say that here than after you have signed.',
+    'We work remotely from Auckland (Aotearoa) — close timezones, Pacific context, and the habit of building for places where connectivity is not guaranteed. What we do not have is a Suva office, and if regular in-person presence matters to you, a Fiji-based provider is genuinely the better choice. We would rather say that here than after you have signed.',
     'Where we are worth talking to: systems that run on your own infrastructure so customer data stays put, multi-country coordination, and outbound sales — including [software you buy once](/marketplace/cold-outreach-machine/) and run yourself instead of paying a retainer.',
   ],
   faq: [
     { q: 'What does AI automation cost in Fiji?', a: 'A first automated workflow typically lands in the low four figures, with a free audit before it. Be careful comparing against very low offshore quotes: those usually cover a template that does not integrate with your booking system or accounting, which is precisely where the value is.' },
     { q: 'Is it worth it for a small tourism operator?', a: 'Often yes, and enquiry response is usually the place to start — group and event requests are the most valuable bookings and the most frequently lost to slow replies. One workflow, measured before and after, tells you within a month whether to go further.' },
-    { q: 'Do you have an office in Fiji?', a: 'No. We work from Auckland and Nouméa, remotely. If regular on-site presence is important to you, a Fiji-based provider is the better fit and we will say so. If your priorities are data staying on your own infrastructure, multi-country coordination, or systems that work when connectivity does not, those are our strengths.' },
+    { q: 'Do you have an office in Fiji?', a: 'No. We work remotely from Auckland (Aotearoa). If regular on-site presence is important to you, a Fiji-based provider is the better fit and we will say so. If your priorities are data staying on your own infrastructure, multi-country coordination, or systems that work when connectivity does not, those are our strengths.' },
     { q: 'Can automation handle multi-currency operations?', a: 'Yes, and it is one of the clearer wins for Fijian businesses trading across the region — reconciling payments, invoices and reporting across currencies is repetitive, rule-based and error-prone by hand. It is exactly the shape of work automation handles well.' },
   ],
   related: [

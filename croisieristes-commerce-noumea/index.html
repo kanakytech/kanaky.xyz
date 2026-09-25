@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/kanaky.css">
+  <link rel="stylesheet" href="/assets/kanaky.css?v=20260923">
   <style>
     /* ── ambiance héritée de la page produit ── */
     .gx-hero{position:relative}
@@ -169,8 +169,8 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Guides",
-          "item": "https://kanaky.xyz/guides/"
+          "name": "Journal",
+          "item": "https://kanaky.xyz/journal/"
         },
         {
           "@type": "ListItem",
@@ -222,6 +222,7 @@
   </div>
 
   <section class="section gx-hero" style="padding-top:140px;max-width:820px;margin:0 auto;">
+    <nav class="gx-in" aria-label="Fil d’Ariane" style="font-size:.8rem;color:var(--grey-3);margin-bottom:18px;"><a href="/" style="color:var(--grey-3);text-decoration:none;">Accueil</a> › <a href="/journal/" style="color:var(--grey-3);text-decoration:none;">Journal</a></nav>
     <div class="gx-eyebrow gx-in">Journal</div>
     <h1 class="gx-in d1 gx-title" style="font-size:clamp(1.9rem,4.4vw,3rem);font-weight:700;margin:0 0 26px;">Vingt-neuf journées, pas une saison. <span style="color:var(--grey-4);font-weight:300;">Ce qu’une escale laisse vraiment à Nouméa.</span></h1>
 
@@ -292,12 +293,16 @@
 
   <section class="cta-section">
     <h2 class="reveal">Découvrez ce que l’IA<br/>peut faire pour vous.</h2>
-    <p class="reveal delay-1">Kanaky Tech est une agence d’automatisation IA du Pacifique — Nouméa et Auckland. Premier pas : un audit gratuit de vos opportunités IA. On regarde comment votre entreprise tourne réellement, on classe ce qui vaut la peine d’être automatisé, et vous repartez avec les conclusions — sans engagement.</p>
+    <p class="reveal delay-1">Kanaky Tech est une agence d’automatisation IA basée à Auckland (Aotearoa), qui travaille à distance avec la Nouvelle-Calédonie. Premier pas : l’Audit Flash IA, 45 minutes en visio, offert aux entreprises du territoire. On regarde comment votre entreprise tourne réellement, on classe ce qui vaut la peine d’être automatisé, et vous repartez avec les conclusions — sans engagement.</p>
     <div class="cta-actions reveal delay-2">
-      <a href="/contact/" class="btn-primary">Écrivez-nous
+      <a href="/nc/" class="btn-primary">Réserver l’audit gratuit
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
       <a href="/automatisation-ia-nouvelle-caledonie/" class="btn-ghost">Notre agence</a>
+      <!-- Un rendez-vous avec Kevyn : le même lien partout, quelle que soit la
+           page d'où l'on part. Trente minutes (ou quinze, ou quarante-cinq) pour
+           parler du besoin — pas un formulaire de plus. -->
+      <a href="https://calendly.com/k-wahuzuepro/rendez-vous-avec-kevyn" class="btn-ghost" target="_blank" rel="noopener">Prendre rendez-vous</a>
     </div>
   </section>
 
@@ -310,9 +315,10 @@
       <div class="footer-col">
         <h4>Product</h4>
         <a href="/machine-prospection-commerciale/">Commercial IA (FR)</a>
-        <a href="/marketplace/cold-outreach-machine/">Commercial IA (EN)</a>
+        <a href="/marketplace/cold-outreach-machine/">AI Sales Rep (EN)</a>
         <a href="/cold-email-software-one-time-payment/">Buy once vs subscribe</a>
         <a href="/self-hosted-cold-email/">Self-hosted cold email</a>
+        <a href="/assistant-ia-personnel/">Assistant IA personnel</a>
         <a href="/guides/">All guides</a>
       </div>
       <div class="footer-col">
@@ -322,6 +328,8 @@
         <a href="/private-ai-systems/">Private AI Systems</a>
         <a href="/ai-audit/">AI Opportunity Audit</a>
         <a href="https://formations.kanaky.xyz/">Formations IA</a>
+        <a href="https://formations.kanaky.xyz/initiation.html">Initiation à l’IA</a>
+        <a href="https://formations.kanaky.xyz/claude-code.html">Formation Claude Code et MCP</a>
       </div>
       <div class="footer-col">
         <h4>Mélanésie</h4>
@@ -344,8 +352,9 @@
       <div class="footer-col">
         <h4>Écosystème</h4>
         <a href="https://pasifika.ai/" target="_blank" rel="noopener">Pasifika AI</a>
-        <a href="https://dictionnaire.kanaky.xyz" target="_blank" rel="noopener">Dictionnaire langues kanak</a>
+        <a href="https://dictionnaire.kanaky.xyz" target="_blank" rel="noopener">Dictionnaire des langues Kanak</a>
         <a href="https://studio.kanaky.xyz" target="_blank" rel="noopener">Keou Studio</a>
+        <a href="https://starlink.kanaky.xyz/" target="_blank" rel="noopener">Starlink Mini livré en Nouvelle-Calédonie</a>
         <a href="/marketplace/">Marketplace</a>
       </div>
       <div class="footer-col">

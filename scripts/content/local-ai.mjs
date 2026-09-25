@@ -299,6 +299,7 @@ export default [
 
 {
   slug: 'private-ai-for-law-firms',
+  noindex: true, // sortie de l'index le 24/09 ; liens suivis
   title: 'Private AI for Law Firms — Using AI Without Sending Client Files Away',
   description: 'How law firms can use AI while keeping privileged material in-house: which tasks suit local models, the confidentiality questions to resolve first, and a realistic path to adoption.',
   keywords: 'AI for law firms, legal AI privacy, private AI legal, confidential AI law practice',
@@ -347,6 +348,7 @@ export default [
 
 {
   slug: 'private-ai-for-accountants',
+  noindex: true, // sortie de l'index le 24/09 ; liens suivis
   title: 'Private AI for Accountants — Automating Without Exposing Client Financials',
   description: 'How accounting practices can use AI on client financial data while keeping it in-house: the tasks that pay back fastest, the confidentiality constraints, and a practical setup.',
   keywords: 'AI for accountants, accounting AI privacy, private AI accounting firm, financial data AI',
@@ -395,6 +397,7 @@ export default [
 
 {
   slug: 'private-ai-for-healthcare',
+  noindex: true, // sortie de l'index le 24/09 ; liens suivis
   title: 'Private AI in Healthcare — Keeping Patient Information In-House',
   description: 'How healthcare providers can use AI without sending patient information to third parties: suitable administrative tasks, why local deployment fits regulated health data, and what to resolve first.',
   keywords: 'private AI healthcare, patient data AI privacy, local AI medical practice, health information AI',

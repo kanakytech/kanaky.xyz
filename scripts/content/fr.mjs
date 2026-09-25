@@ -10,6 +10,7 @@ export default [
 
 {
   slug: 'combien-coute-automatisation-ia',
+  modified: '2026-09-24', // le fond a changé (prix, identité)
   lang: 'fr',
   title: 'Combien coûte l’automatisation IA pour une TPE ou PME ? Les vrais chiffres',
   description: 'Les coûts réels de l’automatisation IA pour une petite entreprise : fourchettes honnêtes en XPF et en euros, ce qui fait varier le prix, les coûts cachés, et les cas où ça ne vaut pas la dépense.',
@@ -19,21 +20,22 @@ export default [
   h1: 'Combien coûte l’automatisation IA ? <span style="color:var(--grey-4);font-weight:300;">Les vrais chiffres.</span>',
   cta: 'service-fr',
   body: [
-    { lead: 'La plupart des agences répondent « ça dépend » puis demandent votre budget. Voici l’inverse : les fourchettes réelles du marché, ce qui fait bouger le prix, et — plus utile encore — les cas où la bonne réponse est de ne rien dépenser du tout.' },
-    { h: 'Les fourchettes du marché' },
+    { lead: 'La plupart des agences répondent « ça dépend » puis demandent votre budget. Voici l’inverse : nos fourchettes réelles, ce qui fait bouger le prix, et — plus utile encore — les cas où la bonne réponse est de ne rien dépenser du tout.' },
+    { h: 'Nos fourchettes' },
     { table: {
       minWidth: 560,
       head: ['Prestation', 'Fourchette typique', 'En XPF (indicatif)'],
       rows: [
-        ['Audit d’opportunités', 'Gratuit à ~500 €', '0 – 60 000 F'],
+        ['Audit d’opportunités', 'Gratuit', 'Gratuit'],
         ['Un workflow automatisé (devis, relances, tri d’e-mails)', '1 000 – 4 000 €', '120 000 – 480 000 F'],
         ['Un agent IA connecté à vos outils', '3 000 – 8 000 €', '360 000 – 950 000 F'],
         ['Chatbot client sérieux (pas un gadget)', '2 500 – 8 000 €', '300 000 – 950 000 F'],
         ['Accompagnement mensuel', '100 – 500 €/mois', '12 000 – 60 000 F/mois'],
-        ['Logiciel acheté une fois, que vous exploitez vous-même', 'dès ~300 USD', '~36 000 F, une fois'],
+        ['Logiciel acheté une fois, que vous exploitez vous-même', '999 USD', '~103 000 F, une fois'],
       ],
     }},
-    'Ces chiffres recoupent ce que pratiquent les agences du Pacifique et de La Réunion en 2026 — certaines annoncent des projets « à partir de 500 € », d’autres des déploiements mid-market à plusieurs dizaines de milliers d’euros. L’écart n’est pas du hasard : il reflète ce que recouvre réellement la prestation.',
+    { note: 'En Kanaky (Nouvelle-Calédonie), nous appliquons une grille reprise plus basse : **à partir de 80 000 F CFP le premier workflow, audit gratuit**. [Le détail en XPF](/prix-automatisation-ia-nouvelle-caledonie/).' },
+    'Ce sont nos fourchettes, pas un relevé daté du marché. Certaines agences du Pacifique et de La Réunion annoncent des projets « à partir de 500 € », d’autres des déploiements mid-market à plusieurs dizaines de milliers d’euros. L’écart n’est pas du hasard : il reflète ce que recouvre réellement la prestation.',
     { h: 'Ce qui fait varier le prix' },
     { list: [
       '**Le nombre de systèmes à connecter.** Automatiser un devis qui part de votre boîte mail coûte peu. Le connecter à votre logiciel de facturation, votre agenda et votre CRM, c’est là que les heures partent — l’intégration coûte plus cher que l’IA.',
@@ -63,10 +65,10 @@ export default [
     { q: 'Le prix est-il différent en Kanaky (Nouvelle-Calédonie) ou en Polynésie ?', a: 'Le travail se livre à distance, donc les fourchettes restent proches de la métropole. Ce qui change localement : la fiscalité (TGC, TVA polynésienne), la connectivité — un système qui continue de fonctionner quand la liaison tombe a une valeur particulière dans le Pacifique — et la rareté des prestataires qui connaissent vraiment le terrain.' },
   ],
   related: [
-    ['/machine-prospection-commerciale/', 'La machine de prospection — 36 000 F, une fois'],
+    ['/machine-prospection-commerciale/', 'Le commercial IA — 103 000 F, une fois'],
     ['/exemples-automatisation-pme/', '10 exemples d’automatisation pour TPE et PME'],
     ['/commencer-avec-ia-entreprise/', 'Par où commencer avec l’IA'],
-    ['/automatisation-ia-nouvelle-caledonie/', 'Notre agence en Kanaky (Nouvelle-Calédonie)'],
+    ['/automatisation-ia-nouvelle-caledonie/', 'Automatisation IA en Kanaky (Nouvelle-Calédonie)'],
   ],
 },
 
@@ -216,8 +218,8 @@ export default [
     }},
     'L’installation de base tient en une commande avec [Ollama](https://ollama.com), gratuit. La vraie question n’est jamais l’installation : c’est de brancher le modèle sur vos documents proprement, avec des droits d’accès — qui, dans l’entreprise, peut interroger quoi.',
     { h: 'La dimension Pacifique' },
-    'Écrit depuis Nouméa et Auckland, ce point n’est pas théorique. Quand la connectivité d’un territoire tient à un câble, un outil de travail qui exige une liaison permanente avec un serveur à l’autre bout du monde a un mode de panne que tout le monde ici a déjà vécu. **Un système qui continue de fonctionner quand la liaison tombe n’est pas un luxe, c’est un cahier des charges.**',
-    'Et il y a plus profond que la panne : la question de savoir où vivent les données d’un territoire — celles des entreprises, des institutions, des langues — est une question de souveraineté avant d’être une question d’infrastructure. C’est la conviction qui structure notre travail, du [dictionnaire des langues kanak](https://dictionnaire.kanaky.xyz) à nos systèmes privés. Nous l’avons développée dans [notre texte de position](/blog/future-of-ai-is-local-and-personal/) (en anglais).',
+    'Pour une entreprise du Pacifique, ce point n’est pas théorique. Quand la connectivité d’un territoire tient à un câble, un outil de travail qui exige une liaison permanente avec un serveur à l’autre bout du monde a un mode de panne que tout le monde ici a déjà vécu. **Un système qui continue de fonctionner quand la liaison tombe n’est pas un luxe, c’est un cahier des charges.**',
+    'Et il y a plus profond que la panne : la question de savoir où vivent les données d’un territoire — celles des entreprises, des institutions, des langues — est une question de souveraineté avant d’être une question d’infrastructure. C’est la conviction qui structure notre travail, du [dictionnaire des langues Kanak](https://dictionnaire.kanaky.xyz) à nos systèmes privés. Nous l’avons développée dans [notre texte de position](/blog/future-of-ai-is-local-and-personal/) (en anglais).',
     { note: 'Par où commencer sans rien risquer : installez Ollama sur une machine existante, utilisez un petit modèle une semaine sur du vrai travail, et notez ce qui est « assez bon » et ce qui ne l’est pas. Vous saurez alors quoi construire — et si ça vaut un investissement matériel.' },
   ],
   faq: [
@@ -230,7 +232,7 @@ export default [
     ['/assistant-ia-personnel/', 'Un assistant IA personnel, installé chez vous'],
     ['/exemples-automatisation-pme/', '10 exemples d’automatisation'],
     ['/combien-coute-automatisation-ia/', 'Combien ça coûte, vraiment'],
-    ['/automatisation-ia-nouvelle-caledonie/', 'Notre agence en Kanaky (Nouvelle-Calédonie)'],
+    ['/automatisation-ia-nouvelle-caledonie/', 'Automatisation IA en Kanaky (Nouvelle-Calédonie)'],
   ],
 },
 

@@ -24,8 +24,12 @@ import { fileURLToPath } from 'node:url';
 const ROOT = path.resolve(fileURLToPath(new URL('..', import.meta.url)));
 const DRY = process.argv.includes('--dry');
 
-const FROM = '499';
-const TO = '499';
+/* Prix en vigueur depuis le 20/09/2026 : 999 USD (≈ 103 000 F), celui
+ * qu'encaisse le lien Stripe. FROM = TO : le script ne change aucun prix
+ * tant qu'on ne modifie pas ces deux lignes. Avec l'ancien FROM/TO, il
+ * aurait remis 499 USD et 60 000 F sur des pages qui vendent à 999. */
+const FROM = '999';
+const TO = '999';
 const DEADLINE = '11 August 2026';
 
 /* Les formulations de lancement à retirer. Ordre important : les plus
@@ -65,7 +69,8 @@ const UNWIND = [
 ];
 
 const EXT = new Set(['.html', '.mjs', '.txt', '.json']);
-const SKIP = /node_modules|\.git|\/assets\/og\//;
+// le script lui-même contient les chaînes qu'il remplace : il se réécrivait
+const SKIP = /node_modules|\.git|\/assets\/og\/|set-price\.mjs$/;
 
 function walk(dir, out = []) {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {

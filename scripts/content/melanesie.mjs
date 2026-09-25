@@ -24,6 +24,7 @@ export default [
 
 {
   slug: 'melanesie',
+  modified: '2026-09-24', // le fond a changé (prix, identité)
   lang: 'fr',
   alt: { lang: 'en', url: 'https://kanaky.xyz/melanesia/' },
   title: 'Automatisation IA en Mélanésie — Kanaky, Fidji, Vanuatu, Salomon, PNG',
@@ -94,15 +95,15 @@ export default [
     ]},
 
     { h: 'D’où nous parlons' },
-    'Kanaky Tech est une entreprise calédonienne, immatriculée en Kanaky (Nouvelle-Calédonie), fondée par quelqu’un d’ici. Notre travail le plus visible n’est pas commercial : c’est le [dictionnaire des langues kanak](https://dictionnaire.kanaky.xyz), qui réunit neuf langues, près de vingt mille mots et des enregistrements de locuteurs natifs.',
+    'Notre travail le plus visible n’est pas commercial : c’est le [dictionnaire des langues Kanak](https://dictionnaire.kanaky.xyz), qui réunit neuf langues, près de vingt mille mots et des enregistrements de locuteurs natifs.',
     'Nous le mentionnons pour une raison précise. La question de savoir **où vivent les données d’une région — celles des entreprises, des institutions, des langues — et qui les contrôle** n’est pas une question d’infrastructure. C’est une question de pouvoir. Nous avons construit ce dictionnaire en le prenant au sérieux, et nous construisons les systèmes de nos clients de la même façon.',
-    { note: 'Nous ne sommes pas présents physiquement dans les cinq territoires — nous travaillons depuis Nouméa et Auckland. Quand un prestataire installé sur place vous servirait mieux, nous le disons. Chaque page pays contient cette réserve, écrite noir sur blanc.' },
+    { note: 'Nous ne sommes pas présents physiquement dans les cinq territoires — nous travaillons à distance depuis Auckland (Aotearoa). Quand un prestataire installé sur place vous servirait mieux, nous le disons. Chaque page pays contient cette réserve, écrite noir sur blanc.' },
   ],
   faq: [
     { q: 'Qu’est-ce que la Mélanésie exactement ?', a: 'Une région du Pacifique regroupant la Papouasie-Nouvelle-Guinée, les Îles Salomon, le Vanuatu, les Fidji et la Kanaky (Nouvelle-Calédonie). Ces cinq territoires forment depuis 1986 le Melanesian Spearhead Group, une organisation régionale dotée d’accords commerciaux, dont le secrétariat siège à Port-Vila. Environ treize millions d’habitants au total.' },
     { q: 'Pourquoi des prix différents selon les pays ?', a: 'Parce que le pouvoir d’achat varie d’un facteur quinze entre la Kanaky (Nouvelle-Calédonie) et les Îles Salomon. Un tarif unique calibré sur le marché le plus riche fermerait les quatre autres. La prestation, elle, ne change pas : même code, même documentation, même exigence.' },
     { q: 'Travaillez-vous en anglais ?', a: 'Oui. La Mélanésie est bilingue par nature — français en Kanaky (Nouvelle-Calédonie), anglais aux Fidji, en PNG et aux Salomon, les deux au Vanuatu. Nos pages et nos systèmes le sont aussi. Pour les langues locales, nous sommes prudents et nous le disons : les modèles actuels les traitent mal, et une relecture par des locuteurs reste nécessaire.' },
-    { q: 'Êtes-vous présents dans tous ces pays ?', a: 'Non. Nous travaillons depuis Nouméa et Auckland, à distance, avec des déplacements possibles. Là où une présence physique régulière est déterminante pour vous, un prestataire local est le meilleur choix et nous le disons sur chaque page pays plutôt que de laisser croire le contraire.' },
+    { q: 'Êtes-vous présents dans tous ces pays ?', a: 'Non. Nous travaillons à distance depuis Auckland (Aotearoa), avec des déplacements possibles. Là où une présence physique régulière est déterminante pour vous, un prestataire local est le meilleur choix et nous le disons sur chaque page pays plutôt que de laisser croire le contraire.' },
   ],
   related: [
     ['/machine-prospection-commerciale/', 'La machine de prospection commerciale'],
@@ -115,6 +116,7 @@ export default [
 
 {
   slug: 'melanesia',
+  modified: '2026-09-24', // le fond a changé (prix, identité)
   alt: { lang: 'fr', url: 'https://kanaky.xyz/melanesie/' },
   title: 'AI Automation Across Melanesia — Kanaky, Fiji, Vanuatu, Solomon Islands, PNG',
   description: 'An AI automation agency built for Melanesia: New Caledonia, Fiji, Vanuatu, Solomon Islands and Papua New Guinea. Pricing set per market, systems that keep working when connectivity does not, and data that stays with you.',
@@ -184,15 +186,15 @@ export default [
     ]},
 
     { h: 'Where we speak from' },
-    'Kanaky Tech is a New Caledonian company, registered in Kanaky (New Caledonia), founded by someone from here. Our most visible work is not commercial: it is the [Kanak languages dictionary](https://dictionnaire.kanaky.xyz), bringing together nine languages, nearly twenty thousand words and native-speaker recordings.',
+    'Our most visible work is not commercial: it is the [Kanak languages dictionary](https://dictionnaire.kanaky.xyz), bringing together nine languages, nearly twenty thousand words and native-speaker recordings.',
     'We mention it for a specific reason. The question of **where a region\'s data lives — its businesses, its institutions, its languages — and who controls it** is not an infrastructure question. It is a question about power. We built that dictionary taking it seriously, and we build our clients\' systems the same way.',
-    { note: 'We are not physically present in all five territories — we work from Nouméa and Auckland. Where a locally-based provider would serve you better, we say so. Every country page carries that caveat in writing.' },
+    { note: 'We are not physically present in all five territories — we work remotely from Auckland (Aotearoa). Where a locally-based provider would serve you better, we say so. Every country page carries that caveat in writing.' },
   ],
   faq: [
     { q: 'What exactly is Melanesia?', a: 'A Pacific region comprising Papua New Guinea, Solomon Islands, Vanuatu, Fiji and Kanaky (New Caledonia). Since 1986 those five have formed the Melanesian Spearhead Group, a regional organisation with trade agreements and a secretariat in Port Vila. Around thirteen million people in total.' },
     { q: 'Why different prices in different countries?', a: 'Because purchasing power varies by a factor of fifteen between Kanaky (New Caledonia) and Solomon Islands. A single rate calibrated on the wealthiest market would close the other four. The delivery does not change: same code, same documentation, same standard.' },
     { q: 'Do you work in French as well as English?', a: 'Yes. Melanesia is bilingual by nature — French in Kanaky (New Caledonia), English in Fiji, PNG and Solomon Islands, both in Vanuatu. Our pages and systems follow. For local languages we are cautious and say so: current models handle them poorly, and review by fluent speakers remains necessary.' },
-    { q: 'Are you present in all these countries?', a: 'No. We work remotely from Nouméa and Auckland, with travel where it helps. Where regular on-site presence is decisive for you, a local provider is the better choice — and we say so on each country page rather than implying otherwise.' },
+    { q: 'Are you present in all these countries?', a: 'No. We work remotely from Auckland (Aotearoa), with travel where it helps. Where regular on-site presence is decisive for you, a local provider is the better choice — and we say so on each country page rather than implying otherwise.' },
   ],
   related: [
     ['/melanesie/', 'Cette page en français'],
@@ -255,14 +257,14 @@ export default [
     'The SME and NGO band exists for the same reason as our Vanuatu list: a price calibrated on international corporates would close the market entirely. Same work, same standard, different rate.',
 
     { h: 'Where a local provider serves you better' },
-    'Honestly: if you need regular on-site presence, staff training in person, or someone who can reach your site when something physical breaks, a PNG-based provider is the right choice. We work remotely from Nouméa and Auckland — same working day, but not the same street.',
+    'Honestly: if you need regular on-site presence, staff training in person, or someone who can reach your site when something physical breaks, a PNG-based provider is the right choice. We work remotely from Auckland (Aotearoa) — same working day, but not the same street.',
     'We are worth talking to when your priorities are systems that survive poor connectivity, data that stays on your own infrastructure, or coordination across several Melanesian countries — [which is what we are built for](/melanesia/).',
   ],
   faq: [
     { q: 'Is AI automation realistic in PNG given connectivity?', a: 'Yes, with the right design. A cloud-only tool stops whenever the connection does, which outside the main centres is often. A system running on your own hardware — processing documents and drafting output locally, syncing when a link is available — works regardless. In PNG this is not a preference, it is the deciding architectural choice.' },
     { q: 'What does it cost?', a: 'We run two bands. For SMEs and NGOs, a first workflow starts around USD 400 equivalent, quoted in kina. For corporates and the resources sector, we quote on scope. The lower band exists because a single international rate would close the market — the work delivered is identical.' },
     { q: 'Do you work with NGOs and development programmes?', a: 'Yes, and reporting is usually the fastest win. Funder reporting obligations are heavy, repetitive and deadline-driven, and they consume time that should go to programme delivery. Assembling reports from data you already collect is exactly the shape of work automation handles well.' },
-    { q: 'Do you have an office in Port Moresby?', a: 'No. We work remotely from Nouméa and Auckland — the same working day, with travel where it makes sense. If regular on-site presence matters to you, a PNG-based provider is the better fit and we would rather say that now than after you have signed.' },
+    { q: 'Do you have an office in Port Moresby?', a: 'No. We work remotely from Auckland (Aotearoa) — the same working day, with travel where it makes sense. If regular on-site presence matters to you, a PNG-based provider is the better fit and we would rather say that now than after you have signed.' },
   ],
   related: [
     ['/melanesia/', 'AI automation across Melanesia'],
@@ -333,7 +335,7 @@ export default [
     ]},
 
     { h: 'Where a local provider is better' },
-    'If you need someone physically present — training staff, fixing hardware, sitting in your office — a Solomon Islands or regional provider on the ground beats us. We work remotely from Nouméa and Auckland.',
+    'If you need someone physically present — training staff, fixing hardware, sitting in your office — a Solomon Islands or regional provider on the ground beats us. We work remotely from Auckland (Aotearoa).',
     'Where we are worth a conversation: offline-capable systems, funder reporting, and data that stays on your own machines. [That is what we build across Melanesia](/melanesia/).',
   ],
   faq: [

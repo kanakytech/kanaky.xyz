@@ -17,7 +17,7 @@ export default [
   eyebrow: 'Kanaky (Nouvelle-Calédonie)',
   short: 'IA · BTP',
   h1: 'L’IA dans le BTP calédonien. <span style="color:var(--grey-4);font-weight:300;">Le chantier avance, le bureau suit.</span>',
-  cta: 'service-fr',
+  cta: 'service-nc',
   body: [
     { lead: 'Le BTP de Kanaky (Nouvelle-Calédonie) sort de deux années rudes : carnets vidés en 2024, puis une reprise tirée par la reconstruction — avec moins de bras qu’avant, une partie des ouvriers qualifiés ayant quitté le territoire. Quand chaque conducteur de travaux compte double, les soirées passées sur les devis et les situations sont exactement ce qu’il faut aller récupérer.' },
     { h: 'Le devis rendu à J+8 est un chantier qui file' },
@@ -52,7 +52,9 @@ export default [
   ],
   related: [
     ['/ia-services-techniques-nouvelle-caledonie/', 'IA pour la clim, l’élec et la plomberie'],
+    ['/ia-professions-liberales-nouvelle-caledonie/', 'IA pour les professions libérales'],
     ['/prix-automatisation-ia-nouvelle-caledonie/', 'Les tarifs au pays'],
+    ['/croisieristes-commerce-noumea/', 'Ce qu’une escale de croisière laisse à Nouméa'],
     ['/exemples-automatisation-pme/', '10 exemples d’automatisation'],
     ['/ia-locale-entreprise/', 'L’IA en local'],
   ],
@@ -67,7 +69,7 @@ export default [
   eyebrow: 'Kanaky (Nouvelle-Calédonie)',
   short: 'IA · Commerce Nouméa',
   h1: 'L’IA en boutique à Nouméa. <span style="color:var(--grey-4);font-weight:300;">Ce que le colis ne fera pas.</span>',
-  cta: 'service-fr',
+  cta: 'service-nc',
   body: [
     { lead: 'Un commerce de Nouméa se bat sur deux fronts qui ne se ressemblent pas : le colis commandé en ligne qui atterrit en dix jours, et son propre réassort qui met six semaines de bateau. Entre les deux, un fichier clients qui dort dans la caisse, des messages Facebook lus à la fermeture, et des samedis d’escale où tout le monde court.' },
     { h: 'Le réassort avec six semaines de mer devant soi' },
@@ -100,6 +102,8 @@ export default [
   ],
   related: [
     ['/ia-hotellerie-tourisme-nouvelle-caledonie/', 'IA pour l’hôtellerie et le tourisme'],
+    ['/ia-agriculture-peche-nouvelle-caledonie/', 'IA côté producteurs et pêcheurs'],
+    ['/croisieristes-commerce-noumea/', 'Ce qu’une escale de croisière laisse à Nouméa'],
     ['/prix-automatisation-ia-nouvelle-caledonie/', 'Les tarifs au pays'],
     ['/combien-coute-automatisation-ia/', 'Les prix en détail'],
     ['/exemples-automatisation-pme/', '10 exemples d’automatisation'],
@@ -115,7 +119,7 @@ export default [
   eyebrow: 'Kanaky (Nouvelle-Calédonie)',
   short: 'IA · Hôtellerie-tourisme',
   h1: 'L’IA en hôtellerie et tourisme. <span style="color:var(--grey-4);font-weight:300;">Répondre vite, dans les deux langues.</span>',
-  cta: 'service-fr',
+  cta: 'service-nc',
   body: [
     { lead: 'Une demande de séjour peut arriver par Booking, par mail, par Messenger, par WhatsApp ou par un appel en plein service du petit-déjeuner. Dans un tourisme calédonien qui se reconstruit visiteur par visiteur, celle qui attend quarante-huit heures est déjà repartie — parfois vers un autre établissement, souvent vers une autre destination.' },
     { h: 'Cinq canaux, un seul planning' },
@@ -149,6 +153,7 @@ export default [
   related: [
     ['/ia-commerce-noumea/', 'IA pour les commerces de Nouméa'],
     ['/ia-agriculture-peche-nouvelle-caledonie/', 'IA côté producteurs et pêcheurs'],
+    ['/croisieristes-commerce-noumea/', 'Ce qu’une escale de croisière laisse à Nouméa'],
     ['/prix-automatisation-ia-nouvelle-caledonie/', 'Les tarifs au pays'],
     ['/exemples-automatisation-pme/', '10 exemples d’automatisation'],
   ],
@@ -163,7 +168,7 @@ export default [
   eyebrow: 'Kanaky (Nouvelle-Calédonie)',
   short: 'IA · Professions libérales',
   h1: 'L’IA en cabinet. <span style="color:var(--grey-4);font-weight:300;">Le secret professionnel décide de tout.</span>',
-  cta: 'service-fr',
+  cta: 'service-nc',
   body: [
     { lead: 'Un cabinet — expertise comptable, avocat, géomètre-expert — vend du jugement mais produit du document : liasses, conclusions, actes, plans, rapports, courriers. La question n’est plus de savoir si l’IA peut aider à les produire ; elle le peut, largement. La vraie question, pour des professions tenues au secret, est de savoir **où passent les dossiers pendant qu’elle aide** — et c’est elle qui se pose en premier.' },
     { h: 'Le répétitif du cabinet, poste par poste' },
@@ -203,6 +208,8 @@ export default [
     ['/ia-locale-entreprise/', 'L’IA en local'],
     ['/prix-automatisation-ia-nouvelle-caledonie/', 'Les tarifs au pays'],
     ['/ia-btp-nouvelle-caledonie/', 'IA pour le BTP calédonien'],
+    ['/ia-commerce-noumea/', 'IA pour les commerces de Nouméa'],
+    ['/croisieristes-commerce-noumea/', 'Ce qu’une escale de croisière laisse à Nouméa'],
     ['/combien-coute-automatisation-ia/', 'Les prix en détail'],
   ],
 },
@@ -216,7 +223,7 @@ export default [
   eyebrow: 'Kanaky (Nouvelle-Calédonie)',
   short: 'IA · Métiers techniques',
   h1: 'L’IA pour les métiers techniques. <span style="color:var(--grey-4);font-weight:300;">Le devis se dicte, la tournée se calcule.</span>',
-  cta: 'service-fr',
+  cta: 'service-nc',
   body: [
     { lead: 'En décembre à Nouméa, un frigoriste ne cherche pas du travail : il cherche des heures. Le téléphone sonne pendant les interventions, les devis s’empilent dans un coin du fourgon, et les factures de dépannage partent avec des semaines de retard — quand elles partent. Pour la clim, l’élec et la plomberie du pays, l’enjeu n’est pas de trouver des clients : c’est d’arrêter d’en perdre par débordement.' },
     { h: 'La saison chaude concentre tout' },
@@ -244,6 +251,8 @@ export default [
   ],
   related: [
     ['/ia-btp-nouvelle-caledonie/', 'IA pour le BTP calédonien'],
+    ['/ia-professions-liberales-nouvelle-caledonie/', 'IA pour les professions libérales'],
+    ['/croisieristes-commerce-noumea/', 'Ce qu’une escale de croisière laisse à Nouméa'],
     ['/prix-automatisation-ia-nouvelle-caledonie/', 'Les tarifs au pays'],
     ['/machine-prospection-commerciale/', 'La machine de prospection'],
     ['/exemples-automatisation-pme/', '10 exemples d’automatisation'],
@@ -259,7 +268,7 @@ export default [
   eyebrow: 'Kanaky (Nouvelle-Calédonie)',
   short: 'IA · Agriculture-pêche',
   h1: 'L’IA aux champs et en mer. <span style="color:var(--grey-4);font-weight:300;">La paperasse ne monte pas à bord.</span>',
-  cta: 'service-fr',
+  cta: 'service-nc',
   body: [
     { lead: 'Entre le champ, le bateau et le bassin, le producteur calédonien exerce un second métier que personne n’a choisi : registres sanitaires, bons de livraison, commandes Messenger, factures aux restaurateurs. La crevette part à l’export avec son dossier de traçabilité, le poisson au marché avec sa glace — et l’administratif se fait à la lampe, après la journée. C’est ce second métier qu’on automatise. Pas la terre, pas la mer.' },
     { h: 'La traçabilité se dicte au fil de l’eau' },
@@ -293,6 +302,7 @@ export default [
   related: [
     ['/ia-hotellerie-tourisme-nouvelle-caledonie/', 'IA pour l’hôtellerie et le tourisme'],
     ['/ia-commerce-noumea/', 'IA pour les commerces de Nouméa'],
+    ['/croisieristes-commerce-noumea/', 'Ce qu’une escale de croisière laisse à Nouméa'],
     ['/prix-automatisation-ia-nouvelle-caledonie/', 'Les tarifs au pays'],
     ['/exemples-automatisation-pme/', '10 exemples d’automatisation'],
   ],
